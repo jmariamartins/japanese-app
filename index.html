@@ -1,0 +1,2091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本語 Study</title>
+
+<!-- PWA: installability -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#2c1f12">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="日本語 Study">
+<link rel="icon" href="icons/icon-192.png" sizes="192x192" type="image/png">
+<link rel="icon" href="icons/icon-512.png" sizes="512x512" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=DM+Mono:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ink:    #1a1208;
+  --paper:  #f5f0e8;
+  --red:    #c0392b;
+  --gold:   #b8962e;
+  --muted:  #6b5d4f;
+  --line:   #d4c9b0;
+  --blue:   #2c4a6e;
+  --green:  #1e6b4a;
+  --purple: #5b3587;
+  --th-bg:  #2c1f12;
+  --alt:    #ede8db;
+  --card:   #faf7f2;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  min-height: 100vh;
+  background-image:
+    radial-gradient(ellipse at 10% 10%, rgba(192,57,43,0.04) 0%, transparent 60%),
+    radial-gradient(ellipse at 90% 90%, rgba(184,150,46,0.05) 0%, transparent 60%);
+}
+
+/* ── Screens ── */
+.screen { display: none; animation: fadeIn 0.25s ease; }
+.screen.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+/* ══════════════════════════════════════
+   LANDING
+══════════════════════════════════════ */
+#screen-landing {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.landing-jp {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 300;
+  color: var(--red);
+  letter-spacing: 0.15em;
+  margin-bottom: 0.3rem;
+}
+
+.landing-sub {
+  font-size: 1.15rem;
+  color: var(--muted);
+  font-style: italic;
+  font-weight: 300;
+}
+
+.divider {
+  width: 120px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+  margin: 1.3rem auto;
+}
+
+.landing-desc {
+  max-width: 460px;
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.75;
+  margin-bottom: 2.5rem;
+}
+
+.btn-primary {
+  background: var(--th-bg);
+  color: var(--paper);
+  border: none;
+  border-bottom: 2px solid var(--gold);
+  padding: 0.9rem 2.2rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background 0.2s, transform 0.1s;
+}
+.btn-primary:hover { background: #3d2b18; }
+.btn-primary:active { transform: translateY(1px); }
+
+.landing-note {
+  margin-top: 1.4rem;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--muted);
+  line-height: 1.8;
+  max-width: 380px;
+}
+
+/* ══════════════════════════════════════
+   TOPICS
+══════════════════════════════════════ */
+#screen-topics {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 2.2rem 1.5rem 4rem;
+}
+
+.topics-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 1.6rem;
+}
+
+.topics-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: var(--red);
+  letter-spacing: 0.1em;
+}
+
+.text-btn {
+  background: none;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  padding: 0.28rem 0.85rem;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: border-color 0.2s, color 0.2s;
+}
+.text-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+.filter-bar {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-chip {
+  background: none;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  padding: 0.3rem 0.95rem;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 0.2s;
+}
+.filter-chip:hover { border-color: var(--gold); color: var(--gold); }
+.filter-chip.active { background: var(--th-bg); color: var(--paper); border-color: var(--th-bg); }
+
+#topic-list { display: flex; flex-direction: column; gap: 0.65rem; }
+
+.topic-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+.topic-card:hover { border-color: var(--gold); box-shadow: 0 2px 14px rgba(184,150,46,0.13); transform: translateY(-1px); }
+.topic-card:active { transform: none; }
+
+.topic-card-left { min-width: 0; }
+
+.topic-name {
+  font-size: 1.13rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.28rem;
+}
+
+.topic-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--muted);
+  flex-wrap: wrap;
+}
+
+.level-badge {
+  display: inline-block;
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.level-beginner     { background: #d5ead8; color: var(--green); }
+.level-intermediate { background: #fdf3d5; color: #7a5a00; }
+.level-advanced     { background: #e8d5f3; color: var(--purple); }
+
+.score-badge {
+  flex-shrink: 0;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.score-green  { background: #d5ead8; color: var(--green); }
+.score-yellow { background: #fdf3d5; color: #7a5a00; }
+.score-red    { background: #fde8d5; color: var(--red); }
+
+/* SRS due badges */
+.due-badge {
+  flex-shrink: 0;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.due-now  { background: #fde8d5; color: var(--red); }
+.due-soon { background: #fdf3d5; color: #7a5a00; }
+.due-fresh { background: #d5ead8; color: var(--green); }
+
+/* Review mode info bar */
+.review-header {
+  background: #fdf3d5;
+  border: 1px solid #d4c9b0;
+  border-left: 3px solid var(--gold);
+  border-radius: 4px;
+  padding: 0.6rem 1rem;
+  margin-bottom: 1rem;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.74rem;
+  color: #7a5a00;
+  line-height: 1.55;
+}
+
+.empty-state {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--muted);
+  text-align: center;
+  padding: 3rem 1rem;
+  line-height: 1.8;
+}
+
+/* ══════════════════════════════════════
+   SEARCH
+══════════════════════════════════════ */
+#screen-search {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+#search-input {
+  flex: 1;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 0.72rem 1rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  color: var(--ink);
+  transition: border-color 0.2s;
+}
+#search-input:focus { outline: none; border-color: var(--gold); }
+
+.search-count {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+  min-height: 1.1em;
+}
+
+.search-result {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 0.85rem 1.1rem;
+  margin-bottom: 0.55rem;
+  transition: border-color 0.15s;
+}
+.search-result:hover { border-color: var(--gold); }
+
+.result-tags {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.55rem;
+}
+
+.result-topic {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.67rem;
+  color: var(--gold);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.result-topic:hover { border-bottom-color: var(--gold); }
+
+.result-dir {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.6rem;
+  color: var(--muted);
+  padding: 1px 5px;
+  background: var(--alt);
+  border-radius: 3px;
+}
+
+.result-row {
+  display: grid;
+  grid-template-columns: 2.4rem 1fr;
+  gap: 0.15rem 0.5rem;
+  align-items: baseline;
+  margin-bottom: 0.22rem;
+}
+.result-row:last-child { margin-bottom: 0; }
+
+.result-lbl {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.6rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  padding-top: 0.1rem;
+}
+
+.result-en  { font-size: 0.97rem; }
+.result-rom { font-family: 'DM Mono', monospace; font-size: 0.82rem; color: var(--ink); }
+.result-jp  { font-family: 'Noto Serif JP', serif; font-size: 1rem; }
+
+mark {
+  background: #fdf3d5;
+  color: #7a5a00;
+  border-radius: 2px;
+  padding: 0 1px;
+  font-weight: 600;
+}
+
+/* ══════════════════════════════════════
+   EXERCISE
+══════════════════════════════════════ */
+#screen-exercise {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 1.6rem 1.5rem 4rem;
+}
+
+.ex-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.6rem;
+  gap: 0.6rem;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 1.15rem;
+  line-height: 1;
+  padding: 0.2rem 0.1rem;
+  flex-shrink: 0;
+  transition: color 0.2s;
+}
+.back-btn:hover { color: var(--ink); }
+
+#ex-topic-label {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 0.92rem;
+  color: var(--muted);
+  font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.topbar-right { display: flex; gap: 0.45rem; flex-shrink: 0; }
+
+.icon-btn {
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 0.32rem 0.7rem;
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-family: 'DM Mono', monospace;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.icon-btn:hover { border-color: var(--gold); color: var(--gold); }
+.icon-btn.panel-open { background: var(--th-bg); color: var(--paper); border-color: var(--th-bg); }
+
+/* Progress */
+.progress-area { margin-bottom: 1.8rem; }
+
+.progress-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.4rem;
+}
+
+.progress-lbl {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+}
+
+#progress-count {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.progress-track {
+  height: 3px;
+  background: var(--line);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+#progress-fill {
+  height: 100%;
+  background: linear-gradient(to right, var(--gold), var(--red));
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+/* Question card */
+.q-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 1.8rem 2rem;
+  margin-bottom: 1.1rem;
+  min-height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dir-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.9rem;
+}
+
+.q-text-en {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+.q-text-jp {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.q-rom {
+  font-family: 'DM Mono', monospace;
+  font-size: 1rem;
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.q-kana {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: var(--ink);
+}
+
+/* Answer area */
+#answer-area { display: flex; flex-direction: column; gap: 0.75rem; }
+
+textarea {
+  width: 100%;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 0.85rem 1rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  color: var(--ink);
+  resize: none;
+  transition: border-color 0.2s;
+  line-height: 1.5;
+}
+textarea:focus { outline: none; border-color: var(--gold); }
+textarea:disabled { opacity: 0.65; background: var(--alt); cursor: not-allowed; }
+
+/* Hint */
+.hint-wrap { display: flex; flex-direction: column; gap: 0.35rem; }
+
+.hint-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--muted);
+  font-family: 'DM Mono', monospace;
+  font-size: 0.76rem;
+  text-align: left;
+  padding: 0;
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+.hint-toggle:hover { color: var(--gold); }
+
+.hint-box {
+  background: #fdf6e3;
+  border: 1px solid #d4b88a;
+  border-left: 3px solid var(--gold);
+  border-radius: 3px;
+  padding: 0.55rem 0.9rem;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.78rem;
+  color: #5a3e1b;
+  line-height: 1.65;
+  display: none;
+}
+.hint-box.visible { display: block; }
+
+/* Reveal button */
+.reveal-btn {
+  background: var(--th-bg);
+  color: var(--paper);
+  border: none;
+  border-bottom: 2px solid var(--gold);
+  padding: 0.78rem 1.6rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.07em;
+  cursor: pointer;
+  border-radius: 3px;
+  align-self: flex-start;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.reveal-btn:hover { background: #3d2b18; }
+.reveal-shortcut {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.6rem;
+  opacity: 0.5;
+}
+
+/* Answer reveal card */
+.answer-card {
+  background: #fdf6e3;
+  border: 1px solid #d4b88a;
+  border-left: 4px solid var(--gold);
+  border-radius: 4px;
+  padding: 1rem 1.2rem;
+}
+
+.answer-card-lbl {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-bottom: 0.55rem;
+}
+
+.ans-rom  { font-family: 'DM Mono', monospace; font-size: 0.92rem; color: var(--ink); margin-bottom: 0.25rem; }
+.ans-kana { font-family: 'Noto Serif JP', serif; font-size: 1.2rem; color: var(--ink); }
+.ans-en   { font-size: 1.2rem; font-weight: 600; color: var(--ink); }
+.ans-hint { font-family: 'DM Mono', monospace; font-size: 0.75rem; color: var(--muted); margin-top: 0.55rem; }
+
+/* Grade buttons */
+.grade-btns { display: flex; gap: 0.75rem; }
+
+.grade-btn {
+  flex: 1;
+  padding: 0.72rem 1rem;
+  border: none;
+  border-radius: 3px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: filter 0.2s, transform 0.1s;
+}
+.grade-btn:active { transform: scale(0.98); }
+.got-it  { background: #d5ead8; color: var(--green); border-bottom: 2px solid var(--green); }
+.got-it:hover  { filter: brightness(0.93); }
+.missed  { background: #fde8d5; color: var(--red); border-bottom: 2px solid var(--red); }
+.missed:hover  { filter: brightness(0.93); }
+
+/* ══════════════════════════════════════
+   RESULTS
+══════════════════════════════════════ */
+#screen-results {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+#result-emoji { font-size: 3rem; margin-bottom: 0.6rem; }
+
+.result-score {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3.5rem, 9vw, 5.5rem);
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+.rs-green  { color: var(--green); }
+.rs-yellow { color: var(--gold); }
+.rs-red    { color: var(--red); }
+
+#result-msg {
+  font-size: 1.1rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 0.4rem;
+}
+
+#result-topic {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 2.5rem;
+}
+
+.result-btns { display: flex; gap: 0.9rem; flex-wrap: wrap; justify-content: center; }
+
+.btn-secondary {
+  background: none;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  padding: 0.72rem 1.6rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.2s;
+}
+.btn-secondary:hover { border-color: var(--gold); color: var(--ink); }
+
+/* ══════════════════════════════════════
+   PANELS (dict + cheatsheet)
+══════════════════════════════════════ */
+.side-panel {
+  position: fixed;
+  top: 0; right: 0;
+  height: 100vh;
+  background: var(--paper);
+  border-left: 1px solid var(--line);
+  box-shadow: -5px 0 24px rgba(26,18,8,0.1);
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+}
+.side-panel.open { transform: translateX(0); }
+
+#dict-panel  { width: min(360px, 95vw); }
+#sheet-panel { width: min(75vw, 960px); }
+#kana-panel  { width: min(400px, 95vw); overflow-y: auto; }
+
+.speak-btn {
+  background: none; border: 1px solid var(--line);
+  border-radius: 4px; font-size: 0.85rem; cursor: pointer;
+  padding: 0.18rem 0.45rem; line-height: 1;
+  transition: all 0.13s; flex-shrink: 0;
+}
+.speak-btn:hover  { background: var(--alt); border-color: var(--muted); }
+.speak-btn.active { opacity: 0.4; }
+
+/* Word of the Day */
+.wotd-card {
+  background: var(--card); border: 1px solid var(--line);
+  border-top: 3px solid var(--gold); border-radius: 6px;
+  padding: 1rem 1.3rem; margin: 1.5rem 0;
+  max-width: 380px; width: 100%;
+}
+.wotd-header {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 0.75rem;
+}
+.wotd-label {
+  font-family: 'DM Mono', monospace; font-size: 0.66rem;
+  text-transform: uppercase; letter-spacing: 0.09em; color: var(--gold);
+}
+.wotd-date { font-family: 'DM Mono', monospace; font-size: 0.63rem; color: var(--muted); }
+.wotd-main { display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.3rem; }
+.wotd-kana { font-family: 'Noto Serif JP', serif; font-size: 2rem; color: var(--ink); line-height: 1.2; }
+.wotd-rom  { font-family: 'DM Mono', monospace; font-size: 0.83rem; color: var(--muted); margin-bottom: 0.22rem; }
+.wotd-eng  { font-size: 1.08rem; color: var(--ink); margin-bottom: 0.5rem; }
+.wotd-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+.wotd-tag  {
+  font-family: 'DM Mono', monospace; font-size: 0.6rem;
+  padding: 0.14rem 0.48rem; border-radius: 3px;
+  background: var(--alt); color: var(--muted);
+}
+.wotd-n5 { background: #d5ead8; color: var(--green); }
+.wotd-n4 { background: #fdf3d5; color: #7a5a00; }
+.wotd-n3 { background: #fde8d5; color: var(--red); }
+
+/* Kana converter panel */
+.kana-textarea {
+  width: 100%; padding: 0.65rem 0.9rem;
+  font-family: 'Noto Serif JP', serif; font-size: 1.05rem;
+  border: 1px solid var(--line); border-radius: 4px;
+  background: var(--card); color: var(--ink);
+  resize: none; line-height: 1.6;
+}
+.kana-textarea:focus { outline: none; border-color: var(--gold); }
+.kana-output-block { margin-top: 0.7rem; }
+.kana-output-lbl {
+  font-family: 'DM Mono', monospace; font-size: 0.65rem;
+  text-transform: uppercase; letter-spacing: 0.09em; color: var(--gold); margin-bottom: 0.2rem;
+}
+.kana-output-text { font-family: 'Noto Serif JP', serif; font-size: 1.3rem; line-height: 1.5; word-break: break-all; }
+.kana-output-text.rom-out { font-family: 'DM Mono', monospace; font-size: 0.9rem; }
+.kana-chart { margin-top: 1rem; padding-top: 0.8rem; border-top: 1px solid var(--line); }
+.kana-chart-title {
+  font-family: 'DM Mono', monospace; font-size: 0.63rem;
+  text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 0.5rem;
+}
+.kana-chart-table { width: 100%; border-collapse: collapse; }
+.kana-chart-table th {
+  font-family: 'DM Mono', monospace; font-size: 0.58rem; color: var(--muted);
+  padding: 0.13rem 0.15rem; text-align: center; background: var(--alt); border: 1px solid var(--line);
+}
+.kana-chart-table td { text-align: center; padding: 0.18rem 0.1rem; border: 1px solid var(--line); vertical-align: middle; line-height: 1.25; }
+.kana-chart-table .ch { font-family: 'Noto Serif JP', serif; font-size: 0.85rem; display: block; }
+.kana-chart-table .ck { font-family: 'Noto Serif JP', serif; font-size: 0.85rem; color: var(--muted); display: block; }
+.kana-chart-table .cr { font-family: 'DM Mono', monospace; font-size: 0.56rem; color: var(--muted); display: block; }
+
+.panel-hdr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1.2rem;
+  border-bottom: 1px solid var(--line);
+  flex-shrink: 0;
+}
+
+.panel-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--ink);
+  letter-spacing: 0.1em;
+}
+
+.close-btn {
+  background: none; border: none;
+  cursor: pointer; color: var(--muted);
+  font-size: 1.2rem; line-height: 1;
+  padding: 0.15rem;
+  transition: color 0.2s;
+}
+.close-btn:hover { color: var(--ink); }
+
+/* Dictionary */
+.dict-search {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+#dict-input {
+  flex: 1;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 0.5rem 0.75rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  color: var(--ink);
+  background: var(--card);
+  min-width: 0;
+}
+#dict-input:focus { outline: none; border-color: var(--gold); }
+
+.dict-go {
+  background: var(--th-bg);
+  color: var(--paper);
+  border: none;
+  border-radius: 3px;
+  padding: 0.5rem 0.85rem;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+.dict-go:hover { background: #3d2b18; }
+
+#dict-results { flex: 1; overflow-y: auto; padding: 0.7rem 1rem; }
+
+.dict-entry { padding: 0.8rem 0; border-bottom: 1px solid var(--line); }
+.dict-entry:last-child { border-bottom: none; }
+
+.dict-word {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.3rem;
+  color: var(--ink);
+  margin-bottom: 0.15rem;
+}
+.dict-rdg { font-size: 0.82rem; color: var(--muted); font-family: 'DM Mono', monospace; margin-left: 0.4rem; }
+.dict-eng { font-size: 0.95rem; color: var(--ink); margin-bottom: 0.3rem; line-height: 1.4; }
+.dict-tags { display: flex; gap: 0.35rem; flex-wrap: wrap; }
+.dict-tag  {
+  font-family: 'DM Mono', monospace; font-size: 0.63rem;
+  padding: 1px 5px; border-radius: 2px;
+  background: var(--alt); color: var(--muted);
+  text-transform: uppercase; letter-spacing: 0.05em;
+}
+.dict-tag.jlpt { background: #d5eaf3; color: var(--blue); }
+
+.dict-status {
+  font-family: 'DM Mono', monospace; font-size: 0.78rem;
+  color: var(--muted); padding: 1.2rem 0; text-align: center;
+}
+
+/* Cheatsheet iframe */
+#sheet-iframe { flex: 1; border: none; width: 100%; }
+
+/* Overlay */
+#overlay {
+  display: none;
+  position: fixed; inset: 0;
+  background: rgba(26,18,8,0.28);
+  z-index: 199;
+}
+#overlay.on { display: block; }
+</style>
+</head>
+<body>
+<script>
+// Register the service worker so the app is installable and works offline.
+// No-op on file:// or if the browser doesn't support it — never blocks the
+// rest of the app from loading.
+if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').catch((e) => console.warn('SW registration failed:', e));
+  });
+}
+
+// Landing copy: on desktop Chrome/Edge this still opens your local folder
+// picker. On phones (no File System Access API) it loads the exercises and
+// cheatsheets bundled into this site instead — no folder to pick.
+document.addEventListener('DOMContentLoaded', () => {
+  if (!window.showDirectoryPicker) {
+    const btn  = document.getElementById('btn-open-folder');
+    const note = document.getElementById('landing-note');
+    if (btn)  btn.textContent = '📂 Open Study App';
+    if (note) note.innerHTML = 'Loads the exercises and cheat sheets bundled with this app.';
+  }
+});
+</script>
+
+<!-- ══════════ LANDING ══════════ -->
+<div id="screen-landing" class="screen active">
+  <div class="landing-jp">日本語 Study</div>
+  <div class="landing-sub">Japanese Grammar Practice</div>
+  <div class="divider"></div>
+  <p class="landing-desc">
+    Select your study folder to begin. Your exercises, cheat sheets and
+    progress live entirely on your computer — nothing is sent anywhere.
+  </p>
+  <button class="btn-primary" onclick="loadFolder()" id="btn-open-folder">📂 Open Study Folder</button>
+  <p class="landing-note" id="landing-note">
+    Requires Google Chrome or Edge<br>
+    Select the folder that contains your <code>exercises/</code> and <code>cheatsheets/</code> directories
+  </p>
+  <a href="kana_drill.html" target="_blank" style="
+    display:inline-block; margin-top:1.8rem;
+    font-family:'DM Mono',monospace; font-size:0.78rem;
+    color:var(--gold); text-decoration:none; letter-spacing:0.06em;
+    border-bottom:1px solid transparent; transition:border-color 0.15s;
+  " onmouseover="this.style.borderBottomColor='var(--gold)'"
+     onmouseout="this.style.borderBottomColor='transparent'">
+    仮名練習 · Kana Drill →
+  </a>
+  <a href="kanji_drill.html" target="_blank" style="
+    display:inline-block; margin-top:0.7rem;
+    font-family:'DM Mono',monospace; font-size:0.78rem;
+    color:var(--muted); text-decoration:none; letter-spacing:0.06em;
+    border-bottom:1px solid transparent; transition:all 0.15s;
+  " onmouseover="this.style.borderBottomColor='var(--muted)'"
+     onmouseout="this.style.borderBottomColor='transparent'">
+    漢字練習 · Kanji Drill →
+  </a>
+  <div class="wotd-card">
+    <div class="wotd-header">
+      <span class="wotd-label">今日の言葉 · Word of the Day</span>
+      <span class="wotd-date" id="wotd-date"></span>
+    </div>
+    <div class="wotd-main">
+      <span class="wotd-kana" id="wotd-kana"></span>
+      <button class="speak-btn" id="wotd-speak-btn"
+        onclick="speak(document.getElementById('wotd-kana').textContent,this)"
+        title="Listen">🔊</button>
+    </div>
+    <div class="wotd-rom"  id="wotd-rom"></div>
+    <div class="wotd-eng"  id="wotd-eng"></div>
+    <div class="wotd-tags" id="wotd-tags"></div>
+  </div>
+</div>
+
+<!-- ══════════ TOPICS ══════════ -->
+<div id="screen-topics" class="screen">
+  <div class="topics-header">
+    <div class="topics-title">練習 — Practice</div>
+    <div style="display:flex;gap:0.6rem;align-items:center;">
+      <a href="kana_drill.html" target="_blank" style="
+        font-family:'DM Mono',monospace; font-size:0.7rem; color:var(--gold);
+        text-decoration:none; padding:0.3rem 0.7rem; border:1px solid var(--gold);
+        border-radius:4px; letter-spacing:0.05em; transition:all 0.15s;
+        white-space:nowrap;
+      " onmouseover="this.style.background='var(--gold)';this.style.color='var(--paper)'"
+         onmouseout="this.style.background='';this.style.color='var(--gold)'">
+        仮名 Kana ↗
+      </a>
+      <a href="kanji_drill.html" target="_blank" style="
+        font-family:'DM Mono',monospace; font-size:0.7rem; color:var(--muted);
+        text-decoration:none; padding:0.3rem 0.7rem; border:1px solid var(--border);
+        border-radius:4px; letter-spacing:0.05em; transition:all 0.15s;
+        white-space:nowrap;
+      " onmouseover="this.style.borderColor='var(--muted)'"
+         onmouseout="this.style.borderColor='var(--border)'">
+        漢字 Kanji ↗
+      </a>
+      <button class="text-btn" onclick="loadFolder()">↺ Change Folder</button>
+      <button class="text-btn" onclick="showSearch()">🔍 Search</button>
+    </div>
+  </div>
+  <div class="filter-bar">
+    <button class="filter-chip active" data-level="all"          onclick="setFilter('all')">All</button>
+    <button class="filter-chip"        data-level="beginner"     onclick="setFilter('beginner')">Beginner</button>
+    <button class="filter-chip"        data-level="intermediate" onclick="setFilter('intermediate')">Intermediate</button>
+    <button class="filter-chip"        data-level="advanced"     onclick="setFilter('advanced')">Advanced</button>
+    <button class="filter-chip"        data-level="due"          onclick="setFilter('due')" id="chip-due">📋 Review</button>
+  </div>
+  <div id="topic-list"></div>
+</div>
+
+<!-- ══════════ EXERCISE ══════════ -->
+<div id="screen-exercise" class="screen">
+  <div class="ex-topbar">
+    <div class="topbar-left">
+      <button class="back-btn" onclick="backToTopics()" title="Back to topics">←</button>
+      <span id="ex-topic-label"></span>
+    </div>
+    <div class="topbar-right">
+      <button id="btn-dict"  class="icon-btn" onclick="toggleDict()">🔍 Dictionary</button>
+      <button id="btn-kana"  class="icon-btn" onclick="toggleKana()">文字 Kana</button>
+      <button id="btn-sheet" class="icon-btn" onclick="toggleSheet()" style="display:none">📖 Guide</button>
+    </div>
+  </div>
+
+  <div class="progress-area">
+    <div class="progress-row">
+      <span class="progress-lbl">Progress</span>
+      <span id="progress-count">1 / 10</span>
+    </div>
+    <div class="progress-track">
+      <div id="progress-fill" style="width:10%"></div>
+    </div>
+  </div>
+
+  <div class="q-card">
+    <div id="question-area"></div>
+  </div>
+
+  <div id="answer-area"></div>
+</div>
+
+<!-- ══════════ RESULTS ══════════ -->
+<div id="screen-results" class="screen">
+  <div id="result-emoji"></div>
+  <div id="result-score" class="result-score"></div>
+  <p id="result-msg"></p>
+  <p id="result-topic"></p>
+  <div class="result-btns">
+    <button class="btn-secondary" onclick="backToTopics()">← Topics</button>
+    <button id="result-retry" class="btn-primary">Try Again</button>
+  </div>
+</div>
+
+<!-- ══════════ SEARCH ══════════ -->
+<div id="screen-search" class="screen">
+  <div class="search-bar">
+    <button class="back-btn" onclick="showTopics()" title="Back to topics">←</button>
+    <input id="search-input" type="text"
+      placeholder="Search romaji or Japanese… (min. 2 characters)"
+      oninput="doSearch()"
+      autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  </div>
+  <div class="search-count" id="search-count"></div>
+  <div id="search-results"></div>
+</div>
+
+<!-- ══════════ KANA CONVERTER PANEL ══════════ -->
+<div id="kana-panel" class="side-panel">
+  <div class="panel-hdr">
+    <span class="panel-title">文字 — Kana Converter</span>
+    <button class="close-btn" onclick="closePanels()">✕</button>
+  </div>
+  <div style="padding:1rem 1.1rem 1.5rem;">
+    <textarea id="kana-input" class="kana-textarea" rows="3"
+      placeholder="Type romaji → get kana&#10;Type kana → get romaji"
+      oninput="doKana()" autocomplete="off" autocorrect="off"
+      autocapitalize="off" spellcheck="false"></textarea>
+    <div id="kana-hira-block" class="kana-output-block" style="display:none">
+      <div class="kana-output-lbl">Hiragana</div>
+      <div class="kana-output-text" id="kana-hira-out"></div>
+    </div>
+    <div id="kana-kata-block" class="kana-output-block" style="display:none">
+      <div class="kana-output-lbl">Katakana</div>
+      <div class="kana-output-text" id="kana-kata-out"></div>
+    </div>
+    <div id="kana-rom-block" class="kana-output-block" style="display:none">
+      <div class="kana-output-lbl">Romaji</div>
+      <div class="kana-output-text rom-out" id="kana-rom-out"></div>
+    </div>
+    <div class="kana-chart">
+      <div class="kana-chart-title">Reference chart — hiragana · katakana</div>
+      <table class="kana-chart-table" id="kana-ref-table"></table>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ DICTIONARY PANEL ══════════ -->
+<div id="dict-panel" class="side-panel">
+  <div class="panel-hdr">
+    <span class="panel-title">辞書 — Dictionary</span>
+    <button class="close-btn" onclick="closePanels()">✕</button>
+  </div>
+  <div class="dict-search">
+    <input id="dict-input" type="text" placeholder="English, romaji or Japanese…"
+      onkeydown="if(event.key==='Enter') searchDict()">
+    <button class="dict-go" onclick="searchDict()">Search</button>
+  </div>
+  <div id="dict-results">
+    <div class="dict-status">Type a word to search (powered by Jotoba)</div>
+  </div>
+</div>
+
+<!-- ══════════ CHEATSHEET PANEL ══════════ -->
+<div id="sheet-panel" class="side-panel">
+  <div class="panel-hdr">
+    <span class="panel-title">参考 — Reference Guide</span>
+    <button class="close-btn" onclick="closePanels()">✕</button>
+  </div>
+  <iframe id="sheet-iframe" src="about:blank" title="Cheat sheet reference guide"></iframe>
+</div>
+
+<div id="overlay" onclick="closePanels()"></div>
+
+<script>
+// ============================================================
+// STATE
+// ============================================================
+const S = {
+  dirHandle: null,
+  topics: [],      // [{slug, topicName, level, exercises[], guideSlug}]
+  cheatMap: {},    // slug -> guideSlug
+  filter: 'all',
+  session: null,   // {topic, questions[], index, results[], revealed}
+  dictOpen: false,
+  sheetOpen: false,
+  kanaOpen: false,
+  sheetBlob: null,
+};
+
+// ============================================================
+// STORAGE
+// ============================================================
+function getScore(slug)       { const v = localStorage.getItem('jps_'+slug); return v !== null ? +v : null; }
+function saveScore(slug, val) { localStorage.setItem('jps_'+slug, String(val)); }
+function colorFor(n)          { return n >= 8 ? 'green' : n >= 5 ? 'yellow' : 'red'; }
+
+// ── Spaced Repetition ──────────────────────────────────────
+// Intervals: score <5 → 1 day · score 5-7 → 3 days · score ≥8 → 7 days
+function saveSRS(slug, score) {
+  const days = score >= 8 ? 7 : score >= 5 ? 3 : 1;
+  const now  = new Date();
+  const next = new Date(now.getTime() + days * 86400000);
+  localStorage.setItem('jps_srs_' + slug, JSON.stringify({
+    score, days,
+    date:    now.toISOString(),
+    nextDue: next.toISOString()
+  }));
+}
+
+function getSRS(slug) {
+  try { const v = localStorage.getItem('jps_srs_' + slug); return v ? JSON.parse(v) : null; }
+  catch { return null; }
+}
+
+// Returns null (never studied) or {state, label, cls}
+function srsStatus(slug) {
+  const srs = getSRS(slug);
+  if (!srs) return null;
+  const daysLeft = (new Date(srs.nextDue) - new Date()) / 86400000;
+  if (daysLeft <= 0)  return { state: 'due',   label: '⏰ Due now',      cls: 'due-now'  };
+  if (daysLeft <= 1)  return { state: 'soon',  label: '🕐 Due tomorrow', cls: 'due-soon' };
+  const d = Math.ceil(daysLeft);
+  return { state: 'fresh', label: `✓ ${d}d`, cls: 'due-fresh' };
+}
+
+function countDue() {
+  return S.topics.filter(t => {
+    const s = srsStatus(t.slug);
+    return s && (s.state === 'due' || s.state === 'soon');
+  }).length;
+}
+
+// ============================================================
+// PARSING
+// ============================================================
+function parseExercises(text, filename) {
+  const slug = filename.replace('.txt','');
+  let topicName = slug.replace(/_/g,' ').replace(/\b\w/g, c => c.toUpperCase());
+  let level = 'beginner';
+
+  for (const line of text.split('\n')) {
+    const l = line.trim();
+    if (l.startsWith('# TOPIC:')) topicName = l.slice(8).trim();
+    else if (l.startsWith('# LEVEL:')) level = l.slice(8).trim().toLowerCase();
+  }
+
+  const blocks = text.split(/^---/m).slice(1);
+  const exercises = [];
+  for (const block of blocks) {
+    const ex = {};
+    for (const line of block.split('\n')) {
+      const l = line.trim();
+      if (!l) continue;
+      if      (l.startsWith('DIR:'))   ex.dir   = l.slice(4).trim();
+      else if (l.startsWith('Q:'))     ex.q     = l.slice(2).trim();
+      else if (l.startsWith('ROM:'))   ex.rom   = l.slice(4).trim();
+      else if (l.startsWith('JP:'))    ex.jp    = l.slice(3).trim();
+      else if (l.startsWith('A:'))     ex.a     = l.slice(2).trim();
+      else if (l.startsWith('Q_ROM:')) ex.qRom  = l.slice(6).trim();
+      else if (l.startsWith('Q_JP:')) ex.qJp  = l.slice(5).trim();
+      else if (l.startsWith('HINT:'))  ex.hint  = l.slice(5).trim();
+    }
+    if (ex.dir) exercises.push(ex);
+  }
+  return { slug, topicName, level, exercises };
+}
+
+function parseCheatMap(text) {
+  const map = {};
+  for (const line of text.split('\n')) {
+    const l = line.trim();
+    if (!l || l.startsWith('#')) continue;
+    const [from, to] = l.split('>').map(s => s.trim());
+    if (from && to) map[from] = to;
+  }
+  return map;
+}
+
+// ============================================================
+// FOLDER LOADING
+// ============================================================
+async function loadFolder() {
+  if (window.showDirectoryPicker) {
+    await loadFolderDesktop();
+  } else {
+    await loadFolderMobile();
+  }
+}
+
+// ── Desktop / Chrome & Edge: local folder via File System Access API ──
+// Unchanged from before — picks a folder on your computer every time.
+async function loadFolderDesktop() {
+  try {
+    const dir = await window.showDirectoryPicker({ mode: 'read' });
+    S.dirHandle = dir;
+
+    // Cheatsheet map
+    try {
+      const cfg  = await dir.getDirectoryHandle('config');
+      const mfh  = await cfg.getFileHandle('cheatsheet_map.txt');
+      S.cheatMap = parseCheatMap(await (await mfh.getFile()).text());
+    } catch { S.cheatMap = {}; }
+
+    // Exercise files
+    S.topics = [];
+    try {
+      const exDir = await dir.getDirectoryHandle('exercises');
+      const entries = [];
+      for await (const [name, handle] of exDir.entries()) {
+        if (handle.kind === 'file' && name.endsWith('.txt')) entries.push([name, handle]);
+      }
+      entries.sort(([a],[b]) => a.localeCompare(b));
+      for (const [name, handle] of entries) {
+        const parsed = parseExercises(await (await handle.getFile()).text(), name);
+        S.topics.push({ ...parsed, guideSlug: S.cheatMap[parsed.slug] || null });
+      }
+    } catch (e) { console.warn('exercises/ not found:', e); }
+
+    showTopics();
+  } catch(e) {
+    if (e.name !== 'AbortError') alert('Could not load folder: ' + e.message);
+  }
+}
+
+// ── Mobile / any browser without the File System Access API ──
+// No folder picker available, so instead this fetches the exercises and
+// cheatsheets that are bundled into the hosted site (same origin). It reads
+// exercises/index.json for the list of exercise filenames, since a phone
+// browser can't list a folder's contents itself.
+async function loadFolderMobile() {
+  S.dirHandle = null; // signals "mobile / no local folder" to openSheet()
+
+  // Cheatsheet map
+  try {
+    const res = await fetch('config/cheatsheet_map.txt');
+    if (!res.ok) throw new Error('not found');
+    S.cheatMap = parseCheatMap(await res.text());
+  } catch { S.cheatMap = {}; }
+
+  // Exercise files
+  S.topics = [];
+  try {
+    const idxRes = await fetch('exercises/index.json');
+    if (!idxRes.ok) throw new Error('exercises/index.json not found');
+    const names = (await idxRes.json()).filter((n) => n.endsWith('.txt')).sort();
+    for (const name of names) {
+      const fRes = await fetch('exercises/' + name);
+      if (!fRes.ok) { console.warn('could not fetch exercises/' + name); continue; }
+      const parsed = parseExercises(await fRes.text(), name);
+      S.topics.push({ ...parsed, guideSlug: S.cheatMap[parsed.slug] || null });
+    }
+  } catch (e) {
+    console.warn('exercises/ not found:', e);
+    alert('Could not load the study content. If you just set this app up, make sure exercises/index.json lists your exercise files.');
+    return;
+  }
+
+  showTopics();
+}
+
+// ============================================================
+// SCREENS
+// ============================================================
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+
+function showTopics() {
+  S.session = null;
+  closePanels();
+  showScreen('screen-topics');
+  renderTopics();
+}
+
+function backToTopics() {
+  if (S.session && S.session.index > 0 && S.session.index < S.session.questions.length) {
+    if (!confirm('Leave this session? Your progress will be lost.')) return;
+  }
+  showTopics();
+}
+
+function setFilter(level) {
+  S.filter = level;
+  renderTopics();
+}
+
+// ============================================================
+// TOPICS
+// ============================================================
+function renderTopics() {
+  document.querySelectorAll('.filter-chip').forEach(c => {
+    c.classList.toggle('active', c.dataset.level === S.filter);
+  });
+
+  // Update the Review chip label with a live count
+  const dueCount = countDue();
+  const dueChip = document.getElementById('chip-due');
+  if (dueChip) dueChip.textContent = dueCount > 0 ? `📋 Review (${dueCount})` : '📋 Review';
+
+  const list = document.getElementById('topic-list');
+  let visible, reviewHeaderHTML = '';
+
+  if (S.filter === 'due') {
+    // Only topics that are due or due-soon, sorted most overdue first
+    visible = S.topics
+      .filter(t => { const s = srsStatus(t.slug); return s && s.state !== 'fresh'; })
+      .sort((a, b) => new Date(getSRS(a.slug).nextDue) - new Date(getSRS(b.slug).nextDue));
+
+    const nowCount  = visible.filter(t => srsStatus(t.slug)?.state === 'due').length;
+    const soonCount = visible.filter(t => srsStatus(t.slug)?.state === 'soon').length;
+
+    if (visible.length === 0) {
+      reviewHeaderHTML = `<div class="review-header">✓ All caught up — no topics due for review yet.<br>
+        <span style="opacity:0.75">Scores are saved after each session. Topics resurface based on how you did.</span></div>`;
+    } else {
+      const parts = [];
+      if (nowCount  > 0) parts.push(`<strong>${nowCount} topic${nowCount !== 1 ? 's' : ''} due now</strong>`);
+      if (soonCount > 0) parts.push(`${soonCount} due tomorrow`);
+      reviewHeaderHTML = `<div class="review-header">${parts.join(' · ')} — sorted most overdue first</div>`;
+    }
+  } else {
+    visible = S.topics.filter(t => S.filter === 'all' || t.level === S.filter);
+  }
+
+  if (!visible.length) {
+    list.innerHTML = reviewHeaderHTML + `<div class="empty-state">
+      No topics found${S.filter === 'due' ? ' due for review' : S.filter !== 'all' ? ' for this level' : ''}.<br>
+      ${S.filter === 'due'
+        ? "Complete some sessions first — topics appear here once they're due."
+        : `Add .txt files to your <code>exercises/</code> folder.`}
+    </div>`;
+    return;
+  }
+
+  list.innerHTML = reviewHeaderHTML + visible.map(t => {
+    const sc  = getScore(t.slug);
+    const srs = srsStatus(t.slug);
+
+    const scoreBadge = sc !== null
+      ? `<span class="score-badge score-${colorFor(sc)}">${sc}/10</span>` : '';
+
+    // Show SRS badge always in review mode; elsewhere only when due or due-soon
+    const showSrs = S.filter === 'due' || (srs && srs.state !== 'fresh');
+    const srsBadge = srs && showSrs
+      ? `<span class="due-badge ${srs.cls}">${srs.label}</span>` : '';
+
+    const guide = t.guideSlug ? `<span title="Cheat sheet available">📖</span>` : '';
+
+    return `
+      <div class="topic-card" onclick="startSession('${esc(t.slug)}')">
+        <div class="topic-card-left">
+          <div class="topic-name">${esc(t.topicName)}</div>
+          <div class="topic-meta">
+            <span class="level-badge level-${t.level}">${t.level}</span>
+            <span>${t.exercises.length} exercises</span>
+            ${guide}
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:flex-end;gap:0.3rem;flex-shrink:0;">
+          ${scoreBadge}
+          ${srsBadge}
+        </div>
+      </div>`;
+  }).join('');
+}
+
+// ============================================================
+// SESSION
+// ============================================================
+function shuffle(arr) { return [...arr].sort(() => Math.random() - 0.5); }
+
+function buildSession(exercises) {
+  const en = shuffle(exercises.filter(e => e.dir === 'EN>JP'));
+  const jp = shuffle(exercises.filter(e => e.dir === 'JP>EN'));
+  const cJP = Math.min(3, jp.length);
+  const cEN = Math.min(10 - cJP, en.length);
+  return shuffle([...en.slice(0, cEN), ...jp.slice(0, cJP)]);
+}
+
+function startSession(slug) {
+  const topic = S.topics.find(t => t.slug === slug);
+  if (!topic || !topic.exercises.length) { alert('No exercises found in this topic yet!'); return; }
+  S.session = {
+    topic,
+    questions: buildSession(topic.exercises),
+    index: 0,
+    results: [],
+    revealed: false
+  };
+  showScreen('screen-exercise');
+  renderQuestion();
+}
+
+// ============================================================
+// EXERCISE
+// ============================================================
+function renderQuestion() {
+  closePanels();
+  const { session: ss } = S;
+  const q   = ss.questions[ss.index];
+  const tot = ss.questions.length;
+  const num = ss.index + 1;
+
+  document.getElementById('ex-topic-label').textContent = ss.topic.topicName;
+  document.getElementById('progress-count').textContent = `${num} / ${tot}`;
+  document.getElementById('progress-fill').style.width  = `${(num/tot)*100}%`;
+  document.getElementById('btn-sheet').style.display = ss.topic.guideSlug ? 'flex' : 'none';
+
+  // Question
+  const qArea = document.getElementById('question-area');
+  if (q.dir === 'EN>JP') {
+    qArea.innerHTML = `
+      <div class="dir-tag">EN → JP</div>
+      <div class="q-text-en">${esc(q.q)}</div>`;
+  } else {
+    qArea.innerHTML = `
+      <div class="dir-tag">JP → EN</div>
+      <div class="q-text-jp" style="display:flex;align-items:flex-start;gap:0.6rem;">
+        <div>
+          <span class="q-rom">${esc(q.qRom || '')}</span>
+          <span class="q-kana">${esc(q.qJp  || '')}</span>
+        </div>
+        <button class="speak-btn" data-text="${esc(q.qJp||'')}"
+          onclick="speak(this.dataset.text,this)" title="Listen">🔊</button>
+      </div>`;
+  }
+
+  // Answer area
+  const hintHTML = q.hint ? `
+    <div class="hint-wrap">
+      <button class="hint-toggle" id="hint-btn" onclick="toggleHint()">💡 Show hint</button>
+      <div class="hint-box" id="hint-box">${esc(q.hint)}</div>
+    </div>` : '';
+
+  document.getElementById('answer-area').innerHTML = `
+    <textarea id="ans-input" placeholder="Type your answer here…" rows="3"
+      onkeydown="if(event.ctrlKey&&event.key==='Enter')revealAnswer()"></textarea>
+    ${hintHTML}
+    <button class="reveal-btn" onclick="revealAnswer()">
+      Reveal Answer
+      <span class="reveal-shortcut">ctrl+↵</span>
+    </button>`;
+
+  ss.revealed = false;
+  setTimeout(() => document.getElementById('ans-input')?.focus(), 60);
+}
+
+function toggleHint() {
+  const box = document.getElementById('hint-box');
+  const btn = document.getElementById('hint-btn');
+  if (!box) return;
+  box.classList.toggle('visible');
+  btn.textContent = box.classList.contains('visible') ? '💡 Hide hint' : '💡 Show hint';
+}
+
+function revealAnswer() {
+  if (S.session.revealed) return;
+  S.session.revealed = true;
+  const q = S.session.questions[S.session.index];
+  const userAns = document.getElementById('ans-input')?.value || '';
+
+  let revealHTML;
+  if (q.dir === 'EN>JP') {
+    revealHTML = `
+      <div class="answer-card">
+        <div class="answer-card-lbl">Correct Answer</div>
+        <div class="ans-rom">${esc(q.rom || '')}</div>
+        <div style="display:flex;align-items:center;gap:0.6rem;">
+          <div class="ans-kana">${esc(q.jp || '')}</div>
+          <button class="speak-btn" data-text="${esc(q.jp||'')}"
+            onclick="speak(this.dataset.text,this)" title="Listen">🔊</button>
+        </div>
+        ${q.hint ? `<div class="ans-hint">💡 ${esc(q.hint)}</div>` : ''}
+      </div>`;
+  } else {
+    revealHTML = `
+      <div class="answer-card">
+        <div class="answer-card-lbl">Correct Answer</div>
+        <div class="ans-en">${esc(q.a || '')}</div>
+        ${q.hint ? `<div class="ans-hint">💡 ${esc(q.hint)}</div>` : ''}
+      </div>`;
+  }
+
+  document.getElementById('answer-area').innerHTML = `
+    <textarea rows="3" disabled>${esc(userAns)}</textarea>
+    ${revealHTML}
+    <div class="grade-btns">
+      <button class="grade-btn got-it" onclick="grade(true)">✓ Got it</button>
+      <button class="grade-btn missed"  onclick="grade(false)">✗ Missed it</button>
+    </div>`;
+}
+
+function grade(ok) {
+  S.session.results.push(ok);
+  S.session.index++;
+  if (S.session.index >= S.session.questions.length) finishSession();
+  else renderQuestion();
+}
+
+function finishSession() {
+  const { session: ss } = S;
+  const score = ss.results.filter(Boolean).length;
+  const total = ss.results.length;
+  saveScore(ss.topic.slug, score);
+  saveSRS(ss.topic.slug, score);
+  showResults(score, total, ss.topic);
+}
+
+function showResults(score, total, topic) {
+  showScreen('screen-results');
+  closePanels();
+  const pct = score / total;
+  let emoji, msg, cls;
+  if (pct >= 0.8) { emoji='🟢'; msg='素晴らしい！ Excellent — the patterns are flowing.';   cls='rs-green'; }
+  else if (pct >= 0.5) { emoji='🟡'; msg='頑張れ！ Good effort — keep building those patterns.'; cls='rs-yellow'; }
+  else { emoji='🔴'; msg='頑張って！ Keep going — every attempt builds your foundation.';  cls='rs-red'; }
+
+  // SRS next-due message
+  const srs = getSRS(topic.slug);
+  const srsLine = srs
+    ? `<p id="result-srs" style="font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--muted);margin-bottom:2.5rem;">
+        ${srs.days === 1 ? '⏰ Review again tomorrow' : `📅 Next review in ${srs.days} days`}
+      </p>`
+    : '<p style="margin-bottom:2.5rem"></p>';
+
+  document.getElementById('result-emoji').textContent = emoji;
+  document.getElementById('result-score').textContent = `${score} / ${total}`;
+  document.getElementById('result-score').className   = `result-score ${cls}`;
+  document.getElementById('result-msg').textContent   = msg;
+  document.getElementById('result-topic').textContent = topic.topicName.toUpperCase();
+  document.getElementById('result-topic').insertAdjacentHTML('afterend', srsLine);
+  document.getElementById('result-retry').onclick = () => startSession(topic.slug);
+}
+
+// ============================================================
+// DICTIONARY  (powered by Jotoba — CORS-friendly, free)
+// ============================================================
+async function searchDict() {
+  const q = document.getElementById('dict-input').value.trim();
+  if (!q) return;
+  const res = document.getElementById('dict-results');
+  res.innerHTML = '<div class="dict-status">Searching…</div>';
+  try {
+    const r = await fetch('https://jotoba.de/api/search/words', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ query: q, language: 'English', no_english: false })
+    });
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const data  = await r.json();
+    const words = (data.words || []).slice(0, 5);
+    if (!words.length) { res.innerHTML = '<div class="dict-status">No results found.</div>'; return; }
+
+    res.innerHTML = words.map(w => {
+      // reading block
+      const reading = w.reading || {};
+      const kanji   = reading.kanji   || '';
+      const kana    = reading.kana    || '';
+      const display = kanji || kana;
+      const furigana = kanji ? kana : '';
+
+      // senses / meanings
+      const senses = (w.senses || []).slice(0, 2);
+      const sensesHTML = senses.map(s => {
+        const eng  = (s.glosses || []).slice(0, 3).join('; ');
+        const pos  = (s.part_of_speech || []).slice(0, 1)
+                       .map(p => `<span class="dict-tag">${esc(p)}</span>`).join('');
+        return `<div class="dict-eng">${esc(eng)}</div><div class="dict-tags">${pos}</div>`;
+      }).join('');
+
+      // JLPT tag
+      const jlpt = w.common ? '<span class="dict-tag jlpt">Common</span>' : '';
+
+      return `
+        <div class="dict-entry">
+          <div class="dict-word">${esc(display)}${furigana ? `<span class="dict-rdg">【${esc(furigana)}】</span>` : ''}</div>
+          ${sensesHTML}
+          <div class="dict-tags" style="margin-top:3px">${jlpt}</div>
+        </div>`;
+    }).join('');
+  } catch(e) {
+    res.innerHTML = `<div class="dict-status">Could not connect to dictionary.<br><small>Check your internet connection.</small></div>`;
+  }
+}
+
+// ============================================================
+// CHEATSHEET
+// ============================================================
+async function openSheet() {
+  const { session: ss, dirHandle } = S;
+  if (!ss?.topic?.guideSlug) return;
+  try {
+    let html;
+    if (dirHandle) {
+      // Desktop: read the cheatsheet from the picked local folder.
+      const sheetsDir = await dirHandle.getDirectoryHandle('cheatsheets');
+      const fh        = await sheetsDir.getFileHandle(ss.topic.guideSlug + '.html');
+      html = await (await fh.getFile()).text();
+    } else {
+      // Mobile: fetch the cheatsheet bundled into the hosted site.
+      const res = await fetch('cheatsheets/' + ss.topic.guideSlug + '.html');
+      if (!res.ok) throw new Error('not found');
+      html = await res.text();
+    }
+    if (S.sheetBlob) URL.revokeObjectURL(S.sheetBlob);
+    S.sheetBlob = URL.createObjectURL(new Blob([html], { type: 'text/html' }));
+    document.getElementById('sheet-iframe').src = S.sheetBlob;
+    document.getElementById('sheet-panel').classList.add('open');
+    document.getElementById('overlay').classList.add('on');
+    document.getElementById('btn-sheet').classList.add('panel-open');
+    S.sheetOpen = true;
+  } catch {
+    alert('Cheat sheet file not found in cheatsheets/ folder.');
+  }
+}
+
+// ============================================================
+// PANELS
+// ============================================================
+function openDict() {
+  document.getElementById('dict-panel').classList.add('open');
+  document.getElementById('overlay').classList.add('on');
+  document.getElementById('btn-dict').classList.add('panel-open');
+  S.dictOpen = true;
+  setTimeout(() => document.getElementById('dict-input')?.focus(), 120);
+}
+
+function closePanels() {
+  ['dict-panel','sheet-panel','kana-panel'].forEach(id =>
+    document.getElementById(id)?.classList.remove('open'));
+  document.getElementById('overlay').classList.remove('on');
+  ['btn-dict','btn-sheet','btn-kana'].forEach(id =>
+    document.getElementById(id)?.classList.remove('panel-open'));
+  S.dictOpen = S.sheetOpen = S.kanaOpen = false;
+}
+function toggleKana() {
+  if (S.kanaOpen) { closePanels(); return; }
+  closePanels();
+  document.getElementById('kana-panel').classList.add('open');
+  document.getElementById('overlay').classList.add('on');
+  document.getElementById('btn-kana')?.classList.add('panel-open');
+  S.kanaOpen = true;
+  setTimeout(() => document.getElementById('kana-input')?.focus(), 80);
+}
+function toggleDict() {
+  if (S.dictOpen) { closePanels(); return; }
+  closePanels(); openDict();
+}
+function toggleSheet() {
+  if (S.sheetOpen) { closePanels(); return; }
+  closePanels(); openSheet();
+}
+
+// ============================================================
+// PRONUNCIATION
+// ============================================================
+let _jaVoice = null;
+function _loadVoices() {
+  const all = window.speechSynthesis?.getVoices() || [];
+  _jaVoice = all.find(v => v.name === 'Otoya')          // male JP voice (macOS)
+          || all.find(v => v.name === 'Kyoko')           // female JP voice (macOS) fallback
+          || all.find(v => v.lang === 'ja-JP')
+          || all.find(v => v.lang.startsWith('ja')) || null;
+}
+if (window.speechSynthesis) { _loadVoices(); speechSynthesis.addEventListener('voiceschanged', _loadVoices); }
+
+function speak(text, btn) {
+  if (!text || !window.speechSynthesis) return;
+  if (!_jaVoice) _loadVoices();
+  speechSynthesis.cancel();
+  const utt = new SpeechSynthesisUtterance(text);
+  utt.lang  = 'ja-JP';
+  utt.rate  = 0.8;   // slightly slower for clarity
+  if (_jaVoice) utt.voice = _jaVoice;
+  if (btn) {
+    btn.classList.add('active');
+    utt.onend = utt.onerror = () => btn.classList.remove('active');
+    setTimeout(() => btn?.classList.remove('active'), 8000);
+  }
+  speechSynthesis.speak(utt);
+}
+
+// ============================================================
+// KANA ↔ ROMAJI CONVERTER
+// ============================================================
+const R2H = {
+  'a':'あ','i':'い','u':'う','e':'え','o':'お',
+  'ka':'か','ki':'き','ku':'く','ke':'け','ko':'こ','kya':'きゃ','kyu':'きゅ','kyo':'きょ',
+  'sa':'さ','shi':'し','su':'す','se':'せ','so':'そ','sha':'しゃ','shu':'しゅ','sho':'しょ',
+  'ta':'た','chi':'ち','tsu':'つ','te':'て','to':'と','cha':'ちゃ','chu':'ちゅ','cho':'ちょ',
+  'na':'な','ni':'に','nu':'ぬ','ne':'ね','no':'の','nya':'にゃ','nyu':'にゅ','nyo':'にょ',
+  'ha':'は','hi':'ひ','fu':'ふ','he':'へ','ho':'ほ','hya':'ひゃ','hyu':'ひゅ','hyo':'ひょ',
+  'ma':'ま','mi':'み','mu':'む','me':'め','mo':'も','mya':'みゃ','myu':'みゅ','myo':'みょ',
+  'ya':'や','yu':'ゆ','yo':'よ',
+  'ra':'ら','ri':'り','ru':'る','re':'れ','ro':'ろ','rya':'りゃ','ryu':'りゅ','ryo':'りょ',
+  'wa':'わ','wo':'を','n':'ん',
+  'ga':'が','gi':'ぎ','gu':'ぐ','ge':'げ','go':'ご','gya':'ぎゃ','gyu':'ぎゅ','gyo':'ぎょ',
+  'za':'ざ','ji':'じ','zu':'ず','ze':'ぜ','zo':'ぞ','ja':'じゃ','ju':'じゅ','jo':'じょ',
+  'da':'だ','de':'で','do':'ど',
+  'ba':'ば','bi':'び','bu':'ぶ','be':'べ','bo':'ぼ','bya':'びゃ','byu':'びゅ','byo':'びょ',
+  'pa':'ぱ','pi':'ぴ','pu':'ぷ','pe':'ぺ','po':'ぽ','pya':'ぴゃ','pyu':'ぴゅ','pyo':'ぴょ',
+};
+function toKata(h) {
+  return [...h].map(c => { const cp=c.codePointAt(0); return (cp>=0x3041&&cp<=0x3096)?String.fromCodePoint(cp+0x60):c; }).join('');
+}
+const KANA2R = {};
+Object.entries(R2H).forEach(([r,h]) => { if(!KANA2R[h])KANA2R[h]=r; const k=toKata(h); if(!KANA2R[k])KANA2R[k]=r; });
+Object.assign(KANA2R,{'し':'shi','ち':'chi','つ':'tsu','ふ':'fu','じ':'ji','シ':'shi','チ':'chi','ツ':'tsu','フ':'fu','ジ':'ji'});
+function isKana(t){return /[\u3040-\u30FF]/.test(t);}
+function romToHira(input){
+  const s=input.toLowerCase(); let out='',i=0;
+  while(i<s.length){
+    if(s[i]==='-'){out+='ー';i++;continue;}
+    if(s[i]==='n'&&(i+1>=s.length||!'aiueoyn'.includes(s[i+1]))&&!R2H[s.slice(i,i+2)]){out+='ん';i++;continue;}
+    if(i+1<s.length&&s[i]===s[i+1]&&s[i]!=='n'&&/[bcdfghjklmnpqrstvwxyz]/.test(s[i])){out+='っ';i++;continue;}
+    let m=false;
+    for(const l of [3,2,1]){if(R2H[s.slice(i,i+l)]){out+=R2H[s.slice(i,i+l)];i+=l;m=true;break;}}
+    if(!m){out+=s[i];i++;}
+  }
+  return out;
+}
+function kanaToRom(input){
+  let out='',i=0;
+  while(i<input.length){
+    const c=input[i];
+    if(c==='っ'||c==='ッ'){const n=KANA2R[input.slice(i+1,i+3)]||KANA2R[input[i+1]]||'';out+=n?n[0]:'';i++;continue;}
+    if(c==='ー'){const lv=out.match(/[aiueo]$/);out+=lv?lv[0]:'-';i++;continue;}
+    if(i+1<input.length&&KANA2R[input.slice(i,i+2)]){out+=KANA2R[input.slice(i,i+2)];i+=2;}
+    else if(KANA2R[c]){out+=KANA2R[c];i++;}
+    else{out+=c;i++;}
+  }
+  return out;
+}
+function doKana(){
+  const raw=document.getElementById('kana-input').value;
+  const hB=document.getElementById('kana-hira-block'),kB=document.getElementById('kana-kata-block'),rB=document.getElementById('kana-rom-block');
+  if(!raw.trim()){hB.style.display=kB.style.display=rB.style.display='none';return;}
+  if(isKana(raw)){document.getElementById('kana-rom-out').textContent=kanaToRom(raw);rB.style.display='block';hB.style.display=kB.style.display='none';}
+  else{const h=romToHira(raw);document.getElementById('kana-hira-out').textContent=h;document.getElementById('kana-kata-out').textContent=toKata(h);hB.style.display=kB.style.display='block';rB.style.display='none';}
+}
+function buildKanaChart(){
+  const rows=[['','あ','い','う','え','お'],['k','か','き','く','け','こ'],['s','さ','し','す','せ','そ'],['t','た','ち','つ','て','と'],['n','な','に','ぬ','ね','の'],['h','は','ひ','ふ','へ','ほ'],['m','ま','み','む','め','も'],['y','や','—','ゆ','—','よ'],['r','ら','り','る','れ','ろ'],['w','わ','—','—','—','を'],['n','ん','','','',''],['g','が','ぎ','ぐ','げ','ご'],['z','ざ','じ','ず','ぜ','ぞ'],['d','だ','—','—','で','ど'],['b','ば','び','ぶ','べ','ぼ'],['p','ぱ','ぴ','ぷ','ぺ','ぽ']];
+  const tbl=document.getElementById('kana-ref-table');if(!tbl)return;
+  let html='<tr><th></th><th>a</th><th>i</th><th>u</th><th>e</th><th>o</th></tr>';
+  rows.forEach(([lbl,...chars])=>{
+    html+=`<tr><th>${lbl}</th>`;
+    chars.forEach(h=>{if(!h||h==='—'){html+=`<td><span class="ch" style="color:var(--line)">${h||''}</span></td>`;}else{const k=toKata(h),r=KANA2R[h]||'';html+=`<td><span class="ch">${h}</span><span class="ck">${k}</span><span class="cr">${r}</span></td>`;}});
+    html+='</tr>';
+  });
+  tbl.innerHTML=html;
+}
+
+// ============================================================
+// WORD OF THE DAY
+// ============================================================
+// Format: [kana, romaji, english, pos, jlpt]
+// pos: n=noun  v=verb  ia=i-adj  na=na-adj  adv=adverb  exp=expression
+const WORDS = [
+  // ── N5 (1-73) ──────────────────────────────────────────────
+  ['みず','mizu','water','n','N5'],['たべる','taberu','to eat','v','N5'],['のむ','nomu','to drink','v','N5'],
+  ['いく','iku','to go','v','N5'],['くる','kuru','to come','v','N5'],['みる','miru','to see / watch','v','N5'],
+  ['きく','kiku','to listen / hear','v','N5'],['はなす','hanasu','to speak','v','N5'],['よむ','yomu','to read','v','N5'],
+  ['かく','kaku','to write','v','N5'],['おおきい','ookii','big / large','ia','N5'],['ちいさい','chiisai','small','ia','N5'],
+  ['あたらしい','atarashii','new','ia','N5'],['ふるい','furui','old (things)','ia','N5'],['たかい','takai','tall / expensive','ia','N5'],
+  ['やすい','yasui','cheap','ia','N5'],['たのしい','tanoshii','fun / enjoyable','ia','N5'],['むずかしい','muzukashii','difficult','ia','N5'],
+  ['やさしい','yasashii','easy / kind','ia','N5'],['ひと','hito','person','n','N5'],
+  ['にほんご','nihongo','Japanese language','n','N5'],['えいご','eigo','English language','n','N5'],
+  ['がっこう','gakkou','school','n','N5'],['いえ','ie','house','n','N5'],['えき','eki','train station','n','N5'],
+  ['でんしゃ','densha','train','n','N5'],['くるま','kuruma','car','n','N5'],['ともだち','tomodachi','friend','n','N5'],
+  ['せんせい','sensei','teacher','n','N5'],['がくせい','gakusei','student','n','N5'],['こども','kodomo','child','n','N5'],
+  ['ちち','chichi','father (own)','n','N5'],['はは','haha','mother (own)','n','N5'],['あに','ani','older brother (own)','n','N5'],
+  ['あね','ane','older sister (own)','n','N5'],['おとうと','otouto','younger brother','n','N5'],['いもうと','imouto','younger sister','n','N5'],
+  ['いま','ima','now','adv','N5'],['きょう','kyou','today','n','N5'],['あした','ashita','tomorrow','n','N5'],
+  ['きのう','kinou','yesterday','n','N5'],['まいにち','mainichi','every day','adv','N5'],
+  ['じかん','jikan','time','n','N5'],['あさ','asa','morning','n','N5'],['よる','yoru','night / evening','n','N5'],
+  ['ごはん','gohan','rice / meal','n','N5'],['にく','niku','meat','n','N5'],['さかな','sakana','fish','n','N5'],
+  ['やさい','yasai','vegetables','n','N5'],['くだもの','kudamono','fruit','n','N5'],['おちゃ','ocha','tea','n','N5'],
+  ['コーヒー','ko-hi-','coffee','n','N5'],['ほん','hon','book','n','N5'],['えいが','eiga','movie','n','N5'],
+  ['おんがく','ongaku','music','n','N5'],['しゃしん','shashin','photograph','n','N5'],['てんき','tenki','weather','n','N5'],
+  ['やま','yama','mountain','n','N5'],['かわ','kawa','river','n','N5'],['うみ','umi','sea / ocean','n','N5'],
+  ['そら','sora','sky','n','N5'],['はな','hana','flower','n','N5'],['いぬ','inu','dog','n','N5'],
+  ['ねこ','neko','cat','n','N5'],['おかね','okane','money','n','N5'],['みち','michi','road / path','n','N5'],
+  ['でぐち','deguchi','exit','n','N5'],['いりぐち','iriguchi','entrance','n','N5'],
+  ['みぎ','migi','right','n','N5'],['ひだり','hidari','left','n','N5'],['まえ','mae','in front / before','n','N5'],
+  ['うしろ','ushiro','behind / back','n','N5'],['なか','naka','inside / middle','n','N5'],
+  // ── N4 (74-224) ────────────────────────────────────────────
+  ['おきる','okiru','to wake up','v','N4'],['ねる','neru','to sleep','v','N4'],['はたらく','hataraku','to work','v','N4'],
+  ['かう','kau','to buy','v','N4'],['うる','uru','to sell','v','N4'],['かす','kasu','to lend','v','N4'],
+  ['かりる','kariru','to borrow','v','N4'],['おしえる','oshieru','to teach','v','N4'],['ならう','narau','to learn','v','N4'],
+  ['おぼえる','oboeru','to memorise','v','N4'],['わすれる','wasureru','to forget','v','N4'],['つかう','tsukau','to use','v','N4'],
+  ['つくる','tsukuru','to make','v','N4'],['はじめる','hajimeru','to begin','v','N4'],['おわる','owaru','to end / finish','v','N4'],
+  ['あける','akeru','to open','v','N4'],['しめる','shimeru','to close','v','N4'],['はいる','hairu','to enter','v','N4'],
+  ['でる','deru','to exit / leave','v','N4'],['かえる','kaeru','to return home','v','N4'],
+  ['あう','au','to meet','v','N4'],['まつ','matsu','to wait','v','N4'],['すむ','sumu','to live / reside','v','N4'],
+  ['およぐ','oyogu','to swim','v','N4'],['はしる','hashiru','to run','v','N4'],['あるく','aruku','to walk','v','N4'],
+  ['のる','noru','to ride / board','v','N4'],['おりる','oriru','to get off','v','N4'],['つく','tsuku','to arrive','v','N4'],
+  ['おくる','okuru','to send','v','N4'],['あらう','arau','to wash','v','N4'],['きる','kiru','to wear (clothes)','v','N4'],
+  ['もつ','motsu','to hold / have','v','N4'],['おく','oku','to place / put down','v','N4'],
+  ['とぶ','tobu','to fly','v','N4'],['なく','naku','to cry','v','N4'],['わらう','warau','to laugh / smile','v','N4'],
+  ['しんぱいする','shinpai suru','to worry','v','N4'],['れんしゅうする','renshuu suru','to practise','v','N4'],
+  ['りょこうする','ryokou suru','to travel','v','N4'],['けっこんする','kekkon suru','to marry','v','N4'],
+  ['うんてんする','unten suru','to drive','v','N4'],['じゅんびする','junbi suru','to prepare','v','N4'],
+  ['いそがしい','isogashii','busy','ia','N4'],['うれしい','ureshii','happy / glad','ia','N4'],
+  ['かなしい','kanashii','sad','ia','N4'],['こわい','kowai','scary','ia','N4'],['いたい','itai','painful','ia','N4'],
+  ['ねむい','nemui','sleepy','ia','N4'],['あつい','atsui','hot (weather)','ia','N4'],['さむい','samui','cold (weather)','ia','N4'],
+  ['あたたかい','atatakai','warm','ia','N4'],['すずしい','suzushii','cool / refreshing','ia','N4'],
+  ['あまい','amai','sweet','ia','N4'],['からい','karai','spicy / hot','ia','N4'],['にがい','nigai','bitter','ia','N4'],
+  ['おもい','omoi','heavy','ia','N4'],['かるい','karui','light (weight)','ia','N4'],
+  ['はやい','hayai','fast / early','ia','N4'],['おそい','osoi','slow / late','ia','N4'],
+  ['つよい','tsuyoi','strong','ia','N4'],['よわい','yowai','weak','ia','N4'],['わかい','wakai','young','ia','N4'],
+  ['たいせつな','taisetsu na','important / precious','na','N4'],['ゆうめいな','yuumei na','famous','na','N4'],
+  ['べんりな','benri na','convenient','na','N4'],['ふべんな','fuben na','inconvenient','na','N4'],
+  ['しんせつな','shinsetsu na','kind','na','N4'],['ていねいな','teinei na','polite / careful','na','N4'],
+  ['げんきな','genki na','healthy / energetic','na','N4'],['すてきな','suteki na','lovely / wonderful','na','N4'],
+  ['あんぜんな','anzen na','safe','na','N4'],['きけんな','kiken na','dangerous','na','N4'],
+  ['びょういん','byouin','hospital','n','N4'],['くすり','kusuri','medicine','n','N4'],
+  ['いしゃ','isha','doctor','n','N4'],['ゆうびんきょく','yuubinkyoku','post office','n','N4'],
+  ['としょかん','toshokan','library','n','N4'],['ぎんこう','ginkou','bank','n','N4'],
+  ['こうえん','kouen','park','n','N4'],['くうこう','kuukou','airport','n','N4'],
+  ['レストラン','resutoran','restaurant','n','N4'],['へや','heya','room','n','N4'],
+  ['だいどころ','daidokoro','kitchen','n','N4'],['おふろ','ofuro','bath / bathroom','n','N4'],
+  ['まど','mado','window','n','N4'],['つくえ','tsukue','desk','n','N4'],['いす','isu','chair','n','N4'],
+  ['ふく','fuku','clothes','n','N4'],['くつ','kutsu','shoes','n','N4'],['ぼうし','boushi','hat','n','N4'],
+  ['さいふ','saifu','wallet','n','N4'],['かぎ','kagi','key','n','N4'],['かさ','kasa','umbrella','n','N4'],
+  ['てがみ','tegami','letter','n','N4'],['でんわ','denwa','telephone','n','N4'],
+  ['ちかい','chikai','near / close','ia','N4'],['とおい','tooi','far','ia','N4'],
+  ['きた','kita','north','n','N4'],['みなみ','minami','south','n','N4'],['ひがし','higashi','east','n','N4'],['にし','nishi','west','n','N4'],
+  ['せいかつ','seikatsu','daily life','n','N4'],['しゅみ','shumi','hobby','n','N4'],['りょうり','ryouri','cooking / cuisine','n','N4'],
+  ['りょこう','ryokou','travel / trip','n','N4'],['ことば','kotoba','word / language','n','N4'],['いみ','imi','meaning','n','N4'],
+  ['しつもん','shitsumon','question','n','N4'],['こたえ','kotae','answer','n','N4'],['もんだい','mondai','problem','n','N4'],
+  ['りゆう','riyuu','reason','n','N4'],['ゆめ','yume','dream','n','N4'],['しょうらい','shourai','future','n','N4'],
+  ['きもち','kimochi','feeling','n','N4'],['けいけん','keiken','experience','n','N4'],
+  ['まっすぐ','massugu','straight ahead','adv','N4'],['やっと','yatto','finally / at last','adv','N4'],
+  ['だいぶ','daibu','considerably / quite','adv','N4'],['もうすぐ','mousugu','very soon','adv','N4'],
+  ['ずっと','zutto','all along / continuously','adv','N4'],['なかなか','nakanaka','quite / rather','adv','N4'],
+  // ── N3 (225-365) ───────────────────────────────────────────
+  ['おどろく','odoroku','to be surprised','v','N3'],['なやむ','nayamu','to worry / be troubled','v','N3'],
+  ['あきらめる','akirameru','to give up','v','N3'],['がんばる','ganbaru','to do one\'s best','v','N3'],
+  ['えらぶ','erabu','to choose','v','N3'],['くらべる','kuraberu','to compare','v','N3'],
+  ['しらべる','shiraberu','to investigate / look up','v','N3'],['かくにんする','kakunin suru','to confirm','v','N3'],
+  ['せつめいする','setsumei suru','to explain','v','N3'],['そうだんする','soudan suru','to consult','v','N3'],
+  ['れんらくする','renraku suru','to contact','v','N3'],['さんかする','sanka suru','to participate','v','N3'],
+  ['せいこうする','seikou suru','to succeed','v','N3'],['しっぱいする','shippai suru','to fail','v','N3'],
+  ['かいふくする','kaifuku suru','to recover','v','N3'],['あやまる','ayamaru','to apologise','v','N3'],
+  ['ほめる','homeru','to praise','v','N3'],['ことわる','kotowaru','to refuse','v','N3'],
+  ['たのむ','tanomu','to ask / request','v','N3'],['ゆるす','yurusu','to forgive / allow','v','N3'],
+  ['おもいだす','omoidasu','to recall / remember','v','N3'],['きづく','kiduku','to notice / realise','v','N3'],
+  ['まよう','mayou','to be lost / hesitate','v','N3'],['かわる','kawaru','to change','v','N3'],
+  ['ふえる','fueru','to increase','v','N3'],['へる','heru','to decrease','v','N3'],
+  ['つづく','tsuzuku','to continue','v','N3'],['とまる','tomaru','to stop','v','N3'],
+  ['あらわれる','arawareru','to appear','v','N3'],['きえる','kieru','to disappear','v','N3'],
+  ['こわれる','kowareru','to break (intransitive)','v','N3'],['なおる','naoru','to be fixed / recover','v','N3'],
+  ['きめる','kimeru','to decide','v','N3'],['あつまる','atsumaru','to gather','v','N3'],
+  ['まもる','mamoru','to protect','v','N3'],['たすける','tasukeru','to help / save','v','N3'],
+  ['ささえる','sasaeru','to support','v','N3'],['しんじる','shinjiru','to believe','v','N3'],
+  ['うたがう','utagau','to doubt','v','N3'],['もとめる','motomeru','to seek / demand','v','N3'],
+  ['じしん','jishin','self-confidence','n','N3'],['どりょく','doryoku','effort','n','N3'],
+  ['がまん','gaman','patience / endurance','n','N3'],['ゆうき','yuuki','courage','n','N3'],
+  ['きぼう','kibou','hope','n','N3'],['こころ','kokoro','heart / mind','n','N3'],
+  ['あい','ai','love','n','N3'],['ゆうじょう','yuujou','friendship','n','N3'],
+  ['しんらい','shinrai','trust','n','N3'],['やくそく','yakusoku','promise','n','N3'],
+  ['しゃかい','shakai','society','n','N3'],['かんきょう','kankyou','environment','n','N3'],
+  ['しぜん','shizen','nature','n','N3'],['かがく','kagaku','science','n','N3'],
+  ['ぎじゅつ','gijutsu','technology / skill','n','N3'],['じょうほう','jouhou','information','n','N3'],
+  ['ちしき','chishiki','knowledge','n','N3'],['きょういく','kyouiku','education','n','N3'],
+  ['けんきゅう','kenkyuu','research','n','N3'],['はっぴょう','happyou','presentation','n','N3'],
+  ['かいぎ','kaigi','meeting','n','N3'],['けいかく','keikaku','plan','n','N3'],
+  ['もくてき','mokuteki','purpose / aim','n','N3'],['けっか','kekka','result','n','N3'],
+  ['えいきょう','eikyou','influence','n','N3'],['へんか','henka','change','n','N3'],
+  ['せいちょう','seichou','growth','n','N3'],['のうりょく','nouryoku','ability','n','N3'],
+  ['さいのう','sainou','talent','n','N3'],['せいかく','seikaku','personality / character','n','N3'],
+  ['たいど','taido','attitude','n','N3'],['こうどう','koudou','action / behaviour','n','N3'],
+  ['しゅうかん','shuukan','habit / custom','n','N3'],['でんとう','dentou','tradition','n','N3'],
+  ['げいじゅつ','geijutsu','art','n','N3'],['たてもの','tatemono','building','n','N3'],
+  ['ようす','yousu','situation / appearance','n','N3'],['ばあい','baai','case / situation','n','N3'],
+  ['かんけい','kankei','relationship','n','N3'],['かのうせい','kanousei','possibility','n','N3'],
+  ['ひつような','hitsuyou na','necessary','na','N3'],['じゅうような','juuyou na','important','na','N3'],
+  ['ふくざつな','fukuzatsu na','complicated','na','N3'],['せいかくな','seikaku na','accurate','na','N3'],
+  ['ざんねんな','zannen na','disappointing','na','N3'],['しあわせな','shiawase na','happy / fortunate','na','N3'],
+  ['じゆうな','jiyuu na','free','na','N3'],['てきとうな','tekitou na','appropriate / suitable','na','N3'],
+  ['とうぜん','touzen','naturally / of course','adv','N3'],['とつぜん','totsuzen','suddenly','adv','N3'],
+  ['やはり','yahari','as expected / after all','adv','N3'],['さいきん','saikin','recently','adv','N3'],
+  ['とくに','toku ni','especially / particularly','adv','N3'],['ほとんど','hotondo','mostly / almost','adv','N3'],
+  ['たいてい','taitei','usually','adv','N3'],['たまに','tama ni','occasionally','adv','N3'],
+  ['きゅうに','kyuu ni','suddenly','adv','N3'],['じつは','jitsu wa','actually / in fact','exp','N3'],
+  ['たとえば','tatoeba','for example','exp','N3'],['つまり','tsumari','in other words','exp','N3'],
+  ['たしかに','tashika ni','certainly','adv','N3'],['なるほど','naruhodo','I see / indeed','exp','N3'],
+  ['ところで','tokoro de','by the way','exp','N3'],['しかし','shikashi','however','exp','N3'],
+  ['かんしゃ','kansha','gratitude','n','N3'],['がまん','gaman','perseverance','n','N3'],
+  ['えがお','egao','smiling face','n','N3'],['きずな','kizuna','bond / connection','n','N3'],
+  ['はじまり','hajimari','beginning / start','n','N3'],
+];
+
+const POS = {n:'noun', v:'verb', ia:'i-adjective', na:'na-adjective', adv:'adverb', exp:'expression'};
+
+function getDayOfYear() {
+  const now = new Date(), start = new Date(now.getFullYear(), 0, 0);
+  return Math.floor((now - start) / 86400000); // 1-366
+}
+
+function renderWotd() {
+  const idx  = (getDayOfYear() - 1 + WORDS.length) % WORDS.length;
+  const w    = WORDS[idx];
+  const now  = new Date();
+  const opts = { month: 'long', day: 'numeric' };
+
+  document.getElementById('wotd-kana').textContent = w[0];
+  document.getElementById('wotd-rom').textContent  = w[1];
+  document.getElementById('wotd-eng').textContent  = w[2];
+  document.getElementById('wotd-date').textContent =
+    now.toLocaleDateString('en-GB', opts);
+  document.getElementById('wotd-tags').innerHTML =
+    `<span class="wotd-tag">${POS[w[3]] || w[3]}</span>` +
+    `<span class="wotd-tag wotd-${w[4].toLowerCase()}">${w[4]}</span>`;
+}
+
+// ============================================================
+// SEARCH
+// ============================================================
+function showSearch() {
+  showScreen('screen-search');
+  const input = document.getElementById('search-input');
+  input.value = '';
+  document.getElementById('search-count').textContent = '';
+  document.getElementById('search-results').innerHTML = '';
+  setTimeout(() => input.focus(), 60);
+}
+
+function doSearch() {
+  const raw   = document.getElementById('search-input').value;
+  const query = raw.trim();
+  const countEl   = document.getElementById('search-count');
+  const resultsEl = document.getElementById('search-results');
+
+  if (query.length < 2) {
+    countEl.textContent = query.length === 1 ? 'Type at least 2 characters…' : '';
+    resultsEl.innerHTML = '';
+    return;
+  }
+
+  const qLow   = query.toLowerCase();
+  const matches = [];
+
+  for (const topic of S.topics) {
+    for (const ex of topic.exercises) {
+      const romText = ex.rom  || ex.qRom || '';
+      const jpText  = ex.jp   || ex.qJp  || '';
+      const romHit  = romText.toLowerCase().includes(qLow);
+      const jpHit   = jpText.includes(query);  // case-sensitive — no case in kana/kanji
+
+      if (romHit || jpHit) matches.push({ topic, ex, romHit, jpHit });
+    }
+  }
+
+  const topicCount = new Set(matches.map(m => m.topic.slug)).size;
+  countEl.textContent = matches.length === 0
+    ? 'No results found.'
+    : `${matches.length} result${matches.length !== 1 ? 's' : ''} across ${topicCount} topic${topicCount !== 1 ? 's' : ''}`;
+
+  resultsEl.innerHTML = matches.map(({ topic, ex, romHit, jpHit }) => {
+    const isEN  = ex.dir === 'EN>JP';
+    const enText  = isEN ? (ex.q || '') : (ex.a || '');
+    const romText = ex.rom  || ex.qRom || '';
+    const jpText  = ex.jp   || ex.qJp  || '';
+
+    const romHL = romHit ? hlMark(romText, qLow, true)  : esc(romText);
+    const jpHL  = jpHit  ? hlMark(jpText,  query, false) : esc(jpText);
+
+    // Row order follows the exercise direction
+    const rows = isEN
+      ? [['EN', 'result-en',  esc(enText)],
+         ['ROM','result-rom', romHL],
+         ['JP', 'result-jp',  jpHL]]
+      : [['ROM','result-rom', romHL],
+         ['JP', 'result-jp',  jpHL],
+         ['EN', 'result-en',  esc(enText)]];
+
+    const rowsHTML = rows
+      .filter(([,, val]) => val)
+      .map(([lbl, cls, val]) =>
+        `<div class="result-row">
+          <span class="result-lbl">${lbl}</span>
+          <span class="${cls}">${val}</span>
+        </div>`).join('');
+
+    return `<div class="search-result">
+      <div class="result-tags">
+        <span class="result-topic" onclick="startSession('${esc(topic.slug)}')"
+          title="Start a session on this topic">${esc(topic.topicName)} ↗</span>
+        <span class="result-dir">${ex.dir}</span>
+      </div>
+      ${rowsHTML}
+    </div>`;
+  }).join('');
+}
+
+// Highlight all occurrences of query in text, returning safe HTML
+function hlMark(text, query, caseInsensitive) {
+  if (!text || !query) return esc(text || '');
+  const flags  = caseInsensitive ? 'gi' : 'g';
+  const safeQ  = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const re     = new RegExp(safeQ, flags);
+  const result = [];
+  let last = 0, m;
+  re.lastIndex = 0;
+  while ((m = re.exec(text)) !== null) {
+    result.push(esc(text.slice(last, m.index)));
+    result.push(`<mark>${esc(m[0])}</mark>`);
+    last = m.index + m[0].length;
+    if (m[0].length === 0) { last++; } // guard against zero-length match
+  }
+  result.push(esc(text.slice(last)));
+  return result.join('');
+}
+
+// ============================================================
+// UTILS
+// ============================================================
+function esc(str) {
+  return String(str ?? '')
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+buildKanaChart();
+renderWotd();
+</script>
+</body>
+</html>

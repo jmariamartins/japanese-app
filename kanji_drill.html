@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>漢字練習 · Kanji Drill</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper:  #f5f0e8; --dark:  #2c1f12; --gold: #b8962e;
+      --red:    #c0392b; --green: #1a7a4a; --muted: #6b5d4f;
+      --border: #d4c9b0; --alt:   #ede8db;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--paper); color: var(--dark);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      min-height: 100vh; display: flex; flex-direction: column;
+    }
+    header {
+      background: var(--dark); color: var(--paper);
+      padding: 0.85rem 1.5rem; display: flex;
+      align-items: center; justify-content: space-between;
+      border-bottom: 3px solid var(--gold); flex-shrink: 0;
+    }
+    header h1 { font-family: 'Noto Serif JP', serif; font-size: 1.15rem; font-weight: 700; }
+    header a {
+      color: var(--gold); font-family: 'DM Mono', monospace;
+      font-size: 0.73rem; text-decoration: none; opacity: 0.9;
+    }
+    header a:hover { opacity: 1; }
+
+    .screen { display: none; flex: 1; flex-direction: column; }
+    .screen.active { display: flex; }
+
+    /* ── SELECT ── */
+    #select-screen { padding: 1.5rem; max-width: 900px; margin: 0 auto; width: 100%; }
+
+    .select-intro {
+      font-family: 'DM Mono', monospace; font-size: 0.76rem;
+      color: var(--muted); margin-bottom: 1.2rem; line-height: 1.7;
+    }
+
+    .legend-row {
+      display: flex; gap: 1.2rem; margin-top: 0.35rem; flex-wrap: wrap;
+    }
+    .legend-row span { display: flex; align-items: center; gap: 0.35rem; }
+    .ldot {
+      width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+    }
+
+    .kanji-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(78px, 1fr));
+      gap: 0.45rem;
+    }
+
+    .kanji-card {
+      background: var(--paper); border: 1px solid var(--border);
+      border-radius: 6px; padding: 0.55rem 0.4rem;
+      cursor: pointer; text-align: center;
+      transition: all 0.13s; display: flex;
+      flex-direction: column; align-items: center; gap: 0.2rem;
+    }
+    .kanji-card:hover { border-color: var(--gold); background: #faf6e8; transform: translateY(-1px); }
+
+    .kc-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--border); }
+    .kanji-card.today  .kc-dot { background: var(--green); }
+    .kanji-card.before .kc-dot { background: var(--gold); }
+
+    .kc-char { font-family: 'Noto Serif JP', serif; font-size: 2rem; line-height: 1.1; }
+    .kc-mean { font-family: 'DM Mono', monospace; font-size: 0.6rem; color: var(--muted); }
+
+    /* ── DRILL ── */
+    #drill-screen { padding: 1rem 1.5rem 2.5rem; max-width: 780px; margin: 0 auto; width: 100%; }
+
+    .drill-hdr {
+      display: flex; align-items: center; gap: 0.9rem;
+      margin-bottom: 1rem; flex-wrap: wrap;
+    }
+
+    .btn-back {
+      padding: 0.32rem 0.7rem; background: transparent;
+      color: var(--muted); border: 1px solid var(--border);
+      border-radius: 5px; font-family: 'DM Mono', monospace;
+      font-size: 0.7rem; cursor: pointer; flex-shrink: 0;
+    }
+    .btn-back:hover { color: var(--dark); border-color: var(--dark); }
+
+    .drill-kinfo { flex: 1; min-width: 0; }
+    .drill-kchar { font-family: 'Noto Serif JP', serif; font-size: 1.6rem; line-height: 1; }
+    .drill-kmeta { font-family: 'DM Mono', monospace; font-size: 0.73rem; color: var(--muted); margin-top: 0.15rem; }
+
+    .stroke-ctr {
+      font-family: 'DM Mono', monospace; font-size: 0.78rem;
+      color: var(--muted); white-space: nowrap;
+    }
+
+    .status-msg {
+      font-family: 'DM Mono', monospace; font-size: 0.78rem;
+      color: var(--muted); text-align: center; padding: 2rem;
+    }
+
+    .panels {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1rem; margin-bottom: 0.9rem;
+    }
+    @media (max-width: 540px) { .panels { grid-template-columns: 1fr; } }
+
+    .panel {
+      border: 1px solid var(--border); border-radius: 7px; overflow: hidden;
+    }
+    .panel-lbl {
+      background: var(--alt); padding: 0.32rem 0.75rem;
+      font-family: 'DM Mono', monospace; font-size: 0.66rem;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--muted); border-bottom: 1px solid var(--border);
+    }
+    .panel-inner {
+      background: #fff; display: flex;
+      align-items: center; justify-content: center;
+      min-height: 220px;
+    }
+
+    #guide-svg { width: 200px; height: 200px; }
+
+    #practice-canvas {
+      width: 200px; height: 200px;
+      cursor: crosshair; touch-action: none; display: block;
+    }
+
+    .controls {
+      display: flex; gap: 0.55rem; flex-wrap: wrap; align-items: center;
+      margin-bottom: 0.7rem;
+    }
+
+    .btn-primary {
+      padding: 0.62rem 1.5rem; background: var(--dark); color: var(--paper);
+      border: none; border-radius: 6px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem; font-weight: 600; cursor: pointer;
+      border-bottom: 2px solid var(--gold); transition: opacity 0.15s;
+    }
+    .btn-primary:hover { opacity: 0.85; }
+    .btn-primary:disabled { opacity: 0.3; cursor: default; }
+
+    .btn-outline {
+      padding: 0.58rem 1.1rem; background: transparent;
+      color: var(--dark); border: 1.5px solid var(--dark);
+      border-radius: 6px; font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.15s;
+    }
+    .btn-outline:hover { background: var(--dark); color: var(--paper); }
+    .btn-outline:disabled { opacity: 0.3; cursor: default; }
+
+    .btn-sm {
+      padding: 0.38rem 0.85rem; background: transparent;
+      color: var(--muted); border: 1px solid var(--border);
+      border-radius: 5px; font-family: 'DM Mono', monospace;
+      font-size: 0.7rem; cursor: pointer; transition: all 0.13s;
+    }
+    .btn-sm:hover { color: var(--dark); border-color: var(--dark); }
+    .btn-sm:disabled { opacity: 0.3; cursor: default; }
+
+    .stroke-key {
+      font-family: 'DM Mono', monospace; font-size: 0.67rem;
+      color: var(--muted); display: flex; gap: 0.9rem; flex-wrap: wrap;
+      margin-top: 0.2rem;
+    }
+    .stroke-key span { display: flex; align-items: center; gap: 0.3rem; }
+    .sk-line { width: 18px; height: 3px; border-radius: 2px; }
+
+    /* Done panel */
+    .done-panel {
+      display: none; text-align: center; padding: 2rem 1rem;
+    }
+    .done-panel.visible { display: block; }
+    .done-char { font-family: 'Noto Serif JP', serif; font-size: 5rem; line-height: 1; margin-bottom: 0.5rem; }
+    .done-info { font-family: 'DM Mono', monospace; font-size: 0.8rem; color: var(--muted); margin-bottom: 1.4rem; }
+    .done-btns { display: flex; gap: 0.7rem; justify-content: center; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>漢字練習 · Kanji Drill</h1>
+  <a href="index.html" target="_blank">← Grammar</a>
+</header>
+
+<!-- ══ SELECT ══ -->
+<div id="select-screen" class="screen active">
+  <div class="select-intro">
+    Select a kanji to practise its stroke order · JLPT N5 · 80 characters
+    <div class="legend-row">
+      <span><span class="ldot" style="background:var(--green)"></span> practised today</span>
+      <span><span class="ldot" style="background:var(--gold)"></span> practised before</span>
+      <span><span class="ldot" style="background:var(--border)"></span> not yet started</span>
+    </div>
+  </div>
+  <div class="kanji-grid" id="kanji-grid"></div>
+</div>
+
+<!-- ══ DRILL ══ -->
+<div id="drill-screen" class="screen">
+
+  <div class="drill-hdr">
+    <button class="btn-back" onclick="showSelect()">← All kanji</button>
+    <div class="drill-kinfo">
+      <div class="drill-kchar" id="drill-char"></div>
+      <div class="drill-kmeta" id="drill-meta"></div>
+    </div>
+    <div class="stroke-ctr" id="stroke-ctr"></div>
+  </div>
+
+  <div id="status-msg" class="status-msg">Loading stroke data…</div>
+
+  <div id="drill-main" style="display:none">
+    <div class="panels">
+      <div class="panel">
+        <div class="panel-lbl">Guide — watch each stroke</div>
+        <div class="panel-inner">
+          <svg id="guide-svg" viewBox="0 0 109 109" xmlns="http://www.w3.org/2000/svg">
+            <line x1="54.5" y1="4"   x2="54.5" y2="105" stroke="#e8e0d4" stroke-width="0.5"/>
+            <line x1="4"   y1="54.5" x2="105"  y2="54.5" stroke="#e8e0d4" stroke-width="0.5"/>
+            <rect x="4" y="4" width="101" height="101" fill="none" stroke="#e8e0d4" stroke-width="0.5"/>
+          </svg>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-lbl">Practice — draw each stroke</div>
+        <div class="panel-inner" style="padding:0;">
+          <canvas id="practice-canvas" width="218" height="218"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button class="btn-primary"  id="btn-next" onclick="nextStroke()">Next stroke →</button>
+      <button class="btn-outline"  id="btn-prev" onclick="prevStroke()">← Prev</button>
+      <button class="btn-sm"       id="btn-replay" onclick="replayStroke()">▶ Replay</button>
+      <button class="btn-sm"       id="btn-undo"  onclick="undoStroke()">↩ Undo</button>
+      <button class="btn-sm"       onclick="clearCanvas()">✕ Clear</button>
+    </div>
+
+    <div class="stroke-key">
+      <span><span class="sk-line" style="background:#c0b090"></span> completed</span>
+      <span><span class="sk-line" style="background:var(--red);height:4px"></span> current</span>
+    </div>
+  </div>
+
+  <div id="drill-done" class="done-panel">
+    <div class="done-char" id="done-char"></div>
+    <div class="done-info" id="done-info"></div>
+    <div class="done-btns">
+      <button class="btn-primary"  onclick="showSelect()">← Back to grid</button>
+      <button class="btn-outline"  onclick="retryKanji()">↩ Try again</button>
+      <button class="btn-outline"  id="btn-next-kanji" onclick="nextKanji()">Next kanji →</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// ══════════════════════════════════════
+//  DATA — JLPT N5 (80 kanji)
+// ══════════════════════════════════════
+const N5 = [
+  {k:'一',m:'one',r:'いち'},{k:'右',m:'right',r:'みぎ'},{k:'雨',m:'rain',r:'あめ'},
+  {k:'円',m:'yen',r:'えん'},{k:'王',m:'king',r:'おう'},{k:'音',m:'sound',r:'おと'},
+  {k:'下',m:'below',r:'した'},{k:'火',m:'fire',r:'ひ'},{k:'花',m:'flower',r:'はな'},
+  {k:'貝',m:'shellfish',r:'かい'},{k:'学',m:'study',r:'まな'},{k:'気',m:'spirit',r:'き'},
+  {k:'九',m:'nine',r:'く'},{k:'休',m:'rest',r:'やす'},{k:'玉',m:'jewel',r:'たま'},
+  {k:'金',m:'gold',r:'きん'},{k:'空',m:'sky',r:'そら'},{k:'月',m:'moon',r:'つき'},
+  {k:'犬',m:'dog',r:'いぬ'},{k:'見',m:'see',r:'み'},{k:'五',m:'five',r:'ご'},
+  {k:'口',m:'mouth',r:'くち'},{k:'校',m:'school',r:'こう'},{k:'左',m:'left',r:'ひだり'},
+  {k:'三',m:'three',r:'さん'},{k:'山',m:'mountain',r:'やま'},{k:'四',m:'four',r:'し'},
+  {k:'子',m:'child',r:'こ'},{k:'糸',m:'thread',r:'いと'},{k:'字',m:'letter',r:'じ'},
+  {k:'耳',m:'ear',r:'みみ'},{k:'七',m:'seven',r:'しち'},{k:'車',m:'car',r:'くるま'},
+  {k:'手',m:'hand',r:'て'},{k:'十',m:'ten',r:'じゅう'},{k:'出',m:'exit',r:'で'},
+  {k:'女',m:'woman',r:'おんな'},{k:'小',m:'small',r:'ちい'},{k:'上',m:'above',r:'うえ'},
+  {k:'森',m:'forest',r:'もり'},{k:'人',m:'person',r:'ひと'},{k:'水',m:'water',r:'みず'},
+  {k:'正',m:'correct',r:'ただ'},{k:'生',m:'life',r:'い'},{k:'青',m:'blue',r:'あお'},
+  {k:'石',m:'stone',r:'いし'},{k:'赤',m:'red',r:'あか'},{k:'千',m:'thousand',r:'せん'},
+  {k:'川',m:'river',r:'かわ'},{k:'先',m:'ahead',r:'さき'},{k:'足',m:'foot',r:'あし'},
+  {k:'村',m:'village',r:'むら'},{k:'大',m:'big',r:'おお'},{k:'男',m:'man',r:'おとこ'},
+  {k:'竹',m:'bamboo',r:'たけ'},{k:'中',m:'middle',r:'なか'},{k:'虫',m:'insect',r:'むし'},
+  {k:'町',m:'town',r:'まち'},{k:'天',m:'heaven',r:'てん'},{k:'田',m:'rice field',r:'た'},
+  {k:'土',m:'earth',r:'つち'},{k:'二',m:'two',r:'に'},{k:'日',m:'sun/day',r:'ひ'},
+  {k:'入',m:'enter',r:'はい'},{k:'年',m:'year',r:'とし'},{k:'白',m:'white',r:'しろ'},
+  {k:'八',m:'eight',r:'はち'},{k:'百',m:'hundred',r:'ひゃく'},{k:'文',m:'writing',r:'ぶん'},
+  {k:'木',m:'tree',r:'き'},{k:'本',m:'book',r:'ほん'},{k:'名',m:'name',r:'な'},
+  {k:'目',m:'eye',r:'め'},{k:'立',m:'stand',r:'た'},{k:'力',m:'power',r:'ちから'},
+  {k:'林',m:'grove',r:'はやし'},{k:'六',m:'six',r:'ろく'},
+  {k:'父',m:'father',r:'ちち'},{k:'母',m:'mother',r:'はは'}
+];
+
+// ══════════════════════════════════════
+//  STATE
+// ══════════════════════════════════════
+let S = {
+  entry:   null,   // current N5 entry {k, m, r}
+  strokes: [],     // path 'd' strings from KanjiVG
+  idx:     0,      // current stroke index (0-based)
+  snaps:   [],     // canvas ImageData snapshots for undo
+};
+let canvas, ctx, drawing = false, lastPos = null, canvasReady = false;
+
+// ══════════════════════════════════════
+//  PRACTICE TRACKING
+// ══════════════════════════════════════
+function loadPractice()       { try { return JSON.parse(localStorage.getItem('kanji_practice') || '{}'); } catch { return {}; } }
+function savePracticeData(p)  { localStorage.setItem('kanji_practice', JSON.stringify(p)); }
+function markPracticed(k)     {
+  const p = loadPractice();
+  const today = new Date().toISOString().slice(0, 10);
+  const e = p[k] || { count: 0, last: null };
+  e.count++; e.last = today; p[k] = e;
+  savePracticeData(p);
+}
+function practiceStatus(k)    {
+  const e = loadPractice()[k];
+  if (!e) return 'none';
+  return e.last === new Date().toISOString().slice(0, 10) ? 'today' : 'before';
+}
+
+// ══════════════════════════════════════
+//  SELECT SCREEN
+// ══════════════════════════════════════
+function buildGrid() {
+  const grid = document.getElementById('kanji-grid');
+  grid.innerHTML = N5.map((en, i) => {
+    const s = practiceStatus(en.k);
+    return `<div class="kanji-card ${s}" onclick="selectKanji(${i})">
+      <div class="kc-dot"></div>
+      <div class="kc-char">${en.k}</div>
+      <div class="kc-mean">${en.m}</div>
+    </div>`;
+  }).join('');
+}
+
+function showSelect() {
+  buildGrid();
+  show('select-screen');
+}
+
+// ══════════════════════════════════════
+//  KANJIVG FETCH
+// ══════════════════════════════════════
+async function fetchStrokes(char) {
+  const cp  = char.codePointAt(0).toString(16).padStart(5, '0');
+  const url = `https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/${cp}.svg`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const txt = await res.text();
+  const doc = new DOMParser().parseFromString(txt, 'image/svg+xml');
+  const grp = doc.querySelector('[id^="kvg:StrokePaths"]');
+  if (!grp) throw new Error('Stroke group not found');
+  return Array.from(grp.querySelectorAll('path')).map(p => p.getAttribute('d'));
+}
+
+// ══════════════════════════════════════
+//  DRILL FLOW
+// ══════════════════════════════════════
+async function selectKanji(idx) {
+  S.entry = N5[idx];
+  S.idx   = 0;
+  S.snaps = [];
+
+  show('drill-screen');
+  document.getElementById('drill-char').textContent = S.entry.k;
+  document.getElementById('drill-meta').textContent = `${S.entry.m} · ${S.entry.r}`;
+  document.getElementById('status-msg').textContent = 'Loading stroke data…';
+  document.getElementById('status-msg').style.display = 'block';
+  document.getElementById('drill-main').style.display = 'none';
+  document.getElementById('drill-done').classList.remove('visible');
+
+  try {
+    S.strokes = await fetchStrokes(S.entry.k);
+    document.getElementById('status-msg').style.display = 'none';
+    document.getElementById('drill-main').style.display = 'block';
+    initCanvas();
+    clearCanvas();
+    renderGuide();
+    updateControls();
+  } catch(e) {
+    document.getElementById('status-msg').innerHTML =
+      `<span style="color:var(--red)">Could not load stroke data — check your internet connection.</span>`;
+  }
+}
+
+function nextStroke() {
+  if (S.idx < S.strokes.length - 1) {
+    S.idx++;
+    renderGuide();
+    updateControls();
+  } else {
+    showDone();
+  }
+}
+
+function prevStroke() {
+  if (S.idx > 0) { S.idx--; renderGuide(); updateControls(); }
+}
+
+function replayStroke() { renderGuide(); }
+
+function retryKanji() {
+  S.idx = 0; S.snaps = [];
+  document.getElementById('drill-done').classList.remove('visible');
+  document.getElementById('drill-main').style.display = 'block';
+  clearCanvas(); renderGuide(); updateControls();
+}
+
+function nextKanji() {
+  const cur  = N5.findIndex(e => e.k === S.entry.k);
+  selectKanji((cur + 1) % N5.length);
+}
+
+function showDone() {
+  markPracticed(S.entry.k);
+  document.getElementById('drill-main').style.display = 'none';
+  document.getElementById('done-char').textContent = S.entry.k;
+  document.getElementById('done-info').textContent =
+    `${S.entry.m} · ${S.strokes.length} stroke${S.strokes.length !== 1 ? 's' : ''}`;
+  document.getElementById('drill-done').classList.add('visible');
+}
+
+function updateControls() {
+  const n = S.strokes.length, i = S.idx;
+  document.getElementById('stroke-ctr').textContent = `Stroke ${i + 1} / ${n}`;
+  document.getElementById('btn-prev').disabled = i === 0;
+  document.getElementById('btn-next').textContent = i === n - 1 ? '✓ Done' : 'Next stroke →';
+  document.getElementById('btn-undo').disabled = S.snaps.length === 0;
+}
+
+// ══════════════════════════════════════
+//  SVG GUIDE — stroke-by-stroke animation
+// ══════════════════════════════════════
+function renderGuide() {
+  const svg = document.getElementById('guide-svg');
+  const NS  = 'http://www.w3.org/2000/svg';
+
+  // Remove previous stroke paths (keep grid lines)
+  Array.from(svg.querySelectorAll('path')).forEach(p => p.remove());
+
+  // Draw completed strokes in muted gold/grey
+  for (let i = 0; i < S.idx; i++) {
+    const p = document.createElementNS(NS, 'path');
+    p.setAttribute('d', S.strokes[i]);
+    p.style.cssText = 'fill:none;stroke:#c0a878;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;';
+    svg.appendChild(p);
+  }
+
+  // Current stroke — animated in red
+  const curr = document.createElementNS(NS, 'path');
+  curr.setAttribute('d', S.strokes[S.idx]);
+  curr.style.cssText = 'fill:none;stroke:#c0392b;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;';
+  svg.appendChild(curr);
+
+  // Animate current stroke using stroke-dashoffset
+  requestAnimationFrame(() => {
+    const len = curr.getTotalLength();
+    curr.style.strokeDasharray  = `${len} ${len}`;
+    curr.style.strokeDashoffset = len;
+    requestAnimationFrame(() => {
+      curr.style.transition       = 'stroke-dashoffset 1.5s ease-in-out';
+      curr.style.strokeDashoffset = 0;
+    });
+  });
+}
+
+// ══════════════════════════════════════
+//  CANVAS — freehand drawing
+// ══════════════════════════════════════
+function initCanvas() {
+  if (canvasReady) return;
+  canvasReady = true;
+  canvas = document.getElementById('practice-canvas');
+  ctx    = canvas.getContext('2d');
+
+  canvas.addEventListener('mousedown',  onDown);
+  canvas.addEventListener('mousemove',  onMove);
+  canvas.addEventListener('mouseup',    onUp);
+  canvas.addEventListener('mouseleave', onUp);
+  canvas.addEventListener('touchstart', onDown, { passive: false });
+  canvas.addEventListener('touchmove',  onMove, { passive: false });
+  canvas.addEventListener('touchend',   onUp);
+}
+
+function drawGrid() {
+  const w = canvas.width, h = canvas.height;
+  ctx.save();
+  ctx.strokeStyle = '#e8e0d4';
+  ctx.lineWidth = 0.8;
+  ctx.beginPath();
+  ctx.moveTo(w / 2, 4);   ctx.lineTo(w / 2, h - 4);
+  ctx.moveTo(4, h / 2);   ctx.lineTo(w - 4, h / 2);
+  ctx.strokeRect(4, 4, w - 8, h - 8);
+  ctx.stroke();
+  ctx.restore();
+}
+
+function clearCanvas() {
+  if (!canvas) return;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  S.snaps = [];
+  drawGrid();
+  document.getElementById('btn-undo').disabled = true;
+}
+
+function undoStroke() {
+  if (!S.snaps.length) return;
+  const snap = S.snaps.pop();
+  ctx.putImageData(snap, 0, 0);
+  document.getElementById('btn-undo').disabled = S.snaps.length === 0;
+}
+
+function getPos(e) {
+  const rect = canvas.getBoundingClientRect();
+  const sx   = canvas.width  / rect.width;
+  const sy   = canvas.height / rect.height;
+  const src  = e.touches ? e.touches[0] : e;
+  return { x: (src.clientX - rect.left) * sx, y: (src.clientY - rect.top) * sy };
+}
+
+function onDown(e) {
+  e.preventDefault();
+  // Snapshot before this stroke so undo can restore it
+  S.snaps.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
+  document.getElementById('btn-undo').disabled = false;
+  drawing  = true;
+  lastPos  = getPos(e);
+  ctx.beginPath();
+  ctx.moveTo(lastPos.x, lastPos.y);
+}
+
+function onMove(e) {
+  e.preventDefault();
+  if (!drawing) return;
+  const pos = getPos(e);
+  ctx.strokeStyle = '#2c1f12';
+  ctx.lineWidth   = 3.5;
+  ctx.lineCap     = 'round';
+  ctx.lineJoin    = 'round';
+  ctx.lineTo(pos.x, pos.y);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(pos.x, pos.y);
+  lastPos = pos;
+}
+
+function onUp(e) {
+  e.preventDefault();
+  drawing = false;
+  lastPos = null;
+}
+
+// ══════════════════════════════════════
+//  UTILS
+// ══════════════════════════════════════
+function show(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+
+// ══════════════════════════════════════
+//  INIT
+// ══════════════════════════════════════
+buildGrid();
+</script>
+</body>
+</html>

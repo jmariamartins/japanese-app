@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kana Drill · 仮名練習</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper:   #f5f0e8;
+      --dark:    #2c1f12;
+      --gold:    #b8962e;
+      --gold-lt: #faf6e8;
+      --red:     #c0392b;
+      --green:   #1a7a4a;
+      --muted:   #6b5d4f;
+      --border:  #d4c9b0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--paper); color: var(--dark);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      min-height: 100vh; display: flex; flex-direction: column;
+    }
+    header {
+      background: var(--dark); color: var(--paper);
+      padding: 0.85rem 1.5rem; display: flex;
+      align-items: center; justify-content: space-between;
+      border-bottom: 3px solid var(--gold); flex-shrink: 0;
+    }
+    header h1 { font-family: 'Noto Serif JP', serif; font-size: 1.15rem; font-weight: 700; }
+    header a {
+      color: var(--gold); font-family: 'DM Mono', monospace;
+      font-size: 0.73rem; text-decoration: none; opacity: 0.85;
+    }
+    header a:hover { opacity: 1; }
+
+    .screen {
+      flex: 1; display: flex; flex-direction: column;
+      padding: 1.5rem; max-width: 680px; margin: 0 auto; width: 100%;
+    }
+    .screen.hidden { display: none !important; }
+
+    /* ── SETUP ── */
+    .setup-title { text-align: center; margin-bottom: 1.6rem; }
+    .setup-title h2 { font-size: 1.55rem; font-weight: 700; margin-bottom: 0.25rem; }
+    .setup-title p { font-family: 'DM Mono', monospace; font-size: 0.8rem; color: var(--muted); }
+
+    .kana-section { margin-bottom: 1.2rem; }
+    .section-head {
+      font-family: 'DM Mono', monospace; font-size: 0.72rem;
+      text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold);
+      margin-bottom: 0.55rem; padding-bottom: 0.28rem;
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .section-head button {
+      background: none; border: none; cursor: pointer;
+      font-family: 'DM Mono', monospace; font-size: 0.68rem; color: var(--muted);
+    }
+    .section-head button:hover { color: var(--gold); }
+
+    .group-grid { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+    .group-btn {
+      padding: 0.4rem 0.75rem; border: 2px solid var(--border);
+      border-radius: 8px; background: var(--paper); cursor: pointer;
+      font-family: 'Noto Serif JP', serif; font-size: 0.9rem; color: var(--dark);
+      transition: all 0.13s; display: flex; align-items: center; gap: 0.35rem;
+    }
+    .group-btn:hover { border-color: var(--gold); }
+    .group-btn.active { background: var(--dark); color: var(--paper); border-color: var(--dark); }
+    .group-btn .cnt { font-family: 'DM Mono', monospace; font-size: 0.65rem; opacity: 0.55; }
+
+    .setup-footer {
+      margin-top: 1.4rem; display: flex;
+      align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.8rem;
+    }
+    .char-count { font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--muted); }
+
+    .btn-primary {
+      padding: 0.65rem 1.8rem; background: var(--dark); color: var(--paper);
+      border: none; border-radius: 8px; font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem; font-weight: 600; cursor: pointer;
+      border-bottom: 3px solid var(--gold); transition: opacity 0.15s;
+    }
+    .btn-primary:hover { opacity: 0.85; }
+    .btn-primary:disabled { opacity: 0.35; cursor: not-allowed; }
+
+    /* ── DRILL ── */
+    .drill-header {
+      display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;
+    }
+    .drill-counter {
+      font-family: 'DM Mono', monospace; font-size: 0.82rem; color: var(--muted);
+    }
+    .drill-counter .c { color: var(--green); font-weight: 600; }
+    .drill-counter .w { color: var(--red); font-weight: 600; }
+
+    .btn-sm {
+      padding: 0.32rem 0.75rem; background: transparent;
+      color: var(--muted); border: 1px solid var(--border); border-radius: 6px;
+      font-family: 'DM Mono', monospace; font-size: 0.7rem; cursor: pointer;
+    }
+    .btn-sm:hover { color: var(--dark); border-color: var(--dark); }
+
+    .kana-display { text-align: center; margin: 1.6rem 0 2rem; }
+    .kana-char {
+      font-family: 'Noto Serif JP', serif; font-size: 7rem;
+      font-weight: 700; line-height: 1; color: var(--dark);
+      transition: opacity 0.1s;
+    }
+    .kana-type {
+      font-family: 'DM Mono', monospace; font-size: 0.68rem;
+      color: var(--muted); margin-top: 0.45rem;
+      text-transform: uppercase; letter-spacing: 0.09em;
+    }
+
+    .choices-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 0.65rem; max-width: 400px; margin: 0 auto;
+    }
+    .choice-btn {
+      padding: 0.95rem 0.5rem; border: 2.5px solid var(--border);
+      border-radius: 10px; background: var(--paper);
+      font-family: 'DM Mono', monospace; font-size: 1.05rem; font-weight: 500;
+      cursor: pointer; color: var(--dark); transition: all 0.12s; text-align: center;
+    }
+    .choice-btn:hover:not(:disabled) { border-color: var(--gold); background: var(--gold-lt); }
+    .choice-btn.correct { background: #e6f5ed; border-color: var(--green); color: var(--green); }
+    .choice-btn.wrong   { background: #fdecea; border-color: var(--red);   color: var(--red); }
+    .choice-btn.reveal  { background: #e6f5ed; border-color: var(--green); color: var(--green); }
+    .choice-btn:disabled { cursor: default; }
+
+    .progress-bar {
+      height: 5px; background: var(--border); border-radius: 3px;
+      margin-top: 1.8rem; overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%; background: var(--gold);
+      border-radius: 3px; transition: width 0.35s;
+    }
+
+    /* ── RESULTS ── */
+    .results-header { text-align: center; margin-bottom: 1.8rem; padding-bottom: 1.2rem; border-bottom: 1px solid var(--border); }
+    .results-score { font-size: 4rem; font-weight: 700; line-height: 1; }
+    .results-score .denom { font-size: 2rem; color: var(--muted); }
+    .results-pct { font-family: 'DM Mono', monospace; font-size: 0.8rem; color: var(--muted); margin-top: 0.35rem; }
+
+    .results-section { margin-bottom: 1.4rem; }
+    .results-section h3 {
+      font-family: 'DM Mono', monospace; font-size: 0.7rem;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      margin-bottom: 0.6rem;
+    }
+    .h3-red  { color: var(--red); }
+    .h3-gold { color: var(--gold); }
+
+    .mistake-row {
+      display: flex; align-items: center; gap: 1rem;
+      padding: 0.45rem 0.8rem; border-radius: 7px;
+      margin-bottom: 0.35rem; background: #fdecea; font-size: 0.92rem;
+    }
+    .mistake-kana { font-family: 'Noto Serif JP', serif; font-size: 1.5rem; min-width: 2.2rem; text-align: center; }
+    .mistake-detail { font-family: 'DM Mono', monospace; font-size: 0.77rem; color: var(--muted); }
+    .mistake-detail .right { color: var(--green); font-weight: 600; }
+    .mistake-detail .struck { color: var(--red); text-decoration: line-through; }
+
+    .weak-chip {
+      display: inline-flex; align-items: center; gap: 0.3rem;
+      padding: 0.3rem 0.6rem; background: var(--gold-lt);
+      border: 1px solid var(--gold); border-radius: 7px; margin: 0.2rem;
+    }
+    .weak-chip .wk { font-family: 'Noto Serif JP', serif; font-size: 1.05rem; }
+    .weak-chip .wr { font-family: 'DM Mono', monospace; font-size: 0.67rem; color: var(--muted); }
+
+    .results-actions { display: flex; gap: 0.7rem; margin-top: 1.5rem; flex-wrap: wrap; }
+    .btn-secondary {
+      padding: 0.6rem 1.3rem; border: 2px solid var(--dark);
+      border-radius: 8px; background: transparent; color: var(--dark);
+      font-family: 'Cormorant Garamond', serif; font-size: 1rem;
+      font-weight: 600; cursor: pointer; transition: all 0.15s;
+    }
+    .btn-secondary:hover { background: var(--dark); color: var(--paper); }
+
+    .perfect-msg {
+      color: var(--green); font-family: 'DM Mono', monospace;
+      font-size: 0.85rem; padding: 0.7rem 1rem; background: #e6f5ed;
+      border-radius: 8px; border: 1px solid var(--green);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>仮名練習 · Kana Drill</h1>
+  <a href="index.html">← Grammar Exercises</a>
+</header>
+
+<!-- ══ SETUP ══ -->
+<div id="setup-screen" class="screen">
+  <div class="setup-title">
+    <h2>Choose your groups</h2>
+    <p>Select the characters you want to practise · minimum 4 to start</p>
+  </div>
+
+  <div class="kana-section">
+    <div class="section-head">
+      <span>Hiragana ひらがな</span>
+      <span>
+        <button onclick="selectAll('hira')">all</button> /
+        <button onclick="clearAll('hira')">none</button>
+      </span>
+    </div>
+    <div class="group-grid" id="hira-groups"></div>
+  </div>
+
+  <div class="kana-section">
+    <div class="section-head">
+      <span>Katakana カタカナ</span>
+      <span>
+        <button onclick="selectAll('kata')">all</button> /
+        <button onclick="clearAll('kata')">none</button>
+      </span>
+    </div>
+    <div class="group-grid" id="kata-groups"></div>
+  </div>
+
+  <div class="setup-footer">
+    <span class="char-count" id="char-count">No characters selected</span>
+    <button class="btn-primary" id="start-btn" disabled onclick="startDrill()">Start Drill →</button>
+  </div>
+</div>
+
+<!-- ══ DRILL ══ -->
+<div id="drill-screen" class="screen hidden">
+  <div class="drill-header">
+    <button class="btn-sm" onclick="showSetup()">← Groups</button>
+    <div class="drill-counter">
+      <span class="c" id="dc">0</span> correct &nbsp;·&nbsp;
+      <span class="w" id="dw">0</span> wrong
+    </div>
+  </div>
+
+  <div class="kana-display">
+    <div class="kana-char" id="qchar">あ</div>
+    <div class="kana-type" id="qtype">hiragana</div>
+  </div>
+
+  <div class="choices-grid" id="choices-grid"></div>
+
+  <div class="progress-bar">
+    <div class="progress-fill" id="progress-fill" style="width:0%"></div>
+  </div>
+</div>
+
+<!-- ══ RESULTS ══ -->
+<div id="results-screen" class="screen hidden">
+  <div class="results-header">
+    <div class="results-score">
+      <span id="rc">0</span><span class="denom"> / <span id="rt">20</span></span>
+    </div>
+    <div class="results-pct" id="rpct"></div>
+  </div>
+
+  <div id="mistakes-section" class="results-section"></div>
+  <div id="weak-section" class="results-section"></div>
+
+  <div class="results-actions">
+    <button class="btn-primary" onclick="startDrill()">Drill Again</button>
+    <button class="btn-secondary" onclick="showSetup()">Change Groups</button>
+  </div>
+</div>
+
+<script>
+// ══════════════════════════════════════════════════════
+//  DATA
+// ══════════════════════════════════════════════════════
+const KANA = {
+  hira: {
+    'あ行':   [{k:'あ',r:'a'},{k:'い',r:'i'},{k:'う',r:'u'},{k:'え',r:'e'},{k:'お',r:'o'}],
+    'か行':   [{k:'か',r:'ka'},{k:'き',r:'ki'},{k:'く',r:'ku'},{k:'け',r:'ke'},{k:'こ',r:'ko'}],
+    'さ行':   [{k:'さ',r:'sa'},{k:'し',r:'shi'},{k:'す',r:'su'},{k:'せ',r:'se'},{k:'そ',r:'so'}],
+    'た行':   [{k:'た',r:'ta'},{k:'ち',r:'chi'},{k:'つ',r:'tsu'},{k:'て',r:'te'},{k:'と',r:'to'}],
+    'な行':   [{k:'な',r:'na'},{k:'に',r:'ni'},{k:'ぬ',r:'nu'},{k:'ね',r:'ne'},{k:'の',r:'no'}],
+    'は行':   [{k:'は',r:'ha'},{k:'ひ',r:'hi'},{k:'ふ',r:'fu'},{k:'へ',r:'he'},{k:'ほ',r:'ho'}],
+    'ま行':   [{k:'ま',r:'ma'},{k:'み',r:'mi'},{k:'む',r:'mu'},{k:'め',r:'me'},{k:'も',r:'mo'}],
+    'や行':   [{k:'や',r:'ya'},{k:'ゆ',r:'yu'},{k:'よ',r:'yo'}],
+    'ら行':   [{k:'ら',r:'ra'},{k:'り',r:'ri'},{k:'る',r:'ru'},{k:'れ',r:'re'},{k:'ろ',r:'ro'}],
+    'わ行・ん':[{k:'わ',r:'wa'},{k:'を',r:'wo'},{k:'ん',r:'n'}],
+    '濁音H':  [
+      {k:'が',r:'ga'},{k:'ぎ',r:'gi'},{k:'ぐ',r:'gu'},{k:'げ',r:'ge'},{k:'ご',r:'go'},
+      {k:'ざ',r:'za'},{k:'じ',r:'ji'},{k:'ず',r:'zu'},{k:'ぜ',r:'ze'},{k:'ぞ',r:'zo'},
+      {k:'だ',r:'da'},{k:'で',r:'de'},{k:'ど',r:'do'},
+      {k:'ば',r:'ba'},{k:'び',r:'bi'},{k:'ぶ',r:'bu'},{k:'べ',r:'be'},{k:'ぼ',r:'bo'}
+    ],
+    '半濁音H':[{k:'ぱ',r:'pa'},{k:'ぴ',r:'pi'},{k:'ぷ',r:'pu'},{k:'ぺ',r:'pe'},{k:'ぽ',r:'po'}],
+    '拗音H':  [
+      {k:'きゃ',r:'kya'},{k:'きゅ',r:'kyu'},{k:'きょ',r:'kyo'},
+      {k:'しゃ',r:'sha'},{k:'しゅ',r:'shu'},{k:'しょ',r:'sho'},
+      {k:'ちゃ',r:'cha'},{k:'ちゅ',r:'chu'},{k:'ちょ',r:'cho'},
+      {k:'にゃ',r:'nya'},{k:'にゅ',r:'nyu'},{k:'にょ',r:'nyo'},
+      {k:'ひゃ',r:'hya'},{k:'ひゅ',r:'hyu'},{k:'ひょ',r:'hyo'},
+      {k:'みゃ',r:'mya'},{k:'みゅ',r:'myu'},{k:'みょ',r:'myo'},
+      {k:'りゃ',r:'rya'},{k:'りゅ',r:'ryu'},{k:'りょ',r:'ryo'},
+      {k:'ぎゃ',r:'gya'},{k:'ぎゅ',r:'gyu'},{k:'ぎょ',r:'gyo'},
+      {k:'じゃ',r:'ja'},{k:'じゅ',r:'ju'},{k:'じょ',r:'jo'},
+      {k:'びゃ',r:'bya'},{k:'びゅ',r:'byu'},{k:'びょ',r:'byo'},
+      {k:'ぴゃ',r:'pya'},{k:'ぴゅ',r:'pyu'},{k:'ぴょ',r:'pyo'}
+    ]
+  },
+  kata: {
+    'ア行':   [{k:'ア',r:'a'},{k:'イ',r:'i'},{k:'ウ',r:'u'},{k:'エ',r:'e'},{k:'オ',r:'o'}],
+    'カ行':   [{k:'カ',r:'ka'},{k:'キ',r:'ki'},{k:'ク',r:'ku'},{k:'ケ',r:'ke'},{k:'コ',r:'ko'}],
+    'サ行':   [{k:'サ',r:'sa'},{k:'シ',r:'shi'},{k:'ス',r:'su'},{k:'セ',r:'se'},{k:'ソ',r:'so'}],
+    'タ行':   [{k:'タ',r:'ta'},{k:'チ',r:'chi'},{k:'ツ',r:'tsu'},{k:'テ',r:'te'},{k:'ト',r:'to'}],
+    'ナ行':   [{k:'ナ',r:'na'},{k:'ニ',r:'ni'},{k:'ヌ',r:'nu'},{k:'ネ',r:'ne'},{k:'ノ',r:'no'}],
+    'ハ行':   [{k:'ハ',r:'ha'},{k:'ヒ',r:'hi'},{k:'フ',r:'fu'},{k:'ヘ',r:'he'},{k:'ホ',r:'ho'}],
+    'マ行':   [{k:'マ',r:'ma'},{k:'ミ',r:'mi'},{k:'ム',r:'mu'},{k:'メ',r:'me'},{k:'モ',r:'mo'}],
+    'ヤ行':   [{k:'ヤ',r:'ya'},{k:'ユ',r:'yu'},{k:'ヨ',r:'yo'}],
+    'ラ行':   [{k:'ラ',r:'ra'},{k:'リ',r:'ri'},{k:'ル',r:'ru'},{k:'レ',r:'re'},{k:'ロ',r:'ro'}],
+    'ワ行・ン':[{k:'ワ',r:'wa'},{k:'ヲ',r:'wo'},{k:'ン',r:'n'}],
+    '濁音K':  [
+      {k:'ガ',r:'ga'},{k:'ギ',r:'gi'},{k:'グ',r:'gu'},{k:'ゲ',r:'ge'},{k:'ゴ',r:'go'},
+      {k:'ザ',r:'za'},{k:'ジ',r:'ji'},{k:'ズ',r:'zu'},{k:'ゼ',r:'ze'},{k:'ゾ',r:'zo'},
+      {k:'ダ',r:'da'},{k:'デ',r:'de'},{k:'ド',r:'do'},
+      {k:'バ',r:'ba'},{k:'ビ',r:'bi'},{k:'ブ',r:'bu'},{k:'ベ',r:'be'},{k:'ボ',r:'bo'}
+    ],
+    '半濁音K':[{k:'パ',r:'pa'},{k:'ピ',r:'pi'},{k:'プ',r:'pu'},{k:'ペ',r:'pe'},{k:'ポ',r:'po'}],
+    '拗音K':  [
+      {k:'キャ',r:'kya'},{k:'キュ',r:'kyu'},{k:'キョ',r:'kyo'},
+      {k:'シャ',r:'sha'},{k:'シュ',r:'shu'},{k:'ショ',r:'sho'},
+      {k:'チャ',r:'cha'},{k:'チュ',r:'chu'},{k:'チョ',r:'cho'},
+      {k:'ニャ',r:'nya'},{k:'ニュ',r:'nyu'},{k:'ニョ',r:'nyo'},
+      {k:'ヒャ',r:'hya'},{k:'ヒュ',r:'hyu'},{k:'ヒョ',r:'hyo'},
+      {k:'ミャ',r:'mya'},{k:'ミュ',r:'myu'},{k:'ミョ',r:'myo'},
+      {k:'リャ',r:'rya'},{k:'リュ',r:'ryu'},{k:'リョ',r:'ryo'},
+      {k:'ギャ',r:'gya'},{k:'ギュ',r:'gyu'},{k:'ギョ',r:'gyo'},
+      {k:'ジャ',r:'ja'},{k:'ジュ',r:'ju'},{k:'ジョ',r:'jo'},
+      {k:'ビャ',r:'bya'},{k:'ビュ',r:'byu'},{k:'ビョ',r:'byo'},
+      {k:'ピャ',r:'pya'},{k:'ピュ',r:'pyu'},{k:'ピョ',r:'pyo'}
+    ]
+  }
+};
+
+// Pretty display labels (strip internal suffix)
+const LABEL = k => k.replace(/[HK]$/, '');
+
+// Flat list of all kana for fallback distractors
+const ALL_KANA = Object.values({...KANA.hira,...KANA.kata}).flat();
+
+// ══════════════════════════════════════════════════════
+//  STATE
+// ══════════════════════════════════════════════════════
+let active  = new Set();   // group keys currently enabled
+let pool    = [];          // flat {k, r} array of active chars
+let scores  = {};          // {kana: {c:N, w:N}}
+let mistakes = [];
+let sCorrect = 0, sWrong = 0, sTotal = 0;
+let currentCard = null;
+const SESSION = 20;
+
+function load() {
+  try { scores = JSON.parse(localStorage.getItem('kana_scores') || '{}'); } catch(e) { scores = {}; }
+  try { active = new Set(JSON.parse(localStorage.getItem('kana_active') || '[]')); } catch(e) {}
+}
+function save() {
+  try { localStorage.setItem('kana_scores', JSON.stringify(scores)); } catch(e) {}
+  try { localStorage.setItem('kana_active', JSON.stringify([...active])); } catch(e) {}
+}
+
+// ══════════════════════════════════════════════════════
+//  SETUP SCREEN
+// ══════════════════════════════════════════════════════
+function buildSetup() {
+  renderGroupGrid('hira-groups', KANA.hira, 'hira');
+  renderGroupGrid('kata-groups', KANA.kata, 'kata');
+  updateFooter();
+}
+
+function renderGroupGrid(elId, data, prefix) {
+  const el = document.getElementById(elId);
+  el.innerHTML = '';
+  for (const [key, chars] of Object.entries(data)) {
+    const btn = document.createElement('button');
+    btn.className = 'group-btn' + (active.has(key) ? ' active' : '');
+    btn.dataset.key = key;
+    btn.dataset.prefix = prefix;
+    btn.innerHTML = `${LABEL(key)} <span class="cnt">${chars.length}</span>`;
+    btn.onclick = () => toggleGroup(key, btn);
+    el.appendChild(btn);
+  }
+}
+
+function toggleGroup(key, btn) {
+  active.has(key) ? active.delete(key) : active.add(key);
+  btn.classList.toggle('active');
+  save();
+  updateFooter();
+}
+
+function selectAll(prefix) {
+  const data = prefix === 'hira' ? KANA.hira : KANA.kata;
+  Object.keys(data).forEach(k => active.add(k));
+  document.querySelectorAll(`[data-prefix="${prefix}"]`).forEach(b => b.classList.add('active'));
+  save(); updateFooter();
+}
+
+function clearAll(prefix) {
+  const data = prefix === 'hira' ? KANA.hira : KANA.kata;
+  Object.keys(data).forEach(k => active.delete(k));
+  document.querySelectorAll(`[data-prefix="${prefix}"]`).forEach(b => b.classList.remove('active'));
+  save(); updateFooter();
+}
+
+function getPool() {
+  const all = {...KANA.hira, ...KANA.kata};
+  return [...active].flatMap(k => all[k] || []);
+}
+
+function updateFooter() {
+  pool = getPool();
+  const n = pool.length;
+  document.getElementById('char-count').textContent =
+    n === 0 ? 'No characters selected' : `${n} character${n !== 1 ? 's' : ''} selected`;
+  document.getElementById('start-btn').disabled = n < 4;
+}
+
+// ══════════════════════════════════════════════════════
+//  DRILL LOGIC
+// ══════════════════════════════════════════════════════
+function startDrill() {
+  pool = getPool();
+  if (pool.length < 4) return;
+  mistakes = []; sCorrect = 0; sWrong = 0; sTotal = 0;
+  showScreen('drill-screen');
+  nextCard();
+}
+
+// Weighted pick: chars with higher error rate appear more often
+function weightedPick() {
+  const weights = pool.map(c => {
+    const s = scores[c.k] || {c:0, w:0};
+    const total = s.c + s.w;
+    return total === 0 ? 2 : 1 + (s.w / total) * 5;
+  });
+  const sum = weights.reduce((a, b) => a + b, 0);
+  let rand = Math.random() * sum;
+  for (let i = 0; i < pool.length; i++) { rand -= weights[i]; if (rand <= 0) return pool[i]; }
+  return pool[pool.length - 1];
+}
+
+function nextCard() {
+  if (sTotal >= SESSION) { showResults(); return; }
+
+  currentCard = weightedPick();
+
+  // Build 4 options: 1 correct + 3 distractors
+  const others = ALL_KANA.filter(c => c.r !== currentCard.r);
+  const shuffled = others.sort(() => Math.random() - 0.5);
+  const distractors = [];
+  const seenR = new Set([currentCard.r]);
+  for (const c of shuffled) {
+    if (!seenR.has(c.r)) { distractors.push(c); seenR.add(c.r); }
+    if (distractors.length === 3) break;
+  }
+  const options = [currentCard, ...distractors].sort(() => Math.random() - 0.5);
+
+  // Render question
+  document.getElementById('qchar').textContent = currentCard.k;
+  const isKata = Object.values(KANA.kata).flat().some(c => c.k === currentCard.k);
+  document.getElementById('qtype').textContent = isKata ? 'katakana' : 'hiragana';
+
+  // Render choices
+  const grid = document.getElementById('choices-grid');
+  grid.innerHTML = '';
+  options.forEach(opt => {
+    const btn = document.createElement('button');
+    btn.className = 'choice-btn';
+    btn.textContent = opt.r;
+    btn.onclick = () => answer(opt.r, btn, grid);
+    grid.appendChild(btn);
+  });
+
+  // Progress bar (0% at start of session, 100% at end)
+  document.getElementById('progress-fill').style.width = (sTotal / SESSION * 100) + '%';
+}
+
+function answer(chosen, btn, grid) {
+  Array.from(grid.children).forEach(b => b.disabled = true);
+  const correct = chosen === currentCard.r;
+  sTotal++;
+
+  if (correct) {
+    btn.classList.add('correct');
+    sCorrect++;
+    const s = scores[currentCard.k] = scores[currentCard.k] || {c:0, w:0};
+    s.c++;
+  } else {
+    btn.classList.add('wrong');
+    sWrong++;
+    mistakes.push({char: currentCard, chose: chosen});
+    const s = scores[currentCard.k] = scores[currentCard.k] || {c:0, w:0};
+    s.w++;
+    // Reveal correct
+    Array.from(grid.children).forEach(b => {
+      if (b.textContent === currentCard.r) b.classList.add('reveal');
+    });
+  }
+  save();
+
+  // Update live counter
+  document.getElementById('dc').textContent = sCorrect;
+  document.getElementById('dw').textContent = sWrong;
+
+  setTimeout(nextCard, correct ? 650 : 1100);
+}
+
+// ══════════════════════════════════════════════════════
+//  RESULTS
+// ══════════════════════════════════════════════════════
+function showResults() {
+  document.getElementById('rc').textContent = sCorrect;
+  document.getElementById('rt').textContent = SESSION;
+  document.getElementById('rpct').textContent =
+    Math.round(sCorrect / SESSION * 100) + '% · ' +
+    (sWrong === 0 ? 'perfect session!' : `${sWrong} mistake${sWrong !== 1 ? 's' : ''}`);
+
+  // Mistakes this session
+  const mEl = document.getElementById('mistakes-section');
+  if (mistakes.length === 0) {
+    mEl.innerHTML = '<p class="perfect-msg">🎉 Perfect session — no mistakes!</p>';
+  } else {
+    let html = `<h3 class="h3-red">Mistakes this session (${mistakes.length})</h3>`;
+    mistakes.forEach(m => {
+      html += `<div class="mistake-row">
+        <span class="mistake-kana">${m.char.k}</span>
+        <div class="mistake-detail">
+          chose <span class="struck">${m.chose}</span> &nbsp;·&nbsp;
+          correct: <span class="right">${m.char.r}</span>
+        </div>
+      </div>`;
+    });
+    mEl.innerHTML = html;
+  }
+
+  // All-time weak chars (top 8 by error rate, min 2 attempts)
+  const wEl = document.getElementById('weak-section');
+  const weak = Object.entries(scores)
+    .filter(([k, s]) => s.w > 0 && (s.c + s.w) >= 2)
+    .map(([k, s]) => ({k, rate: s.w / (s.c + s.w)}))
+    .sort((a, b) => b.rate - a.rate)
+    .slice(0, 8);
+
+  if (weak.length > 0) {
+    let html = '<h3 class="h3-gold">Weakest characters (all time)</h3>';
+    weak.forEach(({k, rate}) => {
+      const entry = ALL_KANA.find(c => c.k === k);
+      if (entry) html += `<span class="weak-chip">
+        <span class="wk">${k}</span>
+        <span class="wr">${entry.r} · ${Math.round(rate*100)}%</span>
+      </span>`;
+    });
+    wEl.innerHTML = html;
+  } else { wEl.innerHTML = ''; }
+
+  showScreen('results-screen');
+}
+
+// ══════════════════════════════════════════════════════
+//  NAVIGATION
+// ══════════════════════════════════════════════════════
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.add('hidden'));
+  document.getElementById(id).classList.remove('hidden');
+}
+function showSetup() { showScreen('setup-screen'); }
+
+// ══════════════════════════════════════════════════════
+//  INIT
+// ══════════════════════════════════════════════════════
+load();
+buildSetup();
+</script>
+</body>
+</html>
