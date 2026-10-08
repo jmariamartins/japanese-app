@@ -912,6 +912,13 @@ textarea:disabled { opacity: 0.65; background: var(--alt); cursor: not-allowed; 
 </head>
 <body>
 <script>
+// Where is the app running? Opened as a local file on your computer
+// (file://) -> use the folder picker, exactly as before. Opened from the
+// hosted site (https://) -> load the bundled exercises, on any device.
+// (Android Chrome now has showDirectoryPicker too, so feature-detection
+// alone isn't enough.)
+const USE_LOCAL_FOLDER = !!window.showDirectoryPicker && location.protocol === 'file:';
+
 // Register the service worker so the app is installable and works offline.
 // No-op on file:// or if the browser doesn't support it — never blocks the
 // rest of the app from loading.
@@ -925,7 +932,7 @@ if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
 // picker. On phones (no File System Access API) it loads the exercises and
 // cheatsheets bundled into this site instead — no folder to pick.
 document.addEventListener('DOMContentLoaded', () => {
-  if (!window.showDirectoryPicker) {
+  if (!USE_LOCAL_FOLDER) {
     const btn  = document.getElementById('btn-open-folder');
     const note = document.getElementById('landing-note');
     if (btn)  btn.textContent = '📂 Open Study App';
@@ -1242,7 +1249,7 @@ function parseCheatMap(text) {
 // FOLDER LOADING
 // ============================================================
 async function loadFolder() {
-  if (window.showDirectoryPicker) {
+  if (USE_LOCAL_FOLDER) {
     await loadFolderDesktop();
   } else {
     await loadFolderMobile();
