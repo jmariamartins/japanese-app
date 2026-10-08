@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Japanese Particles Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=DM+Mono:wght@300;400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1a1208;
+    --paper: #f5f0e8;
+    --red: #c0392b;
+    --gold: #b8962e;
+    --muted: #6b5d4f;
+    --line: #d4c9b0;
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    min-height: 100vh;
+    padding: 3rem 1.5rem;
+    background-image:
+      radial-gradient(ellipse at 10% 10%, rgba(192,57,43,0.04) 0%, transparent 60%),
+      radial-gradient(ellipse at 90% 90%, rgba(184,150,46,0.05) 0%, transparent 60%);
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .jp-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 300;
+    color: var(--red);
+    letter-spacing: 0.15em;
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+
+  .subtitle {
+    font-size: 1.15rem;
+    color: var(--muted);
+    font-style: italic;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+  }
+
+  .divider {
+    width: 120px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    margin: 1.2rem auto;
+  }
+
+  .note {
+    font-size: 0.95rem;
+    color: var(--muted);
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .table-wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    overflow-x: auto;
+    border-radius: 2px;
+    box-shadow: 0 2px 40px rgba(26,18,8,0.10);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fdfaf4;
+    font-size: 1rem;
+  }
+
+  thead tr {
+    background: var(--ink);
+    color: var(--paper);
+  }
+
+  thead th {
+    padding: 1rem 1.4rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  thead th:first-child {
+    text-align: center;
+    width: 90px;
+  }
+
+  tbody tr {
+    border-bottom: 1px solid var(--line);
+    transition: background 0.2s;
+  }
+
+  tbody tr:hover {
+    background: rgba(184,150,46,0.06);
+  }
+
+  /* Alternating particle groups */
+  tbody tr.group-a { background: #fdfaf4; }
+  tbody tr.group-b { background: #faf7ef; }
+  tbody tr.group-a:hover, tbody tr.group-b:hover {
+    background: rgba(184,150,46,0.07);
+  }
+
+  td {
+    padding: 0.85rem 1.4rem;
+    vertical-align: top;
+    line-height: 1.65;
+  }
+
+  .particle-cell {
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .particle-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--red);
+    color: #fff;
+    font-family: 'DM Mono', monospace;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    box-shadow: 0 2px 8px rgba(192,57,43,0.3);
+  }
+
+  .use-case {
+    font-weight: 600;
+    color: var(--ink);
+    font-size: 1rem;
+  }
+
+  .use-label {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    background: var(--gold);
+    color: #fff;
+    padding: 1px 7px;
+    border-radius: 2px;
+    vertical-align: middle;
+    margin-left: 6px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .use-desc {
+    color: var(--muted);
+    font-size: 0.92rem;
+    font-style: italic;
+    display: block;
+    margin-top: 1px;
+  }
+
+  .example {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.88rem;
+    color: #2c4a6e;
+    background: rgba(44,74,110,0.06);
+    padding: 3px 8px;
+    border-radius: 2px;
+    display: inline-block;
+    margin-bottom: 2px;
+  }
+
+  .translation {
+    font-style: italic;
+    color: var(--muted);
+    font-size: 0.88rem;
+    display: block;
+  }
+
+  /* Multi-row particle: show border between use cases only */
+  .use-divider td {
+    padding-top: 0.4rem;
+    border-top: 1px dashed var(--line);
+  }
+
+  /* Highlight the tricky ga particle */
+  .highlight-row .particle-tag {
+    background: #8e44ad;
+    box-shadow: 0 2px 8px rgba(142,68,173,0.3);
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 2.5rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="jp-title">助詞</div>
+  <div class="subtitle">Japanese Particles — Complete Reference</div>
+  <div class="divider"></div>
+  <p class="note">Particles marked <span style="background:var(--gold);color:#fff;padding:1px 8px;border-radius:2px;font-family:'DM Mono',monospace;font-size:0.75rem;">TRICKY</span> have multiple meanings depending on context</p>
+</header>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th>Particle</th>
+      <th>Use Case</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <!-- WA -->
+    <tr class="group-a">
+      <td class="particle-cell"><span class="particle-tag">wa</span></td>
+      <td>
+        <span class="use-case">Topic marker</span>
+        <span class="use-desc">Marks what the sentence is about</span>
+      </td>
+      <td>
+        <span class="example">Watashi wa Maria desu.</span>
+        <span class="translation">I am Maria.</span>
+      </td>
+    </tr>
+    <tr class="group-a use-divider">
+      <td class="particle-cell"></td>
+      <td>
+        <span class="use-case">Contrast</span>
+        <span class="use-desc">Implies "but" or "as for" — contrasting two things</span>
+      </td>
+      <td>
+        <span class="example">Kare wa Tokyo, watashi wa Osaka desu.</span>
+        <span class="translation">He is from Tokyo, but I am from Osaka.</span>
+      </td>
+    </tr>
+
+    <!-- GA -->
+    <tr class="group-b highlight-row">
+      <td class="particle-cell"><span class="particle-tag" style="background:#8e44ad;box-shadow:0 2px 8px rgba(142,68,173,0.3)">ga</span></td>
+      <td>
+        <span class="use-case">Subject marker <span class="use-label">Tricky</span></span>
+        <span class="use-desc">Marks who/what does the action (emphasis on the subject itself)</span>
+      </td>
+      <td>
+        <span class="example">Imouto ga imasu.</span>
+        <span class="translation">I have a little sister. (lit. A little sister exists.)</span>
+      </td>
+    </tr>
+    <tr class="group-b use-divider highlight-row">
+      <td class="particle-cell"></td>
+      <td>
+        <span class="use-case">Conjunction: "but" <span class="use-label">Tricky</span></span>
+        <span class="use-desc">Connects two sentences with a contrast</span>
+      </td>
+      <td>
+        <span class="example">Tokyo shusshin desu ga, ima Osaka ni sunde imasu.</span>
+        <span class="translation">I'm from Tokyo, but I live in Osaka now.</span>
+      </td>
+    </tr>
+    <tr class="group-b use-divider highlight-row">
+      <td class="particle-cell"></td>
+      <td>
+        <span class="use-case">Object of feelings/ability</span>
+        <span class="use-desc">Used with verbs of liking, wanting, being able to</span>
+      </td>
+      <td>
+        <span class="example">Nihongo ga suki desu.</span>
+        <span class="translation">I like Japanese.</span>
+      </td>
+    </tr>
+
+    <!-- O -->
+    <tr class="group-a">
+      <td class="particle-cell"><span class="particle-tag">o</span></td>
+      <td>
+        <span class="use-case">Direct object marker</span>
+        <span class="use-desc">Marks what the action is done to</span>
+      </td>
+      <td>
+        <span class="example">Gohan o tabemasu.</span>
+        <span class="translation">I eat rice.</span>
+      </td>
+    </tr>
+    <tr class="group-a use-divider">
+      <td class="particle-cell"></td>
+      <td>
+        <span class="use-case">Movement through a place</span>
+        <span class="use-desc">Marks a place one moves through or along</span>
+      </td>
+      <td>
+        <span class="example">Koen o arukimasu.</span>
+        <span class="translation">I walk through the park.</span>
+      </td>
+    </tr>
+
+    <!-- NO -->
+    <tr class="group-b">
+      <td class="particle-cell"><span class="particle-tag">no</span></td>
+      <td>
+        <span class="use-case">Possessive (like 's)</span>
+        <span class="use-desc">Shows belonging or relationship</span>
+      </td>
+      <td>
+        <span class="example">Watashi no imouto wa 25-sai desu.</span>
+        <span class="translation">My little sister is 25.</span>
+      </td>
+    </tr>
+    <tr class="group-b use-divider">
+      <td class="particle-cell"></td>
+      <td>
+        <span class="use-case">Nominalizer</span>
+        <span class="use-desc">Turns a verb/adjective into a noun</span>
+      </td>
+      <td>
+        <span class="example">Nihongo o hanasu no ga suki desu.</span>
+        <span class="translation">I like speaking Japanese.</span>
+      </td>
+    </tr>
+
+    <!-- NI -->
+    <tr class="group-a">
+      <td class="particle-cell"><span class="particle-tag">ni</span></td>
+      <td>
+        <span class="use-case">Direction / destination</span>
+        <span class="use-desc">Where you are going (with motion verbs)</span>
+      </td>
+      <td>
+        <span class="example">Nihon ni ikimasu.</span>
+        <span class="translation">I go to Japan.</span>
+      </td>
+    </tr>
+    <tr class="group-a use-divider">
+      <td class="particle-cell"></td>
+      <td>
+        <span class="use-case">Location of existence</span>
+        <span class="use-desc">Where something/someone is (with imasu/arimasu)</span>
+      </td>
+      <td>
+        <span class="example">Tokyo ni sunde imasu.</span>
+        <span class="translation">I live in Tokyo.</span>
+      </td>
+    </tr>
+    <tr class="group-a use-divider">
+      <td class="particle-cell"></td>
+      <td>
+        <span class="use-case">Time marker</span>
+        <span class="use-desc">Marks a specific point in time</span>
+      </td>
+      <td>
+        <span class="example">Shichi-ji ni okimasu.</span>
+        <span class="translation">I wake up at 7 o'clock.</span>
+      </td>
+    </tr>
+
+    <!-- E -->
+    <tr class="group-b">
+      <td class="particle-cell"><span class="particle-tag">e</span></td>
+      <td>
+        <span class="use-case">Direction (toward)</span>
+        <span class="use-desc">Similar to ni but emphasizes movement toward; interchangeable with ni in many cases</span>
+      </td>
+      <td>
+        <span class="example">Nihon e ikimasu.</span>
+        <span class="translation">I'm heading toward Japan.</span>
+      </td>
+    </tr>
+
+    <!-- DE -->
+    <tr class="group-a">
+      <td class="particle-cell"><span class="particle-tag">de</span></td>
+      <td>
+        <span class="use-case">Location of action</span>
+        <span class="use-desc">Where an action takes place</span>
+      </td>
+      <td>
+        <span class="example">Resutoran de tabemasu.</span>
+        <span class="translation">I eat at the restaurant.</span>
+      </td>
+    </tr>
+    <tr class="group-a use-divider">
+      <td class="particle-cell"></td>
+      <td>
+        <span class="use-case">Means / method</span>
+        <span class="use-desc">How something is done — tool, transport, language</span>
+      </td>
+      <td>
+        <span class="example">Hikoki de ikimasu.</span>
+        <span class="translation">I go by airplane.</span>
+      </td>
+    </tr>
+
+    <!-- KARA -->
+    <tr class="group-b">
+      <td class="particle-cell"><span class="particle-tag" style="font-size:0.75rem;">kara</span></td>
+      <td>
+        <span class="use-case">Origin / starting point</span>
+        <span class="use-desc">From a place or time (used with a verb)</span>
+      </td>
+      <td>
+        <span class="example">Porutogaru kara kimashita.</span>
+        <span class="translation">I came from Portugal.</span>
+      </td>
+    </tr>
+    <tr class="group-b use-divider">
+      <td class="particle-cell"></td>
+      <td>
+        <span class="use-case">Because / therefore</span>
+        <span class="use-desc">Gives a reason (at end of clause)</span>
+      </td>
+      <td>
+        <span class="example">Ame desu kara, ikimasen.</span>
+        <span class="translation">Because it's raining, I won't go.</span>
+      </td>
+    </tr>
+
+    <!-- MADE -->
+    <tr class="group-a">
+      <td class="particle-cell"><span class="particle-tag" style="font-size:0.75rem;">made</span></td>
+      <td>
+        <span class="use-case">Until / up to</span>
+        <span class="use-desc">Endpoint in time or space</span>
+      </td>
+      <td>
+        <span class="example">Tokyo made ikimasu.</span>
+        <span class="translation">I'm going as far as Tokyo.</span>
+      </td>
+    </tr>
+
+    <!-- TO -->
+    <tr class="group-b">
+      <td class="particle-cell"><span class="particle-tag">to</span></td>
+      <td>
+        <span class="use-case">And (exhaustive list)</span>
+        <span class="use-desc">Connects nouns (lists all items)</span>
+      </td>
+      <td>
+        <span class="example">Gohan to mizu o kudasai.</span>
+        <span class="translation">Rice and water, please.</span>
+      </td>
+    </tr>
+    <tr class="group-b use-divider">
+      <td class="particle-cell"></td>
+      <td>
+        <span class="use-case">With (together with)</span>
+        <span class="use-desc">Doing something with someone</span>
+      </td>
+      <td>
+        <span class="example">Tomodachi to ikimasu.</span>
+        <span class="translation">I go with a friend.</span>
+      </td>
+    </tr>
+
+    <!-- YA -->
+    <tr class="group-a">
+      <td class="particle-cell"><span class="particle-tag">ya</span></td>
+      <td>
+        <span class="use-case">And (non-exhaustive list)</span>
+        <span class="use-desc">Lists some examples, implying there are more (like "and so on")</span>
+      </td>
+      <td>
+        <span class="example">Hon ya zasshi ga arimasu.</span>
+        <span class="translation">There are books, magazines, and so on.</span>
+      </td>
+    </tr>
+
+    <!-- KA -->
+    <tr class="group-b">
+      <td class="particle-cell"><span class="particle-tag">ka</span></td>
+      <td>
+        <span class="use-case">Question marker</span>
+        <span class="use-desc">Turns a statement into a question (replaces "?")</span>
+      </td>
+      <td>
+        <span class="example">Nan-sai desu ka?</span>
+        <span class="translation">How old are you?</span>
+      </td>
+    </tr>
+
+    <!-- NE -->
+    <tr class="group-a">
+      <td class="particle-cell"><span class="particle-tag">ne</span></td>
+      <td>
+        <span class="use-case">Seeking agreement / "right?"</span>
+        <span class="use-desc">Like "isn't it?" — invites the listener to agree</span>
+      </td>
+      <td>
+        <span class="example">Ii tenki desu ne.</span>
+        <span class="translation">Nice weather, isn't it?</span>
+      </td>
+    </tr>
+
+    <!-- YO -->
+    <tr class="group-b">
+      <td class="particle-cell"><span class="particle-tag">yo</span></td>
+      <td>
+        <span class="use-case">Emphasis / assertion</span>
+        <span class="use-desc">Adds confidence, like "I'm telling you!" or "you know!"</span>
+      </td>
+      <td>
+        <span class="example">Oishii desu yo!</span>
+        <span class="translation">It's delicious, I tell you!</span>
+      </td>
+    </tr>
+
+    <!-- MO -->
+    <tr class="group-a">
+      <td class="particle-cell"><span class="particle-tag">mo</span></td>
+      <td>
+        <span class="use-case">Also / too / even</span>
+        <span class="use-desc">Replaces wa or ga to add "too" or "also"</span>
+      </td>
+      <td>
+        <span class="example">Watashi mo ikimasu.</span>
+        <span class="translation">I am going too.</span>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+
+<footer>
+  <div class="divider" style="margin-top:2rem;"></div>
+  Tip: wa vs ga — both mark the subject, but <em>wa</em> sets the topic (what we're talking about) while <em>ga</em> focuses on who/what specifically does the action.
+</footer>
+
+</body>
+</html>

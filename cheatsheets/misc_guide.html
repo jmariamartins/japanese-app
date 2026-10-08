@@ -1,0 +1,2302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miscellaneous Grammar Guide</title>
+  <style>
+
+  /* ── PREVIEW VARIABLES (deduplicated at compile) ─────────── */
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Mono:wght@400;500&family=Noto+Serif+JP:wght@400;700&display=swap');
+
+  :root {
+    --paper:       #f5f0e8;
+    --dark:        #2c1f12;
+    --gold:        #b8962e;
+    --gold-light:  #f5ecd0;
+    --red:         #c0392b;
+    --muted:       #6b5d4f;
+    --alt-row:     #ede8db;
+    --border:      #d4c9b0;
+    --purple:      #6d28d9;
+    --purple-soft: #ede9fe;
+    --teal:        #0f766e;
+    --teal-soft:   #ccfbf1;
+    --coral:       #be3a2d;
+    --coral-soft:  #fee2e2;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--dark);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    padding: 2rem 1rem;
+  }
+
+  /* ── SECTION SHELL ────────────────────────────────────────── */
+  .guide-section {
+    max-width: 860px;
+    margin: 0 auto 3rem;
+  }
+
+  /* ── SECTION HEADER ───────────────────────────────────────── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--gold);
+  }
+  .section-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.9rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    color: var(--dark);
+  }
+
+  /* ── BADGES ───────────────────────────────────────────────── */
+  .badge {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.2em 0.7em;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+  .badge-purple { background: var(--purple-soft); color: var(--purple); }
+  .badge-teal   { background: var(--teal-soft);   color: var(--teal); }
+  .badge-coral  { background: var(--coral-soft);  color: var(--coral); }
+  .badge-amber  { background: var(--gold-light);  color: #92400e; }
+
+  /* ── SUBSECTION ───────────────────────────────────────────── */
+  .subsection {
+    margin-bottom: 2.5rem;
+  }
+  .subsection-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 0.2rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+  .subsection-title .romaji-sub {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--muted);
+    font-weight: 400;
+  }
+  .subsection-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--muted);
+    margin-bottom: 1rem;
+  }
+
+  /* ── FORMULA / STRUCTURE BAR ──────────────────────────────── */
+  .formula-bar {
+    border-left: 3px solid var(--gold);
+    background: #faf7f0;
+    padding: 0.55rem 1rem;
+    margin: 0.5rem 0 0.9rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.88rem;
+    color: var(--dark);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+  .formula-bar .jp-formula {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .formula-bar .rom {
+    color: var(--muted);
+    font-size: 0.78rem;
+  }
+  .formula-bar .meaning {
+    margin-left: auto;
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.95rem;
+    color: var(--muted);
+  }
+
+  /* ── BULLET NOTES ─────────────────────────────────────────── */
+  .note-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.4rem 0 0.9rem;
+  }
+  .note-list li {
+    padding: 0.2rem 0 0.2rem 1.3rem;
+    position: relative;
+    font-size: 0.97rem;
+    color: var(--dark);
+  }
+  .note-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 0.75rem;
+    top: 0.38rem;
+  }
+  .note-list li .jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.97rem;
+  }
+  .note-list li .rom {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+
+  /* ── GOLD NOTE BOX ────────────────────────────────────────── */
+  .note-box {
+    border-left: 4px solid var(--gold);
+    background: var(--gold-light);
+    padding: 0.65rem 1rem;
+    margin: 0.8rem 0;
+    font-size: 0.93rem;
+    border-radius: 0 4px 4px 0;
+  }
+  .note-box strong {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #92400e;
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+  .note-box .jp { font-family: 'Noto Serif JP', serif; }
+  .note-box .rom {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+
+  /* ── RED IMPORTANT BOX ────────────────────────────────────── */
+  .important-box {
+    border-left: 4px solid var(--red);
+    background: var(--coral-soft);
+    padding: 0.65rem 1rem;
+    margin: 0.8rem 0;
+    font-size: 0.93rem;
+    border-radius: 0 4px 4px 0;
+  }
+  .important-box strong {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--red);
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+  .important-box .jp { font-family: 'Noto Serif JP', serif; }
+
+  /* ── EXAMPLE BLOCKS ───────────────────────────────────────── */
+  .examples-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 0.9rem 0;
+  }
+  .example-block {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.6rem 1rem;
+    min-width: 200px;
+    flex: 1;
+  }
+  .example-block .ex-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.05rem;
+    color: var(--dark);
+    line-height: 1.5;
+  }
+  .example-block .ex-rom {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-top: 0.1rem;
+  }
+  .example-block .ex-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.92rem;
+    color: var(--muted);
+    margin-top: 0.15rem;
+  }
+
+  /* ── KO-SO-A-DO VOCAB GRID ────────────────────────────────── */
+  .kosoad-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    margin: 0.8rem 0;
+  }
+  .kosoad-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.55rem 0.6rem;
+    text-align: center;
+  }
+  .kosoad-card .k-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--dark);
+    display: block;
+  }
+  .kosoad-card .k-rom {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--muted);
+    display: block;
+    margin-top: 0.1rem;
+  }
+  .kosoad-card .k-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.88rem;
+    color: var(--muted);
+    display: block;
+    margin-top: 0.1rem;
+  }
+  .kosoad-card.ko { border-top: 2px solid var(--purple); }
+  .kosoad-card.so { border-top: 2px solid var(--teal); }
+  .kosoad-card.a  { border-top: 2px solid var(--gold); }
+  .kosoad-card.do { border-top: 2px solid var(--red); }
+
+  /* ── PATTERN TABLE ────────────────────────────────────────── */
+  .pattern-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.8rem 0;
+    font-size: 0.93rem;
+  }
+  .pattern-table thead tr {
+    background: var(--dark);
+    color: white;
+    border-bottom: 2px solid var(--gold);
+  }
+  .pattern-table thead th {
+    padding: 0.45rem 0.75rem;
+    text-align: left;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .pattern-table tbody tr:nth-child(even) { background: var(--alt-row); }
+  .pattern-table tbody tr:nth-child(odd)  { background: white; }
+  .pattern-table tbody td {
+    padding: 0.45rem 0.75rem;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--border);
+  }
+  .pattern-table .jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1rem;
+  }
+  .pattern-table .rom {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--muted);
+    display: block;
+  }
+  .pattern-table .en {
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  /* ── DIVIDER ──────────────────────────────────────────────── */
+  .sub-divider {
+    border: none;
+    border-top: 1px dashed var(--border);
+    margin: 1.8rem 0;
+  }
+
+
+/* ── PREVIEW VARIABLES (deduplicated at compile) ─────────── */
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Mono:wght@400;500&family=Noto+Serif+JP:wght@400;700&display=swap');
+  :root {
+    --paper:       #f5f0e8;
+    --dark:        #2c1f12;
+    --gold:        #b8962e;
+    --gold-light:  #f5ecd0;
+    --red:         #c0392b;
+    --muted:       #6b5d4f;
+    --alt-row:     #ede8db;
+    --border:      #d4c9b0;
+    --purple:      #6d28d9;
+    --purple-soft: #ede9fe;
+    --teal:        #0f766e;
+    --teal-soft:   #ccfbf1;
+    --coral:       #be3a2d;
+    --coral-soft:  #fee2e2;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--paper); color: var(--dark); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1rem; line-height: 1.7; padding: 2rem 1rem; }
+  .guide-section { max-width: 860px; margin: 0 auto 3rem; }
+  .section-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 2rem; padding-bottom: 0.75rem; border-bottom: 2px solid var(--gold); }
+  .section-header h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.9rem; font-weight: 700; color: var(--dark); }
+  .badge { display: inline-block; font-family: 'DM Mono', monospace; font-size: 0.68rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.2em 0.7em; border-radius: 20px; white-space: nowrap; }
+  .badge-purple { background: var(--purple-soft); color: var(--purple); }
+  .badge-teal   { background: var(--teal-soft);   color: var(--teal); }
+  .badge-coral  { background: var(--coral-soft);  color: var(--coral); }
+  .badge-amber  { background: var(--gold-light);  color: #92400e; }
+  .subsection { margin-bottom: 2.5rem; }
+  .subsection-title { font-family: 'Noto Serif JP', serif; font-size: 1.25rem; font-weight: 700; color: var(--dark); margin-bottom: 0.2rem; display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap; }
+  .subsection-title .romaji-sub { font-family: 'DM Mono', monospace; font-size: 0.75rem; color: var(--muted); font-weight: 400; }
+  .subsection-subtitle { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.95rem; color: var(--muted); margin-bottom: 1rem; }
+  .formula-bar { border-left: 3px solid var(--gold); background: #faf7f0; padding: 0.55rem 1rem; margin: 0.5rem 0 0.9rem; font-family: 'DM Mono', monospace; font-size: 0.88rem; color: var(--dark); display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem; }
+  .formula-bar .jp-formula { font-family: 'Noto Serif JP', serif; font-size: 1rem; font-weight: 700; }
+  .formula-bar .rom { color: var(--muted); font-size: 0.78rem; }
+  .formula-bar .meaning { margin-left: auto; font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; color: var(--muted); }
+  .note-list { list-style: none; padding: 0; margin: 0.4rem 0 0.9rem; }
+  .note-list li { padding: 0.2rem 0 0.2rem 1.3rem; position: relative; font-size: 0.97rem; }
+  .note-list li::before { content: '▸'; position: absolute; left: 0; color: var(--gold); font-size: 0.75rem; top: 0.38rem; }
+  .note-list li .jp { font-family: 'Noto Serif JP', serif; }
+  .note-list li .rom { font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--muted); }
+  .note-box { border-left: 4px solid var(--gold); background: var(--gold-light); padding: 0.65rem 1rem; margin: 0.8rem 0; font-size: 0.93rem; border-radius: 0 4px 4px 0; }
+  .note-box strong { font-family: 'DM Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: #92400e; display: block; margin-bottom: 0.2rem; }
+  .important-box { border-left: 4px solid var(--red); background: var(--coral-soft); padding: 0.65rem 1rem; margin: 0.8rem 0; font-size: 0.93rem; border-radius: 0 4px 4px 0; }
+  .important-box strong { font-family: 'DM Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--red); display: block; margin-bottom: 0.2rem; }
+  .important-box .jp { font-family: 'Noto Serif JP', serif; }
+  .examples-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 0.9rem 0; }
+  .example-block { background: white; border: 1px solid var(--border); border-radius: 6px; padding: 0.6rem 1rem; min-width: 200px; flex: 1; }
+  .example-block .ex-jp { font-family: 'Noto Serif JP', serif; font-size: 1.05rem; color: var(--dark); line-height: 1.5; }
+  .example-block .ex-rom { font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--muted); margin-top: 0.1rem; }
+  .example-block .ex-en { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.92rem; color: var(--muted); margin-top: 0.15rem; }
+  .pattern-table { width: 100%; border-collapse: collapse; margin: 0.8rem 0; font-size: 0.93rem; }
+  .pattern-table thead tr { background: var(--dark); color: white; border-bottom: 2px solid var(--gold); }
+  .pattern-table thead th { padding: 0.45rem 0.75rem; text-align: left; font-family: 'DM Mono', monospace; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; }
+  .pattern-table tbody tr:nth-child(even) { background: var(--alt-row); }
+  .pattern-table tbody tr:nth-child(odd)  { background: white; }
+  .pattern-table tbody td { padding: 0.45rem 0.75rem; vertical-align: middle; border-bottom: 1px solid var(--border); }
+  .pattern-table .jp { font-family: 'Noto Serif JP', serif; font-size: 1rem; }
+  .pattern-table .rom { font-family: 'DM Mono', monospace; font-size: 0.75rem; color: var(--muted); display: block; }
+  .pattern-table .en { font-style: italic; color: var(--muted); }
+  .sub-divider { border: none; border-top: 1px dashed var(--border); margin: 1.8rem 0; }
+
+/* ── PREVIEW VARIABLES (deduplicated at compile) ─────────── */
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Mono:wght@400;500&family=Noto+Serif+JP:wght@400;700&display=swap');
+  :root {
+    --paper:       #f5f0e8;
+    --dark:        #2c1f12;
+    --gold:        #b8962e;
+    --gold-light:  #f5ecd0;
+    --red:         #c0392b;
+    --muted:       #6b5d4f;
+    --alt-row:     #ede8db;
+    --border:      #d4c9b0;
+    --purple:      #6d28d9;
+    --purple-soft: #ede9fe;
+    --teal:        #0f766e;
+    --teal-soft:   #ccfbf1;
+    --coral:       #be3a2d;
+    --coral-soft:  #fee2e2;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--paper); color: var(--dark); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1rem; line-height: 1.7; padding: 2rem 1rem; }
+  .guide-section { max-width: 860px; margin: 0 auto 3rem; }
+  .section-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 2rem; padding-bottom: 0.75rem; border-bottom: 2px solid var(--gold); }
+  .section-header h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.9rem; font-weight: 700; color: var(--dark); }
+  .badge { display: inline-block; font-family: 'DM Mono', monospace; font-size: 0.68rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.2em 0.7em; border-radius: 20px; white-space: nowrap; }
+  .badge-purple { background: var(--purple-soft); color: var(--purple); }
+  .badge-teal   { background: var(--teal-soft);   color: var(--teal); }
+  .badge-coral  { background: var(--coral-soft);  color: var(--coral); }
+  .badge-amber  { background: var(--gold-light);  color: #92400e; }
+  .subsection { margin-bottom: 2rem; }
+  .subsection-title { font-family: 'Noto Serif JP', serif; font-size: 1.25rem; font-weight: 700; color: var(--dark); margin-bottom: 0.2rem; display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap; }
+  .subsection-title .romaji-sub { font-family: 'DM Mono', monospace; font-size: 0.75rem; color: var(--muted); font-weight: 400; }
+  .subsection-subtitle { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.95rem; color: var(--muted); margin-bottom: 1rem; }
+  .formula-bar { border-left: 3px solid var(--gold); background: #faf7f0; padding: 0.55rem 1rem; margin: 0.5rem 0 0.9rem; font-family: 'DM Mono', monospace; font-size: 0.88rem; color: var(--dark); display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem; }
+  .formula-bar .jp-formula { font-family: 'Noto Serif JP', serif; font-size: 1rem; font-weight: 700; }
+  .formula-bar .rom { color: var(--muted); font-size: 0.78rem; }
+  .formula-bar .meaning { margin-left: auto; font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; color: var(--muted); }
+  .note-list { list-style: none; padding: 0; margin: 0.4rem 0 0.9rem; }
+  .note-list li { padding: 0.2rem 0 0.2rem 1.3rem; position: relative; font-size: 0.97rem; }
+  .note-list li::before { content: '▸'; position: absolute; left: 0; color: var(--gold); font-size: 0.75rem; top: 0.38rem; }
+  .note-list li .jp { font-family: 'Noto Serif JP', serif; }
+  .note-list li .rom { font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--muted); }
+  .note-box { border-left: 4px solid var(--gold); background: var(--gold-light); padding: 0.65rem 1rem; margin: 0.8rem 0; font-size: 0.93rem; border-radius: 0 4px 4px 0; }
+  .note-box strong { font-family: 'DM Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: #92400e; display: block; margin-bottom: 0.2rem; }
+  .note-box .jp { font-family: 'Noto Serif JP', serif; }
+  .note-box .rom { font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--muted); }
+  .important-box { border-left: 4px solid var(--red); background: var(--coral-soft); padding: 0.65rem 1rem; margin: 0.8rem 0; font-size: 0.93rem; border-radius: 0 4px 4px 0; }
+  .important-box strong { font-family: 'DM Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--red); display: block; margin-bottom: 0.2rem; }
+  .important-box .jp { font-family: 'Noto Serif JP', serif; }
+  .examples-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 0.9rem 0; }
+  .example-block { background: white; border: 1px solid var(--border); border-radius: 6px; padding: 0.6rem 1rem; min-width: 200px; flex: 1; }
+  .example-block .ex-jp { font-family: 'Noto Serif JP', serif; font-size: 1.05rem; color: var(--dark); line-height: 1.5; }
+  .example-block .ex-rom { font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--muted); margin-top: 0.1rem; }
+  .example-block .ex-en { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.92rem; color: var(--muted); margin-top: 0.15rem; }
+  .example-block .ex-label { font-family: 'DM Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 0.3rem; }
+  .pattern-table { width: 100%; border-collapse: collapse; margin: 0.8rem 0; font-size: 0.93rem; }
+  .pattern-table thead tr { background: var(--dark); color: white; border-bottom: 2px solid var(--gold); }
+  .pattern-table thead th { padding: 0.45rem 0.75rem; text-align: left; font-family: 'DM Mono', monospace; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; }
+  .pattern-table tbody tr:nth-child(even) { background: var(--alt-row); }
+  .pattern-table tbody tr:nth-child(odd)  { background: white; }
+  .pattern-table tbody td { padding: 0.45rem 0.75rem; vertical-align: middle; border-bottom: 1px solid var(--border); }
+  .pattern-table .jp { font-family: 'Noto Serif JP', serif; font-size: 1rem; }
+  .pattern-table .rom { font-family: 'DM Mono', monospace; font-size: 0.75rem; color: var(--muted); display: block; }
+  .pattern-table .en { font-style: italic; color: var(--muted); }
+  .conj-table { width: 100%; border-collapse: collapse; margin: 0.8rem 0; font-size: 0.93rem; }
+  .conj-table thead tr { background: var(--dark); color: white; border-bottom: 2px solid var(--gold); }
+  .conj-table thead th { padding: 0.45rem 0.9rem; font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; text-align: center; }
+  .conj-table thead th:first-child { text-align: left; }
+  .conj-table tbody tr:nth-child(even) { background: var(--alt-row); }
+  .conj-table tbody tr:nth-child(odd)  { background: white; }
+  .conj-table tbody td { padding: 0.5rem 0.9rem; border-bottom: 1px solid var(--border); text-align: center; vertical-align: middle; }
+  .conj-table tbody td:first-child { text-align: left; font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--muted); }
+  .conj-table .jp { font-family: 'Noto Serif JP', serif; font-size: 1rem; display: block; }
+  .conj-table .rom { font-family: 'DM Mono', monospace; font-size: 0.72rem; color: var(--muted); display: block; margin-top: 0.1rem; }
+  .sub-divider { border: none; border-top: 1px dashed var(--border); margin: 1.8rem 0; }
+
+  /* position callout used for the two takusan positions */
+  .position-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin: 0.9rem 0; }
+  .position-card { background: white; border: 1px solid var(--border); border-radius: 6px; padding: 0.7rem 1rem; }
+  .position-card .pos-tag { font-family: 'DM Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.05em; color: white; background: var(--muted); border-radius: 3px; padding: 0.1em 0.5em; display: inline-block; margin-bottom: 0.4rem; }
+  .position-card .pos-tag.opt-a { background: var(--teal); }
+  .position-card .pos-tag.opt-b { background: var(--purple); }
+  .position-card .ex-jp { font-family: 'Noto Serif JP', serif; font-size: 1.05rem; color: var(--dark); }
+  .position-card .ex-rom { font-family: 'DM Mono', monospace; font-size: 0.75rem; color: var(--muted); margin-top: 0.1rem; }
+  .position-card .ex-en { font-style: italic; font-size: 0.9rem; color: var(--muted); margin-top: 0.1rem; }
+  @media (max-width: 500px) { .position-pair { grid-template-columns: 1fr; } }
+
+/* ── PREVIEW VARIABLES (deduplicated at compile) ─────────── */
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Mono:wght@400;500&family=Noto+Serif+JP:wght@400;700&display=swap');
+  :root {
+    --paper:       #f5f0e8;
+    --dark:        #2c1f12;
+    --gold:        #b8962e;
+    --gold-light:  #f5ecd0;
+    --red:         #c0392b;
+    --muted:       #6b5d4f;
+    --alt-row:     #ede8db;
+    --border:      #d4c9b0;
+    --purple:      #6d28d9;
+    --purple-soft: #ede9fe;
+    --teal:        #0f766e;
+    --teal-soft:   #ccfbf1;
+    --coral:       #be3a2d;
+    --coral-soft:  #fee2e2;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--paper); color: var(--dark); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1rem; line-height: 1.7; padding: 2rem 1rem; }
+  .guide-section { max-width: 860px; margin: 0 auto 3rem; }
+  .section-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 2rem; padding-bottom: 0.75rem; border-bottom: 2px solid var(--gold); }
+  .section-header h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.9rem; font-weight: 700; color: var(--dark); }
+  .badge { display: inline-block; font-family: 'DM Mono', monospace; font-size: 0.68rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.2em 0.7em; border-radius: 20px; white-space: nowrap; }
+  .badge-purple { background: var(--purple-soft); color: var(--purple); }
+  .badge-teal   { background: var(--teal-soft);   color: var(--teal); }
+  .badge-coral  { background: var(--coral-soft);  color: var(--coral); }
+  .badge-amber  { background: var(--gold-light);  color: #92400e; }
+  .subsection { margin-bottom: 2rem; }
+  .subsection-title { font-family: 'Noto Serif JP', serif; font-size: 1.15rem; font-weight: 700; color: var(--dark); margin-bottom: 0.5rem; display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap; }
+  .subsection-title .romaji-sub { font-family: 'DM Mono', monospace; font-size: 0.75rem; color: var(--muted); font-weight: 400; }
+  .formula-bar { border-left: 3px solid var(--gold); background: #faf7f0; padding: 0.55rem 1rem; margin: 0.5rem 0 0.9rem; font-family: 'DM Mono', monospace; font-size: 0.88rem; color: var(--dark); display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem; }
+  .formula-bar .jp-formula { font-family: 'Noto Serif JP', serif; font-size: 1rem; font-weight: 700; }
+  .formula-bar .rom { color: var(--muted); font-size: 0.78rem; }
+  .formula-bar .meaning { margin-left: auto; font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; color: var(--muted); }
+  .note-list { list-style: none; padding: 0; margin: 0.4rem 0 0.9rem; }
+  .note-list li { padding: 0.2rem 0 0.2rem 1.3rem; position: relative; font-size: 0.97rem; }
+  .note-list li::before { content: '▸'; position: absolute; left: 0; color: var(--gold); font-size: 0.75rem; top: 0.38rem; }
+  .note-list li .jp { font-family: 'Noto Serif JP', serif; }
+  .note-list li .rom { font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--muted); }
+  .note-box { border-left: 4px solid var(--gold); background: var(--gold-light); padding: 0.65rem 1rem; margin: 0.8rem 0; font-size: 0.93rem; border-radius: 0 4px 4px 0; }
+  .note-box strong { font-family: 'DM Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: #92400e; display: block; margin-bottom: 0.2rem; }
+  .note-box .jp { font-family: 'Noto Serif JP', serif; }
+  .note-box .rom { font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--muted); }
+  .important-box { border-left: 4px solid var(--red); background: var(--coral-soft); padding: 0.65rem 1rem; margin: 0.8rem 0; font-size: 0.93rem; border-radius: 0 4px 4px 0; }
+  .important-box strong { font-family: 'DM Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--red); display: block; margin-bottom: 0.2rem; }
+  .important-box .jp { font-family: 'Noto Serif JP', serif; }
+  .examples-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 0.9rem 0; }
+  .example-block { background: white; border: 1px solid var(--border); border-radius: 6px; padding: 0.6rem 1rem; min-width: 190px; flex: 1; }
+  .example-block .ex-label { font-family: 'DM Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 0.3rem; }
+  .example-block .ex-jp { font-family: 'Noto Serif JP', serif; font-size: 1.05rem; color: var(--dark); line-height: 1.5; }
+  .example-block .ex-rom { font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--muted); margin-top: 0.1rem; }
+  .example-block .ex-en { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.92rem; color: var(--muted); margin-top: 0.15rem; }
+  .sub-divider { border: none; border-top: 1px dashed var(--border); margin: 1.8rem 0; }
+
+  /* Formation table */
+  .form-table { width: 100%; border-collapse: collapse; margin: 0.8rem 0; font-size: 0.9rem; }
+  .form-table thead tr { background: var(--dark); color: white; border-bottom: 2px solid var(--gold); }
+  .form-table thead th { padding: 0.45rem 0.75rem; font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; text-align: center; }
+  .form-table thead th:first-child { text-align: left; }
+  .form-table tbody tr:nth-child(even) { background: var(--alt-row); }
+  .form-table tbody tr:nth-child(odd)  { background: white; }
+  .form-table tbody td { padding: 0.45rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: middle; text-align: center; font-size: 0.88rem; }
+  .form-table tbody td:first-child { text-align: left; font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--muted); }
+  .form-table .jp { font-family: 'Noto Serif JP', serif; font-size: 0.97rem; display: block; }
+  .form-table .rom { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted); display: block; margin-top: 0.1rem; }
+  .form-table .highlight { color: var(--red); font-weight: 700; }
+
+  /* Compare block */
+  .compare-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin: 0.9rem 0; }
+  .compare-card { background: white; border: 1px solid var(--border); border-radius: 6px; padding: 0.7rem 1rem; }
+  .compare-card .cc-tag { font-family: 'DM Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.05em; color: white; border-radius: 3px; padding: 0.1em 0.5em; display: inline-block; margin-bottom: 0.4rem; }
+  .compare-card .cc-tag.plain { background: var(--muted); }
+  .compare-card .cc-tag.ndesu { background: var(--teal); }
+  .compare-card .ex-jp { font-family: 'Noto Serif JP', serif; font-size: 1.02rem; color: var(--dark); }
+  .compare-card .ex-rom { font-family: 'DM Mono', monospace; font-size: 0.75rem; color: var(--muted); margin-top: 0.1rem; }
+  .compare-card .ex-note { font-style: italic; font-size: 0.88rem; color: var(--muted); margin-top: 0.2rem; }
+  @media (max-width: 500px) { .compare-pair { grid-template-columns: 1fr; } }
+
+  /* Use-case pills row */
+  .use-cases { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.6rem 0 1rem; }
+  .use-case-pill { font-family: 'Cormorant Garamond', serif; font-size: 0.9rem; background: var(--purple-soft); color: var(--purple); border: 1px solid #c4b5fd; border-radius: 20px; padding: 0.2em 0.8em; }
+
+.guide-section{max-width:860px;margin:0 auto 3rem;}
+  .section-header{display:flex;align-items:center;gap:0.75rem;margin-bottom:2rem;padding-bottom:0.75rem;border-bottom:2px solid var(--gold);}
+  .section-header h2{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:700;color:var(--dark);}
+  .badge{display:inline-block;font-family:'DM Mono',monospace;font-size:0.68rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;padding:0.2em 0.7em;border-radius:20px;white-space:nowrap;}
+  .badge-purple{background:var(--purple-soft);color:var(--purple);}
+  .badge-teal{background:var(--teal-soft);color:var(--teal);}
+  .badge-coral{background:var(--coral-soft);color:var(--coral);}
+  .badge-amber{background:var(--gold-light);color:#92400e;}
+  .subsection{margin-bottom:2rem;}
+  .formula-bar{border-left:3px solid var(--gold);background:#faf7f0;padding:0.55rem 1rem;margin:0.5rem 0 0.9rem;font-family:'DM Mono',monospace;font-size:0.88rem;color:var(--dark);display:flex;flex-wrap:wrap;align-items:baseline;gap:0.5rem;}
+  .formula-bar .jp-formula{font-family:'Noto Serif JP',serif;font-size:1rem;font-weight:700;}
+  .formula-bar .rom{color:var(--muted);font-size:0.78rem;}
+  .formula-bar .meaning{margin-left:auto;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--muted);}
+  .note-list{list-style:none;padding:0;margin:0.4rem 0 0.9rem;}
+  .note-list li{padding:0.2rem 0 0.2rem 1.3rem;position:relative;font-size:0.97rem;}
+  .note-list li::before{content:'▸';position:absolute;left:0;color:var(--gold);font-size:0.75rem;top:0.38rem;}
+  .note-list li .jp{font-family:'Noto Serif JP',serif;}
+  .note-list li .rom{font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--muted);}
+  .note-box{border-left:4px solid var(--gold);background:var(--gold-light);padding:0.65rem 1rem;margin:0.8rem 0;font-size:0.93rem;border-radius:0 4px 4px 0;}
+  .note-box strong{font-family:'DM Mono',monospace;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;color:#92400e;display:block;margin-bottom:0.2rem;}
+  .note-box .jp{font-family:'Noto Serif JP',serif;}
+  .note-box .rom{font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--muted);}
+  .examples-row{display:flex;flex-wrap:wrap;gap:0.75rem;margin:0.9rem 0;}
+  .example-block{background:white;border:1px solid var(--border);border-radius:6px;padding:0.6rem 1rem;min-width:200px;flex:1;}
+  .example-block .ex-label{font-family:'DM Mono',monospace;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted);margin-bottom:0.3rem;}
+  .example-block .ex-jp{font-family:'Noto Serif JP',serif;font-size:1.05rem;color:var(--dark);line-height:1.5;}
+  .example-block .ex-rom{font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--muted);margin-top:0.1rem;}
+  .example-block .ex-en{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.92rem;color:var(--muted);margin-top:0.15rem;}
+
+  /* Tense rule two-column cards */
+  .tense-pair{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin:0.9rem 0;}
+  .tense-card{border-radius:6px;padding:0.75rem 1rem;}
+  .tense-card.aff{background:#f0fdf4;border:1.5px solid #4ade80;}
+  .tense-card.neg{background:#fff1f2;border:1.5px solid #fca5a5;}
+  .tense-card .tc-label{font-family:'DM Mono',monospace;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.06em;font-weight:500;margin-bottom:0.35rem;}
+  .tense-card.aff .tc-label{color:var(--teal);}
+  .tense-card.neg .tc-label{color:var(--red);}
+  .tense-card .tc-rule{font-size:0.95rem;font-weight:600;color:var(--dark);margin-bottom:0.2rem;}
+  .tense-card .tc-rule .jp{font-family:'Noto Serif JP',serif;}
+  .tense-card .tc-desc{font-style:italic;font-size:0.88rem;color:var(--muted);}
+  @media(max-width:500px){.tense-pair{grid-template-columns:1fr;}}
+
+.guide-section{max-width:860px;margin:0 auto 3rem;}
+  .section-header{display:flex;align-items:center;gap:0.75rem;margin-bottom:2rem;padding-bottom:0.75rem;border-bottom:2px solid var(--gold);}
+  .section-header h2{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:700;color:var(--dark);}
+  .badge{display:inline-block;font-family:'DM Mono',monospace;font-size:0.68rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;padding:0.2em 0.7em;border-radius:20px;white-space:nowrap;}
+  .badge-purple{background:var(--purple-soft);color:var(--purple);}
+  .badge-teal{background:var(--teal-soft);color:var(--teal);}
+  .badge-coral{background:var(--coral-soft);color:var(--coral);}
+  .badge-amber{background:var(--gold-light);color:#92400e;}
+  .subsection{margin-bottom:2rem;}
+  .subsection-title{font-family:'Noto Serif JP',serif;font-size:1.1rem;font-weight:700;color:var(--dark);margin-bottom:0.5rem;display:flex;align-items:baseline;gap:0.6rem;flex-wrap:wrap;}
+  .formula-bar{border-left:3px solid var(--gold);background:#faf7f0;padding:0.55rem 1rem;margin:0.5rem 0 0.9rem;font-family:'DM Mono',monospace;font-size:0.88rem;color:var(--dark);display:flex;flex-wrap:wrap;align-items:baseline;gap:0.5rem;}
+  .formula-bar .jp-formula{font-family:'Noto Serif JP',serif;font-size:1rem;font-weight:700;}
+  .formula-bar .rom{color:var(--muted);font-size:0.78rem;}
+  .formula-bar .meaning{margin-left:auto;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--muted);}
+  .note-list{list-style:none;padding:0;margin:0.4rem 0 0.9rem;}
+  .note-list li{padding:0.2rem 0 0.2rem 1.3rem;position:relative;font-size:0.97rem;}
+  .note-list li::before{content:'▸';position:absolute;left:0;color:var(--gold);font-size:0.75rem;top:0.38rem;}
+  .note-list li .jp{font-family:'Noto Serif JP',serif;}
+  .note-list li .rom{font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--muted);}
+  .note-box{border-left:4px solid var(--gold);background:var(--gold-light);padding:0.65rem 1rem;margin:0.8rem 0;font-size:0.93rem;border-radius:0 4px 4px 0;}
+  .note-box strong{font-family:'DM Mono',monospace;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;color:#92400e;display:block;margin-bottom:0.2rem;}
+  .note-box .jp{font-family:'Noto Serif JP',serif;}
+  .note-box .rom{font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--muted);}
+  .examples-row{display:flex;flex-wrap:wrap;gap:0.75rem;margin:0.9rem 0;}
+  .example-block{background:white;border:1px solid var(--border);border-radius:6px;padding:0.6rem 1rem;min-width:200px;flex:1;}
+  .example-block .ex-label{font-family:'DM Mono',monospace;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted);margin-bottom:0.3rem;}
+  .example-block .ex-jp{font-family:'Noto Serif JP',serif;font-size:1.05rem;color:var(--dark);line-height:1.5;}
+  .example-block .ex-rom{font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--muted);margin-top:0.1rem;}
+  .example-block .ex-en{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.92rem;color:var(--muted);margin-top:0.15rem;}
+
+  /* formation arrow */
+  .formation-steps{display:flex;align-items:center;flex-wrap:wrap;gap:0.5rem;margin:0.9rem 0;background:#faf7f0;border:1px solid var(--border);border-radius:6px;padding:0.75rem 1rem;}
+  .formation-steps .step{font-family:'Noto Serif JP',serif;font-size:1rem;padding:0.3rem 0.6rem;border-radius:4px;}
+  .formation-steps .step.from{background:var(--coral-soft);color:var(--red);}
+  .formation-steps .step.to{background:var(--teal-soft);color:var(--teal);font-weight:700;}
+  .formation-steps .arrow{font-size:1.1rem;color:var(--muted);font-family:'DM Mono',monospace;}
+  .formation-steps .rom-hint{font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--muted);display:block;margin-top:0.1rem;text-align:center;}
+
+  /* conjugation table */
+  .conj-table{width:100%;border-collapse:collapse;margin:0.8rem 0;font-size:0.9rem;}
+  .conj-table thead tr{background:var(--dark);color:white;border-bottom:2px solid var(--gold);}
+  .conj-table thead th{padding:0.45rem 0.75rem;font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.05em;text-transform:uppercase;text-align:left;}
+  .conj-table tbody tr:nth-child(even){background:var(--alt-row);}
+  .conj-table tbody tr:nth-child(odd){background:white;}
+  .conj-table tbody td{padding:0.45rem 0.75rem;border-bottom:1px solid var(--border);vertical-align:middle;}
+  .conj-table .jp{font-family:'Noto Serif JP',serif;font-size:0.97rem;}
+  .conj-table .rom{font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--muted);display:block;}
+  .conj-table .highlight{color:var(--teal);font-weight:700;}
+
+  /* variants row */
+  .variants-row{display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;margin:0.8rem 0;}
+  .variant-card{background:white;border:1px solid var(--border);border-radius:6px;padding:0.55rem 0.8rem;}
+  .variant-card .vc-tag{font-family:'DM Mono',monospace;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted);margin-bottom:0.25rem;}
+  .variant-card .jp{font-family:'Noto Serif JP',serif;font-size:0.97rem;color:var(--dark);}
+  .variant-card .rom{font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--muted);margin-top:0.05rem;}
+  .variant-card .en{font-style:italic;font-size:0.88rem;color:var(--muted);}
+  @media(max-width:500px){.variants-row{grid-template-columns:1fr;}}
+
+.guide-section{max-width:860px;margin:0 auto 3rem;}
+  .section-header{display:flex;align-items:center;gap:0.75rem;margin-bottom:2rem;padding-bottom:0.75rem;border-bottom:2px solid var(--gold);}
+  .section-header h2{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:700;color:var(--dark);}
+  .badge{display:inline-block;font-family:'DM Mono',monospace;font-size:0.68rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;padding:0.2em 0.7em;border-radius:20px;white-space:nowrap;}
+  .badge-purple{background:var(--purple-soft);color:var(--purple);}
+  .badge-teal{background:var(--teal-soft);color:var(--teal);}
+  .badge-coral{background:var(--coral-soft);color:var(--coral);}
+  .badge-amber{background:var(--gold-light);color:#92400e;}
+  .subsection{margin-bottom:2rem;}
+  .formula-bar{border-left:3px solid var(--gold);background:#faf7f0;padding:0.55rem 1rem;margin:0.5rem 0 0.7rem;font-family:'DM Mono',monospace;font-size:0.88rem;color:var(--dark);display:flex;flex-wrap:wrap;align-items:baseline;gap:0.5rem;}
+  .formula-bar .jp-formula{font-family:'Noto Serif JP',serif;font-size:1rem;font-weight:700;}
+  .formula-bar .rom{color:var(--muted);font-size:0.78rem;}
+  .formula-bar .meaning{margin-left:auto;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--muted);}
+  .note-box{border-left:4px solid var(--gold);background:var(--gold-light);padding:0.65rem 1rem;margin:0.8rem 0;font-size:0.93rem;border-radius:0 4px 4px 0;}
+  .note-box strong{font-family:'DM Mono',monospace;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;color:#92400e;display:block;margin-bottom:0.2rem;}
+  .note-box .jp{font-family:'Noto Serif JP',serif;}
+  .examples-row{display:flex;flex-wrap:wrap;gap:0.75rem;margin:0.9rem 0;}
+  .example-block{background:white;border:1px solid var(--border);border-radius:6px;padding:0.6rem 1rem;min-width:200px;flex:1;}
+  .example-block .ex-label{font-family:'DM Mono',monospace;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted);margin-bottom:0.3rem;}
+  .example-block .ex-jp{font-family:'Noto Serif JP',serif;font-size:1.05rem;color:var(--dark);line-height:1.6;}
+  .example-block .ex-rom{font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--muted);margin-top:0.1rem;}
+  .example-block .ex-en{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.92rem;color:var(--muted);margin-top:0.15rem;}
+
+  /* word-order pair */
+  .order-pair{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin:0.9rem 0;}
+  .order-card{border-radius:6px;padding:0.7rem 1rem;border:1.5px solid var(--border);background:white;}
+  .order-card .oc-tag{font-family:'DM Mono',monospace;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.05em;font-weight:500;margin-bottom:0.35rem;display:flex;align-items:center;gap:0.4rem;}
+  .order-card.opt-a .oc-tag{color:var(--teal);}
+  .order-card.opt-b .oc-tag{color:var(--purple);}
+  .order-card.opt-a{border-color:#99f6e4;}
+  .order-card.opt-b{border-color:#c4b5fd;}
+  .order-card .oc-formula{font-family:'Noto Serif JP',serif;font-size:0.97rem;color:var(--dark);margin-bottom:0.2rem;}
+  .order-card .oc-note{font-style:italic;font-size:0.85rem;color:var(--muted);}
+  .kara-highlight{color:var(--red);font-weight:700;}
+  @media(max-width:500px){.order-pair{grid-template-columns:1fr;}}
+
+.guide-section{max-width:860px;margin:0 auto 3rem;}
+  .section-header{display:flex;align-items:center;gap:0.75rem;margin-bottom:2rem;padding-bottom:0.75rem;border-bottom:2px solid var(--gold);}
+  .section-header h2{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:700;color:var(--dark);}
+  .badge{display:inline-block;font-family:'DM Mono',monospace;font-size:0.68rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;padding:0.2em 0.7em;border-radius:20px;white-space:nowrap;}
+  .badge-purple{background:var(--purple-soft);color:var(--purple);}
+  .badge-teal{background:var(--teal-soft);color:var(--teal);}
+  .badge-coral{background:var(--coral-soft);color:var(--coral);}
+  .badge-amber{background:var(--gold-light);color:#92400e;}
+  .subsection{margin-bottom:2.2rem;}
+  .subsection-title{font-family:'Noto Serif JP',serif;font-size:1.15rem;font-weight:700;color:var(--dark);margin-bottom:0.4rem;display:flex;align-items:baseline;gap:0.6rem;flex-wrap:wrap;}
+  .subsection-title .romaji-sub{font-family:'DM Mono',monospace;font-size:0.75rem;color:var(--muted);font-weight:400;}
+  .formula-bar{border-left:3px solid var(--gold);background:#faf7f0;padding:0.55rem 1rem;margin:0.5rem 0 0.7rem;font-family:'DM Mono',monospace;font-size:0.88rem;color:var(--dark);display:flex;flex-wrap:wrap;align-items:baseline;gap:0.5rem;}
+  .formula-bar .jp-formula{font-family:'Noto Serif JP',serif;font-size:1rem;font-weight:700;}
+  .formula-bar .rom{color:var(--muted);font-size:0.78rem;}
+  .formula-bar .meaning{margin-left:auto;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--muted);}
+  .note-list{list-style:none;padding:0;margin:0.4rem 0 0.9rem;}
+  .note-list li{padding:0.2rem 0 0.2rem 1.3rem;position:relative;font-size:0.97rem;}
+  .note-list li::before{content:'▸';position:absolute;left:0;color:var(--gold);font-size:0.75rem;top:0.38rem;}
+  .note-list li .jp{font-family:'Noto Serif JP',serif;}
+  .note-list li .rom{font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--muted);}
+  .note-box{border-left:4px solid var(--gold);background:var(--gold-light);padding:0.65rem 1rem;margin:0.8rem 0;font-size:0.93rem;border-radius:0 4px 4px 0;}
+  .note-box strong{font-family:'DM Mono',monospace;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;color:#92400e;display:block;margin-bottom:0.2rem;}
+  .note-box .jp{font-family:'Noto Serif JP',serif;}
+  .important-box{border-left:4px solid var(--red);background:var(--coral-soft);padding:0.65rem 1rem;margin:0.8rem 0;font-size:0.93rem;border-radius:0 4px 4px 0;}
+  .important-box strong{font-family:'DM Mono',monospace;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--red);display:block;margin-bottom:0.2rem;}
+  .important-box .jp{font-family:'Noto Serif JP',serif;}
+  .examples-row{display:flex;flex-wrap:wrap;gap:0.75rem;margin:0.9rem 0;}
+  .example-block{background:white;border:1px solid var(--border);border-radius:6px;padding:0.6rem 1rem;min-width:200px;flex:1;}
+  .example-block .ex-label{font-family:'DM Mono',monospace;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted);margin-bottom:0.3rem;}
+  .example-block .ex-jp{font-family:'Noto Serif JP',serif;font-size:1.05rem;color:var(--dark);line-height:1.5;}
+  .example-block .ex-rom{font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--muted);margin-top:0.1rem;}
+  .example-block .ex-en{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.92rem;color:var(--muted);margin-top:0.15rem;}
+  .sub-divider{border:none;border-top:1px dashed var(--border);margin:1.8rem 0;}
+
+  /* formation arrow */
+  .formation-steps{display:flex;align-items:center;flex-wrap:wrap;gap:0.5rem;margin:0.7rem 0;background:#faf7f0;border:1px solid var(--border);border-radius:6px;padding:0.65rem 1rem;}
+  .formation-steps .step{font-family:'Noto Serif JP',serif;font-size:0.97rem;padding:0.25rem 0.55rem;border-radius:4px;}
+  .formation-steps .step.from{background:var(--purple-soft);color:var(--purple);}
+  .formation-steps .step.to{background:var(--teal-soft);color:var(--teal);font-weight:700;}
+  .formation-steps .arrow{font-size:1rem;color:var(--muted);font-family:'DM Mono',monospace;}
+  .formation-steps .rom-hint{font-family:'DM Mono',monospace;font-size:0.7rem;color:var(--muted);}
+
+.guide-section{max-width:860px;margin:0 auto 3rem;}
+  .section-header{display:flex;align-items:center;gap:0.75rem;margin-bottom:2rem;padding-bottom:0.75rem;border-bottom:2px solid var(--gold);}
+  .section-header h2{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:700;color:var(--dark);}
+  .badge{display:inline-block;font-family:'DM Mono',monospace;font-size:0.68rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;padding:0.2em 0.7em;border-radius:20px;white-space:nowrap;}
+  .badge-purple{background:var(--purple-soft);color:var(--purple);}
+  .badge-teal{background:var(--teal-soft);color:var(--teal);}
+  .badge-coral{background:var(--coral-soft);color:var(--coral);}
+  .badge-amber{background:var(--gold-light);color:#92400e;}
+  .subsection{margin-bottom:2rem;}
+  .formula-bar{border-left:3px solid var(--gold);background:#faf7f0;padding:0.55rem 1rem;margin:0.5rem 0 0.7rem;font-family:'DM Mono',monospace;font-size:0.88rem;color:var(--dark);display:flex;flex-wrap:wrap;align-items:baseline;gap:0.5rem;}
+  .formula-bar .jp-formula{font-family:'Noto Serif JP',serif;font-size:1rem;font-weight:700;}
+  .formula-bar .rom{color:var(--muted);font-size:0.78rem;}
+  .formula-bar .meaning{margin-left:auto;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--muted);}
+  .note-list{list-style:none;padding:0;margin:0.4rem 0 0.9rem;}
+  .note-list li{padding:0.2rem 0 0.2rem 1.3rem;position:relative;font-size:0.97rem;}
+  .note-list li::before{content:'▸';position:absolute;left:0;color:var(--gold);font-size:0.75rem;top:0.38rem;}
+  .note-list li .jp{font-family:'Noto Serif JP',serif;}
+  .note-list li .rom{font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--muted);}
+  .note-box{border-left:4px solid var(--gold);background:var(--gold-light);padding:0.65rem 1rem;margin:0.8rem 0;font-size:0.93rem;border-radius:0 4px 4px 0;}
+  .note-box strong{font-family:'DM Mono',monospace;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;color:#92400e;display:block;margin-bottom:0.2rem;}
+  .note-box .jp{font-family:'Noto Serif JP',serif;}
+  .note-box .rom{font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--muted);}
+  .examples-row{display:flex;flex-wrap:wrap;gap:0.75rem;margin:0.9rem 0;}
+  .example-block{background:white;border:1px solid var(--border);border-radius:6px;padding:0.6rem 1rem;min-width:180px;flex:1;}
+  .example-block .ex-label{font-family:'DM Mono',monospace;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted);margin-bottom:0.3rem;}
+  .example-block .ex-jp{font-family:'Noto Serif JP',serif;font-size:1.05rem;color:var(--dark);line-height:1.5;}
+  .example-block .ex-rom{font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--muted);margin-top:0.1rem;}
+  .example-block .ex-en{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.92rem;color:var(--muted);margin-top:0.15rem;}
+
+  /* ある conjugation mini table */
+  .mini-table{width:100%;border-collapse:collapse;margin:0.7rem 0;font-size:0.9rem;}
+  .mini-table thead tr{background:var(--dark);color:white;border-bottom:2px solid var(--gold);}
+  .mini-table thead th{padding:0.35rem 0.75rem;font-family:'DM Mono',monospace;font-size:0.7rem;letter-spacing:0.05em;text-transform:uppercase;text-align:center;}
+  .mini-table thead th:first-child{text-align:left;}
+  .mini-table tbody tr:nth-child(even){background:var(--alt-row);}
+  .mini-table tbody tr:nth-child(odd){background:white;}
+  .mini-table tbody td{padding:0.4rem 0.75rem;border-bottom:1px solid var(--border);text-align:center;vertical-align:middle;}
+  .mini-table tbody td:first-child{text-align:left;font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--muted);}
+  .mini-table .jp{font-family:'Noto Serif JP',serif;font-size:0.97rem;display:block;}
+  .mini-table .rom{font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--muted);display:block;margin-top:0.05rem;}
+
+.guide-section{max-width:860px;margin:0 auto 3rem;}
+  .section-header{display:flex;align-items:center;gap:0.75rem;margin-bottom:2rem;padding-bottom:0.75rem;border-bottom:2px solid var(--gold);}
+  .section-header h2{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:700;color:var(--dark);}
+  .badge{display:inline-block;font-family:'DM Mono',monospace;font-size:0.68rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;padding:0.2em 0.7em;border-radius:20px;white-space:nowrap;}
+  .badge-purple{background:var(--purple-soft);color:var(--purple);}
+  .badge-teal{background:var(--teal-soft);color:var(--teal);}
+  .badge-coral{background:var(--coral-soft);color:var(--coral);}
+  .badge-amber{background:var(--gold-light);color:#92400e;}
+  .subsection{margin-bottom:2rem;}
+  .subsection-title{font-family:'Noto Serif JP',serif;font-size:1.1rem;font-weight:700;color:var(--dark);margin-bottom:0.5rem;display:flex;align-items:baseline;gap:0.6rem;flex-wrap:wrap;}
+  .note-list{list-style:none;padding:0;margin:0.4rem 0 0.9rem;}
+  .note-list li{padding:0.2rem 0 0.2rem 1.3rem;position:relative;font-size:0.97rem;}
+  .note-list li::before{content:'▸';position:absolute;left:0;color:var(--gold);font-size:0.75rem;top:0.38rem;}
+  .note-list li .jp{font-family:'Noto Serif JP',serif;}
+  .note-list li .rom{font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--muted);}
+  .note-box{border-left:4px solid var(--gold);background:var(--gold-light);padding:0.65rem 1rem;margin:0.8rem 0;font-size:0.93rem;border-radius:0 4px 4px 0;}
+  .note-box strong{font-family:'DM Mono',monospace;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;color:#92400e;display:block;margin-bottom:0.2rem;}
+  .note-box .jp{font-family:'Noto Serif JP',serif;}
+  .note-box .rom{font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--muted);}
+  .important-box{border-left:4px solid var(--red);background:var(--coral-soft);padding:0.65rem 1rem;margin:0.8rem 0;font-size:0.93rem;border-radius:0 4px 4px 0;}
+  .important-box strong{font-family:'DM Mono',monospace;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--red);display:block;margin-bottom:0.3rem;}
+  .important-box .jp{font-family:'Noto Serif JP',serif;}
+  .important-box .rom{font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--muted);}
+  .examples-row{display:flex;flex-wrap:wrap;gap:0.75rem;margin:0.9rem 0;}
+  .example-block{background:white;border:1px solid var(--border);border-radius:6px;padding:0.6rem 1rem;min-width:180px;flex:1;}
+  .example-block .ex-label{font-family:'DM Mono',monospace;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted);margin-bottom:0.3rem;}
+  .example-block .ex-jp{font-family:'Noto Serif JP',serif;font-size:1.05rem;color:var(--dark);line-height:1.5;}
+  .example-block .ex-rom{font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--muted);margin-top:0.1rem;}
+  .example-block .ex-en{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.92rem;color:var(--muted);margin-top:0.15rem;}
+  .sub-divider{border:none;border-top:1px dashed var(--border);margin:1.8rem 0;}
+
+  /* Main vocab table */
+  .vocab-table{width:100%;border-collapse:collapse;margin:0.8rem 0;font-size:0.9rem;}
+  .vocab-table thead tr{background:var(--dark);color:white;border-bottom:2px solid var(--gold);}
+  .vocab-table thead th{padding:0.45rem 0.75rem;font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.05em;text-transform:uppercase;text-align:center;}
+  .vocab-table thead th:first-child{text-align:left;}
+  .vocab-table tbody tr:nth-child(even){background:var(--alt-row);}
+  .vocab-table tbody tr:nth-child(odd){background:white;}
+  .vocab-table tbody td{padding:0.5rem 0.75rem;border-bottom:1px solid var(--border);text-align:center;vertical-align:middle;}
+  .vocab-table tbody td:first-child{text-align:left;font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--muted);}
+  .vocab-table .jp{font-family:'Noto Serif JP',serif;font-size:1rem;display:block;}
+  .vocab-table .rom{font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--muted);display:block;margin-top:0.05rem;}
+  .vocab-table .rom .ka{color:var(--teal);font-weight:700;}
+  .vocab-table .rom .mo{color:var(--red);font-weight:700;}
+
+  /* Particle rule two-col */
+  .particle-rules{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin:0.9rem 0;}
+  .particle-card{border-radius:6px;padding:0.7rem 1rem;border:1.5px solid var(--border);background:white;}
+  .particle-card.no-particle{border-color:#99f6e4;background:#f0fdfa;}
+  .particle-card.add-particle{border-color:#fca5a5;background:#fff1f2;}
+  .particle-card .pc-label{font-family:'DM Mono',monospace;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.06em;font-weight:500;margin-bottom:0.3rem;}
+  .particle-card.no-particle .pc-label{color:var(--teal);}
+  .particle-card.add-particle .pc-label{color:var(--red);}
+  .particle-card .pc-particles{font-family:'Noto Serif JP',serif;font-size:1.1rem;font-weight:700;margin-bottom:0.3rem;}
+  .particle-card .pc-rule{font-size:0.9rem;color:var(--dark);}
+  .particle-card .pc-rule .rom{font-family:'DM Mono',monospace;font-size:0.75rem;color:var(--muted);}
+  @media(max-width:500px){.particle-rules{grid-template-columns:1fr;}}
+
+  /* ── PAGE LAYOUT ────────────────────────────────────────── */
+  html { scroll-behavior: smooth; }
+
+  .page-header {
+    background: var(--dark);
+    border-bottom: 3px solid var(--gold);
+    padding: 2.5rem 2rem 2rem;
+    margin-bottom: 3rem;
+  }
+  .page-header .guide-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+  .page-header h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0.02em;
+    line-height: 1.15;
+  }
+  .page-header .subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: #a89070;
+    font-size: 1rem;
+    margin-top: 0.4rem;
+  }
+
+  /* ── TABLE OF CONTENTS ──────────────────────────────────── */
+  .toc-wrapper {
+    max-width: 860px;
+    margin: 0 auto 3.5rem;
+    padding: 0 1rem;
+  }
+  .toc-box {
+    background: white;
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--gold);
+    border-radius: 0 0 6px 6px;
+    padding: 1.2rem 1.5rem;
+  }
+  .toc-box h3 {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    margin-bottom: 0.8rem;
+  }
+  .toc-box ol {
+    columns: 2;
+    column-gap: 2rem;
+    padding-left: 1.2rem;
+    margin: 0;
+  }
+  .toc-box ol li {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.97rem;
+    margin-bottom: 0.3rem;
+    break-inside: avoid;
+  }
+  .toc-box ol li a {
+    color: var(--dark);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--border);
+  }
+  .toc-box ol li a:hover {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+  }
+  @media (max-width: 540px) {
+    .toc-box ol { columns: 1; }
+    .page-header h1 { font-size: 1.9rem; }
+  }
+
+  /* ── SECTION SEPARATORS ─────────────────────────────────── */
+  .guide-section {
+    padding: 0 1rem;
+  }
+  .guide-section + .guide-section {
+    border-top: 2px solid var(--border);
+    padding-top: 3rem;
+    margin-top: 0;
+  }
+
+  /* ── BACK-TO-TOP LINK ───────────────────────────────────── */
+  .back-top {
+    display: block;
+    text-align: right;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--muted);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    margin-top: 2rem;
+    padding-bottom: 0.5rem;
+  }
+  .back-top:hover { color: var(--gold); }
+  </style>
+</head>
+<body>
+
+  <!-- ══ PAGE HEADER ══════════════════════════════════════════ -->
+  <div class="page-header">
+    <div style="max-width:860px;margin:0 auto;">
+      <span class="guide-label">Japanese Study · Cheat Sheet</span>
+      <h1>Miscellaneous Grammar</h1>
+      <p class="subtitle">Sentence structure · Particles · Grammar patterns · Vocabulary</p>
+    </div>
+  </div>
+
+  <!-- ══ TABLE OF CONTENTS ════════════════════════════════════ -->
+  <div class="toc-wrapper" id="top">
+    <div class="toc-box">
+      <h3>Contents</h3>
+      <ol>
+          <li><a href="#basic-sentence-structure">Basic Sentence Structure</a></li>
+          <li><a href="#physical-description">Physical Description</a></li>
+          <li><a href="#takusan">たくさん — Many / A lot</a></li>
+          <li><a href="#sugiru">〜すぎる — Too much / To excess</a></li>
+          <li><a href="#ndesu">〜んです — Implicit Explanation</a></li>
+          <li><a href="#hougaiidesu">〜ほうがいいです — You'd Better</a></li>
+          <li><a href="#nakuchaikemasen">〜なくちゃいけません — I Must</a></li>
+          <li><a href="#kara-because">〜から — Because</a></li>
+          <li><a href="#invitation">Invitation — ませんか &amp; ましょう</a></li>
+          <li><a href="#kotogaaru">〜ことがある — Experience</a></li>
+          <li><a href="#indefinite-words">Indefinite Words</a></li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- ══ SECTIONS ════════════════════════════════════════════ -->
+  <div style="max-width:900px;margin:0 auto;">
+
+<!-- ════════════════════════════════════════════════════════════
+     SECTION: BASIC SENTENCE STRUCTURE
+     ════════════════════════════════════════════════════════════ -->
+<section id="basic-sentence-structure" class="guide-section">
+
+  <div class="section-header">
+    <span class="badge badge-purple">Grammar</span>
+    <h2>Basic Sentence Structure</h2>
+  </div>
+
+
+  <!-- ── 1. X は Y です ──────────────────────────────────────── -->
+  <div class="subsection">
+    <div class="subsection-title">
+      X は Y です。
+      <span class="romaji-sub">(X wa Y desu.)</span>
+      <span class="badge badge-purple">Copula</span>
+    </div>
+    <p class="subsection-subtitle">"X is Y." — the core linking sentence</p>
+
+    <div class="formula-bar">
+      <span class="jp-formula">X は Y です。</span>
+      <span class="rom">X wa Y desu.</span>
+      <span class="meaning">→ X is Y. (present)</span>
+    </div>
+    <div class="formula-bar">
+      <span class="jp-formula">X は Y でした。</span>
+      <span class="rom">X wa Y deshita.</span>
+      <span class="meaning">→ X was Y. (past)</span>
+    </div>
+
+    <ul class="note-list">
+      <li><span class="jp">は</span> is the topic particle — read <span class="rom">WA</span>, not "HA".</li>
+      <li>Replace <span class="jp">です</span> <span class="rom">(desu)</span> with <span class="jp">でした</span> <span class="rom">(deshita)</span> for past tense.</li>
+      <li>Add <span class="jp">か</span> <span class="rom">(ka)</span> at the end to turn any statement into a question.</li>
+    </ul>
+
+    <div class="examples-row">
+      <div class="example-block">
+        <div class="ex-jp">夜ご飯は寿司でした。</div>
+        <div class="ex-rom">Yorugohan wa sushi deshita.</div>
+        <div class="ex-en">Dinner was sushi.</div>
+      </div>
+      <div class="example-block">
+        <div class="ex-jp">あなたの名前はなんですか？</div>
+        <div class="ex-rom">Anata no namae wa nan desuka?</div>
+        <div class="ex-en">What is your name?</div>
+      </div>
+    </div>
+
+    <div class="note-box">
+      <strong>Question word tip</strong>
+      To ask a W-question, place the question word (<span class="jp">なん・だれ・どこ・いつ</span> <span class="rom">nan / dare / doko / itsu</span>) where the answer would go, then add <span class="jp">か</span> <span class="rom">(ka)</span> at the end.
+    </div>
+  </div>
+
+  <hr class="sub-divider">
+
+
+  <!-- ── 2. これ・それ・あれ・どれ ────────────────────────────── -->
+  <div class="subsection">
+    <div class="subsection-title">
+      これ・それ・あれ・どれ
+      <span class="romaji-sub">(kore · sore · are · dore)</span>
+      <span class="badge badge-teal">Demonstratives</span>
+    </div>
+    <p class="subsection-subtitle">"This / That / That over there / Which one" — standalone (never before a noun)</p>
+
+    <div class="kosoad-grid">
+      <div class="kosoad-card ko">
+        <span class="k-jp">これ</span>
+        <span class="k-rom">kore</span>
+        <span class="k-en">this (near speaker)</span>
+      </div>
+      <div class="kosoad-card so">
+        <span class="k-jp">それ</span>
+        <span class="k-rom">sore</span>
+        <span class="k-en">that (near listener)</span>
+      </div>
+      <div class="kosoad-card a">
+        <span class="k-jp">あれ</span>
+        <span class="k-rom">are</span>
+        <span class="k-en">that (far from both)</span>
+      </div>
+      <div class="kosoad-card do">
+        <span class="k-jp">どれ</span>
+        <span class="k-rom">dore</span>
+        <span class="k-en">which one?</span>
+      </div>
+    </div>
+
+    <div class="important-box">
+      <strong>⚠ Important</strong>
+      <span class="jp">これ・それ・あれ・どれ</span> will <em>never</em> be directly followed by a noun. Use <span class="jp">この・その・あの・どの</span> before nouns instead.
+    </div>
+
+    <table class="pattern-table">
+      <thead>
+        <tr>
+          <th>Pattern</th>
+          <th>Romaji</th>
+          <th>Meaning</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="jp">これ／それ／あれ は X です。</span></td>
+          <td><span class="rom">kore/sore/are wa X desu.</span></td>
+          <td class="en">This / That is X.</td>
+        </tr>
+        <tr>
+          <td><span class="jp">これ／それ／あれ は X ですか？</span></td>
+          <td><span class="rom">kore/sore/are wa X desuka?</span></td>
+          <td class="en">Is this / that X?</td>
+        </tr>
+        <tr>
+          <td><span class="jp">X は どれ ですか？</span></td>
+          <td><span class="rom">X wa dore desuka?</span></td>
+          <td class="en">Which one is X?</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="examples-row">
+      <div class="example-block">
+        <div class="ex-jp">あれは私の家です。</div>
+        <div class="ex-rom">Are wa watashi no ie desu.</div>
+        <div class="ex-en">That is my house.</div>
+      </div>
+      <div class="example-block">
+        <div class="ex-jp">これはりんごですか？</div>
+        <div class="ex-rom">Kore wa ringo desuka?</div>
+        <div class="ex-en">Is this an apple?</div>
+      </div>
+      <div class="example-block">
+        <div class="ex-jp">あなたのペンはどれですか？</div>
+        <div class="ex-rom">Anata no pen wa dore desuka?</div>
+        <div class="ex-en">Which one is your pen?</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="sub-divider">
+
+
+  <!-- ── 3. この・その・あの・どの ─────────────────────────────── -->
+  <div class="subsection">
+    <div class="subsection-title">
+      この・その・あの・どの
+      <span class="romaji-sub">(kono · sono · ano · dono)</span>
+      <span class="badge badge-teal">Demonstrative Adjectives</span>
+    </div>
+    <p class="subsection-subtitle">"This / That / That over there / Which" — always followed by a noun</p>
+
+    <div class="kosoad-grid">
+      <div class="kosoad-card ko">
+        <span class="k-jp">この</span>
+        <span class="k-rom">kono</span>
+        <span class="k-en">this ___ (near speaker)</span>
+      </div>
+      <div class="kosoad-card so">
+        <span class="k-jp">その</span>
+        <span class="k-rom">sono</span>
+        <span class="k-en">that ___ (near listener)</span>
+      </div>
+      <div class="kosoad-card a">
+        <span class="k-jp">あの</span>
+        <span class="k-rom">ano</span>
+        <span class="k-en">that ___ (far from both)</span>
+      </div>
+      <div class="kosoad-card do">
+        <span class="k-jp">どの</span>
+        <span class="k-rom">dono</span>
+        <span class="k-en">which ___?</span>
+      </div>
+    </div>
+
+    <table class="pattern-table">
+      <thead>
+        <tr>
+          <th>Pattern</th>
+          <th>Romaji</th>
+          <th>Meaning</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="jp">この／その／あの X は Y です。</span></td>
+          <td><span class="rom">kono/sono/ano X wa Y desu.</span></td>
+          <td class="en">This / That X is Y.</td>
+        </tr>
+        <tr>
+          <td><span class="jp">この／その／あの X は Y ですか？</span></td>
+          <td><span class="rom">kono/sono/ano X wa Y desuka?</span></td>
+          <td class="en">Is this / that X Y?</td>
+        </tr>
+        <tr>
+          <td><span class="jp">どの X は Y ですか？</span></td>
+          <td><span class="rom">dono X wa Y desuka?</span></td>
+          <td class="en">Which X is Y?</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="examples-row">
+      <div class="example-block">
+        <div class="ex-jp">この本は私のです。</div>
+        <div class="ex-rom">Kono hon wa watashi no desu.</div>
+        <div class="ex-en">This book is mine.</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="sub-divider">
+
+
+  <!-- ── 4. だれの + Noun ───────────────────────────────────────── -->
+  <div class="subsection">
+    <div class="subsection-title">
+      だれの + Noun
+      <span class="romaji-sub">(dareno + noun)</span>
+      <span class="badge badge-coral">Possession</span>
+    </div>
+    <p class="subsection-subtitle">"Whose ___?" — asking about ownership</p>
+
+    <div class="formula-bar">
+      <span class="jp-formula">誰（だれ）</span>
+      <span class="rom">dare</span>
+      <span class="meaning">→ who</span>
+    </div>
+    <div class="formula-bar">
+      <span class="jp-formula">誰の（だれの）</span>
+      <span class="rom">dareno</span>
+      <span class="meaning">→ whose (dare + の particle)</span>
+    </div>
+
+    <div class="examples-row">
+      <div class="example-block">
+        <div class="ex-jp">これはだれのかばんですか？</div>
+        <div class="ex-rom">Kore wa dareno kaban desuka?</div>
+        <div class="ex-en">Whose bag is this?</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="sub-divider">
+
+
+  <!-- ── 5. ここ・そこ・あそこ・どこ ─────────────────────────── -->
+  <div class="subsection">
+    <div class="subsection-title">
+      ここ・そこ・あそこ・どこ
+      <span class="romaji-sub">(koko · soko · asoko · doko)</span>
+      <span class="badge badge-amber">Location</span>
+    </div>
+    <p class="subsection-subtitle">"Here / There / Over there / Where" — location words</p>
+
+    <div class="kosoad-grid">
+      <div class="kosoad-card ko">
+        <span class="k-jp">ここ</span>
+        <span class="k-rom">koko</span>
+        <span class="k-en">here (near speaker)</span>
+      </div>
+      <div class="kosoad-card so">
+        <span class="k-jp">そこ</span>
+        <span class="k-rom">soko</span>
+        <span class="k-en">there (near listener)</span>
+      </div>
+      <div class="kosoad-card a">
+        <span class="k-jp">あそこ</span>
+        <span class="k-rom">asoko</span>
+        <span class="k-en">over there (far from both)</span>
+      </div>
+      <div class="kosoad-card do">
+        <span class="k-jp">どこ</span>
+        <span class="k-rom">doko</span>
+        <span class="k-en">where?</span>
+      </div>
+    </div>
+
+    <table class="pattern-table">
+      <thead>
+        <tr>
+          <th>Pattern</th>
+          <th>Romaji</th>
+          <th>Meaning</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="jp">ここ／そこ／あそこ は X です。</span></td>
+          <td><span class="rom">koko/soko/asoko wa X desu.</span></td>
+          <td class="en">Here / There is X.</td>
+        </tr>
+        <tr>
+          <td><span class="jp">X は ここ／そこ／あそこ です。</span></td>
+          <td><span class="rom">X wa koko/soko/asoko desu.</span></td>
+          <td class="en">X is here / there.</td>
+        </tr>
+        <tr>
+          <td><span class="jp">X は どこ ですか？</span></td>
+          <td><span class="rom">X wa doko desuka?</span></td>
+          <td class="en">Where is X?</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="examples-row">
+      <div class="example-block">
+        <div class="ex-jp">ここは図書館です。</div>
+        <div class="ex-rom">Koko wa toshokan desu.</div>
+        <div class="ex-en">Here is the library.</div>
+      </div>
+      <div class="example-block">
+        <div class="ex-jp">あなたの車はどこですか？</div>
+        <div class="ex-rom">Anata no kuruma wa doko desuka?</div>
+        <div class="ex-en">Where is your car?</div>
+      </div>
+    </div>
+
+    <div class="note-box">
+      <strong>Ko-So-A-Do pattern</strong>
+      All four series (これ/この/ここ、それ/その/そこ、あれ/あの/あそこ、どれ/どの/どこ) follow the same distance logic: <strong>ko-</strong> = near speaker · <strong>so-</strong> = near listener · <strong>a-</strong> = far from both · <strong>do-</strong> = question word.
+    </div>
+  </div>
+
+
+  <a class="back-top" href="#top">↑ Back to top</a>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     SECTION: PHYSICAL DESCRIPTION
+     ════════════════════════════════════════════════════════════ -->
+<section id="physical-description" class="guide-section">
+
+  <div class="section-header">
+    <span class="badge badge-teal">Grammar</span>
+    <h2>Physical Description</h2>
+  </div>
+
+
+  <!-- ── Formula ─────────────────────────────────────────────── -->
+  <div class="subsection">
+    <div class="subsection-title">
+      (Body part) が (Adjective) です
+      <span class="badge badge-purple">が pattern</span>
+    </div>
+    <p class="subsection-subtitle">"(Person) has (adjective) (body part)" — note the English word order flips in Japanese</p>
+
+    <div class="formula-bar">
+      <span class="jp-formula">(Person) は (Body part) が (Adjective) です。</span>
+      <span class="rom">(person) wa (body part) ga (adjective) desu.</span>
+    </div>
+
+    <ul class="note-list">
+      <li><span class="jp">は</span> <span class="rom">(wa)</span> marks the topic (the person being described).</li>
+      <li><span class="jp">が</span> <span class="rom">(ga)</span> marks the body part as the grammatical subject.</li>
+      <li>The adjective comes <em>last</em> — opposite of English ("long hair" → "hair is long").</li>
+    </ul>
+
+    <div class="important-box">
+      <strong>⚠ Remember</strong>
+      Conjugate the adjective to match the sentence type — negative, question, past tense, etc. The body part and particles stay the same; only the adjective changes.
+    </div>
+  </div>
+
+
+  <!-- ── Examples ────────────────────────────────────────────── -->
+  <div class="subsection">
+    <div class="examples-row">
+      <div class="example-block">
+        <div class="ex-jp">とむは髪（かみ）が長（なが）いです。</div>
+        <div class="ex-rom">Tomu wa kami ga nagai desu.</div>
+        <div class="ex-en">Tom has long hair.</div>
+      </div>
+      <div class="example-block">
+        <div class="ex-jp">けんたは足（あし）が長（なが）いです。</div>
+        <div class="ex-rom">Kenta wa ashi ga nagai desu.</div>
+        <div class="ex-en">Kenta has long legs.</div>
+      </div>
+      <div class="example-block">
+        <div class="ex-jp">あきこは鼻（はな）が小（ちい）さいです。</div>
+        <div class="ex-rom">Akiko wa hana ga chisai desu.</div>
+        <div class="ex-en">Akiko has a small nose.</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ── Idiomatic collocations ───────────────────────────────── -->
+  <div class="subsection">
+    <div class="subsection-title">
+      Idiomatic Collocations
+      <span class="badge badge-amber">Fixed phrases</span>
+    </div>
+    <p class="subsection-subtitle">These body-part + adjective pairings carry idiomatic meanings</p>
+
+    <table class="pattern-table">
+      <thead>
+        <tr>
+          <th>Japanese</th>
+          <th>Romaji</th>
+          <th>Meaning</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="jp">背（せ）が高（たか）い</span></td>
+          <td><span class="rom">se ga takai</span></td>
+          <td class="en">is tall</td>
+        </tr>
+        <tr>
+          <td><span class="jp">背（せ）が低（ひく）い</span></td>
+          <td><span class="rom">se ga hikui</span></td>
+          <td class="en">is short (in height)</td>
+        </tr>
+        <tr>
+          <td><span class="jp">頭（あたま）が良（い）い</span></td>
+          <td><span class="rom">atama ga ii</span></td>
+          <td class="en">is bright / smart</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="note-box">
+      <strong>Usage note</strong>
+      These collocations drop the person + は when context is clear, e.g. just <span class="jp">背が高いです</span> <span class="rom">(se ga takai desu)</span> = "She/he is tall."
+    </div>
+  </div>
+
+
+  <a class="back-top" href="#top">↑ Back to top</a>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     SECTION: たくさん — "Many / A lot"
+     ════════════════════════════════════════════════════════════ -->
+<section id="takusan" class="guide-section">
+
+  <div class="section-header">
+    <span class="badge badge-amber">Quantity</span>
+    <h2>たくさん — Many / A lot</h2>
+  </div>
+
+  <div class="subsection">
+    <p class="subsection-subtitle">Quantity expressions work differently in Japanese — たくさん (takusan) can float to two positions.</p>
+
+    <div class="formula-bar">
+      <span class="jp-formula">たくさん</span>
+      <span class="rom">takusan</span>
+      <span class="meaning">→ many / a lot / much</span>
+    </div>
+
+    <ul class="note-list">
+      <li>Place <span class="jp">たくさん</span> <em>before the noun</em> <strong>or</strong> <em>after the particle を</em> — both are correct.</li>
+      <li>The meaning does not change between the two positions.</li>
+    </ul>
+
+    <div class="position-pair">
+      <div class="position-card">
+        <span class="pos-tag opt-a">Option A — before noun</span>
+        <div class="ex-jp">たくさん写真（しゃしん）を撮（と）りました。</div>
+        <div class="ex-rom">Takusan shashin o torimashita.</div>
+        <div class="ex-en">I took many pictures.</div>
+      </div>
+      <div class="position-card">
+        <span class="pos-tag opt-b">Option B — after を</span>
+        <div class="ex-jp">写真（しゃしん）をたくさん撮（と）りました。</div>
+        <div class="ex-rom">Shashin o takusan torimashita.</div>
+        <div class="ex-en">I took many pictures.</div>
+      </div>
+    </div>
+  </div>
+
+
+  <a class="back-top" href="#top">↑ Back to top</a>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     SECTION: 〜すぎる — "Too much / To excess"
+     ════════════════════════════════════════════════════════════ -->
+<section id="sugiru" class="guide-section">
+
+  <div class="section-header">
+    <span class="badge badge-coral">Grammar</span>
+    <h2>〜すぎる — Too much / To excess</h2>
+  </div>
+
+  <!-- Formula -->
+  <div class="subsection">
+    <p class="subsection-subtitle">Attach すぎる to a verb stem or adjective base to mean "too much" or "to excess."</p>
+
+    <div class="formula-bar">
+      <span class="jp-formula">Verb stem + すぎる</span>
+      <span class="rom">(verb stem) + sugiru</span>
+      <span class="meaning">→ to do [verb] too much</span>
+    </div>
+    <div class="formula-bar">
+      <span class="jp-formula">Adjective base + すぎる</span>
+      <span class="rom">(adj. base) + sugiru</span>
+      <span class="meaning">→ too [adjective]</span>
+    </div>
+
+    <ul class="note-list">
+      <li><span class="jp">すぎる</span> <span class="rom">(sugiru)</span> conjugates as a <strong>regular る-verb</strong>.</li>
+      <li>For い-adjectives, drop the final <span class="rom">i</span> before adding すぎる (e.g. 高い (takai) → 高すぎる (taka-sugiru)).</li>
+      <li>For な-adjectives, drop な before adding すぎる (e.g. 静かな (shizuka na) → 静かすぎる (shizuka-sugiru)).</li>
+    </ul>
+  </div>
+
+  <!-- Conjugation table -->
+  <div class="subsection">
+    <div class="subsection-title">
+      すぎる Conjugation
+      <span class="badge badge-purple">ru-verb</span>
+    </div>
+
+    <table class="conj-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Affirmative</th>
+          <th>Negative</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Present</td>
+          <td>
+            <span class="jp">すぎます</span>
+            <span class="rom">sugimasu</span>
+          </td>
+          <td>
+            <span class="jp">すぎません</span>
+            <span class="rom">sugimasen</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Past</td>
+          <td>
+            <span class="jp">すぎました</span>
+            <span class="rom">sugimashita</span>
+          </td>
+          <td>
+            <span class="jp">すぎませんでした</span>
+            <span class="rom">sugimasendeshita</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Example -->
+  <div class="subsection">
+    <div class="examples-row">
+      <div class="example-block">
+        <div class="ex-label">Verb stem (食べる → 食べ) + すぎました</div>
+        <div class="ex-jp">食べすぎました。</div>
+        <div class="ex-rom">Tabe-sugimashita.</div>
+        <div class="ex-en">I ate too much.</div>
+      </div>
+    </div>
+
+    <div class="note-box">
+      <strong>Tip</strong>
+      Think of すぎる as snapping onto the verb/adjective stem like a suffix — the stem never changes, only すぎる conjugates to mark tense and polarity.
+    </div>
+  </div>
+
+
+  <a class="back-top" href="#top">↑ Back to top</a>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     SECTION: 〜んです — Implicit Explanation
+     ════════════════════════════════════════════════════════════ -->
+<section id="ndesu" class="guide-section">
+
+  <div class="section-header">
+    <span class="badge badge-purple">Grammar</span>
+    <h2>〜んです — Implicit Explanation</h2>
+  </div>
+
+
+  <!-- ── What it does ─────────────────────────────────────────── -->
+  <div class="subsection">
+    <p style="font-size:0.97rem; margin-bottom:0.7rem;">
+      Japanese has two statement modes: <strong>reporting</strong> (plain facts) and <strong>explaining</strong> (implying context or reason). <span style="font-family:'Noto Serif JP',serif;">んです</span> is the explanation mode — it links what is said to what it accounts for.
+    </p>
+
+    <div class="use-cases">
+      <span class="use-case-pill">① giving a reason / excuse</span>
+      <span class="use-case-pill">② asking for an explanation</span>
+      <span class="use-case-pill">③ adding a comment on what was just said</span>
+    </div>
+
+    <div class="compare-pair">
+      <div class="compare-card">
+        <span class="cc-tag plain">Plain — just a fact</span>
+        <div class="ex-jp">あしたテストがあります。</div>
+        <div class="ex-rom">Ashita tesuto ga arimasu.</div>
+        <div class="ex-note">I have an exam tomorrow. (neutral report)</div>
+      </div>
+      <div class="compare-card">
+        <span class="cc-tag ndesu">んです — implies context</span>
+        <div class="ex-jp">あしたテストがあるんです。</div>
+        <div class="ex-rom">Ashita tesuto ga arundesu.</div>
+        <div class="ex-note">I have an exam tomorrow. (…that's why / that's the thing)</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="sub-divider">
+
+
+  <!-- ── Formation ────────────────────────────────────────────── -->
+  <div class="subsection">
+    <div class="subsection-title">Formation
+      <span class="badge badge-teal">Short form + んです</span>
+    </div>
+
+    <ul class="note-list">
+      <li><span class="jp">んです</span> always attaches to the <strong>short form</strong> of a predicate.</li>
+      <li><span class="jp">んです</span> itself is <strong>invariant</strong> — tense and polarity are carried by the short form before it.</li>
+      <li>After a <strong>な-adjective</strong> or <strong>noun</strong>, insert <span class="jp">な</span> before <span class="jp">んです</span> (present aff. only).</li>
+    </ul>
+
+    <table class="form-table">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Present aff.</th>
+          <th>Present neg.</th>
+          <th>Past aff.</th>
+          <th>Past neg.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Verb / い-adj</td>
+          <td>
+            <span class="jp">short aff. + んです</span>
+            <span class="rom">たべる → たべるんです<br>(taberu → taberu n desu)</span>
+          </td>
+          <td>
+            <span class="jp">short neg. + んです</span>
+            <span class="rom">たべない → たべないんです<br>(tabenai → tabenai n desu)</span>
+          </td>
+          <td>
+            <span class="jp">short past aff. + んです</span>
+            <span class="rom">たべた → たべたんです<br>(tabeta → tabeta n desu)</span>
+          </td>
+          <td>
+            <span class="jp">short past neg. + んです</span>
+            <span class="rom">たべなかった → たべなかったんです<br>(tabenakatta → tabenakatta n desu)</span>
+          </td>
+        </tr>
+        <tr>
+          <td>な-adj / Noun</td>
+          <td>
+            <span class="jp">dict. form + <span class="highlight">な</span>んです</span>
+            <span class="rom">静か → 静か<span class="highlight">な</span>んです<br>(shizuka → shizuka <span class="highlight">na</span> n desu)<br>学生 → 学生<span class="highlight">な</span>んです<br>(gakusei → gakusei <span class="highlight">na</span> n desu)</span>
+          </td>
+          <td>
+            <span class="jp">short neg. + んです</span>
+            <span class="rom">静かじゃない → 静かじゃないんです<br>(shizuka ja nai → shizuka ja nai n desu)</span>
+          </td>
+          <td>
+            <span class="jp">short past aff. + んです</span>
+            <span class="rom">静かだった → 静かだったんです<br>(shizuka datta → shizuka datta n desu)</span>
+          </td>
+          <td>
+            <span class="jp">short past neg. + んです</span>
+            <span class="rom">静かじゃなかった → 静かじゃなかったんです<br>(shizuka ja nakatta → shizuka ja nakatta n desu)</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="important-box">
+      <strong>⚠ な insertion rule</strong>
+      Only applies to the <em>present affirmative</em> of な-adjectives and nouns: <span class="jp">静か<strong>な</strong>んです</span> <span class="rom">(shizuka<strong>na</strong>ndesu)</span> · <span class="jp">学生<strong>な</strong>んです</span> <span class="rom">(gakusei<strong>na</strong>ndesu)</span>. All other forms use the short form directly.
+    </div>
+  </div>
+
+  <hr class="sub-divider">
+
+
+  <!-- ── Examples ─────────────────────────────────────────────── -->
+  <div class="subsection">
+    <div class="subsection-title">Examples</div>
+
+    <div class="examples-row">
+      <div class="example-block">
+        <div class="ex-label">Reason (present neg. い-adj)</div>
+        <div class="ex-jp">成績（せいせき）がよくないんです。</div>
+        <div class="ex-rom">Seiseki ga yokunai ndesu.</div>
+        <div class="ex-en">(Because) my grade is not good.</div>
+      </div>
+      <div class="example-block">
+        <div class="ex-label">Reason (past aff. verb)</div>
+        <div class="ex-jp">試験（しけん）が終（お）わったんです。</div>
+        <div class="ex-rom">Shiken ga owatta ndesu.</div>
+        <div class="ex-en">(Because) the exam is over.</div>
+      </div>
+    </div>
+    <div class="examples-row">
+      <div class="example-block">
+        <div class="ex-label">Excuse (past neg. verb)</div>
+        <div class="ex-jp">バスが来（こ）なかったんです。</div>
+        <div class="ex-rom">Basu ga konakatta ndesu.</div>
+        <div class="ex-en">(As it happens,) the bus didn't come.</div>
+      </div>
+      <div class="example-block">
+        <div class="ex-label">Question — inviting explanation</div>
+        <div class="ex-jp">どうして彼（かれ）と別（わか）れたんですか？</div>
+        <div class="ex-rom">Doushite kare to wakareta ndesu ka?</div>
+        <div class="ex-en">Why did you break up with your boyfriend?</div>
+      </div>
+      <div class="example-block">
+        <div class="ex-label">Additional comment (past aff. verb)</div>
+        <div class="ex-jp">私（わたし）の先生（せんせい）が書（か）いたんです。</div>
+        <div class="ex-rom">Watashi no sensei ga kaita ndesu.</div>
+        <div class="ex-en">My teacher wrote it, you know.</div>
+      </div>
+    </div>
+
+    <div class="note-box">
+      <strong>Tip — どうしたんですか questions</strong>
+      When answering <span class="jp">どうしたんですか</span> <span class="rom">(doushita ndesu ka? — "what happened?")</span>, use が rather than は to mark the subject in your reply. The question itself invites an んです explanation.
+    </div>
+  </div>
+
+
+  <a class="back-top" href="#top">↑ Back to top</a>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     SECTION: 〜ほうがいいです — "You'd Better"
+     ════════════════════════════════════════════════════════════ -->
+<section id="hougaiidesu" class="guide-section">
+
+  <div class="section-header">
+    <span class="badge badge-coral">Grammar</span>
+    <h2>〜ほうがいいです — You'd Better</h2>
+  </div>
+
+  <!-- Concept -->
+  <div class="subsection">
+    <p style="font-size:0.97rem;margin-bottom:0.9rem;">
+      A sentence-final expression for giving strong advice — implying that <em>not</em> following the advice leads to a problem or danger.
+    </p>
+
+    <div class="formula-bar">
+      <span class="jp-formula">〜ほうがいいです。</span>
+      <span class="rom">〜hou ga ii desu.</span>
+      <span class="meaning">→ You'd better… / It's better to…</span>
+    </div>
+  </div>
+
+  <!-- Tense rule -->
+  <div class="subsection">
+    <p style="font-size:0.97rem;margin-bottom:0.7rem;">
+      The verb tense before <span style="font-family:'Noto Serif JP',serif;">ほうがいいです</span> depends on whether the advice is positive or negative — this is the key quirk:
+    </p>
+
+    <div class="tense-pair">
+      <div class="tense-card aff">
+        <div class="tc-label">✔ Positive advice — "You'd better DO…"</div>
+        <div class="tc-rule">Past aff. short form + <span class="jp">ほうがいいです</span></div>
+        <div class="tc-desc">e.g. 食べた (tabeta) + ほうがいいです</div>
+      </div>
+      <div class="tense-card neg">
+        <div class="tc-label">✘ Negative advice — "You'd better NOT do…"</div>
+        <div class="tc-rule">Present neg. short form + <span class="jp">ほうがいいです</span></div>
+        <div class="tc-desc">e.g. 食べない (tabenai) + ほうがいいです</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Examples -->
+  <div class="subsection">
+    <div class="examples-row">
+      <div class="example-block">
+        <div class="ex-label">Positive — past aff. short form (食べる → 食べた)</div>
+        <div class="ex-jp">もっと野菜（やさい）を食（た）べたほうがいいです。</div>
+        <div class="ex-rom">Motto yasai o tabeta hou ga ii desu.</div>
+        <div class="ex-en">You'd better eat more vegetables.</div>
+      </div>
+      <div class="example-block">
+        <div class="ex-label">Negative — present neg. short form (飲む → 飲まない)</div>
+        <div class="ex-jp">お酒（さけ）を飲（の）まないほうがいいです。</div>
+        <div class="ex-rom">Osake o nomanai hou ga ii desu.</div>
+        <div class="ex-en">You'd better not drink alcohol.</div>
+      </div>
+    </div>
+
+    <div class="note-box">
+      <strong>Nuance</strong>
+      <span class="jp">ほうがいいです</span> carries a stronger, more urgent tone than a gentle suggestion — use it when there's a real consequence if the advice is ignored.
+    </div>
+  </div>
+
+
+  <a class="back-top" href="#top">↑ Back to top</a>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     SECTION: 〜なくちゃいけません — "I Must"
+     ════════════════════════════════════════════════════════════ -->
+<section id="nakuchaikemasen" class="guide-section">
+
+  <div class="section-header">
+    <span class="badge badge-purple">Grammar</span>
+    <h2>〜なくちゃいけません — I Must</h2>
+  </div>
+
+  <!-- Concept + formula -->
+  <div class="subsection">
+    <p style="font-size:0.97rem;margin-bottom:0.9rem;">
+      A sentence-final expression meaning <strong>"must"</strong> or <em>"it is necessary to do…"</em>. Literally a double negative — <span style="font-family:'Noto Serif JP',serif;">なくちゃ</span> ("if you don't…") + <span style="font-family:'Noto Serif JP',serif;">いけません</span> ("cannot go") — which resolves to a positive obligation.
+    </p>
+
+    <div class="formula-bar">
+      <span class="jp-formula">〜なくちゃいけません</span>
+      <span class="rom">〜nakucha ikemasen</span>
+      <span class="meaning">→ must / have to</span>
+    </div>
+  </div>
+
+  <!-- Formation -->
+  <div class="subsection">
+    <div class="subsection-title">Formation <span class="badge badge-teal">neg. short form → replace ない</span></div>
+
+    <div class="formation-steps">
+      <div>
+        <span class="step from">Verb: present neg. short form</span>
+        <span class="rom-hint">e.g. 食べない (tabenai)</span>
+      </div>
+      <span class="arrow">→ drop ない →</span>
+      <div>
+        <span class="step to">〜なくちゃいけません</span>
+        <span class="rom-hint">食べなくちゃいけません (tabenakuchaikemasen)</span>
+      </div>
+    </div>
+
+    <table class="conj-table">
+      <thead>
+        <tr><th>Verb</th><th>Present neg. short form</th><th>"Must" form</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="jp">食べる</span><span class="rom">taberu — to eat</span></td>
+          <td><span class="jp">食べない</span><span class="rom">tabenai</span></td>
+          <td><span class="jp">食べ<span class="highlight">なくちゃいけません</span></span><span class="rom">tabenakuchaikemasen</span></td>
+        </tr>
+        <tr>
+          <td><span class="jp">言う</span><span class="rom">iu — to say</span></td>
+          <td><span class="jp">言わない</span><span class="rom">iwanai</span></td>
+          <td><span class="jp">言わ<span class="highlight">なくちゃいけません</span></span><span class="rom">iwanakuchaikemasen</span></td>
+        </tr>
+        <tr>
+          <td><span class="jp">する</span><span class="rom">suru — to do</span></td>
+          <td><span class="jp">しない</span><span class="rom">shinai</span></td>
+          <td><span class="jp">し<span class="highlight">なくちゃいけません</span></span><span class="rom">shinakuchaikemasen</span></td>
+        </tr>
+        <tr>
+          <td><span class="jp">くる</span><span class="rom">kuru — to come</span></td>
+          <td><span class="jp">こない</span><span class="rom">konai</span></td>
+          <td><span class="jp">こ<span class="highlight">なくちゃいけません</span></span><span class="rom">konakuchaikemasen</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Variants -->
+  <div class="subsection">
+    <div class="subsection-title">Variants</div>
+    <div class="variants-row">
+      <div class="variant-card">
+        <div class="vc-tag">Past — "had to"</div>
+        <div class="jp">〜なくちゃいけませんでした</div>
+        <div class="rom">〜nakucha ikemasen deshita</div>
+        <div class="en">had to / was necessary to</div>
+      </div>
+      <div class="variant-card">
+        <div class="vc-tag">Casual / before んです</div>
+        <div class="jp">〜なくちゃいけない</div>
+        <div class="rom">〜nakucha ikenai</div>
+        <div class="en">must (casual speech)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Example -->
+  <div class="subsection">
+    <div class="examples-row">
+      <div class="example-block">
+        <div class="ex-label">勉強する → 勉強しない → 勉強し + なくちゃいけません</div>
+        <div class="ex-jp">来週（らいしゅう）テストがあるから、たくさん勉強（べんきょう）しなくちゃいけません。</div>
+        <div class="ex-rom">Raishuu tesuto ga aru kara, takusan benkyoushi nakuchaikemasen.</div>
+        <div class="ex-en">I have to study a lot because there's an exam next week.</div>
+      </div>
+    </div>
+  </div>
+
+
+  <a class="back-top" href="#top">↑ Back to top</a>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     SECTION: 〜から — "Because"
+     ════════════════════════════════════════════════════════════ -->
+<section id="kara-because" class="guide-section">
+
+  <div class="section-header">
+    <span class="badge badge-teal">Grammar</span>
+    <h2>〜から — Because</h2>
+  </div>
+
+  <!-- Concept -->
+  <div class="subsection">
+    <p style="font-size:0.97rem;margin-bottom:0.9rem;">
+      <span style="font-family:'Noto Serif JP',serif;">から</span> <span style="font-family:'DM Mono',monospace;font-size:0.85rem;color:var(--muted);">(kara)</span> placed at the end of a clause means <strong>"because"</strong> — it explains the reason or cause behind a situation, proposal, or action.
+    </p>
+
+    <div class="formula-bar">
+      <span class="jp-formula">〜から</span>
+      <span class="rom">〜kara</span>
+      <span class="meaning">→ because ~ / since ~</span>
+    </div>
+  </div>
+
+  <!-- Word order -->
+  <div class="subsection">
+    <p style="font-size:0.97rem;margin-bottom:0.6rem;">Either order is correct — から always ends the reason clause:</p>
+
+    <div class="order-pair">
+      <div class="order-card opt-a">
+        <div class="oc-tag">Option A — 2 sentences</div>
+        <div class="oc-formula">（situation）。（explanation）<span class="kara-highlight">から</span>。</div>
+        <div class="oc-note">State situation first, then give reason as a separate sentence.</div>
+      </div>
+      <div class="order-card opt-b">
+        <div class="oc-tag">Option B — 1 sentence</div>
+        <div class="oc-formula">（explanation）<span class="kara-highlight">から</span>、（situation）。</div>
+        <div class="oc-note">Lead with the reason, then state the situation after the comma.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Examples -->
+  <div class="subsection">
+    <div class="examples-row">
+      <div class="example-block">
+        <div class="ex-label">Option A — situation first</div>
+        <div class="ex-jp">今晩（こんばん）勉強（べんきょう）します。<br>明日（あした）テストがありますから。</div>
+        <div class="ex-rom">Konban benkyoushimasu. Ashita tesuto ga arimasu kara.</div>
+        <div class="ex-en">I will study this evening. (Because) we have an exam tomorrow.</div>
+      </div>
+      <div class="example-block">
+        <div class="ex-label">Option B — reason first</div>
+        <div class="ex-jp">タクシー（たくしー）は高（たか）いですから、<br>バス（ばす）に乗（の）りましょう。</div>
+        <div class="ex-rom">Takushii wa takai desu kara, basu ni norimashou.</div>
+        <div class="ex-en">Since taxis are expensive, let's go by bus.</div>
+      </div>
+    </div>
+
+    <div class="note-box">
+      <strong>Word order tip</strong>
+      Option A (situation first, reason after) feels more like an afterthought or justification. Option B (reason first) reads more like a logical flow — English "since" or "because" at the start of a sentence. Both are natural in Japanese.
+    </div>
+  </div>
+
+
+  <a class="back-top" href="#top">↑ Back to top</a>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     SECTION: Invitation — ませんか & ましょう
+     ════════════════════════════════════════════════════════════ -->
+<section id="invitation" class="guide-section">
+
+  <div class="section-header">
+    <span class="badge badge-purple">Grammar</span>
+    <h2>Invitation — ませんか &amp; ましょう</h2>
+  </div>
+
+
+  <!-- ── Pattern 1: ませんか ─────────────────────────────────── -->
+  <div class="subsection">
+    <div class="subsection-title">
+      〜ませんか
+      <span class="romaji-sub">(〜masen ka?)</span>
+      <span class="badge badge-teal">Shall we / Won't you?</span>
+    </div>
+
+    <div class="formula-bar">
+      <span class="jp-formula">Verb (negative present long form) + か？</span>
+      <span class="rom">〜masen ka?</span>
+      <span class="meaning">→ Shall we…? / Won't you…?</span>
+    </div>
+
+    <ul class="note-list">
+      <li>Use the <strong>negative</strong> long form (<span class="jp">ません</span>) + <span class="jp">か</span> to extend an invitation.</li>
+      <li>The affirmative form <span class="jp">しますか</span> <span class="rom">(shimasuka)</span> is <strong>only a question</strong> — it cannot be used as an invitation.</li>
+    </ul>
+
+    <div class="important-box">
+      <strong>⚠ Don't confuse</strong>
+      <span class="jp">昼ごはんを食べますか？</span> <span style="font-family:'DM Mono',monospace;font-size:0.75rem;color:var(--muted);">(hirugohan wo tabemasu ka?)</span> = "Are you going to eat lunch?" (neutral question)<br>
+      <span class="jp">昼ごはんを食べませんか？</span> <span style="font-family:'DM Mono',monospace;font-size:0.75rem;color:var(--muted);">(hirugohan wo tabemasen ka?)</span> = "Shall we have lunch?" (invitation)
+    </div>
+
+    <div class="examples-row">
+      <div class="example-block">
+        <div class="ex-jp">昼（ひる）ごはんを食（た）べませんか？</div>
+        <div class="ex-rom">Hirugohan o tabemasenka?</div>
+        <div class="ex-en">Shall we have lunch (together)?</div>
+      </div>
+      <div class="example-block">
+        <div class="ex-jp">カフェ（かふぇ）に行（い）きませんか？</div>
+        <div class="ex-rom">Kafe ni ikimasenka?</div>
+        <div class="ex-en">Will you go to the cafe with me?</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="sub-divider">
+
+
+  <!-- ── Pattern 2: ましょう ─────────────────────────────────── -->
+  <div class="subsection">
+    <div class="subsection-title">
+      〜ましょう / 〜ましょうか
+      <span class="romaji-sub">(〜mashou / 〜mashouka)</span>
+      <span class="badge badge-amber">Let's!</span>
+    </div>
+
+    <div class="formula-bar">
+      <span class="jp-formula">Replace ます with ましょう (or ましょうか)</span>
+      <span class="rom">〜masu → 〜mashou / 〜mashouka</span>
+      <span class="meaning">→ Let's… / Shall we…?</span>
+    </div>
+
+    <div class="formation-steps">
+      <div>
+        <span class="step from">勉強します</span>
+        <span class="rom-hint">(benkyoushimasu)</span>
+      </div>
+      <span class="arrow">→ replace ます →</span>
+      <div>
+        <span class="step to">勉強しましょう</span>
+        <span class="rom-hint">(benkyoushimashou)</span>
+      </div>
+    </div>
+
+    <ul class="note-list">
+      <li><span class="jp">ましょう</span> <span class="rom">(mashou)</span> — assertive "let's!" suggestion.</li>
+      <li><span class="jp">ましょうか</span> <span class="rom">(mashouka)</span> — softer, more questioning "shall we?"</li>
+    </ul>
+
+    <div class="examples-row">
+      <div class="example-block">
+        <div class="ex-label">ましょう — "Let's"</div>
+        <div class="ex-jp">図書館（としょかん）で勉強（べんきょう）しましょう。</div>
+        <div class="ex-rom">Toshokan de benkyoushimashou.</div>
+        <div class="ex-en">Let's study in the library.</div>
+      </div>
+      <div class="example-block">
+        <div class="ex-label">ましょうか — "Shall we?"</div>
+        <div class="ex-jp">バス（ばす）に乗（の）りましょうか？</div>
+        <div class="ex-rom">Basu ni norimashouka?</div>
+        <div class="ex-en">Shall we take the bus?</div>
+      </div>
+    </div>
+
+    <div class="note-box">
+      <strong>Quick comparison</strong>
+      <span class="jp">食べませんか</span> <span class="rom">(tabemasenka)</span> — softer, invites the other person.<br>
+      <span class="jp">食べましょう</span> <span class="rom">(tabemashou)</span> — more direct, assumes mutual agreement.
+    </div>
+  </div>
+
+
+  <a class="back-top" href="#top">↑ Back to top</a>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     SECTION: 〜ことがある — Experience
+     ════════════════════════════════════════════════════════════ -->
+<section id="kotogaaru" class="guide-section">
+
+  <div class="section-header">
+    <span class="badge badge-teal">Grammar</span>
+    <h2>〜ことがある — Experience</h2>
+  </div>
+
+  <!-- Concept + formula -->
+  <div class="subsection">
+    <p style="font-size:0.97rem;margin-bottom:0.9rem;">
+      Attach <span style="font-family:'Noto Serif JP',serif;">ことがある</span> to the <strong>past tense short form</strong> of a verb to say you have (or have never) had a certain experience.
+    </p>
+
+    <div class="formula-bar">
+      <span class="jp-formula">Verb (past short) + ことがある</span>
+      <span class="rom">(verb past short) + koto ga aru</span>
+      <span class="meaning">→ have ever done / have the experience of…</span>
+    </div>
+
+    <ul class="note-list">
+      <li>The verb before <span class="jp">ことが</span> is <em>always</em> the past affirmative short form — even for "never" sentences.</li>
+      <li><span class="jp">ある</span> conjugates normally to express affirmative/negative:
+        <span class="jp">あります</span> <span class="rom">(arimasu)</span> = have / <span class="jp">ありません</span> <span class="rom">(arimasen)</span> = have never.</li>
+    </ul>
+
+    <table class="mini-table">
+      <thead>
+        <tr><th></th><th>Affirmative</th><th>Negative</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Polite</td>
+          <td><span class="jp">〜たことがあります</span><span class="rom">〜ta koto ga arimasu</span></td>
+          <td><span class="jp">〜たことがありません</span><span class="rom">〜ta koto ga arimasen</span></td>
+        </tr>
+        <tr>
+          <td>Plain</td>
+          <td><span class="jp">〜たことがある</span><span class="rom">〜ta koto ga aru</span></td>
+          <td><span class="jp">〜たことがない</span><span class="rom">〜ta koto ga nai</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Examples -->
+  <div class="subsection">
+    <div class="examples-row">
+      <div class="example-block">
+        <div class="ex-label">Question — "Have you ever…?"</div>
+        <div class="ex-jp">ヨーロッパに行（い）ったことがありますか？</div>
+        <div class="ex-rom">Yo-roppa ni itta koto ga arimasu ka?</div>
+        <div class="ex-en">Have you ever been to Europe?</div>
+      </div>
+      <div class="example-block">
+        <div class="ex-label">Yes answer</div>
+        <div class="ex-jp">はい、行（い）ったことがあります。</div>
+        <div class="ex-rom">Hai, itta koto ga arimasu.</div>
+        <div class="ex-en">Yes, I have.</div>
+      </div>
+    </div>
+    <div class="examples-row">
+      <div class="example-block">
+        <div class="ex-label">No answer — "have never"</div>
+        <div class="ex-jp">いいえ、行（い）ったことがありません。</div>
+        <div class="ex-rom">Iie, itta koto ga arimasen.</div>
+        <div class="ex-en">No, I haven't (never been).</div>
+      </div>
+      <div class="example-block">
+        <div class="ex-label">"Has never" — 3rd person</div>
+        <div class="ex-jp">たけしは授業（じゅぎょう）を休（やす）んだことがありません。</div>
+        <div class="ex-rom">Takeshi wa jugyou o yasunda koto ga arimasen.</div>
+        <div class="ex-en">Takeshi has never been absent from class.</div>
+      </div>
+    </div>
+
+    <div class="note-box">
+      <strong>Key rule</strong>
+      The verb stays in the <em>past affirmative short form</em> regardless of whether the sentence is positive or negative — only <span class="jp">ある</span> changes. <span class="jp">行ったことがありません</span> <span style="font-family:'DM Mono',monospace;font-size:0.75rem;color:var(--muted);">(itta koto ga arimasen)</span> is correct; <span class="jp">行かなかったことがありません</span> <span style="font-family:'DM Mono',monospace;font-size:0.75rem;color:var(--muted);">(ikanakatta koto ga arimasen)</span> is not.
+    </div>
+  </div>
+
+
+  <a class="back-top" href="#top">↑ Back to top</a>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     SECTION: Indefinite Words
+     ════════════════════════════════════════════════════════════ -->
+<section id="indefinite-words" class="guide-section">
+
+  <div class="section-header">
+    <span class="badge badge-amber">Vocabulary</span>
+    <h2>Indefinite Words</h2>
+  </div>
+
+  <!-- Concept -->
+  <div class="subsection">
+    <p style="font-size:0.97rem;margin-bottom:0.9rem;">
+      Japanese indefinite words (something, somewhere, someone…) are formed by adding <span style="font-family:'Noto Serif JP',serif;font-weight:700;">か</span> or <span style="font-family:'Noto Serif JP',serif;font-weight:700;">も</span> to a question word. They stand on their own — no particle is needed where <span style="font-family:'Noto Serif JP',serif;">は・が・を</span> would normally appear.
+    </p>
+
+    <!-- Vocab table -->
+    <table class="vocab-table">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Affirmative / Question<br><span style="font-weight:400;font-size:0.65rem;">something / anything?</span></th>
+          <th>Negative<br><span style="font-weight:400;font-size:0.65rem;">not… anything</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Things</td>
+          <td>
+            <span class="jp">何か</span>
+            <span class="rom">nani<span class="ka">ka</span></span>
+          </td>
+          <td>
+            <span class="jp">何も + neg.</span>
+            <span class="rom">nani<span class="mo">mo</span></span>
+          </td>
+        </tr>
+        <tr>
+          <td>Places</td>
+          <td>
+            <span class="jp">どこか</span>
+            <span class="rom">doko<span class="ka">ka</span></span>
+          </td>
+          <td>
+            <span class="jp">どこも + neg.</span>
+            <span class="rom">doko<span class="mo">mo</span></span>
+          </td>
+        </tr>
+        <tr>
+          <td>Person</td>
+          <td>
+            <span class="jp">誰か</span>
+            <span class="rom">dare<span class="ka">ka</span></span>
+          </td>
+          <td>
+            <span class="jp">誰も + neg.</span>
+            <span class="rom">dare<span class="mo">mo</span></span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="sub-divider">
+
+  <!-- Particle rules -->
+  <div class="subsection">
+    <div class="subsection-title">Particle Rules <span class="badge badge-coral">Important</span></div>
+
+    <div class="particle-rules">
+      <div class="particle-card no-particle">
+        <div class="pc-label">✔ は・が・を — drop the particle</div>
+        <div class="pc-particles">は、が、を</div>
+        <div class="pc-rule">These particles are <strong>omitted</strong> — the indefinite word stands alone.</div>
+      </div>
+      <div class="particle-card add-particle">
+        <div class="pc-label">⚠ に・へ・で — keep the particle</div>
+        <div class="pc-particles">に、へ、で</div>
+        <div class="pc-rule">
+          These particles are <strong>kept</strong> and positioned:<br>
+          • Affirmative/Question → right <strong>after</strong> <span style="font-family:'Noto Serif JP',serif;">か</span>
+          <span class="rom">(e.g. どこか<strong>へ</strong>)</span><br>
+          • Negative → right <strong>before</strong> <span style="font-family:'Noto Serif JP',serif;">も</span>
+          <span class="rom">(e.g. どこ<strong>へ</strong>も)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="sub-divider">
+
+  <!-- Examples -->
+  <div class="subsection">
+    <div class="examples-row">
+      <div class="example-block">
+        <div class="ex-label">Something (を dropped)</div>
+        <div class="ex-jp">猫（ねこ）が何（なに）か持（も）ってきました。</div>
+        <div class="ex-rom">Neko ga nanika mottekimashita.</div>
+        <div class="ex-en">The cat has brought something.</div>
+      </div>
+      <div class="example-block">
+        <div class="ex-label">Nothing — neg. verb (を dropped)</div>
+        <div class="ex-jp">猫（ねこ）は何（なに）も食（た）べませんでした。</div>
+        <div class="ex-rom">Neko wa nanimo tabemasendeshita.</div>
+        <div class="ex-en">The cat did not eat anything.</div>
+      </div>
+    </div>
+    <div class="examples-row">
+      <div class="example-block">
+        <div class="ex-label">Somewhere — question (へ kept, after か)</div>
+        <div class="ex-jp">どこかへ行（い）きましたか？</div>
+        <div class="ex-rom">Dokoka e ikimashita ka?</div>
+        <div class="ex-en">Did you go somewhere?</div>
+      </div>
+      <div class="example-block">
+        <div class="ex-label">Nothing — neg. verb (を dropped)</div>
+        <div class="ex-jp">いいえ、何（なに）もしませんでした。</div>
+        <div class="ex-rom">Iie, nanimo shimasendeshita.</div>
+        <div class="ex-en">No, I did not do anything.</div>
+      </div>
+    </div>
+
+    <div class="note-box">
+      <strong>Pattern</strong>
+      Question word + <span class="jp">か</span> = some- (something, somewhere, someone) · Question word + <span class="jp">も</span> + negative = not…any (nothing, nowhere, no one).
+    </div>
+  </div>
+
+
+  <a class="back-top" href="#top">↑ Back to top</a>
+</section>
+
+  </div><!-- /sections wrapper -->
+
+</body>
+</html>

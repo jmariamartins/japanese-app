@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Japanese Adjectives — Tense Matrix</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=DM+Mono:wght@300;400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1a1208;
+    --paper: #f5f0e8;
+    --red: #c0392b;
+    --gold: #b8962e;
+    --muted: #6b5d4f;
+    --line: #d4c9b0;
+    --blue: #2c4a6e;
+    --green: #1e6b4a;
+    --purple: #6b3fa0;
+    --teal: #2c6b6b;
+    --rust: #8e3a20;
+    --i-col: #2c4a6e;
+    --na-col: #1e6b4a;
+    --irr-col: #c0392b;
+    --present: #b03030;
+    --past: #1a3a6e;
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    min-height: 100vh;
+    padding: 2.5rem 1rem;
+    background-image:
+      radial-gradient(ellipse at 10% 10%, rgba(192,57,43,0.04) 0%, transparent 60%),
+      radial-gradient(ellipse at 90% 90%, rgba(184,150,46,0.05) 0%, transparent 60%);
+  }
+
+  header { text-align: center; margin-bottom: 2rem; }
+
+  .jp-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 300;
+    color: var(--red);
+    letter-spacing: 0.15em;
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+
+  .subtitle { font-size: 1.05rem; color: var(--muted); font-style: italic; }
+
+  .divider {
+    width: 120px; height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    margin: 1rem auto;
+  }
+
+  .section-label {
+    max-width: 1050px; margin: 2rem auto 0.5rem;
+    display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap;
+  }
+  .section-title { font-size: 1.05rem; font-weight: 600; letter-spacing: 0.08em; color: var(--ink); }
+  .section-badge {
+    font-family: 'DM Mono', monospace; font-size: 0.7rem;
+    padding: 2px 10px; border-radius: 2px; color: #fff;
+    letter-spacing: 0.08em; text-transform: uppercase;
+  }
+  .badge-i   { background: var(--i-col); }
+  .badge-na  { background: var(--na-col); }
+  .badge-irr { background: var(--irr-col); }
+
+  .table-wrap {
+    max-width: 1050px; margin: 0 auto 0.5rem;
+    overflow-x: auto; border-radius: 2px;
+    box-shadow: 0 2px 20px rgba(26,18,8,0.09);
+  }
+
+  table {
+    width: 100%; border-collapse: collapse;
+    background: #fdfaf4; font-size: 0.88rem; min-width: 680px;
+  }
+
+  thead tr { background: var(--ink); color: var(--paper); }
+  thead th {
+    padding: 0.8rem 1rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400; font-size: 0.76rem;
+    letter-spacing: 0.18em; text-transform: uppercase; text-align: left;
+  }
+  thead th:first-child { width: 150px; }
+
+  .h-present { border-bottom: 4px solid var(--present); }
+  .h-neg     { border-bottom: 4px solid var(--rust); }
+  .h-past    { border-bottom: 4px solid var(--past); }
+  .h-pastneg { border-bottom: 4px solid #4a3a8e; }
+
+  tbody tr { border-bottom: 1px solid var(--line); }
+  tbody tr:hover { background: rgba(184,150,46,0.05); }
+  tbody tr.alt { background: #faf7ef; }
+
+  td { padding: 0.8rem 1rem; vertical-align: top; line-height: 1.65; }
+
+  .adj-cell { min-width: 150px; vertical-align: middle; }
+
+  .adj-tag {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 2px 10px; height: 28px; border-radius: 3px;
+    color: #fff; font-family: 'DM Mono', monospace; font-size: 0.82rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.12); margin-bottom: 4px;
+    white-space: nowrap;
+  }
+
+  .adj-meaning { font-size: 0.88rem; color: var(--muted); font-style: italic; display: block; margin-top: 2px; }
+  .adj-rule    { font-size: 0.75rem; color: var(--muted); font-family: 'DM Mono', monospace; display: block; margin-top: 3px; }
+
+  .form {
+    font-family: 'DM Mono', monospace; font-size: 0.82rem;
+    color: var(--blue); display: block;
+  }
+  .ending-present { color: var(--present); font-weight: 600; }
+  .ending-neg     { color: var(--rust);    font-weight: 600; }
+  .ending-past    { color: var(--past);    font-weight: 600; }
+  .ending-pastneg { color: #4a3a8e;       font-weight: 600; }
+
+  .hira {
+    font-family: 'Noto Serif JP', serif; font-size: 0.82rem;
+    color: var(--muted); display: block; margin-top: 2px;
+  }
+
+  .ex {
+    font-size: 0.76rem; color: var(--muted); font-style: italic;
+    display: block; margin-top: 5px;
+    border-top: 1px dashed var(--line); padding-top: 4px;
+  }
+
+  .stem-row td {
+    background: rgba(26,18,8,0.035); font-size: 0.76rem;
+    color: var(--muted); font-style: italic;
+    padding: 0.25rem 1rem; border-bottom: 2px solid var(--line);
+    font-family: 'DM Mono', monospace; letter-spacing: 0.04em;
+  }
+
+  .sub-divider td {
+    background: rgba(26,18,8,0.025); font-size: 0.75rem;
+    color: var(--muted); font-style: italic;
+    padding: 0.2rem 1rem; border-top: 1px dashed var(--line);
+    font-family: 'DM Mono', monospace;
+  }
+
+  /* Explain box */
+  .explain-box {
+    max-width: 1050px; margin: 1rem auto 0;
+    background: #fdfaf4; border-left: 3px solid var(--gold);
+    padding: 0.9rem 1.4rem; font-size: 0.88rem;
+    color: var(--muted); box-shadow: 0 1px 8px rgba(26,18,8,0.06); line-height: 1.8;
+  }
+  .explain-box strong { color: var(--ink); }
+  .explain-box .mono { font-family: 'DM Mono', monospace; font-size: 0.8rem; color: var(--blue); }
+
+  /* Degree table */
+  .degree-wrap {
+    max-width: 1050px; margin: 2rem auto 0;
+    overflow-x: auto; border-radius: 2px;
+    box-shadow: 0 2px 16px rgba(26,18,8,0.08);
+  }
+
+  .degree-wrap table { min-width: 500px; }
+
+  .degree-wrap thead tr { background: #2c6b6b; }
+
+  .deg-tag {
+    display: inline-block;
+    font-family: 'DM Mono', monospace; font-size: 0.78rem;
+    padding: 2px 8px; border-radius: 2px; color: #fff;
+    margin-right: 4px; vertical-align: middle;
+  }
+
+  .totemo { background: #b8962e; }
+  .chotto { background: #2c6b6b; }
+  .dai    { background: #c0392b; }
+
+  footer { text-align: center; margin-top: 2.5rem; font-size: 0.85rem; color: var(--muted); font-style: italic; }
+
+  @media (max-width: 600px) {
+    body { padding: 1.2rem 0.4rem; }
+    td, th { padding: 0.6rem 0.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="jp-title">形容詞マトリックス</div>
+  <div class="subtitle">Japanese Adjectives — Tense Matrix</div>
+  <div class="divider"></div>
+</header>
+
+<!-- ===== MAIN TABLE ===== -->
+<div class="section-label">
+  <span class="section-title">All Adjective Types — Present & Past</span>
+  <span class="section-badge badge-i">i-adj</span>
+  <span class="section-badge badge-na">na-adj</span>
+  <span class="section-badge badge-irr">irregular</span>
+</div>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th>Adjective</th>
+      <th class="h-present">Present<br><small style="opacity:0.6">affirmative</small></th>
+      <th class="h-neg">Present<br><small style="opacity:0.6">negative</small></th>
+      <th class="h-past">Past<br><small style="opacity:0.6">affirmative</small></th>
+      <th class="h-pastneg">Past<br><small style="opacity:0.6">negative</small></th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <!-- ===== I-ADJECTIVES ===== -->
+    <tr class="stem-row">
+      <td colspan="5">I-ADJECTIVES — rule: keep stem, swap ending &nbsp;|&nbsp; present aff: -i desu &nbsp;|&nbsp; present neg: -ku nai desu &nbsp;|&nbsp; past aff: -katta desu &nbsp;|&nbsp; past neg: -ku nakatta desu</td>
+    </tr>
+
+    <tr>
+      <td class="adj-cell">
+        <span class="adj-tag" style="background:var(--i-col)">atsui</span>
+        <span class="adj-meaning">hot</span>
+        <span class="adj-rule">stem: atsu-</span>
+      </td>
+      <td>
+        <span class="form">atsu<span class="ending-present">i desu</span></span>
+        <span class="hira">あつ<span style="color:var(--present)">いです</span></span>
+        <span class="ex">Kono heya wa atsui desu.<br>This room is hot.</span>
+      </td>
+      <td>
+        <span class="form">atsu<span class="ending-neg">ku nai desu</span></span>
+        <span class="hira">あつ<span style="color:var(--rust)">くないです</span></span>
+        <span class="ex">Kono heya wa atsuku nai desu.<br>This room is not hot.</span>
+      </td>
+      <td>
+        <span class="form">atsu<span class="ending-past">katta desu</span></span>
+        <span class="hira">あつ<span style="color:var(--past)">かったです</span></span>
+        <span class="ex">Kono heya wa atsukatta desu.<br>This room was hot.</span>
+      </td>
+      <td>
+        <span class="form">atsu<span class="ending-pastneg">ku nakatta desu</span></span>
+        <span class="hira">あつ<span style="color:#4a3a8e">くなかったです</span></span>
+        <span class="ex">Kono heya wa atsuku nakatta desu.<br>This room was not hot.</span>
+      </td>
+    </tr>
+
+    <tr class="alt">
+      <td class="adj-cell">
+        <span class="adj-tag" style="background:var(--i-col)">yasashii</span>
+        <span class="adj-meaning">kind / gentle</span>
+        <span class="adj-rule">stem: yasashi-</span>
+      </td>
+      <td>
+        <span class="form">yasashi<span class="ending-present">i desu</span></span>
+        <span class="hira">やさし<span style="color:var(--present)">いです</span></span>
+        <span class="ex">Kare wa yasashii desu.<br>He is kind.</span>
+      </td>
+      <td>
+        <span class="form">yasashi<span class="ending-neg">ku nai desu</span></span>
+        <span class="hira">やさし<span style="color:var(--rust)">くないです</span></span>
+        <span class="ex">Kare wa yasashiku nai desu.<br>He is not kind.</span>
+      </td>
+      <td>
+        <span class="form">yasashi<span class="ending-past">katta desu</span></span>
+        <span class="hira">やさし<span style="color:var(--past)">かったです</span></span>
+        <span class="ex">Kare wa yasashikatta desu.<br>He was kind.</span>
+      </td>
+      <td>
+        <span class="form">yasashi<span class="ending-pastneg">ku nakatta desu</span></span>
+        <span class="hira">やさし<span style="color:#4a3a8e">くなかったです</span></span>
+        <span class="ex">Kare wa yasashiku nakatta desu.<br>He was not kind.</span>
+      </td>
+    </tr>
+
+    <!-- ===== NA-ADJECTIVES ===== -->
+    <tr class="stem-row">
+      <td colspan="5">NA-ADJECTIVES — rule: adjective unchanged, desu endings handle tense &nbsp;|&nbsp; present neg: ja nai desu &nbsp;|&nbsp; past aff: deshita &nbsp;|&nbsp; past neg: ja nakatta desu</td>
+    </tr>
+
+    <tr>
+      <td class="adj-cell">
+        <span class="adj-tag" style="background:var(--na-col)">shinsetsu</span>
+        <span class="adj-meaning">kind / friendly</span>
+        <span class="adj-rule">na-adj (noun origin)</span>
+      </td>
+      <td>
+        <span class="form">shinsetsu <span class="ending-present">desu</span></span>
+        <span class="hira">しんせつ<span style="color:var(--present)">です</span></span>
+        <span class="ex">Kanojo wa shinsetsu desu.<br>She is kind.</span>
+      </td>
+      <td>
+        <span class="form">shinsetsu <span class="ending-neg">ja nai desu</span></span>
+        <span class="hira">しんせつ<span style="color:var(--rust)">じゃないです</span></span>
+        <span class="ex">Kanojo wa shinsetsu ja nai desu.<br>She is not kind.</span>
+      </td>
+      <td>
+        <span class="form">shinsetsu <span class="ending-past">deshita</span></span>
+        <span class="hira">しんせつ<span style="color:var(--past)">でした</span></span>
+        <span class="ex">Kanojo wa shinsetsu deshita.<br>She was kind.</span>
+      </td>
+      <td>
+        <span class="form">shinsetsu <span class="ending-pastneg">ja nakatta desu</span></span>
+        <span class="hira">しんせつ<span style="color:#4a3a8e">じゃなかったです</span></span>
+        <span class="ex">Kanojo wa shinsetsu ja nakatta desu.<br>She was not kind.</span>
+      </td>
+    </tr>
+
+    <tr class="alt">
+      <td class="adj-cell">
+        <span class="adj-tag" style="background:var(--na-col)">suki (na)</span>
+        <span class="adj-meaning">liked / favourite</span>
+        <span class="adj-rule">X wa Y ga suki desu</span>
+      </td>
+      <td>
+        <span class="form">Y ga suki <span class="ending-present">desu</span></span>
+        <span class="hira">Yが<span style="color:var(--present)">すきです</span></span>
+        <span class="ex">Watashi wa koohii ga suki desu.<br>I like coffee.</span>
+      </td>
+      <td>
+        <span class="form">Y ga suki <span class="ending-neg">ja nai desu</span></span>
+        <span class="hira">Yが<span style="color:var(--rust)">すきじゃないです</span></span>
+        <span class="ex">Watashi wa koohii ga suki ja nai desu.<br>I don't like coffee.</span>
+      </td>
+      <td>
+        <span class="form">Y ga suki <span class="ending-past">deshita</span></span>
+        <span class="hira">Yが<span style="color:var(--past)">すきでした</span></span>
+        <span class="ex">Watashi wa koohii ga suki deshita.<br>I liked coffee.</span>
+      </td>
+      <td>
+        <span class="form">Y ga suki <span class="ending-pastneg">ja nakatta desu</span></span>
+        <span class="hira">Yが<span style="color:#4a3a8e">すきじゃなかったです</span></span>
+        <span class="ex">Watashi wa koohii ga suki ja nakatta desu.<br>I didn't like coffee.</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="adj-cell">
+        <span class="adj-tag" style="background:var(--na-col)">kirai (na)</span>
+        <span class="adj-meaning">disliked</span>
+        <span class="adj-rule">X wa Y ga kirai desu</span>
+      </td>
+      <td>
+        <span class="form">Y ga kirai <span class="ending-present">desu</span></span>
+        <span class="hira">Yが<span style="color:var(--present)">きらいです</span></span>
+        <span class="ex">Watashi wa natto ga kirai desu.<br>I dislike natto.</span>
+      </td>
+      <td>
+        <span class="form">Y ga kirai <span class="ending-neg">ja nai desu</span></span>
+        <span class="hira">Yが<span style="color:var(--rust)">きらいじゃないです</span></span>
+        <span class="ex">Watashi wa natto ga kirai ja nai desu.<br>I don't dislike natto.</span>
+      </td>
+      <td>
+        <span class="form">Y ga kirai <span class="ending-past">deshita</span></span>
+        <span class="hira">Yが<span style="color:var(--past)">きらいでした</span></span>
+        <span class="ex">Watashi wa natto ga kirai deshita.<br>I disliked natto.</span>
+      </td>
+      <td>
+        <span class="form">Y ga kirai <span class="ending-pastneg">ja nakatta desu</span></span>
+        <span class="hira">Yが<span style="color:#4a3a8e">きらいじゃなかったです</span></span>
+        <span class="ex">Watashi wa natto ga kirai ja nakatta desu.<br>I didn't dislike natto.</span>
+      </td>
+    </tr>
+
+    <!-- ===== IRREGULAR ===== -->
+    <tr class="stem-row">
+      <td colspan="5">IRREGULAR ADJECTIVE — ii (good): present aff uses "ii" but ALL other forms switch to stem "yo-" &nbsp;|&nbsp; suki/kirai have special intensified forms: daisuki / daikirai</td>
+    </tr>
+
+    <tr class="alt">
+      <td class="adj-cell">
+        <span class="adj-tag" style="background:var(--irr-col)">ii / yoi</span>
+        <span class="adj-meaning">good</span>
+        <span class="adj-rule">⚠ stem switches to yo-</span>
+      </td>
+      <td>
+        <span class="form">i<span class="ending-present">i desu</span></span>
+        <span class="hira"><span style="color:var(--present)">いいです</span></span>
+        <span class="ex">Tenki wa ii desu.<br>The weather is good.</span>
+      </td>
+      <td>
+        <span class="form">yo<span class="ending-neg">ku nai desu</span></span>
+        <span class="hira">よ<span style="color:var(--rust)">くないです</span></span>
+        <span class="ex">Tenki wa yoku nai desu.<br>The weather is not good.</span>
+      </td>
+      <td>
+        <span class="form">yo<span class="ending-past">katta desu</span></span>
+        <span class="hira">よ<span style="color:var(--past)">かったです</span></span>
+        <span class="ex">Tenki wa yokatta desu.<br>The weather was good.</span>
+      </td>
+      <td>
+        <span class="form">yo<span class="ending-pastneg">ku nakatta desu</span></span>
+        <span class="hira">よ<span style="color:#4a3a8e">くなかったです</span></span>
+        <span class="ex">Tenki wa yoku nakatta desu.<br>The weather was not good.</span>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+
+<!-- Neither like nor dislike -->
+<div class="explain-box" style="margin-top:0.8rem;">
+  <strong>Neither like nor dislike:</strong> When you neither like nor dislike something, say <span class="mono">suki demo kirai demo arimasen</span> (すきでもきらいでもありません) — literally "it is neither liked nor disliked."
+  <br><br>
+  <strong>suki / kirai as noun modifiers:</strong> Add な (na) before a noun — <span class="mono">watashi no sukina terebi</span> (わたしのすきなテレビ) = my favourite TV programme.
+</div>
+
+<!-- ===== DEGREE EXPRESSION TABLE ===== -->
+<div class="section-label" style="margin-top:2.5rem;">
+  <span class="section-title">Degree Expressions</span>
+  <span class="section-badge" style="background:var(--teal)">Modifiers</span>
+</div>
+
+<div class="degree-wrap">
+<table>
+  <thead>
+    <tr>
+      <th style="width:160px;">Adjective type</th>
+      <th style="border-bottom:4px solid #b8962e;">
+        <span class="deg-tag totemo">totemo</span> very
+      </th>
+      <th style="border-bottom:4px solid #2c6b6b;">
+        <span class="deg-tag chotto">chotto</span> a little / slightly
+      </th>
+      <th style="border-bottom:4px solid #c0392b;">
+        <span class="deg-tag dai">dai-</span> intensified (love / hate)
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td>
+        <span class="adj-tag" style="background:var(--i-col);font-size:0.75rem;">I-adjective</span>
+        <span class="adj-meaning" style="margin-top:4px">Place before adjective</span>
+      </td>
+      <td>
+        <span class="form" style="color:#b8962e;font-weight:600">totemo</span>
+        <span class="form"> + adjective</span>
+        <span class="hira" style="margin-top:4px">とても</span>
+        <span class="ex">Kono heya wa <strong>totemo</strong> atsui desu.<br>This room is <strong>very</strong> hot.</span>
+      </td>
+      <td>
+        <span class="form" style="color:#2c6b6b;font-weight:600">chotto</span>
+        <span class="form"> + adjective</span>
+        <span class="hira" style="margin-top:4px">ちょっと</span>
+        <span class="ex">Kono heya wa <strong>chotto</strong> atsui desu.<br>This room is <strong>a little</strong> hot.</span>
+      </td>
+      <td style="background:rgba(192,57,43,0.04);color:var(--muted);font-style:italic;font-size:0.8rem;vertical-align:middle;text-align:center;">
+        Not applicable<br>for i-adjectives<br>(use totemo instead)
+      </td>
+    </tr>
+
+    <tr class="alt">
+      <td>
+        <span class="adj-tag" style="background:var(--na-col);font-size:0.75rem;">NA-adjective</span>
+        <span class="adj-meaning" style="margin-top:4px">Place before adjective</span>
+      </td>
+      <td>
+        <span class="form" style="color:#b8962e;font-weight:600">totemo</span>
+        <span class="form"> + adjective</span>
+        <span class="hira" style="margin-top:4px">とても</span>
+        <span class="ex">Kanojo wa <strong>totemo</strong> shinsetsu desu.<br>She is <strong>very</strong> kind.</span>
+      </td>
+      <td>
+        <span class="form" style="color:#2c6b6b;font-weight:600">chotto</span>
+        <span class="form"> + adjective</span>
+        <span class="hira" style="margin-top:4px">ちょっと</span>
+        <span class="ex">Kanojo wa <strong>chotto</strong> shinsetsu desu.<br>She is <strong>a little</strong> kind.</span>
+      </td>
+      <td style="background:rgba(192,57,43,0.04);color:var(--muted);font-style:italic;font-size:0.8rem;vertical-align:middle;text-align:center;">
+        Not applicable<br>for general na-adj<br>(use totemo instead)
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <span class="adj-tag" style="background:var(--na-col);font-size:0.75rem;">suki / kirai</span>
+        <span class="adj-meaning" style="margin-top:4px">Special intensified forms</span>
+      </td>
+      <td>
+        <span class="form" style="color:#b8962e;font-weight:600">totemo suki / totemo kirai</span>
+        <span class="hira" style="margin-top:4px">とてもすき / とてもきらい</span>
+        <span class="ex">Takeshi-san wa koohii ga <strong>totemo suki</strong> desu.<br>Takeshi likes coffee <strong>very much</strong>.</span>
+      </td>
+      <td>
+        <span class="form" style="color:#2c6b6b;font-weight:600">chotto suki / chotto kirai</span>
+        <span class="hira" style="margin-top:4px">ちょっとすき / ちょっときらい</span>
+        <span class="ex">Watashi wa natto ga <strong>chotto kirai</strong> desu.<br>I <strong>slightly</strong> dislike natto.</span>
+      </td>
+      <td>
+        <span class="form" style="color:var(--irr-col);font-weight:600">daisuki / daikirai</span>
+        <span class="hira" style="margin-top:4px">だいすき / だいきらい</span>
+        <span class="ex">Takeshi-san wa koohii ga <strong>daisuki</strong> desu.<br>Takeshi <strong>loves</strong> coffee.<br><br>
+        Watashi wa natto ga <strong>daikirai</strong> desu.<br>I <strong>hate</strong> natto.</span>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+
+<div class="explain-box" style="margin-top:0.8rem;border-left-color:var(--teal);">
+  <strong>Degree expression placement:</strong> totemo and chotto always go <strong>directly before</strong> the adjective — <span class="mono">totemo atsui desu</span> (very hot), never after. The dai- prefix is special to suki/kirai only — it fuses directly with the word: <span class="mono">dai + suki = daisuki</span> (love), <span class="mono">dai + kirai = daikirai</span> (hate). Both <span class="mono">daisuki desu</span> and <span class="mono">totemo suki desu</span> are correct and interchangeable for "like very much."
+</div>
+
+<footer>
+  <div class="divider" style="margin-top:2rem;"></div>
+  Tip: For i-adjectives all tense changes happen in the ending. For na-adjectives the adjective itself never changes — only desu does the work!
+</footer>
+
+</body>
+</html>

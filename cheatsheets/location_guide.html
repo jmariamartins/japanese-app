@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Japanese Location Sentences</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=DM+Mono:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink:    #1a1208;
+    --paper:  #f5f0e8;
+    --red:    #c0392b;
+    --gold:   #b8962e;
+    --muted:  #6b5d4f;
+    --line:   #d4c9b0;
+    --blue:   #2c4a6e;
+    --green:  #1e6b4a;
+    --purple: #5b3587;
+    --orange: #a04020;
+    --th-bg:  #2c1f12;
+    --alt:    #ede8db;
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    min-height: 100vh;
+    padding: 2.5rem 1rem 5rem;
+    background-image:
+      radial-gradient(ellipse at 10% 10%, rgba(192,57,43,0.04) 0%, transparent 60%),
+      radial-gradient(ellipse at 90% 90%, rgba(184,150,46,0.05) 0%, transparent 60%);
+  }
+
+  header { text-align: center; margin-bottom: 2rem; }
+
+  .jp-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-weight: 300;
+    color: var(--red);
+    letter-spacing: 0.15em;
+    line-height: 1;
+    margin-bottom: 0.2rem;
+  }
+  .jp-title-rom {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--muted);
+    letter-spacing: 0.18em;
+    margin-bottom: 0.4rem;
+    display: block;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    color: var(--muted);
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  .divider {
+    width: 120px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    margin: 1rem auto;
+  }
+
+  .section-label {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    margin: 2.5rem 0 0.5rem;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    font-weight: 600;
+    color: var(--ink);
+    text-align: center;
+    margin-bottom: 0.2rem;
+    letter-spacing: 0.04em;
+  }
+  .section-title-rom {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--muted);
+    text-align: center;
+    letter-spacing: 0.12em;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  /* ── Tables ── */
+  .table-wrap { overflow-x: auto; margin-bottom: 0.4rem; }
+
+  table {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: 1rem;
+  }
+
+  thead tr { background: var(--th-bg); color: #f5f0e8; }
+
+  thead th {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    letter-spacing: 0.06em;
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 2px solid var(--gold);
+  }
+
+  tbody tr { transition: background 0.15s; }
+  tbody tr:nth-child(even) { background: var(--alt); }
+  tbody tr:hover { background: #e5dfd1; }
+
+  td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+    line-height: 1.55;
+  }
+
+  /* ── Sub-header rows ── */
+  .group-row td {
+    background: #ece3d5;
+    color: var(--muted);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    text-align: center;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* ── Class badges ── */
+  .cbadge {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 600;
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 3px;
+    white-space: nowrap;
+    letter-spacing: 0.05em;
+    margin-right: 0.5rem;
+  }
+  .cb-purple { background: #e8d5f3; color: var(--purple); }
+  .cb-teal   { background: #d5ead8; color: var(--green); }
+  .cb-coral  { background: #fde8d5; color: var(--orange); }
+
+  /* ── Formula ── */
+  .formula {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.8rem;
+    background: rgba(44,30,18,0.07);
+    border-left: 3px solid var(--gold);
+    padding: 5px 9px;
+    margin: 4px 0;
+    color: var(--ink);
+    display: block;
+    border-radius: 0 3px 3px 0;
+    line-height: 1.6;
+  }
+  .formula em  { color: var(--red); font-style: normal; font-weight: 700; }
+  .formula small { display: block; font-size: 0.73rem; color: var(--muted); margin-top: 3px; }
+
+  /* ── Examples ── */
+  .ex { margin-bottom: 9px; }
+  .ex:last-child { margin-bottom: 0; }
+
+  .kana {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--ink);
+    display: block;
+  }
+  .rom {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--muted);
+    display: block;
+    margin-top: 1px;
+  }
+  .en {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.9rem;
+    color: var(--muted);
+    font-style: italic;
+    display: block;
+    margin-top: 1px;
+  }
+  .warn { color: var(--red); font-weight: 700; font-style: normal; }
+
+  /* ── Notes ── */
+  .notes { font-size: 0.87rem; }
+  .notes ul { margin: 0; padding-left: 1.1rem; }
+  .notes li { margin-bottom: 5px; line-height: 1.55; }
+  .notes li:last-child { margin-bottom: 0; }
+
+  /* Inline kana+rom pair used inside notes */
+  .kr { display: inline; white-space: nowrap; }
+  .kr .k { font-family: 'Noto Serif JP', serif; font-size: 0.95rem; }
+  .kr .r { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted); margin-left: 2px; }
+
+  /* ── Vocab grid ── */
+  .vocab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 8px 10px;
+    padding: 4px 0;
+  }
+  .vocab-item { }
+  .vocab-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.97rem;
+    color: var(--ink);
+    display: block;
+  }
+  .vocab-rom {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--muted);
+    display: block;
+    margin-top: 1px;
+    letter-spacing: 0.04em;
+  }
+  .vocab-en {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--muted);
+    display: block;
+    margin-top: 1px;
+    font-style: italic;
+  }
+
+  /* ── Note box ── */
+  .note-box {
+    max-width: 960px;
+    margin: 0.5rem auto 0;
+    background: #fdf6e3;
+    border: 1px solid #d4b88a;
+    border-left: 4px solid var(--gold);
+    border-radius: 4px;
+    padding: 9px 13px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.82rem;
+    color: #5a3e1b;
+    line-height: 1.9;
+  }
+  .note-box strong { color: var(--red); }
+  .note-box .nb-jp  { font-family: 'Noto Serif JP', serif; font-size: 0.88rem; }
+  .note-box .nb-rom { font-size: 0.72rem; color: var(--muted); margin-left: 2px; }
+
+  .footnote {
+    max-width: 960px;
+    margin: 2rem auto 0;
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="jp-title">場所 — Location Sentences</div>
+  <span class="jp-title-rom">basho — location sentences</span>
+  <div class="subtitle">あります (arimasu) · います (imasu) · Position Words · Classes 68–70</div>
+  <div class="divider"></div>
+</header>
+
+<!-- ══════════════════════════════════════════
+     CLASS 68 — あります
+══════════════════════════════════════════ -->
+<div class="section-label">Class 68</div>
+<div class="section-title">〜が あります — Non-living Things &amp; Events</div>
+<span class="section-title-rom">~ ga arimasu</span>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th style="width:24%">Use case</th>
+      <th style="width:40%">Examples</th>
+      <th style="width:36%">Important notes</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr class="group-row"><td colspan="3">(1) Object at a location</td></tr>
+    <tr>
+      <td>
+        <span class="cbadge cb-purple">あります · arimasu</span>
+        <code class="formula">(Location) に (Object) が あります。</code>
+      </td>
+      <td>
+        <div class="ex">
+          <span class="kana">あそこに マクドナルドが あります。</span>
+          <span class="rom">Asoko ni Makudonarudo ga arimasu.</span>
+          <span class="en">"There is a McDonald's over there."</span>
+        </div>
+        <div class="ex">
+          <span class="kana">あそこに サーフボードが あります。</span>
+          <span class="rom">Asoko ni sa-fubo-do ga arimasu.</span>
+          <span class="en">"There is a surfboard over there."</span>
+        </div>
+      </td>
+      <td class="notes">
+        <ul>
+          <li>Use <span class="warn">に (ni)</span> — not で (de) — for the location.</li>
+          <li>Location comes at the start of the sentence.</li>
+          <li>Object is followed by <span class="warn">が (ga)</span> — not は (wa).</li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr class="group-row"><td colspan="3">(2) Ownership — "I have something"</td></tr>
+    <tr>
+      <td>
+        <code class="formula">(Location) に (Object) が あります。<small>location = where you keep it</small></code>
+      </td>
+      <td>
+        <div class="ex">
+          <span class="kana">家に 冷蔵庫が あります。</span>
+          <span class="rom">Ie ni reizouko ga arimasu.</span>
+          <span class="en">"I have a fridge at home."</span>
+        </div>
+        <div class="ex">
+          <span class="kana">時間が ありますか？</span>
+          <span class="rom">Jikan ga arimasu ka?</span>
+          <span class="en">"Do you have time?"</span>
+        </div>
+      </td>
+      <td class="notes">
+        <ul>
+          <li>Same formula as (1); the location can be omitted if obvious.</li>
+          <li>English says "have/own" but Japanese treats it as the object existing at a place.</li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr class="group-row"><td colspan="3">(3a) Event — no time or location specified</td></tr>
+    <tr>
+      <td>
+        <code class="formula">(Event) が あります。</code>
+      </td>
+      <td>
+        <div class="ex">
+          <span class="kana">日本語の クラスが あります。</span>
+          <span class="rom">Nihongo no kurasu ga arimasu.</span>
+          <span class="en">"I have a Japanese lesson."</span>
+        </div>
+      </td>
+      <td class="notes">
+        <ul>
+          <li>Think of it as "There is a [lesson / party / test]."</li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr class="group-row"><td colspan="3">(3b) Event — with a time reference</td></tr>
+    <tr>
+      <td>
+        <code class="formula">(Day/Time) に (Event) が あります。</code>
+      </td>
+      <td>
+        <div class="ex">
+          <span class="kana">火曜日に テストが あります。</span>
+          <span class="rom">Kayoubi ni tesuto ga arimasu.</span>
+          <span class="en">"I have a test on Tuesday."</span>
+        </div>
+        <div class="ex">
+          <span class="kana">金曜日に パーティーが あります。</span>
+          <span class="rom">Kinyoubi ni pa-ti- ga arimasu.</span>
+          <span class="en">"I have a party on Friday."</span>
+        </div>
+      </td>
+      <td class="notes">
+        <ul>
+          <li>Use <span class="warn">に (ni)</span> after specific days and times
+            — e.g. <span class="kr"><span class="k">月曜日に</span><span class="r">(getsuyoubi ni)</span></span>,
+            <span class="kr"><span class="k">三時に</span><span class="r">(sanji ni)</span></span>…</li>
+          <li><strong>Exception:</strong> floating time words do <em>not</em> take に — they stand alone:<br>
+            <span class="kr"><span class="k">明日</span><span class="r">(ashita)</span></span>,
+            <span class="kr"><span class="k">今日</span><span class="r">(kyou)</span></span>,
+            <span class="kr"><span class="k">来週</span><span class="r">(raishuu)</span></span>
+            → no particle needed.</li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr class="group-row"><td colspan="3">(3c) Event — with a location</td></tr>
+    <tr>
+      <td>
+        <code class="formula">(Location) <em>で (de)</em> (Event) が あります。</code>
+      </td>
+      <td>
+        <div class="ex">
+          <span class="kana">学校で テストが あります。</span>
+          <span class="rom">Gakkou de tesuto ga arimasu.</span>
+          <span class="en">"I have a test at school."</span>
+        </div>
+      </td>
+      <td class="notes">
+        <ul>
+          <li>⚠ Switch to <span class="warn">で (de)</span> — not に — when describing where an event takes place.</li>
+          <li>で is the normal "action/event location" particle — rules revert to standard here.</li>
+        </ul>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+
+<div class="note-box">
+  <strong>★ に (ni) vs で (de) summary for あります (arimasu):</strong><br>
+  Object/person existing at a place → <strong>に (ni)</strong> &nbsp;·&nbsp;
+  Event taking place at a location → <strong>で (de)</strong> &nbsp;·&nbsp;
+  Specific time reference → <strong>に (ni)</strong> &nbsp;·&nbsp;
+  Floating time words
+  <span class="nb-jp">明日</span><span class="nb-rom">(ashita)</span>,
+  <span class="nb-jp">今日</span><span class="nb-rom">(kyou)</span>,
+  <span class="nb-jp">来週</span><span class="nb-rom">(raishuu)</span>
+  → <strong>no particle</strong>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     CLASS 69 — います
+══════════════════════════════════════════ -->
+<div class="section-label" style="margin-top:3rem">Class 69</div>
+<div class="section-title">〜が います — Living Beings</div>
+<span class="section-title-rom">~ ga imasu</span>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th style="width:24%">Use case</th>
+      <th style="width:40%">Examples</th>
+      <th style="width:36%">Important notes</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr class="group-row"><td colspan="3">People, animals and any sentient/living being</td></tr>
+    <tr>
+      <td>
+        <span class="cbadge cb-teal">います · imasu</span>
+        <code class="formula">(Location) に (Person/Animal) が います。</code>
+      </td>
+      <td>
+        <div class="ex">
+          <span class="kana">あそこに 留学生が います。</span>
+          <span class="rom">Asoko ni ryuugakusei ga imasu.</span>
+          <span class="en">"There is an international student over there."</span>
+        </div>
+        <div class="ex">
+          <span class="kana">あそこに 猫が います。</span>
+          <span class="rom">Asoko ni neko ga imasu.</span>
+          <span class="en">"There is a cat over there."</span>
+        </div>
+        <div class="ex">
+          <span class="kana">あそこに 私のスペイン語の先生が います。</span>
+          <span class="rom">Asoko ni watashi no supeingo no sensei ga imasu.</span>
+          <span class="en">"My Spanish teacher is over there."</span>
+        </div>
+      </td>
+      <td class="notes">
+        <ul>
+          <li>Use <span class="warn">います (imasu)</span> for people, animals, and any living being.</li>
+          <li>Use <span class="warn">あります (arimasu)</span> for non-living things, objects, and events.</li>
+          <li>Same structure as あります (1): <span class="warn">に (ni)</span> for location, location first, <span class="warn">が (ga)</span> before subject.</li>
+        </ul>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+
+<div class="note-box">
+  <strong>★ あります (arimasu) vs います (imasu) at a glance:</strong><br>
+  Non-living objects &amp; events → <strong>あります (arimasu)</strong> &nbsp;·&nbsp;
+  People, animals, living beings → <strong>います (imasu)</strong>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     CLASS 70 — DESCRIBING WHERE THINGS ARE
+══════════════════════════════════════════ -->
+<div class="section-label" style="margin-top:3rem">Class 70</div>
+<div class="section-title">Describing Where Things Are</div>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th style="width:24%">Use case</th>
+      <th style="width:40%">Examples</th>
+      <th style="width:36%">Important notes</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr class="group-row"><td colspan="3">Asking where something is</td></tr>
+    <tr>
+      <td>
+        <span class="cbadge cb-coral">どこ · doko</span>
+        <code class="formula">(Object) は どこ ですか？<small>wa doko desu ka?</small></code>
+      </td>
+      <td>
+        <div class="ex">
+          <span class="kana">車は どこ ですか？</span>
+          <span class="rom">Kuruma wa doko desu ka?</span>
+          <span class="en">"Where is the car?"</span>
+        </div>
+      </td>
+      <td class="notes">
+        <ul>
+          <li>Note the switch to <span class="warn">は (wa)</span> — the object is the topic being asked about.</li>
+          <li>Short answers:<br>
+            <span class="kr"><span class="k">ここ</span><span class="r">(koko)</span></span> = here &nbsp;·&nbsp;
+            <span class="kr"><span class="k">そこ</span><span class="r">(soko)</span></span> = right there &nbsp;·&nbsp;
+            <span class="kr"><span class="k">あそこ</span><span class="r">(asoko)</span></span> = over there
+          </li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr class="group-row"><td colspan="3">Stating where something is — two valid forms</td></tr>
+    <tr>
+      <td>
+        <code class="formula">(Object) は (Landmark) の (position) <em>です (desu)</em>。</code>
+        <code class="formula" style="margin-top:8px">(Object) は (Landmark) の (position) に <em>あります (arimasu)</em>。<small>more natural in speech for places &amp; buildings</small></code>
+      </td>
+      <td>
+        <div class="ex">
+          <span class="kana">銀行は 図書館の となり です。</span>
+          <span class="rom">Ginkou wa toshokan no tonari desu.</span>
+          <span class="en">"The bank is next to the library."</span>
+        </div>
+        <div class="ex">
+          <span class="kana">傘は 机の下 です。</span>
+          <span class="rom">Kasa wa tsukue no shita desu.</span>
+          <span class="en">"The umbrella is under the table."</span>
+        </div>
+        <div class="ex">
+          <span class="kana">病院は パン屋の前に あります。</span>
+          <span class="rom">Byouin wa panya no mae ni arimasu.</span>
+          <span class="en">"The hospital is in front of the bakery."</span>
+        </div>
+        <div class="ex">
+          <span class="kana">車は 自転車と家の間 です。</span>
+          <span class="rom">Kuruma wa jitensha to ie no aida desu.</span>
+          <span class="en">"The car is between the bike and the house."</span>
+        </div>
+      </td>
+      <td class="notes">
+        <ul>
+          <li>Object is the topic → <span class="warn">は (wa)</span>.</li>
+          <li><span class="warn">です (desu)</span> version: treats the location as a noun predicate. More formal / written.</li>
+          <li><span class="warn">に あります (ni arimasu)</span> version: "the thing exists at that location." More natural in speech.</li>
+          <li>Both forms are correct.</li>
+          <li>For "between A and B": A <span class="warn">と (to)</span> B の
+            <span class="kr"><span class="k">間</span><span class="r">(aida)</span></span>.
+          </li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr class="group-row"><td colspan="3">Location words with an action verb</td></tr>
+    <tr>
+      <td>
+        <code class="formula">(Landmark) の (position) <em>で (de)</em> (verb)。</code>
+      </td>
+      <td>
+        <div class="ex">
+          <span class="kana">カフェの前で 待ちます。</span>
+          <span class="rom">Kafe no mae de machimasu.</span>
+          <span class="en">"I will wait in front of the cafe."</span>
+        </div>
+        <div class="ex">
+          <span class="kana">駅の中で 待ちます。</span>
+          <span class="rom">Eki no naka de machimasu.</span>
+          <span class="en">"I will wait inside the station."</span>
+        </div>
+      </td>
+      <td class="notes">
+        <ul>
+          <li>When a location word precedes an action verb, use <span class="warn">で (de)</span> as the location particle — not に (ni).</li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr class="group-row"><td colspan="3">Position vocabulary</td></tr>
+    <tr>
+      <td colspan="2">
+        <div class="vocab-grid">
+          <div class="vocab-item">
+            <span class="vocab-jp">〜の前 <span style="font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--muted)">(まえ)</span></span>
+            <span class="vocab-rom">~ no mae</span>
+            <span class="vocab-en">in front of</span>
+          </div>
+          <div class="vocab-item">
+            <span class="vocab-jp">〜の後ろ <span style="font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--muted)">(うしろ)</span></span>
+            <span class="vocab-rom">~ no ushiro</span>
+            <span class="vocab-en">behind</span>
+          </div>
+          <div class="vocab-item">
+            <span class="vocab-jp">〜の横 <span style="font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--muted)">(よこ)</span></span>
+            <span class="vocab-rom">~ no yoko</span>
+            <span class="vocab-en">beside / next to</span>
+          </div>
+          <div class="vocab-item">
+            <span class="vocab-jp">〜の隣 <span style="font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--muted)">(となり)</span></span>
+            <span class="vocab-rom">~ no tonari</span>
+            <span class="vocab-en">next to (adjacent)</span>
+          </div>
+          <div class="vocab-item">
+            <span class="vocab-jp">〜の左 <span style="font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--muted)">(ひだり)</span></span>
+            <span class="vocab-rom">~ no hidari</span>
+            <span class="vocab-en">to the left of</span>
+          </div>
+          <div class="vocab-item">
+            <span class="vocab-jp">〜の右 <span style="font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--muted)">(みぎ)</span></span>
+            <span class="vocab-rom">~ no migi</span>
+            <span class="vocab-en">to the right of</span>
+          </div>
+          <div class="vocab-item">
+            <span class="vocab-jp">〜の中 <span style="font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--muted)">(なか)</span></span>
+            <span class="vocab-rom">~ no naka</span>
+            <span class="vocab-en">inside</span>
+          </div>
+          <div class="vocab-item">
+            <span class="vocab-jp">〜の外 <span style="font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--muted)">(そと)</span></span>
+            <span class="vocab-rom">~ no soto</span>
+            <span class="vocab-en">outside</span>
+          </div>
+          <div class="vocab-item">
+            <span class="vocab-jp">〜の上 <span style="font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--muted)">(うえ)</span></span>
+            <span class="vocab-rom">~ no ue</span>
+            <span class="vocab-en">on / above</span>
+          </div>
+          <div class="vocab-item">
+            <span class="vocab-jp">〜の下 <span style="font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--muted)">(した)</span></span>
+            <span class="vocab-rom">~ no shita</span>
+            <span class="vocab-en">under / below</span>
+          </div>
+          <div class="vocab-item">
+            <span class="vocab-jp">〜の側 <span style="font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--muted)">(そば)</span></span>
+            <span class="vocab-rom">~ no soba</span>
+            <span class="vocab-en">by / near</span>
+          </div>
+          <div class="vocab-item">
+            <span class="vocab-jp">A と B の間 <span style="font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--muted)">(あいだ)</span></span>
+            <span class="vocab-rom">A to B no aida</span>
+            <span class="vocab-en">between A and B</span>
+          </div>
+        </div>
+      </td>
+      <td class="notes">
+        <ul>
+          <li>All position words attach with <span class="warn">の (no)</span> to the reference landmark.</li>
+          <li><span class="warn">よこ (yoko)</span> vs <span class="warn">となり (tonari)</span> — となり implies direct, immediate adjacency.</li>
+          <li><span class="warn">そば (soba)</span> is broader than となり — generally close, not necessarily touching.</li>
+        </ul>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+
+<div class="note-box" style="margin-top:0.6rem">
+  <strong>★ Particle quick-reference:</strong><br>
+  <span class="nb-jp">に</span><span class="nb-rom">(ni)</span> → thing/person existing at a place (あります/います) &nbsp;·&nbsp;
+  <span class="nb-jp">で</span><span class="nb-rom">(de)</span> → action or event happening at a place &nbsp;·&nbsp;
+  <span class="nb-jp">は</span><span class="nb-rom">(wa)</span> → topic (what you're describing the location of) &nbsp;·&nbsp;
+  <span class="nb-jp">と</span><span class="nb-rom">(to)</span> → linking two landmarks in "between A と B の<span class="nb-jp">間</span><span class="nb-rom">(aida)</span>"
+</div>
+
+<div class="divider" style="margin-top:2.5rem"></div>
+<p class="footnote">場所 (basho) · Japanese Location Sentences — Classes 68–70</p>
+
+</body>
+</html>

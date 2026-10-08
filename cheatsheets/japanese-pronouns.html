@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Japanese Pronouns</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=DM+Mono:wght@300;400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1a1208;
+    --paper: #f5f0e8;
+    --red: #c0392b;
+    --gold: #b8962e;
+    --muted: #6b5d4f;
+    --line: #d4c9b0;
+    --blue: #2c4a6e;
+    --green: #1e6b4a;
+    --purple: #6b3fa0;
+    --teal: #2c6b6b;
+    --rust: #8e3a20;
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    min-height: 100vh;
+    padding: 2.5rem 1rem;
+    background-image:
+      radial-gradient(ellipse at 10% 10%, rgba(192,57,43,0.04) 0%, transparent 60%),
+      radial-gradient(ellipse at 90% 90%, rgba(184,150,46,0.05) 0%, transparent 60%);
+  }
+
+  header { text-align: center; margin-bottom: 2rem; }
+
+  .jp-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 300;
+    color: var(--red);
+    letter-spacing: 0.15em;
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    color: var(--muted);
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  .divider {
+    width: 120px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    margin: 1rem auto;
+  }
+
+  .section-header {
+    max-width: 1000px;
+    margin: 2rem auto 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .section-title { font-size: 1.1rem; font-weight: 600; letter-spacing: 0.08em; color: var(--ink); }
+
+  .section-badge {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    padding: 2px 10px;
+    border-radius: 2px;
+    color: #fff;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .badge-1p { background: var(--blue); }
+  .badge-2p { background: var(--teal); }
+  .badge-3p { background: var(--purple); }
+
+  .table-wrap {
+    max-width: 1000px;
+    margin: 0 auto 0.5rem;
+    overflow-x: auto;
+    border-radius: 2px;
+    box-shadow: 0 2px 20px rgba(26,18,8,0.08);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fdfaf4;
+    font-size: 0.92rem;
+    min-width: 580px;
+  }
+
+  thead tr { background: var(--ink); color: var(--paper); }
+
+  thead th {
+    padding: 0.8rem 1rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  tbody tr { border-bottom: 1px solid var(--line); }
+  tbody tr:hover { background: rgba(184,150,46,0.06); }
+  tbody tr.alt { background: #faf7ef; }
+  tbody tr.alt:hover { background: rgba(184,150,46,0.08); }
+
+  td { padding: 0.75rem 1rem; vertical-align: middle; line-height: 1.6; }
+
+  .pronoun-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 64px;
+    padding: 0 10px;
+    height: 34px;
+    border-radius: 3px;
+    color: #fff;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.88rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+
+  .plural-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 64px;
+    padding: 0 10px;
+    height: 34px;
+    border-radius: 3px;
+    color: #fff;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.82rem;
+    opacity: 0.85;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.10);
+    margin-left: 6px;
+  }
+
+  .meaning {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--ink);
+    display: block;
+    margin-top: 3px;
+  }
+
+  .register {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.06em;
+    padding: 1px 7px;
+    border-radius: 2px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-left: 4px;
+  }
+
+  .reg-neutral  { background: var(--blue);   color: #fff; }
+  .reg-formal   { background: var(--green);  color: #fff; }
+  .reg-casual   { background: var(--gold);   color: #fff; }
+  .reg-rough    { background: var(--rust);   color: #fff; }
+  .reg-masc     { background: #4a6b8e;       color: #fff; }
+  .reg-fem      { background: #8e4a6b;       color: #fff; }
+  .reg-warning  { background: var(--red);    color: #fff; }
+
+  .use-desc {
+    font-size: 0.87rem;
+    color: var(--muted);
+    font-style: italic;
+    display: block;
+    margin-top: 2px;
+  }
+
+  .example {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.82rem;
+    color: var(--blue);
+    background: rgba(44,74,110,0.06);
+    padding: 3px 8px;
+    border-radius: 2px;
+    display: inline-block;
+    margin-bottom: 3px;
+  }
+
+  .translation {
+    font-style: italic;
+    color: var(--muted);
+    font-size: 0.85rem;
+    display: block;
+  }
+
+  .group-divider td {
+    background: rgba(26,18,8,0.03);
+    font-size: 0.78rem;
+    color: var(--muted);
+    font-style: italic;
+    padding: 0.25rem 1rem;
+    border-top: 2px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 0.05em;
+  }
+
+  /* tachi box */
+  .tachi-box {
+    max-width: 1000px;
+    margin: 1.5rem auto 0;
+    background: #fdfaf4;
+    border-left: 3px solid var(--gold);
+    padding: 1rem 1.4rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+    box-shadow: 0 1px 8px rgba(26,18,8,0.06);
+    line-height: 1.8;
+  }
+
+  .tachi-box strong { color: var(--ink); }
+  .tachi-box .mono { font-family: 'DM Mono', monospace; font-size: 0.82rem; color: var(--blue); }
+
+  /* tachi suffix table */
+  .tachi-grid {
+    max-width: 1000px;
+    margin: 1rem auto 0;
+    overflow-x: auto;
+    border-radius: 2px;
+    box-shadow: 0 1px 12px rgba(26,18,8,0.07);
+  }
+
+  .tachi-grid table { min-width: 400px; }
+
+  .tachi-grid thead th { background: #2c4a6e; }
+
+  .avoid-box {
+    max-width: 1000px;
+    margin: 1.5rem auto 0;
+    background: #fdf5f0;
+    border-left: 3px solid var(--red);
+    padding: 1rem 1.4rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+    box-shadow: 0 1px 8px rgba(26,18,8,0.06);
+    line-height: 1.8;
+  }
+
+  .avoid-box strong { color: var(--ink); }
+  .avoid-box .mono { font-family: 'DM Mono', monospace; font-size: 0.82rem; color: var(--rust); }
+
+  footer {
+    text-align: center;
+    margin-top: 2.5rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  @media (max-width: 600px) {
+    body { padding: 1.5rem 0.5rem; }
+    td, th { padding: 0.6rem 0.6rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="jp-title">代名詞</div>
+  <div class="subtitle">Japanese Pronouns — Complete Reference</div>
+  <div class="divider"></div>
+</header>
+
+<!-- ===== MAIN TABLE ===== -->
+<div class="section-header">
+  <span class="section-title">All Pronouns</span>
+  <span class="section-badge badge-1p">Singular & Plural</span>
+</div>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th>Pronoun</th>
+      <th>Meaning & Register</th>
+      <th>Notes</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <!-- FIRST PERSON -->
+    <tr class="group-divider"><td colspan="4">— First Person — I / We —</td></tr>
+
+    <tr>
+      <td>
+        <div><span class="pronoun-tag" style="background:var(--blue)">watashi</span></div>
+        <span class="meaning">I</span>
+      </td>
+      <td>
+        <span class="register reg-neutral">neutral</span>
+        <span class="register reg-formal">polite</span>
+        <span class="use-desc">The standard "I" for most situations — safe for everyone to use</span>
+      </td>
+      <td><span class="use-desc">Default choice for learners. Used by all genders in formal and everyday speech</span></td>
+      <td>
+        <span class="example">Watashi wa Maria desu.</span>
+        <span class="translation">I am Maria.</span>
+      </td>
+    </tr>
+
+    <tr class="alt">
+      <td>
+        <div><span class="pronoun-tag" style="background:var(--green)">watakushi</span></div>
+        <span class="meaning">I</span>
+      </td>
+      <td>
+        <span class="register reg-formal">very formal</span>
+        <span class="use-desc">The most formal "I" — used in business, speeches, official settings</span>
+      </td>
+      <td><span class="use-desc">Rarely used in daily conversation. Signals extreme politeness or professionalism</span></td>
+      <td>
+        <span class="example">Watakushi wa kaisha no shacho desu.</span>
+        <span class="translation">I am the company president.</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div><span class="pronoun-tag" style="background:#4a6b8e">boku</span></div>
+        <span class="meaning">I</span>
+      </td>
+      <td>
+        <span class="register reg-masc">masculine</span>
+        <span class="register reg-casual">casual</span>
+        <span class="use-desc">Soft, friendly masculine "I" — used by boys, young men, and male anime characters</span>
+      </td>
+      <td><span class="use-desc">Sounds polite compared to "ore". Occasionally used by women in casual speech or song lyrics</span></td>
+      <td>
+        <span class="example">Boku wa nihongo wo manabiimasu.</span>
+        <span class="translation">I am learning Japanese.</span>
+      </td>
+    </tr>
+
+    <tr class="alt">
+      <td>
+        <div><span class="pronoun-tag" style="background:var(--rust)">ore</span></div>
+        <span class="meaning">I</span>
+      </td>
+      <td>
+        <span class="register reg-masc">masculine</span>
+        <span class="register reg-rough">rough/casual</span>
+        <span class="use-desc">Very masculine, assertive "I" — common among adult men in casual settings</span>
+      </td>
+      <td><span class="use-desc">Sounds rude in formal situations. Very common in everyday male speech and manga/anime</span></td>
+      <td>
+        <span class="example">Ore wa pan wo tabete imasu.</span>
+        <span class="translation">I am eating bread.</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div><span class="pronoun-tag" style="background:#8e4a6b">uchi</span></div>
+        <span class="meaning">I</span>
+      </td>
+      <td>
+        <span class="register reg-fem">feminine</span>
+        <span class="register reg-casual">casual</span>
+        <span class="use-desc">Feminine casual "I" — common in Kansai (Osaka/Kyoto) dialect and among young women</span>
+      </td>
+      <td><span class="use-desc">Literally means "home/inside" — reflects the Japanese idea of self as part of an in-group</span></td>
+      <td>
+        <span class="example">Uchi wa koohii ga suki.</span>
+        <span class="translation">I like coffee. (casual)</span>
+      </td>
+    </tr>
+
+    <!-- SECOND PERSON -->
+    <tr class="group-divider"><td colspan="4">— Second Person — You —</td></tr>
+
+    <tr class="alt">
+      <td>
+        <div><span class="pronoun-tag" style="background:var(--teal)">anata</span></div>
+        <span class="meaning">you</span>
+      </td>
+      <td>
+        <span class="register reg-neutral">neutral</span>
+        <span class="register reg-warning">use with care</span>
+        <span class="use-desc">Technically the standard "you" but often sounds cold or confrontational</span>
+      </td>
+      <td><span class="use-desc">Native speakers usually avoid this — they use the person's name instead. Wives sometimes use it affectionately for their husbands</span></td>
+      <td>
+        <span class="example">Anata wa nihongo wo hanashimasu ka?</span>
+        <span class="translation">Do you speak Japanese?</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div><span class="pronoun-tag" style="background:#5a8080">anta</span></div>
+        <span class="meaning">you</span>
+      </td>
+      <td>
+        <span class="register reg-casual">casual</span>
+        <span class="register reg-warning">can sound blunt</span>
+        <span class="use-desc">Contracted form of anata — casual and direct, can sound dismissive</span>
+      </td>
+      <td><span class="use-desc">Used in arguments or very casual speech. Best avoided by learners until you know the relationship well</span></td>
+      <td>
+        <span class="example">Anta wa doko ni ikimasu ka?</span>
+        <span class="translation">Where are you going?</span>
+      </td>
+    </tr>
+
+    <tr class="alt">
+      <td>
+        <div><span class="pronoun-tag" style="background:#4a6b8e">kimi</span></div>
+        <span class="meaning">you</span>
+      </td>
+      <td>
+        <span class="register reg-masc">masculine tendency</span>
+        <span class="register reg-casual">casual</span>
+        <span class="use-desc">Affectionate or superior-to-subordinate "you" — used by men to close friends, partners, or juniors</span>
+      </td>
+      <td><span class="use-desc">Common in song lyrics and romantic speech. Sounds warm when used appropriately</span></td>
+      <td>
+        <span class="example">Kimi wa eigo ga jouzu desu ne.</span>
+        <span class="translation">Your English is good, isn't it!</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div><span class="pronoun-tag" style="background:var(--rust)">omae</span></div>
+        <span class="meaning">you</span>
+      </td>
+      <td>
+        <span class="register reg-masc">masculine</span>
+        <span class="register reg-rough">rough</span>
+        <span class="use-desc">Very blunt "you" — used between close male friends or to assert dominance</span>
+      </td>
+      <td><span class="use-desc">Can be offensive to strangers. Very common in manga and anime, but risky in real life</span></td>
+      <td>
+        <span class="example">Omae wa nani wo shite imasu ka?</span>
+        <span class="translation">What are you doing? (blunt)</span>
+      </td>
+    </tr>
+
+    <!-- THIRD PERSON -->
+    <tr class="group-divider"><td colspan="4">— Third Person — He / She / They —</td></tr>
+
+    <tr class="alt">
+      <td>
+        <div><span class="pronoun-tag" style="background:var(--blue)">kare</span></div>
+        <span class="meaning">he / boyfriend</span>
+      </td>
+      <td>
+        <span class="register reg-neutral">neutral</span>
+        <span class="use-desc">Means both "he" and "boyfriend" depending on context</span>
+      </td>
+      <td><span class="use-desc">"Kare ga imasu" = "I have a boyfriend" — same word! Japanese often uses names or roles (sensei, okaasan) instead</span></td>
+      <td>
+        <span class="example">Kare wa pan wo tabete imasu.</span>
+        <span class="translation">He is eating bread.</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div><span class="pronoun-tag" style="background:#8e4a6b">kanojo</span></div>
+        <span class="meaning">she / girlfriend</span>
+      </td>
+      <td>
+        <span class="register reg-neutral">neutral</span>
+        <span class="use-desc">Means both "she" and "girlfriend" depending on context</span>
+      </td>
+      <td><span class="use-desc">"Kanojo ga imasu" = "I have a girlfriend". Like kare, often replaced by names in natural speech</span></td>
+      <td>
+        <span class="example">Kanojo wa eiga wo mite imasu.</span>
+        <span class="translation">She is watching a film.</span>
+      </td>
+    </tr>
+
+    <tr class="alt">
+      <td>
+        <div><span class="pronoun-tag" style="background:var(--purple)">karera</span></div>
+        <span class="meaning">they</span>
+      </td>
+      <td>
+        <span class="register reg-neutral">neutral</span>
+        <span class="use-desc">Plural "they" — karera is used for male or mixed groups</span>
+      </td>
+      <td><span class="use-desc">"Kanojotachi" = they (female group). In practice, Japanese often avoids third-person pronouns entirely and just repeats the name or uses context</span></td>
+      <td>
+        <span class="example">Karera wa nihon kara kimashita.</span>
+        <span class="translation">They came from Japan.</span>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+
+<!-- TACHI SUFFIX -->
+<div class="section-header" style="margin-top:2rem;">
+  <span class="section-title">The -tachi suffix — making pronouns plural</span>
+  <span class="section-badge badge-1p">Plural</span>
+</div>
+
+<div class="tachi-box">
+  <strong>-tachi</strong> is added to pronouns and people-words to make them plural. It can also be added to a person's name to mean "that person and their group". For example: <span class="mono">Maria-tachi</span> = Maria and her friends/group.
+</div>
+
+<div class="tachi-grid">
+<table>
+  <thead>
+    <tr>
+      <th>Singular</th>
+      <th>+ tachi = Plural</th>
+      <th>Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span style="font-family:'DM Mono',monospace;color:var(--blue)">watashi</span></td>
+      <td><span style="font-family:'DM Mono',monospace;color:var(--blue)">watashitachi</span></td>
+      <td>we</td>
+    </tr>
+    <tr class="alt">
+      <td><span style="font-family:'DM Mono',monospace;color:var(--teal)">anata</span></td>
+      <td><span style="font-family:'DM Mono',monospace;color:var(--teal)">anatatachi</span></td>
+      <td>you all</td>
+    </tr>
+    <tr>
+      <td><span style="font-family:'DM Mono',monospace;color:var(--blue)">kare</span></td>
+      <td><span style="font-family:'DM Mono',monospace;color:var(--blue)">karera</span></td>
+      <td>they (male / mixed)</td>
+    </tr>
+    <tr class="alt">
+      <td><span style="font-family:'DM Mono',monospace;color:#8e4a6b">kanojo</span></td>
+      <td><span style="font-family:'DM Mono',monospace;color:#8e4a6b">kanojotachi</span></td>
+      <td>they (female group)</td>
+    </tr>
+    <tr>
+      <td><span style="font-family:'DM Mono',monospace;color:#4a6b8e">boku</span></td>
+      <td><span style="font-family:'DM Mono',monospace;color:#4a6b8e">bokutachi</span></td>
+      <td>we (masculine, casual)</td>
+    </tr>
+    <tr class="alt">
+      <td><span style="font-family:'DM Mono',monospace;color:var(--ink)">Maria</span></td>
+      <td><span style="font-family:'DM Mono',monospace;color:var(--ink)">Maria-tachi</span></td>
+      <td>Maria and her group</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<!-- AVOIDANCE NOTE -->
+<div class="avoid-box" style="margin-top:1.5rem;">
+  <strong>Why Japanese avoids pronouns</strong><br>
+  Unlike English, Japanese speakers rarely use "you" or "he/she" in conversation. Instead they use:<br>
+  — The person's <strong>name</strong>: "Maria wa doko ni ikimasu ka?" (Where is Maria going?)<br>
+  — Their <strong>title or role</strong>: <span class="mono">sensei</span> (teacher), <span class="mono">okaasan</span> (mother), <span class="mono">shacho</span> (company president)<br>
+  — Simply <strong>dropping the subject</strong> when context makes it clear<br><br>
+  Using "anata" too often is one of the most common mistakes learners make — it's technically correct but sounds unnatural or even confrontational to native speakers!
+</div>
+
+<footer>
+  <div class="divider" style="margin-top:2rem;"></div>
+  Tip: As a learner, stick to <em>watashi</em> (I) and use names instead of "you" — you will sound natural immediately!
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Qualifying Nouns with Verbs &amp; Adjectives</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:    #f5f0e8;
+    --dark:     #2c1f12;
+    --gold:     #b8962e;
+    --gold-lt:  #faf6e8;
+    --red:      #c0392b;
+    --green:    #1a7a4a;
+    --muted:    #6b5d4f;
+    --row-alt:  #ede8db;
+    --border:   #d4c9b0;
+    --purple:   #6a4c93;
+    --teal:     #2a7f7f;
+    --coral:    #c0392b;
+    --amber:    #b8962e;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--dark);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 4rem;
+  }
+
+  /* ── Page title ── */
+  .page-title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 2px solid var(--gold);
+  }
+  .page-title h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.1rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: var(--dark);
+    line-height: 1.2;
+  }
+  .page-title .jp-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1rem;
+    color: var(--muted);
+    margin-top: 0.3rem;
+  }
+  .page-title .badge {
+    display: inline-block;
+    margin-top: 0.6rem;
+    padding: 0.2rem 0.85rem;
+    border-radius: 999px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    background: var(--teal);
+    color: #fff;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  /* ── Section headings ── */
+  .section-heading {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin: 2rem 0 1rem;
+  }
+  .section-heading h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--dark);
+    letter-spacing: 0.03em;
+  }
+  .pill {
+    display: inline-block;
+    padding: 0.15rem 0.7rem;
+    border-radius: 999px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+  }
+  .pill-purple { background: var(--purple); color: #fff; }
+  .pill-teal   { background: var(--teal);   color: #fff; }
+  .pill-coral  { background: var(--coral);  color: #fff; }
+  .pill-amber  { background: var(--amber);  color: #fff; }
+
+  /* ── Note / gold box ── */
+  .note-box {
+    border-left: 4px solid var(--gold);
+    background: var(--gold-lt);
+    padding: 0.85rem 1.1rem;
+    margin: 1rem 0;
+    border-radius: 0 6px 6px 0;
+  }
+  .note-box .note-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    margin-bottom: 0.3rem;
+    display: block;
+  }
+  .note-box p { font-size: 1rem; color: var(--dark); line-height: 1.6; }
+
+  /* ── Important box (red-tinted) ── */
+  .important-box {
+    border-left: 4px solid var(--red);
+    background: #fdf0ee;
+    padding: 0.85rem 1.1rem;
+    margin: 1.2rem 0;
+    border-radius: 0 6px 6px 0;
+  }
+  .important-box .imp-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--red);
+    margin-bottom: 0.3rem;
+    display: block;
+  }
+  .important-box p { font-size: 1rem; color: var(--dark); line-height: 1.6; }
+
+  /* ── Formula bar ── */
+  .formula-bar {
+    border-left: 4px solid var(--gold);
+    background: #f0ebe0;
+    padding: 0.75rem 1.1rem;
+    margin: 0.6rem 0;
+    border-radius: 0 6px 6px 0;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.92rem;
+    color: var(--dark);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .formula-bar .arrow { color: var(--gold); font-size: 1.1rem; }
+  .formula-bar .q-phrase { color: var(--green); font-weight: 500; }
+  .formula-bar .q-noun   { color: var(--red);   font-weight: 500; }
+
+  /* ── Qualifier label strip ── */
+  .qual-labels {
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 0.35rem;
+    flex-wrap: wrap;
+  }
+  .qlabel {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    padding: 0.15rem 0.55rem;
+    border-radius: 4px;
+  }
+  .qlabel-green { background: #d4f0e0; color: var(--green); }
+  .qlabel-red   { background: #f9ddd9; color: var(--red); }
+
+  /* ── Example cards ── */
+  .nq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1.2rem 0;
+  }
+  @media (max-width: 600px) { .nq-grid { grid-template-columns: 1fr; } }
+
+  .nq-card {
+    background: #faf6ee;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.1rem;
+    position: relative;
+  }
+  .nq-card .card-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    margin-bottom: 0.25rem;
+    display: block;
+  }
+  .nq-card .card-type {
+    font-size: 0.88rem;
+    color: var(--muted);
+    font-style: italic;
+    margin-bottom: 0.55rem;
+    padding-bottom: 0.45rem;
+    border-bottom: 1px dashed var(--border);
+  }
+  .nq-card .english {
+    font-size: 0.97rem;
+    font-weight: 600;
+    margin-bottom: 0.7rem;
+    color: var(--dark);
+  }
+  .nq-card .english .green { color: var(--green); }
+  .nq-card .english .red   { color: var(--red); }
+
+  /* Japanese display inside cards */
+  .jp-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 0.75rem;
+    align-items: baseline;
+    margin-bottom: 0.2rem;
+  }
+  .jp-token { display: flex; flex-direction: column; align-items: center; gap: 0.05rem; }
+  .jp-token .kana {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.1rem;
+  }
+  .jp-token .kana.green { color: var(--green); }
+  .jp-token .kana.red   { color: var(--red); }
+  .jp-token .rom {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--muted);
+  }
+  .jp-token .rom.green { color: var(--green); }
+  .jp-token .rom.red   { color: var(--red); }
+
+  .card-labels {
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 0.55rem;
+    flex-wrap: wrap;
+  }
+
+  /* ── Intro example (full-width) ── */
+  .intro-example {
+    background: #faf6ee;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.1rem 1.3rem;
+    margin: 1rem 0;
+  }
+  .intro-example .ex-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  .intro-example .english-q {
+    font-size: 1rem;
+    font-style: italic;
+    margin-bottom: 0.9rem;
+    color: var(--dark);
+  }
+  .intro-example .english-q .green { color: var(--green); font-style: normal; font-weight: 600; }
+  .intro-example .english-q .dark  { font-style: normal; font-weight: 600; }
+  .intro-note {
+    margin-top: 0.9rem;
+    background: #f0ebe0;
+    border-left: 3px solid var(--gold);
+    padding: 0.6rem 0.85rem;
+    border-radius: 0 5px 5px 0;
+    font-size: 0.9rem;
+    color: var(--dark);
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .intro-note .jp-inline {
+    font-family: 'Noto Serif JP', serif;
+    color: var(--green);
+  }
+  .intro-note .jp-noun {
+    font-family: 'Noto Serif JP', serif;
+    color: var(--red);
+  }
+
+  /* ── Summary table ── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.95rem;
+  }
+  thead tr {
+    background: var(--dark);
+    color: #f5f0e8;
+    border-bottom: 3px solid var(--gold);
+  }
+  thead th {
+    padding: 0.6rem 0.9rem;
+    text-align: left;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  tbody tr:nth-child(even) { background: var(--row-alt); }
+  tbody tr:nth-child(odd)  { background: var(--paper); }
+  tbody td {
+    padding: 0.6rem 0.9rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    line-height: 1.55;
+  }
+  .jp { font-family: 'Noto Serif JP', serif; }
+  .romaji { font-family: 'DM Mono', monospace; font-size: 0.8rem; color: var(--muted); }
+  .en { font-style: italic; color: var(--muted); }
+  .green { color: var(--green); }
+  .red   { color: var(--red); }
+
+  hr.section-rule { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+</style>
+</head>
+<body>
+
+<!-- ══════════════ PAGE TITLE ══════════════ -->
+<div class="page-title">
+  <h1>Qualifying Nouns<br>with Verbs &amp; Adjectives</h1>
+  <div class="jp-title">修飾節 (しゅうしょくせつ) — Relative Clauses</div>
+  <span class="badge">Grammar · Intermediate</span>
+</div>
+
+<!-- ══════════════ CONCEPT ══════════════ -->
+<div class="section-heading">
+  <h2>What is Noun Qualification?</h2>
+  <span class="pill pill-purple">Concept</span>
+</div>
+
+<div class="note-box">
+  <span class="note-label">Key Rule</span>
+  <p>In Japanese, <strong>the qualifying phrase always comes before the noun it modifies</strong> — just like adjectives. The qualifying phrase can be an adjective, an adjective + subject phrase, or a full verb clause in the short form.</p>
+</div>
+
+<div class="formula-bar">
+  <span class="q-phrase">[ Qualifying phrase ]</span>
+  <span>+</span>
+  <span class="q-noun">Noun</span>
+</div>
+
+<div class="important-box">
+  <span class="imp-label">Important</span>
+  <p>The <strong>short forms of verbs</strong> can qualify nouns, much like adjectives can. This is one of the most important patterns for describing people and things in Japanese.</p>
+</div>
+
+<!-- ══════════════ INTRO EXAMPLE ══════════════ -->
+<div class="section-heading">
+  <h2>Introductory Example</h2>
+  <span class="pill pill-teal">Example</span>
+</div>
+
+<div class="intro-example">
+  <span class="ex-label">Full sentence with relative clause</span>
+  <div class="english-q">
+    "<span class="green">The student who is reading a book over there</span> <span class="dark">is Michiko.</span>"
+  </div>
+
+  <div class="jp-row">
+    <div class="jp-token">
+      <span class="kana green">あそこ</span>
+      <span class="rom green">asoko</span>
+    </div>
+    <div class="jp-token">
+      <span class="kana green">で</span>
+      <span class="rom green">de</span>
+    </div>
+    <div class="jp-token">
+      <span class="kana green">本(ほん)</span>
+      <span class="rom green">hon</span>
+    </div>
+    <div class="jp-token">
+      <span class="kana green">を</span>
+      <span class="rom green">o</span>
+    </div>
+    <div class="jp-token">
+      <span class="kana green">読(よ)んでいる</span>
+      <span class="rom green">yondeiru</span>
+    </div>
+    <div class="jp-token">
+      <span class="kana red">学生(がくせい)</span>
+      <span class="rom red">gakusei</span>
+    </div>
+    <div class="jp-token">
+      <span class="kana">は みちこ です。</span>
+      <span class="rom">wa michiko desu.</span>
+    </div>
+  </div>
+
+  <div class="card-labels" style="margin-top:0.6rem;">
+    <span class="qlabel qlabel-green">Qualifying phrase</span>
+    <span class="qlabel qlabel-red">Qualified noun</span>
+  </div>
+
+  <div class="intro-note">
+    The phrase <span class="jp-inline">あそこで本を読んでいる</span> ("reading a book over there") acts as a qualifier for the noun <span class="jp-noun">学生 (がくせい · gakusei)</span>.
+  </div>
+</div>
+
+<!-- ══════════════ FOUR NOUN QUALIFICATION TYPES ══════════════ -->
+<hr class="section-rule">
+<div class="section-heading">
+  <h2>Four Qualification Patterns</h2>
+  <span class="pill pill-amber">Examples</span>
+</div>
+
+<div class="nq-grid">
+
+  <!-- NQ 1 -->
+  <div class="nq-card">
+    <span class="card-tag">Qualification 1</span>
+    <div class="card-type">Straightforward adjectival example</div>
+    <div class="english">
+      "A <span class="green">person who is interesting</span>"
+      <br><small style="font-weight:400;color:var(--muted);">= An <span class="green">interesting</span> <span class="red">person</span></small>
+    </div>
+    <div class="jp-row">
+      <div class="jp-token">
+        <span class="kana green">おもしろい</span>
+        <span class="rom green">omoshiroi</span>
+      </div>
+      <div class="jp-token">
+        <span class="kana red">人(ひと)</span>
+        <span class="rom red">hito</span>
+      </div>
+    </div>
+    <div class="card-labels">
+      <span class="qlabel qlabel-green">Qualifying adj.</span>
+      <span class="qlabel qlabel-red">Qualified noun</span>
+    </div>
+  </div>
+
+  <!-- NQ 2 -->
+  <div class="nq-card">
+    <span class="card-tag">Qualification 2</span>
+    <div class="card-type">Phrase describing a person's attribute</div>
+    <div class="english">
+      "A <span class="red">person</span> <span class="green">who has long hair</span>"
+    </div>
+    <div class="jp-row">
+      <div class="jp-token">
+        <span class="kana green">髪(かみ)</span>
+        <span class="rom green">kami</span>
+      </div>
+      <div class="jp-token">
+        <span class="kana green">が</span>
+        <span class="rom green">ga</span>
+      </div>
+      <div class="jp-token">
+        <span class="kana green">長(なが)い</span>
+        <span class="rom green">nagai</span>
+      </div>
+      <div class="jp-token">
+        <span class="kana red">人(ひと)</span>
+        <span class="rom red">hito</span>
+      </div>
+    </div>
+    <div class="card-labels">
+      <span class="qlabel qlabel-green">Qualifying phrase</span>
+      <span class="qlabel qlabel-red">Qualified noun</span>
+    </div>
+  </div>
+
+  <!-- NQ 3 -->
+  <div class="nq-card">
+    <span class="card-tag">Qualification 3</span>
+    <div class="card-type">Verb in the short form</div>
+    <div class="english">
+      "A <span class="red">person</span> <span class="green">who wears glasses</span>"
+    </div>
+    <div class="jp-row">
+      <div class="jp-token">
+        <span class="kana green">めがね</span>
+        <span class="rom green">megane</span>
+      </div>
+      <div class="jp-token">
+        <span class="kana green">を</span>
+        <span class="rom green">o</span>
+      </div>
+      <div class="jp-token">
+        <span class="kana green">かけている</span>
+        <span class="rom green">kaketeiru</span>
+      </div>
+      <div class="jp-token">
+        <span class="kana red">人(ひと)</span>
+        <span class="rom red">hito</span>
+      </div>
+    </div>
+    <div class="card-labels">
+      <span class="qlabel qlabel-green">Qualifying phrase (short verb)</span>
+      <span class="qlabel qlabel-red">Qualified noun</span>
+    </div>
+  </div>
+
+  <!-- NQ 4 -->
+  <div class="nq-card">
+    <span class="card-tag">Qualification 4</span>
+    <div class="card-type">な-adjective (relational)</div>
+    <div class="english">
+      "A <span class="red">person</span> <span class="green">who likes cats</span>"
+    </div>
+    <div class="jp-row">
+      <div class="jp-token">
+        <span class="kana green">猫(ねこ)</span>
+        <span class="rom green">neko</span>
+      </div>
+      <div class="jp-token">
+        <span class="kana green">が</span>
+        <span class="rom green">ga</span>
+      </div>
+      <div class="jp-token">
+        <span class="kana green">好(す)きな</span>
+        <span class="rom green">sukina</span>
+      </div>
+      <div class="jp-token">
+        <span class="kana red">人(ひと)</span>
+        <span class="rom red">hito</span>
+      </div>
+    </div>
+    <div class="card-labels">
+      <span class="qlabel qlabel-green">Qualifying phrase (な-adj)</span>
+      <span class="qlabel qlabel-red">Qualified noun</span>
+    </div>
+  </div>
+
+</div><!-- /.nq-grid -->
+
+<!-- ══════════════ SUMMARY TABLE ══════════════ -->
+<hr class="section-rule">
+<div class="section-heading">
+  <h2>Quick Reference</h2>
+  <span class="pill pill-purple">Summary</span>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Type</th>
+      <th>Qualifying phrase</th>
+      <th>Qualified noun</th>
+      <th>English</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>い-adjective</td>
+      <td>
+        <span class="jp green">おもしろい</span><br>
+        <span class="romaji">omoshiroi</span>
+      </td>
+      <td>
+        <span class="jp red">人(ひと)</span><br>
+        <span class="romaji">hito</span>
+      </td>
+      <td class="en">an interesting person</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Attribute phrase<br><span class="romaji">(い-adj)</span></td>
+      <td>
+        <span class="jp green">髪が長い</span><br>
+        <span class="romaji">kami ga nagai</span>
+      </td>
+      <td>
+        <span class="jp red">人(ひと)</span><br>
+        <span class="romaji">hito</span>
+      </td>
+      <td class="en">a person who has long hair</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Short-form verb</td>
+      <td>
+        <span class="jp green">めがねをかけている</span><br>
+        <span class="romaji">megane o kaketeiru</span>
+      </td>
+      <td>
+        <span class="jp red">人(ひと)</span><br>
+        <span class="romaji">hito</span>
+      </td>
+      <td class="en">a person who wears glasses</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>な-adjective<br><span class="romaji">(relational)</span></td>
+      <td>
+        <span class="jp green">猫が好きな</span><br>
+        <span class="romaji">neko ga sukina</span>
+      </td>
+      <td>
+        <span class="jp red">人(ひと)</span><br>
+        <span class="romaji">hito</span>
+      </td>
+      <td class="en">a person who likes cats</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="note-box" style="margin-top:1rem;">
+  <span class="note-label">Word Order Reminder</span>
+  <p>Japanese is a <strong>head-final</strong> language — the noun being described always comes <em>last</em>. The entire qualifying clause, no matter how long, sits in front of it. There is no equivalent of "who / which / that" as a separate word; the verb or adjective form alone signals the relative clause.</p>
+</div>
+
+</body>
+</html>

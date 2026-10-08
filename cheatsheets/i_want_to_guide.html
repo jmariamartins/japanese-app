@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>〜たい Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:   #f5f0e8;
+    --dark:    #2c1f12;
+    --gold:    #b8962e;
+    --gold-lt: #faf6e8;
+    --red:     #c0392b;
+    --green:   #1a7a4a;
+    --muted:   #6b5d4f;
+    --row-alt: #ede8db;
+    --border:  #d4c9b0;
+    --purple:  #6a4c93;
+    --teal:    #2a7f7f;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--dark);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 2.2rem 2rem 3.5rem;
+  }
+
+  .page-title {
+    text-align: center; margin-bottom: 2rem;
+    padding-bottom: 1rem; border-bottom: 2px solid var(--gold);
+  }
+  .page-title h1 { font-family: 'Noto Serif JP', serif; font-size: 2.3rem; font-weight: 700; }
+  .page-title .sub { font-family: 'DM Mono', monospace; font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem; }
+  .page-title .badge {
+    display: inline-block; margin-top: 0.5rem; padding: 0.18rem 0.8rem;
+    border-radius: 999px; font-family: 'DM Mono', monospace; font-size: 0.72rem;
+    background: var(--purple); color: #fff; letter-spacing: 0.06em; text-transform: uppercase;
+  }
+
+  .sh { display: flex; align-items: center; gap: 0.6rem; margin: 1.8rem 0 0.75rem; }
+  .sh h2 { font-size: 1.2rem; font-weight: 700; }
+  .pill {
+    display: inline-block; padding: 0.13rem 0.65rem; border-radius: 999px;
+    font-family: 'DM Mono', monospace; font-size: 0.68rem;
+    text-transform: uppercase; letter-spacing: 0.07em;
+  }
+  .pill-purple { background: var(--purple); color: #fff; }
+  .pill-teal   { background: var(--teal);   color: #fff; }
+  .pill-coral  { background: var(--red);    color: #fff; }
+  .pill-amber  { background: var(--gold);   color: #fff; }
+
+  .note-box {
+    border-left: 4px solid var(--gold); background: var(--gold-lt);
+    padding: 0.7rem 1rem; margin: 0.65rem 0; border-radius: 0 6px 6px 0; font-size: 0.97rem;
+  }
+  .note-box .nlabel {
+    font-family: 'DM Mono', monospace; font-size: 0.67rem; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--gold); margin-bottom: 0.2rem; display: block;
+  }
+
+  .formula {
+    border-left: 4px solid var(--gold); background: #f0ebe0;
+    padding: 0.6rem 1rem; margin: 0.4rem 0; border-radius: 0 6px 6px 0;
+    font-family: 'DM Mono', monospace; font-size: 0.88rem;
+    display: flex; align-items: center; gap: 0.45rem; flex-wrap: wrap;
+  }
+  .formula .jp  { font-family: 'Noto Serif JP', serif; }
+  .formula .arr { color: var(--gold); }
+  .formula .red { color: var(--red); }
+  .formula .grn { color: var(--green); }
+  .formula .en  { font-style: italic; color: var(--muted); font-size: 0.82rem; }
+
+  /* Conjugation table */
+  table { width: 100%; border-collapse: collapse; margin: 0.8rem 0; font-size: 0.95rem; }
+  thead tr { background: var(--dark); color: #f5f0e8; border-bottom: 3px solid var(--gold); }
+  thead th {
+    padding: 0.5rem 0.85rem; font-family: 'DM Mono', monospace; font-size: 0.72rem;
+    text-transform: uppercase; letter-spacing: 0.07em; text-align: left;
+  }
+  tbody tr:nth-child(even) { background: var(--row-alt); }
+  tbody tr:nth-child(odd)  { background: var(--paper); }
+  tbody td { padding: 0.52rem 0.85rem; border-bottom: 1px solid var(--border); vertical-align: middle; line-height: 1.45; }
+  .jp  { font-family: 'Noto Serif JP', serif; }
+  .rom { font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--muted); display: block; }
+  .en  { font-style: italic; color: var(--muted); font-size: 0.88rem; }
+  .red { color: var(--red); }
+  .grn { color: var(--green); }
+
+  /* Example blocks */
+  .ex-block {
+    background: #faf6ee; border: 1px solid var(--border); border-radius: 8px;
+    padding: 0.8rem 1.1rem; margin: 0.6rem 0;
+  }
+  .ex-block .ex-label {
+    font-family: 'DM Mono', monospace; font-size: 0.67rem; text-transform: uppercase;
+    letter-spacing: 0.11em; color: var(--gold); margin-bottom: 0.4rem; display: block;
+  }
+  .ex-block .english {
+    font-style: italic; font-size: 0.97rem; margin-bottom: 0.6rem;
+    padding-bottom: 0.4rem; border-bottom: 1px dashed var(--border);
+  }
+  .jp-row { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 0.35rem 0.65rem; margin-bottom: 0.35rem; }
+  .jp-token { display: flex; flex-direction: column; align-items: center; gap: 0.04rem; }
+  .jp-token .kana { font-family: 'Noto Serif JP', serif; font-size: 1.05rem; }
+  .jp-token .rom2 { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted); }
+  .tbox {
+    border-radius: 7px; padding: 0.22rem 0.6rem;
+    display: flex; flex-direction: column; align-items: center; gap: 0.04rem;
+  }
+  .tbox .kana { font-family: 'Noto Serif JP', serif; font-size: 1.05rem; }
+  .tbox .rom2 { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted); }
+  .red-b { border: 2.5px solid var(--red);   background: #fef5f4; }
+  .stem-note {
+    font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted);
+    margin-top: 0.15rem;
+  }
+  .stem-note .red { color: var(--red); }
+
+  hr.rule { border: none; border-top: 1px solid var(--border); margin: 1.8rem 0; }
+</style>
+</head>
+<body>
+
+<!-- ── TITLE ── -->
+<div class="page-title">
+  <h1>〜たい</h1>
+  <div class="sub">verb stem + たいです &nbsp;·&nbsp; "I want to do…"</div>
+  <span class="badge">Grammar · Beginner</span>
+</div>
+
+<!-- ── FORMATION ── -->
+<div class="sh"><h2>Formation</h2><span class="pill pill-purple">Rules</span></div>
+
+<div class="note-box">
+  <span class="nlabel">Key Rule</span>
+  Attach <strong>たい</strong> to the <strong>verb stem</strong> (the form that appears before ます). The result conjugates exactly like an <strong>い-adjective</strong>.
+</div>
+
+<div class="formula">
+  <span class="jp red">Verb stem</span>
+  <span class="arr">+</span>
+  <span class="jp grn">たいです</span>
+  <span class="arr">→</span>
+  <span class="en">"I want to [verb]"</span>
+</div>
+
+<div class="note-box" style="border-color:var(--teal);background:#eef6f6;">
+  <span class="nlabel" style="color:var(--teal);">Particle note</span>
+  When a verb normally takes <span class="jp" style="font-size:1rem;">を</span>, you can use either <span class="jp" style="font-size:1rem;font-weight:600;">を</span> or <span class="jp" style="font-size:1rem;font-weight:600;">が</span> before たい. All other particles stay the same.
+</div>
+
+<!-- ── CONJUGATION TABLE ── -->
+<div class="sh"><h2>たい Conjugation <span style="font-family:'DM Mono',monospace;font-size:0.8rem;font-weight:400;color:var(--muted);">(like い-adjective)</span></h2><span class="pill pill-amber">Forms</span></div>
+
+<table>
+  <thead><tr>
+    <th></th><th>Affirmative</th><th>Negative</th>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td><strong>Present</strong></td>
+      <td>
+        <span class="jp grn">〜たいです</span>
+        <span class="rom">~ taidesu</span>
+        <span class="en">want to…</span>
+      </td>
+      <td>
+        <span class="jp red">〜たくありません</span>
+        <span class="rom">~ takuarimasen</span>
+        <span class="en">don't want to…</span>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Past</strong></td>
+      <td>
+        <span class="jp grn">〜たかったです</span>
+        <span class="rom">~ takattadesu</span>
+        <span class="en">wanted to…</span>
+      </td>
+      <td>
+        <span class="jp red">〜たくありませんでした</span>
+        <span class="rom">~ takuarimasendeshita</span>
+        <span class="en">didn't want to…</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ── EXAMPLES ── -->
+<hr class="rule">
+<div class="sh"><h2>Examples</h2><span class="pill pill-coral">Examples</span></div>
+
+<!-- Ex 1 -->
+<div class="ex-block">
+  <span class="ex-label">Example 1 · Present affirmative</span>
+  <div class="english">"I want to eat pasta."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">パスタを</span><span class="rom2">pasuta o</span></div>
+    <div class="tbox red-b"><span class="kana">食(た)べたいです。</span><span class="rom2">tabetaidesu.</span></div>
+  </div>
+  <div class="stem-note"><span class="red">食(た)べ</span> (stem of 食べる) + たいです</div>
+</div>
+
+<!-- Ex 2 -->
+<div class="ex-block">
+  <span class="ex-label">Example 2 · Present negative</span>
+  <div class="english">"I don't want to go watch a movie."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">映画(えいが)を</span><span class="rom2">eiga o</span></div>
+    <div class="tbox red-b"><span class="kana">観(み)たくありません。</span><span class="rom2">mitakuarimasen.</span></div>
+  </div>
+  <div class="stem-note"><span class="red">観(み)</span> (stem of 観る) + たくありません</div>
+</div>
+
+<!-- Ex 3 -->
+<div class="ex-block">
+  <span class="ex-label">Example 3 · Past affirmative</span>
+  <div class="english">"I wanted to buy a sweater."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">セーターを</span><span class="rom2">se-ta- o</span></div>
+    <div class="tbox red-b"><span class="kana">買(か)いたかったです。</span><span class="rom2">kaitakattadesu.</span></div>
+  </div>
+  <div class="stem-note"><span class="red">買(か)い</span> (stem of 買う) + たかったです</div>
+</div>
+
+<!-- Ex 4 -->
+<div class="ex-block">
+  <span class="ex-label">Example 4 · Past negative</span>
+  <div class="english">"I did not want to go to school."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">学校(がっこう)に</span><span class="rom2">gakkou ni</span></div>
+    <div class="tbox red-b"><span class="kana">行(い)きたくありませんでした。</span><span class="rom2">ikitakuarimasendeshita.</span></div>
+  </div>
+  <div class="stem-note"><span class="red">行(い)き</span> (stem of 行く) + たくありませんでした</div>
+</div>
+
+
+<hr class="rule">
+
+<!-- ── IMPORTANT: 1st PERSON ONLY ── -->
+<div class="sh"><h2>Important: たい is for YOUR desires only</h2><span class="pill pill-coral">Key Rule</span></div>
+
+<div class="note-box" style="border-color:var(--red);background:#fff5f5;">
+  <span class="nlabel" style="color:var(--red);">Important</span>
+  <strong>たいです sentences are not usually used to describe wishes held by others.</strong><br>
+  Somebody else's wishes are reported in Japanese in one of three ways:
+  <ul style="margin-top:0.5rem;margin-left:1.2rem;line-height:1.9;">
+    <li><strong>Quotation</strong> — reporting their own words directly</li>
+    <li><strong>Observation</strong> — describing what you observe/infer</li>
+    <li><strong>Guess</strong> — using でしょう (deshou) to speculate</li>
+  </ul>
+</div>
+
+<hr class="rule">
+
+<!-- ── SECTION: QUOTATION ── -->
+<div class="sh"><h2>Quoting Someone's Desire</h2><span class="pill pill-teal">Quotation</span></div>
+
+<div class="note-box">
+  <span class="nlabel">Rule</span>
+  Use <strong>と言っていました</strong> (to itte imashita) to quote what someone said they want to do.
+  たい is used here because it is the other person's <em>own words</em> being quoted directly.
+</div>
+
+<div class="formula">
+  <span class="jp red">Verb stem</span>
+  <span class="arr">+</span>
+  <span class="jp grn">たい</span>
+  <span class="arr">+</span>
+  <span class="jp">と言っていました</span>
+  <span class="arr">→</span>
+  <span class="en">[they] said they want to…</span>
+</div>
+<div class="formula">
+  <span class="jp red">Verb stem</span>
+  <span class="arr">+</span>
+  <span class="jp red">たくない</span>
+  <span class="arr">+</span>
+  <span class="jp">と言っていました</span>
+  <span class="arr">→</span>
+  <span class="en">[they] said they don't want to…</span>
+</div>
+
+<div class="ex-block">
+  <span class="ex-label">Quotation Example 1</span>
+  <div class="english">"Mary said she wanted to go to the bathroom."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">メアリーは</span><span class="rom2">Mearii wa</span></div>
+    <div class="jp-token"><span class="kana">トイレに</span><span class="rom2">toire ni</span></div>
+    <div class="tbox red-b"><span class="kana">行(い)きたい</span><span class="rom2">ikitai</span></div>
+    <div class="jp-token"><span class="kana">と言っていました。</span><span class="rom2">to itte imashita.</span></div>
+  </div>
+  <div class="stem-note"><span class="red">行(い)き</span> (stem of 行く) + たい + と言っていました</div>
+</div>
+
+<div class="ex-block">
+  <span class="ex-label">Quotation Example 2</span>
+  <div class="english">"Taiki said he wants to be a teacher."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">たいきは</span><span class="rom2">Taiki wa</span></div>
+    <div class="jp-token"><span class="kana">先生(せんせい)に</span><span class="rom2">sensei ni</span></div>
+    <div class="tbox red-b"><span class="kana">なりたい</span><span class="rom2">naritai</span></div>
+    <div class="jp-token"><span class="kana">と言っていました。</span><span class="rom2">to itte imashita.</span></div>
+  </div>
+  <div class="stem-note"><span class="red">なり</span> (stem of なる) + たい + と言っていました</div>
+</div>
+
+<hr class="rule">
+
+<!-- ── SECTION: OBSERVATION ── -->
+<div class="sh"><h2>Observing Someone's Desire — 〜たがっている</h2><span class="pill pill-purple">Observation</span></div>
+
+<div class="note-box">
+  <span class="nlabel">Rule</span>
+  Use <strong>たがっている</strong> (tagatteiru) when you are <em>observing</em> that someone seems to want to do something — based on their behaviour, expression, or actions.
+  たがる conjugates as a <strong>u-verb</strong>, and is usually combined with いる: <strong>たがっている</strong>.
+</div>
+
+<div class="formula">
+  <span class="jp red">Verb stem</span>
+  <span class="arr">+</span>
+  <span class="jp grn">たがっています</span>
+  <span class="arr">→</span>
+  <span class="en">(it seems) [they] want to…</span>
+</div>
+
+<div class="note-box" style="border-color:var(--teal);background:#eef6f6;">
+  <span class="nlabel" style="color:var(--teal);">Particle note</span>
+  Unlike たい (where you can use either が or を), <strong>たがっている always retains を</strong> when the verb takes an object.
+</div>
+
+<!-- たがる plain conjugation table -->
+<p style="margin:1rem 0 0.3rem;font-size:0.92rem;font-weight:600;color:var(--muted);">〜たがる conjugation (plain, u-verb)</p>
+<table>
+  <thead><tr>
+    <th></th><th>Affirmative</th><th>Negative</th>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td><strong>Present</strong></td>
+      <td>
+        <span class="jp grn">〜たがります</span>
+        <span class="rom">~ tagarimasu</span>
+      </td>
+      <td>
+        <span class="jp red">〜たがりません</span>
+        <span class="rom">~ tagarimasen</span>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Past</strong></td>
+      <td>
+        <span class="jp grn">〜たがりました</span>
+        <span class="rom">~ tagarimashita</span>
+      </td>
+      <td>
+        <span class="jp red">〜たがりませんでした</span>
+        <span class="rom">~ tagarimasen deshita</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- たがっている combined with いる -->
+<p style="margin:1rem 0 0.3rem;font-size:0.92rem;font-weight:600;color:var(--muted);">〜たがっている (combined with いる — most common form)</p>
+<table>
+  <thead><tr>
+    <th></th><th>Affirmative</th><th>Negative</th>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td><strong>Present</strong></td>
+      <td>
+        <span class="jp grn">〜たがっています</span>
+        <span class="rom">~ tagatte imasu</span>
+        <span class="en">(it seems) wants to…</span>
+      </td>
+      <td>
+        <span class="jp red">〜たがっていません</span>
+        <span class="rom">~ tagatte imasen</span>
+        <span class="en">(it seems) doesn't want to…</span>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Past</strong></td>
+      <td>
+        <span class="jp grn">〜たがっていました</span>
+        <span class="rom">~ tagatte imashita</span>
+        <span class="en">(it seemed) wanted to…</span>
+      </td>
+      <td>
+        <span class="jp red">〜たがっていませんでした</span>
+        <span class="rom">~ tagatte imasen deshita</span>
+        <span class="en">(it seemed) didn't want to…</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Observation examples -->
+<div class="ex-block">
+  <span class="ex-label">Observation Example 1 · Present affirmative</span>
+  <div class="english">"(It seems) Mary wants to drink coffee."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">メアリーは</span><span class="rom2">Mearii wa</span></div>
+    <div class="jp-token"><span class="kana">コーヒーを</span><span class="rom2">ko-hi- o</span></div>
+    <div class="tbox red-b"><span class="kana">飲(の)み</span><span class="rom2">nomi</span></div>
+    <div class="jp-token"><span class="kana">たがっています。</span><span class="rom2">tagatte imasu.</span></div>
+  </div>
+  <div class="stem-note"><span class="red">飲(の)み</span> (stem of 飲む) + たがっています · を retained (not が)</div>
+</div>
+
+<div class="ex-block">
+  <span class="ex-label">Observation Example 2 · Present affirmative</span>
+  <div class="english">"(It seems) Ken wants to go to the cafe."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">けんは</span><span class="rom2">Ken wa</span></div>
+    <div class="jp-token"><span class="kana">カフェに</span><span class="rom2">kafe ni</span></div>
+    <div class="tbox red-b"><span class="kana">行(い)き</span><span class="rom2">iki</span></div>
+    <div class="jp-token"><span class="kana">たがっています。</span><span class="rom2">tagatte imasu.</span></div>
+  </div>
+  <div class="stem-note"><span class="red">行(い)き</span> (stem of 行く) + たがっています</div>
+</div>
+
+<div class="ex-block">
+  <span class="ex-label">Observation Example 3 · Present negative</span>
+  <div class="english">"(It seems) Lisa does not want to eat food."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">りさは</span><span class="rom2">Lisa wa</span></div>
+    <div class="jp-token"><span class="kana">ご飯(はん)を</span><span class="rom2">gohan o</span></div>
+    <div class="tbox red-b"><span class="kana">食(た)べ</span><span class="rom2">tabe</span></div>
+    <div class="jp-token"><span class="kana">たがっていません。</span><span class="rom2">tagatte imasen.</span></div>
+  </div>
+  <div class="stem-note"><span class="red">食(た)べ</span> (stem of 食べる) + たがっていません (present negative)</div>
+</div>
+
+</body>
+</html>

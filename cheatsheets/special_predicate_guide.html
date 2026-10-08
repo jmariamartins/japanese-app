@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>〜たり〜たりする Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:   #f5f0e8;
+    --dark:    #2c1f12;
+    --gold:    #b8962e;
+    --gold-lt: #faf6e8;
+    --red:     #c0392b;
+    --orange:  #c47c1a;
+    --green:   #1a7a4a;
+    --muted:   #6b5d4f;
+    --row-alt: #ede8db;
+    --border:  #d4c9b0;
+    --purple:  #6a4c93;
+    --teal:    #2a7f7f;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--dark);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 2.2rem 2rem 3.5rem;
+  }
+
+  /* ── Title ── */
+  .page-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--gold);
+  }
+  .page-title h1 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--dark);
+  }
+  .page-title .sub {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 0.2rem;
+    letter-spacing: 0.05em;
+  }
+  .page-title .badge {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.18rem 0.8rem;
+    border-radius: 999px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    background: var(--teal);
+    color: #fff;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  /* ── Section headings ── */
+  .sh {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 1.8rem 0 0.8rem;
+  }
+  .sh h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+  }
+  .pill {
+    display: inline-block;
+    padding: 0.13rem 0.65rem;
+    border-radius: 999px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+  }
+  .pill-purple { background: var(--purple); color: #fff; }
+  .pill-amber  { background: var(--gold);   color: #fff; }
+  .pill-coral  { background: var(--red);    color: #fff; }
+
+  /* ── Note box ── */
+  .note-box {
+    border-left: 4px solid var(--gold);
+    background: var(--gold-lt);
+    padding: 0.75rem 1rem;
+    margin: 0.7rem 0;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.97rem;
+  }
+  .note-box .nlabel {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.67rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    margin-bottom: 0.2rem;
+    display: block;
+  }
+
+  /* ── Formula bars ── */
+  .formula {
+    border-left: 4px solid var(--gold);
+    background: #f0ebe0;
+    padding: 0.65rem 1rem;
+    margin: 0.45rem 0;
+    border-radius: 0 6px 6px 0;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .formula .jp { font-family: 'Noto Serif JP', serif; }
+  .formula .arr { color: var(--gold); }
+  .formula .red { color: var(--red); }
+  .formula .ora { color: var(--orange); }
+  .formula .grn { color: var(--green); }
+
+  /* ── Tense table ── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.8rem 0;
+    font-size: 0.94rem;
+  }
+  thead tr { background: var(--dark); color: #f5f0e8; border-bottom: 3px solid var(--gold); }
+  thead th {
+    padding: 0.5rem 0.85rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    text-align: left;
+  }
+  tbody tr:nth-child(even) { background: var(--row-alt); }
+  tbody tr:nth-child(odd)  { background: var(--paper); }
+  tbody td {
+    padding: 0.5rem 0.85rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+  }
+  .jp  { font-family: 'Noto Serif JP', serif; }
+  .rom { font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--muted); display: block; }
+  .en  { font-style: italic; color: var(--muted); font-size: 0.9rem; }
+
+  /* ── Example blocks ── */
+  .ex-block {
+    background: #faf6ee;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.85rem 1.1rem;
+    margin: 0.7rem 0;
+  }
+  .ex-block .ex-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.67rem;
+    text-transform: uppercase;
+    letter-spacing: 0.11em;
+    color: var(--gold);
+    margin-bottom: 0.4rem;
+    display: block;
+  }
+  .ex-block .english {
+    font-style: italic;
+    font-size: 0.97rem;
+    margin-bottom: 0.7rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px dashed var(--border);
+    color: var(--dark);
+  }
+
+  /* Three-part token row */
+  .tari-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 0.5rem;
+    margin-bottom: 0.4rem;
+  }
+  .tbox {
+    border-radius: 8px;
+    padding: 0.3rem 0.7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.05rem;
+  }
+  .tbox.red-b  { border: 2.5px solid var(--red);    background: #fef5f4; }
+  .tbox.ora-b  { border: 2.5px solid var(--orange); background: #fef8ee; }
+  .tbox.grn-b  { border: 2.5px solid var(--green);  background: #edf7f2; }
+
+  .tbox .kana { font-family: 'Noto Serif JP', serif; font-size: 1.1rem; }
+  .tbox .rom2 { font-family: 'DM Mono', monospace; font-size: 0.72rem; color: var(--muted); }
+
+  .blabels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1rem;
+    margin-top: 0.4rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+  }
+  .blabels .r { color: var(--red); }
+  .blabels .o { color: var(--orange); }
+  .blabels .g { color: var(--green); }
+
+  hr.rule { border: none; border-top: 1px solid var(--border); margin: 1.8rem 0; }
+</style>
+</head>
+<body>
+
+<!-- ── TITLE ── -->
+<div class="page-title">
+  <h1>〜たり〜たりする</h1>
+  <div class="sub">tari ~ tari suru &nbsp;·&nbsp; "do such things as A and B"</div>
+  <span class="badge">Grammar · Intermediate</span>
+</div>
+
+<!-- ── CONCEPT ── -->
+<div class="sh"><h2>Concept &amp; Formation</h2><span class="pill pill-purple">Rules</span></div>
+
+<div class="note-box">
+  <span class="nlabel">Meaning</span>
+  Used to list activities as a non-exhaustive sample — "<strong>do things like A and B</strong>." Implies there may be other activities not mentioned.
+</div>
+
+<div class="formula">
+  <span>たり form</span>
+  <span class="arr">=</span>
+  <span>past affirmative short form</span>
+  <span class="arr">+</span>
+  <span class="jp red">り</span>
+</div>
+
+<div class="formula">
+  <span class="jp red">(Activity A)たり</span>
+  <span>&nbsp;</span>
+  <span class="jp ora">(Activity B)たり</span>
+  <span>&nbsp;</span>
+  <span class="jp grn">する / した</span>
+</div>
+
+<div class="note-box" style="margin-top:0.6rem;">
+  <span class="nlabel">Tense rule</span>
+  The <strong>helping verb する</strong> at the end sets the tense for the whole sentence. The たり forms themselves do not change — only する is conjugated.
+</div>
+
+<!-- ── TENSE TABLE ── -->
+<div class="sh"><h2>Tense at a Glance</h2><span class="pill pill-amber">Conjugation</span></div>
+
+<table>
+  <thead><tr>
+    <th>Meaning</th>
+    <th>Ending (する)</th>
+    <th>Romaji</th>
+    <th>Full frame</th>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td>Present / future</td>
+      <td><span class="jp">〜たり〜たり<strong>する</strong></span></td>
+      <td class="rom">~ tari ~ tari <strong>suru</strong></td>
+      <td class="en">"I do / will do A and B…"</td>
+    </tr>
+    <tr>
+      <td>Past</td>
+      <td><span class="jp">〜たり〜たり<strong>した</strong></span></td>
+      <td class="rom">~ tari ~ tari <strong>shita</strong></td>
+      <td class="en">"I did A and B…"</td>
+    </tr>
+    <tr>
+      <td>Want to do</td>
+      <td><span class="jp">〜たり〜たり<strong>したい</strong></span></td>
+      <td class="rom">~ tari ~ tari <strong>shitai</strong></td>
+      <td class="en">"I want to do A and B…"</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ── EXAMPLES ── -->
+<hr class="rule">
+<div class="sh"><h2>Examples</h2><span class="pill pill-coral">Examples</span></div>
+
+<!-- Ex 1 -->
+<div class="ex-block">
+  <span class="ex-label">Example 1 · Present affirmative</span>
+  <div class="english">"I will read a book, cook, and so on."</div>
+  <div class="tari-row">
+    <div class="tbox red-b">
+      <span class="kana">本(ほん)を読(よ)んだり</span>
+      <span class="rom2">hon o yonda ri</span>
+    </div>
+    <div class="tbox ora-b">
+      <span class="kana">料理(りょうり)したり</span>
+      <span class="rom2">ryourishita ri</span>
+    </div>
+    <div class="tbox grn-b">
+      <span class="kana">します。</span>
+      <span class="rom2">shimasu.</span>
+    </div>
+  </div>
+  <div class="blabels">
+    <span class="r">A: 読んだ (yonda) ← 読む</span>
+    <span class="o">B: 料理した (ryourishita) ← 料理する</span>
+    <span class="g">tense: present aff.</span>
+  </div>
+</div>
+
+<!-- Ex 2 -->
+<div class="ex-block">
+  <span class="ex-label">Example 2 · Past affirmative</span>
+  <div class="english">"I went to a café, studied, and so on."</div>
+  <div class="tari-row">
+    <div class="tbox red-b">
+      <span class="kana">カフェに行(い)ったり</span>
+      <span class="rom2">kafe ni itta ri</span>
+    </div>
+    <div class="tbox ora-b">
+      <span class="kana">勉強(べんきょう)したり</span>
+      <span class="rom2">benkyoushita ri</span>
+    </div>
+    <div class="tbox grn-b">
+      <span class="kana">しました。</span>
+      <span class="rom2">shimashita.</span>
+    </div>
+  </div>
+  <div class="blabels">
+    <span class="r">A: 行った (itta) ← 行く</span>
+    <span class="o">B: 勉強した (benkyoushita) ← 勉強する</span>
+    <span class="g">tense: past aff.</span>
+  </div>
+</div>
+
+<!-- Ex 3 -->
+<div class="ex-block">
+  <span class="ex-label">Example 3 · Want to do</span>
+  <div class="english">"I want to play tennis, eat pizza, and so on."</div>
+  <div class="tari-row">
+    <div class="tbox red-b">
+      <span class="kana">テニスをしたり、</span>
+      <span class="rom2">tenisu o shita ri</span>
+    </div>
+    <div class="tbox ora-b">
+      <span class="kana">ピザを食(た)べたり</span>
+      <span class="rom2">piza o tabeta ri</span>
+    </div>
+    <div class="tbox grn-b">
+      <span class="kana">したいです。</span>
+      <span class="rom2">shitaidesu.</span>
+    </div>
+  </div>
+  <div class="blabels">
+    <span class="r">A: した (shita) ← する</span>
+    <span class="o">B: 食べた (tabeta) ← 食べる</span>
+    <span class="g">tense: want / present aff.</span>
+  </div>
+</div>
+
+</body>
+</html>

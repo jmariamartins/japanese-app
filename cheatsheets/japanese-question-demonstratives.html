@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Japanese Question Words & Demonstratives</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=DM+Mono:wght@300;400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1a1208;
+    --paper: #f5f0e8;
+    --red: #c0392b;
+    --gold: #b8962e;
+    --muted: #6b5d4f;
+    --line: #d4c9b0;
+    --blue: #2c4a6e;
+    --green: #1e6b4a;
+    --purple: #6b3fa0;
+    --teal: #2c6b6b;
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    min-height: 100vh;
+    padding: 2.5rem 1rem;
+    background-image:
+      radial-gradient(ellipse at 10% 10%, rgba(192,57,43,0.04) 0%, transparent 60%),
+      radial-gradient(ellipse at 90% 90%, rgba(184,150,46,0.05) 0%, transparent 60%);
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .jp-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 300;
+    color: var(--red);
+    letter-spacing: 0.15em;
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    color: var(--muted);
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  .divider {
+    width: 120px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    margin: 1rem auto;
+  }
+
+  .section-header {
+    max-width: 1000px;
+    margin: 2rem auto 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .section-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--ink);
+  }
+
+  .section-badge {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    padding: 2px 10px;
+    border-radius: 2px;
+    color: #fff;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .badge-q { background: var(--blue); }
+  .badge-d { background: var(--teal); }
+
+  .section-note {
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+    margin-left: auto;
+  }
+
+  .table-wrap {
+    max-width: 1000px;
+    margin: 0 auto 0.5rem;
+    overflow-x: auto;
+    border-radius: 2px;
+    box-shadow: 0 2px 20px rgba(26,18,8,0.08);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fdfaf4;
+    font-size: 0.92rem;
+    min-width: 600px;
+  }
+
+  thead tr { background: var(--ink); color: var(--paper); }
+
+  thead th {
+    padding: 0.8rem 1rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  tbody tr { border-bottom: 1px solid var(--line); }
+  tbody tr:hover { background: rgba(184,150,46,0.06); }
+  tbody tr.alt { background: #faf7ef; }
+  tbody tr.alt:hover { background: rgba(184,150,46,0.08); }
+
+  td {
+    padding: 0.8rem 1rem;
+    vertical-align: top;
+    line-height: 1.6;
+  }
+
+  .word-cell { min-width: 120px; }
+
+  .word-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 52px;
+    padding: 0 8px;
+    height: 36px;
+    border-radius: 3px;
+    background: var(--blue);
+    color: #fff;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.88rem;
+    font-weight: 400;
+    box-shadow: 0 2px 6px rgba(44,74,110,0.25);
+    margin-bottom: 4px;
+  }
+
+  .word-tag.teal { background: var(--teal); box-shadow: 0 2px 6px rgba(44,107,107,0.25); }
+  .word-tag.purple { background: var(--purple); box-shadow: 0 2px 6px rgba(107,63,160,0.25); }
+  .word-tag.green { background: var(--green); box-shadow: 0 2px 6px rgba(30,107,74,0.25); }
+  .word-tag.gold { background: var(--gold); box-shadow: 0 2px 6px rgba(184,150,46,0.25); }
+
+  .word-meaning {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--ink);
+    display: block;
+    margin-top: 2px;
+  }
+
+  .use-case {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--ink);
+  }
+
+  .use-desc {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+    margin-top: 2px;
+  }
+
+  .note-badge {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    background: var(--gold);
+    color: #fff;
+    padding: 1px 6px;
+    border-radius: 2px;
+    margin-left: 6px;
+    vertical-align: middle;
+    text-transform: uppercase;
+  }
+
+  .example {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.82rem;
+    color: var(--blue);
+    background: rgba(44,74,110,0.06);
+    padding: 3px 8px;
+    border-radius: 2px;
+    display: inline-block;
+    margin-bottom: 3px;
+  }
+
+  .translation {
+    font-style: italic;
+    color: var(--muted);
+    font-size: 0.85rem;
+    display: block;
+  }
+
+  /* Group divider inside table */
+  tr.group-divider td {
+    background: rgba(26,18,8,0.03);
+    font-size: 0.78rem;
+    color: var(--muted);
+    font-style: italic;
+    padding: 0.25rem 1rem;
+    border-top: 2px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* Ko-so-a-do grid */
+  .kosoad-grid {
+    max-width: 1000px;
+    margin: 1.5rem auto 0;
+    overflow-x: auto;
+    border-radius: 2px;
+    box-shadow: 0 2px 20px rgba(26,18,8,0.08);
+  }
+
+  .kosoad-grid table {
+    min-width: 500px;
+  }
+
+  .kosoad-grid thead th:first-child { width: 160px; }
+
+  .col-ko { border-bottom: 3px solid var(--blue) !important; }
+  .col-so { border-bottom: 3px solid var(--green) !important; }
+  .col-a { border-bottom: 3px solid var(--purple) !important; }
+  .col-do { border-bottom: 3px solid var(--red) !important; }
+
+  .ko { color: var(--blue); font-family: 'DM Mono', monospace; font-size: 0.85rem; font-weight: 400; }
+  .so { color: var(--green); font-family: 'DM Mono', monospace; font-size: 0.85rem; }
+  .a  { color: var(--purple); font-family: 'DM Mono', monospace; font-size: 0.85rem; }
+  .do { color: var(--red); font-family: 'DM Mono', monospace; font-size: 0.85rem; }
+
+  .row-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--ink);
+    display: block;
+  }
+
+  .row-sublabel {
+    font-size: 0.78rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  .mini-trans {
+    font-size: 0.75rem;
+    color: var(--muted);
+    font-style: italic;
+    display: block;
+  }
+
+  .explain-box {
+    max-width: 1000px;
+    margin: 1.2rem auto 0;
+    background: #fdfaf4;
+    border-left: 3px solid var(--gold);
+    padding: 0.9rem 1.4rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+    box-shadow: 0 1px 8px rgba(26,18,8,0.06);
+    line-height: 1.7;
+  }
+
+  .explain-box strong { color: var(--ink); }
+  .explain-box .mono { font-family: 'DM Mono', monospace; font-size: 0.8rem; color: var(--blue); }
+
+  footer {
+    text-align: center;
+    margin-top: 2.5rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  @media (max-width: 600px) {
+    body { padding: 1.5rem 0.5rem; }
+    td, th { padding: 0.6rem 0.6rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="jp-title">疑問詞・指示詞</div>
+  <div class="subtitle">Question Words & Demonstratives — Reference Guide</div>
+  <div class="divider"></div>
+</header>
+
+<!-- ===== QUESTION WORDS ===== -->
+<div class="section-header">
+  <span class="section-title">Question Words</span>
+  <span class="section-badge badge-q">Gimonshi</span>
+  <span class="section-note">Used to ask who, what, how, where, when, why...</span>
+</div>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th>Word</th>
+      <th>Use Case</th>
+      <th>Example Sentence</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <!-- NANI / NAN -->
+    <tr>
+      <td class="word-cell">
+        <span class="word-tag">nani</span>
+        <span class="word-meaning">what</span>
+      </td>
+      <td>
+        <span class="use-case">Asking "what" — before a particle</span>
+        <span class="use-desc">Used when "what" comes before a particle like wo, ga, de</span>
+      </td>
+      <td>
+        <span class="example">Nani wo tabemasu ka?</span>
+        <span class="translation">What are you eating?</span>
+      </td>
+    </tr>
+
+    <tr class="alt">
+      <td class="word-cell">
+        <span class="word-tag">nan</span>
+        <span class="word-meaning">what</span>
+      </td>
+      <td>
+        <span class="use-case">Asking "what" — before desu / numbers <span class="note-badge">Same word!</span></span>
+        <span class="use-desc">"Nan" is used directly before desu, or with counters like -sai, -mei, -ji</span>
+      </td>
+      <td>
+        <span class="example">Nan desu ka?</span>
+        <span class="translation">What is it?</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td>
+        <span class="use-case">With counters</span>
+        <span class="use-desc">nan + counter = asking about quantity/age/time</span>
+      </td>
+      <td>
+        <span class="example">Nan-sai desu ka?</span>
+        <span class="translation">How old are you? (lit. What age?)</span>
+      </td>
+    </tr>
+
+    <tr class="alt">
+      <td></td>
+      <td>
+        <span class="use-case">Asking "what kind of" (no)</span>
+        <span class="use-desc">nan no + noun = what kind of / what [noun]</span>
+      </td>
+      <td>
+        <span class="example">Kore wa nan no hon desu ka?</span>
+        <span class="translation">What kind of book is this?</span>
+      </td>
+    </tr>
+
+    <!-- DOU -->
+    <tr class="group-divider"><td colspan="3">dou — how / what about</td></tr>
+
+    <tr>
+      <td class="word-cell">
+        <span class="word-tag teal">dou</span>
+        <span class="word-meaning">how / what about</span>
+      </td>
+      <td>
+        <span class="use-case">Asking about condition or state</span>
+        <span class="use-desc">"How is it?" / "What do you think?" — very common in daily conversation</span>
+      </td>
+      <td>
+        <span class="example">Kore wa dou desu ka?</span>
+        <span class="translation">How is this? / What do you think of this?</span>
+      </td>
+    </tr>
+
+    <tr class="alt">
+      <td></td>
+      <td>
+        <span class="use-case">Offering or suggesting something</span>
+        <span class="use-desc">"How about...?" — used to make polite suggestions</span>
+      </td>
+      <td>
+        <span class="example">Koohii wa dou desu ka?</span>
+        <span class="translation">How about a coffee?</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td>
+        <span class="use-case">Asking how something is done</span>
+        <span class="use-desc">Combined with shimasu to ask the method</span>
+      </td>
+      <td>
+        <span class="example">Dou shimasu ka?</span>
+        <span class="translation">What will you do? / How do you do it?</span>
+      </td>
+    </tr>
+
+    <!-- OTHER USEFUL QUESTION WORDS -->
+    <tr class="group-divider"><td colspan="3">Other essential question words — for reference</td></tr>
+
+    <tr class="alt">
+      <td class="word-cell">
+        <span class="word-tag purple">dare</span>
+        <span class="word-meaning">who</span>
+      </td>
+      <td>
+        <span class="use-case">Asking about a person</span>
+        <span class="use-desc">"Donata" is the polite version of dare</span>
+      </td>
+      <td>
+        <span class="example">Kare wa dare desu ka?</span>
+        <span class="translation">Who is he?</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="word-cell">
+        <span class="word-tag green">doko</span>
+        <span class="word-meaning">where</span>
+      </td>
+      <td>
+        <span class="use-case">Asking about a place</span>
+        <span class="use-desc">Used with location particles ni, e, de, kara</span>
+      </td>
+      <td>
+        <span class="example">Doko kara kimashita ka?</span>
+        <span class="translation">Where are you from?</span>
+      </td>
+    </tr>
+
+    <tr class="alt">
+      <td class="word-cell">
+        <span class="word-tag gold">itsu</span>
+        <span class="word-meaning">when</span>
+      </td>
+      <td>
+        <span class="use-case">Asking about time</span>
+        <span class="use-desc">Unlike specific times (e.g. 7 o'clock), itsu does NOT take ni</span>
+      </td>
+      <td>
+        <span class="example">Itsu kimasu ka?</span>
+        <span class="translation">When are you coming?</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="word-cell">
+        <span class="word-tag" style="background:#8e3a20;">naze</span>
+        <span class="word-meaning">why</span>
+      </td>
+      <td>
+        <span class="use-case">Asking for a reason</span>
+        <span class="use-desc">"Doushite" is a softer / more conversational alternative</span>
+      </td>
+      <td>
+        <span class="example">Naze nihongo wo manabimasu ka?</span>
+        <span class="translation">Why are you learning Japanese?</span>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+
+<!-- ===== DEMONSTRATIVES ===== -->
+<div class="section-header" style="margin-top:2.5rem;">
+  <span class="section-title">Demonstratives — The Ko-So-A-Do System</span>
+  <span class="section-badge badge-d">Shijishi</span>
+  <span class="section-note">Japanese has a 3-distance system: near me → near you → far from both → question</span>
+</div>
+
+<div class="explain-box">
+  Japanese demonstratives follow a beautiful pattern called <strong>ko-so-a-do</strong>: words starting with <strong>ko-</strong> = near the speaker, <strong>so-</strong> = near the listener, <strong>a-</strong> = far from both, <strong>do-</strong> = question form (which one?). Once you learn one row, the pattern applies to all!
+</div>
+
+<div class="kosoad-grid" style="margin-top:1rem;">
+<table>
+  <thead>
+    <tr>
+      <th>Meaning / Type</th>
+      <th class="col-ko">ko — near me</th>
+      <th class="col-so">so — near you</th>
+      <th class="col-a">a — far from both</th>
+      <th class="col-do">do — which? (question)</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td>
+        <span class="row-label">Thing</span>
+        <span class="row-sublabel">this / that / which</span>
+      </td>
+      <td><span class="ko">kore</span><span class="mini-trans">this (thing)</span></td>
+      <td><span class="so">sore</span><span class="mini-trans">that (near you)</span></td>
+      <td><span class="a">are</span><span class="mini-trans">that over there</span></td>
+      <td><span class="do">dore</span><span class="mini-trans">which one?</span></td>
+    </tr>
+
+    <tr class="alt">
+      <td>
+        <span class="row-label">Place</span>
+        <span class="row-sublabel">here / there / where</span>
+      </td>
+      <td><span class="ko">koko</span><span class="mini-trans">here</span></td>
+      <td><span class="so">soko</span><span class="mini-trans">there (near you)</span></td>
+      <td><span class="a">asoko</span><span class="mini-trans">over there</span></td>
+      <td><span class="do">doko</span><span class="mini-trans">where?</span></td>
+    </tr>
+
+    <tr>
+      <td>
+        <span class="row-label">Direction</span>
+        <span class="row-sublabel">this way / that way</span>
+      </td>
+      <td><span class="ko">kochira</span><span class="mini-trans">this way / this person (polite)</span></td>
+      <td><span class="so">sochira</span><span class="mini-trans">that way (near you)</span></td>
+      <td><span class="a">achira</span><span class="mini-trans">that way (far)</span></td>
+      <td><span class="do">dochira</span><span class="mini-trans">which way? (also polite "where?")</span></td>
+    </tr>
+
+    <tr class="alt">
+      <td>
+        <span class="row-label">Noun modifier</span>
+        <span class="row-sublabel">this [noun] / that [noun]</span>
+      </td>
+      <td><span class="ko">kono</span><span class="mini-trans">this + noun</span></td>
+      <td><span class="so">sono</span><span class="mini-trans">that + noun (near you)</span></td>
+      <td><span class="a">ano</span><span class="mini-trans">that + noun (far)</span></td>
+      <td><span class="do">dono</span><span class="mini-trans">which + noun?</span></td>
+    </tr>
+
+    <tr>
+      <td>
+        <span class="row-label">Type / Kind</span>
+        <span class="row-sublabel">this kind / what kind</span>
+      </td>
+      <td><span class="ko">konna</span><span class="mini-trans">this kind of</span></td>
+      <td><span class="so">sonna</span><span class="mini-trans">that kind of</span></td>
+      <td><span class="a">anna</span><span class="mini-trans">that kind of (far)</span></td>
+      <td><span class="do">donna</span><span class="mini-trans">what kind of?</span></td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+
+<!-- Example sentences for kore/sore/are/dore -->
+<div class="section-header" style="margin-top:2rem;">
+  <span class="section-title">Example sentences</span>
+</div>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th>Word</th>
+      <th>Use Case</th>
+      <th>Example Sentence</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td class="word-cell"><span class="word-tag">kore</span><span class="word-meaning">this (thing)</span></td>
+      <td>
+        <span class="use-case">Referring to something near the speaker</span>
+        <span class="use-desc">Stands alone — does NOT attach to a noun (use "kono" for that)</span>
+      </td>
+      <td>
+        <span class="example">Kore wa nan desu ka?</span>
+        <span class="translation">What is this?</span>
+      </td>
+    </tr>
+
+    <tr class="alt">
+      <td class="word-cell"><span class="word-tag teal">sore</span><span class="word-meaning">that (near you)</span></td>
+      <td>
+        <span class="use-case">Referring to something near the listener</span>
+        <span class="use-desc">Used when the object is closer to the person you're speaking to</span>
+      </td>
+      <td>
+        <span class="example">Sore wa eigo no shinbun desu.</span>
+        <span class="translation">That is an English newspaper.</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="word-cell"><span class="word-tag purple">are</span><span class="word-meaning">that (far away)</span></td>
+      <td>
+        <span class="use-case">Referring to something far from both speaker and listener</span>
+        <span class="use-desc">Also used for shared memories: "that thing we both know about"</span>
+      </td>
+      <td>
+        <span class="example">Are wa nan desu ka?</span>
+        <span class="translation">What is that (over there)?</span>
+      </td>
+    </tr>
+
+    <tr class="alt">
+      <td class="word-cell"><span class="word-tag green">kono</span><span class="word-meaning">this [noun]</span></td>
+      <td>
+        <span class="use-case">Modifying a noun — always followed by a noun</span>
+        <span class="use-desc">kono/sono/ano always attach directly to a noun, unlike kore/sore/are</span>
+      </td>
+      <td>
+        <span class="example">Kono hon wa omoshiroi desu.</span>
+        <span class="translation">This book is interesting.</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="word-cell"><span class="word-tag" style="background:#8e3a20;">ano</span><span class="word-meaning">that [noun] (far)</span></td>
+      <td>
+        <span class="use-case">Modifier for a distant noun — also used warmly for known people</span>
+        <span class="use-desc">You already know this one! "ano onnanoko" = that girl (from your Duolingo lesson)</span>
+      </td>
+      <td>
+        <span class="example">Ano onnanoko no namae wa nan desu ka?</span>
+        <span class="translation">What is that girl's name?</span>
+      </td>
+    </tr>
+
+    <tr class="alt">
+      <td class="word-cell"><span class="word-tag gold">dou</span><span class="word-meaning">how / what about</span></td>
+      <td>
+        <span class="use-case">Asking how something is / offering something</span>
+        <span class="use-desc">"Dou desu ka" is one of the most useful phrases in daily Japanese</span>
+      </td>
+      <td>
+        <span class="example">Tokyo wa dou desu ka?</span>
+        <span class="translation">How is Tokyo? / What do you think of Tokyo?</span>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+
+<div class="explain-box" style="margin-top:1.5rem;">
+  <strong>Key distinction — kore vs kono:</strong> "Kore" stands alone as a pronoun ("this is..."), while "kono" must be followed by a noun ("this [noun] is..."). So: <span class="mono">Kore wa hon desu</span> (This is a book) vs <span class="mono">Kono hon wa...</span> (This book is...). Same rule applies across the whole system: kore/sore/are/dore = standalone, kono/sono/ano/dono = before a noun.
+</div>
+
+<footer>
+  <div class="divider" style="margin-top:2rem;"></div>
+  Tip: The ko-so-a-do pattern is one of the most elegant systems in Japanese — once memorised, it unlocks dozens of words at once!
+</footer>
+
+</body>
+</html>

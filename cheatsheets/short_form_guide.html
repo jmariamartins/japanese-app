@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Japanese Short Forms</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=DM+Mono:wght@300;400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink:    #1a1208;
+    --paper:  #f5f0e8;
+    --red:    #c0392b;
+    --gold:   #b8962e;
+    --muted:  #6b5d4f;
+    --line:   #d4c9b0;
+    --blue:   #2c4a6e;
+    --green:  #1e6b4a;
+    --purple: #5b3587;
+    --orange: #a04020;
+    --th-bg:  #2c1f12;
+    --alt:    #ede8db;
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    min-height: 100vh;
+    padding: 2.5rem 1rem 5rem;
+    background-image:
+      radial-gradient(ellipse at 10% 10%, rgba(192,57,43,0.04) 0%, transparent 60%),
+      radial-gradient(ellipse at 90% 90%, rgba(184,150,46,0.05) 0%, transparent 60%);
+  }
+
+  header { text-align: center; margin-bottom: 2rem; }
+
+  .jp-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-weight: 300;
+    color: var(--red);
+    letter-spacing: 0.15em;
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    color: var(--muted);
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  .divider {
+    width: 120px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    margin: 1rem auto;
+  }
+
+  .section-label {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    margin: 2.5rem 0 0.5rem;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    font-weight: 600;
+    color: var(--ink);
+    text-align: center;
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.04em;
+  }
+
+  /* ── Tables ── */
+  .table-wrap { overflow-x: auto; margin-bottom: 0.4rem; }
+
+  table {
+    width: 100%;
+    max-width: 920px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: 1rem;
+  }
+
+  thead tr { background: var(--th-bg); color: #f5f0e8; }
+
+  thead th {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    letter-spacing: 0.06em;
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 2px solid var(--gold);
+  }
+
+  tbody tr { transition: background 0.15s; }
+  tbody tr:nth-child(even) { background: var(--alt); }
+  tbody tr:hover { background: #e5dfd1; }
+
+  td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+    line-height: 1.55;
+  }
+
+  /* ── Tense block divider ── */
+  .tense-row td {
+    background: #3a2a18;
+    color: #f5f0e8;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    padding: 7px 14px;
+    text-align: center;
+  }
+
+  /* ── Group divider ── */
+  .group-row td {
+    background: #ece3d5;
+    color: var(--muted);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    text-align: center;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* ── Type badges ── */
+  .vtype {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.76rem;
+    font-weight: 600;
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 3px;
+    white-space: nowrap;
+    margin-bottom: 2px;
+  }
+  .vtype.ru    { background: #d5eaf3; color: var(--blue); }
+  .vtype.u     { background: #d5ead8; color: var(--green); }
+  .vtype.irr   { background: #e8d5f3; color: var(--purple); }
+  .vtype.iadj  { background: #fde8d5; color: var(--orange); }
+  .vtype.nadj  { background: #fdf3d5; color: #7a5a00; }
+  .vtype.noun  { background: #e0ead5; color: #3a5a20; }
+  .vtype.all   { background: #2c1f12; color: #f5f0e8; }
+
+  .group-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--muted);
+    font-style: italic;
+    display: block;
+    margin-top: 2px;
+  }
+
+  /* ── Rule cell ── */
+  .rule-cell { font-size: 0.95rem; }
+  .rule-cell em { color: var(--red); font-style: normal; font-weight: 700; }
+  .rule-cell small { display: block; font-size: 0.8rem; color: var(--muted); margin-top: 4px; font-family: 'DM Mono', monospace; }
+
+  /* ── Romaji ── */
+  .rom {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.86rem;
+    display: block;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  .re { color: var(--red); font-weight: 700; }
+  .rom-gap { margin-top: 6px; }
+
+  /* ── Long → Short layout ── */
+  .ls {
+    display: flex;
+    gap: 0.6rem;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+  }
+  .ls-lbl {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    min-width: 2.4rem;
+  }
+  .arr { color: var(--gold); font-size: 0.9rem; }
+
+  /* ── Usage table ── */
+  .u-badge {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.76rem;
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 3px;
+    background: #f0e6d0;
+    color: #7a5520;
+    border: 1px solid #d4b88a;
+    white-space: nowrap;
+    margin-bottom: 3px;
+  }
+  .struct {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.78rem;
+    background: rgba(44,30,18,0.06);
+    border-left: 3px solid var(--gold);
+    padding: 4px 8px;
+    margin: 5px 0 3px;
+    color: var(--ink);
+    display: block;
+    border-radius: 0 3px 3px 0;
+  }
+  .note-sm {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.76rem;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+    line-height: 1.5;
+  }
+
+  /* ── Note box ── */
+  .note-box {
+    max-width: 920px;
+    margin: 0.5rem auto 0;
+    background: #fdf6e3;
+    border: 1px solid #d4b88a;
+    border-left: 4px solid var(--gold);
+    border-radius: 4px;
+    padding: 9px 13px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.82rem;
+    color: #5a3e1b;
+    line-height: 1.6;
+  }
+  .note-box strong { color: var(--red); }
+
+  .footnote {
+    max-width: 920px;
+    margin: 2rem auto 0;
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="jp-title">短い形 — Short Forms</div>
+  <div class="subtitle">Complete Conjugation Rules &amp; Usages · All in Romaji</div>
+  <div class="divider"></div>
+</header>
+
+
+<!-- ══════════════════════════════════════════
+     PART I — CONJUGATION
+══════════════════════════════════════════ -->
+<div class="section-label">Part I</div>
+<div class="section-title">Short Form Conjugation Rules</div>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th style="width:23%">Group / Type</th>
+      <th style="width:38%">Rule</th>
+      <th style="width:39%">Long form → Short form</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <!-- ════ PRESENT AFFIRMATIVE ════ -->
+    <tr class="tense-row"><td colspan="3">Present Affirmative</td></tr>
+
+    <tr class="group-row"><td colspan="3">Group A — Verbs &amp; い-Adjectives</td></tr>
+
+    <tr>
+      <td>
+        <span class="vtype ru">Ru-verb</span><br>
+        <span class="vtype u">U-verb</span><br>
+        <span class="vtype iadj">い-Adj</span>
+        <span class="group-tag">Same as dict. form</span>
+      </td>
+      <td class="rule-cell">
+        No change — the <em>dictionary form</em> is already the short form.
+      </td>
+      <td>
+        <div class="ls"><span class="ls-lbl">Long</span> <span class="rom">tabemasu</span> <span class="arr">→</span> <span class="rom">taberu</span></div>
+        <div class="ls"><span class="ls-lbl">Long</span> <span class="rom">yomimasu</span> <span class="arr">→</span> <span class="rom">yomu</span></div>
+        <div class="ls"><span class="ls-lbl">Long</span> <span class="rom">oishii desu</span> <span class="arr">→</span> <span class="rom">oishii</span></div>
+      </td>
+    </tr>
+
+    <tr class="group-row"><td colspan="3">Group B — な-Adjectives &amp; Noun+desu</td></tr>
+
+    <tr>
+      <td>
+        <span class="vtype nadj">な-Adj</span><br>
+        <span class="vtype noun">Noun+desu</span>
+        <span class="group-tag">Replace desu with da</span>
+      </td>
+      <td class="rule-cell">
+        Replace <em>desu</em> with <em>da</em>
+      </td>
+      <td>
+        <div class="ls"><span class="ls-lbl">Long</span> <span class="rom">shizuka desu</span> <span class="arr">→</span> <span class="rom">shizuka <span class="re">da</span></span></div>
+        <div class="ls"><span class="ls-lbl">Long</span> <span class="rom">gakusei desu</span> <span class="arr">→</span> <span class="rom">gakusei <span class="re">da</span></span></div>
+        <div class="ls"><span class="ls-lbl">Long</span> <span class="rom">nihonjin desu</span> <span class="arr">→</span> <span class="rom">nihonjin <span class="re">da</span></span></div>
+      </td>
+    </tr>
+
+    <!-- ════ PRESENT NEGATIVE ════ -->
+    <tr class="tense-row"><td colspan="3">Present Negative</td></tr>
+
+    <tr class="group-row"><td colspan="3">Group C — All Adjectives &amp; Noun+desu</td></tr>
+
+    <tr>
+      <td>
+        <span class="vtype iadj">い-Adj</span><br>
+        <span class="vtype nadj">な-Adj</span><br>
+        <span class="vtype noun">Noun+desu</span>
+        <span class="group-tag">Remove desu</span>
+      </td>
+      <td class="rule-cell">
+        Remove <em>desu</em> — the negative ending (<em>kunai</em> / <em>janai</em>) stays unchanged.
+      </td>
+      <td>
+        <div class="ls"><span class="ls-lbl">Long</span> <span class="rom">kawaii<span class="re">kunai</span> desu</span> <span class="arr">→</span> <span class="rom">kawaii<span class="re">kunai</span></span></div>
+        <div class="ls rom-gap"><span class="ls-lbl">Long</span> <span class="rom">shizuka<span class="re">janai</span> desu</span> <span class="arr">→</span> <span class="rom">shizuka<span class="re">janai</span></span></div>
+        <div class="ls rom-gap"><span class="ls-lbl">Long</span> <span class="rom">gakusei<span class="re">janai</span> desu</span> <span class="arr">→</span> <span class="rom">gakusei<span class="re">janai</span></span></div>
+      </td>
+    </tr>
+
+    <tr class="group-row"><td colspan="3">Group D — Verbs</td></tr>
+
+    <tr>
+      <td>
+        <span class="vtype ru">Ru-verb</span>
+        <span class="group-tag">Pres. neg.</span>
+      </td>
+      <td class="rule-cell">
+        Remove final <em>ru</em> → add <em>nai</em>
+      </td>
+      <td>
+        <div class="ls"><span class="ls-lbl">Long</span> <span class="rom">tabemasen</span> <span class="arr">→</span> <span class="rom">tabe<span class="re">nai</span></span></div>
+        <div class="ls"><span class="ls-lbl">Long</span> <span class="rom">mimasen</span> <span class="arr">→</span> <span class="rom">mi<span class="re">nai</span></span></div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <span class="vtype u">U-verb</span>
+        <span class="group-tag">Pres. neg.</span>
+      </td>
+      <td class="rule-cell">
+        Remove final <em>-u</em> → add <em>-anai</em><br>
+        <small>★ Exception: verbs ending in <em>-u</em> (bare u) → <em>-wanai</em> (not -anai)<br>
+        ★ aru (to exist) → <em>nai</em> (irregular)</small>
+      </td>
+      <td>
+        <div class="ls"><span class="ls-lbl">Long</span> <span class="rom">yomimasen</span> <span class="arr">→</span> <span class="rom">yom<span class="re">anai</span></span></div>
+        <div class="ls"><span class="ls-lbl">Long</span> <span class="rom">kakimasen</span> <span class="arr">→</span> <span class="rom">kak<span class="re">anai</span></span></div>
+        <div class="ls"><span class="ls-lbl">Long</span> <span class="rom">machimasen</span> <span class="arr">→</span> <span class="rom">mat<span class="re">anai</span></span></div>
+        <div class="ls"><span class="ls-lbl">Long</span> <span class="rom">kaimasen</span> <span class="arr">→</span> <span class="rom">ka<span class="re">wanai</span></span></div>
+        <div class="ls"><span class="ls-lbl">Long</span> <span class="rom">aimasen</span> <span class="arr">→</span> <span class="rom">a<span class="re">wanai</span></span></div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <span class="vtype irr">Irregular</span>
+        <span class="group-tag">Pres. neg. · memorise</span>
+      </td>
+      <td class="rule-cell">
+        <em>suru</em> → <em>shinai</em><br>
+        <em>kuru</em> → <em>konai</em><br>
+        <em>aru</em> → <em>nai</em>
+      </td>
+      <td>
+        <div class="ls"><span class="ls-lbl">Long</span> <span class="rom">shimasen</span> <span class="arr">→</span> <span class="rom"><span class="re">shinai</span></span></div>
+        <div class="ls"><span class="ls-lbl">Long</span> <span class="rom">kimasen</span> <span class="arr">→</span> <span class="rom"><span class="re">konai</span></span></div>
+        <div class="ls"><span class="ls-lbl">Long</span> <span class="rom">arimasen</span> <span class="arr">→</span> <span class="rom"><span class="re">nai</span></span></div>
+      </td>
+    </tr>
+
+    <!-- ════ PAST AFFIRMATIVE ════ -->
+    <tr class="tense-row"><td colspan="3">Past Affirmative</td></tr>
+
+    <tr class="group-row"><td colspan="3">Group A — Verbs</td></tr>
+
+    <tr>
+      <td>
+        <span class="vtype ru">Ru-verb</span><br>
+        <span class="vtype u">U-verb</span>
+        <span class="group-tag">Past aff. — via te-form</span>
+      </td>
+      <td class="rule-cell">
+        Take the <em>te-form</em>, then replace <em>te → ta</em> or <em>de → da</em>.<br>
+        <small>★ iku (to go) is irregular: te-form = itte → past = <em>itta</em></small>
+      </td>
+      <td>
+        <div class="ls"><span class="ls-lbl">Te-form</span> <span class="rom">tabe<span class="re">te</span></span> <span class="arr">→</span> <span class="rom">tabe<span class="re">ta</span></span></div>
+        <div class="ls"><span class="ls-lbl">Te-form</span> <span class="rom">kai<span class="re">te</span></span> <span class="arr">→</span> <span class="rom">kai<span class="re">ta</span></span></div>
+        <div class="ls"><span class="ls-lbl">Te-form</span> <span class="rom">at<span class="re">te</span></span> <span class="arr">→</span> <span class="rom">at<span class="re">ta</span></span></div>
+        <div class="ls"><span class="ls-lbl">Te-form</span> <span class="rom">yon<span class="re">de</span></span> <span class="arr">→</span> <span class="rom">yon<span class="re">da</span></span></div>
+        <div class="ls"><span class="ls-lbl">Irreg.</span> <span class="rom">itte</span> <span class="arr">→</span> <span class="rom"><span class="re">itta</span></span></div>
+        <div class="ls"><span class="ls-lbl">Irreg.</span> <span class="rom">kite</span> <span class="arr">→</span> <span class="rom"><span class="re">kita</span></span></div>
+      </td>
+    </tr>
+
+    <tr class="group-row"><td colspan="3">Group B — い-Adjectives</td></tr>
+
+    <tr>
+      <td>
+        <span class="vtype iadj">い-Adj</span>
+        <span class="group-tag">Past aff.</span>
+      </td>
+      <td class="rule-cell">
+        Replace final <em>i</em> with <em>katta</em><br>
+        <small>★ ii (good) is irregular: past = <em>yokatta</em></small>
+      </td>
+      <td>
+        <div class="ls"><span class="ls-lbl">Pres.</span> <span class="rom">kawai<span class="re">i</span></span> <span class="arr">→</span> <span class="rom">kawai<span class="re">katta</span></span></div>
+        <div class="ls"><span class="ls-lbl">Pres.</span> <span class="rom">oishi<span class="re">i</span></span> <span class="arr">→</span> <span class="rom">oishi<span class="re">katta</span></span></div>
+        <div class="ls"><span class="ls-lbl">Pres.</span> <span class="rom">kowai</span> <span class="arr">→</span> <span class="rom">kowa<span class="re">katta</span></span></div>
+        <div class="ls"><span class="ls-lbl">Irreg.</span> <span class="rom">ii</span> <span class="arr">→</span> <span class="rom"><span class="re">yokatta</span></span></div>
+      </td>
+    </tr>
+
+    <tr class="group-row"><td colspan="3">Group C — な-Adjectives &amp; Noun+desu</td></tr>
+
+    <tr>
+      <td>
+        <span class="vtype nadj">な-Adj</span><br>
+        <span class="vtype noun">Noun+desu</span>
+        <span class="group-tag">Past aff.</span>
+      </td>
+      <td class="rule-cell">
+        Replace <em>da</em> in the present short form with <em>datta</em>
+      </td>
+      <td>
+        <div class="ls"><span class="ls-lbl">Pres.</span> <span class="rom">shizuka<span class="re">da</span></span> <span class="arr">→</span> <span class="rom">shizuka<span class="re">datta</span></span></div>
+        <div class="ls"><span class="ls-lbl">Pres.</span> <span class="rom">kirei<span class="re">da</span></span> <span class="arr">→</span> <span class="rom">kirei<span class="re">datta</span></span></div>
+        <div class="ls"><span class="ls-lbl">Pres.</span> <span class="rom">gakusei <span class="re">da</span></span> <span class="arr">→</span> <span class="rom">gakusei <span class="re">datta</span></span></div>
+        <div class="ls"><span class="ls-lbl">Pres.</span> <span class="rom">nihonjin <span class="re">da</span></span> <span class="arr">→</span> <span class="rom">nihonjin <span class="re">datta</span></span></div>
+      </td>
+    </tr>
+
+    <!-- ════ PAST NEGATIVE ════ -->
+    <tr class="tense-row"><td colspan="3">Past Negative</td></tr>
+
+    <tr class="group-row"><td colspan="3">Group B — All Types (Verbs, い-Adj, な-Adj, Noun)</td></tr>
+
+    <tr>
+      <td>
+        <span class="vtype all">All types</span>
+        <span class="group-tag">Past neg. · one rule for all</span>
+      </td>
+      <td class="rule-cell">
+        Take the <em>present negative short form</em> (which ends in <em>-nai</em>, <em>-kunai</em>, or <em>-janai</em>), then replace the final <em>i</em> with <em>katta</em>.
+      </td>
+      <td>
+        <div class="ls"><span class="ls-lbl">Verb</span> <span class="rom">tabe<span class="re">nai</span></span> <span class="arr">→</span> <span class="rom">tabe<span class="re">nakatta</span></span></div>
+        <div class="ls"><span class="ls-lbl">Verb</span> <span class="rom">ko<span class="re">nai</span></span> <span class="arr">→</span> <span class="rom">ko<span class="re">nakatta</span></span></div>
+        <div class="ls rom-gap"><span class="ls-lbl">い-Adj</span> <span class="rom">kawaii<span class="re">kunai</span></span> <span class="arr">→</span> <span class="rom">kawaii<span class="re">kunakatta</span></span></div>
+        <div class="ls rom-gap"><span class="ls-lbl">な-Adj</span> <span class="rom">shizuka<span class="re">janai</span></span> <span class="arr">→</span> <span class="rom">shizuka<span class="re">janakatta</span></span></div>
+        <div class="ls rom-gap"><span class="ls-lbl">Noun</span> <span class="rom">gakusei<span class="re">janai</span></span> <span class="arr">→</span> <span class="rom">gakusei<span class="re">janakatta</span></span></div>
+        <div class="ls"><span class="ls-lbl">Noun</span> <span class="rom">nihonjin<span class="re">janai</span></span> <span class="arr">→</span> <span class="rom">nihonjin<span class="re">janakatta</span></span></div>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+
+<div class="note-box">
+  <strong>★ Quick-reference summary of group rules:</strong><br>
+  Pres. Aff: A (verbs + い-adj) = dict. form · B (な-adj + noun) = desu → da<br>
+  Pres. Neg: C (adj + noun) = drop desu · D (verbs) = drop -u → add -anai / -nai for ru-verbs<br>
+  Past Aff: A (verbs) = te-form te/de → ta/da · B (い-adj) = final -i → katta · C (な-adj + noun) = da → datta<br>
+  Past Neg: B (ALL types) = take pres. neg. short form, replace final -i → katta
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     PART II — USAGES
+══════════════════════════════════════════ -->
+<div class="section-label" style="margin-top:3rem">Part II</div>
+<div class="section-title">Usages of Short Forms</div>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th style="width:20%">Usage</th>
+      <th style="width:42%">Structure &amp; Notes</th>
+      <th style="width:38%">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <!-- USAGE 1 : QUOTATION -->
+    <tr>
+      <td>
+        <span class="u-badge">(1) Quotation</span>
+        <span class="note-sm" style="color:var(--ink)">"She said…" / "I think…"</span>
+      </td>
+      <td>
+        <span class="struct">short form + to itteimashita</span>
+        <span class="note-sm">→ reporting what someone said</span>
+        <span class="struct">short form + to omoimasu</span>
+        <span class="note-sm">→ expressing your own thoughts ("I think that…")</span>
+        <span class="note-sm" style="margin-top:8px">
+          <strong style="color:var(--red)">to</strong> = quotation particle (like "that" in indirect speech)<br><br>
+          ★ Tense is preserved: if the original utterance was in the present, the quoted clause must also stay in the present — even if you are reporting it now in the past.<br><br>
+          ★ To say "I don't think X", prefer:<br>
+          &nbsp;&nbsp;[neg. short form] + to omoimasu<br>
+          &nbsp;&nbsp;(NOT: to omoimasen)
+        </span>
+      </td>
+      <td>
+        <span class="note-sm" style="color:var(--muted)">"Mary said there would be an exam tomorrow."</span>
+        <span class="rom">Mary wa ashita shiken ga aru <span class="re">to</span> itteimashita.</span>
+        <br>
+        <span class="note-sm rom-gap" style="color:var(--muted)">"Sue said she was studying Japanese." (Sue used present tense, so keep it present)</span>
+        <span class="rom">Su- wa nihongo o benkyoushite<span class="re">iru</span> to itteimashita.</span>
+        <br>
+        <span class="note-sm rom-gap" style="color:var(--muted)">"Sue said she had lunch." (past in original → past short form)</span>
+        <span class="rom">Su- wa ohirugohan o <span class="re">tabeta</span> to itteimashita.</span>
+        <br>
+        <span class="note-sm rom-gap" style="color:var(--muted)">"I think Takeshi does not like Mary."</span>
+        <span class="rom">Takeshi wa Mary ga suki<span class="re">janai</span> to omoimasu.</span>
+      </td>
+    </tr>
+
+    <!-- USAGE 2 : CASUAL CONVERSATION -->
+    <tr>
+      <td>
+        <span class="u-badge">(2) Casual Speech</span>
+        <span class="note-sm" style="color:var(--ink)">Signs of intimacy / informal register</span>
+      </td>
+      <td>
+        <span class="note-sm" style="color:var(--ink)">
+          · Question particle <strong>ka</strong> drops → use rising intonation only<br>
+          · <strong>da</strong> ending on な-adj and nouns usually drops in questions<br>
+          · "Yes" = <strong>un</strong> &nbsp;·&nbsp; "No" = <strong>uun</strong><br>
+          · Past short forms work exactly the same way
+        </span>
+        <span class="struct">present / past short form + ? (rising tone)</span>
+      </td>
+      <td>
+        <span class="note-sm" style="color:var(--muted)">Q: "Do you often eat fish?" (present)</span>
+        <span class="rom">Sakana o yoku <span class="re">taberu?</span></span>
+        <span class="note-sm" style="color:var(--muted);margin-top:4px">A: "Yes." / "No."</span>
+        <span class="rom"><span class="re">Un.</span> Yoku taberu. &nbsp;/&nbsp; <span class="re">Uun.</span> Tabenai.</span>
+        <br>
+        <span class="note-sm rom-gap" style="color:var(--muted)">Q: "Have you eaten dinner?" (past)</span>
+        <span class="rom">Yorugohan, <span class="re">tabeta?</span></span>
+        <span class="note-sm" style="color:var(--muted);margin-top:4px">A: "Yeah, I have."</span>
+        <span class="rom"><span class="re">Un,</span> tabeta.</span>
+      </td>
+    </tr>
+
+    <!-- USAGE 3 : NEGATIVE REQUESTS -->
+    <tr>
+      <td>
+        <span class="u-badge">(3) Negative Requests</span>
+        <span class="note-sm" style="color:var(--ink)">"Please don't do…"</span>
+      </td>
+      <td>
+        <span class="struct">negative short form (verb) + de kudasai</span>
+        <span class="note-sm">Used to politely ask someone to refrain from doing something.</span>
+      </td>
+      <td>
+        <span class="note-sm" style="color:var(--muted)">"Please don't run here."</span>
+        <span class="rom">Koko de hashi<span class="re">ranai</span> de kudasai.</span>
+        <br>
+        <span class="note-sm rom-gap" style="color:var(--muted)">"Please don't eat here."</span>
+        <span class="rom">Koko de tabe<span class="re">nai</span> de kudasai.</span>
+      </td>
+    </tr>
+
+    <!-- USAGE 4 : EXPRESSING IDEAS -->
+    <tr>
+      <td>
+        <span class="u-badge">(4) Expressing Ideas</span>
+        <span class="note-sm" style="color:var(--ink)">"I like doing…" / "I'm good at…"</span>
+      </td>
+      <td>
+        <span class="struct">(person) wa [verb dict. form] no ga + [feeling]</span>
+        <span class="note-sm">
+          Short forms are used where a verb / adjective is treated as a noun.<br>
+          <strong>no ga</strong> nominalises the verb (like "-ing" in English).<br><br>
+          Feelings (endings):
+        </span>
+        <span class="note-sm" style="color:var(--ink)">
+          · <strong>suki desu</strong> — like<br>
+          · <strong>kirai desu</strong> — dislike<br>
+          · <strong>jouzu desu</strong> — good at (about others)<br>
+          · <strong>heta desu</strong> — bad at (about others)<br>
+          · <strong>tokui desu</strong> — comfortable with (about yourself)<br>
+          · <strong>nigate desu</strong> — uncomfortable with (about yourself)
+        </span>
+        <span class="note-sm" style="margin-top:6px">
+          <strong style="color:var(--red)">★ Common mistake:</strong> Do NOT use te-form here.<br>
+          ✗ hanashite ga heta desu<br>
+          ✓ hanasu no ga heta desu
+        </span>
+      </td>
+      <td>
+        <span class="note-sm" style="color:var(--muted)">"I like studying Japanese."</span>
+        <span class="rom">Nihongo o benkyou<span class="re">suru</span> no ga suki desu.</span>
+        <br>
+        <span class="note-sm rom-gap" style="color:var(--muted)">"Takeshi is bad at speaking English." (about others)</span>
+        <span class="rom">Takeshi wa eigo o hana<span class="re">su</span> no ga heta desu.</span>
+        <br>
+        <span class="note-sm rom-gap" style="color:var(--muted)">"I'm not comfortable with cooking." (about yourself)</span>
+        <span class="rom">Ryouri <span class="re">suru</span> no ga nigate desu.</span>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+
+<div class="note-box" style="margin-top:0.6rem">
+  <strong>★ Past tense in usages:</strong> Past short forms work in all four usages exactly like present short forms — the tense just shifts. In quotation, always preserve the tense of the original utterance inside the と clause.
+</div>
+
+<div class="divider" style="margin-top:2.5rem"></div>
+<p class="footnote">短い形 · Japanese Short Forms — Complete Reference</p>
+
+</body>
+</html>

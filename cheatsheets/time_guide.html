@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Time Guide — Japanese Cheat Sheet</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Mono:wght@400;500&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  /* ══════════════════════════════════════════
+     TOKENS
+  ══════════════════════════════════════════ */
+  :root {
+    --paper:      #f5f0e8;
+    --dark:       #2c1f12;
+    --gold:       #b8962e;
+    --red:        #c0392b;
+    --muted:      #6b5d4f;
+    --row-alt:    #ede8db;
+    --pill-purple:#6b4fa0;
+    --pill-teal:  #2a7f74;
+    --pill-coral: #b84f3a;
+    --pill-amber: #a07430;
+  }
+
+  /* ══════════════════════════════════════════
+     BASE
+  ══════════════════════════════════════════ */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--dark);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    line-height: 1.65;
+    padding: 2.5rem 2rem 4rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  /* ══════════════════════════════════════════
+     COVER HEADER
+  ══════════════════════════════════════════ */
+  .guide-title {
+    text-align: center;
+    border-bottom: 3px solid var(--dark);
+    padding-bottom: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+  .guide-title h1 {
+    font-size: 2.6rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    line-height: 1.1;
+  }
+  .guide-title .subtitle {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--muted);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-top: 0.35rem;
+  }
+
+  /* ══════════════════════════════════════════
+     TABLE OF CONTENTS
+  ══════════════════════════════════════════ */
+  .toc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1.2rem 0 2.5rem;
+    padding: 0.9rem 1.1rem;
+    border: 1px solid rgba(184,150,46,0.35);
+    background: rgba(184,150,46,0.05);
+  }
+  .toc a {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    color: var(--dark);
+    background: var(--row-alt);
+    border: 1px solid rgba(44,31,18,0.15);
+    border-radius: 3px;
+    padding: 0.2em 0.6em;
+    transition: background 0.15s;
+  }
+  .toc a:hover { background: rgba(184,150,46,0.2); }
+
+  /* ══════════════════════════════════════════
+     SECTION DIVIDER
+  ══════════════════════════════════════════ */
+  .section-divider {
+    border: none;
+    border-top: 1px solid rgba(44,31,18,0.12);
+    margin: 2.8rem 0 2.2rem;
+  }
+
+  /* ══════════════════════════════════════════
+     SECTION HEADER
+  ══════════════════════════════════════════ */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 0.55rem;
+  }
+  .section-header h2 { font-size: 1.65rem; font-weight: 600; letter-spacing: 0.04em; }
+
+  .pill {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem; font-weight: 500;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    color: #fff; border-radius: 20px; padding: 0.2em 0.75em;
+  }
+  .pill-amber  { background: var(--pill-amber); }
+  .pill-purple { background: var(--pill-purple); }
+  .pill-teal   { background: var(--pill-teal); }
+  .pill-coral  { background: var(--pill-coral); }
+
+  /* ══════════════════════════════════════════
+     SUBSECTION LABEL
+  ══════════════════════════════════════════ */
+  h3 {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.78rem; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.09em;
+    color: var(--dark); margin: 1.4rem 0 0.65rem;
+  }
+
+  /* ══════════════════════════════════════════
+     FORMULA BAR
+  ══════════════════════════════════════════ */
+  .formula {
+    border-left: 3px solid var(--gold);
+    background: rgba(184,150,46,0.07);
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.88rem;
+    color: var(--dark);
+    display: flex; gap: 1.5rem; flex-wrap: wrap;
+  }
+  .formula .kana { font-family: 'Noto Serif JP', serif; font-size: 1rem; }
+
+  /* ══════════════════════════════════════════
+     NOTE / GOLD BOX
+  ══════════════════════════════════════════ */
+  .note-box {
+    border-left: 3px solid var(--gold);
+    background: rgba(184,150,46,0.09);
+    padding: 0.55rem 1rem;
+    margin-bottom: 1.2rem;
+    font-size: 0.88rem;
+  }
+  .note-box strong {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem; text-transform: uppercase;
+    letter-spacing: 0.07em; color: var(--gold);
+    display: block; margin-bottom: 0.2rem;
+  }
+
+  /* ══════════════════════════════════════════
+     TABLES
+  ══════════════════════════════════════════ */
+  table {
+    width: 100%; border-collapse: collapse;
+    margin-bottom: 1.4rem; font-size: 0.93rem;
+  }
+  thead tr { background: var(--dark); color: #f5f0e8; border-bottom: 2px solid var(--gold); }
+  thead th {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem; font-weight: 500;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 0.5rem 0.85rem; text-align: left;
+  }
+  tbody tr:nth-child(even) { background: var(--row-alt); }
+  tbody tr:nth-child(odd)  { background: var(--paper); }
+  tbody td { padding: 0.42rem 0.85rem; vertical-align: middle; }
+
+  .td-kanji { font-family: 'Noto Serif JP', serif; font-size: 1.1rem; font-weight: 600; }
+  .td-kana  { font-family: 'Noto Serif JP', serif; font-size: 1.05rem; }
+  .td-mono  { font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--muted); }
+  .td-en    { font-style: italic; color: var(--muted); }
+  .td-num   { font-family: 'DM Mono', monospace; font-weight: 500; color: var(--muted); width: 3.5rem; }
+
+  .flag-red        { color: var(--red); font-weight: 600; }
+  .strikethrough   { text-decoration: line-through; opacity: 0.5; }
+
+  /* ══════════════════════════════════════════
+     EXAMPLE BLOCKS
+  ══════════════════════════════════════════ */
+  .two-col   { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+  .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+
+  .example-block { }
+  .ex-label  {
+    font-family: 'DM Mono', monospace; font-size: 0.7rem;
+    text-transform: uppercase; letter-spacing: 0.09em;
+    color: var(--gold); margin-bottom: 0.2rem;
+  }
+  .ex-kana   { font-family: 'Noto Serif JP', serif; font-size: 1.02rem; display: block; }
+  .ex-romaji { font-family: 'DM Mono', monospace; font-size: 0.76rem; color: var(--muted); display: block; }
+  .ex-en     { font-style: italic; color: var(--muted); font-size: 0.86rem; display: block; }
+
+  /* ══════════════════════════════════════════
+     DAYS — colour dots
+  ══════════════════════════════════════════ */
+  .dot {
+    display: inline-block; width: 8px; height: 8px;
+    border-radius: 50%; margin-right: 6px; vertical-align: middle;
+  }
+  .c-mon { background: #7b9ec7; } .c-tue { background: #c0392b; }
+  .c-wed { background: #3a8fba; } .c-thu { background: #6b8f52; }
+  .c-fri { background: #b8962e; } .c-sat { background: #a07870; }
+  .c-sun { background: #d4882e; }
+
+  /* ══════════════════════════════════════════
+     MINUTES PRONUNCIATION CARDS
+  ══════════════════════════════════════════ */
+  .pron-grid {
+    display: grid; grid-template-columns: repeat(3,1fr);
+    gap: 0.8rem; margin-bottom: 1.4rem;
+  }
+  .pron-card {
+    border: 1px solid rgba(184,150,46,0.35);
+    border-top: 3px solid var(--gold);
+    background: var(--paper); padding: 0.7rem 0.9rem;
+  }
+  .pron-card .reading {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.2rem; font-weight: 600;
+    display: block; margin-bottom: 0.1rem;
+  }
+  .pron-card .romaji {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem; color: var(--muted);
+    display: block; margin-bottom: 0.4rem;
+  }
+  .pron-card .digits {
+    font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--dark);
+  }
+  .pron-card .digits span {
+    display: inline-block; background: rgba(44,31,18,0.08);
+    border-radius: 3px; padding: 0 4px; margin: 1px;
+  }
+
+  /* ══════════════════════════════════════════
+     DURATION TABLE
+  ══════════════════════════════════════════ */
+  .dur-grid {
+    display: grid; grid-template-columns: repeat(4,1fr);
+    gap: 0.6rem; margin-bottom: 1.4rem;
+  }
+  .dur-card {
+    border: 1px solid rgba(44,31,18,0.12);
+    border-top: 3px solid var(--gold);
+    background: var(--paper);
+    padding: 0.6rem 0.75rem;
+    text-align: center;
+  }
+  .dur-card .dur-en {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem; text-transform: uppercase;
+    letter-spacing: 0.06em; color: var(--muted);
+    display: block; margin-bottom: 0.2rem;
+  }
+  .dur-card .dur-kanji {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.3rem; font-weight: 600;
+    color: var(--red); display: block;
+  }
+  .dur-card .dur-romaji {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem; color: var(--muted);
+    display: block; margin-top: 0.15rem;
+  }
+
+  /* Sentence breakdown */
+  .sentence-breakdown {
+    background: var(--row-alt);
+    border-left: 3px solid var(--gold);
+    padding: 0.8rem 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+  .sb-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.05rem; margin-bottom: 0.2rem;
+  }
+  .sb-romaji {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.76rem; color: var(--muted); margin-bottom: 0.15rem;
+  }
+  .sb-en { font-style: italic; color: var(--muted); font-size: 0.88rem; }
+  .sb-note {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem; color: var(--gold);
+    text-transform: uppercase; letter-spacing: 0.06em;
+    margin-top: 0.35rem;
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     COVER
+══════════════════════════════════════════ -->
+<div class="guide-title">
+  <h1>Time Guide</h1>
+  <div class="subtitle">時間 · じかん · jikan &nbsp;—&nbsp; Japanese Cheat Sheet</div>
+</div>
+
+<nav class="toc">
+  <a href="#dates">① Dates &amp; Months</a>
+  <a href="#days">② Days of the Week</a>
+  <a href="#clock">③ Time (Clock)</a>
+  <a href="#duration">④ Duration</a>
+  <a href="#frequency">⑤ Frequency Adverbs</a>
+  <a href="#timereference">⑥ Time Reference &amp; に</a>
+</nav>
+
+
+<!-- ══════════════════════════════════════════
+     § 1  DATES & MONTHS
+══════════════════════════════════════════ -->
+<section id="dates">
+
+  <div class="section-header">
+    <h2>Dates &amp; Months</h2>
+    <span class="pill pill-amber">日付・月</span>
+  </div>
+
+  <!-- MONTHS -->
+  <h3>Month — 月 (がつ · gatsu)</h3>
+
+  <div class="formula">
+    <span>Month = Number + <span class="kana">月</span> (がつ · gatsu)</span>
+    <span>e.g. <span class="kana">いちがつ</span> (ichigatsu) = January</span>
+  </div>
+
+  <div class="note-box">
+    <strong>⚠ Irregular month readings</strong>
+    4月 → <span style="font-family:'Noto Serif JP',serif">しがつ</span> (shigatsu) — not よんがつ &nbsp;|&nbsp;
+    7月 → <span style="font-family:'Noto Serif JP',serif">しちがつ</span> (shichigatsu) — not なながつ &nbsp;|&nbsp;
+    9月 → <span style="font-family:'Noto Serif JP',serif">くがつ</span> (kugatsu) — not きゅうがつ
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>#</th><th>Kanji</th><th>Kana</th><th>Romaji</th><th>Month</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="td-num">1</td><td>一月</td><td class="td-kana">いちがつ</td><td class="td-mono">ichigatsu</td><td class="td-en">January</td></tr>
+      <tr><td class="td-num">2</td><td>二月</td><td class="td-kana">にがつ</td><td class="td-mono">nigatsu</td><td class="td-en">February</td></tr>
+      <tr><td class="td-num">3</td><td>三月</td><td class="td-kana">さんがつ</td><td class="td-mono">sangatsu</td><td class="td-en">March</td></tr>
+      <tr><td class="td-num flag-red">4</td><td>四月</td><td class="td-kana flag-red">しがつ</td><td class="td-mono flag-red">shigatsu</td><td class="td-en">April</td></tr>
+      <tr><td class="td-num">5</td><td>五月</td><td class="td-kana">ごがつ</td><td class="td-mono">gogatsu</td><td class="td-en">May</td></tr>
+      <tr><td class="td-num">6</td><td>六月</td><td class="td-kana">ろくがつ</td><td class="td-mono">rokugatsu</td><td class="td-en">June</td></tr>
+      <tr><td class="td-num flag-red">7</td><td>七月</td><td class="td-kana flag-red">しちがつ</td><td class="td-mono flag-red">shichigatsu</td><td class="td-en">July</td></tr>
+      <tr><td class="td-num">8</td><td>八月</td><td class="td-kana">はちがつ</td><td class="td-mono">hachigatsu</td><td class="td-en">August</td></tr>
+      <tr><td class="td-num flag-red">9</td><td>九月</td><td class="td-kana flag-red">くがつ</td><td class="td-mono flag-red">kugatsu</td><td class="td-en">September</td></tr>
+      <tr><td class="td-num">10</td><td>十月</td><td class="td-kana">じゅうがつ</td><td class="td-mono">juugatsu</td><td class="td-en">October</td></tr>
+      <tr><td class="td-num">11</td><td>十一月</td><td class="td-kana">じゅういちがつ</td><td class="td-mono">juuichigatsu</td><td class="td-en">November</td></tr>
+      <tr><td class="td-num">12</td><td>十二月</td><td class="td-kana">じゅうにがつ</td><td class="td-mono">juunigatsu</td><td class="td-en">December</td></tr>
+    </tbody>
+  </table>
+
+  <!-- DATES -->
+  <h3>Day of the Month — 日 (にち · nichi)</h3>
+
+  <div class="formula">
+    <span>Regular (11th–31st, except 20th) = Number + <span class="kana">日</span> (にち · nichi)</span>
+    <span>e.g. <span class="kana">じゅういちにち</span> = 11th</span>
+  </div>
+
+  <div class="note-box">
+    <strong>⚠ Irregular — must memorise</strong>
+    1st–10th &amp; 20th all have unique readings.
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>#</th><th>Kanji</th><th>Kana</th><th>Romaji</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="td-num">1st</td><td>一日</td><td class="td-kana">ついたち</td><td class="td-mono">tsuitachi</td></tr>
+      <tr><td class="td-num">2nd</td><td>二日</td><td class="td-kana">ふつか</td><td class="td-mono">futsuka</td></tr>
+      <tr><td class="td-num">3rd</td><td>三日</td><td class="td-kana">みっか</td><td class="td-mono">mikka</td></tr>
+      <tr><td class="td-num">4th</td><td>四日</td><td class="td-kana">よっか</td><td class="td-mono">yokka</td></tr>
+      <tr><td class="td-num">5th</td><td>五日</td><td class="td-kana">いつか</td><td class="td-mono">itsuka</td></tr>
+      <tr><td class="td-num">6th</td><td>六日</td><td class="td-kana">むいか</td><td class="td-mono">muika</td></tr>
+      <tr><td class="td-num">7th</td><td>七日</td><td class="td-kana">なのか</td><td class="td-mono">nanoka</td></tr>
+      <tr><td class="td-num">8th</td><td>八日</td><td class="td-kana">ようか</td><td class="td-mono">youka</td></tr>
+      <tr><td class="td-num">9th</td><td>九日</td><td class="td-kana">ここのか</td><td class="td-mono">kokonoka</td></tr>
+      <tr><td class="td-num">10th</td><td>十日</td><td class="td-kana">とうか</td><td class="td-mono">touka</td></tr>
+      <tr><td class="td-num flag-red">20th</td><td>二十日</td><td class="td-kana flag-red">はつか</td><td class="td-mono flag-red">hatsuka</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Useful Phrases</h3>
+  <div class="two-col">
+    <div class="example-block">
+      <div class="ex-label">Asking when</div>
+      <span class="ex-kana">○○○はいつですか？</span>
+      <span class="ex-romaji">○○○ wa itsu desuka?</span>
+      <span class="ex-en">When is ○○○?</span>
+    </div>
+    <div class="example-block">
+      <div class="ex-label">Asking the exact date</div>
+      <span class="ex-kana">○○○は何月何日ですか？</span>
+      <span class="ex-romaji">○○○ wa nangatsu nannichi desuka?</span>
+      <span class="ex-en">What date is ○○○?</span>
+    </div>
+    <div class="example-block">
+      <div class="ex-label">Q — Birthday?</div>
+      <span class="ex-kana">誕生日はいつですか？</span>
+      <span class="ex-romaji">Tanjoubi wa itsu desuka?</span>
+      <span class="ex-en">When is your birthday?</span>
+    </div>
+    <div class="example-block">
+      <div class="ex-label">A — September 20th</div>
+      <span class="ex-kana">9月20日です。</span>
+      <span class="ex-romaji">Kugatsu hatsuka desu.</span>
+      <span class="ex-en">It's September 20th.</span>
+    </div>
+  </div>
+
+</section>
+<hr class="section-divider">
+
+
+<!-- ══════════════════════════════════════════
+     § 2  DAYS OF THE WEEK
+══════════════════════════════════════════ -->
+<section id="days">
+
+  <div class="section-header">
+    <h2>Days of the Week</h2>
+    <span class="pill pill-purple">曜日 · ようび</span>
+  </div>
+
+  <div class="note-box">
+    <strong>Pattern</strong>
+    Each day = <span style="font-family:'Noto Serif JP',serif">［element］曜日</span> (youbi). The first kanji names a classical element or celestial body.
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>Kanji</th><th>Element</th><th>Kana</th><th>Romaji</th><th>Day</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="td-kanji"><span class="dot c-mon"></span>月曜日</td><td class="td-mono">月 moon</td><td class="td-kana">げつようび</td><td class="td-mono">getsuyoubi</td><td class="td-en">Monday</td></tr>
+      <tr><td class="td-kanji"><span class="dot c-tue"></span>火曜日</td><td class="td-mono">火 fire</td><td class="td-kana">かようび</td><td class="td-mono">kayoubi</td><td class="td-en">Tuesday</td></tr>
+      <tr><td class="td-kanji"><span class="dot c-wed"></span>水曜日</td><td class="td-mono">水 water</td><td class="td-kana">すいようび</td><td class="td-mono">suiyoubi</td><td class="td-en">Wednesday</td></tr>
+      <tr><td class="td-kanji"><span class="dot c-thu"></span>木曜日</td><td class="td-mono">木 wood</td><td class="td-kana">もくようび</td><td class="td-mono">mokuyoubi</td><td class="td-en">Thursday</td></tr>
+      <tr><td class="td-kanji"><span class="dot c-fri"></span>金曜日</td><td class="td-mono">金 gold</td><td class="td-kana">きんようび</td><td class="td-mono">kinyoubi</td><td class="td-en">Friday</td></tr>
+      <tr><td class="td-kanji"><span class="dot c-sat"></span>土曜日</td><td class="td-mono">土 earth</td><td class="td-kana">どようび</td><td class="td-mono">doyoubi</td><td class="td-en">Saturday</td></tr>
+      <tr><td class="td-kanji"><span class="dot c-sun"></span>日曜日</td><td class="td-mono">日 sun</td><td class="td-kana">にちようび</td><td class="td-mono">nichiyoubi</td><td class="td-en">Sunday</td></tr>
+    </tbody>
+  </table>
+
+</section>
+<hr class="section-divider">
+
+
+<!-- ══════════════════════════════════════════
+     § 3  TIME (CLOCK)
+══════════════════════════════════════════ -->
+<section id="clock">
+
+  <div class="section-header">
+    <h2>Time (Clock)</h2>
+    <span class="pill pill-teal">時間 · じかん</span>
+  </div>
+
+  <!-- HOURS -->
+  <h3>Hours — 時 (じ · ji)</h3>
+
+  <div class="formula">
+    <span>AM = <span class="kana">午前</span> (ごぜん · gozen)</span>
+    <span>PM = <span class="kana">午後</span> (ごご · gogo)</span>
+    <span>Hour = Number + <span class="kana">時</span> (じ · ji)</span>
+  </div>
+
+  <div class="note-box">
+    <strong>⚠ Irregular hour readings</strong>
+    7時 → <span style="font-family:'Noto Serif JP',serif">しちじ</span> (shichiji) — <span class="strikethrough">ななじ</span> &nbsp;|&nbsp;
+    9時 → <span style="font-family:'Noto Serif JP',serif">くじ</span> (kuji) — <span class="strikethrough">きゅうじ</span>
+  </div>
+
+  <!-- MINUTES -->
+  <h3>Minutes — 分 (ふん/ぷん · fun/pun)</h3>
+
+  <p style="font-size:0.9rem; margin-bottom:0.8rem; color:var(--muted);">
+    Reading of <span style="font-family:'Noto Serif JP',serif">分</span> changes based on the <strong style="color:var(--dark)">last digit</strong> of the number:
+  </p>
+
+  <div class="pron-grid">
+    <div class="pron-card">
+      <span class="reading">ふん</span>
+      <span class="romaji">fun</span>
+      <div class="digits">ends in <span>2</span><span>5</span><span>7</span><span>9</span></div>
+    </div>
+    <div class="pron-card">
+      <span class="reading">ぷん</span>
+      <span class="romaji">pun</span>
+      <div class="digits">ends in <span>3</span><span>4</span></div>
+    </div>
+    <div class="pron-card">
+      <span class="reading">っぷん</span>
+      <span class="romaji">ppun</span>
+      <div class="digits">ends in <span>1</span><span>6</span><span>8</span><span>0</span></div>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>Last digit</th><th>Reading</th><th>×1 example</th><th>×10 example</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="td-mono">…2</td><td><span class="td-kana">ふん</span> <span class="td-mono">fun</span></td><td><span class="td-kana">にふん</span> <span class="td-mono">nifun</span></td><td><span class="td-kana">じゅうにふん</span> <span class="td-mono">juunifun</span></td></tr>
+      <tr><td class="td-mono">…5</td><td><span class="td-kana">ふん</span> <span class="td-mono">fun</span></td><td><span class="td-kana">ごふん</span> <span class="td-mono">gofun</span></td><td><span class="td-kana">じゅうごふん</span> <span class="td-mono">juugofun</span></td></tr>
+      <tr><td class="td-mono">…7</td><td><span class="td-kana">ふん</span> <span class="td-mono">fun</span></td><td><span class="td-kana">ななふん</span> <span class="td-mono">nanafun</span></td><td><span class="td-kana">じゅうななふん</span> <span class="td-mono">juunanafun</span></td></tr>
+      <tr><td class="td-mono">…9</td><td><span class="td-kana">ふん</span> <span class="td-mono">fun</span></td><td><span class="td-kana">きゅうふん</span> <span class="td-mono">kyuufun</span></td><td><span class="td-kana">じゅうきゅうふん</span> <span class="td-mono">juukyuufun</span></td></tr>
+      <tr><td class="td-mono">…3</td><td><span class="td-kana">ぷん</span> <span class="td-mono">pun</span></td><td><span class="td-kana">さんぷん</span> <span class="td-mono">sanpun</span></td><td><span class="td-kana">じゅうさんぷん</span> <span class="td-mono">juusanpun</span></td></tr>
+      <tr><td class="td-mono">…4</td><td><span class="td-kana">ぷん</span> <span class="td-mono">pun</span></td><td><span class="td-kana">よんぷん</span> <span class="td-mono">yonpun</span></td><td><span class="td-kana">じゅうよんぷん</span> <span class="td-mono">juuyonpun</span></td></tr>
+      <tr><td class="td-mono">…1</td><td><span class="td-kana">っぷん</span> <span class="td-mono">ppun</span></td><td><span class="td-kana">いっぷん</span> <span class="td-mono">ippun</span></td><td><span class="td-kana">じゅういっぷん</span> <span class="td-mono">juuippun</span></td></tr>
+      <tr><td class="td-mono">…6</td><td><span class="td-kana">っぷん</span> <span class="td-mono">ppun</span></td><td><span class="td-kana">ろっぷん</span> <span class="td-mono">roppun</span></td><td><span class="td-kana">じゅうろっぷん</span> <span class="td-mono">juuroppun</span></td></tr>
+      <tr><td class="td-mono">…8</td><td><span class="td-kana">っぷん</span> <span class="td-mono">ppun</span></td><td><span class="td-kana">はっぷん</span> <span class="td-mono">happun</span></td><td><span class="td-kana">じゅうはっぷん</span> <span class="td-mono">juuhappun</span></td></tr>
+      <tr><td class="td-mono">…0</td><td><span class="td-kana">っぷん</span> <span class="td-mono">ppun</span></td><td><span class="td-kana">じゅっぷん</span> <span class="td-mono">juppun</span></td><td><span class="td-kana">さんじゅっぷん</span> <span class="td-mono">sanjuppun</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="note-box">
+    <strong>½ hour shortcut</strong>
+    30分 can also be <span style="font-family:'Noto Serif JP',serif">半</span> (はん · han).
+    e.g. 1:30 PM = <span style="font-family:'Noto Serif JP',serif">午後1時半</span> (ごごいちじはん · gogo ichiji han)
+  </div>
+
+  <h3>Useful Phrases</h3>
+  <div class="two-col">
+    <div class="example-block">
+      <div class="ex-label">Asking the time</div>
+      <span class="ex-kana">今、何時ですか？</span>
+      <span class="ex-romaji">Ima, nanji desuka?</span>
+      <span class="ex-en">What time is it now?</span>
+    </div>
+    <div class="example-block">
+      <div class="ex-label">Stating the time</div>
+      <span class="ex-kana">今、午後1時40分です。</span>
+      <span class="ex-romaji">Ima, gogo ichiji yonjuppun desu.</span>
+      <span class="ex-en">It's 1:40 PM.</span>
+    </div>
+  </div>
+
+</section>
+<hr class="section-divider">
+
+
+<!-- ══════════════════════════════════════════
+     § 4  DURATION
+══════════════════════════════════════════ -->
+<section id="duration">
+
+  <div class="section-header">
+    <h2>Duration</h2>
+    <span class="pill pill-coral">間 · かん</span>
+  </div>
+
+  <div class="note-box">
+    <strong>Grammar rule</strong>
+    Duration noun stands alone — <strong>no particle</strong> after it — and appears <strong>immediately before the verb</strong>.
+    Add <span style="font-family:'Noto Serif JP',serif">ぐらい</span> (gurai) after the duration for "about / approximately".
+  </div>
+
+  <!-- VOCAB -->
+  <h3>Time Unit Vocab</h3>
+
+  <table>
+    <thead>
+      <tr><th>Kanji</th><th>Kana</th><th>Romaji</th><th>Meaning</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>秒</td><td class="td-kana">びょう</td><td class="td-mono">byou</td><td class="td-en">second</td></tr>
+      <tr><td>分</td><td class="td-kana">ふん</td><td class="td-mono">fun</td><td class="td-en">minute</td></tr>
+      <tr><td>時間</td><td class="td-kana">じかん</td><td class="td-mono">jikan</td><td class="td-en">hour / time</td></tr>
+      <tr><td>日</td><td class="td-kana">にち</td><td class="td-mono">nichi</td><td class="td-en">day</td></tr>
+      <tr><td>週</td><td class="td-kana">しゅう</td><td class="td-mono">shuu</td><td class="td-en">week</td></tr>
+      <tr><td>月</td><td class="td-kana">つき</td><td class="td-mono">tsuki</td><td class="td-en">month</td></tr>
+      <tr><td>年</td><td class="td-kana">ねん</td><td class="td-mono">nen</td><td class="td-en">year</td></tr>
+    </tbody>
+  </table>
+
+  <!-- DURATION UNITS -->
+  <h3>"For X [unit]" — add 間 (かん · kan)</h3>
+
+  <div class="dur-grid">
+    <div class="dur-card">
+      <span class="dur-en">seconds</span>
+      <span class="dur-kanji">秒間</span>
+      <span class="dur-romaji">byoukan</span>
+    </div>
+    <div class="dur-card">
+      <span class="dur-en">minutes</span>
+      <span class="dur-kanji">分間</span>
+      <span class="dur-romaji">funkan / punkan / ppunkan</span>
+    </div>
+    <div class="dur-card">
+      <span class="dur-en">hours</span>
+      <span class="dur-kanji">時間</span>
+      <span class="dur-romaji">jikan</span>
+    </div>
+    <div class="dur-card">
+      <span class="dur-en">days</span>
+      <span class="dur-kanji">日間</span>
+      <span class="dur-romaji">nichikan</span>
+    </div>
+    <div class="dur-card">
+      <span class="dur-en">weeks</span>
+      <span class="dur-kanji">週間</span>
+      <span class="dur-romaji">shuukan</span>
+    </div>
+    <div class="dur-card">
+      <span class="dur-en">months</span>
+      <span class="dur-kanji">ヶ月間</span>
+      <span class="dur-romaji">kagetsukan</span>
+    </div>
+    <div class="dur-card">
+      <span class="dur-en">years</span>
+      <span class="dur-kanji">年間</span>
+      <span class="dur-romaji">nenkan</span>
+    </div>
+    <div class="dur-card" style="border-top-color:var(--muted)">
+      <span class="dur-en">~about</span>
+      <span class="dur-kanji" style="color:var(--dark)">ぐらい</span>
+      <span class="dur-romaji">gurai</span>
+    </div>
+  </div>
+
+  <!-- EXAMPLES -->
+  <h3>Examples</h3>
+
+  <div class="sentence-breakdown">
+    <div class="sb-jp">メアリーはたけしを&nbsp;<strong>1時間</strong>&nbsp;待ちました。</div>
+    <div class="sb-romaji">Mearii wa Takeshi o &nbsp;<strong>ichijikan</strong>&nbsp; machimashita.</div>
+    <div class="sb-en">Mary waited for Takeshi for an hour.</div>
+    <div class="sb-note">▸ duration has no particle &nbsp;·&nbsp; sits directly before the verb</div>
+  </div>
+
+  <div class="sentence-breakdown">
+    <div class="sb-jp">メアリーはたけしを&nbsp;<strong>1時間ぐらい</strong>&nbsp;待ちました。</div>
+    <div class="sb-romaji">Mearii wa Takeshi o &nbsp;<strong>ichijikan gurai</strong>&nbsp; machimashita.</div>
+    <div class="sb-en">Mary waited for Takeshi for <em>about</em> an hour.</div>
+    <div class="sb-note">▸ ぐらい follows the duration noun for approximation</div>
+  </div>
+
+</section>
+
+<!-- ══════════════════════════════════════════
+     § 5  FREQUENCY ADVERBS
+══════════════════════════════════════════ -->
+<section id="frequency">
+
+  <div class="section-header">
+    <h2>Frequency Adverbs</h2>
+    <span class="pill pill-purple">頻度 · ひんど</span>
+  </div>
+
+  <div class="note-box">
+    Frequency adverbs describe <strong>how often</strong> you do something.<br>
+    <strong>Position rule:</strong> frequency adverbs come right after <span style="font-family:'Noto Serif JP',serif">は</span> <span style="font-family:'DM Mono',monospace;font-size:0.82rem">(wa)</span>.<br>
+    <strong style="color:var(--red)">⚠ Infrequency adverbs (あまり / ぜんぜん) always require a negative sentence ending.</strong>
+  </div>
+
+  <!-- ── Frequency spectrum ── -->
+  <h3>Frequency Adverbs — Spectrum</h3>
+
+  <table>
+    <thead>
+      <tr><th>Kana</th><th>Romaji</th><th>Meaning</th><th>Sentence ending</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="td-kana">いつも</td>
+        <td class="td-mono">itsumo</td>
+        <td class="td-en">always</td>
+        <td class="td-en">affirmative</td>
+      </tr>
+      <tr>
+        <td class="td-kana">たいてい</td>
+        <td class="td-mono">taitei</td>
+        <td class="td-en">usually</td>
+        <td class="td-en">affirmative</td>
+      </tr>
+      <tr>
+        <td class="td-kana">よく</td>
+        <td class="td-mono">yoku</td>
+        <td class="td-en">often</td>
+        <td class="td-en">affirmative</td>
+      </tr>
+      <tr>
+        <td class="td-kana">時々（ときどき）</td>
+        <td class="td-mono">tokidoki</td>
+        <td class="td-en">sometimes</td>
+        <td class="td-en">affirmative</td>
+      </tr>
+      <tr>
+        <td class="td-kana">たまに</td>
+        <td class="td-mono">tamani</td>
+        <td class="td-en">occasionally / once in a while</td>
+        <td class="td-en">affirmative</td>
+      </tr>
+      <tr style="background:rgba(192,57,43,0.07)">
+        <td class="td-kana">あまり</td>
+        <td class="td-mono">amari</td>
+        <td class="td-en">not often / not very much</td>
+        <td class="td-en" style="color:var(--red);font-weight:600">negative only (ません)</td>
+      </tr>
+      <tr style="background:rgba(192,57,43,0.07)">
+        <td class="td-kana">ぜんぜん</td>
+        <td class="td-mono">zenzen</td>
+        <td class="td-en">never / not at all</td>
+        <td class="td-en" style="color:var(--red);font-weight:600">negative only (ません)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ── Example sentences ── -->
+  <h3>Examples</h3>
+
+  <div class="sentence-breakdown">
+    <div class="sb-jp">わたし は <strong>いつも</strong> こうひー を のみます。</div>
+    <div class="sb-romaji">Watashi wa <strong>itsumo</strong> ko-hi- wo nomimasu.</div>
+    <div class="sb-en">I <em>always</em> drink coffee.</div>
+    <div class="sb-note">▸ frequency adverb comes right after は (wa)</div>
+  </div>
+
+  <div class="sentence-breakdown">
+    <div class="sb-jp">わたし は <strong>ぜんぜん</strong> テレビ を <strong>みません</strong>。</div>
+    <div class="sb-romaji">Watashi wa <strong>zenzen</strong> terebi wo <strong>mimasen</strong>.</div>
+    <div class="sb-en">I do <em>not</em> watch TV <em>at all</em>.</div>
+    <div class="sb-note">▸ ぜんぜん (zenzen) requires a negative ending — ません (masen), never ます (masu)</div>
+  </div>
+
+  <!-- ── 毎 prefix ── -->
+  <h3>The "Every" Prefix — 毎 (まい · mai)</h3>
+
+  <div class="note-box">
+    <span style="font-family:'Noto Serif JP',serif;font-size:1.1rem">毎</span>
+    <span style="font-family:'DM Mono',monospace;font-size:0.8rem"> (まい · mai)</span>
+    = <strong>every</strong> — attach it to a time word to mean "every [unit]".
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>Kanji</th><th>Kana</th><th>Romaji</th><th>Meaning</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>毎日</td>
+        <td class="td-kana">まいにち</td>
+        <td class="td-mono">mainichi</td>
+        <td class="td-en">every day</td>
+      </tr>
+      <tr>
+        <td>毎週</td>
+        <td class="td-kana">まいしゅう</td>
+        <td class="td-mono">maishuu</td>
+        <td class="td-en">every week</td>
+      </tr>
+      <tr>
+        <td>毎月</td>
+        <td class="td-kana">まいつき</td>
+        <td class="td-mono">maitsuki</td>
+        <td class="td-en">every month</td>
+      </tr>
+      <tr>
+        <td>毎年</td>
+        <td class="td-kana">まいとし</td>
+        <td class="td-mono">maitoshi</td>
+        <td class="td-en">every year</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ── X times a period ── -->
+  <h3>? Times a (Period) — [period] に [number] 回 (かい · kai)</h3>
+
+  <div class="note-box">
+    Formula: <strong>[period] に + [number] + 回 (かい · kai)</strong><br>
+    <span style="font-family:'DM Mono',monospace;font-size:0.8rem">
+      週 (しゅう · shuu) に … kai &nbsp;=&nbsp; X times a week<br>
+      月 (つき · tsuki) に … kai &nbsp;=&nbsp; X times a month<br>
+      年 (ねん · nen) に … kai &nbsp;=&nbsp; X times a year
+    </span>
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>English</th><th>Kanji</th><th>Kana</th><th>Romaji</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="td-en">twice a week</td>
+        <td>週に2回</td>
+        <td class="td-kana">しゅうに にかい</td>
+        <td class="td-mono">shuu ni ni kai</td>
+      </tr>
+      <tr>
+        <td class="td-en">three times a month</td>
+        <td>月に3回</td>
+        <td class="td-kana">つきに さんかい</td>
+        <td class="td-mono">tsuki ni san kai</td>
+      </tr>
+      <tr>
+        <td class="td-en">four times a year</td>
+        <td>年に4回</td>
+        <td class="td-kana">ねんに よんかい</td>
+        <td class="td-mono">nen ni yon kai</td>
+      </tr>
+      <tr style="background:rgba(184,150,46,0.1)">
+        <td class="td-en">X times a week</td>
+        <td>週に[#]回</td>
+        <td class="td-kana">しゅうに [かず] かい</td>
+        <td class="td-mono">shuu ni [number] kai</td>
+      </tr>
+      <tr style="background:rgba(184,150,46,0.1)">
+        <td class="td-en">X times a month</td>
+        <td>月に[#]回</td>
+        <td class="td-kana">つきに [かず] かい</td>
+        <td class="td-mono">tsuki ni [number] kai</td>
+      </tr>
+      <tr style="background:rgba(184,150,46,0.1)">
+        <td class="td-en">X times a year</td>
+        <td>年に[#]回</td>
+        <td class="td-kana">ねんに [かず] かい</td>
+        <td class="td-mono">nen ni [number] kai</td>
+      </tr>
+    </tbody>
+  </table>
+
+</section>
+
+<!-- ══════════════════════════════════════════
+     § 6  TIME REFERENCE & に
+══════════════════════════════════════════ -->
+<section id="timereference">
+
+  <div class="section-header">
+    <h2>Time Reference &amp; に (ni)</h2>
+    <span class="pill pill-teal">時間の基準 · じかんのきじゅん</span>
+  </div>
+
+  <div class="note-box">
+    There are <strong>3 kinds</strong> of time reference words in Japanese, defined by how they behave with the particle
+    <span style="font-family:'Noto Serif JP',serif">に</span>
+    <span style="font-family:'DM Mono',monospace;font-size:0.82rem">(ni)</span>.
+    Getting this right is one of the most common early-learner pitfalls.
+  </div>
+
+  <!-- ── Category 1: ALWAYS require に ── -->
+  <h3 style="color:var(--red)">① Always require に (ni)</h3>
+
+  <table>
+    <thead>
+      <tr><th>Category</th><th>Example (EN)</th><th>Japanese</th><th>Romaji</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="2">Days of the week</td>
+        <td class="td-en">on Sunday</td>
+        <td class="td-kana">日曜日（にちようび）に</td>
+        <td class="td-mono">nichiyoubi <strong>ni</strong></td>
+      </tr>
+      <tr>
+        <td class="td-en">on Monday</td>
+        <td class="td-kana">月曜日（げつようび）に</td>
+        <td class="td-mono">getsuyoubi <strong>ni</strong></td>
+      </tr>
+      <tr>
+        <td rowspan="2">Numerical time expressions<br><span style="font-size:0.82rem;font-style:italic;color:var(--muted)">(clock times, months)</span></td>
+        <td class="td-en">at 10:42</td>
+        <td class="td-kana">10時（じ）42分（ふん）に</td>
+        <td class="td-mono">juuji yonjuunifun <strong>ni</strong></td>
+      </tr>
+      <tr>
+        <td class="td-en">in September</td>
+        <td class="td-kana">9月（くがつ）に</td>
+        <td class="td-mono">kugatsu <strong>ni</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ── Category 2: NEVER require に ── -->
+  <h3 style="color:var(--pill-teal);margin-top:1.5rem">② Never require に (ni)</h3>
+
+  <table>
+    <thead>
+      <tr><th>Category</th><th>Example (EN)</th><th>Japanese</th><th>Romaji</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="2">Relative to the present moment<br><span style="font-size:0.82rem;font-style:italic;color:var(--muted)">(today, tomorrow, yesterday…)</span></td>
+        <td class="td-en">today</td>
+        <td class="td-kana">今日（きょう）</td>
+        <td class="td-mono">kyou <span style="color:var(--red)">✗ ni</span></td>
+      </tr>
+      <tr>
+        <td class="td-en">tomorrow</td>
+        <td class="td-kana">明日（あした）</td>
+        <td class="td-mono">ashita <span style="color:var(--red)">✗ ni</span></td>
+      </tr>
+      <tr>
+        <td>Regular intervals<br><span style="font-size:0.82rem;font-style:italic;color:var(--muted)">(every day, every week…)</span></td>
+        <td class="td-en">every day</td>
+        <td class="td-kana">毎日（まいにち）</td>
+        <td class="td-mono">mainichi <span style="color:var(--red)">✗ ni</span></td>
+      </tr>
+      <tr>
+        <td>The word "when"</td>
+        <td class="td-en">when</td>
+        <td class="td-kana">いつ</td>
+        <td class="td-mono">itsu <span style="color:var(--red)">✗ ni</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ── Category 3: SOMETIMES require に ── -->
+  <h3 style="color:var(--pill-amber);margin-top:1.5rem">③ Sometimes require に (ni)</h3>
+  <p style="font-size:0.9rem;color:var(--muted);margin-bottom:0.8rem;font-style:italic">Depending on style, emphasis, and personal preference — both with and without に are acceptable.</p>
+
+  <table>
+    <thead>
+      <tr><th>Category</th><th>Example (EN)</th><th>Japanese</th><th>Romaji</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="2">Parts of a day</td>
+        <td class="td-en">in the morning</td>
+        <td class="td-kana">朝（あさ）（に）</td>
+        <td class="td-mono">asa (ni)</td>
+      </tr>
+      <tr>
+        <td class="td-en">at night</td>
+        <td class="td-kana">夜（よる）（に）</td>
+        <td class="td-mono">yoru (ni)</td>
+      </tr>
+      <tr>
+        <td>Weekend</td>
+        <td class="td-en">on the weekend</td>
+        <td class="td-kana">週末（しゅうまつ）（に）</td>
+        <td class="td-mono">shuumatsu (ni)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ── Vocab ── -->
+  <h3 style="margin-top:1.5rem">Vocabulary — Time Reference Words</h3>
+
+  <table>
+    <thead>
+      <tr><th>Kanji</th><th>Kana</th><th>Romaji</th><th>Meaning</th><th>に?</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>毎日</td>
+        <td class="td-kana">まいにち</td>
+        <td class="td-mono">mainichi</td>
+        <td class="td-en">everyday</td>
+        <td class="td-mono" style="color:var(--red)">never</td>
+      </tr>
+      <tr>
+        <td>—</td>
+        <td class="td-kana">いつ</td>
+        <td class="td-mono">itsu</td>
+        <td class="td-en">when</td>
+        <td class="td-mono" style="color:var(--red)">never</td>
+      </tr>
+      <tr>
+        <td>朝</td>
+        <td class="td-kana">あさ</td>
+        <td class="td-mono">asa</td>
+        <td class="td-en">(in the) morning</td>
+        <td class="td-mono" style="color:var(--pill-amber)">optional</td>
+      </tr>
+      <tr>
+        <td>夜</td>
+        <td class="td-kana">よる</td>
+        <td class="td-mono">yoru</td>
+        <td class="td-en">(at) night</td>
+        <td class="td-mono" style="color:var(--pill-amber)">optional</td>
+      </tr>
+      <tr>
+        <td>週末</td>
+        <td class="td-kana">しゅうまつ</td>
+        <td class="td-mono">shuumatsu</td>
+        <td class="td-en">weekend</td>
+        <td class="td-mono" style="color:var(--pill-amber)">optional</td>
+      </tr>
+      <tr>
+        <td>平日</td>
+        <td class="td-kana">へいじつ</td>
+        <td class="td-mono">heijitsu</td>
+        <td class="td-en">weekday</td>
+        <td class="td-mono" style="color:var(--pill-amber)">optional</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ── Practice example ── -->
+  <h3 style="margin-top:1.5rem">Practice — Spot the Difference</h3>
+
+  <div class="note-box" style="margin-top:0">
+    Q: <span style="font-family:'Noto Serif JP',serif">いつ図書館（としょかん）に行きますか？</span>
+    <span style="font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--muted)"> — itsu toshokan ni ikimasu ka? — "When do you go to the library?"</span>
+  </div>
+
+  <div class="sentence-breakdown">
+    <div class="sb-jp">A: 日曜日（にちようび）<strong>に</strong> 行きます。</div>
+    <div class="sb-romaji">nichiyoubi <strong>ni</strong> ikimasu.</div>
+    <div class="sb-en">"I go on Sunday."</div>
+    <div class="sb-note">▸ day of the week → <strong>always</strong> needs に</div>
+  </div>
+
+  <div class="sentence-breakdown">
+    <div class="sb-jp">B: 毎日（まいにち） 行きます。</div>
+    <div class="sb-romaji">mainichi ikimasu.</div>
+    <div class="sb-en">"I go every day."</div>
+    <div class="sb-note">▸ regular interval → <strong>never</strong> takes に</div>
+  </div>
+
+  <div class="sentence-breakdown" style="border-left-color:var(--pill-amber)">
+    <div class="sb-jp" style="color:var(--pill-amber)">C: 朝（あさ）行きます。</div>
+    <div class="sb-romaji">asa ikimasu.</div>
+    <div class="sb-en">"I go in the morning."</div>
+    <div class="sb-note">▸ part of a day → に is <strong>optional</strong> (asa に is also acceptable)</div>
+  </div>
+
+</section>
+
+</body>
+</html>

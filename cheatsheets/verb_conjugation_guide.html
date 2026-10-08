@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Japanese Tense Matrix</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=DM+Mono:wght@300;400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1a1208;
+    --paper: #f5f0e8;
+    --red: #c0392b;
+    --gold: #b8962e;
+    --muted: #6b5d4f;
+    --line: #d4c9b0;
+    --blue: #2c4a6e;
+    --green: #1e6b4a;
+    --present: #b03030;
+    --past: #1a3a6e;
+    --aff-bg: rgba(176,48,48,0.06);
+    --neg-bg: rgba(26,58,110,0.06);
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    min-height: 100vh;
+    padding: 2.5rem 1rem;
+    background-image:
+      radial-gradient(ellipse at 10% 10%, rgba(192,57,43,0.04) 0%, transparent 60%),
+      radial-gradient(ellipse at 90% 90%, rgba(184,150,46,0.05) 0%, transparent 60%);
+  }
+
+  header { text-align: center; margin-bottom: 2rem; }
+
+  .jp-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 300;
+    color: var(--red);
+    letter-spacing: 0.15em;
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+
+  .subtitle { font-size: 1.05rem; color: var(--muted); font-style: italic; }
+
+  .divider {
+    width: 120px; height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    margin: 1rem auto;
+  }
+
+  /* Section label */
+  .section-label {
+    max-width: 820px;
+    margin: 2rem auto 0.5rem;
+    display: flex; align-items: center; gap: 0.8rem;
+  }
+  .section-title { font-size: 1.05rem; font-weight: 600; letter-spacing: 0.08em; color: var(--ink); }
+  .section-badge {
+    font-family: 'DM Mono', monospace; font-size: 0.7rem;
+    padding: 2px 10px; border-radius: 2px; color: #fff;
+    letter-spacing: 0.08em; text-transform: uppercase;
+  }
+  .badge-be   { background: #6b3fa0; }
+  .badge-verb { background: var(--blue); }
+
+  /* Matrix table */
+  .matrix-wrap {
+    max-width: 820px;
+    margin: 0 auto 0.5rem;
+    overflow-x: auto;
+    border-radius: 3px;
+    box-shadow: 0 2px 24px rgba(26,18,8,0.10);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fdfaf4;
+    min-width: 480px;
+  }
+
+  /* Header row */
+  thead tr { background: var(--ink); color: var(--paper); }
+  thead th {
+    padding: 0.85rem 1.2rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400; font-size: 0.78rem;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    text-align: center;
+  }
+  thead th:first-child { text-align: left; width: 110px; }
+
+  .th-present { border-bottom: 4px solid var(--present); }
+  .th-past    { border-bottom: 4px solid var(--past); }
+
+  /* Row labels */
+  .row-label {
+    padding: 0 1rem;
+    vertical-align: middle;
+    text-align: left;
+  }
+
+  .label-tag {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    padding: 3px 10px;
+    border-radius: 2px;
+    color: #fff;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .tag-aff { background: var(--present); }
+  .tag-neg { background: var(--past); }
+
+  /* Data cells */
+  td {
+    padding: 1rem 1.2rem;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid var(--line);
+    line-height: 1.7;
+  }
+
+  tr.aff-row td { background: var(--aff-bg); }
+  tr.neg-row td { background: var(--neg-bg); }
+
+  .romaji {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.92rem;
+    font-weight: 400;
+    color: var(--ink);
+    display: block;
+  }
+
+  .romaji .stem { color: var(--muted); }
+  .romaji .ending-present { color: var(--present); font-weight: 600; }
+  .romaji .ending-past    { color: var(--past);    font-weight: 600; }
+
+  .hira {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.88rem;
+    color: var(--muted);
+    display: block;
+    margin-top: 3px;
+  }
+
+  .hira .h-ending-present { color: var(--present); }
+  .hira .h-ending-past    { color: var(--past); }
+
+  .example {
+    font-size: 0.78rem;
+    color: var(--muted);
+    font-style: italic;
+    display: block;
+    margin-top: 6px;
+    border-top: 1px dashed var(--line);
+    padding-top: 5px;
+  }
+
+  /* Explain box */
+  .explain-box {
+    max-width: 820px;
+    margin: 1.2rem auto 0;
+    background: #fdfaf4;
+    border-left: 3px solid var(--gold);
+    padding: 0.9rem 1.4rem;
+    font-size: 0.88rem;
+    color: var(--muted);
+    box-shadow: 0 1px 8px rgba(26,18,8,0.06);
+    line-height: 1.8;
+  }
+  .explain-box strong { color: var(--ink); }
+  .explain-box .mono { font-family: 'DM Mono', monospace; font-size: 0.82rem; color: var(--blue); }
+
+  footer { text-align: center; margin-top: 2.5rem; font-size: 0.85rem; color: var(--muted); font-style: italic; }
+
+  @media (max-width: 600px) {
+    body { padding: 1.2rem 0.4rem; }
+    td, th { padding: 0.7rem 0.6rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="jp-title">時制マトリックス</div>
+  <div class="subtitle">Japanese Tense Matrix — To Be & Action Verbs</div>
+  <div class="divider"></div>
+</header>
+
+<!-- ===== UNIFIED MATRIX ===== -->
+<div class="section-label">
+  <span class="section-title">Complete Verb & To Be — Tense Matrix</span>
+  <span class="section-badge badge-verb">All forms</span>
+</div>
+
+<div class="matrix-wrap">
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left;width:160px;"></th>
+      <th class="th-present">Present<br><small style="opacity:0.6;font-size:0.85em">affirmative</small></th>
+      <th class="th-present" style="border-bottom:4px solid #8e3a20;">Present<br><small style="opacity:0.6;font-size:0.85em">negative</small></th>
+      <th class="th-past">Past<br><small style="opacity:0.6;font-size:0.85em">affirmative</small></th>
+      <th class="th-past" style="border-bottom:4px solid #4a3a8e;">Past<br><small style="opacity:0.6;font-size:0.85em">negative</small></th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <!-- DESU -->
+    <tr class="aff-row">
+      <td class="row-label" style="text-align:left;padding:1rem;">
+        <span class="label-tag" style="background:#6b3fa0;display:block;margin-bottom:4px">To be</span>
+        <span style="font-family:'DM Mono',monospace;font-size:0.8rem;color:var(--muted)">desu</span><br>
+        <span style="font-family:'Noto Serif JP',serif;font-size:0.78rem;color:var(--muted);display:block">(です)</span>
+        <span style="font-size:0.75rem;color:var(--muted);font-style:italic">noun / adjective</span>
+      </td>
+      <td>
+        <span class="romaji">(noun) + <span class="ending-present">desu</span></span>
+        <span class="hira">(noun) + <span class="h-ending-present">です</span></span>
+        <span class="example">gakusei desu<br>(がくせいです)<br>I am a student.</span>
+      </td>
+      <td style="background:rgba(142,58,32,0.06)">
+        <span class="romaji">(noun) + <span style="color:#8e3a20;font-weight:600">ja nai desu</span></span>
+        <span class="hira">(noun) + <span style="color:#8e3a20">じゃないです</span></span>
+        <span class="example">gakusei ja nai desu<br>(がくせいじゃないです)<br>I am not a student.</span>
+        <span class="example" style="border-top:none;padding-top:0;margin-top:0;font-size:0.72rem">formal: ja arimasen (じゃありません)</span>
+      </td>
+      <td style="background:rgba(26,58,110,0.06)">
+        <span class="romaji">(noun) + <span class="ending-past">deshita</span></span>
+        <span class="hira">(noun) + <span class="h-ending-past">でした</span></span>
+        <span class="example">gakusei deshita<br>(がくせいでした)<br>I was a student.</span>
+      </td>
+      <td style="background:rgba(74,58,142,0.06)">
+        <span class="romaji">(noun) + <span style="color:#4a3a8e;font-weight:600">ja nakatta desu</span></span>
+        <span class="hira">(noun) + <span style="color:#4a3a8e">じゃなかったです</span></span>
+        <span class="example">gakusei ja nakatta desu<br>(がくせいじゃなかったです)<br>I was not a student.</span>
+        <span class="example" style="border-top:none;padding-top:0;margin-top:0;font-size:0.72rem">formal: ja arimasen deshita</span>
+      </td>
+    </tr>
+
+    <!-- DIVIDER ROW -->
+    <tr>
+      <td colspan="5" style="background:var(--ink);color:var(--paper);font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;padding:0.4rem 1rem;text-align:center;">
+        Action Verbs — endings are identical across all types once in masu-stem
+      </td>
+    </tr>
+
+    <!-- RU VERBS -->
+    <tr>
+      <td class="row-label" style="text-align:left;padding:1rem;background:#faf7ef;">
+        <span class="label-tag" style="background:#1e6b4a;display:block;margin-bottom:4px">RU-verb</span>
+        <span style="font-family:'DM Mono',monospace;font-size:0.8rem;color:var(--muted)">Group 2</span><br>
+        <span style="font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--ink)">taberu</span>
+        <span style="font-family:'Noto Serif JP',serif;font-size:0.78rem;color:var(--muted);display:block">(たべる)</span>
+        <span style="font-size:0.75rem;color:var(--muted);font-style:italic">to eat — drop -ru + masu</span>
+      </td>
+      <td style="background:#faf7ef;">
+        <span class="romaji">tabe<span class="ending-present">masu</span></span>
+        <span class="hira">たべ<span class="h-ending-present">ます</span></span>
+        <span class="example">I eat / will eat.</span>
+      </td>
+      <td style="background:rgba(142,58,32,0.04)">
+        <span class="romaji">tabe<span style="color:#8e3a20;font-weight:600">masen</span></span>
+        <span class="hira">たべ<span style="color:#8e3a20">ません</span></span>
+        <span class="example">I don't eat.</span>
+      </td>
+      <td style="background:rgba(26,58,110,0.04)">
+        <span class="romaji">tabe<span class="ending-past">mashita</span></span>
+        <span class="hira">たべ<span class="h-ending-past">ました</span></span>
+        <span class="example">I ate.</span>
+      </td>
+      <td style="background:rgba(74,58,142,0.04)">
+        <span class="romaji">tabe<span style="color:#4a3a8e;font-weight:600">masen deshita</span></span>
+        <span class="hira">たべ<span style="color:#4a3a8e">ませんでした</span></span>
+        <span class="example">I didn't eat.</span>
+      </td>
+    </tr>
+
+    <!-- U VERBS -->
+    <tr class="aff-row">
+      <td class="row-label" style="text-align:left;padding:1rem;">
+        <span class="label-tag" style="background:#2c4a6e;display:block;margin-bottom:4px">U-verb</span>
+        <span style="font-family:'DM Mono',monospace;font-size:0.8rem;color:var(--muted)">Group 1</span><br>
+        <span style="font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--ink)">iku</span>
+        <span style="font-family:'Noto Serif JP',serif;font-size:0.78rem;color:var(--muted);display:block">(いく)</span>
+        <span style="font-size:0.75rem;color:var(--muted);font-style:italic">to go — -ku → -ki + masu</span>
+      </td>
+      <td>
+        <span class="romaji">iki<span class="ending-present">masu</span></span>
+        <span class="hira">いき<span class="h-ending-present">ます</span></span>
+        <span class="example">I go / will go.</span>
+      </td>
+      <td style="background:rgba(142,58,32,0.06)">
+        <span class="romaji">iki<span style="color:#8e3a20;font-weight:600">masen</span></span>
+        <span class="hira">いき<span style="color:#8e3a20">ません</span></span>
+        <span class="example">I don't go.</span>
+      </td>
+      <td style="background:rgba(26,58,110,0.06)">
+        <span class="romaji">iki<span class="ending-past">mashita</span></span>
+        <span class="hira">いき<span class="h-ending-past">ました</span></span>
+        <span class="example">I went.</span>
+      </td>
+      <td style="background:rgba(74,58,142,0.06)">
+        <span class="romaji">iki<span style="color:#4a3a8e;font-weight:600">masen deshita</span></span>
+        <span class="hira">いき<span style="color:#4a3a8e">ませんでした</span></span>
+        <span class="example">I didn't go.</span>
+      </td>
+    </tr>
+
+    <!-- SURU -->
+    <tr>
+      <td class="row-label" style="text-align:left;padding:1rem;background:#faf7ef;">
+        <span class="label-tag" style="background:#c0392b;display:block;margin-bottom:4px">Irregular</span>
+        <span style="font-family:'DM Mono',monospace;font-size:0.8rem;color:var(--muted)">suru</span><br>
+        <span style="font-family:'Noto Serif JP',serif;font-size:0.78rem;color:var(--muted);display:block">(する)</span>
+        <span style="font-size:0.75rem;color:var(--muted);font-style:italic">to do — suru → shi</span>
+      </td>
+      <td style="background:#faf7ef;">
+        <span class="romaji">shi<span class="ending-present">masu</span></span>
+        <span class="hira">し<span class="h-ending-present">ます</span></span>
+        <span class="example">I do / will do.</span>
+      </td>
+      <td style="background:rgba(142,58,32,0.04)">
+        <span class="romaji">shi<span style="color:#8e3a20;font-weight:600">masen</span></span>
+        <span class="hira">し<span style="color:#8e3a20">ません</span></span>
+        <span class="example">I don't do.</span>
+      </td>
+      <td style="background:rgba(26,58,110,0.04)">
+        <span class="romaji">shi<span class="ending-past">mashita</span></span>
+        <span class="hira">し<span class="h-ending-past">ました</span></span>
+        <span class="example">I did.</span>
+      </td>
+      <td style="background:rgba(74,58,142,0.04)">
+        <span class="romaji">shi<span style="color:#4a3a8e;font-weight:600">masen deshita</span></span>
+        <span class="hira">し<span style="color:#4a3a8e">ませんでした</span></span>
+        <span class="example">I didn't do.</span>
+      </td>
+    </tr>
+
+    <!-- KURU -->
+    <tr class="aff-row">
+      <td class="row-label" style="text-align:left;padding:1rem;">
+        <span class="label-tag" style="background:#c0392b;display:block;margin-bottom:4px">Irregular</span>
+        <span style="font-family:'DM Mono',monospace;font-size:0.8rem;color:var(--muted)">kuru</span><br>
+        <span style="font-family:'Noto Serif JP',serif;font-size:0.78rem;color:var(--muted);display:block">(くる)</span>
+        <span style="font-size:0.75rem;color:var(--muted);font-style:italic">to come — kuru → ki</span>
+      </td>
+      <td>
+        <span class="romaji">ki<span class="ending-present">masu</span></span>
+        <span class="hira">き<span class="h-ending-present">ます</span></span>
+        <span class="example">I come / will come.</span>
+      </td>
+      <td style="background:rgba(142,58,32,0.06)">
+        <span class="romaji">ki<span style="color:#8e3a20;font-weight:600">masen</span></span>
+        <span class="hira">き<span style="color:#8e3a20">ません</span></span>
+        <span class="example">I don't come.</span>
+      </td>
+      <td style="background:rgba(26,58,110,0.06)">
+        <span class="romaji">ki<span class="ending-past">mashita</span></span>
+        <span class="hira">き<span class="h-ending-past">ました</span></span>
+        <span class="example">I came.</span>
+      </td>
+      <td style="background:rgba(74,58,142,0.06)">
+        <span class="romaji">ki<span style="color:#4a3a8e;font-weight:600">masen deshita</span></span>
+        <span class="hira">き<span style="color:#4a3a8e">ませんでした</span></span>
+        <span class="example">I didn't come.</span>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+
+<div class="explain-box" style="margin-top:1.2rem;">
+  <strong>Key pattern to remember:</strong> The present tense in Japanese also covers the future — <span class="mono">tabemasu</span> means both "I eat" (habit) and "I will eat" (future intention). Context makes it clear which is meant! Also note that <span class="mono">ja nai desu</span> (casual) and <span class="mono">ja arimasen</span> (formal) are interchangeable — same meaning, different register.
+</div>
+
+<footer>
+  <div class="divider" style="margin-top:2rem;"></div>
+  Tip: the endings do all the work — the noun or verb stem never changes across tense or polarity!
+</footer>
+
+</body>
+</html>

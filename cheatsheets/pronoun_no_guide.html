@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pronoun の Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:    #f5f0e8;
+    --dark:     #2c1f12;
+    --gold:     #b8962e;
+    --gold-lt:  #e8d9a0;
+    --red:      #c0392b;
+    --muted:    #6b5d4f;
+    --row-alt:  #ede8db;
+    --border:   #d4c9b0;
+    --purple:   #6a4c93;
+    --teal:     #2a7f7f;
+    --coral:    #c0392b;
+    --amber:    #b8962e;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--dark);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 4rem;
+  }
+
+  /* ── Page title ── */
+  .page-title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 2px solid var(--gold);
+  }
+  .page-title h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--dark);
+  }
+  .page-title .jp-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.1rem;
+    color: var(--muted);
+    margin-top: 0.25rem;
+  }
+  .page-title .badge {
+    display: inline-block;
+    margin-top: 0.6rem;
+    padding: 0.2rem 0.85rem;
+    border-radius: 999px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    background: var(--purple);
+    color: #fff;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  /* ── Section headings ── */
+  .section-heading {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin: 2rem 0 1rem;
+  }
+  .section-heading h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--dark);
+    letter-spacing: 0.03em;
+  }
+  .section-heading .pill {
+    display: inline-block;
+    padding: 0.15rem 0.7rem;
+    border-radius: 999px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+  }
+  .pill-purple { background: var(--purple); color: #fff; }
+  .pill-teal   { background: var(--teal);   color: #fff; }
+  .pill-coral  { background: var(--coral);  color: #fff; }
+  .pill-amber  { background: var(--amber);  color: #fff; }
+
+  /* ── Gold note box ── */
+  .note-box {
+    border-left: 4px solid var(--gold);
+    background: #faf6e8;
+    padding: 0.85rem 1.1rem;
+    margin: 1rem 0;
+    border-radius: 0 6px 6px 0;
+  }
+  .note-box p {
+    font-size: 1rem;
+    color: var(--dark);
+    line-height: 1.6;
+  }
+  .note-box .note-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    margin-bottom: 0.3rem;
+    display: block;
+  }
+
+  /* ── Formula / structure bars ── */
+  .formula-bar {
+    border-left: 4px solid var(--gold);
+    background: #f0ebe0;
+    padding: 0.75rem 1.1rem;
+    margin: 0.6rem 0;
+    border-radius: 0 6px 6px 0;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.95rem;
+    color: var(--dark);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+  .formula-bar .arrow {
+    color: var(--gold);
+    font-size: 1.1rem;
+  }
+  .formula-bar .highlight {
+    color: var(--red);
+    font-weight: 500;
+  }
+
+  /* ── Table ── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.97rem;
+  }
+  thead tr {
+    background: var(--dark);
+    color: #f5f0e8;
+    border-bottom: 3px solid var(--gold);
+  }
+  thead th {
+    padding: 0.6rem 0.9rem;
+    text-align: left;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  tbody tr:nth-child(even) { background: var(--row-alt); }
+  tbody tr:nth-child(odd)  { background: var(--paper); }
+  tbody td {
+    padding: 0.55rem 0.9rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  .jp { font-family: 'Noto Serif JP', serif; }
+  .romaji {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  .en { font-style: italic; color: var(--muted); }
+  .red { color: var(--red); }
+
+  /* ── Example blocks ── */
+  .example-block {
+    background: #faf6ee;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    margin: 0.9rem 0;
+  }
+  .example-block .ex-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--gold);
+    margin-bottom: 0.6rem;
+    display: block;
+  }
+  .example-block .english {
+    font-style: italic;
+    color: var(--muted);
+    font-size: 0.97rem;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px dashed var(--border);
+  }
+
+  /* sentence rows */
+  .sentence {
+    margin-bottom: 0.75rem;
+  }
+  .sentence .kana-line {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.05rem;
+    color: var(--dark);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    align-items: baseline;
+    margin-bottom: 0.15rem;
+  }
+  .sentence .kana-line span { display: inline-block; }
+  .sentence .kana-line .red { color: var(--red); }
+  .sentence .romaji-line {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    padding-left: 0.05rem;
+  }
+  .sentence .romaji-line span { display: inline-block; }
+  .sentence .romaji-line .red { color: var(--red); }
+  .sentence-eng {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin-top: 0.1rem;
+    padding-left: 0.1rem;
+  }
+
+  /* ── Divider ── */
+  hr.section-rule {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 2rem 0;
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════ PAGE TITLE ══════════════ -->
+<div class="page-title">
+  <h1>Pronoun &nbsp;の</h1>
+  <div class="jp-title">の — Noun &amp; Adjective Substitute</div>
+  <span class="badge">Grammar · Beginner</span>
+</div>
+
+<!-- ══════════════ CONCEPT ══════════════ -->
+<div class="section-heading">
+  <h2>What is Pronoun の?</h2>
+  <span class="pill pill-purple">Concept</span>
+</div>
+
+<div class="note-box">
+  <span class="note-label">Key Rule</span>
+  <p>When a noun follows an adjective (or another noun with の), and it is clear from context what you are referring to, you can <strong>replace that noun with の</strong> — functioning like the English pronoun <em>"one"</em>. This avoids repetition.</p>
+</div>
+
+<!-- ══════════════ PATTERNS ══════════════ -->
+<div class="section-heading">
+  <h2>Formation Patterns</h2>
+  <span class="pill pill-teal">Pattern</span>
+</div>
+
+<p style="margin-bottom:0.7rem;">The original noun is dropped and の takes its place, regardless of whether the modifier is an い-adjective, な-adjective, or a noun with の.</p>
+
+<div class="formula-bar">
+  <span>い-adjective + noun</span>
+  <span class="arrow">⇒</span>
+  <span>い-adjective + <span class="highlight">の</span></span>
+</div>
+
+<div class="formula-bar">
+  <span>な-adjective + noun</span>
+  <span class="arrow">⇒</span>
+  <span>な-adjective + <span class="highlight">の</span></span>
+</div>
+
+<div class="formula-bar">
+  <span>Noun1 の Noun2</span>
+  <span class="arrow">⇒</span>
+  <span>Noun1 の _____ &nbsp;&nbsp;(<span class="highlight">の</span> alone, Noun2 omitted)</span>
+</div>
+
+<div class="note-box" style="margin-top:1rem;">
+  <span class="note-label">Noun + の</span>
+  <p>When a noun follows another noun linked by の, the second noun can simply be omitted, leaving <strong>Noun1 の</strong> standing alone to mean "Noun1's [one]".</p>
+</div>
+
+<!-- ══════════════ EXAMPLES ══════════════ -->
+<hr class="section-rule">
+<div class="section-heading">
+  <h2>Examples</h2>
+  <span class="pill pill-coral">Examples</span>
+</div>
+
+<!-- Example 1 -->
+<div class="example-block">
+  <span class="ex-label">Example 1 — い-adjective の</span>
+  <div class="english">"I have a black sweater. I have a red <em>one</em>, too."</div>
+
+  <div class="sentence">
+    <div class="kana-line">
+      <span>黒(くろ)い</span>
+      <span>セーター</span>
+      <span>を</span>
+      <span>持(も)っています。</span>
+    </div>
+    <div class="romaji-line">
+      <span>kuroi</span>
+      <span>se-ta-</span>
+      <span>o</span>
+      <span>motteimasu.</span>
+    </div>
+    <div class="sentence-eng">I have a black sweater.</div>
+  </div>
+
+  <div class="sentence">
+    <div class="kana-line">
+      <span class="red">赤(あか)い</span>
+      <span class="red">の</span>
+      <span class="red">も</span>
+      <span class="red">持(も)っています。</span>
+    </div>
+    <div class="romaji-line">
+      <span class="red">akai</span>
+      <span class="red">no</span>
+      <span class="red">mo</span>
+      <span class="red">motteimasu.</span>
+    </div>
+    <div class="sentence-eng">I have a red one, too. &nbsp;<em>(の = sweater)</em></div>
+  </div>
+</div>
+
+<!-- Example 2 -->
+<div class="example-block">
+  <span class="ex-label">Example 2 — い-adjective の</span>
+  <div class="english">"I went to buy a cheap dictionary, but there were no good <em>ones</em>."</div>
+
+  <div class="sentence">
+    <div class="kana-line">
+      <span>安(やす)い</span>
+      <span>辞書(じしょ)</span>
+      <span>を</span>
+      <span>買(か)いに行(い)きました。</span>
+    </div>
+    <div class="romaji-line">
+      <span>yasui</span>
+      <span>jisho</span>
+      <span>o</span>
+      <span>kai ni ikimashita.</span>
+    </div>
+    <div class="sentence-eng">I went to buy a cheap dictionary.</div>
+  </div>
+
+  <div class="sentence">
+    <div class="kana-line">
+      <span class="red">でも</span>
+      <span class="red">いい</span>
+      <span class="red">の</span>
+      <span class="red">が</span>
+      <span class="red">ありませんでした。</span>
+    </div>
+    <div class="romaji-line">
+      <span class="red">demo</span>
+      <span class="red">ii</span>
+      <span class="red">no</span>
+      <span class="red">ga</span>
+      <span class="red">arimasendeshita.</span>
+    </div>
+    <div class="sentence-eng">But there were no good ones. &nbsp;<em>(の = 辞書)</em></div>
+  </div>
+</div>
+
+<!-- Example 3 -->
+<div class="example-block">
+  <span class="ex-label">Example 3 — Noun の (possessive context)</span>
+  <div class="english">(In answer to "Is this Sue's bag?") &nbsp;"No, that is Mary's."</div>
+
+  <div class="sentence">
+    <div class="kana-line">
+      <span>いいえ、</span>
+      <span>それ</span>
+      <span>は</span>
+      <span>メアリー</span>
+      <span>の</span>
+      <span>です。</span>
+    </div>
+    <div class="romaji-line">
+      <span>iie,</span>
+      <span>sore</span>
+      <span>wa</span>
+      <span>Mearii</span>
+      <span>no</span>
+      <span>desu.</span>
+    </div>
+    <div class="sentence-eng">No, that is Mary's. &nbsp;<em>(の = bag / バッグ omitted)</em></div>
+  </div>
+</div>
+
+<!-- Example 4 -->
+<div class="example-block">
+  <span class="ex-label">Example 4 — Noun の Noun reduced</span>
+  <div class="english">"American ice cream is more delicious than Japanese <em>one</em>."</div>
+
+  <div class="sentence">
+    <div class="kana-line">
+      <span>アメリカ</span>
+      <span>の</span>
+      <span>アイスクリーム</span>
+      <span>のほうが</span>
+      <span class="red">日本(にほん)</span>
+      <span class="red">の</span>
+      <span>より</span>
+      <span>おいしいです。</span>
+    </div>
+    <div class="romaji-line">
+      <span>Amerika</span>
+      <span>no</span>
+      <span>aisukuri-mu</span>
+      <span>no houga</span>
+      <span class="red">Nihon</span>
+      <span class="red">no</span>
+      <span>yori</span>
+      <span>oishiidesu.</span>
+    </div>
+    <div class="sentence-eng">American ice cream is more delicious than Japanese <em>one</em>. &nbsp;<em>(日本の = Japanese ice cream)</em></div>
+  </div>
+
+  <div class="note-box" style="margin-top:0.75rem;">
+    <span class="note-label">Note</span>
+    <p><strong>アメリカ の アイスクリーム</strong> = "Noun1 の Noun2" (full form) &nbsp;|&nbsp; <strong class="red">日本 の</strong> = "Noun1 の ___" (Noun2 / アイスクリーム dropped)</p>
+  </div>
+</div>
+
+<!-- ══════════════ SUMMARY TABLE ══════════════ -->
+<hr class="section-rule">
+<div class="section-heading">
+  <h2>Quick Reference</h2>
+  <span class="pill pill-amber">Summary</span>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Modifier type</th>
+      <th>Full form</th>
+      <th>Reduced with の</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>い-adjective</td>
+      <td>
+        <span class="jp">赤い セーター</span><br>
+        <span class="romaji">akai se-ta-</span><br>
+        <span class="en">red sweater</span>
+      </td>
+      <td>
+        <span class="jp red">赤い の</span><br>
+        <span class="romaji red">akai no</span><br>
+        <span class="en">red one</span>
+      </td>
+    </tr>
+    <tr>
+      <td>な-adjective</td>
+      <td>
+        <span class="jp">きれいな 部屋</span><br>
+        <span class="romaji">kirei na heya</span><br>
+        <span class="en">clean room</span>
+      </td>
+      <td>
+        <span class="jp red">きれいな の</span><br>
+        <span class="romaji red">kirei na no</span><br>
+        <span class="en">clean one</span>
+      </td>
+    </tr>
+    <tr>
+      <td>Noun の Noun</td>
+      <td>
+        <span class="jp">日本 の アイスクリーム</span><br>
+        <span class="romaji">Nihon no aisukuri-mu</span><br>
+        <span class="en">Japanese ice cream</span>
+      </td>
+      <td>
+        <span class="jp red">日本 の</span><br>
+        <span class="romaji red">Nihon no</span><br>
+        <span class="en">Japanese one</span>
+      </td>
+    </tr>
+    <tr>
+      <td>Noun (possessive)</td>
+      <td>
+        <span class="jp">メアリー の バッグ</span><br>
+        <span class="romaji">Mearii no baggu</span><br>
+        <span class="en">Mary's bag</span>
+      </td>
+      <td>
+        <span class="jp red">メアリー の</span><br>
+        <span class="romaji red">Mearii no</span><br>
+        <span class="en">Mary's (one)</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="note-box" style="margin-top:1rem;">
+  <span class="note-label">Remember</span>
+  <p>の as a pronoun is only natural when the noun being replaced is <strong>clear from context</strong>. When in doubt, keep the full noun to avoid ambiguity.</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Japanese Te-form</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=DM+Mono:wght@300;400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink:    #1a1208;
+    --paper:  #f5f0e8;
+    --red:    #c0392b;
+    --gold:   #b8962e;
+    --muted:  #6b5d4f;
+    --line:   #d4c9b0;
+    --blue:   #2c4a6e;
+    --green:  #1e6b4a;
+    --purple: #5b3587;
+    --th-bg:  #2c1f12;
+    --alt:    #ede8db;
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    min-height: 100vh;
+    padding: 2.5rem 1rem 4rem;
+    background-image:
+      radial-gradient(ellipse at 10% 10%, rgba(192,57,43,0.04) 0%, transparent 60%),
+      radial-gradient(ellipse at 90% 90%, rgba(184,150,46,0.05) 0%, transparent 60%);
+  }
+
+  header { text-align: center; margin-bottom: 2.5rem; }
+
+  .jp-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-weight: 300;
+    color: var(--red);
+    letter-spacing: 0.15em;
+    line-height: 1;
+    margin-bottom: 0.2rem;
+  }
+  .jp-title-rom {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--muted);
+    letter-spacing: 0.18em;
+    margin-bottom: 0.35rem;
+    display: block;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    color: var(--muted);
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  .divider {
+    width: 120px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    margin: 1rem auto;
+  }
+
+  /* ── Section headings ── */
+  .section-label {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    margin: 2.2rem 0 0.7rem;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.3rem, 3vw, 1.9rem);
+    font-weight: 600;
+    color: var(--ink);
+    text-align: center;
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.04em;
+  }
+
+  /* ── Tables ── */
+  .table-wrap { overflow-x: auto; margin-bottom: 0.5rem; }
+
+  table {
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: 1rem;
+  }
+
+  thead tr { background: var(--th-bg); color: #f5f0e8; }
+
+  thead th {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    letter-spacing: 0.06em;
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 2px solid var(--gold);
+  }
+
+  tbody tr { transition: background 0.15s; }
+  tbody tr:nth-child(even) { background: var(--alt); }
+  tbody tr:hover { background: #e5dfd1; }
+
+  td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+    line-height: 1.5;
+  }
+
+  /* Verb type badge */
+  .vtype {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+  .vtype.ru   { background: #d5eaf3; color: var(--blue); }
+  .vtype.u    { background: #d5ead8; color: var(--green); }
+  .vtype.irr  { background: #e8d5f3; color: var(--purple); }
+  .vtype.iadj { background: #fde8d5; color: #a04020; }
+  .vtype.nadj { background: #fdf3d5; color: #8a6a00; }
+  .vtype.noun { background: #e0ead5; color: #3a5a20; }
+
+  /* Group sub-label */
+  .group-tag {
+    font-size: 0.76rem;
+    color: var(--muted);
+    font-style: italic;
+    display: block;
+    margin-top: 3px;
+    line-height: 1.5;
+  }
+  /* Romaji sub-note inside group-tag */
+  .group-tag .gr {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    font-style: normal;
+    color: var(--muted);
+  }
+
+  /* Mini いる conjugation table */
+  .iru-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.83rem;
+    margin-top: 8px;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .iru-table th {
+    background: rgba(44,30,18,0.1);
+    padding: 4px 8px;
+    font-weight: 600;
+    text-align: center;
+    border: 1px solid var(--line);
+    color: var(--ink);
+  }
+  .iru-table td {
+    padding: 4px 8px;
+    border: 1px solid var(--line);
+    text-align: center;
+    background: transparent;
+  }
+  .iru-table .kana  { font-size: 0.9rem; }
+  .iru-table .romaji { font-size: 0.72rem; }
+
+  /* Rule cell */
+  .rule-cell { font-size: 0.97rem; color: #2a1f0f; line-height: 1.65; }
+  .rule-cell em { color: var(--red); font-style: normal; font-weight: 600; }
+  .rule-cell .rom-note {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-left: 3px;
+  }
+
+  /* Kana display */
+  .kana {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--ink);
+    display: block;
+  }
+  .romaji {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--muted);
+    display: block;
+    margin-top: 1px;
+  }
+  .te-end { color: var(--red); font-weight: 700; }
+
+  /* Inline kana+romaji pair */
+  .kr { display: inline; white-space: nowrap; }
+  .kr .k { font-family: 'Noto Serif JP', serif; font-size: 0.95rem; }
+  .kr .r { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted); margin-left: 2px; }
+
+  /* Usage table */
+  .usage-cell { font-size: 0.97rem; }
+  .usage-badge {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.8rem;
+    display: inline-block;
+    padding: 2px 9px;
+    border-radius: 3px;
+    background: #f0e6d0;
+    color: #7a5520;
+    border: 1px solid #d4b88a;
+    white-space: nowrap;
+  }
+  .structure {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.82rem;
+    background: rgba(44,30,18,0.06);
+    border-left: 3px solid var(--gold);
+    padding: 4px 8px;
+    margin-top: 5px;
+    color: var(--ink);
+    display: inline-block;
+    border-radius: 0 3px 3px 0;
+    line-height: 1.6;
+  }
+  .meaning-tag {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--muted);
+    display: block;
+    margin-top: 3px;
+  }
+
+  .footnote {
+    max-width: 860px;
+    margin: 0.6rem auto 0;
+    font-size: 0.88rem;
+    color: var(--muted);
+    font-style: italic;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .note-box {
+    max-width: 860px;
+    margin: 1rem auto 0;
+    background: #fdf6e3;
+    border: 1px solid #d4b88a;
+    border-left: 4px solid var(--gold);
+    border-radius: 4px;
+    padding: 10px 14px;
+    font-size: 0.93rem;
+    color: #5a3e1b;
+    line-height: 1.75;
+  }
+  .note-box strong { color: var(--red); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="jp-title">て形 — Te-form</div>
+  <span class="jp-title-rom">te-kei</span>
+  <div class="subtitle">Conjugation Rules &amp; Usages</div>
+  <div class="divider"></div>
+</header>
+
+<!-- ════════════ PART 1 ════════════ -->
+<div class="section-label">Part I</div>
+<div class="section-title">Conjugation Rules — Verbs, Adjectives &amp; Nouns</div>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th style="width:22%">Type</th>
+      <th style="width:42%">Rule</th>
+      <th style="width:36%">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <!-- RU-VERB -->
+    <tr>
+      <td>
+        <span class="vtype ru">Ru-verb</span>
+        <span class="group-tag">All ru-verbs<br>
+          <span class="gr">(ichidan · ends in -iru / -eru)</span>
+        </span>
+      </td>
+      <td class="rule-cell">
+        Remove <em>る <span class="rom-note">(ru)</span></em> from dictionary form → add <em>て <span class="rom-note">(te)</span></em>
+      </td>
+      <td>
+        <span class="kana">食（た）べる → 食（た）べ<span class="te-end">て</span></span>
+        <span class="romaji">taberu → tabe<span class="te-end">te</span> &nbsp;·&nbsp; "to eat"</span>
+      </td>
+    </tr>
+
+    <!-- U-VERB GROUP 1 -->
+    <tr>
+      <td>
+        <span class="vtype u">U-verb</span>
+        <span class="group-tag">Group 1 · ends in
+          <span class="kr"><span class="k">う</span><span class="r">(u)</span></span>、
+          <span class="kr"><span class="k">つ</span><span class="r">(tsu)</span></span>、
+          <span class="kr"><span class="k">る</span><span class="r">(ru)*</span></span>
+        </span>
+      </td>
+      <td class="rule-cell">
+        Remove final letter → add <em>って <span class="rom-note">(tte)</span></em>
+      </td>
+      <td>
+        <span class="kana">取（と）る → 取（と）<span class="te-end">って</span></span>
+        <span class="romaji">toru → to<span class="te-end">tte</span> &nbsp;·&nbsp; "to take"</span>
+      </td>
+    </tr>
+
+    <!-- U-VERB GROUP 2 -->
+    <tr>
+      <td>
+        <span class="vtype u">U-verb</span>
+        <span class="group-tag">Group 2 · ends in
+          <span class="kr"><span class="k">む</span><span class="r">(mu)</span></span>、
+          <span class="kr"><span class="k">ぶ</span><span class="r">(bu)</span></span>、
+          <span class="kr"><span class="k">ぬ</span><span class="r">(nu)</span></span>
+        </span>
+      </td>
+      <td class="rule-cell">
+        Remove final letter → add <em>んで <span class="rom-note">(nde)</span></em>
+      </td>
+      <td>
+        <span class="kana">死（し）ぬ → 死（し）<span class="te-end">んで</span></span>
+        <span class="romaji">shinu → shi<span class="te-end">nde</span> &nbsp;·&nbsp; "to die"</span>
+      </td>
+    </tr>
+
+    <!-- U-VERB GROUP 3 -->
+    <tr>
+      <td>
+        <span class="vtype u">U-verb</span>
+        <span class="group-tag">Group 3 · ends in
+          <span class="kr"><span class="k">く</span><span class="r">(ku)</span></span>
+        </span>
+      </td>
+      <td class="rule-cell">
+        Remove final letter → add <em>いて <span class="rom-note">(ite)</span></em>
+      </td>
+      <td>
+        <span class="kana">書（か）く → 書（か）<span class="te-end">いて</span></span>
+        <span class="romaji">kaku → ka<span class="te-end">ite</span> &nbsp;·&nbsp; "to write"</span>
+      </td>
+    </tr>
+
+    <!-- U-VERB GROUP 4 -->
+    <tr>
+      <td>
+        <span class="vtype u">U-verb</span>
+        <span class="group-tag">Group 4 · ends in
+          <span class="kr"><span class="k">ぐ</span><span class="r">(gu)</span></span>
+        </span>
+      </td>
+      <td class="rule-cell">
+        Remove final letter → add <em>いで <span class="rom-note">(ide)</span></em>
+      </td>
+      <td>
+        <span class="kana">泳（およ）ぐ → 泳（およ）<span class="te-end">いで</span></span>
+        <span class="romaji">oyogu → oyo<span class="te-end">ide</span> &nbsp;·&nbsp; "to swim"</span>
+      </td>
+    </tr>
+
+    <!-- U-VERB GROUP 5 -->
+    <tr>
+      <td>
+        <span class="vtype u">U-verb</span>
+        <span class="group-tag">Group 5 · ends in
+          <span class="kr"><span class="k">す</span><span class="r">(su)</span></span>
+        </span>
+      </td>
+      <td class="rule-cell">
+        Remove final letter → add <em>して <span class="rom-note">(shite)</span></em>
+      </td>
+      <td>
+        <span class="kana">話（はな）す → 話（はな）<span class="te-end">して</span></span>
+        <span class="romaji">hanasu → hana<span class="te-end">shite</span> &nbsp;·&nbsp; "to speak"</span>
+      </td>
+    </tr>
+
+    <!-- IRREGULAR -->
+    <tr>
+      <td>
+        <span class="vtype irr">Irregular</span>
+        <span class="group-tag">
+          <span class="kr"><span class="k">する</span><span class="r">(suru)</span></span>
+          &amp;
+          <span class="kr"><span class="k">くる</span><span class="r">(kuru)</span></span>
+          only
+        </span>
+      </td>
+      <td class="rule-cell">
+        No pattern — must be memorised
+      </td>
+      <td>
+        <span class="kana">する → <span class="te-end">して</span></span>
+        <span class="romaji">suru → <span class="te-end">shite</span> &nbsp;·&nbsp; "to do"</span>
+        <span class="kana" style="margin-top:6px">くる → <span class="te-end">きて</span></span>
+        <span class="romaji">kuru → <span class="te-end">kite</span> &nbsp;·&nbsp; "to come"</span>
+      </td>
+    </tr>
+
+    <!-- DIVIDER ROW -->
+    <tr>
+      <td colspan="3" style="background:#2c1f12; color:#f5f0e8; font-family:'Noto Serif JP',serif; font-size:0.82rem; letter-spacing:0.12em; text-align:center; padding:6px 14px; text-transform:uppercase;">
+        Adjectives &amp; Nouns — Te-form for Joining Sentences
+      </td>
+    </tr>
+
+    <!-- い-ADJECTIVE -->
+    <tr>
+      <td>
+        <span class="vtype iadj">い-Adjective</span>
+        <span class="group-tag">All い-adjectives<br>
+          <span class="gr">(i-adjective)</span>
+        </span>
+      </td>
+      <td class="rule-cell">
+        Replace final <em>い <span class="rom-note">(i)</span></em> with <em>くて <span class="rom-note">(kute)</span></em><br>
+        <span style="font-size:0.82rem;color:var(--muted);font-style:italic">
+          Exception:
+          <span class="kr"><span class="k">いい</span><span class="r">(ii)</span></span>
+          (good) →
+          <span class="kr"><span class="k">よくて</span><span class="r">(yokute)</span></span>
+        </span>
+      </td>
+      <td>
+        <span class="kana">やす<span class="te-end">い</span> → やす<span class="te-end">くて</span></span>
+        <span class="romaji">yasu<span class="te-end">i</span> → yasu<span class="te-end">kute</span> &nbsp;·&nbsp; "cheap"</span>
+        <span class="kana" style="margin-top:6px">いい → よ<span class="te-end">くて</span></span>
+        <span class="romaji">ii → yo<span class="te-end">kute</span> &nbsp;·&nbsp; "good" (irregular)</span>
+      </td>
+    </tr>
+
+    <!-- な-ADJECTIVE -->
+    <tr>
+      <td>
+        <span class="vtype nadj">な-Adjective</span>
+        <span class="group-tag">All な-adjectives<br>
+          <span class="gr">(na-adjective)</span>
+        </span>
+      </td>
+      <td class="rule-cell">
+        Replace final <em>な <span class="rom-note">(na)</span></em> with <em>で <span class="rom-note">(de)</span></em>
+      </td>
+      <td>
+        <span class="kana">げんき<span class="te-end">な</span> → げんき<span class="te-end">で</span></span>
+        <span class="romaji">genki<span class="te-end">na</span> → genki<span class="te-end">de</span> &nbsp;·&nbsp; "healthy/energetic"</span>
+        <span class="kana" style="margin-top:6px">きれい<span class="te-end">な</span> → きれい<span class="te-end">で</span></span>
+        <span class="romaji">kirei<span class="te-end">na</span> → kirei<span class="te-end">de</span> &nbsp;·&nbsp; "clean/pretty"</span>
+      </td>
+    </tr>
+
+    <!-- NOUN + です -->
+    <tr>
+      <td>
+        <span class="vtype noun">Noun + です</span>
+        <span class="group-tag">Any noun sentence<br>
+          <span class="gr">(noun + desu)</span>
+        </span>
+      </td>
+      <td class="rule-cell">
+        Replace <em>です <span class="rom-note">(desu)</span></em> with <em>で <span class="rom-note">(de)</span></em>
+      </td>
+      <td>
+        <span class="kana">にほんじん<span class="te-end">です</span> → にほんじん<span class="te-end">で</span></span>
+        <span class="romaji">nihonjin<span class="te-end">desu</span> → nihonjin<span class="te-end">de</span> &nbsp;·&nbsp; "Japanese person"</span>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+
+<!-- ════════════ PART 2 ════════════ -->
+<div class="section-label" style="margin-top:3rem">Part II</div>
+<div class="section-title">Usages</div>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th style="width:22%">Usage</th>
+      <th style="width:42%">Structure &amp; Meaning</th>
+      <th style="width:36%">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <!-- USAGE 1 : REQUESTS -->
+    <tr>
+      <td>
+        <span class="usage-badge">Making Requests</span>
+        <span class="meaning-tag">"Please do … for me."</span>
+      </td>
+      <td class="usage-cell">
+        <div class="structure">te-form + <span class="kr"><span class="k">ください</span><span class="r">(kudasai)</span></span></div>
+      </td>
+      <td>
+        <span class="kana">ここに書（か）い<span class="te-end">て</span>ください。</span>
+        <span class="romaji">Koko ni ka<span class="te-end">ite</span> kudasai.</span>
+        <span class="meaning-tag">"Please write it here."</span>
+      </td>
+    </tr>
+
+    <!-- USAGE 2 : PERMISSION -->
+    <tr>
+      <td>
+        <span class="usage-badge">Permission</span>
+        <span class="meaning-tag">"You may do …"</span>
+      </td>
+      <td class="usage-cell">
+        <div class="structure">te-form + <span class="kr"><span class="k">もいいです</span><span class="r">(mo ii desu)</span></span></div>
+        <span class="meaning-tag" style="margin-top:6px;display:block">→ granting permission</span>
+        <div class="structure" style="margin-top:4px">te-form + <span class="kr"><span class="k">もいいですか？</span><span class="r">(mo ii desu ka?)</span></span></div>
+        <span class="meaning-tag" style="margin-top:4px;display:block">→ asking permission: "May I …?"</span>
+        <div class="structure" style="margin-top:4px">te-form + <span class="kr"><span class="k">はいけません</span><span class="r">(wa ikemasen)</span></span></div>
+        <span class="meaning-tag" style="margin-top:4px;display:block">→ prohibition: "You must not …"</span>
+      </td>
+      <td>
+        <span class="kana">ここに座（すわ）っ<span class="te-end">て</span>もいいです。</span>
+        <span class="romaji">Koko ni suwa<span class="te-end">tte</span> mo ii desu.</span>
+        <span class="meaning-tag">"You may sit here."</span>
+        <br>
+        <span class="kana">写真（しゃしん）を撮（と）っ<span class="te-end">て</span>もいいですか？</span>
+        <span class="romaji">Shashin o to<span class="te-end">tte</span> mo ii desu ka?</span>
+        <span class="meaning-tag">"May I take a photo?"</span>
+        <br>
+        <span class="kana">ここで食（た）べ<span class="te-end">て</span>はいけません。</span>
+        <span class="romaji">Koko de tabe<span class="te-end">te</span> wa ikemasen.</span>
+        <span class="meaning-tag">"You must not eat here."</span>
+      </td>
+    </tr>
+
+    <!-- USAGE 3 : CONNECTING VERBS -->
+    <tr>
+      <td>
+        <span class="usage-badge">Connecting Verbs</span>
+        <span class="meaning-tag">"Do A, then do B" / manner of action</span>
+      </td>
+      <td class="usage-cell">
+        <div class="structure">[verb 1 te-form] + [verb 2 present aff.]</div>
+        <span class="meaning-tag" style="margin-top:6px;display:block">
+          · Verb 1 (te-form) = first action or the manner<br>
+          · Verb 2 (present affirmative) = sets the tense<br>
+          · Can chain more than 2 verbs
+        </span>
+      </td>
+      <td>
+        <span class="kana">バスに乗（の）っ<span class="te-end">て</span>仕事（しごと）に行（い）きます。</span>
+        <span class="romaji">Basu ni no<span class="te-end">tte</span> shigoto ni ikimasu.</span>
+        <span class="meaning-tag">"I go to work by bus." (lit. ride the bus and go to work)</span>
+      </td>
+    </tr>
+
+    <!-- USAGE 4 : TE + いる → ACTION IN PROGRESS -->
+    <tr>
+      <td>
+        <span class="usage-badge">Action in Progress</span>
+        <span class="meaning-tag">"is doing …" (present continuous)</span>
+      </td>
+      <td class="usage-cell">
+        <div class="structure">te-form + <span class="kr"><span class="k">いる</span><span class="r">(iru)</span></span></div>
+        <span class="meaning-tag" style="margin-top:6px;display:block">Used with verbs describing activities that last (eating, reading, waiting…). The helping verb <span class="kr"><span class="k">いる</span><span class="r">(iru)</span></span> is conjugated for tense:</span>
+        <table class="iru-table">
+          <tr><th></th><th>Affirmative</th><th>Negative</th></tr>
+          <tr>
+            <td><b>Present</b></td>
+            <td><span class="kana">います</span><span class="romaji">imasu</span></td>
+            <td><span class="kana">いません</span><span class="romaji">imasen</span></td>
+          </tr>
+          <tr>
+            <td><b>Past</b></td>
+            <td><span class="kana">いました</span><span class="romaji">imashita</span></td>
+            <td><span class="kana">いませんでした</span><span class="romaji">imasendeshita</span></td>
+          </tr>
+        </table>
+      </td>
+      <td>
+        <span class="kana">スーは今（いま）勉強（べんきょう）し<span class="te-end">て</span>います。</span>
+        <span class="romaji">Su- wa ima benkyou shi<span class="te-end">te</span> imasu.</span>
+        <span class="meaning-tag">"Sue is studying right now."</span>
+        <br>
+        <span class="kana" style="margin-top:4px;display:block;font-size:0.85rem;color:var(--muted)">cf. 勉強します (benkyou shimasu) = "Sue will study" (future/habitual)</span>
+      </td>
+    </tr>
+
+    <!-- USAGE 5 : TE + いる → CURRENT STATE -->
+    <tr>
+      <td>
+        <span class="usage-badge">Current State</span>
+        <span class="meaning-tag">"is [state]…" — result of past change</span>
+      </td>
+      <td class="usage-cell">
+        <div class="structure">te-form + <span class="kr"><span class="k">いる</span><span class="r">(iru)</span></span></div>
+        <span class="meaning-tag" style="margin-top:6px;display:block">
+          Used with verbs describing an instantaneous change (marry, wear, know, live…).
+          <span class="kr"><span class="k">ている</span><span class="r">(te iru)</span></span>
+          expresses the <em>resulting state</em>, not the act itself.<br>
+          Common verbs:
+          <span class="kr"><span class="k">知る</span><span class="r">(shiru)</span></span>、
+          <span class="kr"><span class="k">着る</span><span class="r">(kiru)</span></span>、
+          <span class="kr"><span class="k">住む</span><span class="r">(sumu)</span></span>、
+          <span class="kr"><span class="k">持つ</span><span class="r">(motsu)</span></span>、
+          <span class="kr"><span class="k">結婚する</span><span class="r">(kekkon suru)</span></span>…
+        </span>
+      </td>
+      <td>
+        <span class="kana">みのりは結婚（けっこん）し<span class="te-end">て</span>います。</span>
+        <span class="romaji">Minori wa kekkon shi<span class="te-end">te</span> imasu.</span>
+        <span class="meaning-tag">"Minori is married." (current status)</span>
+        <br>
+        <span class="kana" style="margin-top:6px">みちこはTシャツを着（き）<span class="te-end">て</span>います。</span>
+        <span class="romaji">Michiko wa T-shatsu o ki<span class="te-end">te</span> imasu.</span>
+        <span class="meaning-tag">"Michiko is wearing a T-shirt." (current state)</span>
+      </td>
+    </tr>
+
+    <!-- USAGE 6 : ADJECTIVE / NOUN JOINING -->
+    <tr>
+      <td>
+        <span class="usage-badge">Joining Adj. &amp; Nouns</span>
+        <span class="meaning-tag">"… and …" — linking descriptions</span>
+      </td>
+      <td class="usage-cell">
+        <div class="structure">[adj/noun te-form] + [adj/noun present aff.]</div>
+        <span class="meaning-tag" style="margin-top:6px;display:block">Use the te-form of い/な-adjectives and Noun+<span class="kr"><span class="k">です</span><span class="r">(desu)</span></span> to chain two or more descriptions.</span>
+      </td>
+      <td>
+        <span class="kana">綺麗（きれい）<span class="te-end">で</span>、広（ひろ）いです。</span>
+        <span class="romaji">kirei<span class="te-end">de</span>, hiroi desu.</span>
+        <span class="meaning-tag">"[It is] clean and spacious."</span>
+        <br>
+        <span class="kana" style="margin-top:6px">けんは日本人（にほんじん）<span class="te-end">で</span>、学生（がくせい）です。</span>
+        <span class="romaji">Ken wa nihonjin<span class="te-end">de</span>, gakusei desu.</span>
+        <span class="meaning-tag">"Ken is Japanese and a student."</span>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+
+<p class="note-box">
+  <strong>★ Key rules to remember:</strong>
+  (1) When connecting verbs or adjectives, only the <em>last</em> element carries the tense. &nbsp;
+  (2) <span class="kr"><span class="k">ている</span><span class="r">(te iru)</span></span> with activity verbs = action in progress; with change-of-state verbs = current result/status. &nbsp;
+  (3) You can chain more than 2 elements using te-form throughout.
+</p>
+
+<div class="divider" style="margin-top:2.5rem"></div>
+<p class="footnote"><span class="kr"><span class="k">て形</span><span class="r">(te-kei)</span></span> · Japanese Te-form Reference</p>
+
+</body>
+</html>

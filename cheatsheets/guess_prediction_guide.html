@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>〜でしょう Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:   #f5f0e8;
+    --dark:    #2c1f12;
+    --gold:    #b8962e;
+    --gold-lt: #faf6e8;
+    --red:     #c0392b;
+    --green:   #1a7a4a;
+    --muted:   #6b5d4f;
+    --row-alt: #ede8db;
+    --border:  #d4c9b0;
+    --purple:  #6a4c93;
+    --teal:    #2a7f7f;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--paper); color: var(--dark);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.05rem; line-height: 1.65;
+    max-width: 820px; margin: 0 auto; padding: 2.2rem 2rem 3.5rem;
+  }
+
+  .page-title {
+    text-align: center; margin-bottom: 2rem;
+    padding-bottom: 1rem; border-bottom: 2px solid var(--gold);
+  }
+  .page-title h1 { font-family: 'Noto Serif JP', serif; font-size: 2.3rem; font-weight: 700; }
+  .page-title .sub { font-family: 'DM Mono', monospace; font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem; }
+  .page-title .badge {
+    display: inline-block; margin-top: 0.5rem; padding: 0.18rem 0.8rem;
+    border-radius: 999px; font-family: 'DM Mono', monospace; font-size: 0.72rem;
+    background: var(--purple); color: #fff; letter-spacing: 0.06em; text-transform: uppercase;
+  }
+
+  .sh { display: flex; align-items: center; gap: 0.6rem; margin: 1.8rem 0 0.75rem; }
+  .sh h2 { font-size: 1.2rem; font-weight: 700; }
+  .pill {
+    display: inline-block; padding: 0.13rem 0.65rem; border-radius: 999px;
+    font-family: 'DM Mono', monospace; font-size: 0.68rem;
+    text-transform: uppercase; letter-spacing: 0.07em;
+  }
+  .pill-purple { background: var(--purple); color: #fff; }
+  .pill-teal   { background: var(--teal);   color: #fff; }
+  .pill-coral  { background: var(--red);    color: #fff; }
+  .pill-amber  { background: var(--gold);   color: #fff; }
+
+  .note-box {
+    border-left: 4px solid var(--gold); background: var(--gold-lt);
+    padding: 0.7rem 1rem; margin: 0.65rem 0; border-radius: 0 6px 6px 0; font-size: 0.97rem;
+  }
+  .note-box .nlabel {
+    font-family: 'DM Mono', monospace; font-size: 0.67rem; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--gold); margin-bottom: 0.2rem; display: block;
+  }
+
+  /* ── Main formation table ── */
+  table { width: 100%; border-collapse: collapse; margin: 0.8rem 0; font-size: 0.92rem; }
+  thead tr { background: var(--dark); color: #f5f0e8; border-bottom: 3px solid var(--gold); }
+  thead th {
+    padding: 0.5rem 0.75rem; font-family: 'DM Mono', monospace; font-size: 0.7rem;
+    text-transform: uppercase; letter-spacing: 0.06em; text-align: left;
+  }
+  .tbl-subhead td {
+    background: #e8e0d4; font-family: 'DM Mono', monospace; font-size: 0.7rem;
+    text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted);
+    padding: 0.3rem 0.75rem; border-bottom: 1px solid var(--border);
+  }
+  tbody tr:not(.tbl-subhead):nth-child(even) { background: var(--row-alt); }
+  tbody tr:not(.tbl-subhead):nth-child(odd)  { background: var(--paper); }
+  tbody td { padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: middle; line-height: 1.4; }
+  .jp  { font-family: 'Noto Serif JP', serif; }
+  .rom { font-family: 'DM Mono', monospace; font-size: 0.76rem; color: var(--muted); display: block; }
+  .en  { font-style: italic; color: var(--muted); font-size: 0.88rem; }
+  .red { color: var(--red); }
+  .grn { color: var(--green); }
+
+  /* ── Variant cards ── */
+  .var-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.7rem; margin: 0.8rem 0; }
+  @media (max-width:560px) { .var-grid { grid-template-columns: 1fr; } }
+  .var-card {
+    border: 1px solid var(--border); border-radius: 8px;
+    padding: 0.7rem 0.85rem; background: #faf6ee; text-align: center;
+  }
+  .var-card .vc-label {
+    font-family: 'DM Mono', monospace; font-size: 0.67rem; text-transform: uppercase;
+    letter-spacing: 0.08em; margin-bottom: 0.3rem; display: block;
+  }
+  .var-card .jp-big { font-family: 'Noto Serif JP', serif; font-size: 1.3rem; }
+  .var-card .rom2 { font-family: 'DM Mono', monospace; font-size: 0.73rem; color: var(--muted); display: block; margin-top: 0.1rem; }
+  .var-card .desc { font-style: italic; font-size: 0.88rem; color: var(--muted); margin-top: 0.35rem; padding-top: 0.3rem; border-top: 1px dashed var(--border); }
+
+  /* ── Example blocks ── */
+  .ex-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.65rem; margin-top: 0.75rem; }
+  @media (max-width:560px) { .ex-grid { grid-template-columns: 1fr; } }
+  .ex-block {
+    background: #faf6ee; border: 1px solid var(--border); border-radius: 8px;
+    padding: 0.75rem 0.9rem;
+  }
+  .ex-block .ex-label {
+    font-family: 'DM Mono', monospace; font-size: 0.64rem; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--gold); margin-bottom: 0.3rem; display: block;
+  }
+  .ex-block .english {
+    font-style: italic; font-size: 0.93rem; margin-bottom: 0.5rem;
+    padding-bottom: 0.35rem; border-bottom: 1px dashed var(--border);
+  }
+  .jp-row { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 0.3rem 0.55rem; }
+  .jp-token { display: flex; flex-direction: column; align-items: center; gap: 0.03rem; }
+  .jp-token .kana { font-family: 'Noto Serif JP', serif; font-size: 1rem; }
+  .jp-token .rom2 { font-family: 'DM Mono', monospace; font-size: 0.68rem; color: var(--muted); }
+  .tbox {
+    border-radius: 7px; padding: 0.2rem 0.5rem;
+    display: flex; flex-direction: column; align-items: center; gap: 0.03rem;
+  }
+  .tbox .kana { font-family: 'Noto Serif JP', serif; font-size: 1rem; }
+  .tbox .rom2 { font-family: 'DM Mono', monospace; font-size: 0.68rem; color: var(--muted); }
+  .red-b { border: 2.5px solid var(--red);   background: #fef5f4; }
+  .grn-b { border: 2.5px solid var(--green); background: #edf7f2; }
+
+  hr.rule { border: none; border-top: 1px solid var(--border); margin: 1.8rem 0; }
+</style>
+</head>
+<body>
+
+<!-- ── TITLE ── -->
+<div class="page-title">
+  <h1>〜でしょう</h1>
+  <div class="sub">deshou &nbsp;·&nbsp; "probably" — guess or prediction</div>
+  <span class="badge">Grammar · Intermediate</span>
+</div>
+
+<!-- ── CONCEPT ── -->
+<div class="sh"><h2>Concept</h2><span class="pill pill-purple">Rules</span></div>
+
+<div class="note-box">
+  <span class="nlabel">Meaning</span>
+  <strong>でしょう</strong> is a sentence-final expression meaning <strong>"probably"</strong>. It is used when making a guess, prediction, or cautious assertion. It attaches directly to short forms — no な, の, or だ before it.
+</div>
+
+<!-- ── FORMATION TABLE ── -->
+<div class="sh"><h2>Formation</h2><span class="pill pill-amber">Summary table</span></div>
+
+<table>
+  <thead><tr>
+    <th>Word type</th>
+    <th>Present affirmative</th>
+    <th>Present negative</th>
+    <th>Past (aff &amp; neg)</th>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td><strong>Verb</strong></td>
+      <td>
+        <span class="jp grn">present short + でしょう</span>
+        <span class="rom">e.g. 降る でしょう <span style="font-style:italic;">(furu deshou)</span></span>
+      </td>
+      <td>
+        <span class="jp">present neg. short + でしょう</span>
+        <span class="rom">e.g. 降らない でしょう <span style="font-style:italic;">(furanai deshou)</span></span>
+      </td>
+      <td rowspan="4" style="vertical-align:middle;">
+        <span class="jp grn">past short + でしょう</span>
+        <span class="rom">applies to all word types (aff &amp; neg)</span>
+        <span class="rom" style="margin-top:0.5rem; display:block;">
+          e.g. 降った でしょう <span style="font-style:italic;">(futta deshou)</span><br>
+          e.g. 降らなかった でしょう <span style="font-style:italic;">(furanakatta deshou)</span><br>
+          e.g. 寒かった でしょう <span style="font-style:italic;">(samukatta deshou)</span><br>
+          e.g. 学生だった でしょう <span style="font-style:italic;">(gakusei datta deshou)</span>
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>い-adjective</strong></td>
+      <td>
+        <span class="jp grn">present short + でしょう</span>
+        <span class="rom">e.g. 寒い でしょう <span style="font-style:italic;">(samui deshou)</span></span>
+      </td>
+      <td>
+        <span class="jp">present neg. short + でしょう</span>
+        <span class="rom">e.g. 寒くない でしょう <span style="font-style:italic;">(samukunai deshou)</span></span>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>な-adjective</strong></td>
+      <td>
+        <span class="jp red">adj. base + でしょう</span>
+        <span class="rom red">e.g. 好き でしょう <span style="font-style:italic;">(suki deshou)</span></span>
+        <span class="en">no な or だ before でしょう</span>
+      </td>
+      <td>
+        <span class="jp">present neg. short + でしょう</span>
+        <span class="rom">e.g. 好きじゃない でしょう <span style="font-style:italic;">(suki ja nai deshou)</span></span>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Noun</strong></td>
+      <td>
+        <span class="jp red">noun + でしょう</span>
+        <span class="rom red">e.g. 学生 でしょう <span style="font-style:italic;">(gakusei deshou)</span></span>
+        <span class="en">no だ before でしょう</span>
+      </td>
+      <td>
+        <span class="jp">noun + じゃない でしょう</span>
+        <span class="rom">e.g. 学生じゃない でしょう <span style="font-style:italic;">(gakusei ja nai deshou)</span></span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ── VARIANTS ── -->
+<hr class="rule">
+<div class="sh"><h2>Variants</h2><span class="pill pill-teal">Usage</span></div>
+
+<div class="var-grid">
+  <div class="var-card">
+    <span class="vc-label" style="color:var(--purple);">Formal · Statement</span>
+    <span class="jp-big grn">〜でしょう</span>
+    <span class="rom2">~ deshou</span>
+    <div class="desc">"probably…" — prediction or guess</div>
+  </div>
+  <div class="var-card">
+    <span class="vc-label" style="color:var(--teal);">Formal · Question</span>
+    <span class="jp-big" style="color:var(--teal);">〜でしょうか</span>
+    <span class="rom2">~ deshou ka</span>
+    <div class="desc">Invites the listener's guess or opinion</div>
+  </div>
+  <div class="var-card">
+    <span class="vc-label" style="color:var(--red);">Casual · Confirmation</span>
+    <span class="jp-big red">〜でしょ?</span>
+    <span class="rom2">~ desho?</span>
+    <div class="desc">"right?" — seeks agreement on what was just said</div>
+  </div>
+</div>
+
+<div class="note-box" style="margin-top:0.6rem;">
+  <span class="nlabel">Short form</span>
+  The short / casual form of でしょう is <strong><span class="jp" style="font-size:1rem;">だろう</span> (darou)</strong>. Use it when cautiously phrasing a prediction or analysis in casual speech or inside a larger sentence (e.g. with と思います).
+</div>
+
+<!-- ── EXAMPLES ── -->
+<hr class="rule">
+<div class="sh"><h2>Examples</h2><span class="pill pill-coral">Examples</span></div>
+
+<div class="ex-grid">
+  <!-- Verb -->
+  <div class="ex-block">
+    <span class="ex-label">Verb · present aff.</span>
+    <div class="english">"It will probably rain tomorrow."</div>
+    <div class="jp-row">
+      <div class="jp-token"><span class="kana">明日(あした)</span><span class="rom2">ashita</span></div>
+      <div class="tbox red-b"><span class="kana">雨(あめ)が降(ふ)る</span><span class="rom2">ame ga furu</span></div>
+      <div class="tbox grn-b"><span class="kana">でしょう。</span><span class="rom2">deshou.</span></div>
+    </div>
+  </div>
+
+  <!-- い-adjective -->
+  <div class="ex-block">
+    <span class="ex-label">い-adjective · present aff.</span>
+    <div class="english">"It is probably cold in Hokkaido."</div>
+    <div class="jp-row">
+      <div class="jp-token"><span class="kana">北海道(ほっかいどう)は</span><span class="rom2">Hokkaido wa</span></div>
+      <div class="tbox red-b"><span class="kana">寒(さむ)い</span><span class="rom2">samui</span></div>
+      <div class="tbox grn-b"><span class="kana">でしょう。</span><span class="rom2">deshou.</span></div>
+    </div>
+  </div>
+
+  <!-- な-adjective -->
+  <div class="ex-block">
+    <span class="ex-label">な-adjective base · no な</span>
+    <div class="english">"Ken probably likes fish."</div>
+    <div class="jp-row">
+      <div class="jp-token"><span class="kana">けんは 魚(さかな)が</span><span class="rom2">Ken wa sakana ga</span></div>
+      <div class="tbox red-b"><span class="kana">好(す)き</span><span class="rom2">suki</span></div>
+      <div class="tbox grn-b"><span class="kana">でしょう。</span><span class="rom2">deshou.</span></div>
+    </div>
+  </div>
+
+  <!-- Noun -->
+  <div class="ex-block">
+    <span class="ex-label">Noun · no だ</span>
+    <div class="english">"Mako is probably a student."</div>
+    <div class="jp-row">
+      <div class="jp-token"><span class="kana">まこは</span><span class="rom2">Mako wa</span></div>
+      <div class="tbox red-b"><span class="kana">学生(がくせい)</span><span class="rom2">gakusei</span></div>
+      <div class="tbox grn-b"><span class="kana">でしょう。</span><span class="rom2">deshou.</span></div>
+    </div>
+  </div>
+
+  <!-- でしょうか -->
+  <div class="ex-block">
+    <span class="ex-label">でしょうか · invite opinion</span>
+    <div class="english">"Which would you say is more difficult, Japanese or Korean?"</div>
+    <div class="jp-row">
+      <div class="jp-token"><span class="kana">日本語と 韓国語と、どっちのほうが</span><span class="rom2">nihongo to kankokugo to, docchi no houga</span></div>
+      <div class="tbox red-b"><span class="kana">難(むずか)しい</span><span class="rom2">muzukashii</span></div>
+      <div class="tbox grn-b"><span class="kana">でしょうか?</span><span class="rom2">deshouka?</span></div>
+    </div>
+  </div>
+
+  <!-- だろう + でしょ -->
+  <div class="ex-block">
+    <span class="ex-label">だろう · casual / でしょ · confirmation</span>
+    <div class="english">"I think Takeshi would be interested." / "You understand Chinese, right?"</div>
+    <div class="jp-row" style="margin-bottom:0.45rem;">
+      <div class="jp-token"><span class="kana">たけしは 興味(きょうみ)がある</span><span class="rom2">takeshi wa kyoumi ga aru</span></div>
+      <div class="tbox grn-b"><span class="kana">だろう</span><span class="rom2">darou</span></div>
+      <div class="jp-token"><span class="kana">と思います。</span><span class="rom2">to omoimasu.</span></div>
+    </div>
+    <div class="jp-row">
+      <div class="jp-token"><span class="kana">ジョン、中国語(ちゅうごくご)が 分(わ)かる</span><span class="rom2">John, chuugokugo ga wakaru</span></div>
+      <div class="tbox grn-b"><span class="kana">でしょ?</span><span class="rom2">desho?</span></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

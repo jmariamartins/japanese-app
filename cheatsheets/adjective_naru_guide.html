@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adjective + なる Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:    #f5f0e8;
+    --dark:     #2c1f12;
+    --gold:     #b8962e;
+    --gold-lt:  #faf6e8;
+    --red:      #c0392b;
+    --green:    #1a7a4a;
+    --orange:   #c47c1a;
+    --muted:    #6b5d4f;
+    --row-alt:  #ede8db;
+    --border:   #d4c9b0;
+    --purple:   #6a4c93;
+    --teal:     #2a7f7f;
+    --amber:    #b8962e;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--dark);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 4rem;
+  }
+
+  /* ── Page title ── */
+  .page-title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 2px solid var(--gold);
+  }
+  .page-title h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: var(--dark);
+  }
+  .page-title h1 .jp { font-family: 'Noto Serif JP', serif; }
+  .page-title .sub {
+    font-size: 1rem;
+    color: var(--muted);
+    font-style: italic;
+    margin-top: 0.25rem;
+  }
+  .page-title .badge {
+    display: inline-block;
+    margin-top: 0.6rem;
+    padding: 0.2rem 0.85rem;
+    border-radius: 999px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    background: var(--purple);
+    color: #fff;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  /* ── Section headings ── */
+  .section-heading {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin: 2rem 0 0.9rem;
+  }
+  .section-heading h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--dark);
+    letter-spacing: 0.03em;
+  }
+  .pill {
+    display: inline-block;
+    padding: 0.15rem 0.7rem;
+    border-radius: 999px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+  }
+  .pill-purple { background: var(--purple); color: #fff; }
+  .pill-teal   { background: var(--teal);   color: #fff; }
+  .pill-coral  { background: var(--red);    color: #fff; }
+  .pill-amber  { background: var(--amber);  color: #fff; }
+
+  /* ── Note / gold box ── */
+  .note-box {
+    border-left: 4px solid var(--gold);
+    background: var(--gold-lt);
+    padding: 0.85rem 1.1rem;
+    margin: 1rem 0;
+    border-radius: 0 6px 6px 0;
+  }
+  .note-box .note-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    margin-bottom: 0.3rem;
+    display: block;
+  }
+  .note-box p { font-size: 1rem; color: var(--dark); line-height: 1.6; }
+
+  /* ── Warning box ── */
+  .warn-box {
+    border-left: 4px solid var(--red);
+    background: #fdf0ee;
+    padding: 0.85rem 1.1rem;
+    margin: 1rem 0;
+    border-radius: 0 6px 6px 0;
+  }
+  .warn-box .warn-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--red);
+    margin-bottom: 0.3rem;
+    display: block;
+  }
+  .warn-box p { font-size: 1rem; color: var(--dark); line-height: 1.6; }
+  .warn-box .jp-wrong {
+    font-family: 'Noto Serif JP', serif;
+    text-decoration: line-through;
+    color: var(--red);
+  }
+  .warn-box .jp-right {
+    font-family: 'Noto Serif JP', serif;
+    color: var(--green);
+  }
+
+  /* ── Formula bar ── */
+  .formula-bar {
+    border-left: 4px solid var(--gold);
+    background: #f0ebe0;
+    padding: 0.75rem 1.1rem;
+    margin: 0.5rem 0;
+    border-radius: 0 6px 6px 0;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.92rem;
+    color: var(--dark);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .formula-bar .arrow { color: var(--gold); font-size: 1.1rem; }
+  .formula-bar .jp { font-family: 'Noto Serif JP', serif; }
+  .formula-bar .red   { color: var(--red); }
+  .formula-bar .green { color: var(--green); }
+
+  /* ── Tables ── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.97rem;
+  }
+  thead tr {
+    background: var(--dark);
+    color: #f5f0e8;
+    border-bottom: 3px solid var(--gold);
+  }
+  thead th {
+    padding: 0.6rem 0.9rem;
+    text-align: left;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  thead th.center { text-align: center; }
+  tbody tr:nth-child(even) { background: var(--row-alt); }
+  tbody tr:nth-child(odd)  { background: var(--paper); }
+  tbody td {
+    padding: 0.6rem 0.9rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+    line-height: 1.5;
+  }
+  tbody td.center { text-align: center; }
+  .jp    { font-family: 'Noto Serif JP', serif; }
+  .rom   { font-family: 'DM Mono', monospace; font-size: 0.8rem; color: var(--muted); display: block; }
+  .en    { font-style: italic; color: var(--muted); }
+  .red   { color: var(--red); }
+  .green { color: var(--green); }
+  .orange{ color: var(--orange); }
+
+  /* Conj table cells */
+  .conj-cell { text-align: center; }
+  .conj-cell .jp { font-size: 1.05rem; }
+
+  /* ── Example blocks ── */
+  .example-block {
+    background: #faf6ee;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    margin: 0.9rem 0;
+  }
+  .example-block .ex-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  .example-block .english {
+    font-style: italic;
+    color: var(--dark);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.85rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px dashed var(--border);
+  }
+
+  /* Token row */
+  .jp-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.75rem;
+    align-items: flex-end;
+    margin-bottom: 0.5rem;
+  }
+  .jp-token {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.05rem;
+  }
+  .jp-token .kana {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.1rem;
+  }
+  .jp-token .rom2 {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--muted);
+  }
+
+  /* Highlighted token boxes */
+  .token-box {
+    border-radius: 8px;
+    padding: 0.25rem 0.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .token-box.red-box    { border: 2.5px solid var(--red);    background: #fef5f4; }
+  .token-box.green-box  { border: 2.5px solid var(--green);  background: #edf7f2; }
+  .token-box.orange-box { border: 2.5px solid var(--orange); background: #fef8ee; }
+
+  .token-box .kana { font-family: 'Noto Serif JP', serif; font-size: 1.1rem; }
+  .token-box .rom2 { font-family: 'DM Mono', monospace; font-size: 0.72rem; color: var(--muted); }
+
+  .box-labels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 1.2rem;
+    margin-top: 0.55rem;
+  }
+  .blabel {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+  }
+  .blabel.red    { color: var(--red); }
+  .blabel.green  { color: var(--green); }
+  .blabel.orange { color: var(--orange); }
+
+  hr.section-rule { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+</style>
+</head>
+<body>
+
+<!-- ══════════════ PAGE TITLE ══════════════ -->
+<div class="page-title">
+  <h1>Adjective + <span class="jp">なる</span></h1>
+  <div class="sub">なる (naru) — "to become" · indicating change</div>
+  <span class="badge">Grammar · Beginner–Intermediate</span>
+</div>
+
+<!-- ══════════════ CONCEPT ══════════════ -->
+<div class="section-heading">
+  <h2>What is なる?</h2>
+  <span class="pill pill-purple">Concept</span>
+</div>
+
+<div class="note-box">
+  <span class="note-label">Key Rule</span>
+  <p>The verb <strong><span style="font-family:'Noto Serif JP',serif;">なる</span> (naru)</strong> means <strong>"to become,"</strong> and indicates a <em>change of state</em>. It follows nouns and both types of adjectives, but the connector differs depending on the word type.</p>
+</div>
+
+<!-- ══════════════ FORMATION PATTERNS ══════════════ -->
+<div class="section-heading">
+  <h2>Formation Patterns</h2>
+  <span class="pill pill-teal">Pattern</span>
+</div>
+
+<div class="formula-bar">
+  <span>い-adj: drop <span class="red jp">い</span></span>
+  <span class="arrow">→</span>
+  <span>stem + <span class="red jp">く</span> + <span class="green jp">なる</span></span>
+  <span style="margin-left:auto;color:var(--muted);font-size:0.82rem;">e.g. あたたか<span class="red">い</span> → あたたか<span class="red">く</span><span class="green">なる</span></span>
+</div>
+
+<div class="formula-bar">
+  <span>な-adj: drop <span class="red jp">な</span></span>
+  <span class="arrow">→</span>
+  <span>stem + <span class="red jp">に</span> + <span class="green jp">なる</span></span>
+  <span style="margin-left:auto;color:var(--muted);font-size:0.82rem;">e.g. 静か<span class="red">な</span> → 静か<span class="red">に</span><span class="green">なる</span></span>
+</div>
+
+<div class="formula-bar">
+  <span>Noun</span>
+  <span class="arrow">→</span>
+  <span>Noun + <span class="red jp">に</span> + <span class="green jp">なる</span></span>
+  <span style="margin-left:auto;color:var(--muted);font-size:0.82rem;">e.g. 学生<span class="red">に</span><span class="green">なる</span></span>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Base form</th>
+      <th>+ なる (becomes …)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>い-adjective</td>
+      <td>
+        <span class="jp">あたたか<span class="red">い</span></span><br>
+        <span class="rom">atataka<span class="red">i</span></span><br>
+        <span class="en">warm</span>
+      </td>
+      <td>
+        <span class="jp">あたたか<span class="red">く</span><span class="green">なる</span></span><br>
+        <span class="rom">atataka<span class="red">ku</span><span class="green">naru</span></span><br>
+        <span class="en">to become warm</span>
+      </td>
+    </tr>
+    <tr>
+      <td>な-adjective</td>
+      <td>
+        <span class="jp">静か<span class="red">な</span></span><br>
+        <span class="rom">shizuka<span class="red">na</span></span><br>
+        <span class="en">quiet</span>
+      </td>
+      <td>
+        <span class="jp">静か<span class="red">に</span><span class="green">なる</span></span><br>
+        <span class="rom">shizuka<span class="red">ni</span><span class="green">naru</span></span><br>
+        <span class="en">to become quiet</span>
+      </td>
+    </tr>
+    <tr>
+      <td>Noun</td>
+      <td>
+        <span class="jp">学生</span><br>
+        <span class="rom">gakusei</span><br>
+        <span class="en">student</span>
+      </td>
+      <td>
+        <span class="jp">学生<span class="red">に</span><span class="green">なる</span></span><br>
+        <span class="rom">gakusei<span class="red">ni</span><span class="green">naru</span></span><br>
+        <span class="en">to become a student</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="warn-box">
+  <span class="warn-label">Common Mistake</span>
+  <p>With い-adjectives, the connector is <strong>く</strong>, <em>not</em> に. Do <strong>not</strong> copy the な-adj / noun pattern.<br>
+  <span class="jp-wrong">あたたかいになる</span> ✗ &nbsp;→&nbsp; <span class="jp-right">あたたかくなる</span> ✓</p>
+</div>
+
+<!-- ══════════════ CONJUGATION ══════════════ -->
+<hr class="section-rule">
+<div class="section-heading">
+  <h2><span style="font-family:'Noto Serif JP',serif;">なる</span> Conjugation</h2>
+  <span class="pill pill-amber">Conjugation</span>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th class="center">Affirmative</th>
+      <th class="center">Negative</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Present</strong></td>
+      <td class="conj-cell">
+        <span class="jp">なります</span><br>
+        <span class="rom">narimasu</span>
+      </td>
+      <td class="conj-cell">
+        <span class="jp">なりません</span><br>
+        <span class="rom">narimasen</span>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Past</strong></td>
+      <td class="conj-cell">
+        <span class="jp">なりました</span><br>
+        <span class="rom">narimashita</span>
+      </td>
+      <td class="conj-cell">
+        <span class="jp">なりませんでした</span><br>
+        <span class="rom">narimasendeshita</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ══════════════ EXAMPLES ══════════════ -->
+<hr class="section-rule">
+<div class="section-heading">
+  <h2>Examples</h2>
+  <span class="pill pill-coral">Examples</span>
+</div>
+
+<!-- Example 1 -->
+<div class="example-block">
+  <span class="ex-label">Example 1 — い-adjective + なりました</span>
+  <div class="english">"Studying Japanese became fun."</div>
+  <div class="jp-row">
+    <div class="jp-token">
+      <span class="kana">日本語(にほんご)</span>
+      <span class="rom2">nihongo</span>
+    </div>
+    <div class="jp-token">
+      <span class="kana">の</span>
+      <span class="rom2">no</span>
+    </div>
+    <div class="jp-token">
+      <span class="kana">勉強(べんきょう)</span>
+      <span class="rom2">benkyou</span>
+    </div>
+    <div class="jp-token">
+      <span class="kana">が</span>
+      <span class="rom2">ga</span>
+    </div>
+    <div class="token-box red-box">
+      <span class="kana">たのしく</span>
+      <span class="rom2">tanoshiku</span>
+    </div>
+    <div class="token-box green-box">
+      <span class="kana">なりました。</span>
+      <span class="rom2">narimashita.</span>
+    </div>
+  </div>
+  <div class="box-labels">
+    <span class="blabel red">い-adjective (たのしい → たのしく)</span>
+    <span class="blabel green">なる · past affirmative</span>
+  </div>
+</div>
+
+<!-- Example 2 -->
+<div class="example-block">
+  <span class="ex-label">Example 2 — な-adjective + なりました</span>
+  <div class="english">"I came to like studying Japanese."</div>
+  <div class="jp-row">
+    <div class="jp-token">
+      <span class="kana">日本語(にほんご)</span>
+      <span class="rom2">nihongo</span>
+    </div>
+    <div class="jp-token">
+      <span class="kana">の</span>
+      <span class="rom2">no</span>
+    </div>
+    <div class="jp-token">
+      <span class="kana">勉強(べんきょう)</span>
+      <span class="rom2">benkyou</span>
+    </div>
+    <div class="jp-token">
+      <span class="kana">が</span>
+      <span class="rom2">ga</span>
+    </div>
+    <div class="token-box red-box">
+      <span class="kana">好(す)きに</span>
+      <span class="rom2">sukini</span>
+    </div>
+    <div class="token-box green-box">
+      <span class="kana">なりました。</span>
+      <span class="rom2">narimashita.</span>
+    </div>
+  </div>
+  <div class="box-labels">
+    <span class="blabel red">な-adjective (好きな → 好きに)</span>
+    <span class="blabel green">なる · past affirmative</span>
+  </div>
+</div>
+
+<!-- Example 3 -->
+<div class="example-block">
+  <span class="ex-label">Example 3 — Noun + になります</span>
+  <div class="english">"Takeshi will be 20 years old tomorrow."</div>
+  <div class="jp-row">
+    <div class="jp-token">
+      <span class="kana">たけし</span>
+      <span class="rom2">Takeshi</span>
+    </div>
+    <div class="jp-token">
+      <span class="kana">は</span>
+      <span class="rom2">wa</span>
+    </div>
+    <div class="jp-token">
+      <span class="kana">明日(あした)</span>
+      <span class="rom2">ashita</span>
+    </div>
+    <div class="token-box red-box">
+      <span class="kana">20歳(さい)に</span>
+      <span class="rom2">nijussai ni</span>
+    </div>
+    <div class="token-box green-box">
+      <span class="kana">なります。</span>
+      <span class="rom2">narimasu.</span>
+    </div>
+  </div>
+  <div class="box-labels">
+    <span class="blabel red">Noun (20歳) + に</span>
+    <span class="blabel green">なる · present affirmative</span>
+  </div>
+</div>
+
+<!-- ══════════════ ABSOLUTE VS RELATIVE CHANGE ══════════════ -->
+<hr class="section-rule">
+<div class="section-heading">
+  <h2>Absolute vs. Relative Change</h2>
+  <span class="pill pill-teal">Usage Note</span>
+</div>
+
+<div class="note-box">
+  <span class="note-label">Ambiguity</span>
+  <p>When an adjective is used with なる, the sentence can describe either an <strong>absolute change</strong> (e.g. "It has become warm — it is no longer cold") or a <strong>relative change</strong> (e.g. "It has become warmer, but it is still cold"). なる sentences are <em>ambiguous in isolation</em>.</p>
+</div>
+
+<div class="note-box" style="border-color: var(--orange); background: #fef8ee;">
+  <span class="note-label" style="color:var(--orange);">Making relative change explicit</span>
+  <p>To make clear that you are talking in <strong>relative terms</strong>, add the comparison pattern using <span style="font-family:'Noto Serif JP',serif;color:var(--orange);">より (yori)</span> — "than" — together with なる.</p>
+</div>
+
+<!-- Example 4 — relative with より -->
+<div class="example-block">
+  <span class="ex-label">Example 4 — Relative change with より + なりました</span>
+  <div class="english">"Mary has become better in Japanese than before."</div>
+  <div class="jp-row">
+    <div class="jp-token">
+      <span class="kana">メアリー</span>
+      <span class="rom2">Mary</span>
+    </div>
+    <div class="jp-token">
+      <span class="kana">は</span>
+      <span class="rom2">wa</span>
+    </div>
+    <div class="token-box orange-box">
+      <span class="kana">前(まえ)より</span>
+      <span class="rom2">maeyori</span>
+    </div>
+    <div class="jp-token">
+      <span class="kana">日本語</span>
+      <span class="rom2">nihongo</span>
+    </div>
+    <div class="jp-token">
+      <span class="kana">が</span>
+      <span class="rom2">ga</span>
+    </div>
+    <div class="token-box red-box">
+      <span class="kana">上手(じょうず)に</span>
+      <span class="rom2">jouzuni</span>
+    </div>
+    <div class="token-box green-box">
+      <span class="kana">なりました。</span>
+      <span class="rom2">narimashita.</span>
+    </div>
+  </div>
+  <div class="box-labels">
+    <span class="blabel orange">より (yori) = "than" · marks comparison baseline</span>
+    <span class="blabel red">な-adj (上手な → 上手に)</span>
+    <span class="blabel green">なる · past affirmative</span>
+  </div>
+</div>
+
+<!-- ══════════════ QUICK REFERENCE ══════════════ -->
+<hr class="section-rule">
+<div class="section-heading">
+  <h2>Quick Reference</h2>
+  <span class="pill pill-purple">Summary</span>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Word type</th>
+      <th>Connector</th>
+      <th>Example</th>
+      <th>Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>い-adjective</td>
+      <td><span class="jp red">〜く</span> <span class="rom">-ku</span></td>
+      <td>
+        <span class="jp">たのし<span class="red">く</span><span class="green">なる</span></span><br>
+        <span class="rom">tanoshi<span class="red">ku</span> <span class="green">naru</span></span>
+      </td>
+      <td class="en">to become fun</td>
+    </tr>
+    <tr>
+      <td>な-adjective</td>
+      <td><span class="jp red">〜に</span> <span class="rom">-ni</span></td>
+      <td>
+        <span class="jp">好き<span class="red">に</span><span class="green">なる</span></span><br>
+        <span class="rom">suki<span class="red">ni</span> <span class="green">naru</span></span>
+      </td>
+      <td class="en">to come to like</td>
+    </tr>
+    <tr>
+      <td>Noun</td>
+      <td><span class="jp red">〜に</span> <span class="rom">-ni</span></td>
+      <td>
+        <span class="jp">学生<span class="red">に</span><span class="green">なる</span></span><br>
+        <span class="rom">gakusei<span class="red">ni</span> <span class="green">naru</span></span>
+      </td>
+      <td class="en">to become a student</td>
+    </tr>
+    <tr>
+      <td>Relative change</td>
+      <td><span class="jp orange">より</span> + connector</td>
+      <td>
+        <span class="jp">前<span class="orange">より</span>上手<span class="red">に</span><span class="green">なる</span></span><br>
+        <span class="rom">mae<span class="orange">yori</span> jouzu<span class="red">ni</span> <span class="green">naru</span></span>
+      </td>
+      <td class="en">to become better than before</td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>

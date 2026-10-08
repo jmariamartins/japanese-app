@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>つもりです Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:   #f5f0e8;
+    --dark:    #2c1f12;
+    --gold:    #b8962e;
+    --gold-lt: #faf6e8;
+    --red:     #c0392b;
+    --green:   #1a7a4a;
+    --muted:   #6b5d4f;
+    --row-alt: #ede8db;
+    --border:  #d4c9b0;
+    --purple:  #6a4c93;
+    --teal:    #2a7f7f;
+    --amber:   #b8962e;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--dark);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 2.2rem 2rem 3.5rem;
+  }
+
+  .page-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--gold);
+  }
+  .page-title h1 { font-family: 'Noto Serif JP', serif; font-size: 2.3rem; font-weight: 700; }
+  .page-title .sub { font-family: 'DM Mono', monospace; font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem; }
+  .page-title .badge {
+    display: inline-block; margin-top: 0.5rem; padding: 0.18rem 0.8rem;
+    border-radius: 999px; font-family: 'DM Mono', monospace; font-size: 0.72rem;
+    background: var(--teal); color: #fff; letter-spacing: 0.06em; text-transform: uppercase;
+  }
+
+  .sh { display: flex; align-items: center; gap: 0.6rem; margin: 1.8rem 0 0.75rem; }
+  .sh h2 { font-size: 1.2rem; font-weight: 700; }
+  .pill {
+    display: inline-block; padding: 0.13rem 0.65rem; border-radius: 999px;
+    font-family: 'DM Mono', monospace; font-size: 0.68rem;
+    text-transform: uppercase; letter-spacing: 0.07em;
+  }
+  .pill-purple { background: var(--purple); color: #fff; }
+  .pill-teal   { background: var(--teal);   color: #fff; }
+  .pill-coral  { background: var(--red);    color: #fff; }
+  .pill-amber  { background: var(--amber);  color: #fff; }
+
+  .note-box {
+    border-left: 4px solid var(--gold); background: var(--gold-lt);
+    padding: 0.7rem 1rem; margin: 0.65rem 0; border-radius: 0 6px 6px 0; font-size: 0.97rem;
+  }
+  .note-box .nlabel {
+    font-family: 'DM Mono', monospace; font-size: 0.67rem; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--gold); margin-bottom: 0.2rem; display: block;
+  }
+
+  .warn-box {
+    border-left: 4px solid var(--red); background: #fdf0ee;
+    padding: 0.7rem 1rem; margin: 0.65rem 0; border-radius: 0 6px 6px 0; font-size: 0.97rem;
+  }
+  .warn-box .wlabel {
+    font-family: 'DM Mono', monospace; font-size: 0.67rem; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--red); margin-bottom: 0.2rem; display: block;
+  }
+
+  .formula {
+    border-left: 4px solid var(--gold); background: #f0ebe0;
+    padding: 0.6rem 1rem; margin: 0.4rem 0; border-radius: 0 6px 6px 0;
+    font-family: 'DM Mono', monospace; font-size: 0.88rem;
+    display: flex; align-items: center; gap: 0.45rem; flex-wrap: wrap;
+  }
+  .formula .jp  { font-family: 'Noto Serif JP', serif; }
+  .formula .arr { color: var(--gold); }
+  .formula .red { color: var(--red); }
+  .formula .grn { color: var(--green); }
+  .formula .en  { font-style: italic; color: var(--muted); font-size: 0.82rem; }
+
+  /* Negative distinction visual */
+  .neg-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin: 0.8rem 0;
+  }
+  @media (max-width:520px) { .neg-grid { grid-template-columns: 1fr; } }
+  .neg-card {
+    border: 1px solid var(--border); border-radius: 8px;
+    padding: 0.75rem 0.9rem; background: #faf6ee;
+  }
+  .neg-card .nc-label {
+    font-family: 'DM Mono', monospace; font-size: 0.68rem; text-transform: uppercase;
+    letter-spacing: 0.08em; margin-bottom: 0.35rem; display: block;
+  }
+  .neg-card .nc-label.red { color: var(--red); }
+  .neg-card .nc-label.grn { color: var(--green); }
+  .neg-card .formula-mini {
+    font-family: 'DM Mono', monospace; font-size: 0.82rem;
+    display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap; margin-bottom: 0.3rem;
+  }
+  .neg-card .formula-mini .jp { font-family: 'Noto Serif JP', serif; font-size: 0.95rem; }
+  .neg-card .formula-mini .red { color: var(--red); }
+  .neg-card .formula-mini .grn { color: var(--green); }
+  .neg-card .en { font-style: italic; color: var(--muted); font-size: 0.88rem; }
+
+  /* Conjugation table */
+  table { width: 100%; border-collapse: collapse; margin: 0.8rem 0; font-size: 0.95rem; }
+  thead tr { background: var(--dark); color: #f5f0e8; border-bottom: 3px solid var(--gold); }
+  thead th {
+    padding: 0.5rem 0.85rem; font-family: 'DM Mono', monospace; font-size: 0.72rem;
+    text-transform: uppercase; letter-spacing: 0.07em; text-align: left;
+  }
+  tbody tr:nth-child(even) { background: var(--row-alt); }
+  tbody tr:nth-child(odd)  { background: var(--paper); }
+  tbody td { padding: 0.52rem 0.85rem; border-bottom: 1px solid var(--border); vertical-align: middle; line-height: 1.45; }
+  .jp  { font-family: 'Noto Serif JP', serif; }
+  .rom { font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--muted); display: block; }
+  .en  { font-style: italic; color: var(--muted); font-size: 0.88rem; }
+  .red { color: var(--red); }
+  .grn { color: var(--green); }
+
+  /* Example blocks */
+  .ex-block {
+    background: #faf6ee; border: 1px solid var(--border); border-radius: 8px;
+    padding: 0.8rem 1.1rem; margin: 0.6rem 0;
+  }
+  .ex-block .ex-label {
+    font-family: 'DM Mono', monospace; font-size: 0.67rem; text-transform: uppercase;
+    letter-spacing: 0.11em; color: var(--gold); margin-bottom: 0.4rem; display: block;
+  }
+  .ex-block .english {
+    font-style: italic; font-size: 0.97rem; margin-bottom: 0.6rem;
+    padding-bottom: 0.4rem; border-bottom: 1px dashed var(--border);
+  }
+  .jp-row { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 0.35rem 0.65rem; }
+  .jp-token { display: flex; flex-direction: column; align-items: center; gap: 0.04rem; }
+  .jp-token .kana { font-family: 'Noto Serif JP', serif; font-size: 1.05rem; }
+  .jp-token .rom2 { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted); }
+  .tbox {
+    border-radius: 7px; padding: 0.22rem 0.55rem;
+    display: flex; flex-direction: column; align-items: center; gap: 0.04rem;
+  }
+  .tbox .kana { font-family: 'Noto Serif JP', serif; font-size: 1.05rem; }
+  .tbox .rom2 { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted); }
+  .red-b { border: 2.5px solid var(--red);   background: #fef5f4; }
+  .grn-b { border: 2.5px solid var(--green); background: #edf7f2; }
+
+  hr.rule { border: none; border-top: 1px solid var(--border); margin: 1.8rem 0; }
+</style>
+</head>
+<body>
+
+<!-- ── TITLE ── -->
+<div class="page-title">
+  <h1>つもりです</h1>
+  <div class="sub">tsumori desu &nbsp;·&nbsp; "I intend / plan to do…"</div>
+  <span class="badge">Grammar · Intermediate</span>
+</div>
+
+<!-- ── CONCEPT & FORMATION ── -->
+<div class="sh"><h2>Concept &amp; Formation</h2><span class="pill pill-purple">Rules</span></div>
+
+<div class="note-box">
+  <span class="nlabel">Meaning</span>
+  Expresses a <strong>plan or intention for the future</strong>. The verb before つもり stays in the <strong>present tense short form</strong>; つもりです itself carries the tense of the sentence.
+</div>
+
+<div class="formula">
+  <span class="jp red">Verb (present short)</span>
+  <span class="arr">+</span>
+  <span class="jp grn">つもりです</span>
+  <span class="arr">→</span>
+  <span class="en">"I intend to [verb]"</span>
+</div>
+
+<!-- ── NEGATIVE DISTINCTION ── -->
+<div class="sh"><h2>The Negative — Where Does "Not" Go?</h2><span class="pill pill-coral">Key Rule</span></div>
+
+<div class="neg-grid">
+  <div class="neg-card">
+    <span class="nc-label red">Plan NOT to do → negate the verb</span>
+    <div class="formula-mini">
+      <span class="jp red">Verb (neg. short)</span>
+      <span>+</span>
+      <span class="jp grn">つもりです</span>
+    </div>
+    <div class="en">"intend not to do"<br>e.g. こない つもりです</div>
+  </div>
+  <div class="neg-card">
+    <span class="nc-label grn">Do NOT intend → negate つもり</span>
+    <div class="formula-mini">
+      <span class="jp red">Verb (aff. short)</span>
+      <span>+</span>
+      <span class="jp grn">つもりじゃないです</span>
+    </div>
+    <div class="en">"don't intend to do"<br>e.g. くる つもりじゃないです</div>
+  </div>
+</div>
+
+<!-- ── CONJUGATION TABLE ── -->
+<div class="sh"><h2>つもり Conjugation</h2><span class="pill pill-amber">Forms</span></div>
+
+<table>
+  <thead><tr>
+    <th></th><th>Affirmative</th><th>Negative</th>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td><strong>Present</strong></td>
+      <td><span class="jp grn">つもりです</span><span class="rom">tsumori desu</span><span class="en">intend to…</span></td>
+      <td><span class="jp grn">つもりじゃないです</span><span class="rom">tsumori janaidesu</span><span class="en">don't intend to…</span></td>
+    </tr>
+    <tr>
+      <td><strong>Past</strong></td>
+      <td><span class="jp grn">つもりでした</span><span class="rom">tsumori deshita</span><span class="en">was planning to…</span></td>
+      <td><span class="jp grn">つもりじゃなかったです</span><span class="rom">tsumori janakattadesu</span><span class="en">wasn't planning to…</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ── EXAMPLES ── -->
+<hr class="rule">
+<div class="sh"><h2>Examples</h2><span class="pill pill-coral">Examples</span></div>
+
+<!-- Ex 1 -->
+<div class="ex-block">
+  <span class="ex-label">Example 1 · Affirmative · present</span>
+  <div class="english">"I intend to play tennis with Takeshi on Sunday."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">日曜日(にちようび)に</span><span class="rom2">nichiyoubi ni</span></div>
+    <div class="jp-token"><span class="kana">たけし</span><span class="rom2">takeshi</span></div>
+    <div class="jp-token"><span class="kana">と</span><span class="rom2">to</span></div>
+    <div class="jp-token"><span class="kana">テニスを</span><span class="rom2">tenisu o</span></div>
+    <div class="tbox red-b"><span class="kana">する</span><span class="rom2">suru</span></div>
+    <div class="tbox grn-b"><span class="kana">つもりです。</span><span class="rom2">tsumori desu.</span></div>
+  </div>
+</div>
+
+<!-- Ex 2 -->
+<div class="ex-block">
+  <span class="ex-label">Example 2 · Verb negated · "intend not to do"</span>
+  <div class="english">"Ken intends not to come to school tomorrow."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">けん</span><span class="rom2">Ken</span></div>
+    <div class="jp-token"><span class="kana">は</span><span class="rom2">wa</span></div>
+    <div class="jp-token"><span class="kana">あした</span><span class="rom2">ashita</span></div>
+    <div class="jp-token"><span class="kana">大学(だいがく)に</span><span class="rom2">daigaku ni</span></div>
+    <div class="tbox red-b"><span class="kana">こない</span><span class="rom2">konai</span></div>
+    <div class="tbox grn-b"><span class="kana">つもりです。</span><span class="rom2">tsumori desu.</span></div>
+  </div>
+</div>
+
+<!-- Ex 3 -->
+<div class="ex-block">
+  <span class="ex-label">Example 3 · つもり negated · "does not intend to do"</span>
+  <div class="english">"Ken does not intend to come to school tomorrow."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">けん</span><span class="rom2">Ken</span></div>
+    <div class="jp-token"><span class="kana">は</span><span class="rom2">wa</span></div>
+    <div class="jp-token"><span class="kana">あした</span><span class="rom2">ashita</span></div>
+    <div class="jp-token"><span class="kana">大学(だいがく)に</span><span class="rom2">daigaku ni</span></div>
+    <div class="tbox red-b"><span class="kana">くる</span><span class="rom2">kuru</span></div>
+    <div class="tbox grn-b"><span class="kana">つもりじゃないです。</span><span class="rom2">tsumori janaidesu.</span></div>
+  </div>
+</div>
+
+<!-- Ex 4 -->
+<div class="ex-block">
+  <span class="ex-label">Example 4 · Past tense</span>
+  <div class="english">"We were planning to visit a temple."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">お寺(てら)を</span><span class="rom2">otera o</span></div>
+    <div class="jp-token"><span class="kana">見(み)に</span><span class="rom2">mi ni</span></div>
+    <div class="tbox red-b"><span class="kana">いく</span><span class="rom2">iku</span></div>
+    <div class="tbox grn-b"><span class="kana">つもりでした。</span><span class="rom2">tsumori deshita.</span></div>
+  </div>
+</div>
+
+</body>
+</html>

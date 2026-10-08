@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Present Perfect Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:   #f5f0e8;
+    --dark:    #2c1f12;
+    --gold:    #b8962e;
+    --gold-lt: #faf6e8;
+    --red:     #c0392b;
+    --green:   #1a7a4a;
+    --blue:    #1a5c8a;
+    --orange:  #c47c1a;
+    --muted:   #6b5d4f;
+    --row-alt: #ede8db;
+    --border:  #d4c9b0;
+    --purple:  #6a4c93;
+    --teal:    #2a7f7f;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--dark);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 2.2rem 2rem 3.5rem;
+  }
+
+  .page-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--gold);
+  }
+  .page-title h1 {
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1.2;
+  }
+  .page-title .sub {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-top: 0.25rem;
+    letter-spacing: 0.04em;
+  }
+  .page-title .badge {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.18rem 0.8rem;
+    border-radius: 999px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    background: var(--purple);
+    color: #fff;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .sh { display: flex; align-items: center; gap: 0.6rem; margin: 1.8rem 0 0.75rem; }
+  .sh h2 { font-size: 1.2rem; font-weight: 700; }
+  .pill {
+    display: inline-block; padding: 0.13rem 0.65rem; border-radius: 999px;
+    font-family: 'DM Mono', monospace; font-size: 0.68rem;
+    text-transform: uppercase; letter-spacing: 0.07em;
+  }
+  .pill-purple { background: var(--purple); color: #fff; }
+  .pill-teal   { background: var(--teal);   color: #fff; }
+  .pill-coral  { background: var(--red);    color: #fff; }
+  .pill-amber  { background: var(--gold);   color: #fff; }
+
+  .note-box {
+    border-left: 4px solid var(--gold);
+    background: var(--gold-lt);
+    padding: 0.7rem 1rem;
+    margin: 0.65rem 0;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.97rem;
+  }
+  .note-box .nlabel {
+    font-family: 'DM Mono', monospace; font-size: 0.67rem;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--gold); margin-bottom: 0.2rem; display: block;
+  }
+
+  /* ── Big summary table ── */
+  table {
+    width: 100%; border-collapse: collapse; margin: 0.8rem 0; font-size: 0.95rem;
+  }
+  thead tr { background: var(--dark); color: #f5f0e8; border-bottom: 3px solid var(--gold); }
+  thead th {
+    padding: 0.55rem 0.85rem;
+    font-family: 'DM Mono', monospace; font-size: 0.72rem;
+    text-transform: uppercase; letter-spacing: 0.07em; text-align: left;
+  }
+  tbody tr:nth-child(even) { background: var(--row-alt); }
+  tbody tr:nth-child(odd)  { background: var(--paper); }
+  tbody td { padding: 0.55rem 0.85rem; border-bottom: 1px solid var(--border); vertical-align: middle; line-height: 1.5; }
+  .jp  { font-family: 'Noto Serif JP', serif; }
+  .rom { font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--muted); display: block; }
+  .en  { font-style: italic; color: var(--muted); font-size: 0.9rem; }
+  .red   { color: var(--red); }
+  .green { color: var(--green); }
+  .blue  { color: var(--blue); }
+  .ora   { color: var(--orange); }
+
+  /* ── Context-word grid ── */
+  .cw-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.7rem;
+    margin: 0.8rem 0;
+  }
+  @media (max-width: 540px) { .cw-grid { grid-template-columns: 1fr; } }
+  .cw-card {
+    background: #faf6ee;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.75rem 0.9rem;
+    text-align: center;
+  }
+  .cw-card .word {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.4rem;
+    display: block;
+    margin-bottom: 0.1rem;
+  }
+  .cw-card .rom2 {
+    font-family: 'DM Mono', monospace; font-size: 0.75rem; color: var(--muted);
+  }
+  .cw-card .meaning {
+    font-size: 0.88rem; font-style: italic; margin-top: 0.3rem;
+    padding-top: 0.3rem; border-top: 1px dashed var(--border);
+  }
+  .cw-card .type-tag {
+    font-family: 'DM Mono', monospace; font-size: 0.67rem;
+    text-transform: uppercase; letter-spacing: 0.07em;
+    margin-top: 0.25rem; display: block;
+  }
+
+  /* ── Formula bar ── */
+  .formula {
+    border-left: 4px solid var(--gold);
+    background: #f0ebe0;
+    padding: 0.65rem 1rem;
+    margin: 0.45rem 0;
+    border-radius: 0 6px 6px 0;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .formula .jp { font-family: 'Noto Serif JP', serif; }
+  .formula .arr { color: var(--gold); }
+
+  /* ── Example blocks ── */
+  .ex-block {
+    background: #faf6ee;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.8rem 1.1rem;
+    margin: 0.65rem 0;
+  }
+  .ex-block .ex-label {
+    font-family: 'DM Mono', monospace; font-size: 0.67rem;
+    text-transform: uppercase; letter-spacing: 0.11em;
+    color: var(--gold); margin-bottom: 0.4rem; display: block;
+  }
+  .ex-block .english {
+    font-style: italic; font-size: 0.97rem;
+    margin-bottom: 0.65rem; padding-bottom: 0.45rem;
+    border-bottom: 1px dashed var(--border); color: var(--dark);
+  }
+  .jp-row {
+    display: flex; flex-wrap: wrap; align-items: flex-end; gap: 0.4rem 0.7rem;
+    margin-bottom: 0.35rem;
+  }
+  .jp-token { display: flex; flex-direction: column; align-items: center; gap: 0.04rem; }
+  .jp-token .kana { font-family: 'Noto Serif JP', serif; font-size: 1.1rem; }
+  .jp-token .rom2 { font-family: 'DM Mono', monospace; font-size: 0.72rem; color: var(--muted); }
+  .tbox {
+    border-radius: 7px; padding: 0.25rem 0.6rem;
+    display: flex; flex-direction: column; align-items: center; gap: 0.04rem;
+  }
+  .tbox .kana { font-family: 'Noto Serif JP', serif; font-size: 1.1rem; }
+  .tbox .rom2 { font-family: 'DM Mono', monospace; font-size: 0.72rem; color: var(--muted); }
+  .blue-b  { border: 2.5px solid var(--blue);   background: #eef4fa; }
+  .ora-b   { border: 2.5px solid var(--orange); background: #fef8ee; }
+  .grn-b   { border: 2.5px solid var(--green);  background: #edf7f2; }
+
+  hr.rule { border: none; border-top: 1px solid var(--border); margin: 1.8rem 0; }
+</style>
+</head>
+<body>
+
+<!-- ── TITLE ── -->
+<div class="page-title">
+  <h1>Simple Past &amp; Present Perfect</h1>
+  <div class="sub">past tense · te-form + いる · context words</div>
+  <span class="badge">Grammar · Intermediate</span>
+</div>
+
+<!-- ── CORE CONCEPT ── -->
+<div class="sh"><h2>The Key Distinction</h2><span class="pill pill-purple">Concept</span></div>
+
+<div class="note-box">
+  <span class="nlabel">How Japanese handles it</span>
+  In Japanese, the <strong>affirmative past tense does double duty</strong> — it covers both simple past and present perfect. Context words like <span class="jp" style="font-size:1rem;">きのう</span> or <span class="jp" style="font-size:1rem;">もう</span> signal which reading is intended. The difference only becomes grammatically visible in the <strong>negative</strong>.
+</div>
+
+<!-- ── SUMMARY TABLE ── -->
+<div class="sh"><h2>Forms at a Glance</h2><span class="pill pill-amber">Summary</span></div>
+
+<table>
+  <thead><tr>
+    <th></th>
+    <th>Affirmative</th>
+    <th>Negative</th>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td><strong>Simple Past</strong><br><span class="en">not connected to now</span></td>
+      <td>
+        <span class="jp">〜ました</span>
+        <span class="rom">~ mashita</span>
+        <span class="en">past affirmative</span>
+      </td>
+      <td>
+        <span class="jp">〜ませんでした</span>
+        <span class="rom">~ masendeshita</span>
+        <span class="en">past negative</span>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Present Perfect</strong><br><span class="en">connected to now</span></td>
+      <td>
+        <span class="jp">〜ました</span>
+        <span class="rom">~ mashita</span>
+        <span class="en">same form — context sets meaning</span>
+      </td>
+      <td>
+        <span class="jp red">〜ていません</span>
+        <span class="rom red">~ te imasen</span>
+        <span class="en red">te-form + いません &nbsp;←&nbsp; different!</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ── CONTEXT WORDS ── -->
+<hr class="rule">
+<div class="sh"><h2>Context Words</h2><span class="pill pill-teal">Vocabulary</span></div>
+
+<div class="cw-grid">
+  <div class="cw-card">
+    <span class="word" style="color:var(--blue);">きのう</span>
+    <span class="rom2">kinou</span>
+    <div class="meaning">"yesterday"</div>
+    <span class="type-tag" style="color:var(--blue);">Simple Past signal</span>
+  </div>
+  <div class="cw-card">
+    <span class="word" style="color:var(--green);">もう</span>
+    <span class="rom2">mou</span>
+    <div class="meaning">"already"</div>
+    <span class="type-tag" style="color:var(--green);">Present Perfect signal</span>
+  </div>
+  <div class="cw-card">
+    <span class="word" style="color:var(--orange);">まだ</span>
+    <span class="rom2">mada</span>
+    <div class="meaning">"not yet"</div>
+    <span class="type-tag" style="color:var(--orange);">Present Perfect (neg.) signal</span>
+  </div>
+</div>
+
+<!-- ── MADA FORMULA ── -->
+<hr class="rule">
+<div class="sh"><h2>まだ〜ていません</h2><span class="pill pill-coral">Pattern</span></div>
+
+<div class="formula">
+  <span class="jp red">まだ</span>
+  <span class="arr">+</span>
+  <span class="jp ora">〜て (te-form)</span>
+  <span class="arr">+</span>
+  <span class="jp green">いません</span>
+  <span class="arr">=</span>
+  <span>"have not ~ yet"</span>
+</div>
+
+<div class="note-box" style="margin-top:0.5rem;">
+  <span class="nlabel">Breakdown</span>
+  <span class="jp ora">〜て</span> = te-form of the verb &nbsp;·&nbsp;
+  <span class="jp green">いません</span> = present negative of いる (iru) &nbsp;·&nbsp;
+  <span class="jp red">まだ</span> = "not yet" (connects the event to the present)
+</div>
+
+<!-- ── EXAMPLES ── -->
+<hr class="rule">
+<div class="sh"><h2>Examples</h2><span class="pill pill-coral">Examples</span></div>
+
+<!-- Ex 1 -->
+<div class="ex-block">
+  <span class="ex-label">Example 1 · Activity · "have not ~ yet"</span>
+  <div class="english">"I have not eaten yet."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">私(わたし)</span><span class="rom2">watashi</span></div>
+    <div class="jp-token"><span class="kana">は</span><span class="rom2">wa</span></div>
+    <div class="tbox blue-b"><span class="kana">まだ</span><span class="rom2">mada</span></div>
+    <div class="tbox ora-b"><span class="kana">食(た)べて</span><span class="rom2">tabete</span></div>
+    <div class="tbox grn-b"><span class="kana">いません。</span><span class="rom2">imasen.</span></div>
+  </div>
+</div>
+
+<!-- Ex 2 -->
+<div class="ex-block">
+  <span class="ex-label">Example 2 · Change of state · "have not ~ yet"</span>
+  <div class="english">"Sue is not woken up yet."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">スー</span><span class="rom2">Sue</span></div>
+    <div class="jp-token"><span class="kana">は</span><span class="rom2">wa</span></div>
+    <div class="tbox blue-b"><span class="kana">まだ</span><span class="rom2">mada</span></div>
+    <div class="tbox ora-b"><span class="kana">起(お)きて</span><span class="rom2">okite</span></div>
+    <div class="tbox grn-b"><span class="kana">いません。</span><span class="rom2">imasen.</span></div>
+  </div>
+</div>
+
+<!-- Affirmative contrast mini-examples -->
+<div class="ex-block">
+  <span class="ex-label">Contrast · Same verb, different context word (affirmative)</span>
+  <div class="jp-row" style="margin-bottom:0.5rem;">
+    <div class="jp-token"><span class="kana">わたしは</span><span class="rom2">watashi wa</span></div>
+    <div class="jp-token" style="color:var(--blue);"><span class="kana" style="color:var(--blue);">きのう</span><span class="rom2" style="color:var(--blue);">kinou</span></div>
+    <div class="jp-token"><span class="kana">宿題(しゅくだい)を</span><span class="rom2">shukudai o</span></div>
+    <div class="jp-token" style="color:var(--red);"><span class="kana" style="color:var(--red);">しました。</span><span class="rom2" style="color:var(--red);">shimashita.</span></div>
+    <span style="font-style:italic;color:var(--muted);font-size:0.9rem;align-self:center;">→ Simple past: "I did homework yesterday."</span>
+  </div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">わたしは</span><span class="rom2">watashi wa</span></div>
+    <div class="jp-token" style="color:var(--green);"><span class="kana" style="color:var(--green);">もう</span><span class="rom2" style="color:var(--green);">mou</span></div>
+    <div class="jp-token"><span class="kana">宿題(しゅくだい)を</span><span class="rom2">shukudai o</span></div>
+    <div class="jp-token" style="color:var(--red);"><span class="kana" style="color:var(--red);">しました。</span><span class="rom2" style="color:var(--red);">shimashita.</span></div>
+    <span style="font-style:italic;color:var(--muted);font-size:0.9rem;align-self:center;">→ Present perfect: "I have already done homework."</span>
+  </div>
+</div>
+
+</body>
+</html>
