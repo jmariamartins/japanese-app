@@ -1,0 +1,207 @@
+# TOPIC: Present Perfect — もう and まだ (Already / Not Yet)
+# LEVEL: beginner
+
+# ─────────────────────────────────────────
+# Structures:
+#   もう (mou) + past affirmative = already did
+#   もう (mou) + past question    = have you … yet?
+#   まだ (mada) + te-form + いません = have not … yet
+# Note: "not yet" uses the NEGATIVE PROGRESSIVE (〜ていません),
+#   not simple past negative (〜ませんでした)
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: Have you eaten lunch yet?
+ROM: Mou ohirugohan wo tabemashita ka?
+JP: もう おひるごはん を たべました か？
+HINT: "have you … yet?" = もう (mou) + past affirmative + か？(ka?)
+
+---
+DIR: EN>JP
+Q: No, I haven't had lunch yet.
+ROM: Iie, mada tabete imasen.
+JP: いいえ、まだ たべていません。
+HINT: "not yet" = まだ (mada) + te-form + いません (imasen) · NOT tabemasendeshita — that means "I didn't eat" with no "yet" nuance
+
+---
+DIR: EN>JP
+Q: Have you read this book already?
+ROM: Mou kono hon wo yomimashita ka?
+JP: もう この ほん を よみました か？
+HINT: もう (mou) + past affirmative + か？(ka?) · yomu → yomimashita
+
+---
+DIR: EN>JP
+Q: Yes, I have already read it.
+ROM: Hai, mou yomimashita.
+JP: はい、もう よみました。
+HINT: "already done" = もう (mou) + past affirmative · no need to repeat the object
+
+---
+DIR: EN>JP
+Q: Have you bought the cake yet?
+ROM: Mou ke-ki wo kaimashita ka?
+JP: もう けーき を かいました か？
+HINT: もう (mou) + kaimashita + か？(ka?) · kau → kaimashita
+
+---
+DIR: EN>JP
+Q: No, I haven't bought it yet.
+ROM: Iie, mada katte imasen.
+JP: いいえ、まだ かっていません。
+HINT: kau → katte · "not yet" = まだ (mada) + katte + いません (imasen)
+
+---
+DIR: JP>EN
+Q_ROM: Mou ohirugohan wo tabemashita ka?
+Q_JP: もう おひるごはん を たべました か？
+A: Have you eaten lunch yet?
+HINT: もう (mou) in a question = "yet" (asking if completed) · in a statement = "already"
+
+---
+DIR: JP>EN
+Q_ROM: Iie, mada tabete imasen.
+Q_JP: いいえ、まだ たべていません。
+A: No, I haven't had lunch yet.
+HINT: まだ (mada) + te-form + いません (imasen) = not yet · this is present perfect negative in Japanese
+
+---
+DIR: JP>EN
+Q_ROM: Hai, mou yomimashita.
+Q_JP: はい、もう よみました。
+A: Yes, I have already read it.
+HINT: もう (mou) + past affirmative = already done
+
+---
+DIR: EN>JP
+Q: I have already done the homework.
+ROM: Watashi wa mou shukudai wo shimashita.
+JP: わたしは もう しゅくだいを しました。
+HINT: もう (mou) + past affirmative = already done · しゅくだい (shukudai) = homework
+
+---
+DIR: EN>JP
+Q: I have not done the homework yet.
+ROM: Watashi wa mada shukudai wo shite imasen.
+JP: わたしは まだ しゅくだいを していません。
+HINT: まだ (mada) + te-form + いません (imasen) = not yet · shite imasen = has not done
+
+---
+DIR: EN>JP
+Q: I have not eaten yet.
+ROM: Watashi wa mada tabete imasen.
+JP: わたしは まだ たべていません。
+HINT: まだ (mada) + tabete + いません (imasen) = have not eaten yet · not specific about what, unlike the lunch exercise
+
+---
+DIR: EN>JP
+Q: Sue has not woken up yet.
+ROM: Sue wa mada okite imasen.
+JP: スーは まだ おきていません。
+HINT: okiru (ru-verb) → okite + いません (imasen) = has not woken up · NOT kite imasen (that means "has not come/arrived")
+
+---
+DIR: EN>JP
+Q: Have you already drunk coffee?
+ROM: Mou ko-hi- wo nomimashita ka?
+JP: もう こーひーを のみましたか？
+HINT: もう (mou) + past + か？= have you already...? · in questions もう = "yet" (asking if done) or "already"
+
+---
+DIR: EN>JP
+Q: I have not drunk coffee yet.
+ROM: Mada ko-hi- wo nonde imasen.
+JP: まだ こーひーを のんでいません。
+HINT: nomu → nonde + いません (imasen) = has not drunk · まだ (mada) + te-form + いません = not yet
+
+---
+DIR: EN>JP
+Q: I have already drunk coffee.
+ROM: Mou ko-hi- wo nomimashita.
+JP: もう こーひーを のみました。
+HINT: もう (mou) + past = already done · nomimashita = past polite of nomu
+
+---
+DIR: EN>JP
+Q: I have already watched Naruto.
+ROM: Mou Naruto wo mimashita.
+JP: もう ナルトを みました。
+HINT: もう (mou) + past affirmative = already · mimashita = past polite of miru
+
+---
+DIR: EN>JP
+Q: Have you been to Tokyo yet?
+ROM: Mou Tokyo ni ikimashita ka?
+JP: もう とうきょうに いきましたか？
+HINT: もう (mou) in a question = "yet" · に (ni) = destination · past affirmative question
+
+---
+DIR: EN>JP
+Q: Yes, I have already been there.
+ROM: Hai, mou ikimashita.
+JP: はい、もう いきました。
+HINT: もう (mou) + past = already done · the destination (Tokyo) is dropped — it's understood from context
+
+---
+DIR: EN>JP
+Q: Tomo has already done homework.
+ROM: Tomo wa mou shukudai wo shimashita.
+JP: ともは もう しゅくだいを しました。
+HINT: same pattern as first-person version · もう + past = already done
+
+---
+DIR: EN>JP
+Q: Takeshi has not exercised yet.
+ROM: Takeshi wa mada undou shite imasen.
+JP: たけしは まだ うんどうしていません。
+HINT: うんどうする (undou suru) → undou shite + いません (imasen) · まだ (mada) = not yet
+
+---
+DIR: EN>JP
+Q: Has Sae eaten breakfast yet?
+ROM: Sae wa mou asagohan wo tabemashita ka?
+JP: さえは もう あさごはんを たべましたか？
+HINT: もう (mou) in a question = "yet" · past positive question · は (wa) marks Sae as topic
+
+---
+DIR: EN>JP
+Q: Tomoko has not cooked yet.
+ROM: Tomoko wa mada ryouri shite imasen.
+JP: ともこは まだ りょうりしていません。
+HINT: りょうりする (ryouri suru) → ryouri shite + いません (imasen) · まだ (mada) = not yet
+
+---
+DIR: EN>JP
+Q: Toshi has not cleaned up yet.
+ROM: Toshi wa mada souji shite imasen.
+JP: としは まだ そうじしていません。
+HINT: そうじする (souji suru) → souji shite + いません · そうじ (souji) = cleaning up — not しょうじ (shouji)
+
+---
+DIR: EN>JP
+Q: Takako has already drunk water.
+ROM: Takako wa mou mizu wo nomimashita.
+JP: たかこは もう みずを のみました。
+HINT: もう (mou) + past = already done · みず (mizu) = water · を (wo) marks the object
+
+---
+DIR: JP>EN
+Q_ROM: Sachi wa mada okite imasen.
+Q_JP: さちは まだ おきていません。
+A: Sachi hasn't woken up yet.
+HINT: おきていません (okite imasen) = has not woken up · まだ (mada) = not yet
+
+---
+DIR: JP>EN
+Q_ROM: Toshi wa mada souji shite imasen.
+Q_JP: としは まだ そうじしていません。
+A: Toshi has not cleaned up yet.
+HINT: そうじしていません (souji shite imasen) = has not cleaned up · まだ (mada) = not yet
+
+---
+DIR: JP>EN
+Q_ROM: Takako wa mou mizu wo nomimashita.
+Q_JP: たかこは もう みずを のみました。
+A: Takako has already drunk water.
+HINT: もう (mou) + past = already · nomimashita = drank (past polite of nomu)

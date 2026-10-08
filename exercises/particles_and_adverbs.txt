@@ -1,0 +1,271 @@
+# TOPIC: Particles and Adverbs
+# LEVEL: beginner
+
+# ─────────────────────────────────────────
+# Particles covered: は, も, の, に/へ, で, を, と, や
+# Key distinctions:
+#   に = destination / time reference / location of existence
+#   で = location of action / means of transport
+#   と = and (exhaustive, people or things) / together with
+#   や = and/etc. (non-exhaustive list)
+#   も = also / too (replaces は or を, never adds to them)
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: I will go to the cafe at 10AM.
+ROM: Watashi wa gozen juu-ji ni kafe ni ikimasu.
+JP: わたし は ごぜん１０じ に かふぇ に いきます。
+HINT: は (wa) = topic · に (ni) = specific time · に/へ (ni/e) = destination · both に here are different uses!
+
+---
+DIR: EN>JP
+Q: Mary's younger brother studies at the library.
+ROM: Mearii no otouto wa toshokan de benkyou shimasu.
+JP: めありー の おとうと は としょかん で べんきょうします。
+HINT: の (no) = possession (Mary's brother) · は (wa) = topic · で (de) = location of an action (studying)
+
+---
+DIR: EN>JP
+Q: What did Masato drink?
+ROM: Masato wa nani wo nomimashita ka?
+JP: まさと は なに を のみました か？
+HINT: は (wa) = topic · を (wo) = direct object marker · なに (nani) = what
+
+---
+DIR: EN>JP
+Q: Will you go to school tomorrow as well?
+ROM: Anata wa ashita mo gakkou ni ikimasu ka?
+JP: あなた は あした も がっこう に いきます か？
+HINT: も (mo) = also/too · it replaces は (wa) here — not added to it · あした (ashita) takes no particle (floating time word)
+
+---
+DIR: EN>JP
+Q: Miki will watch a movie with her friend.
+ROM: Miki wa Miki no tomodachi to eiga wo mimasu.
+JP: みき は みき の ともだち と えいが を みます。
+HINT: と (to) = together with (a person) · を (wo) = object marker for the movie
+
+---
+DIR: EN>JP
+Q: Will you watch a movie as well?
+ROM: Anata mo eiga wo mimasu ka?
+JP: あなた も えいが を みます か？
+HINT: も (mo) = also · replaces は (wa) entirely · do not write は も (wa mo) together
+
+---
+DIR: EN>JP
+Q: Tomoka and Moe will go to Osaka by bus.
+ROM: Tomoka to Moe wa basu de Oosaka ni ikimasu.
+JP: ともか と もえ は ばす で おおさか に いきます。
+HINT: と (to) = and (listing people, exhaustive) · で (de) = means of transport · に/へ (ni/e) = destination
+
+---
+DIR: EN>JP
+Q: Where did Misa and you go?
+ROM: Anata to Misa wa doko ni ikimashita ka?
+JP: あなた と みさ は どこ に いきました か？
+HINT: と (to) = and (people together) · どこ に (doko ni) = where (destination question)
+
+---
+DIR: EN>JP
+Q: Misa and I went to France and Spain.
+ROM: Watashi to Misa wa Furansu to Supein ni ikimashita.
+JP: わたし と みさ は ふらんす と すぺいん に いきました。
+HINT: と (to) = and (exhaustive — exactly these two countries) · に/へ (ni/e) = destination
+
+---
+DIR: EN>JP
+Q: We went to Paris, Marseille and other places.
+ROM: Pari ya Maruseeyu ni ikimashita.
+JP: ぱり や まるせーゆ に いきました。
+HINT: や (ya) = and/etc. (non-exhaustive — implies there were other places too) · contrast with と (to), which is an exact/complete list
+
+---
+DIR: JP>EN
+Q_ROM: Tomoka to Moe wa basu de Oosaka ni ikimasu.
+Q_JP: ともか と もえ は ばす で おおさか に いきます。
+A: Tomoka and Moe will go to Osaka by bus.
+HINT: で (de) after a vehicle = by that means of transport
+
+---
+DIR: JP>EN
+Q_ROM: Pari ya Maruseeyu ni ikimashita.
+Q_JP: ぱり や まるせーゆ に いきました。
+A: We went to Paris, Marseille and other places.
+HINT: や (ya) implies a non-exhaustive list — there were more places not mentioned
+
+---
+DIR: JP>EN
+Q_ROM: Anata mo eiga wo mimasu ka?
+Q_JP: あなた も えいが を みます か？
+A: Will you watch a movie as well?
+HINT: も (mo) replaces は (wa) to mean "also / too"
+
+---
+DIR: EN>JP
+Q: Mary bought shoes. Mary bought a bag too.
+ROM: Mearii wa kutsu wo kaimashita. Mearii wa kaban mo kaimashita.
+JP: めありーは くつを かいました。めありーは かばんも かいました。
+HINT: も (mo) = also/too · replaces を (wo) entirely — not added on top of it
+
+---
+DIR: EN>JP
+Q: I went to Kyoto yesterday. Taka went to Kyoto too.
+ROM: Watashi wa kinou Kyouto ni ikimashita. Taka mo kinou Kyouto ni ikimashita.
+JP: わたしは きのう きょうとに いきました。たかも きのう きょうとに いきました。
+HINT: も (mo) replaces は (wa) entirely · きのう (kinou) takes no particle (relative time word)
+
+---
+DIR: EN>JP
+Q: I went to Kyoto last week. I went to Osaka too.
+ROM: Senshuu Kyouto ni ikimashita. Oosaka ni mo ikimashita.
+JP: せんしゅう きょうとに いきました。おおさかにも いきました。
+HINT: にも (ni mo) = to [place] as well · に and も merge · せんしゅう (senshuu) = last week (no particle)
+
+---
+DIR: EN>JP
+Q: I went to South Korea with Mary.
+ROM: Watashi wa Mearii to Kankoku ni ikimashita.
+JP: わたしは めありーと かんこくに いきました。
+HINT: と (to) = together with (a person) · に (ni) = destination
+
+---
+DIR: EN>JP
+Q: I study Japanese with Ken.
+ROM: Watashi wa Ken to nihongo wo benkyou shimasu.
+JP: わたしは けんと にほんごを べんきょうします。
+HINT: と (to) = together with · を (wo) = object marker for nihongo
+
+---
+DIR: EN>JP
+Q: I like takoyaki and nigiri (among other things).
+ROM: Takoyaki ya nigiri ga suki desu.
+JP: たこやきや にぎりが すきです。
+HINT: や (ya) = and/etc. (non-exhaustive list) · implies there are other foods you like too · contrast with と (to) = exact/complete list
+
+---
+DIR: EN>JP
+Q: Taku speaks Japanese and French (among other languages).
+ROM: Taku wa nihongo ya furansugo wo hanashimasu.
+JP: たくは にほんごや ふらんすごを はなします。
+HINT: や (ya) = and/etc. · implies he speaks other languages too · を (wo) marks languages as object of hanashimasu
+
+---
+DIR: EN>JP
+Q: We eat our meals with chopsticks.
+ROM: Ohashi de gohan wo tabemasu.
+JP: おはしで ごはんを たべます。
+HINT: で (de) = by means of / using · おはし (ohashi) = chopsticks · を (wo) = object (meals)
+
+---
+DIR: EN>JP
+Q: Let's talk in Japanese.
+ROM: Nihongo de hanashimashou.
+JP: にほんごで はなしましょう。
+HINT: で (de) = in [language] / using [language] · はなしましょう (hanashimashou) = let's speak
+
+---
+DIR: EN>JP
+Q: I go to school by bus.
+ROM: Basu de gakkou ni ikimasu.
+JP: バスで がっこうに いきます。
+HINT: で (de) = by means of (transport) · に (ni) = destination · same で as chopsticks — the tool/means
+
+---
+DIR: EN>JP
+Q: I watched a movie on TV.
+ROM: Terebi de eiga wo mimashita.
+JP: テレビで えいがを みました。
+HINT: で (de) = via/on [medium/device] · same particle as "by bus" and "in Japanese" — means/method
+
+---
+DIR: EN>JP
+Q: Do you talk with your family in Spanish?
+ROM: Kazoku to supeingo de hanashimasu ka?
+JP: かぞくと すぺいんごで はなしますか？
+HINT: と (to) = with (people) · で (de) = in [language] · two different particles in one sentence
+
+---
+DIR: JP>EN
+Q_ROM: Senshuu Kyouto ni ikimashita. Oosaka ni mo ikimashita.
+Q_JP: せんしゅう きょうとに いきました。おおさかにも いきました。
+A: I went to Kyoto last week. I went to Osaka too.
+HINT: にも (ni mo) = to [place] as well · に and も combine when も replaces a destination particle
+
+---
+DIR: EN>JP
+Q: Who wears glasses?
+ROM: Dare ga megane wo kakete imasu ka?
+JP: だれが めがねを かけていますか？
+HINT: だれが (dare ga) = who (subject) · かけています (kakete imasu) = is wearing · かける (kakeru) = to wear glasses/hang
+
+---
+DIR: EN>JP
+Q: Who is good at swimming?
+ROM: Dare ga oyogu no ga jouzu desu ka?
+JP: だれが およぐのが じょうずですか？
+HINT: だれが (dare ga) = who (subject) · oyogu の が (no ga) = nominalised verb (swimming) · じょうず (jouzu) = good at (use for others)
+
+---
+DIR: EN>JP
+Q: I go to the cafe on Monday. I also go there on Thursday.
+ROM: Watashi wa getsuyoubi ni kafe ni ikimasu. Mokuyoubi ni mo asoko ni ikimasu.
+JP: わたしは げつようびに かふぇに いきます。もくようびにも あそこに いきます。
+HINT: にも (ni mo) = on [day] as well · げつようび (getsuyoubi) = Monday · もくようび (mokuyoubi) = Thursday · both days always take に (ni)
+
+---
+DIR: EN>JP
+Q: Mary and Takeshi went on a date last weekend.
+ROM: Mearii to Takeshi wa senshuu no shuumatsu ni de-to ni ikimashita.
+JP: めありーと たけしは せんしゅうの しゅうまつに でーとに いきました。
+HINT: と (to) = and (people together) · せんしゅうの しゅうまつ (senshuu no shuumatsu) = last weekend · に after しゅうまつ (shuumatsu) is optional but natural · でーとに いく (de-to ni iku) = to go on a date
+
+
+---
+DIR: EN>JP
+Q: Who is British?
+ROM: Dare ga igirisujin desu ka?
+JP: だれ が いぎりすじん ですか？
+HINT: だれが (dare ga) = who (が marks the subject in questions with だれ) · いぎりすじん (igirisujin) = British person
+
+---
+DIR: EN>JP
+Q: Robert is British.
+ROM: Robert ga igirisujin desu.
+JP: ロバート が いぎりすじん です。
+HINT: が (ga) marks the subject when answering だれが (dare ga) questions · keeps consistent subject marker
+
+---
+DIR: EN>JP
+Q: Who went to Okinawa?
+ROM: Dare ga Okinawa ni ikimashita ka?
+JP: だれ が おきなわ に いきましたか？
+HINT: だれが (dare ga) = who · に (ni) = destination — NOT を (wo) · destination always takes に
+
+---
+DIR: EN>JP
+Q: How about a movie?
+ROM: Eiga wa?
+JP: えいが は？
+HINT: topic は (wa) + rising intonation = casual suggestion · literally "as for a movie?" · very common in casual speech
+
+---
+DIR: EN>JP
+Q: I will study Japanese. How about you?
+ROM: Nihongo wo benkyou shimasu. Anata wa?
+JP: にほんご を べんきょうします。あなた は？
+HINT: あなたは？(Anata wa?) = how about you? / what about you? · は (wa) with rising tone = topic-drop question
+
+---
+DIR: EN>JP
+Q: Which class is interesting? Japanese class is interesting.
+ROM: Dono kurasu ga omoshiroidesuka? Nihongo no kurasu ga omoshiroidesu.
+HINT: interesting (omoshiroi); class (kurasu)
+
+---
+DIR: EN>JP
+Q: Misa and I will go to France and Spain.
+ROM: Watashi to Misa wa Furansu to Supein ni ikimasu.
+JP: わたしと みさは フランスと スペインに いきます。
+HINT: と (to) = and (exhaustive list, people + places) · に/へ (ni/e) = destination · compare with past: いきました (ikimashita)

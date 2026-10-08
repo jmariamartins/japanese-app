@@ -1,0 +1,187 @@
+# TOPIC: Miscellaneous — Implicit Explanation (〜んです)
+# LEVEL: beginner
+
+# ─────────────────────────────────────────
+# んです (n desu) / のです (no desu) adds an explanatory nuance:
+#   "The thing is…" / "You see, I…"
+# Structure:
+#   i-adjective short form + んです  (e.g. いたいんです, itai n desu)
+#   verb short form + んです         (e.g. みたんです, mita n desu)
+#   verb stem + たいんです           (e.g. たべたいんです, tabetai n desu)
+#   na-adjective: だ → な + んです   (e.g. たいへんなんです, taihen na n desu)
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: I have a stomachache. (explaining to someone)
+ROM: Onaka ga itai n desu.
+JP: おなか が いたい んです。
+HINT: いたい (itai) = i-adjective (hurts/aches) · + んです (n desu) gives the "I'm explaining" nuance · おなか (onaka) = stomach
+
+---
+DIR: EN>JP
+Q: I broke up with my girlfriend. (explaining the situation)
+ROM: Kanojo to wakareta n desu.
+JP: かのじょ と わかれた んです。
+HINT: わかれる (wakareru) → past short: わかれた (wakareta) + んです (n desu) · と (to) = with (the person)
+
+---
+DIR: EN>JP
+Q: I want to eat curry. (explaining what I feel like)
+ROM: Kare- wo tabetai n desu.
+JP: かれー を たべたい んです。
+HINT: たべたい (tabetai) = want to eat · + んです (n desu) softens and explains desire · を (wo) = object
+
+---
+DIR: EN>JP
+Q: I am working at that cafe. (explaining your situation)
+ROM: Ano kafe de hataraite iru n desu.
+JP: あの かふぇ で はたらいて いる んです。
+HINT: はたらいている (hataraite iru) = progressive (is working) · short form of いる (iru) before んです · で (de) = location
+
+---
+DIR: EN>JP
+Q: I watched a movie yesterday. (giving context/explanation)
+ROM: Kinou eiga wo mita n desu.
+JP: きのう えいが を みた んです。
+HINT: みる (miru) → past short: みた (mita) + んです (n desu) · use when your statement explains something
+
+---
+DIR: EN>JP
+Q: It is difficult. (explaining why you're struggling)
+ROM: Muzukashii n desu.
+JP: むずかしい んです。
+HINT: i-adjective directly + んです (n desu) · no だ (da) needed before んです for i-adjectives
+
+---
+DIR: EN>JP
+Q: I am tired. (explaining why you look exhausted)
+ROM: Tsukarete iru n desu.
+JP: つかれて いる んです。
+HINT: つかれる (tsukareru) → つかれている (tsukarete iru, current state) · short form of いる + んです (n desu)
+
+---
+DIR: JP>EN
+Q_ROM: Onaka ga itai n desu.
+Q_JP: おなか が いたい んです。
+A: I have a stomachache. (explaining)
+HINT: んです (n desu) marks this as an explanation · without it: おなかがいたいです (onaka ga itai desu) = plain statement
+
+---
+DIR: JP>EN
+Q_ROM: Kare- wo tabetai n desu.
+Q_JP: かれー を たべたい んです。
+A: I want to eat curry. (explaining)
+HINT: たべたい (tabetai) = want to eat · んです (n desu) = "you see, I want to…"
+
+---
+DIR: JP>EN
+Q_ROM: Ano kafe de hataraite iru n desu.
+Q_JP: あの かふぇ で はたらいて いる んです。
+A: I am working at that cafe. (explaining)
+HINT: はたらいている (hataraite iru) = is working (progressive) · で (de) = location of work action
+
+---
+DIR: EN>JP
+Q: My grades are not good. (explaining why)
+ROM: Seiseki ga yokunai n desu.
+JP: せいせきが よくないんです。
+HINT: よくない (yokunai) = not good · negative short of いい (ii) · i-adj + んです (n desu) directly
+
+---
+DIR: EN>JP
+Q: The exam is over. (explaining the context)
+ROM: Shiken ga owatta n desu.
+JP: しけんが おわったんです。
+HINT: owaru → past short: おわった (owatta) + んです (n desu) · verb past short + んです
+
+---
+DIR: EN>JP
+Q: Why did you break up with your boyfriend?
+ROM: Doushite kare to wakareta n desu ka?
+JP: どうして かれと わかれたんですか？
+HINT: どうして (doushite) = why · wakareru → past short: わかれた (wakareta) + んですか · invites an んです explanation
+
+---
+DIR: EN>JP
+Q: He never takes a bath. (explaining the situation)
+ROM: Zenzen ofuro ni hairanai n desu.
+JP: ぜんぜん おふろに はいらないんです。
+HINT: ぜんぜん (zenzen) + negative = not at all/never · はいらない (hairanai) = negative short of はいる (hairu) · + んです
+
+---
+DIR: EN>JP
+Q: What happened?
+ROM: Doushita n desu ka?
+JP: どうしたんですか？
+HINT: どうした (doushita) = past short of どうする · んですか (n desu ka) = invites an explanation · standard opener for んです conversations
+
+---
+DIR: EN>JP
+Q: My cat died. (explaining why you're sad)
+ROM: Neko ga shinda n desu.
+JP: ねこが しんだんです。
+HINT: shinu (u-verb) → past short: しんだ (shinda) + んです · が (ga) marks the subject · んです adds the "that's why" nuance
+
+---
+DIR: EN>JP
+Q: I received a present. (sharing exciting news)
+ROM: Purezento wo moratta n desu.
+JP: プレゼントを もらったんです。
+HINT: morau → past short: もらった (moratta) + んです · を (wo) marks the object · んです invites the listener to share your excitement
+
+---
+DIR: EN>JP
+Q: Tomorrow is a day off. (explaining why you're free)
+ROM: Ashita wa yasumi na n desu.
+JP: あしたは やすみなんです。
+HINT: やすみ (yasumi) = day off (noun) · noun before んです: noun + な + んです · あした (ashita) takes no particle
+
+---
+DIR: EN>JP
+Q: Yesterday was my birthday. (giving context)
+ROM: Kinou wa tanjoubi datta n desu.
+JP: きのうは たんじょうびだったんです。
+HINT: たんじょうび (tanjoubi) = birthday (noun) · noun past short: だった (datta) + んです · past tense is in だった, not in んです
+
+---
+DIR: EN>JP
+Q: The test was not difficult. (explaining in context)
+ROM: Tesuto ga muzukashiku nakatta n desu.
+JP: テストが むずかしくなかったんです。
+HINT: muzukashii (i-adj) → past negative short: むずかしくなかった (muzukashiku nakatta) + んです · く (ku) stem + なかった (nakatta) = past negative
+
+---
+DIR: EN>JP
+Q: I have a sore throat. (explaining why)
+ROM: Nodo ga itai n desu.
+JP: のどが いたいんです。
+HINT: いたい (itai) = hurts (i-adj) · + んです directly · のど (nodo) = throat · contrast with おなか (onaka) = stomach (existing exercise)
+
+---
+DIR: EN>JP
+Q: I have a test tomorrow. (explaining why you can't go out)
+ROM: Ashita tesuto ga aru n desu.
+JP: あした テストが あるんです。
+HINT: ある (aru) = short present form + んです · あした (ashita) = tomorrow — no particle needed · が (ga) marks the test as the subject
+
+---
+DIR: JP>EN
+Q_ROM: Doushita n desu ka?
+Q_JP: どうしたんですか？
+A: What happened?
+HINT: どうした (doushita) = past short of どうする · んですか = asking for an explanation · classic opening question
+
+---
+DIR: JP>EN
+Q_ROM: Ashita wa yasumi na n desu.
+Q_JP: あしたは やすみなんです。
+A: Tomorrow is a day off.
+HINT: やすみなんです (yasumi na n desu) = noun + な + んです · present affirmative noun form before んです requires な
+
+---
+DIR: JP>EN
+Q_ROM: Neko ga shinda n desu.
+Q_JP: ねこが しんだんです。
+A: My cat died.
+HINT: しんだ (shinda) = past short of しぬ (shinu) · んです adds the explanatory/emotional nuance

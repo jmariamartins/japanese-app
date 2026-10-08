@@ -1,0 +1,117 @@
+# TOPIC: Shopping — How Much & Do You Have
+# LEVEL: beginner
+# SOURCE: NHK World Easy Japanese (Lessons 10, 11)
+
+# ─────────────────────────────────────────
+# Structures covered:
+#   すみません。[item]はいくらですか。 = How much is [item]?
+#   [price]です。                     = It's [price].
+#   すみません。[item]はありますか。   = Do you have [item]?
+#   はい、あります / いいえ、ありません = Yes / No
+#   この/その/あの + [item]           = this/that/that over there + item
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: Excuse me. How much is this hair dryer?
+ROM: Sumimasen. Kono doraiyaa wa ikura desu ka?
+JP: すみません。このドライヤーはいくらですか？
+HINT: いくら (ikura) = how much · この (kono) = this · NHK Lesson 10 key phrase · ドライヤー (doraiyaa) = hair dryer
+
+---
+DIR: EN>JP
+Q: Excuse me. How much are those earphones?
+ROM: Sumimasen. Ano iyahon wa ikura desu ka?
+JP: すみません。あのイヤホンはいくらですか？
+HINT: あの (ano) = that (over there) · イヤホン (iyahon) = earphones · NHK Lesson 10 model answer
+
+---
+DIR: EN>JP
+Q: Excuse me. How much is this rice bowl?
+ROM: Sumimasen. Kono chawan wa ikura desu ka?
+JP: すみません。このちゃわんはいくらですか？
+HINT: ちゃわん (chawan) = rice bowl · NHK Lesson 10 model answer · この/その/あの before the noun
+
+---
+DIR: EN>JP
+Q: Excuse me. How much is that bag?
+ROM: Sumimasen. Sono kaban wa ikura desu ka?
+JP: すみません。そのかばんはいくらですか？
+HINT: その (sono) = that (near listener) · contrast: この (near speaker), その (near listener), あの (far from both)
+
+---
+DIR: EN>JP
+Q: Excuse me. How much is everything altogether?
+ROM: Sumimasen. Zenbu de ikura desu ka?
+JP: すみません。ぜんぶでいくらですか？
+HINT: ぜんぶで (zenbu de) = altogether / in total · で (de) marks the scope/total here
+
+---
+DIR: EN>JP
+Q: Excuse me. Do you have fans?
+ROM: Sumimasen. Sensu wa arimasu ka?
+JP: すみません。せんすはありますか？
+HINT: せんす (sensu) = folding fan · [item] + は + ありますか (arimasu ka) = do you have...? · NHK Lesson 11 model answer
+
+---
+DIR: EN>JP
+Q: Excuse me. Do you have ninja T-shirts?
+ROM: Sumimasen. Ninja no tii shatsu wa arimasu ka?
+JP: すみません。にんじゃのTシャツはありますか？
+HINT: にんじゃ (ninja) + の (no) + Tシャツ (tii shatsu) = ninja T-shirt · NHK Lesson 11 model answer · の connects two nouns
+
+---
+DIR: EN>JP
+Q: Excuse me. Do you have an English menu?
+ROM: Sumimasen. Eigo no menyuu wa arimasu ka?
+JP: すみません。えいごのメニューはありますか？
+HINT: えいご (eigo) = English · メニュー (menyuu) = menu · の connects the two nouns (English + menu)
+
+---
+DIR: EN>JP
+Q: Excuse me. Do you have a size M?
+ROM: Sumimasen. Emu saizu wa arimasu ka?
+JP: すみません。Mサイズはありますか？
+HINT: Mサイズ (emu saizu) = size M · ありますか (arimasu ka) = do you have? · common clothing shop phrase
+
+---
+DIR: EN>JP
+Q: Yes, we have it.
+ROM: Hai, arimasu.
+JP: はい、あります。
+HINT: はい (hai) = yes · あります (arimasu) = there is / we have · affirmative response to ありますか
+
+---
+DIR: EN>JP
+Q: I'm sorry, we don't have it.
+ROM: Sumimasen, arimasen.
+JP: すみません、ありません。
+HINT: ありません (arimasen) = negative of あります · polite to add すみません when telling a customer you don't have something
+
+---
+DIR: JP>EN
+Q_ROM: Sumimasen. Kono kamera wa ikura desu ka?
+Q_JP: すみません。このカメラはいくらですか？
+A: Excuse me. How much is this camera?
+HINT: カメラ (kamera) = camera · いくらですか (ikura desu ka) = how much is it?
+
+---
+DIR: JP>EN
+Q_ROM: Sumimasen. Chizu wa arimasu ka?
+Q_JP: すみません。ちずはありますか？
+A: Excuse me. Do you have a map?
+HINT: ちず (chizu) = map · ありますか (arimasu ka) = do you have?
+
+---
+DIR: JP>EN
+Q_ROM: Hai, arimasu.
+Q_JP: はい、あります。
+A: Yes, we have it.
+HINT: simple affirmative answer to ありますか
+
+---
+DIR: JP>EN
+Q_ROM: Sumimasen, arimasen.
+Q_JP: すみません、ありません。
+A: I'm sorry, we don't have it.
+HINT: ありません = negative of あります (arimasu)

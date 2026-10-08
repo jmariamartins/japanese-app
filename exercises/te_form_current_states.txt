@@ -1,0 +1,80 @@
+# TOPIC: Te-form — Describing Current States (occupation, residence, marital status)
+# LEVEL: beginner
+
+# ─────────────────────────────────────────
+# Structures covered:
+#   〜に すんでいます (ni sunde imasu) = lives in (location)
+#   〜に つとめています (ni tsutomete imasu) = works at / is employed at
+#   けっこんしています (kekkon shite imasu) = is married
+#   〜です (desu) = is a [student / occupation title]
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: Tomoka works at a hospital.
+ROM: Tomoka wa byouin ni tsutomete imasu.
+JP: ともか は びょういん に つとめています。
+HINT: つとめる (tsutomeru) → つとめて + います (imasu) · に (ni) = location of employment — not で (de), which would mean an action
+
+---
+DIR: EN>JP
+Q: Hina does not live in Nara. She lives in Okinawa.
+ROM: Hina wa Nara ni sunde imasen. Okinawa ni sunde imasu.
+JP: ひな は なら に すんでいません。おきなわ に すんでいます。
+HINT: negative current state → すんでいません (sunde imasen) · then state the correct location with すんでいます (sunde imasu)
+
+---
+DIR: EN>JP
+Q: Yes, Tadashi is married.
+ROM: Hai, Tadashi wa kekkon shite imasu.
+JP: はい、ただし は けっこんしています。
+HINT: けっこんする (kekkon suru) → けっこんして + います (imasu) · this is a resulting state (he got married, and is now in that state)
+
+---
+DIR: EN>JP
+Q: Masami lives in Tokyo.
+ROM: Masami wa Toukyou ni sunde imasu.
+JP: まさみ は とうきょう に すんでいます。
+HINT: すむ (sumu, u-verb) → すんで + います (imasu) · に (ni) = location for living — not で (de)
+
+---
+DIR: EN>JP
+Q: Hina is a high school student.
+ROM: Hina wa koukousei desu.
+JP: ひな は こうこうせいです。
+HINT: For student/occupation titles, just use です (desu) · no te-form needed here
+
+---
+DIR: EN>JP
+Q: Yes, Tomoka is married.
+ROM: Hai, Tomoka wa kekkon shite imasu.
+JP: はい、ともか は けっこんしています。
+HINT: けっこんしています (kekkon shite imasu) = married (current state from a past event)
+
+---
+DIR: EN>JP
+Q: Masami works at a bank.
+ROM: Masami wa ginkou ni tsutomete imasu.
+JP: まさみ は ぎんこう に つとめています。
+HINT: つとめています (tsutomete imasu) = employed at · に (ni) = marker for place of employment
+
+---
+DIR: EN>JP
+Q: Tadashi does not work at a hospital. He is a college student.
+ROM: Tadashi wa byouin ni tsutomete imasen. Daigakusei desu.
+JP: ただし は びょういん に つとめていません。だいがくせいです。
+HINT: negative state → つとめていません (tsutomete imasen) · then identify with です (desu)
+
+---
+DIR: JP>EN
+Q_ROM: Hina wa Nara ni sunde imasen. Okinawa ni sunde imasu.
+Q_JP: ひな は なら に すんでいません。おきなわ に すんでいます。
+A: Hina does not live in Nara. She lives in Okinawa.
+HINT: すんでいません (sunde imasen) = negative current state · すんでいます (sunde imasu) = affirmative current state
+
+---
+DIR: JP>EN
+Q_ROM: Masami wa ginkou ni tsutomete imasu.
+Q_JP: まさみ は ぎんこう に つとめています。
+A: Masami works at a bank.
+HINT: つとめています (tsutomete imasu) = is employed at · に (ni) = place of employment

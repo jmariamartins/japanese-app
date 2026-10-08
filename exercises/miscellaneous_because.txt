@@ -1,0 +1,200 @@
+# TOPIC: Miscellaneous — Because (〜ので / 〜から)
+# LEVEL: beginner
+
+# ─────────────────────────────────────────
+# Two ways to say "because":
+#   〜ので (node) = softer, more objective · preferred in polite/written contexts
+#   〜から (kara) = more direct/assertive · more common in casual speech
+# Word order:
+#   [reason] ので/から、[result]   ← reason first (most common)
+#   [result]。[reason] から。      ← result first, reason appended (casual)
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: I did not study yesterday because I did not have homework.
+ROM: Shukudai ga nakatta node, watashi wa kinou benkyou shimasen deshita.
+JP: しゅくだい が なかった ので、わたし は きのう べんきょうしませんでした。
+HINT: ので (node) comes after SHORT FORM (nakatta) · reason first, then result
+
+---
+DIR: EN>JP
+Q: Because I was busy, I did not go to the party.
+ROM: Pa-tii ni ikimasen deshita. Isogashikatta desu kara.
+JP: ぱーてぃー に いきませんでした。いそがしかったです から。
+HINT: result first, reason appended with から (kara) at the end · いそがしかった (isogashikatta) = was busy
+
+---
+DIR: EN>JP
+Q: I will go buy flowers because today is my mother's birthday.
+ROM: Kyou wa okaasan no tanjoubi desu kara, hana wo kai ni ikimasu.
+JP: きょう は おかあさん の たんじょうび です から、はな を かい に いきます。
+HINT: から (kara) mid-sentence · verb stem + に (ni) + いく (iku) = go to buy (purpose construction)
+
+---
+DIR: EN>JP
+Q: Because it is hot outside, let's watch TV at my house.
+ROM: Soto wa atsui node, watashi no ie de terebi wo mimashou.
+JP: そと は あつい ので、わたし の いえ で てれびを みましょう。
+HINT: ので (node) after short form: あつい (atsui) · 〜ましょう (mashou) = let's
+
+---
+DIR: EN>JP
+Q: Because I have an exam tomorrow, I will study today.
+ROM: Ashita wa shiken ga aru node, kyou wa benkyou shimasu.
+JP: あした は しけん が ある ので、きょう は べんきょうします。
+HINT: ある (aru) = short present form before ので (node) · reason → result order
+
+---
+DIR: EN>JP
+Q: I did not eat breakfast because I did not have time.
+ROM: Asagohan wo tabemasen deshita. Jikan ga nakatta desu kara.
+JP: あさごはん を たべませんでした。じかん が なかったです から。
+HINT: result first, reason appended with から (kara) · なかった (nakatta) = past short negative of ある (aru)
+
+---
+DIR: EN>JP
+Q: Because kanji is difficult, I don't read Japanese books.
+ROM: Kanji wa muzukashii desu kara, nihongo no hon wo yomimasen.
+JP: かんじ は むずかしいです から、にほんご の ほん を よみません。
+HINT: から (kara) after polite form · reason → result
+
+---
+DIR: EN>JP
+Q: Maki is very popular because she is kind.
+ROM: Maki wa shinsetsu na node, totemo ninki desu.
+JP: まき は しんせつな ので、とても にんきです。
+HINT: na-adjective before ので (node): しんせつ (shinsetsu) + な + ので (keep the な) · にんき (ninki) = popular
+
+---
+DIR: EN>JP
+Q: Because Masato's parents are tall, Masato is also tall.
+ROM: Masato no ryoushin wa se ga takai node, Masato mo se ga takai desu.
+JP: まさと の りょうしん は せ が たかい ので、まさと も せ が たかいです。
+HINT: せがたかい (se ga takai) = is tall · も (mo) = also · ので (node) after i-adjective short form
+
+---
+DIR: JP>EN
+Q_ROM: Soto wa atsui node, watashi no ie de terebi wo mimashou.
+Q_JP: そと は あつい ので、わたし の いえ で てれびを みましょう。
+A: Because it is hot outside, let's watch TV at my house.
+HINT: ので (node) = because (soft) · みましょう (mimashou) = let's watch
+
+---
+DIR: JP>EN
+Q_ROM: Maki wa shinsetsu na node, totemo ninki desu.
+Q_JP: まき は しんせつな ので、とても にんきです。
+A: Maki is very popular because she is kind.
+HINT: しんせつ (shinsetsu) = na-adjective (kind) · にんき (ninki) = popular
+
+---
+DIR: EN>JP
+Q: My house is far away, so may I come to your house?
+ROM: Watashi no ie wa tooi desu kara, anata no ie ni kite mo ii desu ka?
+JP: わたしのいえは とおいです から、あなたのいえに きてもいいですか？
+HINT: reason first, then result · から (kara) mid-sentence after polite form · きてもいいですか (kite mo ii desu ka) = may I come?
+
+---
+DIR: EN>JP
+Q: May I come to your house? My house is far away.
+ROM: Anata no ie ni kite mo ii desu ka? Watashi no ie wa tooi desu kara.
+JP: あなたのいえに きてもいいですか？わたしのいえは とおいです から。
+HINT: result first, reason appended with から (kara) at the end · から after polite form here · same meaning, different emphasis
+
+---
+DIR: EN>JP
+Q: Takeshi did not come to school today because he was sick.
+ROM: Takeshi wa gakkou ni kimasen deshita. Takeshi wa byouki deshita kara.
+JP: たけしは がっこうに きませんでした。たけしは びょうきでした から。
+HINT: result first, reason appended · から (kara) at the end after polite past · びょうき (byouki) = sick/illness
+
+---
+DIR: EN>JP
+Q: My Japanese has improved because I always speak Japanese.
+ROM: Itsumo nihongo de hanasu node nihongo ga jouzu ni narimashita.
+JP: いつも にほんごで はなす ので にほんごが じょうずに なりました。
+HINT: ので (node) after short form (hanasu) · じょうずに なる (jouzu ni naru) = to become good at (na-adj + に + なる)
+
+---
+DIR: EN>JP
+Q: I didn't sleep last night because I had a lot of homework.
+ROM: Shukudai ga takusan atta node kinou no yoru nemasen deshita.
+JP: しゅくだいが たくさん あった ので きのうのよる ねませんでした。
+HINT: ので (node) after past short: あった (atta) = past short of ある (aru) · たくさん (takusan) = a lot · きのうのよる = last night
+
+---
+DIR: EN>JP
+Q: I do not like that person because he is mean.
+ROM: Kare wa ijiwaru na node kirai desu.
+JP: かれは いじわるな ので きらいです。
+HINT: いじわる (ijiwaru) = mean/spiteful (na-adjective) · な before ので · きらい (kirai) = dislike
+
+---
+DIR: EN>JP
+Q: Banks are closed because today is a Sunday.
+ROM: Kyou wa nichiyoubi na node ginkou wa yasumi desu.
+JP: きょうは にちようびな ので ぎんこうは やすみです。
+HINT: noun before ので: noun + な + ので (same rule as na-adjective) · やすみ (yasumi) = closed/holiday
+
+---
+DIR: EN>JP
+Q: I will buy this bag because it is cheap.
+ROM: Kono kaban wa yasui node kaimasu.
+JP: このかばんは やすい ので かいます。
+HINT: i-adjective before ので: yasui (short form, no desu) + ので · reason → result order
+
+---
+DIR: EN>JP
+Q: She is very popular because she is very kind.
+ROM: Kanojo wa totemo shinsetsu na node totemo ninki desu.
+JP: かのじょは とても しんせつな ので とても にんきです。
+HINT: しんせつ (shinsetsu) = na-adjective (kind) · な before ので · とても (totemo) = very · compare with existing Maki exercise
+
+---
+DIR: EN>JP
+Q: I came to Japan because I wanted to study Japanese.
+ROM: Nihongo wo benkyou shitakatta node Nihon ni kimashita.
+JP: にほんごを べんきょうしたかった ので にほんに きました。
+HINT: ので after past short: べんきょうしたかった (benkyou shitakatta) = wanted to study · たかった (takatta) = past of たい (tai)
+
+---
+DIR: EN>JP
+Q: I did not go to school because I was sick.
+ROM: Byouki datta node gakkou ni ikimasen deshita.
+JP: びょうきだった ので がっこうに いきませんでした。
+HINT: noun past before ので: だった (datta) = past short of だ · びょうき (byouki) = sick · past short + ので
+
+---
+DIR: EN>JP
+Q: Let's go buy a cake because tomorrow is Ken's birthday.
+ROM: Ashita wa Ken no tanjoubi na node ke-ki wo kai ni ikimashou.
+JP: あしたは けんのたんじょうびな ので けーきを かいに いきましょう。
+HINT: noun + な + ので · かいに いきましょう (kai ni ikimashou) = let's go buy · verb stem + に + iku = go to do
+
+---
+DIR: JP>EN
+Q_ROM: Byouki datta node gakkou ni ikimasen deshita.
+Q_JP: びょうきだった ので がっこうに いきませんでした。
+A: I did not go to school because I was sick.
+HINT: びょうきだった (byouki datta) = was sick (past short of noun) · ので = because (soft)
+
+---
+DIR: JP>EN
+Q_ROM: Nihongo wo benkyou shitakatta node Nihon ni kimashita.
+Q_JP: にほんごを べんきょうしたかった ので にほんに きました。
+A: I came to Japan because I wanted to study Japanese.
+HINT: べんきょうしたかった (benkyou shitakatta) = wanted to study · ので after the past desire form
+
+---
+DIR: EN>JP
+Q: Let's go by bus. Taxis are expensive.
+ROM: Basu ni norimashou. Takushi- wa takai desu kara.
+JP: バスに のりましょう。タクシーは たかいですから。
+HINT: result/proposal first, reason appended with から (kara) at end · takai desu kara = because [they] are expensive · good example of: situation → explanation から。structure
+
+---
+DIR: JP>EN
+Q_ROM: Basu ni norimashou. Takushi- wa takai desu kara.
+Q_JP: バスに のりましょう。タクシーは たかいですから。
+A: Let's go by bus. Taxis are expensive.
+HINT: のりましょう (norimashou) = let's ride/take · から (kara) at end = reason appended after the proposal

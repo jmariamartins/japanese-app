@@ -1,0 +1,196 @@
+# TOPIC: Adjectives — Qualifying Nouns with Verbs and Adjectives
+# LEVEL: intermediate
+
+# ─────────────────────────────────────────
+# Structure: [verb/adj clause] + noun = "the noun that [does/is]..."
+#   e.g. てれびをみているひと = the person who is watching TV
+#        あおのわんぴーすをきているひと = the person wearing a blue dress
+# The modifying clause goes BEFORE the noun it describes.
+# Use short/plain forms in the modifying clause.
+# ─────────────────────────────────────────
+
+---
+DIR: JP>EN
+Q_ROM: Terebi wo mite iru hito wa Misa desu.
+Q_JP: てれび を みて いる ひと は みさ です。
+A: The person watching TV is Misa.
+HINT: みている (mite iru) = te-form + いる (iru, progressive) · ひと (hito) = person · the clause before ひと describes who they are
+
+---
+DIR: JP>EN
+Q_ROM: Shashin wo totte iru hito wa Yoshiki desu.
+Q_JP: しゃしん を とって いる ひと は よしき です。
+A: The person taking pictures is Yoshiki.
+HINT: とる (toru) → とっている (totte iru, progressive) · しゃしん (shashin) = pictures/photos
+
+---
+DIR: JP>EN
+Q_ROM: Ao no wanpi-su wo kite iru hito wa Aoi desu.
+Q_JP: あお の わんぴーす を きて いる ひと は あおい です。
+A: The person wearing a blue dress is Aoi.
+HINT: きる (kiru, to wear) → きている (kite iru) · あお (ao) の = blue (colour + の + noun)
+
+---
+DIR: JP>EN
+Q_ROM: Uta wo utatte iru hito wa Satomi desu.
+Q_JP: うた を うたって いる ひと は さとみ です。
+A: The person singing a song is Satomi.
+HINT: うたう (utau) → うたっている (utatte iru, progressive) · うた (uta) を うたう = to sing a song
+
+---
+DIR: JP>EN
+Q_ROM: Nete iru hito wa Takeshi desu.
+Q_JP: ねて いる ひと は たけし です。
+A: The person sleeping is Takeshi.
+HINT: ねる (neru) → ねている (nete iru) · no object here — ねる is intransitive (you just sleep)
+
+---
+DIR: JP>EN
+Q_ROM: Souji shite ite, pinku no shatsu wo kite iru hito wa Mika desu.
+Q_JP: そうじして いて、ぴんく の しゃつ を きて いる ひと は みか です。
+A: The person who is cleaning and wearing a pink shirt is Mika.
+HINT: two modifiers joined: そうじしていて (souji shite ite, cleaning AND) + きている (kite iru, wearing) · both describe the same person
+
+---
+DIR: JP>EN
+Q_ROM: Souji shite ite, ao no shatsu wo kite iru hito wa Taichi desu.
+Q_JP: そうじして いて、あお の しゃつ を きて いる ひと は たいち です。
+A: The person who is cleaning and wearing a blue shirt is Taichi.
+HINT: same structure as Mika's sentence — two simultaneous actions used to identify a person
+
+---
+DIR: EN>JP
+Q: The person watching TV is Misa.
+ROM: Terebi wo mite iru hito wa Misa desu.
+JP: てれびをみているひとはみさです。
+HINT: modifying clause (terebi wo mite iru) comes BEFORE the noun ひと (hito) · use progressive te-form + いる (iru)
+
+---
+DIR: EN>JP
+Q: The person sleeping is Takeshi.
+ROM: Nete iru hito wa Takeshi desu.
+JP: ねているひとはたけしです。
+HINT: ねる (neru) → ねている (nete iru) · no object needed · clause + ひと (hito) = "the person who is sleeping"
+
+---
+DIR: EN>JP
+Q: The person taking pictures is Yoshiki.
+ROM: Shashin wo totte iru hito wa Yoshiki desu.
+JP: しゃしんをとっているひとはよしきです。
+HINT: とる (toru) → とっている (totte iru) · しゃしん (shashin) を = photos (object) · modifying clause before ひと (hito)
+
+# ─────────────────────────────────────────
+# TYPE 2 — Attribute phrase: [feature] が [i-adjective] + noun
+# The qualifying phrase describes a physical attribute.
+# が marks the feature; the i-adjective stays in plain form.
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: A person who has long hair.
+ROM: Kami ga nagai hito.
+JP: かみが ながい ひと。
+HINT: kami ga nagai = attribute clause · が marks the feature · nagai (i-adj) in plain form · hito = the noun being qualified
+
+---
+DIR: EN>JP
+Q: A person who has big eyes.
+ROM: Me ga ookii hito.
+JP: めが おおきい ひと。
+HINT: me = eyes · が marks the feature · ookii (i-adj) in plain form before ひと · same pattern as 髪が長い人
+
+---
+DIR: EN>JP
+Q: A person who is tall.
+ROM: Se ga takai hito.
+JP: せが たかい ひと。
+HINT: se ga takai = "height is tall" · せ (se) = stature/height · attribute clause with が + i-adjective before the noun
+
+---
+DIR: JP>EN
+Q_ROM: Kami ga nagai hito.
+Q_JP: かみが ながい ひと。
+A: A person who has long hair.
+HINT: が marks the feature · nagai = long (i-adjective, plain form) · whole phrase qualifies ひと
+
+---
+DIR: JP>EN
+Q_ROM: Me ga ookii hito.
+Q_JP: めが おおきい ひと。
+A: A person who has big eyes.
+HINT: me = eyes · が marks the feature · ookii (i-adj) in plain form before ひと
+
+# ─────────────────────────────────────────
+# TYPE 3b — Dictionary form verb (non-progressive) + noun
+# Use plain dictionary form for habitual or general actions.
+# Contrast with て-form + いる (progressive/current state above).
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: A person who I work with.
+ROM: Watashi to hataraku hito.
+JP: わたしと はたらく ひと。
+HINT: hataraku = dictionary form of はたらく (to work) · と = together with · dictionary form (not progressive) = general description, not a current action
+
+---
+DIR: EN>JP
+Q: A person who studies Japanese.
+ROM: Nihongo wo benkyou suru hito.
+JP: にほんごを べんきょうする ひと。
+HINT: benkyou suru = dictionary form (suru verb) · no いる needed — dictionary form describes general habit · contrast: べんきょうしている = currently studying
+
+---
+DIR: JP>EN
+Q_ROM: Watashi to hataraku hito.
+Q_JP: わたしと はたらく ひと。
+A: A person who I work with.
+HINT: hataraku = dictionary form (habit/general) · と = together with · modifying clause before ひと
+
+# ─────────────────────────────────────────
+# TYPE 4 — な-adjective qualifier: [phrase] が [na-adj] + な + noun
+# な-adjective keeps its な when directly modifying a noun.
+# のが nominalises a preceding verb phrase before the adjective.
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: A person who likes cats.
+ROM: Neko ga suki na hito.
+JP: ねこが すきな ひと。
+HINT: suki na = な-adjective keeps な before a noun · が marks what is liked · contrast: 猫が好きです (sentence) vs 猫が好きな人 (qualifier)
+
+---
+DIR: EN>JP
+Q: A friend of mine who likes to play basketball.
+ROM: Basukettoboru wo suru no ga suki na watashi no tomodachi.
+JP: バスケットボールを するのが すきな わたしの ともだち。
+HINT: suru のが = nominalises "playing basketball" · すきな = な-adjective before noun · qualified noun (ともだち) comes at the very end
+
+---
+DIR: EN>JP
+Q: A person who is good at cooking.
+ROM: Ryouri suru no ga jouzu na hito.
+JP: りょうりする のが じょうずな ひと。
+HINT: ryouri suru のが = nominalises "cooking" · jouzu na = な-adjective before noun · compare: じょうずです (sentence) vs じょうずな人 (qualifier)
+
+---
+DIR: EN>JP
+Q: A person who is not comfortable with Japanese.
+ROM: Nihongo ga nigate na hito.
+JP: にほんごが にがてな ひと。
+HINT: nigate na = な-adjective before noun · が marks the subject of the qualifier · same pattern as 猫が好きな人
+
+---
+DIR: JP>EN
+Q_ROM: Neko ga suki na hito.
+Q_JP: ねこが すきな ひと。
+A: A person who likes cats.
+HINT: すきな = な-adjective + な before noun · が marks what is liked
+
+---
+DIR: JP>EN
+Q_ROM: Ryouri suru no ga jouzu na hito.
+Q_JP: りょうりする のが じょうずな ひと。
+A: A person who is good at cooking.
+HINT: のが nominalises the verb phrase · じょうずな = na-adj + な modifying ひと

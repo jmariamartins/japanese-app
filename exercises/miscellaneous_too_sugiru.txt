@@ -1,0 +1,165 @@
+# TOPIC: Miscellaneous — Too… (〜すぎます)
+# LEVEL: beginner
+
+# ─────────────────────────────────────────
+# Structure — "too [adjective/verb]":
+#   i-adjective: drop い → add すぎます
+#     e.g. さむい → さむすぎます (too cold)
+#   na-adjective: drop な → add すぎます
+#   verb: use STEM (masu-form minus ます) → add すぎます
+# Past: すぎます → すぎました
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: This coffee is too bitter.
+ROM: Kono ko-hi- wa niga sugimasu.
+JP: この こーひー は にが すぎます。
+HINT: にがい (nigai, bitter, i-adj) → drop い (i) → にが + すぎます (sugimasu)
+
+---
+DIR: EN>JP
+Q: Today was too cold.
+ROM: Kyou wa samu sugimashita.
+JP: きょう は さむ すぎました。
+HINT: さむい (samui) → drop い (i) → さむ + すぎました (sugimashita, past)
+
+---
+DIR: EN>JP
+Q: I ate too much yesterday.
+ROM: Kinou wa tabe sugimashita.
+JP: きのう は たべ すぎました。
+HINT: verb: たべます (tabemasu) → stem: たべ (tabe) + すぎました (sugimashita) · no い to drop — it's a verb stem
+
+---
+DIR: EN>JP
+Q: Do you think Japanese is too difficult?
+ROM: Nihongo wa muzukashi sugiru to omoimasu ka?
+JP: にほんご は むずかし すぎる と おもいますか？
+HINT: むずかしい (muzukashii) → むずかし + すぎる (sugiru, dictionary form before と おもいますか? to omoimasu ka?)
+
+---
+DIR: EN>JP
+Q: Because I slept too much, I will study today.
+ROM: Ne sugita node, kyou wa benkyou shimasu.
+JP: ね すぎた ので、きょう は べんきょうします。
+HINT: ねます (nemasu) → stem: ね (ne) + すぎた (sugita, past short for ので node clause) · ので (node) = because
+
+---
+DIR: EN>JP
+Q: This bag is too expensive.
+ROM: Kono kaban wa taka sugimasu.
+JP: このかばん は たか すぎます。
+HINT: たかい (takai) → drop い (i) → たか + すぎます (sugimasu)
+
+---
+DIR: EN>JP
+Q: I worked too much this week.
+ROM: Konshu wa hataraki sugimashita.
+JP: こんしゅ は はたらき すぎました。
+HINT: はたらきます (hatarakimasu) → stem: はたらき (hataraki) + すぎました (sugimashita) · verb stem + すぎる (sugiru) = do too much
+
+---
+DIR: JP>EN
+Q_ROM: Kono ko-hi- wa niga sugimasu.
+Q_JP: この こーひー は にが すぎます。
+A: This coffee is too bitter.
+HINT: にがすぎます (niga sugimasu) = is too bitter · にがい (nigai) = bitter (i-adj)
+
+---
+DIR: JP>EN
+Q_ROM: Ne sugita node, kyou wa benkyou shimasu.
+Q_JP: ね すぎた ので、きょう は べんきょうします。
+A: Because I slept too much, I will study today.
+HINT: ねすぎた (ne sugita) = slept too much (past short) · ので (node) = because
+
+---
+DIR: JP>EN
+Q_ROM: Nihongo wa muzukashi sugiru to omoimasu ka?
+Q_JP: にほんご は むずかし すぎる と おもいますか？
+A: Do you think Japanese is too difficult?
+HINT: すぎる (sugiru) = plain/dictionary form of すぎます (sugimasu) · used before と おもう (to omou)
+
+---
+DIR: EN>JP
+Q: I ate too much.
+ROM: Tabe sugimashita.
+JP: たべ すぎました。
+HINT: taberu → stem: たべ (tabe) + すぎました (sugimashita, past) · simpler form — compare with existing "I ate too much yesterday" which adds きのう (kinou)
+
+---
+DIR: EN>JP
+Q: I always wake up too early.
+ROM: Itsumo hayasugi ni okimasu.
+JP: いつも はやすぎに おきます。
+HINT: はやい (hayai, early, i-adj) → drop い → はや + すぎ → はやすぎに (hayasugi ni, adverb) + おきます · に (ni) converts すぎ into the adverb form that modifies おきる
+
+---
+DIR: EN>JP
+Q: This book is too expensive.
+ROM: Kono hon wa taka sugimasu.
+JP: この ほんは たかすぎます。
+HINT: takai (i-adj) → drop い → たか + すぎます · contrast with existing "This bag is too expensive" — same structure, different noun
+
+---
+DIR: EN>JP
+Q: This shirt is too small.
+ROM: Kono shatsu wa chiisa sugimasu.
+JP: この シャツは ちいさすぎます。
+HINT: chiisai (i-adj) → drop い → ちいさ + すぎます · シャツ (shatsu) = shirt
+
+---
+DIR: EN>JP
+Q: That person is too kind.
+ROM: Ano hito wa shinsetsu sugimasu.
+JP: あのひとは しんせつすぎます。
+HINT: shinsetsu (na-adj) → drop な → しんせつ + すぎます · na-adjective base directly + すぎる, no な needed
+
+---
+DIR: EN>JP
+Q: This cookie is too sweet.
+ROM: Kono kukki- wa ama sugimasu.
+JP: この クッキーは あますぎます。
+HINT: amai (i-adj) → drop い → あま + すぎます · contrast with existing: あまくないです (not sweet) vs あますぎます (too sweet)
+
+---
+DIR: EN>JP
+Q: The test was too difficult.
+ROM: Tesuto wa muzukashi sugimashita.
+JP: テストは むずかしすぎました。
+HINT: muzukashii (i-adj) → drop い → むずかし + すぎました (past) · past tense is on すぎる, not the adjective
+
+---
+DIR: EN>JP
+Q: I worked too much last week.
+ROM: Senshuu wa hataraki sugimashita.
+JP: せんしゅうは はたらきすぎました。
+HINT: hataraku (u-verb) → stem: はたらき (hataraki) + すぎました · contrast with existing "this week" version (こんしゅう vs せんしゅう)
+
+---
+DIR: EN>JP
+Q: I watch TV too much every day.
+ROM: Mainichi terebi wo mi sugimasu.
+JP: まいにち テレビを みすぎます。
+HINT: miru (ru-verb) → stem: み (mi) + すぎます · まいにち (mainichi) = every day — no particle needed
+
+---
+DIR: EN>JP
+Q: I don't want to go to school because it is too cold today.
+ROM: Kyou wa samu sugiru node gakkou ni ikitaku arimasen.
+JP: きょうは さむすぎる ので がっこうに いきたくありません。
+HINT: samui → drop い → さむ + すぎる (dictionary form before ので) · ので (node) = because (soft) · いきたくありません (ikitaku arimasen) = don't want to go
+
+---
+DIR: JP>EN
+Q_ROM: Itsumo hayasugi ni okimasu.
+Q_JP: いつも はやすぎに おきます。
+A: I always wake up too early.
+HINT: はやすぎに (hayasugi ni) = too-early (adverb form) · に converts すぎ into an adverb modifying おきます
+
+---
+DIR: JP>EN
+Q_ROM: Kyou wa samu sugiru node gakkou ni ikitaku arimasen.
+Q_JP: きょうは さむすぎる ので がっこうに いきたくありません。
+A: I don't want to go to school because it is too cold today.
+HINT: さむすぎる (samusugiru) = dictionary form used before ので · いきたくありません = don't want to go

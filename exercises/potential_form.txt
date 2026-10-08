@@ -1,0 +1,119 @@
+# TOPIC: Potential Form — Can / Cannot (〜られます / 〜られません)
+# LEVEL: intermediate
+# SOURCE: NHK World Easy Japanese (Lesson 24)
+
+# ─────────────────────────────────────────
+# Conjugation rules:
+#   ru-verbs: drop る → add られる
+#     食べる → 食べられる → 食べられます / 食べられません
+#   u-verbs: change final sound to e-row + る
+#     飲む → 飲める → 飲めます / 飲めません
+#     行く → 行ける, 話す → 話せる, 乗る → 乗れる
+#   Irregulars: する → できる / くる → こられる
+# Note: NHK Lesson 24 focuses on food/dietary restrictions
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: I can't eat raw eggs.
+ROM: Nama tamago wa taberaremasen.
+JP: なまたまごは たべられません。
+HINT: taberu (ru-verb) → taberareru (potential) → taberaremasen (neg. polite) · NHK Lesson 24 key phrase · なまたまご (nama tamago) = raw egg
+
+---
+DIR: EN>JP
+Q: I'm sorry. I can't eat raw fish.
+ROM: Sumimasen. Watashi, sashimi wa taberaremasen.
+JP: すみません。わたし、さしみは たべられません。
+HINT: same taberu → taberaremasen pattern · NHK Lesson 24 Use It! example · さしみ (sashimi) = raw fish
+
+---
+DIR: EN>JP
+Q: I'm sorry. I can't eat shrimp.
+ROM: Sumimasen. Watashi, ebi wa taberaremasen.
+JP: すみません。わたし、えびは たべられません。
+HINT: えび (ebi) = shrimp · NHK Lesson 24 model answer · は (wa) marks the food being discussed
+
+---
+DIR: EN>JP
+Q: I'm sorry. I can't eat pork.
+ROM: Sumimasen. Watashi, butaniku wa taberaremasen.
+JP: すみません。わたし、ぶたにくは たべられません。
+HINT: ぶたにく (butaniku) = pork · NHK Lesson 24 model answer · common phrase for dietary restrictions
+
+---
+DIR: EN>JP
+Q: I can't eat spicy food.
+ROM: Karai mono wa taberaremasen.
+JP: からいものは たべられません。
+HINT: からい (karai) = spicy · もの (mono) = thing/food · karai mono = spicy things
+
+---
+DIR: EN>JP
+Q: I can't eat dairy products.
+ROM: Nyuuseihin wa taberaremasen.
+JP: にゅうせいひんは たべられません。
+HINT: にゅうせいひん (nyuuseihin) = dairy products · same taberaremasen pattern
+
+---
+DIR: EN>JP
+Q: I can't drink alcohol.
+ROM: Arukooru wa nomemasen.
+JP: アルコールは のめません。
+HINT: nomu (u-verb) → nomeru (potential) → nomemasen (neg. polite) · u-verb: む→め before る · アルコール (arukooru) = alcohol
+
+---
+DIR: EN>JP
+Q: I can't drink milk.
+ROM: Gyuunyuu wa nomemasen.
+JP: ぎゅうにゅうは のめません。
+HINT: ぎゅうにゅう (gyuunyuu) = milk · same nomu → nomemasen pattern · む changes to め for potential
+
+---
+DIR: EN>JP
+Q: I can't drink coffee.
+ROM: Koohii wa nomemasen.
+JP: コーヒーは のめません。
+HINT: コーヒー (koohii) = coffee · nomu → nomemasen · contrast with たべられません (eat) vs のめません (drink)
+
+---
+DIR: EN>JP
+Q: Can you eat this?
+ROM: Kore wa taberaremasukaAA?
+JP: これは たべられますか？
+HINT: taberaremasuか = potential positive + question mark · これ (kore) = this · can you eat it?
+
+---
+DIR: EN>JP
+Q: Yes, I can eat it.
+ROM: Hai, taberaremasu.
+JP: はい、たべられます。
+HINT: taberaremasu = potential positive polite · affirmative answer · contrast with taberaremasen (negative)
+
+---
+DIR: EN>JP
+Q: I can't speak English well.
+ROM: Eigo ga jouzu ni hanasemasen.
+JP: えいごが じょうずに はなせません。
+HINT: hanasu (u-verb) → hanaseru (potential) → hanasemasen (neg.) · す changes to せ for potential · じょうずに (jouzu ni) = well/skillfully
+
+---
+DIR: JP>EN
+Q_ROM: Nama tamago wa taberaremasen.
+Q_JP: なまたまごは たべられません。
+A: I can't eat raw eggs.
+HINT: taberaremasen = potential negative of taberu · NHK key phrase
+
+---
+DIR: JP>EN
+Q_ROM: Sumimasen. Watashi, ebi wa taberaremasen.
+Q_JP: すみません。わたし、えびは たべられません。
+A: I'm sorry. I can't eat shrimp.
+HINT: dietary restriction phrase · は (wa) marks the food · watashi adds emphasis
+
+---
+DIR: JP>EN
+Q_ROM: Arukooru wa nomemasen.
+Q_JP: アルコールは のめません。
+A: I can't drink alcohol.
+HINT: nomemasen = potential negative of nomu (u-verb) · む → め in potential form

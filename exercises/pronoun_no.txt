@@ -1,0 +1,150 @@
+# TOPIC: Miscellaneous — Pronoun の (Noun Substitute)
+# LEVEL: beginner
+
+# ─────────────────────────────────────────
+# の (no) as a pronoun replaces a noun already understood from context:
+#   くろい の (kuroi no) = the black one
+#   たけし の (Takeshi no) = Takeshi's [item]
+#   みさき の は (Misaki no wa) = as for Misaki's one…
+# This avoids repeating the noun when it's obvious from context.
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: Are Sato's shoes the black ones?
+ROM: Sato no kutsu wa kuroi no desu ka?
+JP: さと の くつ は くろい の ですか？
+HINT: くろい の (kuroi no) = "the black one" · の (no) replaces くつ (kutsu, shoes — already known from context)
+
+---
+DIR: EN>JP
+Q: No, Sato's shoes are the red ones.
+ROM: Iie, Sato no kutsu wa akai no desu.
+JP: いいえ、さと の くつ は あかい の です。
+HINT: あかい の (akai no) = the red one · の (no) substitutes for くつ (kutsu) again
+
+---
+DIR: EN>JP
+Q: Whose are those black ones?
+ROM: Kuroi no wa dare no desu ka?
+JP: くろい の は だれの ですか？
+HINT: くろい の (kuroi no) = the black ones (topic) · だれの (dare no) = whose · の (no) at the end = [their] ones
+
+---
+DIR: EN>JP
+Q: They are Takeshi's.
+ROM: Takeshi no desu.
+JP: たけし の です。
+HINT: たけし の (Takeshi no) = Takeshi's [ones] · the item くつ (kutsu) is fully replaced by の (no)
+
+---
+DIR: EN>JP
+Q: Is the green car Misaki's?
+ROM: Midori no kuruma wa Misaki no desu ka?
+JP: みどり の くるま は みさき の ですか？
+HINT: みどり の くるま (midori no kuruma) = the green car (の here is possessive/descriptive, not pronoun) · みさき の (Misaki no) = Misaki's
+
+---
+DIR: EN>JP
+Q: No, it's Maika's.
+ROM: Iie, Maika no desu.
+JP: いいえ、まいか の です。
+HINT: まいか の (Maika no) = Maika's [one] · the car is implied, not repeated
+
+---
+DIR: EN>JP
+Q: Which car is Misaki's?
+ROM: Misaki no wa dotchi no kuruma desu ka?
+JP: みさき の は どっち の くるま ですか？
+HINT: みさき の は (Misaki no wa) = as for Misaki's [one]… · どっち (dotchi) = which of the two
+
+---
+DIR: EN>JP
+Q: It's the pink one.
+ROM: Pinku no desu.
+JP: ぴんく の です。
+HINT: ぴんく の (pinku no) = the pink one · の (no) replaces くるま (kuruma, car — understood from context)
+
+---
+DIR: JP>EN
+Q_ROM: Kuroi no wa dare no desu ka?
+Q_JP: くろい の は だれの ですか？
+A: Whose are the black ones?
+HINT: くろい の (kuroi no) = the black ones (pronoun の) · だれの (dare no) = whose
+
+---
+DIR: JP>EN
+Q_ROM: Misaki no wa dotchi no kuruma desu ka?
+Q_JP: みさき の は どっち の くるま ですか？
+A: Which car is Misaki's?
+HINT: みさき の は (Misaki no wa) = as for Misaki's · どっち (dotchi) = which of the two
+
+---
+DIR: EN>JP
+Q: This book is mine.
+ROM: Kono hon wa watashi no desu.
+JP: この ほん は わたし の です。
+HINT: わたし の (watashi no) = mine · の (no) replaces the noun (hon) already understood from context
+
+---
+DIR: EN>JP
+Q: That house over there is mine.
+ROM: Ano ie wa watashi no desu.
+JP: あの いえ は わたし の です。
+HINT: あの (ano) = that (far) · の (no) substitutes for いえ (ie) — same の pronoun pattern
+
+---
+DIR: EN>JP
+Q: Is this car yours?
+ROM: Kono kuruma wa anata no desu ka?
+JP: この くるま は あなた の ですか？
+HINT: あなた の (anata no) = yours · の (no) replaces くるま (kuruma, already the topic)
+
+---
+DIR: EN>JP
+Q: Which phone is yours?
+ROM: Dono keitai wa anata no desu ka?
+JP: どの けいたい は あなた の ですか？
+HINT: どの (dono) + noun = which [noun] · contrast with どれ (dore) which stands alone without a noun
+
+---
+DIR: EN>JP
+Q: That phone is mine.
+ROM: Sono keitai wa watashi no desu.
+JP: その けいたい は わたし の です。
+HINT: その (sono) = that (near listener) · わたし の (watashi no) = mine · の replaces けいたい
+
+---
+DIR: EN>JP
+Q: This book is not my book.
+ROM: Kono hon wa watashi no hon ja nai desu.
+JP: この ほん は わたし の ほん じゃないです。
+HINT: の (no) here is possessive (my book) — NOT the pronoun の · present negative: じゃないです (ja nai desu)
+
+---
+DIR: EN>JP
+Q: I went to buy a dictionary, but there were no good ones.
+ROM: Yasui jisho wo kai ni ikimashita. Demo ii no ga arimasen deshita.
+JP: やすいじしょを かいに いきました。でも いいのが ありませんでした。
+HINT: の (no) replaces じしょ (jisho) — already mentioned · いいの (ii no) = good ones · demo = but/however
+
+---
+DIR: EN>JP
+Q: I like the green dress but I also like the yellow one.
+ROM: Midori no doresu ga suki desu. Demo kiiro no mo suki desu.
+JP: みどりのドレスが すきです。でも きいろのも すきです。
+HINT: きいろの (kiiro no) = the yellow one · の (no) replaces ドレス (doresu) already understood · も (mo) = also/too
+
+---
+DIR: EN>JP
+Q: Because this dictionary is old, I will buy a new one.
+ROM: Kono jisho wa furui kara atarashii no wo kaimasu.
+JP: このじしょは ふるい から あたらしいのを かいます。
+HINT: あたらしいの (atarashii no) = a new one · の (no) replaces じしょ · を (wo) marks the object of buying · から (kara) = because
+
+---
+DIR: JP>EN
+Q_ROM: Yasui jisho wo kai ni ikimashita. Demo ii no ga arimasen deshita.
+Q_JP: やすいじしょを かいに いきました。でも いいのが ありませんでした。
+A: I went to buy a dictionary, but there were no good ones.
+HINT: いいの (ii no) = good ones · の (no) as pronoun substitutes for じしょ (jisho, dictionary)

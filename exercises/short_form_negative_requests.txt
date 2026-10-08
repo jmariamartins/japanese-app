@@ -1,0 +1,113 @@
+# TOPIC: Short-form — Negative requests
+# LEVEL: beginner
+
+---
+DIR: EN>JP
+Q: Please don't run here.
+ROM: Koko de hashiranai de kudasai.
+JP: ここで走らないでください。
+HINT: negative short form of hashiru: はしらない (hashiranai) + で ください (de kudasai)
+
+---
+DIR: EN>JP
+Q: Please don't eat here.
+ROM: Koko de tabenai de kudasai.
+JP: ここで食べないでください。
+HINT: negative short form of taberu: たべない (tabenai) + で ください (de kudasai)
+
+---
+DIR: JP>EN
+Q_ROM: Koko de tabako wo suwanai de kudasai.
+Q_JP: ここでたばこを吸わないでください。
+A: Please don't smoke here.
+HINT: negative request = negative short form + で ください (de kudasai)
+
+---
+DIR: EN>JP
+Q: Please don't take photos here.
+ROM: Koko de shashin wo toranai de kudasai.
+JP: ここで しゃしんを とらないでください。
+HINT: toru (u-verb, ends in -ru) → negative short: とらない (toranai) + で ください (de kudasai) · negative request = negative short form + でください
+
+---
+DIR: EN>JP
+Q: Please don't drive.
+ROM: Unten shinai de kudasai.
+JP: うんてんしないでください。
+HINT: unten suru (suru verb) → negative short: うんてんしない (unten shinai) + で ください (de kudasai) · うんてん (unten) = driving
+
+---
+DIR: EN>JP
+Q: Please don't come.
+ROM: Konai de kudasai.
+JP: こないでください。
+HINT: kuru (irregular) → negative short: こない (konai) + で ください (de kudasai) · kuru is irregular: negative short is konai, not kuranai
+
+---
+DIR: JP>EN
+Q_ROM: Koko de shashin wo toranai de kudasai.
+Q_JP: ここで しゃしんを とらないでください。
+A: Please don't take photos here.
+HINT: toranai = negative short of toru · でください (de kudasai) after negative short = negative request
+
+---
+DIR: JP>EN
+Q_ROM: Konai de kudasai.
+Q_JP: こないでください。
+A: Please don't come.
+HINT: こない (konai) = negative short of kuru (irregular) · でください (de kudasai) = negative request ending
+
+---
+DIR: EN>JP
+Q: Please do not run in the house.
+ROM: Ie no naka de hashiranai de kudasai.
+JP: いえのなかで はしらないでください。
+HINT: hashiru (u-verb) → negative short: はしらない (hashiranai) + でください (de kudasai) · で (de) = location · なか (naka) = inside
+
+---
+DIR: EN>JP
+Q: Please do not eat in the library.
+ROM: Toshokan no naka de tabenai de kudasai.
+JP: としょかんのなかで たべないでください。
+HINT: taberu (ru-verb) → negative short: たべない (tabenai) + でください (de kudasai) · としょかん (toshokan) = library
+
+---
+DIR: EN>JP
+Q: Please do not drive my car.
+ROM: Watashi no kuruma wo unten shinai de kudasai.
+JP: わたしのくるまを うんてんしないでください。
+HINT: unten suru (suru verb) → negative short: うんてんしない (unten shinai) + でください · を (wo) marks the object (car)
+
+---
+DIR: EN>JP
+Q: Please do not come to the party.
+ROM: Pa-ti- ni konai de kudasai.
+JP: パーティーに こないでください。
+HINT: kuru (irregular) → negative short: こない (konai) + でください · に (ni) = destination (party)
+
+---
+DIR: JP>EN
+Q_ROM: Toshokan no naka de tabenai de kudasai.
+Q_JP: としょかんのなかで たべないでください。
+A: Please do not eat in the library.
+HINT: たべない (tabenai) = negative short of taberu · でください (de kudasai) = negative request ending
+
+---
+DIR: JP>EN
+Q_ROM: Watashi no kuruma wo unten shinai de kudasai.
+Q_JP: わたしのくるまを うんてんしないでください。
+A: Please do not drive my car.
+HINT: うんてんしない (unten shinai) = negative short of うんてんする (unten suru, to drive) · を (wo) marks the object
+---
+DIR: EN>JP
+Q: Please do not play here.
+ROM: Koko de asobanai de kudasai.
+JP: ここで あそばないでください。
+HINT: asobu (u-verb) → negative short: あそばない (asobanai) + でください (de kudasai) · ぶ changes to ば before ない · で (de) = location
+
+---
+DIR: JP>EN
+Q_ROM: Koko de asobanai de kudasai.
+Q_JP: ここで あそばないでください。
+A: Please do not play here.
+HINT: asobanai = negative short of asobu (to play) · でください after negative short = negative request

@@ -1,0 +1,117 @@
+# TOPIC: Te-form — Trying Something (〜てみる)
+# LEVEL: intermediate
+# SOURCE: NHK World Easy Japanese (Lessons 13, 14)
+
+# ─────────────────────────────────────────
+# Structures covered:
+#   [verb-te] + みます           = I'll try doing... (present/future)
+#   [verb-te] + みたいです       = I want to try doing...
+#   [verb-te] + みました         = I tried doing... (past)
+#   [verb-te] + みませんでした   = I didn't try doing... (past negative)
+# Key rule: て-form of verb + みる (to see/try) = to try doing
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: I want to try going to Japan.
+ROM: Nihon e itte mitai desu.
+JP: にほんへ いってみたいです。
+HINT: iku → itte (te-form) + みたいです (mitai desu) · NHK Lesson 13 key phrase · へ (e) = destination direction
+
+---
+DIR: EN>JP
+Q: I want to try climbing Mt. Fuji.
+ROM: Fujisan ni nobotte mitai desu.
+JP: ふじさんに のぼってみたいです。
+HINT: noboru → nobotte (te-form) + みたいです · に (ni) = destination · NHK Lesson 13 model answer
+
+---
+DIR: EN>JP
+Q: I want to try riding the Shinkansen.
+ROM: Shinkansen ni notte mitai desu.
+JP: しんかんせんに のってみたいです。
+HINT: noru → notte (te-form) + みたいです · NHK Lesson 13 model answer · しんかんせん (shinkansen) = bullet train
+
+---
+DIR: EN>JP
+Q: I want to try watching sumo.
+ROM: Sumou wo mite mitai desu.
+JP: すもうを みてみたいです。
+HINT: miru → mite (te-form) + みたいです · NHK Lesson 13 example · すもう (sumou) = sumo wrestling
+
+---
+DIR: EN>JP
+Q: I want to try eating sushi.
+ROM: Sushi wo tabete mitai desu.
+JP: すしを たべてみたいです。
+HINT: taberu → tabete (te-form) + みたいです · を (wo) marks the object
+
+---
+DIR: EN>JP
+Q: I want to try wearing a kimono.
+ROM: Kimono wo kite mitai desu.
+JP: きものを きてみたいです。
+HINT: kiru (to wear) → kite (te-form) + みたいです · きもの (kimono) = traditional Japanese garment
+
+---
+DIR: EN>JP
+Q: I'll try eating it.
+ROM: Tabete mimasu.
+JP: たべてみます。
+HINT: taberu → tabete + みます (mimasu, present/future) · てみます = will try doing · less commitment than てみたいです
+
+---
+DIR: EN>JP
+Q: I'll try speaking in Japanese.
+ROM: Nihongo de hanashite mimasu.
+JP: にほんごで はなしてみます。
+HINT: hanasu → hanashite (te-form) + みます · で (de) = medium/method (in Japanese)
+
+---
+DIR: EN>JP
+Q: I tried eating sushi.
+ROM: Sushi wo tabete mimashita.
+JP: すしを たべてみました。
+HINT: tabete + みました (mimashita, past) = tried eating · past tense is in みました, not the te-form
+
+---
+DIR: EN>JP
+Q: I tried speaking in Japanese.
+ROM: Nihongo de hanashite mimashita.
+JP: にほんごで はなしてみました。
+HINT: hanashite + みました (past) = tried speaking · contrast with みます (future/present)
+
+---
+DIR: EN>JP
+Q: I want to try listening to Japanese music.
+ROM: Nihon no ongaku wo kiite mitai desu.
+JP: にほんのおんがくを きいてみたいです。
+HINT: kiku → kiite (te-form) + みたいです · にほんのおんがく (nihon no ongaku) = Japanese music
+
+---
+DIR: EN>JP
+Q: I want to try living in Japan.
+ROM: Nihon ni sunde mitai desu.
+JP: にほんに すんでみたいです。
+HINT: sumu → sunde (te-form) + みたいです · に (ni) = location of living
+
+---
+DIR: JP>EN
+Q_ROM: Nihon e itte mitai desu.
+Q_JP: にほんへ いってみたいです。
+A: I want to try going to Japan.
+HINT: itte = te-form of iku · みたいです = want to try · NHK key phrase
+
+---
+DIR: JP>EN
+Q_ROM: Sushi wo tabete mimashita.
+Q_JP: すしを たべてみました。
+A: I tried eating sushi.
+HINT: tabete = te-form of taberu · みました = tried (past) · を marks the object
+
+---
+DIR: JP>EN
+Q_ROM: Kimono wo kite mitai desu.
+Q_JP: きものを きてみたいです。
+A: I want to try wearing a kimono.
+HINT: kite = te-form of kiru (to wear) · みたいです = want to try

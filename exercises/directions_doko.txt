@@ -1,0 +1,116 @@
+# TOPIC: Asking Directions & Locations (〜はどこですか)
+# LEVEL: beginner
+# SOURCE: NHK World Easy Japanese (Lesson 1, 15)
+
+# ─────────────────────────────────────────
+# Structures covered:
+#   すみません。[place]はどこですか。 = Excuse me, where is [place]?
+#   [place]はどこですか。            = Where is [place]?
+#   あそこです / ここです / そこです  = It's over there / here / there
+#   [place]までお願いします。        = To [place], please. (taxi)
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: Excuse me. Where is the toilet?
+ROM: Sumimasen. Toire wa doko desu ka?
+JP: すみません。トイレはどこですか？
+HINT: すみません (sumimasen) = excuse me · [場所] + は + どこですか (doko desu ka) = where is...? · NHK Lesson 1 key phrase
+
+---
+DIR: EN>JP
+Q: Excuse me. Where is the station?
+ROM: Sumimasen. Eki wa doko desu ka?
+JP: すみません。えきはどこですか？
+HINT: えき (eki) = station · same pattern: すみません + [場所]はどこですか
+
+---
+DIR: EN>JP
+Q: Excuse me. Where is the convenience store?
+ROM: Sumimasen. Konbini wa doko desu ka?
+JP: すみません。コンビニはどこですか？
+HINT: コンビニ (konbini) = convenience store · loanword, written in katakana
+
+---
+DIR: EN>JP
+Q: Excuse me. Where is the hospital?
+ROM: Sumimasen. Byouin wa doko desu ka?
+JP: すみません。びょういんはどこですか？
+HINT: びょういん (byouin) = hospital · same どこですか pattern
+
+---
+DIR: EN>JP
+Q: Excuse me. Where is the post office?
+ROM: Sumimasen. Yuubinkyoku wa doko desu ka?
+JP: すみません。ゆうびんきょくはどこですか？
+HINT: ゆうびんきょく (yuubinkyoku) = post office · longer noun, same pattern applies
+
+---
+DIR: EN>JP
+Q: Excuse me. Where is the hotel?
+ROM: Sumimasen. Hoteru wa doko desu ka?
+JP: すみません。ホテルはどこですか？
+HINT: ホテル (hoteru) = hotel (loanword, katakana) · どこですか (doko desu ka) = where is it?
+
+---
+DIR: EN>JP
+Q: Excuse me. Where is the bus stop?
+ROM: Sumimasen. Basutei wa doko desu ka?
+JP: すみません。バスていはどこですか？
+HINT: バスてい (basutei) = bus stop · バス (basu) = bus + てい (tei) = stop/stand
+
+---
+DIR: EN>JP
+Q: It's over there.
+ROM: Asoko desu.
+JP: あそこです。
+HINT: あそこ (asoko) = over there (far from both speaker and listener) · contrast: ここ (koko) = here, そこ (soko) = there (near listener)
+
+---
+DIR: EN>JP
+Q: It's here.
+ROM: Koko desu.
+JP: ここです。
+HINT: ここ (koko) = here (near speaker) · ここ/そこ/あそこ = the three-way distance distinction
+
+---
+DIR: EN>JP
+Q: To the airport, please. (taxi)
+ROM: Kuukou made onegai shimasu.
+JP: くうこうまでお願いします。
+HINT: まで (made) = to / as far as · お願いします (onegai shimasu) = please (request) · NHK Lesson 15 pattern for taxis
+
+---
+DIR: EN>JP
+Q: To Tokyo Station, please. (taxi)
+ROM: Toukyou eki made onegai shimasu.
+JP: とうきょうえきまでお願いします。
+HINT: [destination] + まで + お願いします · standard phrase for telling a taxi driver where to go
+
+---
+DIR: EN>JP
+Q: To this hotel, please. (taxi)
+ROM: Kono hoteru made onegai shimasu.
+JP: このホテルまでお願いします。
+HINT: この (kono) = this (modifying a noun) · まで (made) = to · NHK Lesson 15 model answer
+
+---
+DIR: JP>EN
+Q_ROM: Sumimasen. Toshokan wa doko desu ka?
+Q_JP: すみません。としょかんはどこですか？
+A: Excuse me. Where is the library?
+HINT: としょかん (toshokan) = library · sumimasen + [place] + wa doko desu ka
+
+---
+DIR: JP>EN
+Q_ROM: Asoko desu.
+Q_JP: あそこです。
+A: It's over there.
+HINT: あそこ (asoko) = over there · one-word answer to どこですか
+
+---
+DIR: JP>EN
+Q_ROM: Kuukou made onegai shimasu.
+Q_JP: くうこうまでお願いします。
+A: To the airport, please.
+HINT: まで (made) = to/as far as · お願いします (onegai shimasu) = please · taxi destination pattern

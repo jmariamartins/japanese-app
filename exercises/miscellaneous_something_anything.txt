@@ -1,0 +1,264 @@
+# TOPIC: Miscellaneous — Something, Anything, Somewhere, Someone
+# LEVEL: beginner
+
+# ─────────────────────────────────────────
+# Pattern:
+#   question word + か (ka) = some~ (affirmative context)
+#     どこか (dokoka) = somewhere, なにか (nanika) = something, だれか (dareka) = someone
+#   question word + にも (ni mo) + negative = no~ / not any~
+#     どこにも (doko ni mo) + neg = nowhere / not anywhere
+#     だれにも (dare ni mo) + neg = no one / not anyone
+#   Plain question words in questions (no か or も added)
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: Did you go anywhere yesterday?
+ROM: Kinou doko ka ni ikimashita ka?
+JP: きのう どこかに いきました か？
+HINT: "anywhere" in a question = どこか (dokoka) + に (ni) · not plain どこ (doko), that asks "where exactly?"
+
+---
+DIR: EN>JP
+Q: I did not go anywhere yesterday.
+ROM: Kinou doko ni mo ikimasen deshita.
+JP: きのう どこにも いきませんでした。
+HINT: "nowhere / not anywhere" = どこにも (doko ni mo) + negative verb · にも (ni mo) replaces に (ni)
+
+---
+DIR: EN>JP
+Q: Where will you go today?
+ROM: Kyou wa doko ni ikimasu ka?
+JP: きょう は どこに いきますか？
+HINT: plain question = どこ (doko, no か suffix) · asking specifically where, not "anywhere"
+
+---
+DIR: EN>JP
+Q: Will you eat something?
+ROM: Nanika tabemasu ka?
+JP: なにか たべます か？
+HINT: "something" in a question = なにか (nanika) · を (wo) is often dropped in casual speech after なにか
+
+---
+DIR: EN>JP
+Q: Yes, I will eat something.
+ROM: Hai, nanika tabemasu.
+JP: はい、なにか たべます。
+HINT: affirmative answer also uses なにか (nanika, something) · を (wo) can be omitted
+
+---
+DIR: EN>JP
+Q: What will you eat?
+ROM: Nani wo tabemasu ka?
+JP: なにを たべます か？
+HINT: plain question "what?" = なに (nani, no か) + を (wo) · asking for a specific answer
+
+---
+DIR: EN>JP
+Q: Will you meet someone today?
+ROM: Kyou dareka ni aimasu ka?
+JP: きょう だれかに あいます か？
+HINT: "someone" = だれか (dareka) + に (ni) · あいます (aimasu, to meet) takes に for the person met
+
+---
+DIR: EN>JP
+Q: No, I won't meet anyone.
+ROM: Iie, dare ni mo aimasen.
+JP: いいえ、だれにも あいません。
+HINT: "no one / not anyone" = だれにも (dare ni mo) + negative · にも (ni mo) replaces に (ni)
+
+---
+DIR: EN>JP
+Q: Who is that person?
+ROM: Ano hito wa dare desu ka?
+JP: あの ひと は だれ ですか？
+HINT: plain question "who?" = だれ (dare, no か) · は (wa) marks the topic being asked about
+
+---
+DIR: JP>EN
+Q_ROM: Kinou doko ni mo ikimasen deshita.
+Q_JP: きのう どこにも いきませんでした。
+A: I did not go anywhere yesterday.
+HINT: どこにも (doko ni mo) + negative = not anywhere / nowhere
+
+---
+DIR: JP>EN
+Q_ROM: Kyou dareka ni aimasu ka?
+Q_JP: きょう だれかに あいます か？
+A: Will you meet someone today?
+HINT: だれか (dareka) = someone (affirmative/question context) · に (ni) marks the person you meet
+
+---
+DIR: EN>JP
+Q: The cat has brought something.
+ROM: Neko ga nanika motte kimashita.
+JP: ねこが なにか もってきました。
+HINT: なにか (nanika) = something (affirmative context) · もってくる (motte kuru) = to bring
+
+---
+DIR: EN>JP
+Q: That cat did not eat anything.
+ROM: Neko wa nanimo tabemasen deshita.
+JP: ねこは なにも たべませんでした。
+HINT: なにも (nanimo) + negative = not anything / nothing · contrast with なにか (nanika) = something
+
+---
+DIR: EN>JP
+Q: Did you eat anything at the party?
+ROM: Pa-ti- de nanika tabemashita ka?
+JP: パーティーで なにか たべましたか？
+HINT: "anything" in a question → なにか (nanika) · で (de) = location of action · past positive question
+
+---
+DIR: EN>JP
+Q: I will eat something at home.
+ROM: Ie de nanika tabemasu.
+JP: いえで なにか たべます。
+HINT: なにか (nanika) = something (affirmative) · で (de) = location of action
+
+---
+DIR: EN>JP
+Q: Did you go somewhere?
+ROM: Dokoka e ikimashita ka?
+JP: どこかへ いきましたか？
+HINT: どこか (dokoka) = somewhere (affirmative/question context) · へ (e) = destination direction
+
+---
+DIR: EN>JP
+Q: No, I didn't go anywhere.
+ROM: Iie, doko ni mo ikimasen deshita.
+JP: いいえ、どこにも いきませんでした。
+HINT: どこにも (doko ni mo) + negative = not anywhere / nowhere · past negative · contrast with yesterday version which adds きのう (kinou)
+
+---
+DIR: EN>JP
+Q: Did you meet anyone?
+ROM: Dareka ni aimashita ka?
+JP: だれかに あいましたか？
+HINT: だれか (dareka) = someone/anyone (affirmative/question context) · past question · に (ni) marks the person met
+
+---
+DIR: EN>JP
+Q: No, I didn't meet anyone.
+ROM: Iie, dare ni mo aimasen deshita.
+JP: いいえ、だれにも あいませんでした。
+HINT: だれにも (dare ni mo) + negative = not anyone / nobody · past negative · contrast with present: あいません (aimasen)
+
+---
+DIR: EN>JP
+Q: Did you do anything?
+ROM: Nanika shimashita ka?
+JP: なにか しましたか？
+HINT: なにか (nanika) = anything (question context) · past positive question · suru → shimashita
+
+---
+DIR: EN>JP
+Q: Did you buy anything?
+ROM: Nanika kaimashita ka?
+JP: なにか かいましたか？
+HINT: なにか (nanika) = anything (question context) · past positive question · kau → kaimashita
+
+---
+DIR: EN>JP
+Q: I did not buy anything.
+ROM: Nanimo kaimasen deshita.
+JP: なにも かいませんでした。
+HINT: なにも (nanimo) + negative = nothing / not anything · past negative of kau
+
+---
+DIR: EN>JP
+Q: Did you meet anyone at the event?
+ROM: Ibento de dareka ni aimashita ka?
+JP: イベントで だれかに あいましたか？
+HINT: だれか (dareka) = anyone (question context) · で (de) = location of action · に (ni) marks person met
+
+---
+DIR: EN>JP
+Q: Did you go anywhere last weekend?
+ROM: Senshuumatsu dokoka ni ikimashita ka?
+JP: せんしゅうまつ どこかに いきましたか？
+HINT: せんしゅうまつ (senshuumatsu) = last weekend · どこかに (dokoka ni) = somewhere · no に after senshuumatsu (relative time)
+
+---
+DIR: EN>JP
+Q: I will eat something at the cafe.
+ROM: Kafe de nanika tabemasu.
+JP: カフェで なにか たべます。
+HINT: なにか (nanika) = something · で (de) = location of action · compare with "at home" version (ie de)
+
+---
+DIR: EN>JP
+Q: Will you go to the cafe with someone?
+ROM: Kafe ni dareka to ikimasu ka?
+JP: カフェに だれかと いきますか？
+HINT: だれかと (dareka to) = with someone · と (to) = together with · に (ni) = destination
+
+---
+DIR: EN>JP
+Q: I don't go to the cafe with anyone.
+ROM: Kafe ni dare to mo ikimasen.
+JP: カフェに だれとも いきません。
+HINT: だれとも (dare to mo) + negative = not with anyone · と (to) = together · も (mo) + negative = "not even anyone"
+
+---
+DIR: EN>JP
+Q: Will you go to the library with anyone?
+ROM: Toshokan ni dareka to ikimasu ka?
+JP: としょかんに だれかと いきますか？
+HINT: だれかと (dareka to) = with anyone (question context) · contrast with だれとも + negative = not with anyone
+
+---
+DIR: EN>JP
+Q: I will not go anywhere.
+ROM: Doko ni mo ikimasen.
+JP: どこにも いきません。
+HINT: どこにも (doko ni mo) + negative = nowhere / not anywhere · present/future negative · contrast with past: いきませんでした
+
+---
+DIR: EN>JP
+Q: Mari did not buy anything.
+ROM: Mari wa nanimo kaimasen deshita.
+JP: まりは なにも かいませんでした。
+HINT: なにも (nanimo) + negative = nothing / not anything · past negative · は (wa) marks the topic (Mari)
+
+---
+DIR: EN>JP
+Q: Did you eat anything?
+ROM: Nanika tabemashita ka?
+JP: なにか たべましたか？
+HINT: なにか (nanika) = anything (question context) · past positive question · taberu → tabemashita
+
+---
+DIR: EN>JP
+Q: I will not go anywhere tomorrow.
+ROM: Ashita doko ni mo ikimasen.
+JP: あした どこにも いきません。
+HINT: あした (ashita) = tomorrow — no particle needed · どこにも (doko ni mo) + negative = nowhere
+
+---
+DIR: EN>JP
+Q: Will you meet anyone at the cafe?
+ROM: Kafe de dareka ni aimasu ka?
+JP: カフェで だれかに あいますか？
+HINT: だれか (dareka) = anyone (question context) · で (de) = location · に (ni) marks person met
+
+---
+DIR: JP>EN
+Q_ROM: Neko ga nanika motte kimashita.
+Q_JP: ねこが なにか もってきました。
+A: The cat has brought something.
+HINT: なにか (nanika) = something · もってくる (motte kuru) = to bring
+
+---
+DIR: JP>EN
+Q_ROM: Kafe ni dare to mo ikimasen.
+Q_JP: カフェに だれとも いきません。
+A: I don't go to the cafe with anyone.
+HINT: だれとも (dare to mo) + negative = not with anyone
+
+---
+DIR: JP>EN
+Q_ROM: Ashita doko ni mo ikimasen.
+Q_JP: あした どこにも いきません。
+A: I will not go anywhere tomorrow.
+HINT: どこにも (doko ni mo) + negative = not anywhere / nowhere

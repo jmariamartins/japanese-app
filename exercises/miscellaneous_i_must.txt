@@ -1,0 +1,129 @@
+# TOPIC: Miscellaneous — I Must… (〜なくちゃいけません)
+# LEVEL: beginner
+
+# ─────────────────────────────────────────
+# Structure:
+#   [verb negative short] → drop the final い → add くちゃいけません (kucha ikemasen)
+#   e.g. たべない (tabenai) → たべな + くちゃいけません = must eat
+#        いかない (ikanai) → いかな + くちゃいけません = must go
+# This is the contracted/casual form of 〜なければなりません (nakereba narimasen).
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: I must clean the room tomorrow.
+ROM: Ashita heya wo souji shinakucha ikemasen.
+JP: あした へや を そうじしなくちゃいけません。
+HINT: そうじする (souji suru) → negative: しない (shinai) → drop い → しな + くちゃいけません (kucha ikemasen) · を (wo) = object
+
+---
+DIR: EN>JP
+Q: I must swim 100 meters every day.
+ROM: Mainichi 100-me-toru oyoganakucha ikemasen.
+JP: まいにち 100めーとる およがなくちゃいけません。
+HINT: およぐ (oyogu) → negative: およがない (oyoganai) → drop い → およがな + くちゃいけません (kucha ikemasen)
+
+---
+DIR: EN>JP
+Q: I must wake up early tomorrow morning.
+ROM: Ashita no asa hayaku okinakucha ikemasen.
+JP: あした の あさ はやく おきなくちゃいけません。
+HINT: おきる (okiru) → negative: おきない (okinai) → drop い → おきな + くちゃいけません · はやく (hayaku) = early
+
+---
+DIR: EN>JP
+Q: Because I have a meeting, I must prepare.
+ROM: Kaigi ga aru node, junbi shinakucha ikemasen.
+JP: かいぎ が ある ので、じゅんびしなくちゃいけません。
+HINT: じゅんびする (junbi suru) → じゅんびしない (junbi shinai) → じゅんびしな + くちゃいけません · ので (node) = because
+
+---
+DIR: EN>JP
+Q: Because I lost weight recently, I must eat more.
+ROM: Saikin yaseta node, motto tabenakucha ikemasen.
+JP: さいきん やせた ので、もっと たべなくちゃいけません。
+HINT: たべる (taberu) → たべない (tabenai) → たべな + くちゃいけません · もっと (motto) = more · past short + ので (node)
+
+---
+DIR: JP>EN
+Q_ROM: Ashita heya wo souji shinakucha ikemasen.
+Q_JP: あした へや を そうじしなくちゃいけません。
+A: I must clean the room tomorrow.
+HINT: そうじしなくちゃいけません (souji shinakucha ikemasen) = must clean up
+
+---
+DIR: JP>EN
+Q_ROM: Kaigi ga aru node, junbi shinakucha ikemasen.
+Q_JP: かいぎ が ある ので、じゅんびしなくちゃいけません。
+A: Because I have a meeting, I must prepare.
+HINT: ので (node) = because (soft reason) · じゅんびする (junbi suru) = to prepare
+
+---
+DIR: JP>EN
+Q_ROM: Saikin yaseta node, motto tabenakucha ikemasen.
+Q_JP: さいきん やせた ので、もっと たべなくちゃいけません。
+A: Because I lost weight recently, I must eat more.
+HINT: やせた (yaseta) = lost weight (past short) · もっと (motto) = more
+
+---
+DIR: EN>JP
+Q: I have to study a lot because there will be an exam next week.
+ROM: Raishuu tesuto ga aru kara takusan benkyou shinakucha ikemasen.
+JP: らいしゅう テストが ある から たくさん べんきょうしなくちゃいけません。
+HINT: ある (aru) = short present form before から (kara) · べんきょうする → べんきょうしない → drop い → べんきょうしな + くちゃいけません
+
+---
+DIR: EN>JP
+Q: I had to get up at six this morning.
+ROM: Kesa rokuji ni okinakucha ikemasen deshita.
+JP: けさ ろくじに おきなくちゃいけませんでした。
+HINT: past obligation → くちゃいけませんでした (kucha ikemasen deshita) · okiru → okinai → drop い → おきな + くちゃいけませんでした · けさ (kesa) = this morning
+
+---
+DIR: EN>JP
+Q: (The truth is) I must practise every day.
+ROM: Mainichi renshuu shinakucha ikenai n desu.
+JP: まいにち れんしゅうしなくちゃいけないんです。
+HINT: casual form + んです (n desu) = adds explanatory nuance · なくちゃいけない (nakucha ikenai) = casual must · + んです = "the thing is, I have to…"
+
+---
+DIR: EN>JP
+Q: I need to study tonight because I have a test tomorrow.
+ROM: Ashita tesuto ga aru kara konya benkyou shinakucha ikemasen.
+JP: あした テストが ある から こんや べんきょうしなくちゃいけません。
+HINT: ある (aru) short form before から (kara) · こんや (konya) = tonight · contrast with sentence 1 which is about next week
+
+---
+DIR: EN>JP
+Q: I need to quit my part-time job because school got busy.
+ROM: Gakkou ga isogashiku natta kara baito wo yame nakucha ikemasen.
+JP: がっこうが いそがしくなった から バイトを やめなくちゃいけません。
+HINT: isogashiku natta = became busy (i-adj past short + なる) · から after past short · やめる → やめない → やめな + くちゃいけません · バイト (baito) = part-time job
+
+---
+DIR: EN>JP
+Q: I had to clean up my house yesterday.
+ROM: Kinou ie wo souji shinakucha ikemasen deshita.
+JP: きのう いえを そうじしなくちゃいけませんでした。
+HINT: past obligation → くちゃいけませんでした · そうじする → そうじしない → そうじしな + くちゃいけませんでした · を (wo) = object (house)
+
+---
+DIR: EN>JP
+Q: I had to cook dinner last night.
+ROM: Sakuban yorugohan wo ryouri shinakucha ikemasen deshita.
+JP: さくばん よるごはんを りょうりしなくちゃいけませんでした。
+HINT: さくばん (sakuban) = last night · りょうりする → りょうりしない → りょうりしな + くちゃいけませんでした · を (wo) = object (dinner)
+
+---
+DIR: JP>EN
+Q_ROM: Raishuu tesuto ga aru kara takusan benkyou shinakucha ikemasen.
+Q_JP: らいしゅう テストが ある から たくさん べんきょうしなくちゃいけません。
+A: I have to study a lot because there will be an exam next week.
+HINT: なくちゃいけません (nakucha ikemasen) = must / have to · から (kara) = because · らいしゅう (raishuu) = next week
+
+---
+DIR: JP>EN
+Q_ROM: Kinou ie wo souji shinakucha ikemasen deshita.
+Q_JP: きのう いえを そうじしなくちゃいけませんでした。
+A: I had to clean up my house yesterday.
+HINT: くちゃいけませんでした (kucha ikemasen deshita) = past obligation "had to" · contrast with present: くちゃいけません

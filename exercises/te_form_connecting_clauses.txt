@@ -1,0 +1,73 @@
+# TOPIC: Te-form — Connecting Clauses & Listing Attributes
+# LEVEL: beginner
+
+# ─────────────────────────────────────────
+# Structures covered:
+#   Noun/na-adj + で (de) + [next clause]   = "is X and also Y"
+#   i-adj: drop い (i) → add くて (kute) + [next]  = "is X and also Y"
+# Note: this unit is about the te-form used to LINK attributes,
+#   not the progressive て + いる structure.
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: Mary is French and an international student.
+ROM: Mearii wa Furansujin de ryuugakusei desu.
+JP: めありー は ふらんすじんで りゅうがくせいです。
+HINT: noun + で (de) connects two noun descriptors · ふらんすじん (Furansujin, noun) → で (de) + next noun
+
+---
+DIR: EN>JP
+Q: Is the winter in Japan cold and dark?
+ROM: Nihon no fuyu wa samukute kurai desu ka?
+JP: にほん の ふゆ は さむくて くらいですか？
+HINT: i-adjective connection: samui → drop い (i) → さむ + くて (kute) · both さむい (samui) and くらい (kurai) are i-adjectives
+
+---
+DIR: EN>JP
+Q: My school is Tomodachi High School and it is far.
+ROM: Watashi no gakkou wa Tomodachi koukou de tooi desu.
+JP: わたし の がっこう は ともだちこうこうで とおいです。
+HINT: noun (school name) + で (de) + i-adjective · で (de) links noun predicate to adjective
+
+---
+DIR: EN>JP
+Q: My girlfriend is 25 years old and a nurse.
+ROM: Watashi no kanojo wa 25-sai de kangoshi desu.
+JP: わたし の かのじょ は ２５さいで かんごしです。
+HINT: age (treated as noun) + で (de) + noun · same pattern as Mary exercise above
+
+---
+DIR: EN>JP
+Q: This restaurant is expensive and not delicious.
+ROM: Kono resutoran wa takakute oishikunai desu.
+JP: この れすとらん は たかくて おいしくないです。
+HINT: i-adj connection: takai → たかくて (takakute) · negative i-adj: oishii → おいしくない (oishikunai) — drop い (i) → くない (kunai)
+
+---
+DIR: EN>JP
+Q: Was the homework a lot and difficult?
+ROM: Shukudai wa ookute muzukashikatta desu ka?
+JP: しゅくだい は おおくて むずかしかったです か？
+HINT: ooi (many/a lot) → おおくて (ookute) · past tense goes on the FINAL adjective only: むずかしかった (muzukashikatta)
+
+---
+DIR: JP>EN
+Q_ROM: Mearii wa Furansujin de ryuugakusei desu.
+Q_JP: めありー は ふらんすじんで りゅうがくせいです。
+A: Mary is French and an international student.
+HINT: で (de) here is not the action particle — it connects two noun descriptions
+
+---
+DIR: JP>EN
+Q_ROM: Kono resutoran wa takakute oishikunai desu.
+Q_JP: この れすとらん は たかくて おいしくないです。
+A: This restaurant is expensive and not delicious.
+HINT: たかくて (takakute) = te-form of たかい (takai) · おいしくない (oishikunai) = negative form of おいしい (oishii)
+
+---
+DIR: JP>EN
+Q_ROM: Watashi no kanojo wa 25-sai de kangoshi desu.
+Q_JP: わたし の かのじょ は ２５さいで かんごしです。
+A: My girlfriend is 25 years old and a nurse.
+HINT: で (de) links two noun predicates (age + occupation)

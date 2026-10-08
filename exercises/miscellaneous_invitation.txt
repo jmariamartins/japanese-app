@@ -1,0 +1,37 @@
+# TOPIC: Miscellaneous — Invitation
+# LEVEL: beginner
+
+---
+DIR: EN>JP
+Q: Will you go to the cafe with me?
+ROM: Kafe ni ikimasen ka?
+JP: かふぇに いきませんか？
+HINT: ませんか (masen ka) = invitation "won't you...? / would you like to...?" · softer than ましょう
+
+---
+DIR: EN>JP
+Q: Shall we watch a movie?
+ROM: Eiga wo mimasen ka?
+JP: えいがを みませんか？
+HINT: ませんか (masen ka) = shall we...? / won't you...? · を (wo) marks the object (movie)
+
+---
+DIR: EN>JP
+Q: Shall we drink sake tomorrow?
+ROM: Ashita sake wo nomimasen ka?
+JP: あした さけを のみませんか？
+HINT: ませんか (masen ka) = invitation · あした (ashita) = tomorrow (no に needed — relative time word)
+
+---
+DIR: EN>JP
+Q: Let's study in the library.
+ROM: Toshokan de benkyou shimashou.
+JP: としょかんで べんきょうしましょう。
+HINT: ましょう (mashou) = let's · で (de) = location of action (studying) · slightly stronger/more direct than ませんか
+
+---
+DIR: EN>JP
+Q: Let's play football tomorrow.
+ROM: Ashita sakka- wo shimashou.
+JP: あした サッカーを しましょう。
+HINT: ましょう (mashou) = let's · を (wo) marks the sport · contrast: ませんか = "shall we?" / ましょう = "let's!"

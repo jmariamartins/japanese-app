@@ -1,0 +1,394 @@
+# TOPIC: Short Form — Casual Speech & Expressing Ideas (〜の が好き / 〜？)
+# LEVEL: beginner
+
+---
+DIR: EN>JP
+Q: Do you often eat fish? (casual)
+ROM: Sakana wo yoku taberu?
+JP: 魚をよく食べる？
+HINT: casual question = dictionary (short) form + rising intonation · drop か (ka)
+
+---
+DIR: EN>JP
+Q: Did you eat dinner? (casual)
+ROM: Yorugohan, tabeta?
+JP: 夜ごはん、食べた？
+HINT: past casual question = past short form + rising intonation · no ですか (desu ka) needed
+
+---
+DIR: EN>JP
+Q: Do you have homework today? (casual)
+ROM: Kyou shukudai ga aru?
+JP: 今日宿題がある？
+HINT: aru = short form of arimasu · drop か (ka) for casual
+
+---
+DIR: EN>JP
+Q: Was the movie good? (casual)
+ROM: Eiga, yokatta?
+JP: 映画、よかった？
+HINT: ii → past short form = yokatta · ii is irregular (NOT iikatta)
+
+---
+DIR: EN>JP
+Q: Is she kind? (casual)
+ROM: Kanojo wa shinsetsu?
+JP: 彼女は親切？
+HINT: na-adjective in casual questions: drop だ (da) and です (desu) entirely
+
+---
+DIR: EN>JP
+Q: I like studying Japanese.
+ROM: Nihongo wo benkyou suru no ga suki desu.
+JP: 日本語を勉強するのが好きです。
+HINT: verb dictionary form + の が (no ga) + feeling · do NOT use te-form here
+
+---
+DIR: EN>JP
+Q: Takeshi is bad at speaking English. (talking about others)
+ROM: Takeshi wa eigo wo hanasu no ga heta desu.
+JP: たけしは英語を話すのが下手です。
+HINT: hanasu (dictionary form) + の が (no ga) + へた (heta) · heta = bad at (use for others, not yourself)
+
+---
+DIR: EN>JP
+Q: I'm not comfortable with cooking. (about yourself)
+ROM: Ryouri suru no ga nigate desu.
+JP: 料理するのが苦手です。
+HINT: にがて (nigate) = uncomfortable with (use for yourself) · にがて vs へた (heta) — both mean "not good at" but nigate is for personal discomfort
+
+---
+DIR: EN>JP
+Q: I like watching movies.
+ROM: Eiga wo miru no ga suki desu.
+JP: 映画を見るのが好きです。
+HINT: miru = dictionary form · + の が すき (no ga suki) = like doing
+
+---
+DIR: EN>JP
+Q: Mary is good at speaking Japanese. (about others)
+ROM: Mearii wa nihongo wo hanasu no ga jouzu desu.
+JP: メアリーは日本語を話すのが上手です。
+HINT: じょうず (jouzu) = good at (use for others, not yourself — use とくい tokui for yourself)
+
+---
+DIR: EN>JP
+Q: I am comfortable with sports. (about yourself)
+ROM: Supootsu ga tokui desu.
+JP: スポーツが得意です。
+HINT: とくい (tokui) = good at / comfortable with · use for yourself
+
+---
+DIR: EN>JP
+Q: Yes, I often eat it. (casual reply)
+ROM: Un, yoku taberu.
+JP: うん、よく食べる。
+HINT: casual yes = うん (un) — not はい (hai) · short form for reply
+
+---
+DIR: JP>EN
+Q_ROM: Sakana wo yoku taberu?
+Q_JP: 魚をよく食べる？
+A: Do you often eat fish? (casual)
+HINT: taberu? = casual present question (dictionary form + rising intonation)
+
+---
+DIR: JP>EN
+Q_ROM: Nihongo wo hanasu no ga suki desu.
+Q_JP: 日本語を話すのが好きです。
+A: I like speaking Japanese.
+HINT: hanasu no ga = nominalised verb ("speaking") · の (no) turns the verb into a noun
+
+---
+DIR: JP>EN
+Q_ROM: Kore wa ii to omou.
+Q_JP: これはいいと思う。
+A: I think this is good.
+HINT: と おもう (to omou) = casual short form of と おもいます (to omoimasu)
+
+---
+DIR: JP>EN
+Q_ROM: Uun, tabenai.
+Q_JP: うううん、食べない。
+A: No, I don't eat it. (casual)
+HINT: うううん (uun) = casual no · たべない (tabenai) = present negative short form
+
+---
+DIR: EN>JP
+Q: I eat steaks. (casual/plain form)
+ROM: Suteki wo taberu.
+JP: ステーキを たべる。
+HINT: plain/short form = dictionary form · taberu = present affirmative short form · same as the form used before と思います
+
+---
+DIR: EN>JP
+Q: This house is big. (casual/plain form)
+ROM: Kono ie wa ookii.
+JP: このいえは おおきい。
+HINT: i-adjective short form = same as dictionary form · ookii is already the short form · just drop です (desu)
+
+---
+DIR: EN>JP
+Q: The library is quiet. (casual/plain form)
+ROM: Toshokan wa shizuka da.
+JP: としょかんは しずかだ。
+HINT: na-adjective short form = [adj] + だ (da) · shizuka + だ · contrast: polite = shizuka desu
+
+---
+DIR: EN>JP
+Q: I am a student. (casual/plain form)
+ROM: Watashi wa gakusei da.
+JP: わたしは がくせいだ。
+HINT: noun short form = [noun] + だ (da) · gakusei + だ · plain form of gakusei desu
+
+---
+DIR: EN>JP
+Q: The house is not small. (casual/plain form)
+ROM: Ie wa chiisaku nai.
+JP: いえは ちいさくない。
+HINT: i-adjective negative short: ちいさい (chiisai) → drop い → ちいさく + ない (nai) · contrast: polite = chiisaku nai desu
+
+---
+DIR: EN>JP
+Q: The library is not quiet. (casual/plain form)
+ROM: Toshokan wa shizuka ja nai.
+JP: としょかんは しずかじゃない。
+HINT: na-adjective negative short: shizuka + じゃない (ja nai) · contrast: polite = shizuka ja nai desu / shizuka ja arimasen
+
+---
+DIR: EN>JP
+Q: I am not a student. (casual/plain form)
+ROM: Watashi wa gakusei ja nai.
+JP: わたしは がくせいじゃない。
+HINT: noun negative short: gakusei + じゃない (ja nai) · same pattern as na-adjective negative
+
+---
+DIR: EN>JP
+Q: I don't eat steaks. (casual/plain form)
+ROM: Suteki wo tabenai.
+JP: ステーキを たべない。
+HINT: ru-verb negative short: taberu → drop る → たべ + ない (nai) = tabenai
+
+---
+DIR: EN>JP
+Q: I don't drink beer. (casual/plain form)
+ROM: Bi-ru wo nomanai.
+JP: ビールを のまない。
+HINT: u-verb negative short: nomu → む changes to ま + ない = nomanai · u-verbs change the final sound to the あ-row before ない
+
+---
+DIR: EN>JP
+Q: I don't study tonight. (casual/plain form)
+ROM: Konban benkyou shinai.
+JP: こんばん べんきょうしない。
+HINT: suru verb negative short: suru → shinai (しない) · konban (こんばん) = tonight — no particle needed (relative time word)
+
+---
+DIR: JP>EN
+Q_ROM: Toshokan wa shizuka da.
+Q_JP: としょかんは しずかだ。
+A: The library is quiet. (casual)
+HINT: だ (da) = plain/short form of です (desu) for na-adjectives and nouns
+
+---
+DIR: JP>EN
+Q_ROM: Watashi wa gakusei ja nai.
+Q_JP: わたしは がくせいじゃない。
+A: I am not a student. (casual)
+HINT: じゃない (ja nai) = negative short form · same for nouns and na-adjectives
+
+---
+DIR: JP>EN
+Q_ROM: Bi-ru wo nomanai.
+Q_JP: ビールを のまない。
+A: I don't drink beer. (casual)
+HINT: nomanai = negative short of nomu (u-verb) · む → ま before ない
+
+---
+DIR: EN>JP
+Q: Do you study today? (casual)
+ROM: Kyou benkyou suru?
+JP: きょう べんきょうする？
+HINT: suru verb casual question = dictionary form + rising intonation · きょう (kyou) = today — no particle needed
+
+---
+DIR: EN>JP
+Q: Is your father a police officer? (casual)
+ROM: Otousan wa keisatsukan?
+JP: おとうさんは けいさつかん？
+HINT: noun casual question: drop だ (da) and です (desu) entirely · rising intonation = question · contrast: polite = けいさつかんですか (keisatsukan desu ka)
+
+---
+DIR: EN>JP
+Q: Is this cake delicious? (casual)
+ROM: Kono ke-ki wa oishii?
+JP: このけーきは おいしい？
+HINT: i-adjective casual question = plain form + rising intonation · just drop です (desu) · contrast: polite = おいしいですか (oishii desu ka)
+
+---
+DIR: JP>EN
+Q_ROM: Kyou benkyou suru?
+Q_JP: きょう べんきょうする？
+A: Do you study today? (casual)
+HINT: suru? = casual present question · dictionary form + rising intonation
+
+---
+DIR: JP>EN
+Q_ROM: Otousan wa keisatsukan?
+Q_JP: おとうさんは けいさつかん？
+A: Is your father a police officer? (casual)
+HINT: no だ or です · noun alone + rising intonation = casual yes/no question
+
+---
+DIR: EN>JP
+Q: I do not like cleaning my room.
+ROM: Heya wo souji suru no ga kirai desu.
+JP: へやを そうじするのが きらいです。
+HINT: のが きらい (no ga kirai) = dislike doing · kirai = na-adjective · contrast with のが すき (no ga suki) = like doing
+
+---
+DIR: EN>JP
+Q: Robert is good at cooking.
+ROM: Robert wa ryouri suru no ga jouzu desu.
+JP: ロバートは りょうりするのが じょうずです。
+HINT: のが じょうず (no ga jouzu) = good at (use for others, not yourself) · ryouri suru = to cook
+
+---
+DIR: EN>JP
+Q: I am good at speaking English.
+ROM: Watashi wa eigo wo hanasu no ga tokui desu.
+JP: わたしは えいごを はなすのが とくいです。
+HINT: のが とくい (no ga tokui) = good at / comfortable with (use for yourself) · contrast: じょうず (jouzu) = for others
+
+---
+DIR: EN>JP
+Q: Marie is good at cooking Spanish food.
+ROM: Marie wa Supein no ryouri wo tsukuru no ga jouzu desu.
+JP: マリーは スペインのりょうりを つくるのが じょうずです。
+HINT: のが じょうず (no ga jouzu) = good at (for others) · スペイン (Supein) = Spain · を (wo) marks the object of tsukuru
+
+---
+DIR: EN>JP
+Q: I like playing basketball.
+ROM: Basukettoboru wo suru no ga suki desu.
+JP: バスケットボールを するのが すきです。
+HINT: のが すき (no ga suki) = like doing · を (wo) marks the sport as object of suru
+
+---
+DIR: EN>JP
+Q: I am good at painting pictures.
+ROM: E wo kaku no ga tokui desu.
+JP: えを かくのが とくいです。
+HINT: のが とくい (no ga tokui) = good at / comfortable with (for yourself) · えをかく (e wo kaku) = to draw/paint pictures
+
+---
+DIR: EN>JP
+Q: My younger sister is bad at dancing.
+ROM: Watashi no imouto wa odoru no ga heta desu.
+JP: わたしのいもうとは おどるのが へたです。
+HINT: のが へた (no ga heta) = bad at (use for others) · おどる (odoru) = to dance · contrast: にがて (nigate) = for yourself
+
+---
+DIR: EN>JP
+Q: Misa dislikes studying maths.
+ROM: Misa wa suugaku wo benkyou suru no ga kirai desu.
+JP: みさは すうがくを べんきょうするのが きらいです。
+HINT: のが きらい (no ga kirai) = dislike doing · すうがく (suugaku) = maths · を (wo) marks the subject studied
+
+---
+DIR: EN>JP
+Q: I am not comfortable with taking photos.
+ROM: Shashin wo toru no ga nigate desu.
+JP: しゃしんを とるのが にがてです。
+HINT: のが にがて (no ga nigate) = not comfortable with / not great at (for yourself) · contrast: へた (heta) = for others
+
+---
+DIR: JP>EN
+Q_ROM: Heya wo souji suru no ga kirai desu.
+Q_JP: へやを そうじするのが きらいです。
+A: I do not like cleaning my room.
+HINT: のが きらい (no ga kirai) = dislike doing · きらい (kirai) = dislike (na-adjective)
+
+---
+DIR: JP>EN
+Q_ROM: Watashi no imouto wa odoru no ga heta desu.
+Q_JP: わたしのいもうとは おどるのが へたです。
+A: My younger sister is bad at dancing.
+HINT: のが へた (no ga heta) = bad at · おどる (odoru) = to dance · へた (heta) used for others
+
+---
+DIR: JP>EN
+Q_ROM: Shashin wo toru no ga nigate desu.
+Q_JP: しゃしんを とるのが にがてです。
+A: I am not comfortable with taking photos.
+HINT: のが にがて (no ga nigate) = not comfortable with (for yourself) · contrast with のが きらい (kirai) = active dislike
+
+---
+DIR: EN>JP
+Q: Will you go to the party? (casual)
+ROM: Pa-ti- ni iku?
+JP: パーティーに 行く？
+HINT: casual question = dictionary form + rising intonation · に (ni) = destination · iku = dictionary form of ikimasu · drop ますか entirely
+
+---
+DIR: JP>EN
+Q_ROM: Pa-ti- ni iku?
+Q_JP: パーティーに 行く？
+A: Will you go to the party? (casual)
+HINT: iku? = dictionary form + rising intonation = casual question · に (ni) = destination
+
+---
+DIR: EN>JP
+Q: Akira is good at reading English.
+ROM: Akira wa eigo wo yomu no ga tokui desu.
+JP: あきらは えいごを よむのが とくいです。
+HINT: yomu = dictionary form (to read) · のが とくい (no ga tokui) = good at / comfortable with (for yourself) · contrast: じょうず (jouzu) = for others
+
+---
+DIR: EN>JP
+Q: Is Satoshi smart? (casual)
+ROM: Satoshi wa atama ga ii?
+JP: さとしは あたまが いい？
+HINT: あたまがいい (atama ga ii) = smart/clever (lit. head is good) · i-adjective casual question = plain form + rising intonation · polite version: あたまがいいですか？
+
+---
+DIR: EN>JP
+Q: What is this? (casual)
+ROM: Kore wa nani?
+JP: これは なに？
+HINT: なに (nani) = what · casual question: drop です (desu) and か (ka) entirely · polite: これは なんですか (kore wa nan desu ka)
+
+---
+DIR: EN>JP
+Q: Will you go to the cafe tomorrow? (casual)
+ROM: Ashita kafe ni iku?
+JP: あした カフェに いく？
+HINT: iku = dictionary form (to go) · casual question = dictionary form + rising intonation · あした (ashita) = tomorrow — no particle · に (ni) = destination
+
+---
+DIR: JP>EN
+Q_ROM: Akira wa eigo wo yomu no ga tokui desu.
+Q_JP: あきらは えいごを よむのが とくいです。
+A: Akira is good at reading English.
+HINT: のが とくい (no ga tokui) = good at · yomu = to read · を (wo) marks the object
+
+---
+DIR: JP>EN
+Q_ROM: Satoshi wa atama ga ii?
+Q_JP: さとしは あたまが いい？
+A: Is Satoshi smart? (casual)
+HINT: あたまがいい (atama ga ii) = smart/clever · ii? = casual i-adjective question
+
+---
+DIR: JP>EN
+Q_ROM: Kore wa nani?
+Q_JP: これは なに？
+A: What is this? (casual)
+HINT: nani = what · casual: drop desu + ka · kore = this
+
+---
+DIR: JP>EN
+Q_ROM: Ashita kafe ni iku?
+Q_JP: あした カフェに いく？
+A: Will you go to the cafe tomorrow? (casual)
+HINT: iku? = dictionary form + rising intonation · に = destination · ashita = tomorrow (no particle)

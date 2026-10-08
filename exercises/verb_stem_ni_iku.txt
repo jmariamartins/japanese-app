@@ -1,0 +1,114 @@
+# TOPIC: Verb Stem + に + iku/kuru/kaeru — Going/Coming to Do
+# LEVEL: beginner
+
+# ─────────────────────────────────────────
+# Structure: [place] に [verb stem] に いく/くる/かえる
+#   = go / come / return (somewhere) IN ORDER TO [do something]
+# Verb stem = masu-form minus ます
+#   e.g. benkyou shimasu → benkyoushi に いく
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: I will go to the library to study.
+ROM: Toshokan ni benkyou shi ni ikimasu.
+JP: としょかん に べんきょうし に いきます。
+HINT: benkyou suru → stem: benkyoushi · pattern: place + に (ni) + stem + に (ni) + いく/くる/かえる (iku/kuru/kaeru)
+
+---
+DIR: EN>JP
+Q: I went to the department store to buy a cake.
+ROM: Depa-to ni ke-ki wo kai ni ikimashita.
+JP: でぱーと に けーき を かい に いきました。
+HINT: kaimasu → stem: kai · を (wo) marks the object of buying · に (ni) + kai + に (ni) + いきました (ikimashita)
+
+---
+DIR: EN>JP
+Q: I will go back to Japan to see my friends.
+ROM: Nihon ni tomodachi ni ai ni kaerimasu.
+JP: にほん に ともだち に あい に かえります。
+HINT: aimasu → stem: ai · かえる (kaeru) = to return/go back — not いく (iku) · tomodachi + に (ni) = person you meet
+
+---
+DIR: EN>JP
+Q: Will Maki come to your house to eat dinner?
+ROM: Maki wa anata no ie ni yorugohan wo tabe ni kimasu ka?
+JP: まき は あなた の いえ に よるごはん を たべ に きますか？
+HINT: tabemasu → stem: tabe · くる (kuru) = to come · を (wo) marks what she eats
+
+---
+DIR: EN>JP
+Q: Satoshi did not go to the beach to swim.
+ROM: Satoshi wa umi ni oyogi ni ikimasen deshita.
+JP: さとし は うみ に およぎ に いきませんでした。
+HINT: oyogimasu → stem: oyogi · past negative: いきませんでした (ikimasen deshita)
+
+---
+DIR: EN>JP
+Q: Sae will return home to watch TV.
+ROM: Sae wa ie ni terebi wo mi ni kaerimasu.
+JP: さえ は いえ に てれび を み に かえります。
+HINT: mimasu → stem: mi · かえります (kaerimasu) = returns home · を (wo) marks what she watches
+
+---
+DIR: EN>JP
+Q: Masato often goes to the park to take pictures.
+ROM: Masato wa yoku kouen ni shashin wo tori ni ikimasu.
+JP: まさと は よく こうえん に しゃしん を とり に いきます。
+HINT: torimasu → stem: tori · よく (yoku) = often · を (wo) marks the object (photos)
+
+---
+DIR: EN>JP
+Q: May I go to your house to study tomorrow?
+ROM: Ashita, anata no ie ni benkyou shi ni itte mo ii desu ka?
+JP: あした、あなた の いえ に べんきょうし に いって もいいですか？
+HINT: te-form of いく (iku) = いって (itte) · combine purpose (〜に, ni) with permission もいいですか？(mo ii desu ka?)
+
+---
+DIR: JP>EN
+Q_ROM: Depa-to ni ke-ki wo kai ni ikimashita.
+Q_JP: でぱーと に けーき を かい に いきました。
+A: I went to the department store to buy a cake.
+HINT: kai = stem of kau · に (ni) before kai marks the purpose
+
+---
+DIR: JP>EN
+Q_ROM: Sae wa ie ni terebi wo mi ni kaerimasu.
+Q_JP: さえ は いえ に てれび を み に かえります。
+A: Sae will return home to watch TV.
+HINT: mi = stem of miru · かえります (kaerimasu) = returns — not いく (iku) or くる (kuru)
+
+---
+DIR: EN>JP
+Q: I went to Kai's house to borrow a book.
+ROM: Watashi wa Kei no ie ni hon wo kari ni ikimashita.
+JP: わたしは けいのいえに ほんを かりに いきました。
+HINT: kariru (ru-verb) → stem: kari · pattern: place + に + stem + に + いきました · を (wo) marks the object (book)
+
+---
+DIR: EN>JP
+Q: Akari went to the town to meet her aunt.
+ROM: Akari wa machi ni obasan ni ai ni ikimashita.
+JP: あかりは まちに おばさんに あいに いきました。
+HINT: au (u-verb) → stem: ai · おばさん (obasan) = aunt · に (ni) marks both destination (machi) and person met (obasan)
+
+---
+DIR: EN>JP
+Q: Nana went to the beach to surf.
+ROM: Nana wa bi-chi ni sa-fin shi ni ikimashita.
+JP: ななは ビーチに サーフィンしに いきました。
+HINT: sa-fin suru (suru verb) → stem: sa-fin shi · ビーチ (bi-chi) = beach · に marks the destination
+
+---
+DIR: JP>EN
+Q_ROM: Watashi wa Kei no ie ni hon wo kari ni ikimashita.
+Q_JP: わたしは けいのいえに ほんを かりに いきました。
+A: I went to Kai's house to borrow a book.
+HINT: kari = stem of kariru (to borrow) · に before stem marks the purpose of going
+
+---
+DIR: JP>EN
+Q_ROM: Akari wa machi ni obasan ni ai ni ikimashita.
+Q_JP: あかりは まちに おばさんに あいに いきました。
+A: Akari went to the town to meet her aunt.
+HINT: ai = stem of au (to meet) · おばさん (obasan) = aunt · まち (machi) = town

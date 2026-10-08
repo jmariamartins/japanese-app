@@ -1,0 +1,114 @@
+# TOPIC: Te-form — Progressive & Current State (〜ています)
+# LEVEL: beginner
+
+---
+DIR: EN>JP
+Q: Sue is studying Japanese right now.
+ROM: Su- wa ima nihongo wo benkyou shite imasu.
+JP: スーは今日本語を勉強しています。
+HINT: benkyou suru → benkyou shite · then add います (imasu) for progressive
+
+---
+DIR: EN>JP
+Q: Ken is eating lunch.
+ROM: Ken wa hirugohan wo tabete imasu.
+JP: けんは昼ごはんを食べています。
+HINT: taberu → tabete + います (imasu)
+
+---
+DIR: EN>JP
+Q: Takeshi is watching TV.
+ROM: Takeshi wa terebi wo mite imasu.
+JP: たけしはテレビを見ています。
+HINT: miru (ru-verb) → mite + います (imasu)
+
+---
+DIR: EN>JP
+Q: Mary is reading a book.
+ROM: Mearii wa hon wo yonde imasu.
+JP: メアリーは本を読んでいます。
+HINT: yomu → yonde + います (imasu)
+
+---
+DIR: EN>JP
+Q: My mother is cooking.
+ROM: Haha wa ryouri shite imasu.
+JP: 母は料理しています。
+HINT: suru → shite + います (imasu)
+
+---
+DIR: EN>JP
+Q: The teacher is not teaching right now.
+ROM: Sensei wa ima oshiete imasen.
+JP: 先生は今教えていません。
+HINT: oshieru → oshiete · negate います (imasu) → いません (imasen)
+
+---
+DIR: EN>JP
+Q: Minori is married. (current state)
+ROM: Minori wa kekkon shite imasu.
+JP: みのりは結婚しています。
+HINT: kekkon suru → kekkon shite + います (imasu) · result of a change, not an activity in progress
+
+---
+DIR: EN>JP
+Q: I know that person.
+ROM: Watashi wa ano hito wo shitte imasu.
+JP: 私はあの人を知っています。
+HINT: shiru = instantaneous change verb · shite います (imasu) = current state of knowing
+
+---
+DIR: EN>JP
+Q: Michiko is wearing a T-shirt. (current state)
+ROM: Michiko wa T-shatsu wo kite imasu.
+JP: みちこはTシャツを着ています。
+HINT: kiru (to wear) → kite + います (imasu) · expresses the resulting state of having put it on
+
+---
+DIR: EN>JP
+Q: I live in Tokyo.
+ROM: Watashi wa Toukyou ni sunde imasu.
+JP: 私は東京に住んでいます。
+HINT: sumu → sunde + います (imasu) · current ongoing state
+
+---
+DIR: EN>JP
+Q: Was Sue studying this morning?
+ROM: Su- wa kesa benkyou shite imashita ka?
+JP: スーは今朝勉強していましたか？
+HINT: past progressive = te-form + いました (imashita, past of imasu)
+
+---
+DIR: EN>JP
+Q: Taro was reading a book yesterday.
+ROM: Taro wa kinou hon wo yonde imashita.
+JP: たろうは昨日本を読んでいました。
+HINT: past progressive: yonde + いました (imashita)
+
+---
+DIR: JP>EN
+Q_ROM: Taro wa toshokan de benkyou shite imasu.
+Q_JP: たろうは図書館で勉強しています。
+A: Taro is studying in the library.
+HINT: toshokan = library · で (de) = location of an action (studying)
+
+---
+DIR: JP>EN
+Q_ROM: Haha wa ima ryouri shite imasen.
+Q_JP: 母は今料理していません。
+A: My mother is not cooking right now.
+HINT: negative progressive: te-form + いません (imasen)
+
+---
+DIR: JP>EN
+Q_ROM: Ken wa Toukyou ni sunde imasu.
+Q_JP: けんは東京に住んでいます。
+A: Ken lives in Tokyo.
+HINT: sunde います (imasu) = current state of living somewhere
+
+---
+DIR: JP>EN
+Q_ROM: Minori wa kinou hon wo yonde imashita.
+Q_JP: みのりは昨日本を読んでいました。
+A: Minori was reading a book yesterday.
+HINT: yonde いました (imashita) = past progressive

@@ -1,0 +1,178 @@
+# TOPIC: Miscellaneous — You'd Better… (〜ほうがいいです)
+# LEVEL: beginner
+
+# ─────────────────────────────────────────
+# Structure:
+#   [verb past short affirmative] + ほうがいいです = You'd better [do]…
+#   [verb negative short present] + ほうがいいです = You'd better not [do]…
+# Note: affirmative advice uses PAST short form (よんだ, いった)
+#       negative advice uses PRESENT negative short form (ねない, かわない)
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: You'd better not sleep here.
+ROM: Koko de nenai hou ga ii desu.
+JP: ここ で ねない ほうがいいです。
+HINT: negative advice: neru → negative short: ねない (nenai) + ほうがいいです (hou ga ii desu) · で (de) = location of action
+
+---
+DIR: EN>JP
+Q: You'd better read this book.
+ROM: Kono hon wo yonda hou ga ii desu.
+JP: この ほん を よんだ ほうがいいです。
+HINT: affirmative advice: yomu → PAST short: よんだ (yonda) + ほうがいいです (hou ga ii desu) · を (wo) = object
+
+---
+DIR: EN>JP
+Q: You'd better not buy a new car.
+ROM: Atarashii kuruma wo kawanai hou ga ii desu.
+JP: あたらしい くるま を かわない ほうがいいです。
+HINT: negative advice: kau → かわない (kawanai) + ほうがいいです (hou ga ii desu) · を (wo) = object
+
+---
+DIR: EN>JP
+Q: You'd better go eat with Masami.
+ROM: Masami to gohan wo tabe ni itta hou ga ii desu.
+JP: まさみ と ごはん を たべ に いった ほうがいいです。
+HINT: purpose construction inside advice: tabe に (ni) iku → past short: いった (itta) + ほうがいいです (hou ga ii desu) · と (to) = together with
+
+---
+DIR: EN>JP
+Q: You'd better not call Masaki.
+ROM: Masaki ni denwa shinai hou ga ii desu.
+JP: まさき に でんわしない ほうがいいです。
+HINT: denwa suru → negative short: でんわしない (denwa shinai) + ほうがいいです (hou ga ii desu) · に (ni) = person you call
+
+---
+DIR: EN>JP
+Q: You'd better study French.
+ROM: Furansugo wo benkyou shita hou ga ii desu.
+JP: ふらんすご を べんきょうした ほうがいいです。
+HINT: affirmative advice: benkyou suru → PAST short: べんきょうした (benkyou shita) + ほうがいいです (hou ga ii desu)
+
+---
+DIR: JP>EN
+Q_ROM: Kono hon wo yonda hou ga ii desu.
+Q_JP: この ほん を よんだ ほうがいいです。
+A: You'd better read this book.
+HINT: よんだ (yonda) = past short of yomu · affirmative advice uses past short form
+
+---
+DIR: JP>EN
+Q_ROM: Atarashii kuruma wo kawanai hou ga ii desu.
+Q_JP: あたらしい くるま を かわない ほうがいいです。
+A: You'd better not buy a new car.
+HINT: かわない (kawanai) = present negative short of kau · negative advice uses present negative short form
+
+---
+DIR: JP>EN
+Q_ROM: Masaki ni denwa shinai hou ga ii desu.
+Q_JP: まさき に でんわしない ほうがいいです。
+A: You'd better not call Masaki.
+HINT: でんわしない (denwa shinai) = negative short of でんわする (denwa suru) · に (ni) marks the person called
+
+---
+DIR: EN>JP
+Q: You'd better eat more vegetables.
+ROM: Motto yasai wo tabeta hou ga ii desu.
+JP: もっと やさいを たべた ほうがいいです。
+HINT: affirmative advice → PAST short form: たべた (tabeta) + ほうがいいです · もっと (motto) = more · を (wo) = object
+
+---
+DIR: EN>JP
+Q: It is better not to skip classes.
+ROM: Jugyou wo yasumanai hou ga ii desu.
+JP: じゅぎょうを やすまない ほうがいいです。
+HINT: negative advice → PRESENT negative short: やすまない (yasumanai) + ほうがいいです · yasumu = to be absent/skip · を (wo) = object
+
+---
+DIR: EN>JP
+Q: You'd better go to the hospital.
+ROM: Byouin ni itta hou ga ii desu.
+JP: びょういんに いった ほうがいいです。
+HINT: affirmative advice → PAST short: いった (itta) + ほうがいいです · に (ni) = destination · びょういん (byouin) = hospital
+
+---
+DIR: EN>JP
+Q: You'd better not tell a lie.
+ROM: Uso wo tsukanai hou ga ii desu.
+JP: うそを つかない ほうがいいです。
+HINT: negative advice → PRESENT negative short: つかない (tsukanai) · うそをつく (uso wo tsuku) = to tell a lie · を (wo) = object
+
+---
+DIR: EN>JP
+Q: You had better memorise kanji.
+ROM: Kanji wo oboeta hou ga ii desu.
+JP: かんじを おぼえた ほうがいいです。
+HINT: affirmative advice → PAST short: おぼえた (oboeta) · oboeru (ru-verb) → past short: oboeta · を (wo) = object
+
+---
+DIR: EN>JP
+Q: You'd better not worry.
+ROM: Shinpai shinai hou ga ii desu.
+JP: しんぱいしない ほうがいいです。
+HINT: negative advice → PRESENT negative short: しんぱいしない (shinpai shinai) · shinpai suru → shinpai shinai · no object needed
+
+---
+DIR: EN>JP
+Q: You should write a letter to your mother.
+ROM: Okaasan ni tegami wo kaita hou ga ii desu.
+JP: おかあさんに てがみを かいた ほうがいいです。
+HINT: affirmative advice → PAST short: かいた (kaita) · に (ni) = recipient (person receiving letter) · を (wo) = object (letter)
+
+---
+DIR: EN>JP
+Q: You should write your name.
+ROM: Namae wo kaita hou ga ii desu.
+JP: なまえを かいた ほうがいいです。
+HINT: affirmative advice → PAST short: かいた (kaita) · kaku → past short: kaita · を (wo) = object
+
+---
+DIR: EN>JP
+Q: You'd better not eat this cake.
+ROM: Kono ke-ki wo tabenai hou ga ii desu.
+JP: このけーきを たべない ほうがいいです。
+HINT: negative advice → PRESENT negative short: たべない (tabenai) · を (wo) = object · この (kono) = this (modifying noun)
+
+---
+DIR: EN>JP
+Q: You'd better not go to the park.
+ROM: Kouen ni ikanai hou ga ii desu.
+JP: こうえんに いかない ほうがいいです。
+HINT: negative advice → PRESENT negative short: いかない (ikanai) · iku → ikanai · に (ni) = destination
+
+---
+DIR: EN>JP
+Q: Is it better to eat breakfast?
+ROM: Asagohan wo tabeta hou ga ii desu ka?
+JP: あさごはんを たべた ほうがいいですか？
+HINT: affirmative question → PAST short: たべた (tabeta) + ほうがいいですか · asking for advice/recommendation
+
+---
+DIR: EN>JP
+Q: Is it better not to call Tom?
+ROM: Tom ni denwa wo kakenai hou ga ii desu ka?
+JP: トムに でんわを かけない ほうがいいですか？
+HINT: negative question → PRESENT negative short: かけない (kakenai) · denwa wo kakeru = to call (someone) · に (ni) = person called
+
+---
+DIR: JP>EN
+Q_ROM: Byouin ni itta hou ga ii desu.
+Q_JP: びょういんに いった ほうがいいです。
+A: You'd better go to the hospital.
+HINT: いった (itta) = past short → affirmative advice · ほうがいいです = you'd better
+
+---
+DIR: JP>EN
+Q_ROM: Shinpai shinai hou ga ii desu.
+Q_JP: しんぱいしない ほうがいいです。
+A: You'd better not worry.
+HINT: しんぱいしない (shinpai shinai) = present negative short → negative advice · ほうがいいです = you'd better
+
+---
+DIR: JP>EN
+Q_ROM: Asagohan wo tabeta hou ga ii desu ka?
+Q_JP: あさごはんを たべた ほうがいいですか？
+A: Is it better to eat breakfast?
+HINT: ほうがいいですか (hou ga ii desu ka) = is it better to...? · past short form for affirmative question

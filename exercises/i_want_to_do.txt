@@ -1,0 +1,306 @@
+# TOPIC: I Want To… — 〜たいです / 〜たがっています
+# LEVEL: beginner
+
+# ─────────────────────────────────────────
+# PERSONAL DESIRE (1st person only):
+#   verb STEM + たいです            = I want to…
+#   verb STEM + たくありません       = I don't want to…
+#   verb STEM + たかったです         = I wanted to… (past)
+#   verb STEM + たくありませんでした  = I didn't want to… (past)
+#
+# QUOTING SOMEONE'S DESIRE (3rd person, reported speech):
+#   verb STEM + たい + と言っていました    = [they] said they want to…
+#   verb STEM + たくない + と言っていました = [they] said they don't want to…
+#
+# OBSERVING SOMEONE'S DESIRE (3rd person, visible signs):
+#   verb STEM + たがっています          = (it seems) [they] want to…
+#   verb STEM + たがっていません         = (it seems) [they] don't want to…
+#   verb STEM + たがっていました         = (it seemed) [they] wanted to…
+#   verb STEM + たがっていませんでした    = (it seemed) [they] didn't want to…
+#
+# Key rules:
+#   · たい = 1st person only (your OWN desires)
+#   · たがっている = 3rd person observation (you are OBSERVING someone else)
+#   · Quotation uses たい (the other person's own words)
+#   · With たがっている, を is retained; with たい, が or を both work
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: I want to swim in the pool.
+ROM: Pu-ru de oyogitai desu.
+JP: ぷーる で およぎたいです。
+HINT: およぐ (oyogu) → stem: およぎ (oyogi) + たいです (tai desu) · で (de) = location of action
+
+---
+DIR: EN>JP
+Q: Do you want to ride a train?
+ROM: Densha ni noritai desu ka?
+JP: でんしゃ に のりたいですか？
+HINT: のる (noru) → stem: のり (nori) + たいですか？ (tai desu ka?) · に (ni) = vehicle you board
+
+---
+DIR: EN>JP
+Q: I wanted to learn Korean.
+ROM: Kankokugo wo benkyou shitakatta desu.
+JP: かんこくご を べんきょうしたかったです。
+HINT: べんきょうする (benkyou suru) → stem: べんきょうし (benkyoushi) + たかったです (takatta desu) · past desire
+
+---
+DIR: EN>JP
+Q: I don't want to eat a banana.
+ROM: Banana wo tabetakunai desu.
+JP: ばなな を たべたくありません。
+HINT: たべ (tabe) + たくありません (taku arimasen) · alternative: たべたくないです (tabetakunai desu, both correct)
+
+---
+DIR: EN>JP
+Q: Maki said she wanted to go to the UK.
+ROM: Maki wa Igirisu ni ikitai to itte imashita.
+JP: まき は いぎりす に いきたい と いっていました。
+HINT: いきたい (ikitai, her desire, quoted) + と いっていました (to itte imashita) · たい is used because it's her own desire quoted directly
+
+---
+DIR: EN>JP
+Q: I don't want to go to Masato's house tomorrow.
+ROM: Ashita Masato no ie ni ikitakunai desu.
+JP: あした まさと の いえ に いきたくありません。
+HINT: いき (iki) + たくありません (taku arimasen) = don't want to go · に (ni) = destination
+
+---
+DIR: EN>JP
+Q: It seems Misa wants to eat a donut.
+ROM: Misa wa do-natsu wo tabetagatte imasu.
+JP: みさ は どーなつ を たべたがっています。
+HINT: 3rd person desire → たべたがっています (tabeta GATTE imasu) · NOT たべたい (tabetai) — that's only 1st person
+
+---
+DIR: EN>JP
+Q: Do you want to read this book?
+ROM: Kono hon wo yomitai desu ka?
+JP: この ほん を よみたいですか？
+HINT: よむ (yomu) → stem: よみ (yomi) + たいですか？ (tai desu ka?)
+
+---
+DIR: EN>JP
+Q: What do you want to eat tonight?
+ROM: Konban nani wo tabetai desu ka?
+JP: こんばん なに を たべたいですか？
+HINT: たべ (tabe) + たいですか？ (tai desu ka?) · なに (nani) を = what (object)
+
+---
+DIR: EN>JP
+Q: It seemed Takako wanted to sleep.
+ROM: Takako wa netagatte imashita.
+JP: たかこ は ねたがっていました。
+HINT: 3rd person past observation: ね (ne) + たがっていました (tagatte imashita) · ねる (neru) → stem: ね (ne)
+
+---
+DIR: JP>EN
+Q_ROM: Misa wa do-natsu wo tabetagatte imasu.
+Q_JP: みさ は どーなつ を たべたがっています。
+A: It seems Misa wants to eat a donut.
+HINT: たがっています (tagatte imasu) = 3rd person "seems to want to" · contrast with たいです (tai desu, 1st person)
+
+---
+DIR: JP>EN
+Q_ROM: Maki wa Igirisu ni ikitai to itte imashita.
+Q_JP: まき は いぎりす に いきたい と いっていました。
+A: Maki said she wanted to go to the UK.
+HINT: いきたい (ikitai) quoted with と いっていました (to itte imashita) · いぎりす (Igirisu) = UK/England
+
+---
+DIR: EN>JP
+Q: I want to eat pasta.
+ROM: Pasuta wo tabetai desu.
+JP: パスタを たべたいです。
+HINT: taberu → stem: tabe + たいです (tai desu) · 1st person desire · を (wo) marks the object
+
+---
+DIR: EN>JP
+Q: I don't want to watch a movie.
+ROM: Eiga wo mitaku arimasen.
+JP: えいがを みたくありません。
+HINT: miru → stem: mi + たくありません (taku arimasen) = don't want to · contrast: たいです (want) vs たくありません (don't want)
+
+---
+DIR: EN>JP
+Q: I wanted to buy a sweater.
+ROM: Se-ta- wo kaitakatta desu.
+JP: セーターを かいたかったです。
+HINT: kau → stem: kai + たかったです (takatta desu) = wanted to (past) · past of たいです
+
+---
+DIR: EN>JP
+Q: I did not want to go to school.
+ROM: Gakkou ni ikitaku arimasen deshita.
+JP: がっこうに いきたくありませんでした。
+HINT: iku → stem: iki + たくありませんでした (taku arimasen deshita) = past negative · longest form of たい
+
+---
+DIR: EN>JP
+Q: I want to live abroad.
+ROM: Gaikoku ni sumitai desu.
+JP: がいこくに すみたいです。
+HINT: sumu → stem: sumi + たいです (tai desu) · がいこく (gaikoku) = abroad/foreign country · に = destination
+
+---
+DIR: EN>JP
+Q: I do not want to ride a train.
+ROM: Densha ni noritaku arimasen.
+JP: でんしゃに のりたくありません。
+HINT: noru → stem: nori + たくありません (taku arimasen) · に (ni) marks the vehicle you board
+
+---
+DIR: EN>JP
+Q: I wanted to play tennis.
+ROM: Tenisu wo shitakatta desu.
+JP: テニスを したかったです。
+HINT: suru → stem: shi + たかったです (takatta desu) = wanted to (past) · を marks the sport
+
+---
+DIR: EN>JP
+Q: I did not want to drink coffee.
+ROM: Ko-hi- wo nomitaku arimasen deshita.
+JP: こーひーを のみたくありませんでした。
+HINT: nomu → stem: nomi + たくありませんでした (taku arimasen deshita) = past negative of want
+
+---
+DIR: EN>JP
+Q: Do you want to watch a movie?
+ROM: Eiga wo mitai desu ka?
+JP: えいがを みたいですか？
+HINT: miru → stem: mi + たいですか (tai desu ka) = do you want to? · question form of たいです
+
+---
+DIR: EN>JP
+Q: I don't want to watch a movie because I am tired.
+ROM: Tsukareta kara eiga wo mitaku arimasen.
+JP: つかれた から えいがを みたくありません。
+HINT: tsukareta = past short of tsukareru (to get tired) · から (kara) = because · みたくありません = don't want to watch
+
+---
+DIR: EN>JP
+Q: Mary said she wanted to go to the bathroom.
+ROM: Mearii wa toire ni ikitai to itte imashita.
+JP: めありーは トイレに いきたいと いっていました。
+HINT: QUOTATION pattern: stem + たい + と言っていました (to itte imashita) = said she wants to · たい used because it's her own words quoted directly
+
+---
+DIR: EN>JP
+Q: Taiki said he wants to be a teacher.
+ROM: Taiki wa sensei ni naritai to itte imashita.
+JP: たいきは せんせいに なりたいと いっていました。
+HINT: naru → stem: nari + たい + と言っていました · noun + に + なりたい = want to become [occupation]
+
+---
+DIR: EN>JP
+Q: Sachi said she does not want to sleep.
+ROM: Sachi wa netakunai to itte imashita.
+JP: さちは ねたくないと いっていました。
+HINT: neru → stem: ne + たくない (takunai) + と言っていました · たくない = casual/short form negative of たい
+
+---
+DIR: EN>JP
+Q: Miki said she does not want to eat lunch.
+ROM: Miki wa hirugohan wo tabetakunai to itte imashita.
+JP: みきは ひるごはんを たべたくないと いっていました。
+HINT: taberu → stem: tabe + たくない (takunai) + と言っていました · を (wo) retained with quotation たい · ひるごはん (hirugohan) = lunch
+
+---
+DIR: EN>JP
+Q: It seems Karen wants to be a teacher.
+ROM: Karen wa sensei ni naritagatte imasu.
+JP: カレンは せんせいに なりたがっています。
+HINT: OBSERVATION pattern: naru → stem: nari + たがっています (tagatte imasu) · 3rd person — you are OBSERVING Karen's desire · contrast with なりたいです (1st person)
+
+---
+DIR: EN>JP
+Q: It seems Mari does not want to study.
+ROM: Mari wa benkyou shitagatte imasen.
+JP: まりは べんきょうしたがっていません。
+HINT: benkyou suru → stem: benkyoushi + たがっていません (tagatte imasen) = observation negative · 3rd person, negative observation
+
+---
+DIR: EN>JP
+Q: It seemed Kai wanted to go to the party.
+ROM: Kai wa pa-ti- ni ikitagatte imashita.
+JP: かいは パーティーに いきたがっていました。
+HINT: iku → stem: iki + たがっていました (tagatte imashita) = past observation · に (ni) = destination
+
+---
+DIR: EN>JP
+Q: It seemed Misa did not want to work.
+ROM: Misa wa hatarakitagatte imasen deshita.
+JP: みさは はたらきたがっていませんでした。
+HINT: hataraku → stem: hataraki + たがっていませんでした (tagatte imasen deshita) = past negative observation
+
+---
+DIR: EN>JP
+Q: It seems Lisa does not want to eat food.
+ROM: Lisa wa gohan wo tabe tagatte imasen.
+JP: りさは ごはんを たべたがっていません。
+HINT: taberu → stem: tabe + たがっていません (tagatte imasen) = observation negative · を (wo) is retained with たがっている (unlike たい where が is also possible)
+
+---
+DIR: JP>EN
+Q_ROM: Watashi wa eiga wo mitakatta desu.
+Q_JP: わたしは えいがを みたかったです。
+A: I wanted to watch a movie.
+HINT: みたかった (mitakatta) = past of みたい (mitai) · たかったです = wanted to
+
+---
+DIR: JP>EN
+Q_ROM: Resutoran de tabetai desu ka?
+Q_JP: レストランで たべたいですか？
+A: Do you want to eat at a restaurant?
+HINT: たべたいですか (tabetai desu ka) = do you want to eat? · で (de) = location of action
+
+---
+DIR: JP>EN
+Q_ROM: Mia wa benkyou shitakunai to itte imashita.
+Q_JP: みあは べんきょうしたくないと いっていました。
+A: Mia said she does not want to study.
+HINT: たくない (takunai) = negative short form of たい · と言っていました = said that (quotation)
+
+---
+DIR: JP>EN
+Q_ROM: Taka wa ko-hi- wo nomitagatte imashita.
+Q_JP: たかは こーひーを のみたがっていました。
+A: It seemed Taka wanted to drink coffee.
+HINT: のみたがっていました (nomitagatte imashita) = past observation · stem + たがっていました = seemed to want to
+
+---
+DIR: JP>EN
+Q_ROM: Nana wa soba ga tabetai to itte imashita.
+Q_JP: ななは そばが たべたいと いっていました。
+A: Nana said she wants to eat soba.
+HINT: たべたい + と言っていました = said she wants to eat · が here marks soba — with たい, both が and を are acceptable
+
+---
+DIR: JP>EN
+Q_ROM: Riko wa kouen ni ikitakunai to itte imashita.
+Q_JP: りこは こうえんに いきたくないと いっていました。
+A: Riko said she does not want to go to the park.
+HINT: いきたくない (ikitakunai) = negative short of いきたい · と言っていました = said (quotation)
+
+---
+DIR: JP>EN
+Q_ROM: Nani ga shitai desu ka?
+Q_JP: なにが したいですか？
+A: What do you want to do?
+HINT: なにが (nani ga) = what (subject) · したいですか (shitai desu ka) = do you want to do?
+
+---
+DIR: EN>JP
+Q: Takeshi said he wants to live abroad.
+ROM: Takeshi wa gaikoku ni sumitai to itte imashita.
+JP: たけしは がいこくに すみたいと いっていました。
+HINT: QUOTATION pattern: sumu → stem: sumi + たい (sumitai) + と言っていました (to itte imashita) = said he wants to · contrast with がいこくにすみたいです (1st person plain statement)
+
+---
+DIR: JP>EN
+Q_ROM: Takeshi wa gaikoku ni sumitai to itte imashita.
+Q_JP: たけしは がいこくに すみたいと いっていました。
+A: Takeshi said he wants to live abroad.
+HINT: すみたい (sumitai) quoted with と言っていました (to itte imashita) · がいこく (gaikoku) = abroad/foreign country

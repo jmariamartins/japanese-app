@@ -1,0 +1,93 @@
+# TOPIC: Te-form — Permissions & Prohibitions (〜てもいいです / 〜てはいけません)
+# LEVEL: beginner
+
+# ─────────────────────────────────────────
+# Structures covered:
+#   〜てもいいですか？ (te mo ii desu ka?) = May I…? (asking permission)
+#   〜てもいいです    (te mo ii desu)    = You may… (granting permission)
+#   〜てはいけません  (te wa ikemasen)   = You must not… (prohibition)
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: May I drink the orange juice?
+ROM: Orenji ju-su wo nonde mo ii desu ka?
+JP: おれんじじゅーすを のんでもいいですか？
+HINT: nomu → nonde · permission: te-form + もいいですか？(mo ii desu ka?)
+
+---
+DIR: EN>JP
+Q: No, you must not drink the orange juice.
+ROM: Iie, orenji ju-su wo nonde wa ikemasen.
+JP: いいえ、おれんじじゅーすを のんではいけません。
+HINT: prohibition: te-form + はいけません (wa ikemasen) · contrast with もいいです (mo ii desu)
+
+---
+DIR: EN>JP
+Q: May I drink this water?
+ROM: Kono mizu wo nonde mo ii desu ka?
+JP: このみずを のんでもいいですか？
+HINT: nomu (u-verb, ends in -mu) → nonde + もいいですか (mo ii desu ka) · を (wo) marks the object
+
+---
+DIR: EN>JP
+Q: You may drink this water.
+ROM: Kono mizu wo nonde mo ii desu.
+JP: このみずを のんでもいいです。
+HINT: te-form + もいいです (mo ii desu) = granting permission · contrast with もいいですか (question)
+
+---
+DIR: EN>JP
+Q: You may not drink this water.
+ROM: Kono mizu wo nonde wa ikemasen.
+JP: このみずを のんではいけません。
+HINT: te-form + はいけません (wa ikemasen) = prohibition · contrast: もいいです (permission) vs はいけません (prohibition)
+
+---
+DIR: EN>JP
+Q: May I speak Japanese?
+ROM: Nihongo wo hanashite mo ii desu ka?
+JP: にほんごを はなしてもいいですか？
+HINT: hanasu → hanashite · を (wo) marks the language · permission: + もいいですか？
+
+---
+DIR: EN>JP
+Q: May I open the window?
+ROM: Mado wo akete mo ii desu ka?
+JP: まどを あけてもいいですか？
+HINT: akeru (ru-verb) → akete + もいいですか (mo ii desu ka) · contrast with ください (kudasai) = please open
+
+---
+DIR: EN>JP
+Q: May I take a photo of you?
+ROM: Anata no shashin wo totte mo ii desu ka?
+JP: あなたのしゃしんを とってもいいですか？
+HINT: toru → totte + もいいですか (mo ii desu ka) · あなたの (anata no) = of you
+
+---
+DIR: EN>JP
+Q: May I buy donuts and go to your house?
+ROM: Do-natsu wo katte, anata no ie ni itte mo ii desu ka?
+JP: どーなつを かって、あなたのいえに いってもいいですか？
+HINT: two actions before asking permission: kau → katte, iku → itte, then + もいいですか？· the sequential te-form leads into the permission
+
+---
+DIR: JP>EN
+Q_ROM: Watashi mo anata to Mearii to benkyou shite mo ii desu ka?
+Q_JP: わたしも あなたと めありーと べんきょうしてもいいですか？
+A: May I study with you and Mary too?
+HINT: も (mo) = too/also · benkyou shite + もいいですか？(mo ii desu ka?) = permission request
+
+---
+DIR: JP>EN
+Q_ROM: Kono mizu wo nonde wa ikemasen.
+Q_JP: このみずを のんではいけません。
+A: You may not drink this water.
+HINT: はいけません (wa ikemasen) = prohibition · nonde = te-form of nomu (to drink)
+
+---
+DIR: JP>EN
+Q_ROM: Mado wo akete mo ii desu ka?
+Q_JP: まどを あけてもいいですか？
+A: May I open the window?
+HINT: もいいですか (mo ii desu ka) = asking permission · akete = te-form of akeru

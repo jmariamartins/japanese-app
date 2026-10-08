@@ -1,0 +1,289 @@
+# TOPIC: Short Form — Quotation (〜と思います / 〜と言っていました)
+# LEVEL: beginner
+
+---
+DIR: EN>JP
+Q: I think it will rain tomorrow.
+ROM: Ashita ame ga furu to omoimasu.
+JP: 明日雨が降ると思います。
+HINT: furu = dictionary (short) form of furimasu · use short form before と思います (to omoimasu)
+
+---
+DIR: EN>JP
+Q: Mary said she is a student.
+ROM: Mearii wa gakusei da to itte imashita.
+JP: メアリーは学生だと言っていました。
+HINT: noun + だ (da) = present affirmative short form · preserve the original tense inside と (to)
+
+---
+DIR: EN>JP
+Q: I think Takeshi doesn't like fish.
+ROM: Takeshi wa sakana ga suki janai to omoimasu.
+JP: たけしは魚が好きじゃないと思います。
+HINT: suki janai = negative short form of suki desu (na-adjective) · じゃない (ja nai) = not
+
+---
+DIR: EN>JP
+Q: Ken said he ate sushi.
+ROM: Ken wa sushi wo tabeta to itte imashita.
+JP: けんはすしを食べたと言っていました。
+HINT: tabeta = past affirmative short form of tabemashita
+
+---
+DIR: EN>JP
+Q: I think the exam is difficult.
+ROM: Shiken wa muzukashii to omoimasu.
+JP: 試験は難しいと思います。
+HINT: muzukashii = already short form (i-adjective, no desu needed)
+
+---
+DIR: EN>JP
+Q: Sue said she is studying Japanese. (She used present tense.)
+ROM: Su- wa nihongo wo benkyou shite iru to itte imashita.
+JP: スーは日本語を勉強していると言っていました。
+HINT: She said it in present tense → keep it present: shite iru — not shite ita (that would be past)
+
+---
+DIR: EN>JP
+Q: I think this restaurant is good.
+ROM: Kono resutoran wa ii to omoimasu.
+JP: このレストランはいいと思います。
+HINT: ii = short form of ii desu · already the short form, no change needed
+
+---
+DIR: EN>JP
+Q: Ken said he didn't come yesterday.
+ROM: Ken wa kinou konakatta to itte imashita.
+JP: けんは昨日来なかったと言っていました。
+HINT: konakatta = past negative short form of kimasen (kuru is irregular: こない konai → こなかった konakatta)
+
+---
+DIR: EN>JP
+Q: I don't think Takeshi likes Mary.
+ROM: Takeshi wa Mearii ga suki janai to omoimasu.
+JP: たけしはメアリーが好きじゃないと思います。
+HINT: to express "I don't think X", use [negative short form] + と おもいます (to omoimasu) — NOT to omoimasen
+
+---
+DIR: EN>JP
+Q: Mary said there would be an exam tomorrow.
+ROM: Mearii wa ashita shiken ga aru to itte imashita.
+JP: メアリーは明日試験があると言っていました。
+HINT: ある (aru) = short form of arimasu (present affirmative)
+
+---
+DIR: EN>JP
+Q: I think Takeshi is quiet.
+ROM: Takeshi wa shizuka da to omoimasu.
+JP: たけしは静かだと思います。
+HINT: shizuka = na-adjective · short form = shizuka だ (da)
+
+---
+DIR: EN>JP
+Q: Ken said the movie was interesting.
+ROM: Ken wa eiga ga omoshirokatta to itte imashita.
+JP: けんは映画が面白かったと言っていました。
+HINT: omoshiroi (i-adj) past short = omoshirokatta
+
+---
+DIR: JP>EN
+Q_ROM: Takeshi wa Nihon ni iru to omoimasu.
+Q_JP: たけしは日本にいると思います。
+A: I think Takeshi is in Japan.
+HINT: iru = short form of imasu (to be, for living things)
+
+---
+DIR: JP>EN
+Q_ROM: Mearii wa nihongo ga jouzu da to itte imashita.
+Q_JP: メアリーは日本語が上手だと言っていました。
+A: Mary said she is good at Japanese.
+HINT: jouzu だ (da) = short form of jouzu desu (na-adjective)
+
+---
+DIR: JP>EN
+Q_ROM: Ashita shiken ga aru to omoimasu.
+Q_JP: 明日試験があると思います。
+A: I think there will be an exam tomorrow.
+HINT: ある (aru) = short form of arimasu
+
+---
+DIR: JP>EN
+Q_ROM: Ken wa kanojo ga kirei da to itte imashita.
+Q_JP: けんは彼女がきれいだと言っていました。
+A: Ken said she is pretty.
+HINT: kirei だ (da) = short form of kirei desu (na-adjective)
+
+---
+DIR: EN>JP
+Q: Takeshi said that he will watch a movie tonight.
+ROM: Takeshi wa konban eiga wo miru to itte imashita.
+JP: たけしは こんばん えいがを みると いっていました。
+HINT: miru = dictionary/short form (present) · と いっていました (to itte imashita) = said that · konban (こんばん) = tonight — no particle needed
+
+---
+DIR: EN>JP
+Q: I think Takeshi likes Mary.
+ROM: Takeshi wa Mearii ga suki da to omoimasu.
+JP: たけしは めありーが すきだと おもいます。
+HINT: suki da = present affirmative short form of suki (na-adjective) · contrast with the existing "I don't think Takeshi likes Mary" which uses すきじゃない (suki ja nai)
+
+---
+DIR: EN>JP
+Q: I think Mary cooks.
+ROM: Mearii wa ryouri suru to omoimasu.
+JP: めありーは りょうりすると おもいます。
+HINT: ryouri suru = dictionary/short form (present affirmative) · suru verb short form = same as dictionary form
+
+---
+DIR: EN>JP
+Q: I think Satoshi is not a student.
+ROM: Satoshi wa gakusei ja nai to omoimasu.
+JP: さとしは がくせいじゃないと おもいます。
+HINT: gakusei ja nai = negative short form of noun · と おもいます (to omoimasu) follows · same pattern as "I don't think X"
+
+---
+DIR: EN>JP
+Q: Nana said she will go to Japan.
+ROM: Nana wa Nihon ni iku to itte imashita.
+JP: ななは にほんに いくと いっていました。
+HINT: iku = dictionary/short form (present) · と いっていました (to itte imashita) = said that · に (ni) = destination
+
+---
+DIR: JP>EN
+Q_ROM: Takeshi wa konban eiga wo miru to itte imashita.
+Q_JP: たけしは こんばん えいがを みると いっていました。
+A: Takeshi said that he will watch a movie tonight.
+HINT: miru = present short form · と いっていました = said that · konban = tonight (no particle)
+
+---
+DIR: JP>EN
+Q_ROM: Mearii wa ryouri suru to omoimasu.
+Q_JP: めありーは りょうりすると おもいます。
+A: I think Mary cooks.
+HINT: ryouri suru = short form of suru verb · と おもいます = I think
+
+---
+DIR: EN>JP
+Q: Ami said Yuki is good at cooking.
+ROM: Ami wa Yuki wa ryouri suru no ga jouzu da to itte imashita.
+JP: あみは ゆきは りょうりするのが 上手だと 言っていました。
+HINT: combines のが上手 (no ga jouzu) + と言っていました (to itte imashita) · jouzu da = short form of jouzu desu (na-adjective) inside the quotation
+
+---
+DIR: EN>JP
+Q: I think Ken is poor at playing basketball.
+ROM: Ken wa basukettoboru wo suru no ga heta da to omoimasu.
+JP: けんは バスケットボールを するのが 下手だと 思います。
+HINT: combines のが下手 (no ga heta) + と思います (to omoimasu) · heta da = short form of heta desu · heta = bad at (use for others)
+
+---
+DIR: JP>EN
+Q_ROM: Ami wa Yuki wa ryouri suru no ga jouzu da to itte imashita.
+Q_JP: あみは ゆきは りょうりするのが 上手だと 言っていました。
+A: Ami said Yuki is good at cooking.
+HINT: のが上手だ (no ga jouzu da) = short form inside the quotation · と言っていました = said that
+
+---
+DIR: JP>EN
+Q_ROM: Ken wa basukettoboru wo suru no ga heta da to omoimasu.
+Q_JP: けんは バスケットボールを するのが 下手だと 思います。
+A: I think Ken is poor at playing basketball.
+HINT: のが下手だ (no ga heta da) = short form · と思います = I think · heta = bad at (use for others, not yourself)
+
+---
+DIR: EN>JP
+Q: Aki said Japanese is difficult.
+ROM: Aki wa nihongo wa muzukashii to itte imashita.
+JP: あきは にほんごは むずかしいと 言っていました。
+HINT: muzukashii = i-adjective, already in short form · と言っていました (to itte imashita) = said that · contrast with と思います (I think)
+
+---
+DIR: EN>JP
+Q: Takeshi said he does not like running.
+ROM: Takeshi wa hashiru no ga suki ja nai to itte imashita.
+JP: たけしは はしるのが すきじゃないと 言っていました。
+HINT: suki ja nai = negative short form of na-adjective · のが (no ga) nominalises the verb · combines のがすきじゃない + と言っていました
+
+---
+DIR: EN>JP
+Q: Mika said she will watch a movie.
+ROM: Mika wa eiga wo miru to itte imashita.
+JP: みかは えいがを みると 言っていました。
+HINT: miru = dictionary/short form (present) · と言っていました = said that · contrast: のが好き (likes watching in general) vs miru (will specifically watch)
+
+---
+DIR: EN>JP
+Q: I think Kai is not good at running.
+ROM: Kai wa hashiru no ga tokui ja nai to omoimasu.
+JP: かいは はしるのが とくいじゃないと 思います。
+HINT: tokui ja nai = negative short form of tokui (na-adjective) · combines のがとくいじゃない + と思います · contrast with のがとくいじゃないと言っていました (said) vs と思います (think)
+
+---
+DIR: JP>EN
+Q_ROM: Aki wa nihongo wa muzukashii to itte imashita.
+Q_JP: あきは にほんごは むずかしいと 言っていました。
+A: Aki said Japanese is difficult.
+HINT: muzukashii = i-adjective short form · と言っていました = said that
+
+---
+DIR: JP>EN
+Q_ROM: Takeshi wa hashiru no ga suki ja nai to itte imashita.
+Q_JP: たけしは はしるのが すきじゃないと 言っていました。
+A: Takeshi said he does not like running.
+HINT: のがすきじゃない = doesn't like doing · short form embedded in quotation
+
+---
+DIR: JP>EN
+Q_ROM: Mika wa eiga wo miru to itte imashita.
+Q_JP: みかは えいがを みると 言っていました。
+A: Mika said she will watch a movie.
+HINT: miru = present short form · と言っていました = said that
+
+---
+DIR: JP>EN
+Q_ROM: Kai wa hashiru no ga tokui ja nai to omoimasu.
+Q_JP: かいは はしるのが とくいじゃないと 思います。
+A: I think Kai is not good at running.
+HINT: のがとくいじゃない = not good at (short form) · と思います = I think
+
+---
+DIR: EN>JP
+Q: Sue said that she ate lunch.
+ROM: Su- wa ohirugohan wo tabeta to itte imashita.
+JP: すーは おひるごはんを たべたと 言っていました。
+HINT: tabeta = past affirmative short of taberu · と言っていました = said that · contrast with "Sue said she is studying" (present shite iru) — here the past short form sits inside the quote
+
+---
+DIR: EN>JP
+Q: I think Tom did it.
+ROM: Tom ga shita to omoimasu.
+JP: とむが したと 思います。
+HINT: shita = past short of suru (irregular: する → した) · が (ga) marks the subject of the embedded clause · と思います = I think
+
+---
+DIR: EN>JP
+Q: Mary said she did not buy the cookie.
+ROM: Mearii wa kukki- wo kawanakatta to itte imashita.
+JP: めありーは クッキーを かわなかったと 言っていました。
+HINT: kau (u-verb) → past negative short: かわなかった (kawanakatta) · kau → kawa + nakatta · と言っていました = said that
+
+---
+DIR: JP>EN
+Q_ROM: Su- wa ohirugohan wo tabeta to itte imashita.
+Q_JP: すーは おひるごはんを たべたと 言っていました。
+A: Sue said that she ate lunch.
+HINT: tabeta = past short of taberu · と言っていました = said that
+
+---
+DIR: JP>EN
+Q_ROM: Tom ga shita to omoimasu.
+Q_JP: とむが したと 思います。
+A: I think Tom did it.
+HINT: shita = past short of suru · が = subject marker inside the clause · と思います = I think
+
+---
+DIR: JP>EN
+Q_ROM: Mearii wa kukki- wo kawanakatta to itte imashita.
+Q_JP: めありーは クッキーを かわなかったと 言っていました。
+A: Mary said she did not buy the cookie.
+HINT: kawanakatta = past negative short of kau · と言っていました = said that

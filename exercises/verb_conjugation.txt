@@ -1,0 +1,143 @@
+# TOPIC: Verb Conjugation — Polite Forms (present / past / negative)
+# LEVEL: beginner
+
+# ─────────────────────────────────────────
+# Verb forms covered:
+#   〜ます (masu)  = present / future affirmative
+#   〜ません (masen) = present / future negative
+#   〜ました (mashita) = past affirmative
+#   〜ませんでした (masen deshita) = past negative
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: I ate the cake.
+ROM: Watashi wa ke-ki wo tabemashita.
+JP: わたし は けーき を たべました。
+HINT: たべる (taberu, ru-verb) → past polite: たべました (tabemashita) · を (wo) = object marker
+
+---
+DIR: EN>JP
+Q: Will you run?
+ROM: Anata wa hashirimasu ka?
+JP: あなた は はしります か？
+HINT: はしる (hashiru, u-verb) → present polite: はしります (hashirimasu) · question: + か？(ka?)
+
+---
+DIR: EN>JP
+Q: No, I will not run.
+ROM: Iie, watashi wa hashirimasen.
+JP: いいえ、わたし は はしりません。
+HINT: present / future negative: はしり (hashiri) + ません (masen)
+
+---
+DIR: EN>JP
+Q: Did Miki come to school?
+ROM: Miki wa gakkou ni kimashita ka?
+JP: みき は がっこう に きました か？
+HINT: くる (kuru, irregular) → past polite: きました (kimashita) · に (ni) = destination
+
+---
+DIR: EN>JP
+Q: No, Miki did not come to school.
+ROM: Iie, Miki wa gakkou ni kimasen deshita.
+JP: いいえ、みき は がっこう に きませんでした。
+HINT: past negative: きませんでした (kimasen deshita) — kimasen + deshita fused
+
+---
+DIR: EN>JP
+Q: Did you study?
+ROM: Anata wa benkyou shimashita ka?
+JP: あなた は べんきょうしました か？
+HINT: べんきょうする (benkyou suru, suru verb) → past polite: べんきょうしました (benkyou shimashita)
+
+---
+DIR: EN>JP
+Q: Did Satoshi sleep?
+ROM: Satoshi wa nemashita ka?
+JP: さとし は ねました か？
+HINT: ねる (neru, ru-verb) → past polite: ねました (nemashita)
+
+---
+DIR: EN>JP
+Q: Mako will watch a movie.
+ROM: Mako wa eiga wo mimasu.
+JP: まこ は えいが を みます。
+HINT: みる (miru, ru-verb) → present polite: みます (mimasu) · を (wo) = object marker
+
+---
+DIR: EN>JP
+Q: Mika will not go to the library.
+ROM: Mika wa toshokan ni ikimasen.
+JP: みか は としょかん に いきません。
+HINT: いく (iku, u-verb) → present negative: いきません (ikimasen) · に (ni) = destination
+
+---
+DIR: EN>JP
+Q: Takahiro will play with Tom.
+ROM: Takahiro wa Tomu to asobimasu.
+JP: たかひろ は とむ と あそびます。
+HINT: あそぶ (asobu, u-verb, ends in -bu) → present polite: あそびます (asobimasu) · と (to) = together with
+
+---
+DIR: JP>EN
+Q_ROM: Iie, Miki wa gakkou ni kimasen deshita.
+Q_JP: いいえ、みき は がっこう に きませんでした。
+A: No, Miki did not come to school.
+HINT: きませんでした (kimasen deshita) = past negative of くる (kuru, irregular)
+
+---
+DIR: JP>EN
+Q_ROM: Mika wa toshokan ni ikimasen.
+Q_JP: みか は としょかん に いきません。
+A: Mika will not go to the library.
+HINT: いきません (ikimasen) = present / future negative of いく (iku)
+
+---
+DIR: EN>JP
+Q: I did not sleep.
+ROM: Watashi wa nemasen deshita.
+JP: わたし は ねませんでした。
+HINT: neru (ru-verb) → stem: ne + ませんでした (masen deshita) = past negative
+
+---
+DIR: EN>JP
+Q: Asako runs.
+ROM: Asako wa hashirimasu.
+JP: あさこ は はしります。
+HINT: hashiru (u-verb) → present polite: はしります (hashirimasu)
+
+---
+DIR: EN>JP
+Q: Takeshi does not write letters.
+ROM: Takeshi wa tegami wo kakimasen.
+JP: たけし は てがみを かきません。
+HINT: kaku (u-verb) → present negative: かきません (kakimasen) · を (wo) = object marker
+
+---
+DIR: EN>JP
+Q: Ken cleaned up.
+ROM: Ken wa souji shimashita.
+JP: けん は そうじしました。
+HINT: souji suru (suru verb) → past polite: そうじしました (souji shimashita)
+
+---
+DIR: EN>JP
+Q: Miko did not go to school.
+ROM: Miko wa gakkou ni ikimasen deshita.
+JP: みこ は がっこうに いきませんでした。
+HINT: iku (u-verb) → past negative: いきませんでした (ikimasen deshita) · に (ni) = destination
+
+---
+DIR: EN>JP
+Q: Mia does not speak English.
+ROM: Mia wa eigo wo hanashimasen.
+JP: みあ は えいごを はなしません。
+HINT: hanasu (u-verb) → present negative: はなしません (hanashimasen) · えいご (eigo) = English — not えいが (eiga) which means movie
+
+---
+DIR: EN>JP
+Q: I read a book at the library.
+ROM: Toshokan de hon wo yomimasu.
+JP: としょかんで ほんを よみます。
+HINT: で (de) = location of an action · yomu (u-verb) → present polite: よみます (yomimasu)

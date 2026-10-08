@@ -1,0 +1,337 @@
+# TOPIC: Adjectives and Degree Expressions
+# LEVEL: beginner
+
+# ─────────────────────────────────────────
+# i-adjectives: おいしい, むずかしい
+# na-adjectives: たいくつ, すき, だいすき
+# Degree adverbs: とても, ちょっと
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: Is that cake delicious?
+ROM: Sono ke-ki wa oishii desu ka?
+JP: その けーき は おいしいですか？
+HINT: i-adjective question → おいしい (oishii) + ですか？ (desu ka?) · no change to the adjective itself
+
+---
+DIR: EN>JP
+Q: This cake is very delicious.
+ROM: Kono ke-ki wa totemo oishii desu.
+JP: この けーき は とても おいしいです。
+HINT: とても (totemo) = very · degree adverb goes directly before the adjective
+
+---
+DIR: EN>JP
+Q: Was the Japanese class boring?
+ROM: Nihongo no kurasu wa taikutsu deshita ka?
+JP: にほんご の くらす は たいくつでしたか？
+HINT: たいくつ (taikutsu) = na-adjective · past question → たいくつでしたか？ (taikutsu deshita ka?) · na-adjectives do NOT change form
+
+---
+DIR: EN>JP
+Q: No, the Japanese class was not boring.
+ROM: Iie, nihongo no kurasu wa taikutsu ja arimasen deshita.
+JP: いいえ、にほんご の くらす は たいくつじゃありませんでした。
+HINT: na-adjective past negative → たいくつ (taikutsu) + じゃありませんでした (ja arimasen deshita) · same ending as noun predicates
+
+---
+DIR: EN>JP
+Q: The Japanese class was a bit difficult.
+ROM: Nihongo no kurasu wa chotto muzukashikatta desu.
+JP: にほんご の くらす は ちょっと むずかしかったです。
+HINT: ちょっと (chotto) = a bit · i-adjective past → むずかしい (muzukashii) → drop い → むずかし + かったです (katta desu)
+
+---
+DIR: EN>JP
+Q: Do you like this book?
+ROM: Anata wa kono hon ga suki desu ka?
+JP: あなた は この ほん が すきですか？
+HINT: すき (suki) = na-adjective "to like" · use が (ga) — not を (wo) — for the thing you like
+
+---
+DIR: EN>JP
+Q: Yes, I like this book very much.
+ROM: Hai, watashi wa kono hon ga daisuki desu.
+JP: はい、わたし は この ほん が だいすきです。
+HINT: だいすき (daisuki) = love / like very much · だい (dai) is an intensifying prefix · still uses が (ga)
+
+---
+DIR: JP>EN
+Q_ROM: Kono ke-ki wa totemo oishii desu.
+Q_JP: この けーき は とても おいしいです。
+A: This cake is very delicious.
+HINT: とても (totemo) = very · おいしい (oishii) = delicious (i-adjective)
+
+---
+DIR: JP>EN
+Q_ROM: Nihongo no kurasu wa chotto muzukashikatta desu.
+Q_JP: にほんご の くらす は ちょっと むずかしかったです。
+A: The Japanese class was a bit difficult.
+HINT: ちょっと (chotto) = a bit · むずかしかった (muzukashikatta) = past form of むずかしい (muzukashii)
+
+---
+DIR: JP>EN
+Q_ROM: Hai, watashi wa kono hon ga daisuki desu.
+Q_JP: はい、わたし は この ほん が だいすきです。
+A: Yes, I like this book very much.
+HINT: だいすき (daisuki) = love/like very much · が (ga) marks the thing liked
+
+---
+DIR: EN>JP
+Q: I neither like nor dislike it.
+ROM: Suki demo kirai demo arimasen.
+JP: すきでも きらいでも ありません。
+HINT: ～でも～でも ありません (demo...demo arimasen) = neither...nor · すき (suki) = like · きらい (kirai) = dislike
+
+---
+DIR: EN>JP
+Q: This is my favourite TV program.
+ROM: Kore wa watashi no sukina terebi bangumi desu.
+JP: これは わたしの すきな テレビばんぐみです。
+HINT: すきな (sukina) = favourite (na-adjective modifying a noun) · ばんぐみ (bangumi) = program · すき + な before a noun
+
+---
+DIR: EN>JP
+Q: My younger sister likes summer.
+ROM: Watashi no imouto wa natsu ga suki desu.
+JP: わたしの いもうとは なつが すきです。
+HINT: すき (suki) = like (na-adjective) · が (ga) marks what is liked — NOT を (wo) · なつ (natsu) = summer
+
+---
+DIR: EN>JP
+Q: Do you like winter?
+ROM: Anata wa fuyu ga suki desu ka?
+JP: あなたは ふゆが すきですか？
+HINT: ふゆ (fuyu) = winter · が (ga) marks the thing liked · すきですか (suki desu ka) = do you like?
+
+---
+DIR: EN>JP
+Q: I like spring very much.
+ROM: Watashi wa haru ga daisuki desu.
+JP: わたしは はるが だいすきです。
+HINT: はる (haru) = spring · だいすき (daisuki) = love / like very much · だい (dai) intensifies すき
+
+---
+DIR: EN>JP
+Q: I also like autumn very much.
+ROM: Watashi wa aki mo daisuki desu.
+JP: わたしは あきも だいすきです。
+HINT: あき (aki) = autumn · も (mo) = also/too · replaces が (ga) here · だいすき (daisuki) = love/like very much
+
+---
+DIR: EN>JP
+Q: Did you like the restaurant?
+ROM: Sono resutoran ga suki deshita ka?
+JP: そのレストランが すきでしたか？
+HINT: past question → すきでしたか (suki deshita ka) · が (ga) marks the restaurant as what is/was liked
+
+---
+DIR: EN>JP
+Q: Yes, the sushi was very delicious.
+ROM: Hai, sushi wa totemo oishikatta desu.
+JP: はい、すしは とても おいしかったです。
+HINT: i-adj past → おいしい → drop い → おいし + かったです (katta desu) · とても (totemo) = very
+
+---
+DIR: EN>JP
+Q: Do you like this movie?
+ROM: Sono eiga ga suki desu ka?
+JP: そのえいがが すきですか？
+HINT: えいが (eiga) = movie · が (ga) marks the thing liked · すきですか (suki desu ka) = do you like?
+
+---
+DIR: EN>JP
+Q: No, the movie was not that interesting.
+ROM: Iie, sono eiga wa amari omoshiroku nakatta desu.
+JP: いいえ、そのえいがは あまり おもしろくなかったです。
+HINT: あまり (amari) = not very much · ALWAYS needs negative · i-adj negative past: おもしろい → おもしろくなかった (omoshiroku nakatta)
+
+---
+DIR: JP>EN
+Q_ROM: Suki demo kirai demo arimasen.
+Q_JP: すきでも きらいでも ありません。
+A: I neither like nor dislike it.
+HINT: ～でも～でも ありません = neither...nor · きらい (kirai) = dislike
+
+---
+DIR: JP>EN
+Q_ROM: Watashi no imouto wa natsu ga suki desu.
+Q_JP: わたしの いもうとは なつが すきです。
+A: My younger sister likes summer.
+HINT: が (ga) marks what is liked · なつ (natsu) = summer
+
+---
+DIR: JP>EN
+Q_ROM: Iie, sono eiga wa amari omoshiroku nakatta desu.
+Q_JP: いいえ、そのえいがは あまり おもしろくなかったです。
+A: No, the movie was not that interesting.
+HINT: あまり (amari) + negative = not very · おもしろくなかった (omoshiroku nakatta) = past negative of おもしろい
+
+---
+DIR: EN>JP
+Q: This room is a bit hot.
+ROM: Kono heya wa chotto atsui desu.
+JP: このへやは ちょっと あついです。
+HINT: ちょっと (chotto) = a bit/a little · あつい (atsui) = hot (i-adjective) · degree adverb goes directly before the adjective
+
+---
+DIR: EN>JP
+Q: I like coffee very much.
+ROM: Watashi wa ko-hi- ga daisuki desu.
+JP: わたしは こーひーが だいすきです。
+HINT: だいすき (daisuki) = love / like very much · が (ga) marks what you like — not を (wo)
+
+---
+DIR: EN>JP
+Q: The library was quiet.
+ROM: Toshokan wa shizuka deshita.
+JP: としょかんは しずかでした。
+HINT: しずか (shizuka) = quiet (na-adjective) · past affirmative: しずかでした (shizuka deshita) · na-adj past keeps the noun, just changes desu → deshita
+
+---
+DIR: EN>JP
+Q: Ken's cat is cute.
+ROM: Ken no neko wa kawaii desu.
+JP: けんのねこは かわいいです。
+HINT: かわいい (kawaii) = cute (i-adjective) · no change before です (desu) · i-adjectives go directly before です
+
+---
+DIR: EN>JP
+Q: That restaurant was not cheap.
+ROM: Sono resutoran wa yasuku nakatta desu.
+JP: そのレストランは やすくなかったです。
+HINT: やすい (yasui, i-adj, cheap) → past negative: drop い → やすく + なかったです (nakatta desu)
+
+---
+DIR: EN>JP
+Q: Is Mary kind?
+ROM: Mearii wa shinsetsu desu ka?
+JP: めありーは しんせつですか？
+HINT: しんせつ (shinsetsu) = kind (na-adjective) · no な before です · question: しんせつですか (shinsetsu desu ka)
+
+---
+DIR: EN>JP
+Q: The hotspring is nearby.
+ROM: Onsen wa chikai desu.
+JP: おんせんは ちかいです。
+HINT: ちかい (chikai) = near/nearby (i-adjective) · おんせん (onsen) = hotspring · i-adj directly before です
+
+---
+DIR: EN>JP
+Q: Was the cake delicious?
+ROM: Ke-ki wa oishikatta desu ka?
+JP: けーきは おいしかったですか？
+HINT: おいしい (oishii, i-adj) → past question: drop い → おいし + かったですか (katta desu ka)
+
+---
+DIR: EN>JP
+Q: Kiko's mother was famous.
+ROM: Kiko no okaasan wa yuumei deshita.
+JP: きこのおかあさんは ゆうめいでした。
+HINT: ゆうめい (yuumei) = famous (na-adjective) · past affirmative: ゆうめいでした (yuumei deshita) · same pattern as shizuka
+
+---
+DIR: JP>EN
+Q_ROM: Toshokan wa shizuka deshita.
+Q_JP: としょかんは しずかでした。
+A: The library was quiet.
+HINT: しずかでした (shizuka deshita) = past affirmative of na-adjective · としょかん (toshokan) = library
+
+---
+DIR: JP>EN
+Q_ROM: Sono resutoran wa yasuku nakatta desu.
+Q_JP: そのレストランは やすくなかったです。
+A: That restaurant was not cheap.
+HINT: やすくなかった (yasuku nakatta) = past negative of やすい (yasui) · i-adj past negative pattern
+
+---
+DIR: JP>EN
+Q_ROM: Kiko no okaasan wa yuumei deshita.
+Q_JP: きこのおかあさんは ゆうめいでした。
+A: Kiko's mother was famous.
+HINT: ゆうめいでした (yuumei deshita) = past affirmative of ゆうめい (yuumei, na-adj, famous)
+
+---
+DIR: EN>JP
+Q: Japanese classes are not easy.
+ROM: Nihongo no kurasu wa kantan ja nai desu.
+JP: にほんごのくらすは かんたんじゃないです。
+HINT: かんたん (kantan) = easy (na-adjective) · present negative: かんたんじゃないです (kantan ja nai desu)
+
+---
+DIR: EN>JP
+Q: This tool was not convenient.
+ROM: Kono dougu wa benri ja nakatta desu.
+JP: このどうぐは べんりじゃなかったです。
+HINT: べんり (benri) = convenient (na-adjective) · past negative: べんりじゃなかったです (benri ja nakatta desu) · どうぐ (dougu) = tool
+
+---
+DIR: EN>JP
+Q: The movie was interesting.
+ROM: Eiga wa omoshirokatta desu.
+JP: えいがは おもしろかったです。
+HINT: おもしろい (omoshiroi, i-adj) → past affirmative: drop い → おもしろ + かったです (katta desu)
+
+---
+DIR: EN>JP
+Q: Is your house far?
+ROM: Anata no ie wa tooi desu ka?
+JP: あなたのいえは とおいですか？
+HINT: とおい (tooi) = far (i-adjective) · no change before ですか · contrast with ちかい (chikai) = near
+
+---
+DIR: EN>JP
+Q: This coffee is bitter.
+ROM: Kono ko-hi- wa nigai desu.
+JP: このこーひーは にがいです。
+HINT: にがい (nigai) = bitter (i-adjective) · i-adj goes directly before です · contrast: あまい (amai) = sweet
+
+---
+DIR: EN>JP
+Q: This cake is not sweet.
+ROM: Kono ke-ki wa amaku nai desu.
+JP: このけーきは あまくないです。
+HINT: あまい (amai, i-adj, sweet) → present negative: drop い → あまく + ないです (nai desu)
+
+---
+DIR: EN>JP
+Q: This book was not interesting.
+ROM: Kono hon wa omoshiroku nakatta desu.
+JP: このほんは おもしろくなかったです。
+HINT: おもしろい (omoshiroi, i-adj) → past negative: drop い → おもしろく + なかったです (nakatta desu) · the い becomes く — never keep the い
+
+---
+DIR: EN>JP
+Q: That person was not famous.
+ROM: Ano hito wa yuumei ja nakatta desu.
+JP: あのひとは ゆうめいじゃなかったです。
+HINT: ゆうめい (yuumei) = famous (na-adjective) · past negative: ゆうめいじゃなかったです (yuumei ja nakatta desu)
+
+---
+DIR: EN>JP
+Q: This coffee was popular.
+ROM: Kono ko-hi- wa ninki deshita.
+JP: このこーひーは にんきでした。
+HINT: にんき (ninki) = popular (na-adjective) · past affirmative: にんきでした (ninki deshita) · same pattern as ゆうめいでした
+
+---
+DIR: JP>EN
+Q_ROM: Nihongo no kurasu wa kantan ja nai desu.
+Q_JP: にほんごのくらすは かんたんじゃないです。
+A: Japanese classes are not easy.
+HINT: かんたんじゃない (kantan ja nai) = present negative of na-adjective かんたん (kantan)
+
+---
+DIR: JP>EN
+Q_ROM: Eiga wa omoshirokatta desu.
+Q_JP: えいがは おもしろかったです。
+A: The movie was interesting.
+HINT: おもしろかった (omoshirokatta) = past affirmative of おもしろい (omoshiroi, i-adj)
+
+---
+DIR: JP>EN
+Q_ROM: Kono hon wa omoshiroku nakatta desu.
+Q_JP: このほんは おもしろくなかったです。
+A: This book was not interesting.
+HINT: おもしろくなかった (omoshiroku nakatta) = past negative of おもしろい · く form before なかった

@@ -1,0 +1,94 @@
+# TOPIC: Miscellaneous — Physical Description
+# LEVEL: beginner
+
+# ─────────────────────────────────────────
+# Structure: [subject] は [body part] が [adjective] です。
+#   = Subject has a [adj] [body part]
+# Key body parts: せ (se, height), かみ (kami, hair), あたま (atama, head/brain),
+#   くび (kubi, neck), くち (kuchi, mouth), はな (hana, nose)
+# Note: あたまがいい = smart (lit. "head is good") — NOT about head size
+# ─────────────────────────────────────────
+
+---
+DIR: JP>EN
+Q_ROM: Takumi wa se ga hikui desu.
+Q_JP: たくみ は せ が ひくいです。
+A: Takumi is short.
+HINT: せ (se) = height · ひくい (hikui) = low/short (for height) · not みじかい (mijikai), that's for length of objects
+
+---
+DIR: JP>EN
+Q_ROM: Yuuto wa se ga takai desu.
+Q_JP: ゆうと は せ が たかいです。
+A: Yuuto is tall.
+HINT: せがたかい (se ga takai) = tall (lit. "height is high") · たかい (takai) = high/tall
+
+---
+DIR: JP>EN
+Q_ROM: Chiaki wa kami ga mijikai desu.
+Q_JP: ちあき は かみ が みじかいです。
+A: Chiaki has short hair.
+HINT: かみ (kami) = hair · みじかい (mijikai) = short (for objects/lengths, not height)
+
+---
+DIR: JP>EN
+Q_ROM: Yumi wa atama ga ii desu.
+Q_JP: ゆみ は あたま が いいです。
+A: Yumi is smart.
+HINT: あたまがいい (atama ga ii) = smart/clever (lit. "head is good") · not about head size
+
+---
+DIR: JP>EN
+Q_ROM: Daichi wa kami ga nagai desu.
+Q_JP: だいち は かみ が ながいです。
+A: Daichi has long hair.
+HINT: かみ (kami) = hair · ながい (nagai) = long
+
+---
+DIR: JP>EN
+Q_ROM: Kirin wa kubi ga nagai desu.
+Q_JP: きりん は くび が ながいです。
+A: Giraffes have long necks.
+HINT: きりん (kirin) = giraffe · くび (kubi) = neck · ながい (nagai) = long
+
+---
+DIR: JP>EN
+Q_ROM: Wani wa kuchi ga ookii desu.
+Q_JP: わに は くち が おおきいです。
+A: Crocodiles have big mouths.
+HINT: わに (wani) = crocodile · くち (kuchi) = mouth · おおきい (ookii) = big/large
+
+---
+DIR: JP>EN
+Q_ROM: Zou wa hana ga nagai desu.
+Q_JP: ぞう は はな が ながいです。
+A: Elephants have long noses.
+HINT: ぞう (zou) = elephant · はな (hana) = nose (also means flower — context tells you which)
+
+---
+DIR: EN>JP
+Q: Takumi is short.
+ROM: Takumi wa se ga hikui desu.
+JP: たくみ は せ が ひくいです。
+HINT: height pattern: [person] は せ (se) が [adj] です · ひくい (hikui) for short height
+
+---
+DIR: EN>JP
+Q: Yumi is smart.
+ROM: Yumi wa atama ga ii desu.
+JP: ゆみ は あたま が いいです。
+HINT: あたまがいい (atama ga ii) = smart · が (ga) marks the body-part/attribute · いい (ii) = good
+
+---
+DIR: EN>JP
+Q: Crocodiles have big mouths.
+ROM: Wani wa kuchi ga ookii desu.
+JP: わに は くち が おおきいです。
+HINT: [subject] は [body part] が (ga) [adj] · おおきい (ookii) = big
+
+---
+DIR: EN>JP
+Q: Giraffes have long necks.
+ROM: Kirin wa kubi ga nagai desu.
+JP: きりん は くび が ながいです。
+HINT: くび (kubi) = neck · ながい (nagai) = long · same pattern for all physical descriptions

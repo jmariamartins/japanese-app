@@ -1,0 +1,149 @@
+# TOPIC: Te-form — Requests & Permissions
+# LEVEL: beginner
+
+---
+DIR: EN>JP
+Q: Please eat slowly.
+ROM: Yukkuri tabete kudasai.
+JP: ゆっくり食べてください。
+HINT: taberu (ru-verb) → tabete · then add ください (kudasai)
+
+---
+DIR: EN>JP
+Q: Please open the window.
+ROM: Mado wo akete kudasai.
+JP: 窓を開けてください。
+HINT: akeru (ru-verb) → akete + ください (kudasai)
+
+---
+DIR: EN>JP
+Q: Please sit here.
+ROM: Koko ni suwatte kudasai.
+JP: ここに座ってください。
+HINT: suwaru (u-verb, ends in -ru) → suwatte + ください (kudasai)
+
+---
+DIR: EN>JP
+Q: Please write your name.
+ROM: Namae wo kaite kudasai.
+JP: 名前を書いてください。
+HINT: kaku (u-verb, ends in -ku) → kaite + ください (kudasai)
+
+---
+DIR: EN>JP
+Q: Please wait a moment.
+ROM: Chotto matte kudasai.
+JP: ちょっと待ってください。
+HINT: matsu (u-verb, ends in -tsu) → matte + ください (kudasai)
+
+---
+DIR: EN>JP
+Q: Please speak slowly.
+ROM: Yukkuri hanashite kudasai.
+JP: ゆっくり話してください。
+HINT: hanasu (u-verb, ends in -su) → hanashite + ください (kudasai)
+
+---
+DIR: EN>JP
+Q: Please read this.
+ROM: Kore wo yonde kudasai.
+JP: これを読んでください。
+HINT: yomu (u-verb, ends in -mu) → yonde + ください (kudasai)
+
+---
+DIR: EN>JP
+Q: Please come here.
+ROM: Koko ni kite kudasai.
+JP: ここに来てください。
+HINT: kuru is irregular → kite + ください (kudasai)
+
+---
+DIR: EN>JP
+Q: Please listen carefully.
+ROM: Yoku kiite kudasai.
+JP: よく聞いてください。
+HINT: kiku (u-verb, ends in -ku) → kiite + ください (kudasai)
+
+---
+DIR: EN>JP
+Q: Please turn off the light.
+ROM: Denki wo keshite kudasai.
+JP: 電気を消してください。
+HINT: kesu (u-verb, ends in -su) → keshite + ください (kudasai)
+
+---
+DIR: EN>JP
+Q: May I take a photo?
+ROM: Shashin wo totte mo ii desu ka?
+JP: 写真を撮ってもいいですか？
+HINT: toru (u-verb, ends in -ru) → totte · then add もいいですか？(mo ii desu ka?)
+
+---
+DIR: EN>JP
+Q: You may sit here.
+ROM: Koko ni suwatte mo ii desu.
+JP: ここに座ってもいいです。
+HINT: te-form + もいいです (mo ii desu) = granting permission
+
+---
+DIR: JP>EN
+Q_ROM: Shashin wo totte kudasai.
+Q_JP: 写真を撮ってください。
+A: Please take a photo.
+HINT: totte = te-form of toru (to take/photograph) · + ください (kudasai)
+
+---
+DIR: JP>EN
+Q_ROM: Doa wo shimete kudasai.
+Q_JP: ドアを閉めてください。
+A: Please close the door.
+HINT: shimeru (ru-verb) → shimete + ください (kudasai)
+
+---
+DIR: JP>EN
+Q_ROM: Mizu wo nonde kudasai.
+Q_JP: 水を飲んでください。
+A: Please drink some water.
+HINT: nomu (u-verb, ends in -mu) → nonde + ください (kudasai)
+
+---
+DIR: EN>JP
+Q: Please wait for me in front of the station.
+ROM: Eki no mae de matte kudasai.
+JP: えきのまえで まってください。
+HINT: matsu (u-verb, ends in -tsu) → matte + ください (kudasai) · で (de) = location of action · まえ (mae) = in front of
+
+---
+DIR: EN>JP
+Q: Please read this book.
+ROM: Kono hon wo yonde kudasai.
+JP: このほんを よんでください。
+HINT: yomu (u-verb, ends in -mu) → yonde + ください (kudasai) · を (wo) marks the object · contrast with existing "Please read this" which uses これ (kore) alone
+
+---
+DIR: EN>JP
+Q: Please eat breakfast every day.
+ROM: Mainichi asagohan wo tabete kudasai.
+JP: まいにち あさごはんを たべてください。
+HINT: taberu (ru-verb) → tabete + ください (kudasai) · まいにち (mainichi) = every day — no particle needed · を (wo) = object
+
+---
+DIR: EN>JP
+Q: Please go to sleep at 10 PM.
+ROM: Gogo juuji ni nete kudasai.
+JP: ごごじゅうじに ねてください。
+HINT: neru (ru-verb) → nete + ください (kudasai) · ごごじゅうじ (gogo juuji) = 10 PM · clock time ALWAYS takes に (ni)
+
+---
+DIR: JP>EN
+Q_ROM: Eki no mae de matte kudasai.
+Q_JP: えきのまえで まってください。
+A: Please wait for me in front of the station.
+HINT: matte = te-form of matsu · で (de) before a request = location where the action takes place
+
+---
+DIR: JP>EN
+Q_ROM: Mainichi asagohan wo tabete kudasai.
+Q_JP: まいにち あさごはんを たべてください。
+A: Please eat breakfast every day.
+HINT: まいにち (mainichi) = every day · tabete = te-form of taberu · ください (kudasai) = please

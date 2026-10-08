@@ -1,0 +1,374 @@
+# TOPIC: Miscellaneous — Basic Sentence Structure
+# LEVEL: beginner
+
+# ─────────────────────────────────────────
+# PART 1 — Sentence endings: desu / desu ka / ja arimasen / deshita
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: I am a student.
+ROM: Watashi wa gakusei desu.
+JP: わたし は がくせい です。
+HINT: Present affirmative → end with です (desu)
+
+---
+DIR: EN>JP
+Q: Are you a student too?
+ROM: Anata mo gakusei desu ka?
+JP: あなた も がくせい ですか？
+HINT: も (mo) = "too / also" · question → end with ですか？ (desu ka?)
+
+---
+DIR: EN>JP
+Q: No, I am not a student.
+ROM: Iie, watashi wa gakusei ja arimasen.
+JP: いいえ、わたし は がくせい じゃありません。
+HINT: Present negative → じゃありません (ja arimasen) · start with いいえ (iie)
+
+---
+DIR: EN>JP
+Q: Was Ms. Sato a Japanese language teacher?
+ROM: Satou-san wa nihongo no sensei deshita ka?
+JP: さとうさん は にほんご の せんせい でしたか？
+HINT: Past question → でしたか？ (deshita ka?)
+
+---
+DIR: EN>JP
+Q: No, Ms. Sato was not a Japanese language teacher.
+ROM: Iie, Satou-san wa nihongo no sensei ja arimasen deshita.
+JP: いいえ、さとうさん は にほんご の せんせい じゃありませんでした。
+HINT: Past negative → じゃありませんでした (ja arimasen deshita) · the longest ending!
+
+---
+DIR: EN>JP
+Q: My mother was a Japanese language teacher.
+ROM: Watashi no okaasan wa nihongo no sensei deshita.
+JP: わたし の おかあさん は にほんご の せんせい でした。
+HINT: Past affirmative → でした (deshita) · の (no) links possessor to noun
+
+---
+DIR: JP>EN
+Q_ROM: Anata mo gakusei desu ka?
+Q_JP: あなた も がくせい ですか？
+A: Are you a student too?
+HINT: も (mo) = too / also
+
+---
+DIR: JP>EN
+Q_ROM: Iie, Satou-san wa nihongo no sensei ja arimasen deshita.
+Q_JP: いいえ、さとうさん は にほんご の せんせい じゃありませんでした。
+A: No, Ms. Sato was not a Japanese language teacher.
+HINT: じゃありませんでした (ja arimasen deshita) = past negative
+
+# ─────────────────────────────────────────
+# PART 2 — Demonstratives: kore / sore / are / dore / kono / sono / ano / dono / koko / soko / asoko / doko
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: That person is my English teacher.
+ROM: Ano hito wa watashi no eigo no sensei desu.
+JP: あの ひと は わたし の えいご の せんせい です。
+HINT: Person far from both speaker and listener → あの (ano) — not あれ (are), because it modifies a noun: あの + ひと (hito)
+
+---
+DIR: EN>JP
+Q: Is this my bag?
+ROM: Kore wa watashi no kaban desu ka?
+JP: これ は わたし の かばん ですか？
+HINT: Thing right in front of you, standing alone → これ (kore) · use これ/それ/あれ (kore/sore/are) when the noun is NOT stated
+
+---
+DIR: EN>JP
+Q: No, that is Takeshi's bag.
+ROM: Iie, sore wa Takeshi no kaban desu.
+JP: いいえ、それ は たけし の かばん です。
+HINT: Thing in front of the listener → それ (sore)
+
+---
+DIR: EN>JP
+Q: Which one is your car?
+ROM: Anata no kuruma wa dore desu ka?
+JP: あなた の くるま は どれ ですか？
+HINT: Asking "which one?" from a set → どれ (dore, standalone) · if modifying a noun it would be どの (dono)
+
+---
+DIR: EN>JP
+Q: My car is this car.
+ROM: Watashi no kuruma wa kono kuruma desu.
+JP: わたし の くるま は この くるま です。
+HINT: Car right next to the speaker + modifying a noun → この (kono) + くるま (kuruma) — not これ (kore) alone
+
+---
+DIR: EN>JP
+Q: Whose house is this place?
+ROM: Koko wa dare no ie desu ka?
+JP: ここ は だれの いえ ですか？
+HINT: Location word → ここ (koko) = here · だれの (dare no) = whose
+
+---
+DIR: EN>JP
+Q: Where is your wallet?
+ROM: Anata no saifu wa doko desu ka?
+JP: あなた の さいふ は どこ ですか？
+HINT: Asking about a location → どこ (doko) — not どれ (dore), which is for choosing between things
+
+---
+DIR: EN>JP
+Q: My wallet is over there.
+ROM: Watashi no saifu wa asoko desu.
+JP: わたし の さいふ は あそこ です。
+HINT: Far from both speaker and listener → あそこ (asoko, location) · if it were a thing you'd say あれ (are)
+
+---
+DIR: JP>EN
+Q_ROM: Ano hito wa watashi no eigo no sensei desu.
+Q_JP: あの ひと は わたし の えいご の せんせい です。
+A: That person over there is my English teacher.
+HINT: あの (ano) = that (far) + modifies a noun · あの ひと (ano hito) = that person
+
+---
+DIR: JP>EN
+Q_ROM: Watashi no kuruma wa kono kuruma desu.
+Q_JP: わたし の くるま は この くるま です。
+A: My car is this car.
+HINT: この (kono) = this + modifies a noun (kono + kuruma)
+
+---
+DIR: EN>JP
+Q: What is your favourite food?
+ROM: Anata no sukina tabemono wa nan desu ka?
+JP: あなた の すきな たべもの は なん ですか？
+HINT: なん (nan) = what · すきな (sukina) = favourite (na-adjective modifying noun) · の (no) links possessor to noun
+
+---
+DIR: EN>JP
+Q: Where is your school?
+ROM: Anata no gakkou wa doko desu ka?
+JP: あなた の がっこう は どこ ですか？
+HINT: どこ (doko) = where · は (wa) marks がっこう (gakkou, school) as the topic being asked about
+
+---
+DIR: EN>JP
+Q: When is the party?
+ROM: Pa-ti- wa itsu desu ka?
+JP: ぱーてぃー は いつ ですか？
+HINT: いつ (itsu) = when · いつ NEVER takes に (ni) as a particle
+
+---
+DIR: EN>JP
+Q: Who is your favourite singer?
+ROM: Anata no sukina kashu wa dare desu ka?
+JP: あなた の すきな かしゅ は だれ ですか？
+HINT: だれ (dare) = who · かしゅ (kashu) = singer · すきな (sukina) = favourite
+
+---
+DIR: EN>JP
+Q: Takeshi was not 19 years old.
+ROM: Takeshi wa juukyuusai ja arimasen deshita.
+JP: たけし は じゅうきゅうさい じゃありませんでした。
+HINT: past negative → じゃありませんでした (ja arimasen deshita) · じゅうきゅうさい (juukyuusai) = 19 years old
+
+---
+DIR: EN>JP
+Q: My father was not a police officer.
+ROM: Watashi no otousan wa keisatsukan ja arimasen deshita.
+JP: わたし の おとうさん は けいさつかん じゃありませんでした。
+HINT: past negative → じゃありませんでした (ja arimasen deshita) · けいさつかん (keisatsukan) = police officer
+
+---
+DIR: EN>JP
+Q: Shuto was not a teacher.
+ROM: Shuto wa sensei ja arimasen deshita.
+JP: シュトは せんせい じゃありませんでした。
+HINT: same pattern: noun + じゃありませんでした (ja arimasen deshita) · no change to the noun itself
+
+---
+DIR: EN>JP
+Q: Who is your German language teacher?
+ROM: Anata no doitsugo no sensei wa dare desu ka?
+JP: あなた の どいつご の せんせい は だれ ですか？
+HINT: だれ (dare) = who · どいつご (doitsugo) = German language · chaining two の (no) is correct here
+
+---
+DIR: EN>JP
+Q: My mother is a dentist.
+ROM: Watashi no okaasan wa haisha desu.
+JP: わたし の おかあさん は はいしゃ です。
+HINT: present affirmative → です (desu) · はいしゃ (haisha) = dentist
+
+---
+DIR: EN>JP
+Q: Takeshi was an office worker.
+ROM: Takeshi wa kaishain deshita.
+JP: たけし は かいしゃいん でした。
+HINT: past affirmative → でした (deshita) · かいしゃいん (kaishain) = office worker / company employee
+
+---
+DIR: EN>JP
+Q: Was Toshi also an office worker?
+ROM: Toshi mo kaishain deshita ka?
+JP: トシ も かいしゃいん でしたか？
+HINT: も (mo) = too/also · replaces は (wa) · past question → でしたか (deshita ka)
+
+---
+DIR: EN>JP
+Q: Is Key your younger brother?
+ROM: Kei wa anata no otouto desu ka?
+JP: ケイ は あなた の おとうと ですか？
+HINT: おとうと (otouto) = younger brother · present affirmative question → ですか (desu ka)
+
+---
+DIR: EN>JP
+Q: This is my water bottle.
+ROM: Kore wa watashi no suitou desu.
+JP: これ は わたし の すいとう です。
+HINT: これ (kore) = this (near the speaker, standalone) · すいとう (suitou) = water bottle
+
+---
+DIR: EN>JP
+Q: What is that?
+ROM: Are wa nan desu ka?
+JP: あれ は なん ですか？
+HINT: あれ (are) = that (far from both speaker and listener) · なん (nan) = what
+
+---
+DIR: EN>JP
+Q: Is that your mobile phone?
+ROM: Sore wa anata no keitai denwa desu ka?
+JP: それ は あなた の けいたいでんわ ですか？
+HINT: けいたいでんわ (keitai denwa) = mobile phone · それ (sore) = that (near listener)
+
+---
+DIR: EN>JP
+Q: Is your dog a chihuahua?
+ROM: Anata no inu wa chihuahua desu ka?
+JP: あなた の いぬ は ちわわ ですか？
+HINT: ですか (desu ka) = present affirmative question · いぬ (inu) = dog
+
+---
+DIR: EN>JP
+Q: Is that person your friend?
+ROM: Ano hito wa anata no tomodachi desu ka?
+JP: あの ひと は あなた の ともだち ですか？
+HINT: あの ひと (ano hito) = that person (far) · ともだち (tomodachi) = friend · ですか (desu ka) = question
+
+---
+DIR: EN>JP
+Q: That lady is not Mikiko.
+ROM: Ano josei wa Mikiko ja arimasen.
+JP: あの じょせい は みきこ じゃありません。
+HINT: じょせい (josei) = lady/woman · present negative → じゃありません (ja arimasen)
+
+---
+DIR: EN>JP
+Q: Whose mother is she?
+ROM: Kanojo wa dare no okaasan desu ka?
+JP: かのじょ は だれの おかあさん ですか？
+HINT: かのじょ (kanojo) = she · だれの (dare no) = whose · おかあさん (okaasan) = mother
+
+---
+DIR: EN>JP
+Q: Whose house is that over there?
+ROM: Are wa dare no ie desu ka?
+JP: あれ は だれの いえ ですか？
+HINT: あれ (are) = that (far from both) · different from ここ (koko) which is "this place here"
+
+---
+DIR: EN>JP
+Q: This is my hometown.
+ROM: Koko wa watashi no kokyou desu.
+JP: ここ は わたし の こきょう です。
+HINT: ここ (koko) = here/this place · こきょう (kokyou) = hometown
+
+---
+DIR: EN>JP
+Q: That is my office.
+ROM: Asoko wa watashi no shokuba desu.
+JP: あそこ は わたし の しょくば です。
+HINT: あそこ (asoko) = over there · しょくば (shokuba) = workplace/office
+
+---
+DIR: EN>JP
+Q: Where is the hospital?
+ROM: Byouin wa doko desu ka?
+JP: びょういん は どこ ですか？
+HINT: どこ (doko) = where · びょういん (byouin) = hospital · は (wa) marks the topic
+
+---
+DIR: EN>JP
+Q: Your phone is over there.
+ROM: Anata no keitai wa asoko desu.
+JP: あなた の けいたい は あそこ です。
+HINT: けいたい (keitai) = mobile phone · あそこ (asoko) = over there
+
+---
+DIR: EN>JP
+Q: Whose coffee is this?
+ROM: Kore wa dare no ko-hi- desu ka?
+JP: これ は だれの こーひー ですか？
+HINT: これ (kore) = this (near speaker) · だれの (dare no) = whose
+
+---
+DIR: EN>JP
+Q: Was that person Korean?
+ROM: Ano hito wa kankokujin deshita ka?
+JP: あの ひと は かんこくじん でしたか？
+HINT: かんこくじん (kankokujin) = Korean person · past question → でしたか (deshita ka)
+
+---
+DIR: EN>JP
+Q: This is my grandmother's house.
+ROM: Koko wa watashi no obaachan no ie desu.
+JP: ここ は わたし の おばあちゃん の いえ です。
+HINT: おばあちゃん (obaachan) = grandmother · chaining の の is fine for double possession
+
+---
+DIR: EN>JP
+Q: This is not Takeshi's textbook.
+ROM: Kore wa Takeshi no kyoukasho ja nai desu.
+JP: これ は たけし の きょうかしょ じゃないです。
+HINT: きょうかしょ (kyoukasho) = textbook · present negative → じゃないです (ja nai desu)
+
+---
+DIR: EN>JP
+Q: What is this?
+ROM: Kore wa nan desu ka?
+JP: これ は なん ですか？
+HINT: これ (kore) = this (near speaker) · なん (nan) = what · contrast with あれ (are) = that (far)
+
+---
+DIR: EN>JP
+Q: Whose watch is that over there?
+ROM: Are wa dare no tokei desu ka?
+JP: あれ は だれの とけい ですか？
+HINT: あれ (are) = that (far from both) · とけい (tokei) = watch/clock
+
+---
+DIR: EN>JP
+Q: How old is your dog?
+ROM: Anata no inu wa nansai desu ka?
+JP: あなた の いぬ は なんさい ですか？
+HINT: いぬ (inu) = dog · なんさい (nansai) = how old · さい (sai) = years old (counter for age)
+
+---
+DIR: EN>JP
+Q: Mari was also not a nurse.
+ROM: Mari mo kangoshi ja nakatta desu.
+JP: まり も かんごし じゃなかったです。
+HINT: も (mo) = also/too · past negative casual: じゃなかったです (ja nakatta desu) · かんごし (kangoshi) = nurse
+
+---
+DIR: EN>JP
+Q: Was your father a police officer?
+ROM: Anata no otousan wa keisatsukan deshita ka?
+JP: あなた の おとうさん は けいさつかん でしたか？
+HINT: けいさつかん (keisatsukan) = police officer · past question → でしたか (deshita ka)
+
+---
+DIR: EN>JP
+Q: It was not a Japanese movie.
+ROM: Nihon no eiga ja nakatta desu.
+JP: にほん の えいが じゃなかったです。
+HINT: past negative casual: じゃなかったです (ja nakatta desu) · えいが (eiga) = movie

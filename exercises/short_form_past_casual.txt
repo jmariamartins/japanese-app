@@ -1,0 +1,144 @@
+# TOPIC: Short Form Conjugation — Past & Casual Speech
+# LEVEL: beginner
+
+# ─────────────────────────────────────────
+# Structures covered:
+#   Short form past affirmative: verb → た form (e.g. いった, たべた)
+#   Short form past negative:    verb → なかった (nakatta)
+#   i-adj past short:            おもしろかった, なかった
+#   Quotation: 〜と いっていましたか？ / 〜と いっていました
+#   Casual present/past: drop です/ます entirely
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: Did Masaki say the trip was fun?
+ROM: Masaki wa ryokou wa tanoshikatta to itte imashita ka?
+JP: まさき は りょこう は たのしかった と いっていましたか？
+HINT: i-adj past short: tanoshii → tanoshikatta · quotation: 〜と いっていましたか？(to itte imashita ka?)
+
+---
+DIR: EN>JP
+Q: Was this book interesting? (casual)
+ROM: Kono hon wa omoshirokatta?
+JP: この ほん は おもしろかった？
+HINT: casual past question = short past form + rising intonation · no ですか (desu ka) needed
+
+---
+DIR: EN>JP
+Q: I did not have time. (casual)
+ROM: Jikan ga nakatta.
+JP: じかん が なかった。
+HINT: ない (nai, present negative of ある aru) → past short: なかった (nakatta) · no です (desu) in casual speech
+
+---
+DIR: EN>JP
+Q: Did Maki say she was a Japanese teacher?
+ROM: Maki wa nihongo no sensei datta to itte imashita ka?
+JP: まき は にほんご の せんせい だった と いっていた？
+HINT: noun past short: だ (da) → だった (datta) · casual quotation: と いっていた (to itte ita) — drop ました (mashita) for casual
+
+---
+DIR: EN>JP
+Q: Did Takeshi say there would be an English exam tomorrow?
+ROM: Takeshi wa ashita eigo no shiken ga aru to itte imashita ka?
+JP: たけし は あした えいご の しけん が ある と いっていましたか？
+HINT: ある (aru) = short present affirmative · quotation keeps the tense Takeshi used
+
+---
+DIR: EN>JP
+Q: Takeshi said there won't be an English exam tomorrow.
+ROM: Takeshi wa ashita eigo no shiken ga nai to itte imashita.
+JP: たけし は あした えいご の しけん が ない と いっていました。
+HINT: ない (nai) = short present negative of ある (aru) · ない — not なかった (nakatta) — because Takeshi spoke in present tense
+
+---
+DIR: EN>JP
+Q: But I think there will be a Japanese exam.
+ROM: Demo, nihongo no shiken ga aru to omoimasu.
+JP: でも、にほんご の しけん が ある と おもいます。
+HINT: と おもいます (to omoimasu) = I think · ある (aru) = short form · でも (demo) = but/however
+
+---
+DIR: EN>JP
+Q: Takeshi said you may come as well.
+ROM: Takeshi wa anata mo kite mo ii to itte imashita.
+JP: たけし は あなた も きて もいい と いっていました。
+HINT: te-form permission きてもいい (kite mo ii) embedded in quotation with と いっていました (to itte imashita)
+
+---
+DIR: JP>EN
+Q_ROM: Demo, nihongo no shiken ga aru to omoimasu.
+Q_JP: でも、にほんご の しけん が ある と おもいます。
+A: But I think there will be a Japanese exam.
+HINT: ある (aru) = present affirmative short form · と おもいます (to omoimasu) = I think
+
+---
+DIR: JP>EN
+Q_ROM: Masaki wa ryokou wa tanoshikatta to itte imashita ka?
+Q_JP: まさき は りょこう は たのしかった と いっていましたか？
+A: Did Masaki say the trip was fun?
+HINT: tanoshikatta = past short form of tanoshii (i-adjective)
+
+---
+DIR: JP>EN
+Q_ROM: Wakatta. Issho ni benkyou shimashou!
+Q_JP: わかりました。いっしょに べんきょうしましょう！
+A: I see! Let's study together!
+HINT: 〜ましょう (mashou) = let's … · いっしょに (issho ni) = together
+
+---
+DIR: EN>JP
+Q: Did you study last night? (casual)
+ROM: Sakuban benkyou shita?
+JP: さくばん べんきょうした？
+HINT: benkyou shita = past short of benkyou suru · casual past question = past short form + rising intonation · さくばん (sakuban) = last night — no particle needed
+
+---
+DIR: EN>JP
+Q: No, I did not study last night. (casual)
+ROM: Uun, sakuban benkyou shinakatta.
+JP: ううん、さくばん べんきょうしなかった。
+HINT: shinakatta = past negative short of suru · ううん (uun) = casual no · drop です in casual speech · direct response pair to the question above
+
+---
+DIR: EN>JP
+Q: Where did you go? (casual)
+ROM: Doko ni itta?
+JP: どこに いった？
+HINT: itta = past short of iku · casual past question = past short form + rising intonation · に (ni) = destination
+
+---
+DIR: EN>JP
+Q: When was your birthday? (casual)
+ROM: Anata no tanjoubi wa itsu datta?
+JP: あなたの たんじょうびは いつだった？
+HINT: datta = past short of だ (da, copula) · いつ (itsu) = when · casual past question: noun + datta + rising intonation · drop でしたか entirely
+
+---
+DIR: JP>EN
+Q_ROM: Sakuban benkyou shita?
+Q_JP: さくばん べんきょうした？
+A: Did you study last night? (casual)
+HINT: benkyou shita = past short of suru verb · casual: past short form + rising intonation
+
+---
+DIR: JP>EN
+Q_ROM: Uun, sakuban benkyou shinakatta.
+Q_JP: ううん、さくばん べんきょうしなかった。
+A: No, I did not study last night. (casual)
+HINT: shinakatta = past negative short · ううん = casual no
+
+---
+DIR: JP>EN
+Q_ROM: Doko ni itta?
+Q_JP: どこに いった？
+A: Where did you go? (casual)
+HINT: itta = past short of iku · に marks destination
+
+---
+DIR: JP>EN
+Q_ROM: Anata no tanjoubi wa itsu datta?
+Q_JP: あなたの たんじょうびは いつだった？
+A: When was your birthday? (casual)
+HINT: datta = past short copula · いつ = when

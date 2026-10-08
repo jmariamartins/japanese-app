@@ -1,0 +1,303 @@
+# TOPIC: Comparison — より / のほうが / いちばん
+# LEVEL: beginner
+
+# ─────────────────────────────────────────
+# Three comparison structures:
+#   A のほうが B より [adj]  = A is more [adj] than B
+#   A と B と どっち のほうが [adj] ですか？ = Between A and B, which is more [adj]?
+#   〜の なかで どれ/どこ/だれ が いちばん [adj]？ = Among ~, which/where/who is the most [adj]?
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: Tomoka is taller than Maki.
+ROM: Tomoka no hou ga Maki yori se ga takai desu.
+JP: ともか のほうが まき より せ が たかいです。
+HINT: A のほうが (no hou ga) B より (yori) [adj] · せがたかい (se ga takai) = tall (lit. "height is high") · A comes first
+
+---
+DIR: EN>JP
+Q: Between soccer and baseball, which do you like better?
+ROM: Sakka- to yakyuu to dotchi no hou ga suki desu ka?
+JP: さっかー と やきゅう と どっち のほうが すきですか？
+HINT: comparing two things: A と (to) B と どっち (dotchi) のほうが…？ · すき (suki) = like (na-adjective)
+
+---
+DIR: EN>JP
+Q: Among cities in Japan, which is the most beautiful?
+ROM: Nihon no machi no naka de doko ga ichiban utsukushii desu ka?
+JP: にほん の まち のなかで どこ が いちばん うつくしいですか？
+HINT: superlative: [group] のなかで (no naka de) + どこ/どれ/だれ が いちばん (ichiban) [adj]？ · どこ (doko) for places
+
+---
+DIR: EN>JP
+Q: Among Japanese, Korean and Chinese, which is the most difficult?
+ROM: Nihongo to kankokugo to chuugokugo to dore ga ichiban muzukashii desu ka?
+JP: にほんご と かんこくご と ちゅうごくご と どれ が いちばん むずかしいですか？
+HINT: listing 3+ items: A と B と C と どれ (dore) が いちばん…？ · どれ for things (not places)
+
+---
+DIR: EN>JP
+Q: Because Kyoto is beautiful, I like Kyoto better.
+ROM: Kyouto wa kirei desu kara, Kyouto no hou ga suki desu.
+JP: きょうと は きれいです から、きょうと のほうが すきです。
+HINT: reason (から, kara) + preference (のほうが すき, no hou ga suki) · the "than Tokyo" part is implied, not stated
+
+---
+DIR: JP>EN
+Q_ROM: Sekai no machi no naka de doko ga ichiban suki desu ka?
+Q_JP: せかい の まち のなかで どこ が いちばん すきですか？
+A: Among cities in the world, where do you like the most?
+HINT: せかい (sekai) = world · いちばん (ichiban) = the most · どこ (doko) for places
+
+---
+DIR: JP>EN
+Q_ROM: Tomoka no hou ga Maki yori se ga takai desu.
+Q_JP: ともか のほうが まき より せ が たかいです。
+A: Tomoka is taller than Maki.
+HINT: のほうが (no hou ga) = is more · より (yori) = than · A のほうが B より = A more than B
+
+---
+DIR: JP>EN
+Q_ROM: Sushi to ra-men to tenpura to dore ga ichiban oishii desu ka?
+Q_JP: すし と らーめん と てんぷら と どれ が いちばん おいしいですか？
+A: Between sushi, ramen and tempura, which is the most delicious?
+HINT: three options: と と と どれ (dore) が いちばん…？ · どれ for things
+
+---
+DIR: JP>EN
+Q_ROM: Toukyou to Kyouto to dotchi no hou ga suki desu ka?
+Q_JP: とうきょう と きょうと と どっち のほうが すきですか？
+A: Between Tokyo and Kyoto, which do you like better?
+HINT: two options: A と B と どっち (dotchi) のほうが…？ · どっち = which of the two
+
+---
+DIR: EN>JP
+Q: American ice cream is more delicious than Japanese ice cream.
+ROM: Amerika no aisukuri-mu no hou ga Nihon no yori oishii desu.
+JP: アメリカのアイスクリームのほうが にほんのより おいしいです。
+HINT: のほうが (no hou ga) B より (yori) = A is more than B · にほんの (Nihon no) = Japan's [one] — の (no) replaces アイスクリーム already mentioned
+
+---
+DIR: EN>JP
+Q: The rent in New York is more expensive than the rent in Japan.
+ROM: Nyuu Yo-ku no yachin no hou ga Nihon no yori takai desu.
+JP: ニューヨークのやちんのほうが にほんのより たかいです。
+HINT: やちん (yachin) = rent · にほんの (Nihon no) = Japan's [one] — の (no) replaces やちん · のほうが + より comparison structure
+
+---
+DIR: EN>JP
+Q: My laptop is slower than yours.
+ROM: Watashi no pasokon no hou ga anata no yori osoi desu.
+JP: わたしのパソコンのほうが あなたのより おそいです。
+HINT: あなたの (anata no) = yours — の (no) replaces パソコン (pasokon) already understood · おそい (osoi) = slow (i-adjective)
+
+---
+DIR: JP>EN
+Q_ROM: Amerika no aisukuri-mu no hou ga Nihon no yori oishii desu.
+Q_JP: アメリカのアイスクリームのほうが にほんのより おいしいです。
+A: American ice cream is more delicious than Japanese ice cream.
+HINT: のほうが (no hou ga) = is more · より (yori) = than · にほんの (Nihon no) = Japan's [one]
+
+---
+DIR: JP>EN
+Q_ROM: Watashi no pasokon no hou ga anata no yori osoi desu.
+Q_JP: わたしのパソコンのほうが あなたのより おそいです。
+A: My laptop is slower than yours.
+HINT: あなたの (anata no) = yours · pronoun の replaces パソコン · のほうが + より = comparison
+
+---
+DIR: EN>JP
+Q: Between bus and train, which is cheaper?
+ROM: Basu to densha to dotchi no hou ga yasui desu ka?
+JP: バスと でんしゃと どっちのほうが やすいですか？
+HINT: A と B と どっちのほうが (dotchi no hou ga)...? = between A and B, which is more...? · やすい (yasui) = cheap (i-adj)
+
+---
+DIR: EN>JP
+Q: Between Tom and Kai, which is younger?
+ROM: Tom to Kai to dotchi no hou ga wakai desu ka?
+JP: とむと かいと どっちのほうが わかいですか？
+HINT: わかい (wakai) = young (i-adj) · どっち (dotchi) = which of the two
+
+---
+DIR: EN>JP
+Q: Between Saki and Rin, who is taller?
+ROM: Saki to Rin to dotchi no hou ga se ga takai desu ka?
+JP: さきと りんと どっちのほうが せが たかいですか？
+HINT: せがたかい (se ga takai) = tall (lit. height is high) · が (ga) marks height as the attribute being compared
+
+---
+DIR: EN>JP
+Q: Among classes, Japanese class is the most interesting.
+ROM: Kurasu no naka de nihongo no kurasu ga ichiban omoshiroi desu.
+JP: くらすのなかで にほんごのくらすが いちばん おもしろいです。
+HINT: [group] のなかで (no naka de) + が いちばん (ga ichiban) + [adj] = superlative · いちばん (ichiban) = the most
+
+---
+DIR: EN>JP
+Q: Among animals, lions are the strongest.
+ROM: Doubutsu no naka de raion ga ichiban tsuyoi desu.
+JP: どうぶつのなかで らいおんが いちばん つよいです。
+HINT: どうぶつ (doubutsu) = animals · つよい (tsuyoi) = strong (i-adj) · のなかで + いちばん = superlative
+
+---
+DIR: EN>JP
+Q: Among seasons, I like summer the best.
+ROM: Kisetsu no naka de natsu ga ichiban suki desu.
+JP: きせつのなかで なつが いちばん すきです。
+HINT: きせつ (kisetsu) = seasons · なつ (natsu) = summer · すき (suki) = like (na-adj) with いちばん
+
+---
+DIR: EN>JP
+Q: Among my family, my father is the tallest.
+ROM: Kazoku no naka de otousan ga ichiban se ga takai desu.
+JP: かぞくのなかで おとうさんが いちばん せが たかいです。
+HINT: かぞく (kazoku) = family · のなかで + だれ/が + いちばん · せがたかい (se ga takai) = tall
+
+---
+DIR: EN>JP
+Q: Among your friends, is Takako the youngest?
+ROM: Tomodachi no naka de Takako ga ichiban wakai desu ka?
+JP: ともだちのなかで たかこが いちばん わかいですか？
+HINT: わかい (wakai) = young · superlative question: のなかで + が + いちばん + [adj] + ですか？
+
+---
+DIR: EN>JP
+Q: Taxis are more expensive than trains.
+ROM: Takushi- no hou ga densha yori takai desu.
+JP: タクシーのほうが でんしゃより たかいです。
+HINT: A のほうが (no hou ga) B より (yori) = A is more [adj] than B · たかい (takai) = expensive/high
+
+---
+DIR: EN>JP
+Q: Among orange, apple and strawberry, which is the sweetest?
+ROM: Mikan to ringo to ichigo no naka de dore ga ichiban amai desu ka?
+JP: みかんと りんごと いちごのなかで どれが いちばん あまいですか？
+HINT: 3+ items: A と B と C の なかで どれが いちばん...? · あまい (amai) = sweet · どれ (dore) for things
+
+---
+DIR: EN>JP
+Q: Among cities, which is the largest?
+ROM: Machi no naka de doko ga ichiban ookii desu ka?
+JP: まちのなかで どこが いちばん おおきいですか？
+HINT: どこ (doko) for places · おおきい (ookii) = large/big · contrast with どれ (dore) = for things
+
+---
+DIR: EN>JP
+Q: Maths is not easier than Biology.
+ROM: Suugaku no hou ga seibutsu yori kantan ja nai desu.
+JP: すうがくのほうが せいぶつより かんたんじゃないです。
+HINT: negative comparison: のほうが + より + [adj] じゃないです · かんたん (kantan) = easy (na-adj) · じゃないです = not
+
+---
+DIR: EN>JP
+Q: Among sports, I like baseball the best.
+ROM: Supo-tsu no naka de yakyuu ga ichiban suki desu.
+JP: スポーツのなかで やきゅうが いちばん すきです。
+HINT: スポーツ (supo-tsu) = sports · やきゅう (yakyuu) = baseball · のなかで + いちばん すき = like the most
+
+---
+DIR: EN>JP
+Q: Among Japanese food, what is the spiciest?
+ROM: Nihon no tabemono no naka de nani ga ichiban karai desu ka?
+JP: にほんのたべもののなかで なにが いちばん からいですか？
+HINT: なに (nani) for things (not places) · からい (karai) = spicy · のなかで + いちばん superlative
+
+---
+DIR: JP>EN
+Q_ROM: Takoyaki yori okonomiyaki no hou ga oishii desu.
+Q_JP: たこやきより おこのみやきのほうが おいしいです。
+A: Okonomiyaki is more delicious than takoyaki.
+HINT: B より A のほうが = A is more than B · word order here puts B (takoyaki) first — both orders are correct
+
+---
+DIR: EN>JP
+Q: Among fruits, I don't like apples the most.
+ROM: Kudamono no naka de ringo ga ichiban suki ja nai desu.
+JP: くだもののなかで りんごが いちばん すきじゃないです。
+HINT: negative: いちばん + すきじゃないです (suki ja nai desu) = don't like the most · りんご (ringo) = apple
+
+---
+DIR: JP>EN
+Q_ROM: Ano hon to kono hon to dotchi no hou ga yasukatta desu ka?
+Q_JP: あのほんと このほんと どっちのほうが やすかったですか？
+A: Between that book and this book, which was cheaper?
+HINT: past comparison question · i-adj past: やすかったですか (yasukatta desu ka) · どっち (dotchi) = which
+
+---
+DIR: EN>JP
+Q: Between cats and dogs, which are cuter?
+ROM: Neko to inu to dotchi no hou ga kawaii desu ka?
+JP: ねこ と いぬ と どっち のほうが かわいいですか？
+HINT: どっち (dotchi) = which of the two things · かわいい (kawaii) = cute (i-adj)
+
+---
+DIR: EN>JP
+Q: Among fruits, durian is the stinkiest.
+ROM: Kudamono no naka de dorian ga ichiban kusai desu.
+JP: くだもの のなかで どりあん が いちばん くさいです。
+HINT: くさい (kusai) = stinky (i-adj) · のなかで (no naka de) + が いちばん (ga ichiban) = superlative
+
+---
+DIR: EN>JP
+Q: Among seasons, when do you like the best?
+ROM: Kisetsu no naka de itsu ga ichiban suki desu ka?
+JP: きせつ のなかで いつ が いちばん すきですか？
+HINT: いつ (itsu) = when — here used to ask "which season," not literal clock time · のなかで + が いちばん + ですか？
+
+---
+DIR: EN>JP
+Q: Among LA, Tokyo and Paris, which city do you like the most?
+ROM: Rosanzerusu to Toukyou to Pari no naka de dore ga ichiban suki desu ka?
+JP: ロサンゼルス と とうきょう と パリ のなかで どれ が いちばん すきですか？
+HINT: 3+ items use どれ (dore), not どこ, when asking about preference rather than location · のなかで + どれ が いちばん
+
+---
+DIR: EN>JP
+Q: Among your family, who is the tallest?
+ROM: Kazoku no naka de dare ga ichiban se ga takai desu ka?
+JP: かぞく のなかで だれ が いちばん せが たかいですか？
+HINT: だれ (dare) = who · せがたかい (se ga takai) = tall · interrogative version of the statement "my father is tallest"
+
+---
+DIR: EN>JP
+Q: Among soccer, tennis and baseball, which is the most popular?
+ROM: Sakka- to tenisu to yakyuu no naka de dore ga ichiban ninki desu ka?
+JP: さっかー と てにす と やきゅう のなかで どれ が いちばん にんきですか？
+HINT: にんき (ninki) = popular (na-adj) · どれ (dore) used since these are things, not places
+
+---
+DIR: EN>JP
+Q: Among sports, what is the most popular?
+ROM: Supo-tsu no naka de nani ga ichiban ninki desu ka?
+JP: スポーツ のなかで なに が いちばん にんきですか？
+HINT: なに (nani) = what — open-ended version, without listing specific options · にんき (ninki) = popular
+
+---
+DIR: JP>EN
+Q_ROM: Youko to Miyu to dotchi no hou ga se ga takai desu ka?
+Q_JP: ようこ と みゆ と どっちのほうが せが たかいですか？
+A: Between Yoko and Miyu, who is taller?
+HINT: どっちのほうが (dotchi no hou ga) = which of the two · せがたかい (se ga takai) = tall
+
+---
+DIR: EN>JP
+Q: Between today and tomorrow, which will be hotter?
+ROM: Kyou to ashita to dotchi no hou ga atsui desu ka?
+JP: きょう と あした と どっちのほうが あついですか？
+HINT: あつい (atsui) = hot (weather, i-adj) · comparing time periods rather than people/objects
+
+---
+DIR: EN>JP
+Q: Among seasons, when is the coldest?
+ROM: Kisetsu no naka de itsu ga ichiban samui desu ka?
+JP: きせつ のなかで いつ が いちばん さむいですか？
+HINT: さむい (samui) = cold (weather, i-adj) · いつ (itsu) used here to ask "which season"
+
+---
+DIR: EN>JP
+Q: Between Taro and Momo, who is the better singer?
+ROM: Tarou to Momo to dotchi no hou ga uta ga umai desu ka?
+JP: たろう と もも と どっちのほうが うたが うまいですか？
+HINT: うまい (umai) = skilled at (i-adj) · うたがうまい (uta ga umai) = good at singing · が marks the skill being compared

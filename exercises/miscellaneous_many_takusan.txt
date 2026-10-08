@@ -1,0 +1,101 @@
+# TOPIC: Miscellaneous — Many (たくさん)
+# LEVEL: beginner
+
+# ─────────────────────────────────────────
+# たくさん (takusan) = a lot / many / much
+# Placement: flexible — goes either before OR after the object
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: I ate a lot of takoyaki.
+ROM: Watashi wa takoyaki wo takusan tabemashita.
+JP: わたし は たこやき を たくさん たべました。
+HINT: たくさん (takusan) is flexible — both word orders are correct:
+  わたし は たこやき を たくさん たべました。(object first, then takusan)
+  わたし は たくさん たこやき を たべました。(takusan first, then object)
+
+---
+DIR: EN>JP
+Q: May I buy a lot of books?
+ROM: Hon wo takusan katte mo ii desu ka?
+JP: ほん を たくさん かって もいいですか？
+HINT: kau → katte (te-form) · もいいですか？(mo ii desu ka?) = permission · both word orders correct:
+  ほん を たくさん かって もいいですか？
+  たくさん ほん を かって もいいですか？
+
+---
+DIR: EN>JP
+Q: Please bring a lot of friends.
+ROM: Tomodachi wo takusan tsurete kite kudasai.
+JP: ともだち を たくさん つれてきてください。
+HINT: つれてくる (tsurete kuru) = to bring (a person) · ください (kudasai) = please · both word orders correct:
+  ともだち を たくさん つれてきてください。
+  たくさん ともだち を つれてきてください。
+
+---
+DIR: EN>JP
+Q: Mary knows a lot of people.
+ROM: Mearii wa hito wo takusan shitte imasu.
+JP: めありー は ひと を たくさん しっています。
+HINT: shiru → しっています (shitte imasu) = to know (current state) · both word orders correct:
+  めありー は ひと を たくさん しっています。
+  めありー は たくさん ひと を しっています。
+
+---
+DIR: JP>EN
+Q_ROM: Watashi wa takoyaki wo takusan tabemashita.
+Q_JP: わたし は たこやき を たくさん たべました。
+A: I ate a lot of takoyaki.
+HINT: たくさん (takusan) = a lot · たべました (tabemashita) = ate (past polite)
+
+---
+DIR: JP>EN
+Q_ROM: Hon wo takusan katte mo ii desu ka?
+Q_JP: ほん を たくさん かって もいいですか？
+A: May I buy a lot of books?
+HINT: katte = te-form of kau (to buy) · もいいですか？(mo ii desu ka?) = permission
+
+---
+DIR: JP>EN
+Q_ROM: Mearii wa hito wo takusan shitte imasu.
+Q_JP: めありー は ひと を たくさん しっています。
+A: Mary knows a lot of people.
+HINT: しっています (shitte imasu) = knows (state result of shiru) · を (wo) marks people as object
+
+---
+DIR: EN>JP
+Q: I saw a lot of people at the park.
+ROM: Kouen de hito wo takusan mimashita.
+JP: こうえんで ひとを たくさん みました。
+HINT: Both word orders are correct:
+  こうえんで ひとを たくさん みました。
+  こうえんで たくさん ひとを みました。
+· で (de) = location of action (watching/seeing)
+
+---
+DIR: EN>JP
+Q: I watched a lot of movies on Sunday.
+ROM: Nichiyoubi ni eiga wo takusan mimashita.
+JP: にちようびに えいがを たくさん みました。
+HINT: Both word orders are correct:
+  にちようびに えいがを たくさん みました。
+  にちようびに たくさん えいがを みました。
+· にちようび (nichiyoubi) = Sunday — day of week always takes に (ni)
+
+---
+DIR: EN>JP
+Q: I ate a lot of vegetables.
+ROM: Yasai wo takusan tabemashita.
+JP: やさいを たくさん たべました。
+HINT: Both word orders are correct:
+  やさいを たくさん たべました。
+  たくさん やさいを たべました。
+· やさい (yasai) = vegetables · を (wo) marks the object
+
+---
+DIR: JP>EN
+Q_ROM: Kouen de hito wo takusan mimashita.
+Q_JP: こうえんで ひとを たくさん みました。
+A: I saw a lot of people at the park.
+HINT: たくさん (takusan) = a lot · で (de) = location of action · こうえん (kouen) = park

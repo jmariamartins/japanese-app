@@ -1,0 +1,540 @@
+# TOPIC: Time — All Sections (Dates, Days, Clock, Duration, Frequency, に)
+# LEVEL: beginner
+
+# ─────────────────────────────────────────
+# Covers all sections of the Time Guide:
+#   § 1  Dates & Months
+#   § 2  Days of the Week
+#   § 3  Time (Clock)
+#   § 4  Duration
+#   § 5  Frequency Adverbs
+#   § 6  Time Reference & に
+# ─────────────────────────────────────────
+
+# ══════════════════════════════
+# § 1  DATES & MONTHS
+# ══════════════════════════════
+
+---
+DIR: EN>JP
+Q: My birthday is in March.
+ROM: Tanjoubi wa sangatsu desu.
+JP: たんじょうびは さんがつです。
+HINT: months = number + がつ (gatsu) · さん (san) = 3 · no particle needed with desu
+
+---
+DIR: EN>JP
+Q: Today is August 8th.
+ROM: Kyou wa hachigatsu youka desu.
+JP: きょうは はちがつ ようかです。
+HINT: はちがつ (hachigatsu) = August · ようか (youka) = 8th — irregular, must be memorised
+
+---
+DIR: EN>JP
+Q: The exam is on September 1st.
+ROM: Shiken wa kugatsu tsuitachi desu.
+JP: しけんは くがつ ついたちです。
+HINT: くがつ (kugatsu) = September — irregular reading · ついたち (tsuitachi) = 1st — unique reading
+
+---
+DIR: EN>JP
+Q: The party is on October 20th.
+ROM: Pa-tii wa juugatsu hatsuka desu.
+JP: ぱーてぃーは じゅうがつ はつかです。
+HINT: じゅうがつ (juugatsu) = October · はつか (hatsuka) = 20th — irregular, must be memorised
+
+---
+DIR: EN>JP
+Q: When is your birthday?
+ROM: Tanjoubi wa itsu desu ka?
+JP: たんじょうびは いつですか？
+HINT: いつ (itsu) = when · no particle after いつ (itsu) — it never takes に (ni)
+
+---
+DIR: EN>JP
+Q: I will go to Japan in July.
+ROM: Shichigatsu ni Nihon ni ikimasu.
+JP: しちがつに にほんに いきます。
+HINT: しちがつ (shichigatsu) = July — irregular reading · に (ni) needed after a specific month
+
+---
+DIR: JP>EN
+Q_ROM: Tanjoubi wa shichigatsu nanoka desu.
+Q_JP: たんじょうびは しちがつ なのかです。
+A: My birthday is July 7th.
+HINT: しちがつ (shichigatsu) = July · なのか (nanoka) = 7th — irregular reading
+
+---
+DIR: JP>EN
+Q_ROM: Shiken wa gogatsu mikka desu.
+Q_JP: しけんは ごがつ みっかです。
+A: The exam is May 3rd.
+HINT: ごがつ (gogatsu) = May · みっか (mikka) = 3rd — irregular reading
+
+---
+DIR: JP>EN
+Q_ROM: Kyou wa nigatsu touka desu.
+Q_JP: きょうは にがつ とうかです。
+A: Today is February 10th.
+HINT: にがつ (nigatsu) = February · とうか (touka) = 10th — irregular reading
+
+---
+DIR: JP>EN
+Q_ROM: Juunigatsu wa samui desu.
+Q_JP: じゅうにがつは さむいです。
+A: December is cold.
+HINT: じゅうにがつ (juunigatsu) = December · さむい (samui) = cold (i-adjective)
+
+# ══════════════════════════════
+# § 2  DAYS OF THE WEEK
+# ══════════════════════════════
+
+---
+DIR: EN>JP
+Q: I go to the gym on Monday.
+ROM: Getsuyoubi ni jimu ni ikimasu.
+JP: げつようびに じむに いきます。
+HINT: げつようび (getsuyoubi) = Monday · days of the week ALWAYS take に (ni)
+
+---
+DIR: EN>JP
+Q: The Japanese class is on Wednesday.
+ROM: Nihongo no kurasu wa suiyoubi desu.
+JP: にほんごの くらすは すいようびです。
+HINT: すいようび (suiyoubi) = Wednesday · 水 (water) · は marks the topic
+
+---
+DIR: EN>JP
+Q: The test is on Friday.
+ROM: Shiken wa kinyoubi ni arimasu.
+JP: しけんは きんようびに あります。
+HINT: きんようび (kinyoubi) = Friday · 金 (gold) · に (ni) always needed after days of the week
+
+---
+DIR: EN>JP
+Q: I rest on Sunday.
+ROM: Nichiyoubi ni yasumimasu.
+JP: にちようびに やすみます。
+HINT: にちようび (nichiyoubi) = Sunday · 日 (sun) · に always needed
+
+---
+DIR: EN>JP
+Q: I go shopping on Saturday.
+ROM: Doyoubi ni kaimono wo shimasu.
+JP: どようびに かいものを します。
+HINT: どようび (doyoubi) = Saturday · 土 (earth) · を marks the object of する (suru)
+
+---
+DIR: JP>EN
+Q_ROM: Mokuyoubi ni tomodachi ni aimasu.
+Q_JP: もくようびに ともだちに あいます。
+A: I will meet a friend on Thursday.
+HINT: もくようび (mokuyoubi) = Thursday · 木 (wood) · に after day = time reference
+
+---
+DIR: JP>EN
+Q_ROM: Kayoubi to kinyoubi ni nihongo wo benkyou shimasu.
+Q_JP: かようびと きんようびに にほんごを べんきょうします。
+A: I study Japanese on Tuesdays and Fridays.
+HINT: と (to) = and (listing two days) · に (ni) goes after the last day in the list
+
+---
+DIR: JP>EN
+Q_ROM: Nichiyoubi ni eiga wo mimasu.
+Q_JP: にちようびに えいがを みます。
+A: I watch a movie on Sunday.
+HINT: にちようび (nichiyoubi) = Sunday · を (wo) marks the object (movie)
+
+# ══════════════════════════════
+# § 3  TIME (CLOCK)
+# ══════════════════════════════
+
+---
+DIR: EN>JP
+Q: It is 3 o'clock.
+ROM: Sanji desu.
+JP: さんじです。
+HINT: X時 (X-ji) = X o'clock · no は or が needed for simple time statements
+
+---
+DIR: EN>JP
+Q: Class starts at 9 AM.
+ROM: Gozen kuji ni jugyou ga hajimarimasu.
+JP: ごぜん くじに じゅぎょうが はじまります。
+HINT: ごぜん (gozen) = AM · くじ (kuji) = 9 o'clock · に (ni) always needed after a specific clock time
+
+---
+DIR: EN>JP
+Q: I wake up at 7:30.
+ROM: Shichiji han ni okimasu.
+JP: しちじはんに おきます。
+HINT: はん (han) = half past · しちじはん (shichiji han) = 7:30 · に (ni) always after specific times
+
+---
+DIR: EN>JP
+Q: The meeting is at 2:15 PM.
+ROM: Gogo niji juugofun ni kaigi ga arimasu.
+JP: ごご にじ じゅうごふんに かいぎが あります。
+HINT: ごご (gogo) = PM · じゅうごふん (juugofun) = 15 minutes · に (ni) after the full time expression
+
+---
+DIR: EN>JP
+Q: I have lunch at 12:30.
+ROM: Juuniji han ni hirugohan wo tabemasu.
+JP: じゅうにじはんに ひるごはんを たべます。
+HINT: じゅうにじ (juuniji) = 12 o'clock · はん (han) = half · 12:30 = じゅうにじはん
+
+---
+DIR: EN>JP
+Q: At what time does the restaurant open?
+ROM: Sono resutoran wa nanji ni akimasu ka?
+JP: そのれすとらんは なんじに あきますか？
+HINT: なんじ (nanji) = what time? · に (ni) always needed with specific times, including questions
+
+---
+DIR: JP>EN
+Q_ROM: Gozen rokuji ni okimasu.
+Q_JP: ごぜん ろくじに おきます。
+A: I wake up at 6 AM.
+HINT: ごぜん (gozen) = AM · ろくじ (rokuji) = 6 o'clock
+
+---
+DIR: JP>EN
+Q_ROM: Juuji sanjuppun ni tomodachi ni aimasu.
+Q_JP: じゅうじ さんじゅっぷんに ともだちに あいます。
+A: I will meet a friend at 10:30.
+HINT: さんじゅっぷん (sanjuppun) = 30 minutes · ends in 0 so uses っぷん (ppun)
+
+---
+DIR: JP>EN
+Q_ROM: Eiga wa nanji ni hajimarimasu ka?
+Q_JP: えいがは なんじに はじまりますか？
+A: What time does the movie start?
+HINT: なんじ (nanji) = what time · はじまる (hajimaru) = to start/begin
+
+---
+DIR: JP>EN
+Q_ROM: Gogo juuichiji ni nemasu.
+Q_JP: ごご じゅういちじに ねます。
+A: I go to sleep at 11 PM.
+HINT: ごご (gogo) = PM · じゅういちじ (juuichiji) = 11 o'clock
+
+# ══════════════════════════════
+# § 4  DURATION
+# ══════════════════════════════
+
+---
+DIR: EN>JP
+Q: I studied for three hours.
+ROM: Sanjikan benkyou shimashita.
+JP: さんじかん べんきょうしました。
+HINT: duration has NO particle · さんじかん (sanjikan) = 3 hours · sits directly before the verb
+
+---
+DIR: EN>JP
+Q: I waited for about ten minutes.
+ROM: Juppun gurai machimashita.
+JP: じゅっぷんぐらい まちました。
+HINT: じゅっぷん (juppun) = 10 minutes · ends in 0 → っぷん (ppun) · ぐらい (gurai) = about/approximately
+
+---
+DIR: EN>JP
+Q: I lived in Japan for two years.
+ROM: Ninenkan Nihon ni sunde imashita.
+JP: にねんかん にほんに すんでいました。
+HINT: にねんかん (ninenkan) = 2 years · 間 (kan) added for duration · に (ni) marks location (Japan)
+
+---
+DIR: EN>JP
+Q: I ran for 30 minutes.
+ROM: Sanjuppun hashirimashita.
+JP: さんじゅっぷん はしりました。
+HINT: さんじゅっぷん (sanjuppun) = 30 minutes · ends in 0 → っぷん (ppun) · no particle before verb
+
+---
+DIR: EN>JP
+Q: I slept for about eight hours.
+ROM: Hachijikan gurai nemashita.
+JP: はちじかんぐらい ねました。
+HINT: はちじかん (hachijikan) = 8 hours · ぐらい (gurai) after the duration = approximately
+
+---
+DIR: EN>JP
+Q: I studied Japanese for six months.
+ROM: Rokkagetsu kan nihongo wo benkyou shimashita.
+JP: ろっかげつかん にほんごを べんきょうしました。
+HINT: ろっかげつ (rokkagetsu) = 6 months · irregular: 6 months uses ろっ not ろく · 間 (kan) adds duration meaning
+
+---
+DIR: JP>EN
+Q_ROM: Mearii wa Takeshi o ichijikan machimashita.
+Q_JP: メアリーは たけしを いちじかん まちました。
+A: Mary waited for Takeshi for one hour.
+HINT: いちじかん (ichijikan) = 1 hour · duration without particle · を (wo) marks who she waited for
+
+---
+DIR: JP>EN
+Q_ROM: Nijikan gurai eiga wo mimashita.
+Q_JP: にじかんぐらい えいがを みました。
+A: I watched a movie for about 2 hours.
+HINT: にじかんぐらい (nijikan gurai) = about 2 hours · ぐらい (gurai) gives approximate meaning
+
+# ══════════════════════════════
+# § 5  FREQUENCY ADVERBS
+# ══════════════════════════════
+
+---
+DIR: EN>JP
+Q: I always eat breakfast.
+ROM: Watashi wa itsumo asagohan wo tabemasu.
+JP: わたしは いつも あさごはんを たべます。
+HINT: いつも (itsumo) = always · frequency adverb comes right after は (wa) · affirmative ending
+
+---
+DIR: EN>JP
+Q: I usually go to bed at 10.
+ROM: Watashi wa taitei juuji ni nemasu.
+JP: わたしは たいてい じゅうじに ねます。
+HINT: たいてい (taitei) = usually · comes right after は (wa) · clock time still needs に (ni)
+
+---
+DIR: EN>JP
+Q: Takeshi often watches movies.
+ROM: Takeshi wa yoku eiga wo mimasu.
+JP: たけしは よく えいがを みます。
+HINT: よく (yoku) = often · comes right after は (wa) · affirmative ending
+
+---
+DIR: EN>JP
+Q: I sometimes eat sushi.
+ROM: Watashi wa tokidoki sushi wo tabemasu.
+JP: わたしは ときどき すしを たべます。
+HINT: ときどき (tokidoki) = sometimes · 時々 in kanji · affirmative ending
+
+---
+DIR: EN>JP
+Q: I don't watch TV at all.
+ROM: Watashi wa zenzen terebi wo mimasen.
+JP: わたしは ぜんぜん てれびを みません。
+HINT: ぜんぜん (zenzen) = not at all · ALWAYS needs negative ending ません (masen) — never use with ます
+
+---
+DIR: EN>JP
+Q: Mary does not drink coffee very much.
+ROM: Mearii wa amari ko-hi- wo nomimasen.
+JP: めありーは あまり こうひーを のみません。
+HINT: あまり (amari) = not very much / not often · ALWAYS needs negative ending ません (masen)
+
+---
+DIR: EN>JP
+Q: I go to school every day.
+ROM: Mainichi gakkou ni ikimasu.
+JP: まいにち がっこうに いきます。
+HINT: まいにち (mainichi) = every day · 毎 (mai) prefix = every · no に after まいにち (it's a regular interval)
+
+---
+DIR: EN>JP
+Q: I go to the gym three times a week.
+ROM: Shuu ni sankai jimu ni ikimasu.
+JP: しゅうに さんかい じむに いきます。
+HINT: しゅうに (shuu ni) + さんかい (san kai) = 3 times a week · 回 (kai) = counter for times
+
+---
+DIR: EN>JP
+Q: I visit my parents twice a month.
+ROM: Tsuki ni nikai ryoushin ni aimasu.
+JP: つきに にかい りょうしんに あいます。
+HINT: つきに (tsuki ni) + にかい (ni kai) = 2 times a month · りょうしん (ryoushin) = parents
+
+---
+DIR: EN>JP
+Q: I occasionally eat at that restaurant.
+ROM: Watashi wa tamani sono resutoran de tabemasu.
+JP: わたしは たまに そのれすとらんで たべます。
+HINT: たまに (tamani) = occasionally/once in a while · affirmative ending · で (de) = location of eating
+
+---
+DIR: JP>EN
+Q_ROM: Watashi wa itsumo juuji ni nemasu.
+Q_JP: わたしは いつも じゅうじに ねます。
+A: I always go to sleep at 10.
+HINT: いつも (itsumo) = always · comes right after は (wa)
+
+---
+DIR: JP>EN
+Q_ROM: Watashi wa zenzen sakana wo tabemasen.
+Q_JP: わたしは ぜんぜん さかなを たべません。
+A: I don't eat fish at all.
+HINT: ぜんぜん (zenzen) = not at all · negative ending ません (masen) is mandatory
+
+---
+DIR: JP>EN
+Q_ROM: Nen ni ikkai Nihon ni ikimasu.
+Q_JP: ねんに いっかい にほんに いきます。
+A: I go to Japan once a year.
+HINT: ねんに (nen ni) = per year · いっかい (ikkai) = once · 1 + 回 = いっかい (irregular)
+
+# ══════════════════════════════
+# § 6  TIME REFERENCE & に
+# ══════════════════════════════
+
+---
+DIR: EN>JP
+Q: I go to the library on Sunday. (always needs に)
+ROM: Nichiyoubi ni toshokan ni ikimasu.
+JP: にちようびに としょかんに いきます。
+HINT: day of the week → ALWAYS needs に (ni) · two に here: one for the day, one for destination
+
+---
+DIR: EN>JP
+Q: There is a test in September. (always needs に)
+ROM: Kugatsu ni shiken ga arimasu.
+JP: くがつに しけんが あります。
+HINT: specific month → ALWAYS needs に (ni) · numerical time expressions always take に
+
+---
+DIR: EN>JP
+Q: I study every day. (never takes に)
+ROM: Mainichi benkyou shimasu.
+JP: まいにち べんきょうします。
+HINT: まいにち (mainichi) = regular interval → NEVER takes に · just use the word alone
+
+---
+DIR: EN>JP
+Q: I will go to the park today. (never takes に)
+ROM: Kyou kouen ni ikimasu.
+JP: きょう こうえんに いきます。
+HINT: きょう (kyou) = relative to present moment → NEVER takes に · に here marks the destination (park), not the time
+
+---
+DIR: EN>JP
+Q: I jog in the morning. (に optional)
+ROM: Asa (ni) jogingu shimasu.
+JP: あさ（に）ジョギングします。
+HINT: あさ (asa) = part of a day → に (ni) is OPTIONAL · both あさに and あさ alone are correct
+
+---
+DIR: EN>JP
+Q: I rest on the weekend. (に optional)
+ROM: Shuumatsu (ni) yasumimasu.
+JP: しゅうまつ（に）やすみます。
+HINT: しゅうまつ (shuumatsu) = weekend → に (ni) is OPTIONAL · style/preference choice
+
+---
+DIR: EN>JP
+Q: The party is at 7 PM. (always needs に)
+ROM: Gogo shichiji ni pa-tii ga arimasu.
+JP: ごご しちじに ぱーてぃーが あります。
+HINT: specific clock time → ALWAYS needs に (ni) · ごご (gogo) = PM
+
+---
+DIR: EN>JP
+Q: I will go tomorrow. (never takes に)
+ROM: Ashita ikimasu.
+JP: あした いきます。
+HINT: あした (ashita) = tomorrow → relative to present moment → NEVER takes に
+
+---
+DIR: JP>EN
+Q_ROM: Kinyoubi ni nihongo no kurasu ga arimasu.
+Q_JP: きんようびに にほんごの くらすが あります。
+A: There is Japanese class on Friday.
+HINT: きんようび (kinyoubi) = Friday · day of week → always に (ni)
+
+---
+DIR: JP>EN
+Q_ROM: Mainichi sanpo shimasu.
+Q_JP: まいにち さんぽします。
+A: I take a walk every day.
+HINT: まいにち (mainichi) = every day · regular interval → no に needed
+
+---
+DIR: JP>EN
+Q_ROM: Yoru (ni) hon wo yomimasu.
+Q_JP: よる（に）ほんを よみます。
+A: I read a book at night.
+HINT: よる (yoru) = at night · part of a day → に (ni) is optional
+
+---
+DIR: JP>EN
+Q_ROM: Itsu toshokan ni ikimasu ka?
+Q_JP: いつ としょかんに いきますか？
+A: When do you go to the library?
+HINT: いつ (itsu) = when · the word for "when" NEVER takes に · に after としょかん (toshokan) marks destination
+
+---
+DIR: EN>JP
+Q: When is the exam?
+ROM: Tesuto wa itsu desu ka?
+JP: テスト は いつ ですか？
+HINT: いつ (itsu) = when · NEVER takes に (ni) as a particle
+
+---
+DIR: EN>JP
+Q: The exam is on April 20th.
+ROM: Tesuto wa shigatsu hatsuka desu.
+JP: テスト は しがつ はつか です。
+HINT: しがつ (shigatsu) = April — irregular reading · はつか (hatsuka) = 20th — irregular reading, no extra にち (nichi) needed
+
+---
+DIR: EN>JP
+Q: When is Valentine's Day?
+ROM: Barentain de- wa itsu desu ka?
+JP: バレンタインデー は いつ ですか？
+HINT: いつ (itsu) = when · NEVER takes に (ni)
+
+---
+DIR: EN>JP
+Q: Valentine's Day is February 14th.
+ROM: Nigatsu juuyokka desu.
+JP: にがつ じゅうよっか です。
+HINT: にがつ (nigatsu) = February · じゅうよっか (juuyokka) = 14th — irregular reading · NOT juuyon nichi
+
+---
+DIR: EN>JP
+Q: What time is it now?
+ROM: Ima nanji desu ka?
+JP: いま なんじ ですか？
+HINT: いま (ima) = now · なんじ (nanji) = what time · with です alone no に (ni) needed — に is needed when a time precedes an action verb
+
+---
+DIR: EN>JP
+Q: It's 1:40 PM now.
+ROM: Ima gogo ichiji yonjuppun desu.
+JP: いま ごご いちじ よんじゅっぷん です。
+HINT: ごご (gogo) = PM · いちじ (ichiji) = 1 o'clock · よんじゅっぷん (yonjuppun) = 40 min · ends in 0 → っぷん (ppun), not ふん (fun)
+
+---
+DIR: EN>JP
+Q: Mary waited for Takeshi for about an hour.
+ROM: Mearii wa Takeshi wo ichijikan gurai machimashita.
+JP: めありーは たけしを いちじかんぐらい まちました。
+HINT: を (wo) marks who you waited for · いちじかんぐらい (ichijikan gurai) = about one hour · ぐらい (gurai) = approximately · no particle before duration
+
+---
+DIR: EN>JP
+Q: Takeshi ran for 30 minutes at the park.
+ROM: Takeshi wa kouen de sanjuppunkan hashirimashita.
+JP: たけしは こうえんで さんじゅっぷん はしりました。
+HINT: で (de) = location of action · さんじゅっぷん (sanjuppun) = 30 minutes · ends in 0 → っぷん (ppun) · duration sits directly before the verb, no particle
+
+---
+DIR: EN>JP
+Q: I slept for about 8 hours last night.
+ROM: Watashi wa sakuban hachijikan gurai nemashita.
+JP: わたしは さくばん はちじかんぐらい ねました。
+HINT: さくばん (sakuban) = last night — no に needed (relative time word) · はちじかんぐらい (hachijikan gurai) = about 8 hours
+
+---
+DIR: EN>JP
+Q: I read the book for about 4 hours on Saturday.
+ROM: Doyoubi ni hon wo yojikan gurai yomimashita.
+JP: どようびに ほんを よじかんぐらい よみました。
+HINT: どようび (doyoubi) = Saturday — day of week ALWAYS takes に (ni) · よじかんぐらい (yojikan gurai) = about 4 hours
+
+---
+DIR: JP>EN
+Q_ROM: Mearii wa Takeshi wo ichijikan gurai machimashita.
+Q_JP: めありーは たけしを いちじかんぐらい まちました。
+A: Mary waited for Takeshi for about an hour.
+HINT: ぐらい (gurai) = approximately · を (wo) marks the person waited for · いちじかん (ichijikan) = one hour

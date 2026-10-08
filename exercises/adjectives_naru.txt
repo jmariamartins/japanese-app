@@ -1,0 +1,224 @@
+# TOPIC: Adjectives + なる — Becoming / Changing State
+# LEVEL: beginner
+
+# ─────────────────────────────────────────
+# Structure — changing an adjective into "become [adj]":
+#   i-adjective:  drop い → add く + なる
+#     e.g. たかい → たかく なる = become tall / get taller
+#   na-adjective: drop な → add に + なる
+#     e.g. じょうずな → じょうずに なる = become good at
+#   noun:         noun + に + なる
+#     e.g. けいさつかん に なる = become a police officer
+# Past: なる → なりました / なった
+# Want to become: なりたい / なりたかった
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: I intend to clean up because my room got dirty.
+ROM: Watashi no heya wa kitanaku natta kara, souji suru tsumori desu.
+JP: わたし の へや は きたなく なった から、そうじする つもりです。
+HINT: きたない (kitanai, i-adj) → drop い → きたなく (kitanaku) + なった (natta, past short) · から (kara) = because
+
+---
+DIR: EN>JP
+Q: My daughter became 9 years old and got taller.
+ROM: Watashi no musume wa 9-sai ni natte, se ga takaku narimashita.
+JP: わたし の むすめ は ９さい に なって、せ が たかく なりました。
+HINT: age uses に (ni) なる (naru) · i-adj: たかい (takai) → たかく (takaku) なりました (narimashita) · two changes linked with て-form
+
+---
+DIR: EN>JP
+Q: I wanted to be a police officer.
+ROM: Keisatsukan ni naritakatta desu.
+JP: けいさつかん に なりたかったです。
+HINT: noun + に (ni) なる (naru) = become [occupation] · want to become: なりたい (naritai) → past: なりたかった (naritakatta)
+
+---
+DIR: EN>JP
+Q: Because I spoke Japanese every day, I became good at Japanese.
+ROM: Mainichi nihongo wo hanashita kara, nihongo ga jouzu ni narimashita.
+JP: まいにち にほんご を はなした から、にほんご が じょうずに なりました。
+HINT: na-adjective: じょうず (jouzu) → じょうずに (jouzu ni) なる · が (ga) marks the skill you became good at · past short + から (kara)
+
+---
+DIR: EN>JP
+Q: Mami's hair got shorter.
+ROM: Mami wa kami ga mijikaku narimashita.
+JP: まみ は かみ が みじかく なりました。
+HINT: みじかい (mijikai, i-adj) → みじかく (mijikaku) なる · が (ga) marks what changed (her hair)
+
+---
+DIR: EN>JP
+Q: Did it become busy at work?
+ROM: Shigoto wa isogashiku narimashita ka?
+JP: しごと は いそがしく なりましたか？
+HINT: いそがしい (isogashii, i-adj) → いそがしく (isogashiku) なる · past question: なりましたか？ (narimashita ka?)
+
+---
+DIR: EN>JP
+Q: It will become colder than today.
+ROM: Ashita wa kyou yori mo samuku narimasu.
+JP: あした は きょう よりも さむく なります。
+HINT: さむい (samui) → さむく (samuku) なる · より(も) (yori mo) = than · future: なります (narimasu)
+
+---
+DIR: JP>EN
+Q_ROM: Watashi no musume wa 9-sai ni natte, se ga takaku narimashita.
+Q_JP: わたし の むすめ は ９さい に なって、せ が たかく なりました。
+A: My daughter became 9 years old and got taller.
+HINT: に なって (ni natte, te-form of になる) links two changes · たかく なりました (takaku narimashita) = became tall
+
+---
+DIR: JP>EN
+Q_ROM: Mainichi nihongo wo hanashita kara, nihongo ga jouzu ni narimashita.
+Q_JP: まいにち にほんご を はなした から、にほんご が じょうずに なりました。
+A: Because I spoke Japanese every day, I became good at Japanese.
+HINT: じょうずに なる (jouzu ni naru) = become good at (na-adj + に + なる)
+
+---
+DIR: JP>EN
+Q_ROM: Keisatsukan ni naritakatta desu.
+Q_JP: けいさつかん に なりたかったです。
+A: I wanted to be a police officer.
+HINT: に なりたかった (ni naritakatta) = wanted to become · past of なりたい (naritai, want to become)
+
+---
+DIR: EN>JP
+Q: Studying Japanese became fun.
+ROM: Nihongo no benkyou ga tanoshiku narimashita.
+JP: にほんごのべんきょうが たのしく なりました。
+HINT: tanoshii (i-adj) → drop い → たのしく (tanoshiku) + なりました (narimashita)
+
+---
+DIR: EN>JP
+Q: I came to like studying Japanese.
+ROM: Nihongo no benkyou ga suki ni narimashita.
+JP: にほんごのべんきょうが すきに なりました。
+HINT: すき (suki) = na-adjective · na-adj + に + なる · すきに なる = come to like / become fond of
+
+---
+DIR: EN>JP
+Q: Takeshi will be 20 years old tomorrow.
+ROM: Takeshi wa ashita nijussai ni narimasu.
+JP: たけしは あした にじゅっさいに なります。
+HINT: age uses に なる (ni naru) · にじゅっさい (nijussai) = 20 years old · あした (ashita) = tomorrow — no particle needed
+
+---
+DIR: EN>JP
+Q: Mary has become better at Japanese than before.
+ROM: Mearii wa mae yori nihongo ga jouzu ni narimashita.
+JP: めありーは まえより にほんごが じょうずに なりました。
+HINT: na-adj: jouzu → じょうずに なる · まえより (mae yori) = than before · が marks the skill
+
+---
+DIR: EN>JP
+Q: My room became clean.
+ROM: Heya ga kirei ni narimashita.
+JP: へやが きれいに なりました。
+HINT: きれい (kirei) = clean (na-adjective) · きれいに なる = become clean · no の before heya needed (subject not possessive here)
+
+---
+DIR: EN>JP
+Q: How old did you turn yesterday?
+ROM: Kinou nansai ni narimashita ka?
+JP: きのう なんさいに なりましたか？
+HINT: なんさい (nansai) = how old · に (ni) + なる = become [age] · きのう (kinou) takes no particle
+
+---
+DIR: EN>JP
+Q: The rent got more expensive than last year.
+ROM: Yachin ga kyonen yori takaku narimashita.
+JP: やちんが きょねんより たかく なりました。
+HINT: takai (i-adj) → たかく (takaku) + なりました · きょねん (kyonen) = last year · より (yori) = than
+
+---
+DIR: EN>JP
+Q: Kaori became better at cooking than before.
+ROM: Kaori wa mae yori ryouri suru no ga jouzu ni narimashita.
+JP: かおりは まえより りょうりするのが じょうずに なりました。
+HINT: ryouri suru の が = nominalised verb (cooking) · じょうずに なる · まえより (mae yori) = than before
+
+---
+DIR: EN>JP
+Q: It became colder.
+ROM: Samuku narimashita.
+JP: さむく なりました。
+HINT: samui (i-adj) → drop い → さむく (samuku) + なりました · simple past change — no comparison
+
+---
+DIR: EN>JP
+Q: Take became taller.
+ROM: Take wa se ga takaku narimashita.
+JP: たけは せが たかく なりました。
+HINT: takai (i-adj) → たかく (takaku) + なりました · せが たかく なる = become taller (height became high)
+
+---
+DIR: EN>JP
+Q: Did it become busier than last month?
+ROM: Sengetsu yori isogashiku narimashita ka?
+JP: せんげつより いそがしく なりましたか？
+HINT: isogashii (i-adj) → いそがしく (isogashiku) + なりましたか · せんげつ (sengetsu) = last month · より (yori) = than
+
+---
+DIR: EN>JP
+Q: I became sleepy because I did not sleep last night.
+ROM: Sakuban nenakatta kara nemutaku narimashita.
+JP: さくばん ねなかった から ねむたく なりました。
+HINT: ねる → ねなかった (nenakatta) = past negative short · ねむたい (nemutai, i-adj, sleepy) → ねむたく + なりました · から after past short form
+
+---
+DIR: EN>JP
+Q: I will become a teacher in April.
+ROM: Shigatsu ni sensei ni narimasu.
+JP: しがつに せんせいに なります。
+HINT: しがつ (shigatsu) = April — specific month always takes に · noun + に + なる = become [occupation]
+
+---
+DIR: EN>JP
+Q: Sato did not become taller.
+ROM: Sato wa se ga takaku narimasen deshita.
+JP: さとは せが たかく なりませんでした。
+HINT: takaku + なりませんでした (narimasen deshita) = past negative · せがたかく (se ga takaku) = taller
+
+---
+DIR: EN>JP
+Q: Did Takeshi become a teacher?
+ROM: Takeshi wa sensei ni narimashita ka?
+JP: たけしは せんせいに なりましたか？
+HINT: noun + に + なりましたか (narimashita ka) = did [subject] become [noun]?
+
+---
+DIR: EN>JP
+Q: Takeshi did not become a teacher.
+ROM: Takeshi wa sensei ni narimasen deshita.
+JP: たけしは せんせいに なりませんでした。
+HINT: noun + に + なりませんでした (narimasen deshita) = did not become [noun] · past negative
+
+---
+DIR: JP>EN
+Q_ROM: Kami ga mijikaku narimashita ka?
+Q_JP: かみが みじかく なりましたか？
+A: Did your hair become shorter?
+HINT: mijikai (i-adj) → みじかく (mijikaku) + なりましたか · かみ (kami) = hair
+
+---
+DIR: JP>EN
+Q_ROM: Shigoto wa isogashiku narimasu.
+Q_JP: しごとは いそがしく なります。
+A: My work will become busy.
+HINT: isogashii (i-adj) → いそがしく (isogashiku) + なります (future) · しごと (shigoto) = work
+
+---
+DIR: JP>EN
+Q_ROM: Nihongo no benkyou ga tanoshiku narimashita.
+Q_JP: にほんごのべんきょうが たのしく なりました。
+A: Studying Japanese became fun.
+HINT: たのしく なりました (tanoshiku narimashita) = became fun · tanoshii → drop い → tanoshiku
+
+---
+DIR: JP>EN
+Q_ROM: Yachin ga kyonen yori takaku narimashita.
+Q_JP: やちんが きょねんより たかく なりました。
+A: The rent got more expensive than last year.
+HINT: たかく なりました = became expensive · より (yori) = than · やちん (yachin) = rent

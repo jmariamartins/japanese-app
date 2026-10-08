@@ -1,0 +1,227 @@
+# TOPIC: Miscellaneous — Experience (〜たことがあります / ありません)
+# LEVEL: beginner
+
+# ─────────────────────────────────────────
+# Structure:
+#   [verb PAST SHORT form] + ことがあります (koto ga arimasu)   = I have (ever) done…
+#   [verb PAST SHORT form] + ことがありません (koto ga arimasen) = I have never done…
+#   [verb PAST SHORT form] + ことがありますか？                  = Have you ever…?
+# This expresses LIFE EXPERIENCE — something done at least once before.
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: I have been late for a class.
+ROM: Jugyou ni chikoku shita koto ga arimasu.
+JP: じゅぎょう に ちこくした ことがあります。
+HINT: ちこくする (chikoku suru) → past short: ちこくした (chikoku shita) + ことがあります (koto ga arimasu) · に (ni) marks the class you were late to
+
+---
+DIR: EN>JP
+Q: I have been to Hokkaido.
+ROM: Hokkaidou ni itta koto ga arimasu.
+JP: ほっかいどう に いった ことがあります。
+HINT: いく (iku) → past short: いった (itta) + ことがあります (koto ga arimasu) · に (ni) = destination
+
+---
+DIR: EN>JP
+Q: I have never eaten natto.
+ROM: Nattou wo tabeta koto ga arimasen.
+JP: なっとう を たべた ことがありません。
+HINT: たべる (taberu) → past short: たべた (tabeta) + ことがありません (koto ga arimasen, never) · を (wo) = object
+
+---
+DIR: EN>JP
+Q: Have you ever met a celebrity?
+ROM: Yuumeijin ni atta koto ga arimasu ka?
+JP: ゆうめいじん に あった ことがありますか？
+HINT: あう (au) → past short: あった (atta) + ことがありますか？ (koto ga arimasu ka?) · に (ni) = person you meet
+
+---
+DIR: EN>JP
+Q: Makito has never written a letter.
+ROM: Makito wa tegami wo kaita koto ga arimasen.
+JP: まきと は てがみ を かいた ことがありません。
+HINT: かく (kaku) → past short: かいた (kaita) + ことがありません (koto ga arimasen) · を (wo) = object (letter)
+
+---
+DIR: EN>JP
+Q: I have never been to Okinawa.
+ROM: Okinawa ni itta koto ga arimasen.
+JP: おきなわ に いった ことがありません。
+HINT: same pattern as Hokkaido · ありません (arimasen) for "never"
+
+---
+DIR: EN>JP
+Q: Have you ever eaten sushi?
+ROM: Sushi wo tabeta koto ga arimasu ka?
+JP: すし を たべた ことがありますか？
+HINT: たべた (tabeta) ことがありますか？ (koto ga arimasu ka?) = have you ever eaten…?
+
+---
+DIR: JP>EN
+Q_ROM: Jugyou ni chikoku shita koto ga arimasu.
+Q_JP: じゅぎょう に ちこくした ことがあります。
+A: I have been late for a class.
+HINT: ちこくした (chikoku shita) = past short of ちこくする · ことがあります (koto ga arimasu) = have had the experience of
+
+---
+DIR: JP>EN
+Q_ROM: Nattou wo tabeta koto ga arimasen.
+Q_JP: なっとう を たべた ことがありません。
+A: I have never eaten natto.
+HINT: ことがありません (koto ga arimasen) = have never · past short form still used even for negatives
+
+---
+DIR: JP>EN
+Q_ROM: Yuumeijin ni atta koto ga arimasu ka?
+Q_JP: ゆうめいじん に あった ことがありますか？
+A: Have you ever met a celebrity?
+HINT: ゆうめいじん (yuumeijin) = celebrity/famous person · あった (atta) = past short of あう (au)
+
+---
+DIR: EN>JP
+Q: Have you ever been to Europe?
+ROM: Yo-roppa ni itta koto ga arimasu ka?
+JP: ヨーロッパに いったことがありますか？
+HINT: iku → past short: いった (itta) + ことがありますか (koto ga arimasu ka) · に (ni) = destination
+
+---
+DIR: EN>JP
+Q: Takeshi has never been absent from class.
+ROM: Takeshi wa jugyou wo yasunda koto ga arimasen.
+JP: たけしは じゅぎょうを やすんだことがありません。
+HINT: yasumu (u-verb) → past short: やすんだ (yasunda) · を (wo) marks the class · ことがありません = never
+
+---
+DIR: EN>JP
+Q: I have never been late for class.
+ROM: Jugyou ni chikoku shita koto ga arimasen.
+JP: じゅぎょうに ちこくしたことがありません。
+HINT: chikoku suru → past short: ちこくした (chikoku shita) + ことがありません · に (ni) marks the class · contrast with existing affirmative version
+
+---
+DIR: EN>JP
+Q: Have you ever climbed Mt. Fuji?
+ROM: Fujisan ni nobotta koto ga arimasu ka?
+JP: ふじさんに のぼったことがありますか？
+HINT: noboru (u-verb) → past short: のぼった (nobotta) · に (ni) = destination (mountain) · ことがありますか = have you ever?
+
+---
+DIR: EN>JP
+Q: Miko has lived in France.
+ROM: Miko wa Furansu ni sunda koto ga arimasu.
+JP: みこは フランスに すんだことがあります。
+HINT: sumu (u-verb) → past short: すんだ (sunda) + ことがあります · に (ni) = location of living
+
+---
+DIR: EN>JP
+Q: Have you ever ridden a subway in Tokyo?
+ROM: Toukyou de chikatetsu ni notta koto ga arimasu ka?
+JP: とうきょうで ちかてつに のったことがありますか？
+HINT: noru → past short: のった (notta) · で (de) = location/city · に (ni) = vehicle boarded · ちかてつ (chikatetsu) = subway
+
+---
+DIR: EN>JP
+Q: I have never taught English.
+ROM: Eigo wo oshieta koto ga arimasen.
+JP: えいごを おしえたことがありません。
+HINT: oshieru (ru-verb) → past short: おしえた (oshieta) + ことがありません · を (wo) = object (English)
+
+---
+DIR: EN>JP
+Q: I have never had a fight with my mother.
+ROM: Okaasan to kenka shita koto ga arimasen.
+JP: おかあさんと けんかしたことがありません。
+HINT: kenka suru → past short: けんかした (kenka shita) · と (to) = with (person) · ことがありません = never
+
+---
+DIR: EN>JP
+Q: Have you ever owned a pet?
+ROM: Petto wo katta koto ga arimasu ka?
+JP: ペットを かったことがありますか？
+HINT: kau here means "to keep/raise" (a pet) as well as "to buy" · past short: かった (katta) · を marks the pet
+
+---
+DIR: EN>JP
+Q: I have owned a dog.
+ROM: Inu wo katta koto ga arimasu.
+JP: いぬを かったことがあります。
+HINT: same kau pattern — "to have kept/raised" · いぬ (inu) = dog · ことがあります = have had the experience
+
+---
+DIR: EN>JP
+Q: Have you ever slept on the train?
+ROM: Densha de neta koto ga arimasu ka?
+JP: でんしゃで ねたことがありますか？
+HINT: neru → past short: ねた (neta) · で (de) = on/in (location of action) · ことがありますか = have you ever?
+
+---
+DIR: EN>JP
+Q: Where overseas have you ever been?
+ROM: Kaigai wa doko ni itta koto ga arimasu ka?
+JP: かいがいは どこに いったことがありますか？
+HINT: かいがい (kaigai) = overseas · は (wa) sets the topic · どこに (doko ni) = where (destination) + ことがありますか
+
+---
+DIR: EN>JP
+Q: I have never been to Kyoto.
+ROM: Kyouto ni itta koto ga arimasen.
+JP: きょうとに いったことがありません。
+HINT: iku → past short: いった (itta) + ことがありません (never) · に (ni) = destination
+
+---
+DIR: EN>JP
+Q: About Japanese food, what have you eaten?
+ROM: Nihonshoku wa nani wo tabeta koto ga arimasu ka?
+JP: にほんしょくは なにを たべたことがありますか？
+HINT: にほんしょく (nihonshoku) = Japanese food · は (wa) sets the topic · なにを (nani wo) = what (object)
+
+---
+DIR: EN>JP
+Q: I have never met Mami.
+ROM: Mami ni atta koto ga arimasen.
+JP: まみに あったことがありません。
+HINT: au → past short: あった (atta) · に (ni) marks the person met · ことがありません = never
+
+---
+DIR: EN>JP
+Q: Have you ever talked to Takeshi?
+ROM: Takeshi to hanashita koto ga arimasu ka?
+JP: たけしと はなしたことがありますか？
+HINT: hanasu (u-verb) → past short: はなした (hanashita) · と (to) = with (person talked to)
+
+---
+DIR: EN>JP
+Q: Have you ever eaten takoyaki in Osaka?
+ROM: Oosaka de takoyaki wo tabeta koto ga arimasu ka?
+JP: おおさかで たこやきを たべたことがありますか？
+HINT: taberu → past short: たべた (tabeta) · で (de) = location (city) · を (wo) marks the food
+
+---
+DIR: JP>EN
+Q_ROM: Nihon no ongaku wo kiita koto ga arimasu.
+Q_JP: にほんのおんがくを きいたことがあります。
+A: I have listened to Japanese music.
+HINT: kiku → past short: きいた (kiita) · を (wo) = object · ことがあります = have had the experience
+
+---
+DIR: JP>EN
+Q_ROM: Furansugo wo benkyou shita koto ga arimasen.
+Q_JP: フランスごを べんきょうしたことがありません。
+A: I have never studied French.
+HINT: benkyou suru → past short: べんきょうした (benkyou shita) · ことがありません = never · フランスご (furansugo) = French
+
+---
+DIR: JP>EN
+Q_ROM: Toukyou de chikatetsu ni notta koto ga arimasu ka?
+Q_JP: とうきょうで ちかてつに のったことがありますか？
+A: Have you ever ridden a subway in Tokyo?
+HINT: のった (notta) = past short of のる (noru, to ride) · ちかてつ (chikatetsu) = subway
+
+---
+DIR: JP>EN
+Q_ROM: Oosaka de takoyaki wo tabeta koto ga arimasu ka?
+Q_JP: おおさかで たこやきを たべたことがありますか？
+A: Have you ever eaten takoyaki in Osaka?
+HINT: たべた (tabeta) = past short of たべる · ことがありますか = have you ever?

@@ -1,0 +1,202 @@
+# TOPIC: Guess and Prediction (〜でしょう)
+# LEVEL: beginner
+
+# ─────────────────────────────────────────
+# でしょう (deshou) = probably / I think… / I suppose…
+#   Expresses conjecture — the speaker's best guess.
+# Structure:
+#   noun/na-adj: [plain form] + でしょう
+#   i-adjective: [short form] + でしょう
+#   verb: [short/dictionary form] + でしょう
+# Negative: [negative short form] + でしょう
+# Question: でしょうか？ = Do you think…? / I wonder if…?
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: Maki is probably 23 years old.
+ROM: Maki wa 23-sai deshou.
+JP: まき は ２３さい でしょう。
+HINT: noun + でしょう (deshou) · no だ (da) before でしょう
+
+---
+DIR: EN>JP
+Q: Masato is probably not famous.
+ROM: Masato wa yuumei ja nai deshou.
+JP: まさと は ゆうめいじゃない でしょう。
+HINT: na-adj negative: ゆうめいじゃない (yuumei ja nai) + でしょう (deshou) · negative conjecture
+
+---
+DIR: EN>JP
+Q: Sachi probably likes to sing.
+ROM: Sachi wa utau no ga suki deshou.
+JP: さち は うたう のが すき でしょう。
+HINT: うたう (utau) のが (no ga) すき (suki) = likes singing (nominalised verb) · すき + でしょう (deshou)
+
+---
+DIR: EN>JP
+Q: Maho probably has a little sister.
+ROM: Maho wa imouto ga iru deshou.
+JP: まほ は いもうと が いる でしょう。
+HINT: いる (iru) = verb short form (to exist/have, living things) · + でしょう (deshou)
+
+---
+DIR: EN>JP
+Q: It will probably not be sunny tomorrow.
+ROM: Ashita wa harenai deshou.
+JP: あした は はれない でしょう。
+HINT: はれる (hareru) → negative short: はれない (harenai) + でしょう (deshou) · はれる = to be sunny/clear up
+
+---
+DIR: EN>JP
+Q: Taka's mother is probably short.
+ROM: Taka no okaasan wa se ga hikui deshou.
+JP: たか の おかあさん は せ が ひくい でしょう。
+HINT: i-adj: ひくい (hikui) + でしょう (deshou) · せがひくい (se ga hikui) = short in height
+
+---
+DIR: EN>JP
+Q: Do you think it will be cold tomorrow?
+ROM: Ashita wa samui deshou ka?
+JP: あした は さむい でしょうか？
+HINT: でしょうか？ (deshou ka?) = wondering / seeking opinion · さむい (samui) + でしょうか？
+
+---
+DIR: EN>JP
+Q: It will probably rain tomorrow.
+ROM: Ashita wa ame ga furu deshou.
+JP: あした は あめ が ふる でしょう。
+HINT: ふる (furu, dictionary form) + でしょう (deshou) · あめがふる (ame ga furu) = it rains (lit. rain falls)
+
+---
+DIR: JP>EN
+Q_ROM: Masato wa yuumei ja nai deshou.
+Q_JP: まさと は ゆうめいじゃない でしょう。
+A: Masato is probably not famous.
+HINT: じゃない (ja nai) = negative short of な-adjective · + でしょう (deshou) = probably not
+
+---
+DIR: JP>EN
+Q_ROM: Ashita wa harenai deshou.
+Q_JP: あした は はれない でしょう。
+A: It will probably not be sunny tomorrow.
+HINT: はれない (harenai) = negative short of はれる (hareru, to clear up/be sunny)
+
+---
+DIR: JP>EN
+Q_ROM: Maho wa imouto ga iru deshou.
+Q_JP: まほ は いもうと が いる でしょう。
+A: Maho probably has a little sister.
+HINT: いる (iru) = to exist/have (living beings) · いもうと (imouto) = little sister
+
+---
+DIR: EN>JP
+Q: It will probably not rain tomorrow.
+ROM: Ashita ame ga furanai deshou.
+JP: あした あめが ふらないでしょう。
+HINT: furu → negative short: ふらない (furanai) + でしょう (deshou) · negative conjecture · contrast with existing affirmative version
+
+---
+DIR: EN>JP
+Q: It is probably cold in Hokkaido.
+ROM: Hokkaidou wa samui deshou.
+JP: ほっかいどうは さむいでしょう。
+HINT: i-adj + でしょう (deshou) directly · さむい (samui) = cold · present conjecture
+
+---
+DIR: EN>JP
+Q: It is probably not cold in Hokkaido.
+ROM: Hokkaidou wa samukunai deshou.
+JP: ほっかいどうは さむくないでしょう。
+HINT: i-adj negative short: さむい → さむくない (samukunai) + でしょう · contrast with affirmative above
+
+---
+DIR: EN>JP
+Q: Ken probably likes fish.
+ROM: Ken wa sakana ga suki deshou.
+JP: けんは さかなが すきでしょう。
+HINT: suki (na-adj) + でしょう · no だ (da) before でしょう · が (ga) marks what is liked
+
+---
+DIR: EN>JP
+Q: Ken probably does not like fish.
+ROM: Ken wa sakana ga suki ja nai deshou.
+JP: けんは さかなが すきじゃないでしょう。
+HINT: na-adj negative short: すきじゃない (suki ja nai) + でしょう · negative conjecture
+
+---
+DIR: EN>JP
+Q: Mako is probably a student.
+ROM: Mako wa gakusei deshou.
+JP: まこは がくせいでしょう。
+HINT: noun + でしょう · no だ before でしょう · simple noun conjecture
+
+---
+DIR: EN>JP
+Q: Mako is probably not a student.
+ROM: Mako wa gakusei ja nai deshou.
+JP: まこは がくせいじゃないでしょう。
+HINT: noun negative short: がくせいじゃない (gakusei ja nai) + でしょう · negative conjecture of noun predicate
+
+---
+DIR: EN>JP
+Q: Which would you say is more difficult, Japanese or Korean?
+ROM: Nihongo to kankokugo to dotchi no hou ga muzukashii deshou ka?
+JP: にほんごと かんこくごと どっちのほうが むずかしいでしょうか？
+HINT: でしょうか？(deshou ka?) = seeking opinion · combining comparison (のほうが) with conjecture (でしょう) · どっち (dotchi) = which of the two
+
+---
+DIR: EN>JP
+Q: I think Takeshi would be interested in it.
+ROM: Takeshi wa kyoumi ga aru darou to omoimasu.
+JP: たけしは きょうみが ある だろうと おもいます。
+HINT: だろう (darou) = plain/casual form of でしょう · きょうみがある (kyoumi ga aru) = to have interest · + と思います = I think (conjecture inside quotation)
+
+---
+DIR: EN>JP
+Q: John, you understand Chinese, right?
+ROM: John wa chuugokugo ga wakaru desho?
+JP: ジョンは ちゅうごくごが わかるでしょ？
+HINT: でしょ？(desho?) = seeking confirmation from the listener "right?" / "I assume" · softer than でしょう · わかる (wakaru) = to understand
+
+---
+DIR: EN>JP
+Q: Mia will probably not eat lunch.
+ROM: Mia wa ohirugohan wo tabenai deshou.
+JP: みあは おひるごはんを たべないでしょう。
+HINT: tabenai = negative short of taberu + でしょう · を (wo) = object · negative conjecture about someone else
+
+---
+DIR: EN>JP
+Q: This cake is probably very expensive.
+ROM: Kono ke-ki wa totemo takai deshou.
+JP: このけーきは とても たかいでしょう。
+HINT: i-adj + でしょう · とても (totemo) = very · degree adverb goes before the adjective as usual
+
+---
+DIR: EN>JP
+Q: That person is probably famous.
+ROM: Ano hito wa yuumei deshou.
+JP: あのひとは ゆうめいでしょう。
+HINT: ゆうめい (yuumei) = famous (na-adj) · na-adj + でしょう · no な before でしょう
+
+---
+DIR: EN>JP
+Q: Taka is probably 25 years old.
+ROM: Taka wa nijuugosai deshou.
+JP: たかは にじゅうごさいでしょう。
+HINT: age (noun/number) + でしょう · にじゅうごさい (nijuugosai) = 25 years old · contrast with existing "Maki is probably 23"
+
+---
+DIR: JP>EN
+Q_ROM: Hokkaidou wa samukunai deshou.
+Q_JP: ほっかいどうは さむくないでしょう。
+A: It is probably not cold in Hokkaido.
+HINT: さむくない (samukunai) = i-adj negative short · でしょう = probably
+
+---
+DIR: JP>EN
+Q_ROM: Takeshi wa kyoumi ga aru darou to omoimasu.
+Q_JP: たけしは きょうみが ある だろうと おもいます。
+A: I think Takeshi would be interested in it.
+HINT: だろう (darou) = plain form of でしょう · きょうみがある = to have interest · と思います embeds the conjecture

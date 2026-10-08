@@ -1,0 +1,114 @@
+# TOPIC: Special Predicate Form — 〜たり〜たりする (Doing things like X and Y)
+# LEVEL: beginner
+
+# ─────────────────────────────────────────
+# Structure:
+#   [verb past short] + り + [verb past short] + り + する/します
+#   = did things like X and Y (non-exhaustive list of activities)
+# The たり (tari) form = past short form + り
+#   e.g. いった → いったり (itta → ittari)
+#        たべた → たべたり (tabeta → tabetari)
+# The final する (suru) carries the tense:
+#   〜したりしました = did X and Y etc.
+#   〜したりしたいです = want to do X and Y etc.
+#   〜したりするつもりです = intend to do X and Y etc.
+#   〜したりしてはいけません = must not do X or Y etc.
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: I went shopping, met Mary and did other things yesterday.
+ROM: Kinou kaimono ni ittari Mearii ni attari shimashita.
+JP: きのう かいもの に いったり めありー に あったり しました。
+HINT: iku → past: いった (itta) → いったり (ittari) · au → past: あった (atta) → あったり (attari) · close with しました (shimashita)
+
+---
+DIR: EN>JP
+Q: I want to go to a cafe, watch a movie and do other things this weekend.
+ROM: Kafe ni ittari eiga wo mitari shitai desu.
+JP: かふぇ に いったり えいが を みたり したいです。
+HINT: iku → いったり (ittari), miru → みたり (mitari) · close with したいです (shitai desu, want to do)
+
+---
+DIR: EN>JP
+Q: I intend to do homework, read a book and other things tonight.
+ROM: Konban shukudai wo shitari hon wo yondari suru tsumori desu.
+JP: こんばん しゅくだい を したり ほん を よんだり する つもりです。
+HINT: suru → したり (shitari), yomu → よんだり (yondari) · close with する つもりです (suru tsumori desu, intend to do)
+
+---
+DIR: EN>JP
+Q: You must not sleep, listen to music and other such things here.
+ROM: Koko de netari ongaku wo kiitari shite wa ikemasen.
+JP: ここ で ねたり おんがく を きいたり して はいけません。
+HINT: neru → ねたり (netari), kiku → きいたり (kiitari) · close with して はいけません (shite wa ikemasen, must not)
+
+---
+DIR: JP>EN
+Q_ROM: Kinou kaimono ni ittari Mearii ni attari shimashita.
+Q_JP: きのう かいもの に いったり めありー に あったり しました。
+A: Yesterday I went shopping, met Mary and did other things like that.
+HINT: たり〜たりした (tari~tari shita) = did various things including X and Y · the list is non-exhaustive
+
+---
+DIR: JP>EN
+Q_ROM: Kafe ni ittari eiga wo mitari shitai desu.
+Q_JP: かふぇ に いったり えいが を みたり したいです。
+A: I want to go to a cafe, watch a movie and things like that.
+HINT: したいです (shitai desu) = want to do · the たり (tari) form signals a non-exhaustive list
+
+---
+DIR: JP>EN
+Q_ROM: Konban shukudai wo shitari hon wo yondari suru tsumori desu.
+Q_JP: こんばん しゅくだい を したり ほん を よんだり する つもりです。
+A: Tonight I intend to do homework, read a book and other things.
+HINT: する つもりです (suru tsumori desu) = intend to do · こんばん (konban) = tonight
+
+---
+DIR: EN>JP
+Q: I will read a book, cook and other things.
+ROM: Hon o yondari, ryouri shitari shimasu.
+JP: ほん を よんだり、りょうり したり します。
+HINT: yomu → past: よんだ (yonda) → よんだり (yondari) · suru → した (shita) → したり (shitari) · close with plain non-past します (shimasu) — new tense not yet in this set (past/want/intend/prohibition already covered)
+
+---
+DIR: EN>JP
+Q: I went to a cafe, studied and other things.
+ROM: Kafe ni ittari, benkyou shitari shimashita.
+JP: かふぇ に いったり、べんきょう したり しました。
+HINT: iku → past: いった (itta) → いったり (ittari) · suru → した → したり · close with past しました (shimashita)
+
+---
+DIR: EN>JP
+Q: I want to play tennis, eat pizza and other things.
+ROM: Tenisu o shitari, piza o tabetari shitai desu.
+JP: テニス を したり、ピザ を たべたり したいです。
+HINT: suru → したり (shitari) · taberu → past: たべた (tabeta) → たべたり (tabetari) · close with したいです (shitai desu, want to do)
+
+---
+DIR: EN>JP
+Q: I studied, talked with friends and other things over the weekend.
+ROM: Shuumatsu, benkyou shitari, tomodachi to hanashitari shimashita.
+JP: しゅうまつ、べんきょう したり、ともだち と はなしたり しました。
+HINT: suru → したり · hanasu → past: はなした (hanashita) → はなしたり (hanashitari) · しゅうまつ (shuumatsu) = weekend · close with past しました
+
+---
+DIR: EN>JP
+Q: I will do laundry, watch a movie and other things tomorrow.
+ROM: Ashita, sentaku shitari, eiga o mitari shimasu.
+JP: あした、せんたく したり、えいが を みたり します。
+HINT: suru → したり · miru → past: みた (mita) → みたり (mitari) · close with plain non-past します (shimasu) — future/habitual tense
+
+---
+DIR: EN>JP
+Q: I want to go to a cafe, go shopping and other things.
+ROM: Kafe ni ittari, kaimono ni ittari shitai desu.
+JP: かふぇ に いったり、かいもの に いったり したいです。
+HINT: iku → いったり (ittari), used twice with different destinations (cafe, then shopping) · close with したいです (shitai desu)
+
+---
+DIR: EN>JP
+Q: You must not smoke, drink beer and other such things in the classroom.
+ROM: Kyoushitsu de, tabako o suttari, bi-ru o nonde wa ikemasen.
+JP: きょうしつ で、たばこ を すったり、びーる を のんでは いけません。
+HINT: suu → past: すった (sutta) → すったり (suttari) · here the second verb のむ (nomu) shifts straight to て-form + はいけません (nonde wa ikemasen) rather than のんだり + する — a compressed variant of the construction still meaning "must not do X, Y, etc." · きょうしつ (kyoushitsu) = classroom

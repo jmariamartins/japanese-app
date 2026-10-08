@@ -1,0 +1,254 @@
+# TOPIC: Location — There is a… (あります / います)
+# LEVEL: beginner
+
+---
+DIR: EN>JP
+Q: There are flowers on the table.
+ROM: Tsukue no ue ni hana ga arimasu.
+JP: つくえ の うえ に はな が あります。
+HINT: non-living thing → あります (arimasu) · つくえ (tsukue) = table · うえ (ue) = on top · に (ni) = location particle
+
+---
+DIR: EN>JP
+Q: There is a bag under the table.
+ROM: Tsukue no shita ni kaban ga arimasu.
+JP: つくえ の した に かばん が あります。
+HINT: non-living thing → あります (arimasu) · した (shita) = under/below · かばん (kaban) = bag
+
+---
+DIR: EN>JP
+Q: There is a cat on the sofa.
+ROM: Sofa no ue ni neko ga imasu.
+JP: そふぁ の うえ に ねこ が います。
+HINT: living thing (animal) → います (imasu) · ねこ (neko) = cat · うえ (ue) = on top
+
+---
+DIR: EN>JP
+Q: There is a family picture next to the painting.
+ROM: E no tonari ni kazoku shashin ga arimasu.
+JP: え の となり に かぞくしゃしん が あります。
+HINT: non-living thing → あります (arimasu) · となり (tonari) = next to/adjacent · え (e) = painting/picture
+
+---
+DIR: EN>JP
+Q: There is a woman in front of the window.
+ROM: Mado no mae ni josei ga imasu.
+JP: まど の まえ に じょせい が います。
+HINT: living thing (person) → います (imasu) · まど (mado) = window · まえ (mae) = in front of
+
+---
+DIR: JP>EN
+Q_ROM: Tsukue no ue ni hana ga arimasu.
+Q_JP: つくえ の うえ に はな が あります。
+A: There are flowers on the table.
+HINT: あります (arimasu) = for non-living things · うえ に (ue ni) = on top of
+
+---
+DIR: JP>EN
+Q_ROM: Sofa no ue ni neko ga imasu.
+Q_JP: そふぁ の うえ に ねこ が います。
+A: There is a cat on the sofa.
+HINT: います (imasu) = for living things · ねこ (neko) = cat
+
+---
+DIR: JP>EN
+Q_ROM: Mado no mae ni josei ga imasu.
+Q_JP: まど の まえ に じょせい が います。
+A: There is a woman in front of the window.
+HINT: います (imasu) = for people · まえ に (mae ni) = in front of · まど (mado) = window
+
+---
+DIR: EN>JP
+Q: There is a McDonald's over there.
+ROM: Asoko ni Makudonarudo ga arimasu.
+JP: あそこに マクドナルドが あります。
+HINT: non-living thing → あります (arimasu) · あそこ (asoko) = over there · に (ni) = location of existence
+
+---
+DIR: EN>JP
+Q: I have a fridge at home.
+ROM: Ie ni reizouko ga arimasu.
+JP: いえに れいぞうこが あります。
+HINT: ownership uses same pattern · に (ni) = where you keep it · れいぞうこ (reizouko) = fridge
+
+---
+DIR: EN>JP
+Q: I have a test on Tuesday.
+ROM: Kayoubi ni tesuto ga arimasu.
+JP: かようびに テストが あります。
+HINT: event + specific day → day ALWAYS takes に (ni) · かようび (kayoubi) = Tuesday
+
+---
+DIR: EN>JP
+Q: I have a test at school.
+ROM: Gakkou de tesuto ga arimasu.
+JP: がっこうで テストが あります。
+HINT: event location → で (de) NOT に · key distinction: place of existence = に / place of event = で
+
+---
+DIR: EN>JP
+Q: Do you have time?
+ROM: Jikan ga arimasu ka?
+JP: じかんが ありますか？
+HINT: no location needed — jikan (time) is abstract · が (ga) marks what you have/is there · no に needed
+
+---
+DIR: EN>JP
+Q: I have a party on Friday.
+ROM: Kinyoubi ni pa-ti- ga arimasu.
+JP: きんようびに パーティーが あります。
+HINT: きんようび (kinyoubi) = Friday · day of week ALWAYS takes に (ni)
+
+---
+DIR: EN>JP
+Q: There is a cat over there.
+ROM: Asoko ni neko ga imasu.
+JP: あそこに ねこが います。
+HINT: living being (animal) → います (imasu) · あそこ (asoko) = over there
+
+---
+DIR: EN>JP
+Q: The bank is next to the library.
+ROM: Ginkou wa toshokan no tonari desu.
+JP: ぎんこうは としょかんの となりです。
+HINT: は (wa) marks the topic (what you're describing) · となり (tonari) = directly adjacent · desu version = more formal
+
+---
+DIR: EN>JP
+Q: The umbrella is under the table.
+ROM: Kasa wa tsukue no shita desu.
+JP: かさは つくえのした です。
+HINT: かさ (kasa) = umbrella · した (shita) = under/below · は + position + です = stating location of a topic
+
+---
+DIR: EN>JP
+Q: The car is between the bike and the house.
+ROM: Kuruma wa jitensha to ie no aida desu.
+JP: くるまは じてんしゃとうちのあいだです。
+HINT: くるま (kuruma) = car · A と B のあいだ (aida) = between A and B · と (to) links the two landmarks
+
+---
+DIR: EN>JP
+Q: I will wait in front of the cafe.
+ROM: Kafe no mae de machimasu.
+JP: カフェのまえで まちます。
+HINT: action verb (wait) → で (de) NOT に · まえ (mae) = in front of · まちます (machimasu) = to wait
+
+---
+DIR: EN>JP
+Q: My house is behind the school.
+ROM: Watashi no ie wa gakkou no ushiro desu.
+JP: わたしのいえは がっこうのうしろです。
+HINT: うしろ (ushiro) = behind · は + landmark + の + position + です = stating where something is
+
+---
+DIR: EN>JP
+Q: I will wait inside the station.
+ROM: Eki no naka de machimasu.
+JP: えきのなかで まちます。
+HINT: action → で (de) · なか (naka) = inside · えき (eki) = station · same pattern as "in front of the cafe"
+
+---
+DIR: EN>JP
+Q: Your phone is under the sofa.
+ROM: Sofa no shita ni anata no denwa ga arimasu.
+JP: ソファのしたに あなたのでんわが あります。
+HINT: non-living thing → あります (arimasu) · した (shita) = under · に (ni) = location of existence (not action)
+
+---
+DIR: EN>JP
+Q: There is a cat by the door.
+ROM: Doa no soba ni neko ga imasu.
+JP: ドアのそばに ねこが います。
+HINT: living being → います (imasu) NOT あります · そば (soba) = near/by · ドア (doa) = door
+
+---
+DIR: EN>JP
+Q: Ken has a pool at home.
+ROM: Ken wa ie ni pu-ru ga arimasu.
+JP: けんは いえに プールが あります。
+HINT: non-living thing → あります (arimasu) · に (ni) = where it exists · same pattern as "I have a fridge at home"
+
+---
+DIR: EN>JP
+Q: I have a younger sister.
+ROM: Imouto ga imasu.
+JP: いもうとが います。
+HINT: family member (person) → います (imasu) · が (ga) marks who exists · no location needed here
+
+---
+DIR: EN>JP
+Q: I don't have a dictionary.
+ROM: Jisho ga arimasen.
+JP: じしょが ありません。
+HINT: non-living object → ありません (arimasen) = negative of あります · じしょ (jisho) = dictionary
+
+---
+DIR: EN>JP
+Q: Do you have siblings?
+ROM: Kyoudai ga imasu ka?
+JP: きょうだいが いますか？
+HINT: people → います (imasu) · きょうだい (kyoudai) = siblings · が (ga) marks the subject
+
+---
+DIR: EN>JP
+Q: I don't have a younger brother.
+ROM: Otouto ga imasen.
+JP: おとうとが いません。
+HINT: person → いません (imasen) = negative of います · おとうと (otouto) = younger brother
+
+---
+DIR: EN>JP
+Q: My house is next to the school.
+ROM: Watashi no ie wa gakkou no yoko desu.
+JP: わたしのいえは がっこうのよこです。
+HINT: よこ (yoko) = beside/to the side · compare となり (tonari) = immediately adjacent · both mean next to but となり implies direct contact
+
+---
+DIR: EN>JP
+Q: I don't have Japanese class tomorrow.
+ROM: Ashita nihongo no kurasu ga arimasen.
+JP: あした にほんごのクラスが ありません。
+HINT: event negative → ありません (arimasen) · あした (ashita) = tomorrow — NEVER takes に (relative time word)
+
+---
+DIR: EN>JP
+Q: Where will you have the birthday party?
+ROM: Doko de tanjoubi pa-ti- ga arimasu ka?
+JP: どこで たんじょうびパーティーが ありますか？
+HINT: event location question → で (de) NOT に · どこで (doko de) = where (for actions/events)
+
+---
+DIR: EN>JP
+Q: Do you have any plans tomorrow?
+ROM: Ashita yotei ga arimasu ka?
+JP: あした よていが ありますか？
+HINT: よてい (yotei) = plans/schedule · あした (ashita) takes no particle · が (ga) marks what exists
+
+---
+DIR: JP>EN
+Q_ROM: Ginkou wa toshokan no tonari desu.
+Q_JP: ぎんこうは としょかんの となりです。
+A: The bank is next to the library.
+HINT: は + position + です = stating location · となり (tonari) = immediately adjacent
+
+---
+DIR: JP>EN
+Q_ROM: Kafe no mae de machimasu.
+Q_JP: カフェのまえで まちます。
+A: I will wait in front of the cafe.
+HINT: で (de) before action verb · まえ (mae) = in front of
+
+---
+DIR: JP>EN
+Q_ROM: Imouto ga imasu.
+Q_JP: いもうとが います。
+A: I have a younger sister.
+HINT: います (imasu) for people · います expresses existence of a person — "have" in English
+
+---
+DIR: JP>EN
+Q_ROM: Ashita yotei ga arimasu ka?
+Q_JP: あした よていが ありますか？
+A: Do you have any plans tomorrow?
+HINT: よてい (yotei) = plans · あります (arimasu) for abstract things like plans/events

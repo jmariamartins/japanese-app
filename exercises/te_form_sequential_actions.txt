@@ -1,0 +1,88 @@
+# TOPIC: Te-form — Sequential Actions (verb て + verb)
+# LEVEL: beginner
+
+# ─────────────────────────────────────────
+# Structure: [verb1 te-form] + [verb2 polite form]
+#   = did X, and then did Y / will do X and then Y
+# Key rules:
+#   · Verb1 te-form = the FIRST action (happens before verb2)
+#   · Verb2 sets the TENSE for the whole sentence
+#   · You can chain more than two verbs
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: I studied and went to a cafe yesterday.
+ROM: Kinou, benkyou shite, kafe ni ikimashita.
+JP: きのう、べんきょうして、かふぇに いきました。
+HINT: sequential: verb1 (te-form) happens first · benkyou shite → then → ikimashita · tense set by final verb
+
+---
+DIR: EN>JP
+Q: I will study at the library and return home.
+ROM: Toshokan de benkyou shite, ie ni kaerimasu.
+JP: としょかんで べんきょうして、いえに かえります。
+HINT: benkyou shite = first action · kaerimasu = second action (sets the tense) · で (de) = location of studying
+
+---
+DIR: EN>JP
+Q: I will borrow the notebook and photocopy it.
+ROM: No-to wo karite, kopi- shimasu.
+JP: ノートを かりて、コピーします。
+HINT: kariru (ru-verb) → karite · sequential: borrow first, then copy · を (wo) marks the object
+
+---
+DIR: EN>JP
+Q: I got up at six and studied.
+ROM: Rokuji ni okite, benkyou shimashita.
+JP: ろくじに おきて、べんきょうしました。
+HINT: okiru (ru-verb) → okite · ろくじ (rokuji) = 6 o'clock — clock time always takes に (ni)
+
+---
+DIR: EN>JP
+Q: I went to the post office and returned home.
+ROM: Yuubinkyoku ni itte, ie ni kaerimashita.
+JP: ゆうびんきょくに いって、いえに かえりました。
+HINT: iku (u-verb) → itte · ゆうびんきょく (yuubinkyoku) = post office · two に: one destination, one destination
+
+---
+DIR: EN>JP
+Q: I will take a nap and study Spanish.
+ROM: Hirune shite, supeingo wo benkyou shimasu.
+JP: ひるねして、すぺいんごを べんきょうします。
+HINT: hirune suru (suru verb) → hirune shite · すぺいんご (supeingo) = Spanish · future tense set by final verb
+
+---
+DIR: EN>JP
+Q: I met Takeshi and watched a movie.
+ROM: Takeshi to atte, eiga wo mimashita.
+JP: たけしと あって、えいがを みました。
+HINT: au (u-verb, ends in -u) → atte · と (to) = with/together · えいが (eiga) = movie — not えいご (eigo = English)
+
+---
+DIR: EN>JP
+Q: I will buy a cake and go to your house.
+ROM: Ke-ki wo katte, anata no ie ni ikimasu.
+JP: けーきを かって、あなたのいえに いきます。
+HINT: kau (u-verb, ends in -u) → katte · sequential: buy first, then go · に (ni) = destination
+
+---
+DIR: JP>EN
+Q_ROM: Ashita, eiga wo mite, Mearii to benkyou shimasu.
+Q_JP: あした、えいがを みて、めありーと べんきょうします。
+A: Tomorrow I will watch a movie and study with Mary.
+HINT: mite = te-form of miru · sequential: watch first, then study · tense = shimasu (future/present)
+
+---
+DIR: JP>EN
+Q_ROM: Yuubinkyoku ni itte, ie ni kaerimashita.
+Q_JP: ゆうびんきょくに いって、いえに かえりました。
+A: I went to the post office and returned home.
+HINT: itte = te-form of iku · かえりました (kaerimashita) = past polite of kaeru
+
+---
+DIR: JP>EN
+Q_ROM: No-to wo karite, kopi- shimasu.
+Q_JP: ノートを かりて、コピーします。
+A: I will borrow the notebook and photocopy it.
+HINT: karite = te-form of kariru (to borrow) · te-form verb always comes first in the sequence

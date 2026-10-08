@@ -1,0 +1,185 @@
+# TOPIC: I Intend To… — 〜つもりです / 〜つもりでした
+# LEVEL: beginner
+
+# ─────────────────────────────────────────
+# Structure:
+#   [verb dictionary form] + つもりです     = I intend to / I plan to (present)
+#   [verb negative short]  + つもりです     = I intend NOT to
+#   [verb dictionary form] + つもりでした   = I was planning to (past intention)
+#   [verb negative short]  + つもりでした   = I was planning NOT to (past intention)
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: I am planning to go to Osaka during summer break.
+ROM: Natsuyasumi ni Oosaka ni iku tsumori desu.
+JP: なつやすみ に おおさか に いく つもりです。
+HINT: dictionary form (iku) + つもりです (tsumori desu) · に (ni) marks both time (vacation) and destination (Osaka)
+
+---
+DIR: EN>JP
+Q: Masami was planning not to get married.
+ROM: Masami wa kekkon shinai tsumori deshita.
+JP: まさみ は けっこんしない つもりでした。
+HINT: negative short form (kekkon shinai) + つもりでした (tsumori deshita) · past intention → でした (deshita)
+
+---
+DIR: EN>JP
+Q: Is Tomomi planning to work in Japan?
+ROM: Tomomi wa Nihon de hataraku tsumori desu ka?
+JP: ともみ は にほん で はたらく つもりですか？
+HINT: はたらく (hataraku, dictionary form) + つもりですか？ (tsumori desu ka?) · で (de) = location of work action
+
+---
+DIR: EN>JP
+Q: Ken and I were planning to go to a cafe to study.
+ROM: Watashi to Ken wa kafe ni benkyou shi ni iku tsumori deshita.
+JP: わたし と けん は かふぇ に べんきょうし に いく つもりでした。
+HINT: purpose construction: べんきょうし (benkyoushi) に (ni) いく (iku) · + つもりでした (tsumori deshita, past intention)
+
+---
+DIR: EN>JP
+Q: Mika is planning not to read this book.
+ROM: Mika wa kono hon wo yomanai tsumori desu.
+JP: みか は この ほん を よまない つもりです。
+HINT: negative short form: よむ (yomu) → よまない (yomanai) · + つもりです (tsumori desu)
+
+---
+DIR: EN>JP
+Q: Are you planning not to live in this house?
+ROM: Kono ie ni sumanai tsumori desu ka?
+JP: この いえ に すまない つもりですか？
+HINT: すむ (sumu) → すまない (sumanai, negative short) + つもりですか？ (tsumori desu ka?) · に (ni) = location of living
+
+---
+DIR: JP>EN
+Q_ROM: Natsuyasumi ni Oosaka ni iku tsumori desu.
+Q_JP: なつやすみ に おおさか に いく つもりです。
+A: I am planning to go to Osaka during summer break.
+HINT: いく (iku) つもりです (tsumori desu) = intend to go · なつやすみ (natsuyasumi) = summer break
+
+---
+DIR: JP>EN
+Q_ROM: Masami wa kekkon shinai tsumori deshita.
+Q_JP: まさみ は けっこんしない つもりでした。
+A: Masami was planning not to get married.
+HINT: しない (shinai) = negative short of する (suru) · つもりでした (tsumori deshita) = was planning (past)
+
+---
+DIR: JP>EN
+Q_ROM: Watashi to Ken wa kafe ni benkyou shi ni iku tsumori deshita.
+Q_JP: わたし と けん は かふぇ に べんきょうし に いく つもりでした。
+A: Ken and I were planning to go to a cafe to study.
+HINT: べんきょうし (benkyoushi) に (ni) いく (iku) = go in order to study · つもりでした (tsumori deshita) = was planning to
+
+---
+DIR: EN>JP
+Q: I intend to play tennis with Takeshi on Sunday.
+ROM: Nichiyoubi ni Takeshi to tenisu wo suru tsumori desu.
+JP: にちようびに たけしと テニスを するつもりです。
+HINT: dictionary form (suru) + つもりです (tsumori desu) · と (to) = together with · にちようび (nichiyoubi) = Sunday — always takes に
+
+---
+DIR: EN>JP
+Q: Ken intends not to come to school tomorrow.
+ROM: Ken wa ashita gakkou ni konai tsumori desu.
+JP: けんは あした がっこうに こないつもりです。
+HINT: negative short form (konai) + つもりです · kuru (irregular) → negative short: こない (konai) · contrast with sentence below
+
+---
+DIR: EN>JP
+Q: Ken does not intend to come to school tomorrow.
+ROM: Ken wa ashita gakkou ni kuru tsumori ja nai desu.
+JP: けんは あした がっこうに くるつもりじゃないです。
+HINT: dictionary form + つもりじゃないです (tsumori ja nai desu) = the intention itself is negated · subtle difference from こないつもりです (konai tsumori desu)
+
+---
+DIR: EN>JP
+Q: We were planning to visit a temple.
+ROM: Otera o otozureru tsumori deshita.
+JP: おてらを おとずれるつもりでした。
+HINT: dictionary form (otozureru) + つもりでした (tsumori deshita) = past intention · を (wo) marks the object (temple) · おてら (otera) = temple
+
+---
+DIR: EN>JP
+Q: I am planning to go home around 8 PM.
+ROM: Watashi wa hachiji ni ie ni kaeru tsumori desu.
+JP: わたしは はちじに いえに かえるつもりです。
+HINT: dictionary form (kaeru) + つもりです · はちじ (hachiji) = 8 o'clock — always takes に · two に: one for time, one for destination
+
+---
+DIR: EN>JP
+Q: Takeshi is planning not to learn Russian.
+ROM: Takeshi wa roshiago wo benkyou shinai tsumori desu.
+JP: たけしは ロシアごを べんきょうしないつもりです。
+HINT: negative short (benkyou shinai) + つもりです · ロシアご (roshiago) = Russian language · を marks the language
+
+---
+DIR: EN>JP
+Q: I was planning to meet Kana yesterday.
+ROM: Kinou Kana ni au tsumori deshita.
+JP: きのう かなに あうつもりでした。
+HINT: dictionary form (au) + つもりでした (tsumori deshita) = past intention · に (ni) marks the person you meet
+
+---
+DIR: EN>JP
+Q: Noriko was planning not to eat dinner.
+ROM: Noriko wa yorugohan wo tabenai tsumori deshita.
+JP: のりこは よるごはんを たべないつもりでした。
+HINT: negative short (tabenai) + つもりでした · よるごはん (yorugohan) = dinner · を marks the object
+
+---
+DIR: EN>JP
+Q: Takako is planning to cook dinner.
+ROM: Takako wa yorugohan wo ryouri suru tsumori desu.
+JP: たかこは よるごはんを りょうりするつもりです。
+HINT: ryouri suru (suru verb) + つもりです · よるごはん (yorugohan) = dinner · を marks the object
+
+---
+DIR: EN>JP
+Q: Mami is planning not to study tonight.
+ROM: Mami wa konban benkyou shinai tsumori desu.
+JP: まみは こんばん べんきょうしないつもりです。
+HINT: negative short (benkyou shinai) + つもりです · こんばん (konban) = tonight — no particle needed
+
+---
+DIR: EN>JP
+Q: Tomoka was planning not to take pictures.
+ROM: Tomoka wa shashin wo toranai tsumori deshita.
+JP: ともかは しゃしんを とらないつもりでした。
+HINT: toru (u-verb) → negative short: とらない (toranai) · + つもりでした (past) · を marks the object
+
+---
+DIR: JP>EN
+Q_ROM: Nichiyoubi ni Takeshi to tenisu wo suru tsumori desu.
+Q_JP: にちようびに たけしと テニスを するつもりです。
+A: I intend to play tennis with Takeshi on Sunday.
+HINT: つもりです (tsumori desu) = intend to / plan to · suru = dictionary form
+
+---
+DIR: JP>EN
+Q_ROM: Ken wa ashita gakkou ni kuru tsumori ja nai desu.
+Q_JP: けんは あした がっこうに くるつもりじゃないです。
+A: Ken does not intend to come to school tomorrow.
+HINT: つもりじゃないです (tsumori ja nai desu) = does not intend · contrast with こないつもりです
+
+---
+DIR: JP>EN
+Q_ROM: Tomoka wa shashin wo toranai tsumori deshita.
+Q_JP: ともかは しゃしんを とらないつもりでした。
+A: Tomoka was planning not to take pictures.
+HINT: とらない (toranai) = negative short of toru · つもりでした = was planning (past intention)
+
+---
+DIR: EN>JP
+Q: We were planning to go see a temple.
+ROM: Otera o mi ni iku tsumori deshita.
+JP: おてらを みにいくつもりでした。
+HINT: purpose construction: verb stem (み, mi) + に (ni) + いく (iku) = "go in order to see" · + つもりでした (tsumori deshita, past intention) · contrast with おとずれるつもりでした (otozureru tsumori deshita), which uses "visit" directly as the intended verb
+
+---
+DIR: JP>EN
+Q_ROM: Otera o mi ni iku tsumori deshita.
+Q_JP: おてらを みにいくつもりでした。
+A: We were planning to go see a temple.
+HINT: みにいく (mi ni iku) = go in order to see, from みる (miru) stem + にいく (ni iku) · つもりでした (tsumori deshita) = was planning to
