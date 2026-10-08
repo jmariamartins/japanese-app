@@ -3,7 +3,7 @@
 // manifest, icons) so the new version gets picked up. Exercise/cheatsheet
 // content updates automatically (see fetch handler below) without needing a
 // version bump.
-const CACHE_VERSION = 'v1';
+const CACHE_VERSION = 'v2';
 const CACHE_NAME = `nihongo-study-${CACHE_VERSION}`;
 
 // App shell — the files needed for the app to boot offline.
