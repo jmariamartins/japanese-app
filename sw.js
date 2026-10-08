@@ -1,9 +1,9 @@
 // 日本語 Study — Service Worker
-// Bump CACHE_VERSION any time you change app-shell files (index.html, drills,
-// manifest, icons) so the new version gets picked up. Exercise/cheatsheet
-// content updates automatically (see fetch handler below) without needing a
-// version bump.
-const CACHE_VERSION = 'v2';
+// App files (index.html, drills, manifest, icons) are fetched network-first,
+// so changes you push show up on the next open without bumping anything.
+// CACHE_VERSION only needs bumping if you add a NEW app-shell file to
+// APP_SHELL below, or want to force-clear everything saved on the phone.
+const CACHE_VERSION = 'v3';
 const CACHE_NAME = `nihongo-study-${CACHE_VERSION}`;
 
 // App shell — the files needed for the app to boot offline.
@@ -48,10 +48,21 @@ self.addEventListener('fetch', (event) => {
   // to the network untouched — never cached, never intercepted.
   if (url.origin !== self.location.origin) return;
 
-  // App shell: cache-first (instant load, works offline).
+  // App shell: network-first. Always try to get the latest file from the
+  // site (bypassing the browser's own HTTP cache, which GitHub Pages sets to
+  // ~10 minutes), save a copy, and only fall back to the saved copy when
+  // offline or the network fails.
   if (APP_SHELL.some((p) => url.pathname.endsWith(p.replace('./', '/')))) {
     event.respondWith(
-      caches.match(req).then((cached) => cached || fetch(req))
+      fetch(req, { cache: 'no-cache' })
+        .then((response) => {
+          if (response && response.ok) {
+            const copy = response.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(req, copy));
+          }
+          return response;
+        })
+        .catch(() => caches.match(req))
     );
     return;
   }
