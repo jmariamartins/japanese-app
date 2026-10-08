@@ -1,0 +1,54 @@
+# Cheatsheet Map
+# Format: exercise_file_name (without .txt) > cheatsheet_file_name (without .html)
+# Multiple exercise topics can point to the same guide.
+# If no mapping is found, no guide button will appear during that exercise.
+
+verb_conjugation                > verb_conjugation_guide
+particles_and_adverbs           > particles_guide
+
+pronoun_no                      > pronoun_no_guide
+
+adjectives_degree_expressions   > adjectives_guide
+adjectives_qualifying_nouns     > qualifying_nouns_guide
+adjectives_naru                 > adjective_naru_guide
+
+location_arimasu_imasu > location_guide
+
+te_form_requests                	> te_form_guide
+te_form_progressive             	> te_form_guide
+te_form_current_states          	> te_form_guide
+te_form_permissions_sequences   	> te_form_guide
+te_form_connecting_clauses      	> te_form_guide
+verb_stem_ni_iku                	> te_form_guide
+te_form_sequential_actions.txt	> te_form_guide
+
+short_form_quotation            	> short_form_guide
+short_form_casual               	> short_form_guide
+short_form_past_casual          	> short_form_guide
+short_form_negative_requests	> short_form_guide
+
+present_perfect_mou_mada        > present_perfect_guide
+comparison                      > comparison_guide
+i_intend_to_do                  > i_intend_guide
+i_want_to_do                    > i_want_to_guide
+special_predicate_tari          > special_predicate_guide
+guess_prediction                > guess_prediction_guide
+
+time_all_sections > time_guide
+
+directions_doko   > directions_guide
+shopping          > shopping_guide
+te_form_temiru    > te_form_guide
+potential_form    > potential_guide
+
+miscellaneous_basic_sentence_structure > misc_guide
+miscellaneous_physical_description  > misc_guide
+miscellaneous_many_takusan          > misc_guide
+miscellaneous_too_sugiru            > misc_guide
+miscellaneous_implicit_explanation  > misc_guide
+miscellaneous_youd_better           > misc_guide
+miscellaneous_i_must                > misc_guide
+miscellaneous_because               > misc_guide
+miscellaneous_invitation            > misc_guide
+miscellaneous_experience            > misc_guide
+miscellaneous_indefinite_words      > misc_guide
