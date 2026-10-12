@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Potential Verbs Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:   #f5f0e8;
+    --dark:    #2c1f12;
+    --gold:    #b8962e;
+    --gold-lt: #faf6e8;
+    --red:     #c0392b;
+    --green:   #1a7a4a;
+    --muted:   #6b5d4f;
+    --row-alt: #ede8db;
+    --border:  #d4c9b0;
+    --purple:  #6a4c93;
+    --teal:    #2a7f7f;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--dark);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 2.2rem 2rem 3.5rem;
+  }
+
+  .page-title {
+    text-align: center; margin-bottom: 2rem;
+    padding-bottom: 1rem; border-bottom: 2px solid var(--gold);
+  }
+  .page-title h1 { font-family: 'Noto Serif JP', serif; font-size: 2.3rem; font-weight: 700; }
+  .page-title .sub { font-family: 'DM Mono', monospace; font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem; }
+  .page-title .badge {
+    display: inline-block; margin-top: 0.5rem; padding: 0.18rem 0.8rem;
+    border-radius: 999px; font-family: 'DM Mono', monospace; font-size: 0.72rem;
+    background: var(--purple); color: #fff; letter-spacing: 0.06em; text-transform: uppercase;
+  }
+
+  .sh { display: flex; align-items: center; gap: 0.6rem; margin: 1.8rem 0 0.75rem; }
+  .sh h2 { font-size: 1.2rem; font-weight: 700; }
+  .pill {
+    display: inline-block; padding: 0.13rem 0.65rem; border-radius: 999px;
+    font-family: 'DM Mono', monospace; font-size: 0.68rem;
+    text-transform: uppercase; letter-spacing: 0.07em;
+  }
+  .pill-purple { background: var(--purple); color: #fff; }
+  .pill-teal   { background: var(--teal);   color: #fff; }
+  .pill-coral  { background: var(--red);    color: #fff; }
+  .pill-amber  { background: var(--gold);   color: #fff; }
+
+  .note-box {
+    border-left: 4px solid var(--gold); background: var(--gold-lt);
+    padding: 0.7rem 1rem; margin: 0.65rem 0; border-radius: 0 6px 6px 0; font-size: 0.97rem;
+  }
+  .note-box .nlabel {
+    font-family: 'DM Mono', monospace; font-size: 0.67rem; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--gold); margin-bottom: 0.2rem; display: block;
+  }
+
+  .formula {
+    border-left: 4px solid var(--gold); background: #f0ebe0;
+    padding: 0.6rem 1rem; margin: 0.4rem 0; border-radius: 0 6px 6px 0;
+    font-family: 'DM Mono', monospace; font-size: 0.88rem;
+    display: flex; align-items: center; gap: 0.45rem; flex-wrap: wrap;
+  }
+  .formula .jp  { font-family: 'Noto Serif JP', serif; }
+  .formula .arr { color: var(--gold); }
+  .formula .red { color: var(--red); }
+  .formula .grn { color: var(--green); }
+  .formula .en  { font-style: italic; color: var(--muted); font-size: 0.82rem; }
+
+  /* Conjugation table */
+  table { width: 100%; border-collapse: collapse; margin: 0.8rem 0; font-size: 0.95rem; }
+  thead tr { background: var(--dark); color: #f5f0e8; border-bottom: 3px solid var(--gold); }
+  thead th {
+    padding: 0.5rem 0.85rem; font-family: 'DM Mono', monospace; font-size: 0.72rem;
+    text-transform: uppercase; letter-spacing: 0.07em; text-align: left;
+  }
+  tbody tr:nth-child(even) { background: var(--row-alt); }
+  tbody tr:nth-child(odd)  { background: var(--paper); }
+  tbody td { padding: 0.52rem 0.85rem; border-bottom: 1px solid var(--border); vertical-align: middle; line-height: 1.45; }
+  .jp  { font-family: 'Noto Serif JP', serif; }
+  .rom { font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--muted); display: block; }
+  .en  { font-style: italic; color: var(--muted); font-size: 0.88rem; }
+  .red { color: var(--red); }
+  .grn { color: var(--green); }
+
+  /* Example blocks */
+  .ex-block {
+    background: #faf6ee; border: 1px solid var(--border); border-radius: 8px;
+    padding: 0.8rem 1.1rem; margin: 0.6rem 0;
+  }
+  .ex-block .ex-label {
+    font-family: 'DM Mono', monospace; font-size: 0.67rem; text-transform: uppercase;
+    letter-spacing: 0.11em; color: var(--gold); margin-bottom: 0.4rem; display: block;
+  }
+  .ex-block .english {
+    font-style: italic; font-size: 0.97rem; margin-bottom: 0.6rem;
+    padding-bottom: 0.4rem; border-bottom: 1px dashed var(--border);
+  }
+  .jp-row { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 0.35rem 0.65rem; margin-bottom: 0.35rem; }
+  .jp-token { display: flex; flex-direction: column; align-items: center; gap: 0.04rem; }
+  .jp-token .kana { font-family: 'Noto Serif JP', serif; font-size: 1.05rem; }
+  .jp-token .rom2 { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted); }
+  .tbox {
+    border-radius: 7px; padding: 0.22rem 0.6rem;
+    display: flex; flex-direction: column; align-items: center; gap: 0.04rem;
+  }
+  .tbox .kana { font-family: 'Noto Serif JP', serif; font-size: 1.05rem; }
+  .tbox .rom2 { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted); }
+  .red-b { border: 2.5px solid var(--red);   background: #fef5f4; }
+  .stem-note {
+    font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted);
+    margin-top: 0.15rem;
+  }
+  .stem-note .red { color: var(--red); }
+
+  hr.rule { border: none; border-top: 1px solid var(--border); margin: 1.8rem 0; }
+</style>
+</head>
+<body>
+
+<!-- ── TITLE ── -->
+<div class="page-title">
+  <h1>Potential Verbs</h1>
+  <div class="sub">られる / える &nbsp;·&nbsp; "can do…" / "be able to do…"</div>
+  <span class="badge">Grammar · Intermediate</span>
+</div>
+
+<!-- ── FORMATION ── -->
+<div class="sh"><h2>Formation</h2><span class="pill pill-purple">Rules</span></div>
+
+<table>
+  <thead><tr><th>Verb type</th><th>Rule</th><th>Example</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><strong>Ru-verb</strong></td>
+      <td>Drop the final <span class="jp red">る</span> and add <span class="jp grn">られる</span></td>
+      <td style="white-space:nowrap;"><span class="jp">食(た)べる</span> <span class="arr" style="color:var(--gold)">→</span> <span class="jp grn">食(た)べられる</span><span class="rom">taberu → taberareru</span></td>
+    </tr>
+
+    <tr>
+      <td><strong>U-verb</strong></td>
+      <td>Drop the final <span class="jp red">u</span> and add <span class="jp grn">eru</span> <span class="en">(change the last sound to its <em>e</em>-row partner + る)</span></td>
+      <td><span class="jp">話(はな)す</span> <span class="arr" style="color:var(--gold)">→</span> <span class="jp grn">話(はな)せる</span><span class="rom">hanasu → hanaseru</span></td>
+    </tr>
+
+    <tr>
+      <td><strong>Irregular</strong></td>
+      <td><span class="jp">する</span> → <span class="jp grn">できる</span><br><span class="jp">くる</span> → <span class="jp grn">こられる</span></td>
+      <td><span class="jp grn">できる</span> <span class="rom">dekiru</span><span class="jp grn">こられる</span> <span class="rom">korareru</span></td>
+    </tr>
+
+  </tbody>
+</table>
+
+<div class="note-box">
+  <span class="nlabel">Key Rule</span>
+  Every potential verb is itself a <strong>ru-verb</strong> (it ends in る). So after you have made the potential form, conjugate it like any ru-verb: drop る and add ます, ません, ました, ませんでした.
+</div>
+
+<!-- ── U-VERB CHART ── -->
+<div class="sh"><h2>U-verb Endings → Potential</h2><span class="pill pill-amber">Chart</span></div>
+
+<table>
+  <thead><tr><th>Ending</th><th>Becomes</th><th>Example</th></tr></thead>
+  <tbody>
+    <tr><td><span class="jp">う</span></td><td><span class="jp grn">える</span></td><td><span class="jp">買(か)う → 買(か)える</span><span class="rom">kau → kaeru</span></td></tr>
+    <tr><td><span class="jp">く</span></td><td><span class="jp grn">ける</span></td><td><span class="jp">行(い)く → 行(い)ける</span><span class="rom">iku → ikeru</span></td></tr>
+    <tr><td><span class="jp">ぐ</span></td><td><span class="jp grn">げる</span></td><td><span class="jp">泳(およ)ぐ → 泳(およ)げる</span><span class="rom">oyogu → oyogeru</span></td></tr>
+    <tr><td><span class="jp">す</span></td><td><span class="jp grn">せる</span></td><td><span class="jp">話(はな)す → 話(はな)せる</span><span class="rom">hanasu → hanaseru</span></td></tr>
+    <tr><td><span class="jp">つ</span></td><td><span class="jp grn">てる</span></td><td><span class="jp">待(ま)つ → 待(ま)てる</span><span class="rom">matsu → materu</span></td></tr>
+    <tr><td><span class="jp">ぶ</span></td><td><span class="jp grn">べる</span></td><td><span class="jp">遊(あそ)ぶ → 遊(あそ)べる</span><span class="rom">asobu → asoberu</span></td></tr>
+    <tr><td><span class="jp">む</span></td><td><span class="jp grn">める</span></td><td><span class="jp">読(よ)む → 読(よ)める</span><span class="rom">yomu → yomeru</span></td></tr>
+    <tr><td><span class="jp">る</span></td><td><span class="jp grn">れる</span></td><td><span class="jp">登(のぼ)る → 登(のぼ)れる</span><span class="rom">noboru → noboreru</span></td></tr>
+  </tbody>
+</table>
+
+<!-- ── CONJUGATION TABLE ── -->
+<div class="sh"><h2>Conjugating the Potential Verb</h2><span class="pill pill-teal">Forms</span></div>
+
+<p style="margin:0.4rem 0 0.3rem;font-size:0.92rem;font-weight:600;color:var(--muted);">Example: <span class="jp">話(はな)せる</span> (can speak) — pattern shown in red</p>
+<table>
+  <thead><tr><th></th><th>Short · Affirmative</th><th>Short · Negative</th><th>Long · Affirmative</th><th>Long · Negative</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><strong>Present</strong></td>
+      <td><span class="jp grn">話せ<span class="red">る</span></span><span class="rom">hanaseru</span></td>
+      <td><span class="jp red">話せ<span class="red">ない</span></span><span class="rom">hanasenai</span></td>
+      <td><span class="jp grn">話せ<span class="red">ます</span></span><span class="rom">hanasemasu</span></td>
+      <td><span class="jp red">話せ<span class="red">ません</span></span><span class="rom">hanasemasen</span></td>
+    </tr>
+    <tr>
+      <td><strong>Past</strong></td>
+      <td><span class="jp grn">話せ<span class="red">た</span></span><span class="rom">hanaseta</span></td>
+      <td><span class="jp red">話せ<span class="red">なかった</span></span><span class="rom">hanasenakatta</span></td>
+      <td><span class="jp grn">話せ<span class="red">ました</span></span><span class="rom">hanasemashita</span></td>
+      <td><span class="jp red">話せ<span class="red">ませんでした</span></span><span class="rom">hanasemasen deshita</span></td>
+    </tr>
+    <tr>
+      <td><strong>て-form</strong></td>
+      <td colspan="4"><span class="jp grn">話せ<span class="red">て</span></span><span class="rom">hanasete</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<hr class="rule">
+
+<!-- ── EXAMPLES ── -->
+<div class="sh"><h2>Examples</h2><span class="pill pill-coral">Examples</span></div>
+
+<div class="ex-block">
+  <span class="ex-label">Example 1 · Present affirmative (u-verb)</span>
+  <div class="english">"I can speak Japanese."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">日本語(にほんご)が</span><span class="rom2">nihongo ga</span></div>
+    <div class="tbox red-b"><span class="kana">話(はな)せます。</span><span class="rom2">hanasemasu.</span></div>
+  </div>
+  <div class="stem-note"><span class="red">話(はな)す</span> → <span class="red">話(はな)せる</span> (す→せ) → 話(はな)せます</div>
+</div>
+
+<div class="ex-block">
+  <span class="ex-label">Example 2 · Present negative (u-verb)</span>
+  <div class="english">"I cannot swim."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">私(わたし)は</span><span class="rom2">watashi wa</span></div>
+    <div class="tbox red-b"><span class="kana">泳(およ)げません。</span><span class="rom2">oyogemasen.</span></div>
+  </div>
+  <div class="stem-note"><span class="red">泳(およ)ぐ</span> → <span class="red">泳(およ)げる</span> (ぐ→げ) · potential verbs are ru-verbs → 泳(およ)げません</div>
+</div>
+
+<div class="ex-block">
+  <span class="ex-label">Example 3 · Past negative (u-verb)</span>
+  <div class="english">"We could not go to the beach."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">海(うみ)に</span><span class="rom2">umi ni</span></div>
+    <div class="tbox red-b"><span class="kana">行(い)けませんでした。</span><span class="rom2">ikemasen deshita.</span></div>
+  </div>
+  <div class="stem-note"><span class="red">行(い)く</span> → <span class="red">行(い)ける</span> (く→け) · ru-verb → 行(い)けませんでした for past negative</div>
+</div>
+
+<div class="ex-block">
+  <span class="ex-label">Example 4 · Past affirmative (ru-verb)</span>
+  <div class="english">"I could eat breakfast."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">朝(あさ)ごはんを</span><span class="rom2">asagohan o</span></div>
+    <div class="tbox red-b"><span class="kana">食(た)べられました。</span><span class="rom2">taberaremashita.</span></div>
+  </div>
+  <div class="stem-note"><span class="red">食(た)べる</span> → <span class="red">食(た)べられる</span> (drop る + られる) → 食(た)べられました</div>
+</div>
+
+
+<hr class="rule">
+
+<!-- ── PARTICLES ── -->
+<div class="sh"><h2>Particles with Potential Verbs</h2><span class="pill pill-purple">Particles</span></div>
+
+<div class="note-box" style="border-color:var(--teal);background:#eef6f6;">
+  <span class="nlabel" style="color:var(--teal);">Rule 1 · を → が (or を)</span>
+  Verbs that normally take <span class="jp" style="font-size:1rem;font-weight:600;">を</span> can take either <span class="jp" style="font-size:1rem;font-weight:600;">を</span> or <span class="jp" style="font-size:1rem;font-weight:600;">が</span> once they are made into the potential.
+</div>
+
+<div class="ex-block">
+  <span class="ex-label">Particle example · を verbs</span>
+  <div class="english">"I read kanji."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">漢字(かんじ)</span><span class="rom2">kanji</span></div>
+    <div class="tbox red-b"><span class="kana">を</span><span class="rom2">o</span></div>
+    <div class="jp-token"><span class="kana">読(よ)みます。</span><span class="rom2">yomimasu.</span></div>
+  </div>
+  <div class="stem-note">plain verb → を</div>
+  <div class="english" style="margin-top:0.7rem;">"I can read kanji."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">漢字(かんじ)</span><span class="rom2">kanji</span></div>
+    <div class="tbox red-b"><span class="kana">が</span><span class="rom2">ga</span></div>
+    <div class="jp-token"><span class="kana">読(よ)めます。</span><span class="rom2">yomemasu.</span></div>
+  </div>
+  <div class="stem-note">potential → が</div>
+  <div class="english" style="margin-top:0.7rem;">"I can read kanji." (also possible)</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">漢字(かんじ)</span><span class="rom2">kanji</span></div>
+    <div class="tbox red-b"><span class="kana">を</span><span class="rom2">o</span></div>
+    <div class="jp-token"><span class="kana">読(よ)めます。</span><span class="rom2">yomemasu.</span></div>
+  </div>
+  <div class="stem-note">potential → を kept</div>
+</div>
+
+
+<div class="note-box" style="border-color:var(--teal);background:#eef6f6;">
+  <span class="nlabel" style="color:var(--teal);">Rule 2 · できる takes が</span>
+  <span class="jp" style="font-size:1rem;font-weight:600;">できる</span>, the potential counterpart of <span class="jp" style="font-size:1rem;">する</span>, is somewhat special and takes <span class="jp" style="font-size:1rem;font-weight:600;">が</span> almost all the time.
+</div>
+
+<div class="ex-block">
+  <span class="ex-label">Particle example · する → できる</span>
+  <div class="english">"I play baseball."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">野球(やきゅう)</span><span class="rom2">yakyuu</span></div>
+    <div class="tbox red-b"><span class="kana">を</span><span class="rom2">o</span></div>
+    <div class="jp-token"><span class="kana">します。</span><span class="rom2">shimasu.</span></div>
+  </div>
+  <div class="stem-note">する → を</div>
+  <div class="english" style="margin-top:0.7rem;">"I can play baseball."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">野球(やきゅう)</span><span class="rom2">yakyuu</span></div>
+    <div class="tbox red-b"><span class="kana">が</span><span class="rom2">ga</span></div>
+    <div class="jp-token"><span class="kana">できます。</span><span class="rom2">dekimasu.</span></div>
+  </div>
+  <div class="stem-note">できる → が</div>
+  <div class="stem-note"><span class="red">野球(やきゅう)をできます。</span> is considered substandard</div>
+</div>
+
+
+<div class="note-box" style="border-color:var(--teal);background:#eef6f6;">
+  <span class="nlabel" style="color:var(--teal);">Rule 3 · all other particles stay</span>
+  All particles other than <span class="jp" style="font-size:1rem;font-weight:600;">を</span> remain the same when the verb is turned into the potential.
+</div>
+
+<div class="ex-block">
+  <span class="ex-label">Particle example · に stays に</span>
+  <div class="english">"I climb mountains."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">山(やま)</span><span class="rom2">yama</span></div>
+    <div class="tbox red-b"><span class="kana">に</span><span class="rom2">ni</span></div>
+    <div class="jp-token"><span class="kana">登(のぼ)ります。</span><span class="rom2">noborimasu.</span></div>
+  </div>
+  <div class="english" style="margin-top:0.7rem;">"I can climb mountains."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">山(やま)</span><span class="rom2">yama</span></div>
+    <div class="tbox red-b"><span class="kana">に</span><span class="rom2">ni</span></div>
+    <div class="jp-token"><span class="kana">登(のぼ)れます。</span><span class="rom2">noboremasu.</span></div>
+  </div>
+  <div class="stem-note">に is unchanged</div>
+</div>
+
+
+</body>
+</html>
