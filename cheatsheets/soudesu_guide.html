@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>〜そうです Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:   #f5f0e8;
+    --dark:    #2c1f12;
+    --gold:    #b8962e;
+    --gold-lt: #faf6e8;
+    --red:     #c0392b;
+    --green:   #1a7a4a;
+    --muted:   #6b5d4f;
+    --row-alt: #ede8db;
+    --border:  #d4c9b0;
+    --purple:  #6a4c93;
+    --teal:    #2a7f7f;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--dark);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 2.2rem 2rem 3.5rem;
+  }
+
+  .page-title {
+    text-align: center; margin-bottom: 2rem;
+    padding-bottom: 1rem; border-bottom: 2px solid var(--gold);
+  }
+  .page-title h1 { font-family: 'Noto Serif JP', serif; font-size: 2.3rem; font-weight: 700; }
+  .page-title .sub { font-family: 'DM Mono', monospace; font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem; }
+  .page-title .badge {
+    display: inline-block; margin-top: 0.5rem; padding: 0.18rem 0.8rem;
+    border-radius: 999px; font-family: 'DM Mono', monospace; font-size: 0.72rem;
+    background: var(--purple); color: #fff; letter-spacing: 0.06em; text-transform: uppercase;
+  }
+
+  .sh { display: flex; align-items: center; gap: 0.6rem; margin: 1.8rem 0 0.75rem; }
+  .sh h2 { font-size: 1.2rem; font-weight: 700; }
+  .pill {
+    display: inline-block; padding: 0.13rem 0.65rem; border-radius: 999px;
+    font-family: 'DM Mono', monospace; font-size: 0.68rem;
+    text-transform: uppercase; letter-spacing: 0.07em;
+  }
+  .pill-purple { background: var(--purple); color: #fff; }
+  .pill-teal   { background: var(--teal);   color: #fff; }
+  .pill-coral  { background: var(--red);    color: #fff; }
+  .pill-amber  { background: var(--gold);   color: #fff; }
+
+  .note-box {
+    border-left: 4px solid var(--gold); background: var(--gold-lt);
+    padding: 0.7rem 1rem; margin: 0.65rem 0; border-radius: 0 6px 6px 0; font-size: 0.97rem;
+  }
+  .note-box .nlabel {
+    font-family: 'DM Mono', monospace; font-size: 0.67rem; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--gold); margin-bottom: 0.2rem; display: block;
+  }
+
+  .formula {
+    border-left: 4px solid var(--gold); background: #f0ebe0;
+    padding: 0.6rem 1rem; margin: 0.4rem 0; border-radius: 0 6px 6px 0;
+    font-family: 'DM Mono', monospace; font-size: 0.88rem;
+    display: flex; align-items: center; gap: 0.45rem; flex-wrap: wrap;
+  }
+  .formula .jp  { font-family: 'Noto Serif JP', serif; }
+  .formula .arr { color: var(--gold); }
+  .formula .red { color: var(--red); }
+  .formula .grn { color: var(--green); }
+  .formula .en  { font-style: italic; color: var(--muted); font-size: 0.82rem; }
+
+  /* Conjugation table */
+  table { width: 100%; border-collapse: collapse; margin: 0.8rem 0; font-size: 0.95rem; }
+  thead tr { background: var(--dark); color: #f5f0e8; border-bottom: 3px solid var(--gold); }
+  thead th {
+    padding: 0.5rem 0.85rem; font-family: 'DM Mono', monospace; font-size: 0.72rem;
+    text-transform: uppercase; letter-spacing: 0.07em; text-align: left;
+  }
+  tbody tr:nth-child(even) { background: var(--row-alt); }
+  tbody tr:nth-child(odd)  { background: var(--paper); }
+  tbody td { padding: 0.52rem 0.85rem; border-bottom: 1px solid var(--border); vertical-align: middle; line-height: 1.45; }
+  .jp  { font-family: 'Noto Serif JP', serif; }
+  .rom { font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--muted); display: block; }
+  .en  { font-style: italic; color: var(--muted); font-size: 0.88rem; }
+  .red { color: var(--red); }
+  .grn { color: var(--green); }
+
+  /* Example blocks */
+  .ex-block {
+    background: #faf6ee; border: 1px solid var(--border); border-radius: 8px;
+    padding: 0.8rem 1.1rem; margin: 0.6rem 0;
+  }
+  .ex-block .ex-label {
+    font-family: 'DM Mono', monospace; font-size: 0.67rem; text-transform: uppercase;
+    letter-spacing: 0.11em; color: var(--gold); margin-bottom: 0.4rem; display: block;
+  }
+  .ex-block .english {
+    font-style: italic; font-size: 0.97rem; margin-bottom: 0.6rem;
+    padding-bottom: 0.4rem; border-bottom: 1px dashed var(--border);
+  }
+  .jp-row { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 0.35rem 0.65rem; margin-bottom: 0.35rem; }
+  .jp-token { display: flex; flex-direction: column; align-items: center; gap: 0.04rem; }
+  .jp-token .kana { font-family: 'Noto Serif JP', serif; font-size: 1.05rem; }
+  .jp-token .rom2 { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted); }
+  .tbox {
+    border-radius: 7px; padding: 0.22rem 0.6rem;
+    display: flex; flex-direction: column; align-items: center; gap: 0.04rem;
+  }
+  .tbox .kana { font-family: 'Noto Serif JP', serif; font-size: 1.05rem; }
+  .tbox .rom2 { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted); }
+  .red-b { border: 2.5px solid var(--red);   background: #fef5f4; }
+  .stem-note {
+    font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted);
+    margin-top: 0.15rem;
+  }
+  .stem-note .red { color: var(--red); }
+
+  hr.rule { border: none; border-top: 1px solid var(--border); margin: 1.8rem 0; }
+</style>
+</head>
+<body>
+<div class="page-title">
+  <h1>〜そうです</h1>
+  <div class="sub">adjective / verb stem + そう &nbsp;·&nbsp; "It looks like…" / "It seems…"</div>
+  <span class="badge">Grammar · Intermediate</span>
+</div>
+
+<div class="sh"><h2>Formation</h2><span class="pill pill-purple">Rules</span></div>
+
+<div class="note-box">
+  <span class="nlabel">Key Rule</span>
+  Add <strong>そう</strong> to an adjective to say something <strong>looks</strong> a certain way. You are guessing from what you can see or sense, without conclusive evidence.
+</div>
+
+<table>
+  <thead><tr><th>Type</th><th>Rule</th><th>Example</th></tr></thead>
+  <tbody>
+    <tr><td><strong>い-adjective</strong></td><td>Drop the final <span class="red">い</span> and add <span class="jp grn">そう</span></td>
+      <td><span class="jp grn">おいしい → おいしそう</span><span class="rom">oishii → oishisou</span></td></tr>
+    <tr><td><strong>な-adjective</strong></td><td>Drop the final <span class="red">な</span> and add <span class="jp grn">そう</span></td>
+      <td><span class="jp grn">元気(げんき)な → 元気そう</span><span class="rom">genki na → genki sou</span></td></tr>
+    <tr><td><strong>いい</strong></td><td>Irregular</td>
+      <td><span class="jp red">いい → よさそう</span><span class="rom">ii → yosasou</span></td></tr>
+  </tbody>
+</table>
+
+<div class="sh"><h2>Negative: ない → なさそう</h2><span class="pill pill-coral">Negative</span></div>
+
+<div class="note-box" style="border-color:var(--red);background:#fff5f5;">
+  <span class="nlabel" style="color:var(--red);">Watch out</span>
+  You can use そうです with negative adjectives too. The negative ending <strong>ない</strong> changes to <strong>なさ</strong> before そう.
+</div>
+
+<table>
+  <thead><tr><th></th><th>Present negative (short form)</th><th>+ そう</th></tr></thead>
+  <tbody>
+    <tr><td><span class="jp">長(なが)い</span></td><td><span class="jp grn">長(なが)くない</span><span class="rom">nagaku nai</span></td><td><span class="jp red">長(なが)くなさそう</span><span class="rom">nagaku nasasou</span></td></tr>
+    <tr><td><span class="jp">綺麗(きれい)な</span></td><td><span class="jp grn">綺麗(きれい)じゃない</span><span class="rom">kirei ja nai</span></td><td><span class="jp red">綺麗(きれい)じゃなさそう</span><span class="rom">kirei ja nasasou</span></td></tr>
+    <tr><td><span class="jp">いい</span></td><td><span class="jp grn">よくない</span><span class="rom">yoku nai</span></td><td><span class="jp red">よくなさそう</span><span class="rom">yoku nasasou</span></td></tr>
+  </tbody>
+</table>
+
+<div class="sh"><h2>Conjugating そうです</h2><span class="pill pill-amber">Forms</span></div>
+
+<div class="note-box" style="border-color:var(--teal);background:#eef6f6;">
+  <span class="nlabel" style="color:var(--teal);">Rule</span>
+  <strong>そうな</strong> follows the <strong>な-adjective</strong> conjugation rules.
+</div>
+
+<table>
+  <thead><tr><th></th><th>Affirmative</th><th>Negative</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Present</strong></td><td><span class="jp grn">〜そうです</span><span class="rom">~ sou desu</span></td><td><span class="jp red">〜そうじゃないです</span><span class="rom">~ sou ja nai desu</span></td></tr>
+    <tr><td><strong>Past</strong></td><td><span class="jp grn">〜そうでした</span><span class="rom">~ sou deshita</span></td><td><span class="jp red">〜そうじゃなかったです</span><span class="rom">~ sou ja nakatta desu</span></td></tr>
+    <tr><td><strong>て-form</strong></td><td colspan="2"><span class="jp grn">〜そうで</span><span class="rom">~ sou de</span></td></tr>
+  </tbody>
+</table>
+
+<hr class="rule">
+
+<div class="sh"><h2>Examples</h2><span class="pill pill-coral">Examples</span></div>
+
+<div class="ex-block">
+  <span class="ex-label">Example 1 · い-adjective</span>
+  <div class="english">"This apple looks delicious."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">このりんごは</span><span class="rom2">kono ringo wa</span></div>
+    <div class="tbox red-b"><span class="kana">おいしそうです。</span><span class="rom2">oishisou desu.</span></div>
+  </div>
+  <div class="stem-note"><span class="red">おいしい</span> → remove い, add そう = おいしそう → conjugate to present affirmative: そうです</div>
+</div>
+
+<div class="ex-block">
+  <span class="ex-label">Example 2 · いい</span>
+  <div class="english">"It looks like the weather will be fine tomorrow."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">明日(あした)は天気(てんき)が</span><span class="rom2">ashita wa tenki ga</span></div>
+    <div class="tbox red-b"><span class="kana">良(よ)さそうです。</span><span class="rom2">yosasou desu.</span></div>
+  </div>
+  <div class="stem-note"><span class="red">いい</span> → よさそう (irregular)</div>
+</div>
+
+<div class="ex-block">
+  <span class="ex-label">Example 3 · な-adjective, past</span>
+  <div class="english">"It looked like Mary was fine."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">メアリーは</span><span class="rom2">Mearii wa</span></div>
+    <div class="tbox red-b"><span class="kana">元気(げんき)そうでした。</span><span class="rom2">genki sou deshita.</span></div>
+  </div>
+  <div class="stem-note"><span class="red">元気な</span> → remove な, add そう → past: そうでした</div>
+</div>
+
+<div class="ex-block">
+  <span class="ex-label">Example 4 · negative い-adjective</span>
+  <div class="english">"This book does not look difficult."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">この本(ほん)は</span><span class="rom2">kono hon wa</span></div>
+    <div class="tbox red-b"><span class="kana">難(むずか)しくなさそうです。</span><span class="rom2">muzukashiku nasasou desu.</span></div>
+  </div>
+  <div class="stem-note"><span class="red">難しくない</span> → ない becomes なさ + そう → そうです</div>
+</div>
+
+<div class="ex-block">
+  <span class="ex-label">Example 5 · negative な-adjective</span>
+  <div class="english">"It does not look like Tomoko is good at tennis."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">ともこはテニスが</span><span class="rom2">Tomoko wa tenisu ga</span></div>
+    <div class="tbox red-b"><span class="kana">上手(じょうず)じゃなさそうです。</span><span class="rom2">jouzu ja nasasou desu.</span></div>
+  </div>
+  <div class="stem-note"><span class="red">上手じゃない</span> → じゃなさそう → そうです</div>
+</div>
+
+
+<div class="sh"><h2>More examples</h2><span class="pill pill-teal">Practice</span></div>
+
+<table>
+  <thead><tr><th>English</th><th>Japanese</th></tr></thead>
+  <tbody>
+    <tr><td class="en">This cake looks sweet.</td><td><span class="jp grn">このケーキ(けーき)は甘(あま)そうです。</span><span class="rom">kono keeki wa amasou desu.</span></td></tr>
+    <tr><td class="en">Takeshi looks energetic.</td><td><span class="jp grn">たけしは元気(げんき)そうです。</span><span class="rom">Takeshi wa genki sou desu.</span></td></tr>
+    <tr><td class="en">This book does not look interesting.</td><td><span class="jp grn">この本(ほん)は面白(おもしろ)くなさそうです。</span><span class="rom">kono hon wa omoshiroku nasasou desu.</span></td></tr>
+    <tr><td class="en">My Spanish teacher does not look kind.</td><td><span class="jp grn">私(わたし)のスペイン語(ご)の先生(せんせい)は親切(しんせつ)じゃなさそうです。</span><span class="rom">watashi no supeingo no sensei wa shinsetsu ja nasasou desu.</span></td></tr>
+    <tr><td class="en">Miki looked sad.</td><td><span class="jp grn">みきは悲(かな)しそうでした。</span><span class="rom">Miki wa kanashisou deshita.</span></td></tr>
+  </tbody>
+</table>
+
+<hr class="rule">
+
+<div class="sh"><h2>Before a noun: そうな</h2><span class="pill pill-purple">Qualifier</span></div>
+
+<div class="note-box">
+  <span class="nlabel">Rule</span>
+  You can use adjective + そう to qualify a noun. そう is a <strong>な-adjective</strong>, so it becomes <strong>そうな</strong> before a noun.
+</div>
+
+<div class="ex-block">
+  <span class="ex-label">Example · noun qualifier</span>
+  <div class="english">"She wears a warm-looking sweater."</div>
+  <div class="jp-row">
+    <div class="tbox red-b"><span class="kana">暖(あたた)かそうな</span><span class="rom2">atatakasou na</span></div>
+    <div class="jp-token"><span class="kana">セーターを</span><span class="rom2">seetaa o</span></div>
+    <div class="jp-token"><span class="kana">着(き)ています。</span><span class="rom2">kite imasu.</span></div>
+  </div>
+  <div class="stem-note">そうな stays そうな because it qualifies a noun</div>
+</div>
+
+
+<div class="sh"><h2>When to use it</h2><span class="pill pill-amber">Evidence</span></div>
+
+<div class="note-box">
+  <span class="nlabel">Visual impressions</span>
+  In many そうです sentences the guess is based on <strong>what you see</strong>. But そうな is not tied only to sight. We use it whenever we <strong>lack conclusive evidence</strong>.
+</div>
+
+<div class="note-box" style="border-color:var(--teal);background:#eef6f6;">
+  <span class="nlabel" style="color:var(--teal);">Before vs after</span>
+  An apple is <span class="jp" style="font-size:1rem;">おいしそう</span> before you have tasted it. Once you have tasted it, you say <span class="jp" style="font-size:1rem;">おいしい</span>. Likewise, if the evidence is already enough to conclude something (for example you can see that something is pretty), you simply say <span class="jp" style="font-size:1rem;">きれいです</span> rather than きれいそうです.
+</div>
+
+<hr class="rule">
+
+<div class="sh"><h2>Verb stem + そうです</h2><span class="pill pill-coral">Imminent</span></div>
+
+<div class="note-box">
+  <span class="nlabel">Rule</span>
+  Attach そうです to a <strong>verb stem</strong> (the form before ます) to describe an <strong>imminent event</strong>: it looks like it is about to happen.
+</div>
+
+<div class="ex-block">
+  <span class="ex-label">Example · imminent event</span>
+  <div class="english">"It looks like it will rain."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">雨(あめ)が</span><span class="rom2">ame ga</span></div>
+    <div class="tbox red-b"><span class="kana">ふりそうです。</span><span class="rom2">furisou desu.</span></div>
+  </div>
+  <div class="stem-note"><span class="red">ふり</span> (stem of ふる) + そうです</div>
+</div>
+
+
+<div class="note-box" style="border-color:var(--red);background:#fff5f5;">
+  <span class="nlabel" style="color:var(--red);">Irregular negative</span>
+  The negative of verb stem + そうです is somewhat irregular: <strong>〜そうもありません</strong>.
+</div>
+
+<div class="ex-block">
+  <span class="ex-label">Example · negative</span>
+  <div class="english">"It does not look like it will rain."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">雨(あめ)が</span><span class="rom2">ame ga</span></div>
+    <div class="tbox red-b"><span class="kana">ふりそうもありません。</span><span class="rom2">furisou mo arimasen.</span></div>
+  </div>
+  <div class="stem-note"><span class="red">ふり</span> + そうもありません</div>
+</div>
+
+
+<div class="note-box">
+  <span class="nlabel">Extra · not the same そうです</span>
+  <strong>〜そうです</strong> after a <strong>short form</strong> means "I heard that…" (hearsay), e.g. 雨が降るそうです = "I hear it will rain." The "looks like" そうです in this guide attaches to the adjective stem or verb stem instead.
+</div>
+
+</body>
+</html>
