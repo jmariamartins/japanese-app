@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopping Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  td:first-child .jp { white-space: nowrap; }
+  :root {
+    --paper:   #f5f0e8;
+    --dark:    #2c1f12;
+    --gold:    #b8962e;
+    --gold-lt: #faf6e8;
+    --red:     #c0392b;
+    --green:   #1a7a4a;
+    --muted:   #6b5d4f;
+    --row-alt: #ede8db;
+    --border:  #d4c9b0;
+    --purple:  #6a4c93;
+    --teal:    #2a7f7f;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--dark);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 2.2rem 2rem 3.5rem;
+  }
+
+  .page-title {
+    text-align: center; margin-bottom: 2rem;
+    padding-bottom: 1rem; border-bottom: 2px solid var(--gold);
+  }
+  .page-title h1 { font-family: 'Noto Serif JP', serif; font-size: 2.3rem; font-weight: 700; }
+  .page-title .sub { font-family: 'DM Mono', monospace; font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem; }
+  .page-title .badge {
+    display: inline-block; margin-top: 0.5rem; padding: 0.18rem 0.8rem;
+    border-radius: 999px; font-family: 'DM Mono', monospace; font-size: 0.72rem;
+    background: var(--purple); color: #fff; letter-spacing: 0.06em; text-transform: uppercase;
+  }
+
+  .sh { display: flex; align-items: center; gap: 0.6rem; margin: 1.8rem 0 0.75rem; }
+  .sh h2 { font-size: 1.2rem; font-weight: 700; }
+  .pill {
+    display: inline-block; padding: 0.13rem 0.65rem; border-radius: 999px;
+    font-family: 'DM Mono', monospace; font-size: 0.68rem;
+    text-transform: uppercase; letter-spacing: 0.07em;
+  }
+  .pill-purple { background: var(--purple); color: #fff; }
+  .pill-teal   { background: var(--teal);   color: #fff; }
+  .pill-coral  { background: var(--red);    color: #fff; }
+  .pill-amber  { background: var(--gold);   color: #fff; }
+
+  .note-box {
+    border-left: 4px solid var(--gold); background: var(--gold-lt);
+    padding: 0.7rem 1rem; margin: 0.65rem 0; border-radius: 0 6px 6px 0; font-size: 0.97rem;
+  }
+  .note-box .nlabel {
+    font-family: 'DM Mono', monospace; font-size: 0.67rem; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--gold); margin-bottom: 0.2rem; display: block;
+  }
+
+  .formula {
+    border-left: 4px solid var(--gold); background: #f0ebe0;
+    padding: 0.6rem 1rem; margin: 0.4rem 0; border-radius: 0 6px 6px 0;
+    font-family: 'DM Mono', monospace; font-size: 0.88rem;
+    display: flex; align-items: center; gap: 0.45rem; flex-wrap: wrap;
+  }
+  .formula .jp  { font-family: 'Noto Serif JP', serif; }
+  .formula .arr { color: var(--gold); }
+  .formula .red { color: var(--red); }
+  .formula .grn { color: var(--green); }
+  .formula .en  { font-style: italic; color: var(--muted); font-size: 0.82rem; }
+
+  /* Conjugation table */
+  table { width: 100%; border-collapse: collapse; margin: 0.8rem 0; font-size: 0.95rem; }
+  thead tr { background: var(--dark); color: #f5f0e8; border-bottom: 3px solid var(--gold); }
+  thead th {
+    padding: 0.5rem 0.85rem; font-family: 'DM Mono', monospace; font-size: 0.72rem;
+    text-transform: uppercase; letter-spacing: 0.07em; text-align: left;
+  }
+  tbody tr:nth-child(even) { background: var(--row-alt); }
+  tbody tr:nth-child(odd)  { background: var(--paper); }
+  tbody td { padding: 0.52rem 0.85rem; border-bottom: 1px solid var(--border); vertical-align: middle; line-height: 1.45; }
+  .jp  { font-family: 'Noto Serif JP', serif; }
+  .rom { font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--muted); display: block; }
+  .en  { font-style: italic; color: var(--muted); font-size: 0.88rem; }
+  .red { color: var(--red); }
+  .grn { color: var(--green); }
+
+  /* Example blocks */
+  .ex-block {
+    background: #faf6ee; border: 1px solid var(--border); border-radius: 8px;
+    padding: 0.8rem 1.1rem; margin: 0.6rem 0;
+  }
+  .ex-block .ex-label {
+    font-family: 'DM Mono', monospace; font-size: 0.67rem; text-transform: uppercase;
+    letter-spacing: 0.11em; color: var(--gold); margin-bottom: 0.4rem; display: block;
+  }
+  .ex-block .english {
+    font-style: italic; font-size: 0.97rem; margin-bottom: 0.6rem;
+    padding-bottom: 0.4rem; border-bottom: 1px dashed var(--border);
+  }
+  .jp-row { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 0.35rem 0.65rem; margin-bottom: 0.35rem; }
+  .jp-token { display: flex; flex-direction: column; align-items: center; gap: 0.04rem; }
+  .jp-token .kana { font-family: 'Noto Serif JP', serif; font-size: 1.05rem; }
+  .jp-token .rom2 { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted); }
+  .tbox {
+    border-radius: 7px; padding: 0.22rem 0.6rem;
+    display: flex; flex-direction: column; align-items: center; gap: 0.04rem;
+  }
+  .tbox .kana { font-family: 'Noto Serif JP', serif; font-size: 1.05rem; }
+  .tbox .rom2 { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted); }
+  .red-b { border: 2.5px solid var(--red);   background: #fef5f4; }
+  .stem-note {
+    font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted);
+    margin-top: 0.15rem;
+  }
+  .stem-note .red { color: var(--red); }
+
+  hr.rule { border: none; border-top: 1px solid var(--border); margin: 1.8rem 0; }
+</style>
+</head>
+<body>
+<div class="page-title">
+  <h1>買い物</h1>
+  <div class="sub">Shopping &nbsp;·&nbsp; price · availability · ordering · the check</div>
+  <span class="badge">Grammar · Beginner</span>
+</div>
+
+<div class="note-box" style="border-color:var(--teal);background:#eef6f6;">
+  <span class="nlabel" style="color:var(--teal);">Sources</span>
+  Sections 1–2 follow the NHK exercises in <strong>shopping.txt</strong> (plus a few Duolingo sentences you sent). Sections marked <span class="pill pill-purple" style="font-size:0.6rem;">Extra</span> (3–7) were added from general knowledge and are not from your class notes, so check them against your own Duolingo notes.
+</div>
+
+<div class="sh"><h2>1 · Asking the price</h2><span class="pill pill-purple">Price</span></div>
+<div class="note-box">
+  <span class="nlabel">Key Rule</span>
+  Use <strong>いくら</strong> <span class="rom" style="display:inline;">(ikura)</span> for "how much?". Start with <strong>すみません</strong> <span class="rom" style="display:inline;">(sumimasen)</span> to get the clerk's attention, then <strong>[item] は いくらですか</strong>.
+</div>
+<div class="formula"><span class="jp red">すみません。</span><span class="jp ">[item]</span><span class="jp ">は</span><span class="rom" style="display:inline;">(wa)</span><span class="jp grn">いくらですか?</span><span class="rom" style="display:inline;">(ikura desu ka?)</span><span class="arr">→</span><span class="en">"Excuse me, how much is [item]?"</span></div>
+<div class="formula"><span class="jp red">[price]</span><span class="jp grn">です。</span><span class="rom" style="display:inline;">(desu.)</span><span class="arr">→</span><span class="en">"It's [price]."</span></div>
+
+<div class="sh"><h2>This / that / that over there</h2><span class="pill pill-amber">Demonstratives</span></div>
+<table>
+  <thead><tr><th>Word</th><th>Points to</th><th>Before a noun</th></tr></thead>
+  <tbody>
+    <tr><td><span class="jp grn">この</span><span class="rom">kono</span></td><td>near the <strong>speaker</strong></td><td class="en">this [noun]</td></tr>
+    <tr><td><span class="jp grn">その</span><span class="rom">sono</span></td><td>near the <strong>listener</strong></td><td class="en">that [noun]</td></tr>
+    <tr><td><span class="jp grn">あの</span><span class="rom">ano</span></td><td>far from <strong>both</strong></td><td class="en">that [noun] over there</td></tr>
+    <tr><td><span class="jp grn">どの</span><span class="rom">dono</span></td><td>asking <strong>which</strong> one</td><td class="en">which [noun]?</td></tr>
+  </tbody>
+</table>
+<div class="note-box" style="border-color:var(--teal);background:#eef6f6;">
+  <span class="nlabel" style="color:var(--teal);">Duolingo</span>
+  <strong>どの ケーキを 買いますか？</strong> <span class="rom" style="display:inline;">(dono keeki o kaimasu ka?)</span> = "Which cake will you buy?"
+</div>
+<div class="ex-block">
+  <span class="ex-label">Example · price question</span>
+  <div class="english">"Excuse me. How much is this hair dryer?"</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">すみません。</span><span class="rom2">sumimasen.</span></div><div class="jp-token"><span class="kana">この</span><span class="rom2">kono</span></div><div class="tbox red-b"><span class="kana">ドライヤー</span><span class="rom2">doraiyaa</span></div><div class="jp-token"><span class="kana">は</span><span class="rom2">wa</span></div><div class="tbox red-b"><span class="kana">いくらですか？</span><span class="rom2">ikura desu ka?</span></div>
+  </div>
+  <div class="stem-note">この + noun · いくら = how much</div>
+</div>
+<div class="ex-block">
+  <span class="ex-label">Example · total</span>
+  <div class="english">"Excuse me. How much is everything altogether?"</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">すみません。</span><span class="rom2">sumimasen.</span></div><div class="tbox red-b"><span class="kana">ぜんぶで</span><span class="rom2">zenbu de</span></div><div class="tbox red-b"><span class="kana">いくらですか？</span><span class="rom2">ikura desu ka?</span></div>
+  </div>
+  <div class="stem-note">ぜんぶで = altogether / in total</div>
+</div>
+<div class="sh"><h2>Commenting on the price</h2><span class="pill pill-teal">Duolingo</span></div>
+<table>
+  <thead><tr><th>English</th><th>Japanese</th></tr></thead>
+  <tbody>
+    <tr><td class="en">How much is the udon?</td><td><span class="jp grn">うどんは いくらですか。</span><span class="rom">udon wa ikura desu ka.</span></td></tr>
+    <tr><td class="en">Is that cake shop expensive?</td><td><span class="jp grn">あの ケーキやは たかいですか。</span><span class="rom">ano keekiya wa takai desu ka.</span></td></tr>
+    <tr><td class="en">This cheesecake is a little expensive, isn't it?</td><td><span class="jp grn">この チーズケーキは すこし たかいですね。</span><span class="rom">kono chiizukeeki wa sukoshi takai desu ne.</span></td></tr>
+  </tbody>
+</table>
+<div class="note-box" style="border-color:var(--teal);background:#eef6f6;">
+  <span class="nlabel" style="color:var(--teal);">Vocabulary</span>
+  <strong>たかい</strong> <span class="rom" style="display:inline;">(takai)</span> = expensive · <strong>やすい</strong> <span class="rom" style="display:inline;">(yasui)</span> = cheap (extra) · <strong>すこし</strong> <span class="rom" style="display:inline;">(sukoshi)</span> = a little · <strong>ね</strong> <span class="rom" style="display:inline;">(ne)</span> at the end = "…, isn't it?" (looking for agreement).
+</div>
+<hr class="rule">
+
+<div class="sh"><h2>2 · Do you have…?</h2><span class="pill pill-teal">Availability</span></div>
+<div class="note-box">
+  <span class="nlabel">Key Rule</span>
+  <strong>[item] は ありますか</strong> <span class="rom" style="display:inline;">([item] wa arimasu ka)</span> = "Do you have [item]?" The answers are <strong>はい、あります</strong> <span class="rom" style="display:inline;">(hai, arimasu)</span> (yes) and <strong>すみません、ありません</strong> <span class="rom" style="display:inline;">(sumimasen, arimasen)</span> (sorry, no). Two nouns are linked with <strong>の</strong> <span class="rom" style="display:inline;">(no)</span>, for example えいごの メニュー <span class="rom" style="display:inline;">(eigo no menyuu)</span> (an English menu).
+</div>
+<div class="formula"><span class="jp red">すみません。</span><span class="jp ">[item]</span><span class="jp ">は</span><span class="rom" style="display:inline;">(wa)</span><span class="jp grn">ありますか?</span><span class="rom" style="display:inline;">(arimasu ka?)</span><span class="arr">→</span><span class="en">"Excuse me, do you have [item]?"</span></div>
+<table>
+  <thead><tr><th>English</th><th>Japanese</th></tr></thead>
+  <tbody>
+    <tr><td class="en">Do you have an English menu?</td><td><span class="jp grn">すみません。えいごの メニューは ありますか？</span><span class="rom">sumimasen. eigo no menyuu wa arimasu ka?</span></td></tr>
+    <tr><td class="en">Do you have a size M?</td><td><span class="jp grn">すみません。Mサイズは ありますか？</span><span class="rom">sumimasen. emu saizu wa arimasu ka?</span></td></tr>
+    <tr><td class="en">Yes, we have it.</td><td><span class="jp grn">はい、あります。</span><span class="rom">hai, arimasu.</span></td></tr>
+    <tr><td class="en">I'm sorry, we don't have it.</td><td><span class="jp red">すみません、ありません。</span><span class="rom">sumimasen, arimasen.</span></td></tr>
+  </tbody>
+</table>
+<hr class="rule">
+
+<div class="sh"><h2>3 · Ordering — を ください</h2><span class="pill pill-amber">Extra</span></div>
+<div class="note-box">
+  <span class="nlabel">Key Rule</span>
+  To ask for something, say <strong>[item] を ください</strong> <span class="rom" style="display:inline;">([item] o kudasai)</span> = "Please give me [item]." It is the most common phrase in a shop or restaurant. With <strong>これ</strong> <span class="rom" style="display:inline;">(kore)</span> (this) and <strong>それ</strong> <span class="rom" style="display:inline;">(sore)</span> (that) you can just point: <strong>これを ください</strong>.
+</div>
+<div class="formula"><span class="jp red">[item]</span><span class="jp ">を</span><span class="rom" style="display:inline;">(o)</span><span class="jp grn">ください。</span><span class="rom" style="display:inline;">(kudasai.)</span><span class="arr">→</span><span class="en">"[Item], please."</span></div>
+<div class="note-box" style="border-color:var(--red);background:#fff5f5;">
+  <span class="nlabel" style="color:var(--red);">Two different ください</span>
+  <strong>Noun を ください</strong> <span class="rom" style="display:inline;">(o kudasai)</span> = "give me [noun]". <strong>Verb て-form + ください</strong> <span class="rom" style="display:inline;">(te-form + kudasai)</span> = "please do [verb]" (see the て-form guide). Same word, different pattern before it.
+</div>
+
+<div class="sh"><h2>Counting items</h2><span class="pill pill-amber">Extra</span></div>
+<div class="note-box">
+  <span class="nlabel">Key Rule</span>
+  Put the quantity <strong>right after the item and before ください</strong>, with <strong>no particle</strong> after the number: <strong>[item] を [quantity] ください</strong>.
+</div>
+<div class="formula"><span class="jp red">[item]</span><span class="jp ">を</span><span class="rom" style="display:inline;">(o)</span><span class="jp grn">[quantity]</span><span class="jp ">ください。</span><span class="rom" style="display:inline;">(kudasai.)</span><span class="arr">→</span><span class="en">"[quantity] of [item], please."</span></div>
+<table>
+  <thead><tr><th>Number</th><th>General counter (items)</th><th>Kanji</th></tr></thead>
+  <tbody>
+    <tr><td><strong>1</strong></td><td><span class="jp grn">ひとつ</span><span class="rom">hitotsu</span></td><td><span class="jp">一つ</span></td></tr>
+    <tr><td><strong>2</strong></td><td><span class="jp grn">ふたつ</span><span class="rom">futatsu</span></td><td><span class="jp">二つ</span></td></tr>
+    <tr><td><strong>3</strong></td><td><span class="jp grn">みっつ</span><span class="rom">mittsu</span></td><td><span class="jp">三つ</span></td></tr>
+    <tr><td><strong>4</strong></td><td><span class="jp grn">よっつ</span><span class="rom">yottsu</span></td><td><span class="jp">四つ</span></td></tr>
+    <tr><td><strong>5</strong></td><td><span class="jp grn">いつつ</span><span class="rom">itsutsu</span></td><td><span class="jp">五つ</span></td></tr>
+    <tr><td><strong>6</strong></td><td><span class="jp grn">むっつ</span><span class="rom">muttsu</span></td><td><span class="jp">六つ</span></td></tr>
+    <tr><td><strong>7</strong></td><td><span class="jp grn">ななつ</span><span class="rom">nanatsu</span></td><td><span class="jp">七つ</span></td></tr>
+    <tr><td><strong>8</strong></td><td><span class="jp grn">やっつ</span><span class="rom">yattsu</span></td><td><span class="jp">八つ</span></td></tr>
+    <tr><td><strong>9</strong></td><td><span class="jp grn">ここのつ</span><span class="rom">kokonotsu</span></td><td><span class="jp">九つ</span></td></tr>
+    <tr><td><strong>10</strong></td><td><span class="jp grn">とお</span><span class="rom">too</span></td><td><span class="jp">十</span></td></tr>
+  </tbody>
+</table>
+<div class="ex-block">
+  <span class="ex-label">Example · one of this</span>
+  <div class="english">"One of these, please."</div>
+  <div class="jp-row">
+    <div class="tbox red-b"><span class="kana">これを</span><span class="rom2">kore o</span></div><div class="tbox red-b"><span class="kana">ひとつ</span><span class="rom2">hitotsu</span></div><div class="tbox red-b"><span class="kana">ください。</span><span class="rom2">kudasai.</span></div>
+  </div>
+  <div class="stem-note">Item + を + quantity + ください</div>
+</div>
+<div class="ex-block">
+  <span class="ex-label">Example · two of that (menu)</span>
+  <div class="english">"Two beers, please."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">ビールを</span><span class="rom2">biiru o</span></div><div class="tbox red-b"><span class="kana">ふたつ</span><span class="rom2">futatsu</span></div><div class="tbox red-b"><span class="kana">ください。</span><span class="rom2">kudasai.</span></div>
+  </div>
+  <div class="stem-note">Drinks and food on a menu work the same way</div>
+</div>
+<div class="ex-block">
+  <span class="ex-label">Example · three of that</span>
+  <div class="english">"Three of those cakes, please."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">その ケーキを</span><span class="rom2">sono keeki o</span></div><div class="tbox red-b"><span class="kana">みっつ</span><span class="rom2">mittsu</span></div><div class="tbox red-b"><span class="kana">ください。</span><span class="rom2">kudasai.</span></div>
+  </div>
+</div>
+<div class="ex-block">
+  <span class="ex-label">Example · Duolingo · no quantity</span>
+  <div class="english">"Excuse me, ramen please."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">すみません、</span><span class="rom2">sumimasen,</span></div>
+    <div class="jp-token"><span class="kana">ラーメンを</span><span class="rom2">raamen o</span></div>
+    <div class="tbox red-b"><span class="kana">ください。</span><span class="rom2">kudasai.</span></div>
+  </div>
+  <div class="stem-note">Without a number you simply get one serving</div>
+</div>
+<div class="ex-block">
+  <span class="ex-label">Example · Duolingo · じゃあ + quantity</span>
+  <div class="english">"Then two (glasses of) water, please." / "Two donuts, please!"</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">じゃあ、</span><span class="rom2">jaa,</span></div>
+    <div class="jp-token"><span class="kana">水(みず)を</span><span class="rom2">mizu o</span></div>
+    <div class="tbox red-b"><span class="kana">二(ふた)つ</span><span class="rom2">futatsu</span></div>
+    <div class="tbox red-b"><span class="kana">ください。</span><span class="rom2">kudasai.</span></div>
+  </div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">ドーナツを</span><span class="rom2">doonatsu o</span></div>
+    <div class="tbox red-b"><span class="kana">二(ふた)つ</span><span class="rom2">futatsu</span></div>
+    <div class="tbox red-b"><span class="kana">ください！</span><span class="rom2">kudasai!</span></div>
+  </div>
+  <div class="stem-note">じゃあ = "well then" (used when deciding after hearing the price or options)</div>
+</div>
+<hr class="rule">
+
+<div class="sh"><h2>4 · Asking for the check</h2><span class="pill pill-amber">Extra</span></div>
+<div class="note-box">
+  <span class="nlabel">Key Rule</span>
+  Call the waiter with <strong>すみません</strong> <span class="rom" style="display:inline;">(sumimasen)</span>, then ask for the bill with <strong>おかいけいを おねがいします</strong> <span class="rom" style="display:inline;">(okaikei o onegaishimasu)</span>. <strong>おねがいします</strong> <span class="rom" style="display:inline;">(onegaishimasu)</span> = "please (do this for me)", the same phrase as in the taxi exercises (〜までおねがいします). Many people shorten it to <strong>おかいけい、おねがいします</strong>.
+</div>
+<table>
+  <thead><tr><th>English</th><th>Japanese</th></tr></thead>
+  <tbody>
+    <tr><td class="en">Excuse me. The check, please.</td><td><span class="jp grn">すみません。おかいけいを おねがいします。</span><span class="rom">sumimasen. okaikei o onegaishimasu.</span></td></tr>
+    <tr><td class="en">The check, please. (short)</td><td><span class="jp grn">おかいけい、おねがいします。</span><span class="rom">okaikei, onegaishimasu.</span></td></tr>
+    <tr><td class="en">Excuse me. How much is it altogether?</td><td><span class="jp grn">すみません。ぜんぶで いくらですか？</span><span class="rom">sumimasen. zenbu de ikura desu ka?</span></td></tr>
+  </tbody>
+</table>
+
+<div class="sh"><h2>5 · Paying by card or cash</h2><span class="pill pill-amber">Extra</span></div>
+<div class="note-box">
+  <span class="nlabel">Key Rule</span>
+  <strong>[payment] は つかえますか</strong> <span class="rom" style="display:inline;">([payment] wa tsukaemasu ka)</span> = "Can I use [payment]?" <strong>つかえます</strong> <span class="rom" style="display:inline;">(tsukaemasu)</span> is the potential form of つかう <span class="rom" style="display:inline;">(tsukau)</span> (to use), so this reuses the potential-form guide.
+</div>
+<table>
+  <thead><tr><th>English</th><th>Japanese</th></tr></thead>
+  <tbody>
+    <tr><td class="en">Can I use a card?</td><td><span class="jp grn">カードは つかえますか？</span><span class="rom">kaado wa tsukaemasu ka?</span></td></tr>
+    <tr><td class="en">Yes, you can.</td><td><span class="jp grn">はい、つかえます。</span><span class="rom">hai, tsukaemasu.</span></td></tr>
+    <tr><td class="en">Sorry, you can't.</td><td><span class="jp red">すみません、つかえません。</span><span class="rom">sumimasen, tsukaemasen.</span></td></tr>
+  </tbody>
+</table>
+<hr class="rule">
+
+<div class="sh"><h2>6 · Prices in yen</h2><span class="pill pill-amber">Extra</span></div>
+<div class="note-box">
+  <span class="nlabel">Key Rule</span>
+  Prices are <strong>number + 円</strong> <span class="rom" style="display:inline;">(en)</span>, then <strong>です</strong> <span class="rom" style="display:inline;">(desu)</span>: <strong>ごひゃくえんです</strong> <span class="rom" style="display:inline;">(gohyaku en desu)</span> = "It's 500 yen." Hundreds and thousands have a few sound changes, shown in <span class="red">red</span> below.
+</div>
+<table>
+  <thead><tr><th>Number</th><th>Reading</th></tr></thead>
+  <tbody>
+    <tr><td><strong>100</strong></td><td><span class="jp grn">ひゃく</span><span class="rom">hyaku</span></td></tr>
+    <tr><td><strong>200</strong></td><td><span class="jp grn">にひゃく</span><span class="rom">nihyaku</span></td></tr>
+    <tr><td><strong>300</strong></td><td><span class="jp red">さんびゃく</span><span class="rom">sanbyaku</span></td></tr>
+    <tr><td><strong>400</strong></td><td><span class="jp grn">よんひゃく</span><span class="rom">yonhyaku</span></td></tr>
+    <tr><td><strong>500</strong></td><td><span class="jp grn">ごひゃく</span><span class="rom">gohyaku</span></td></tr>
+    <tr><td><strong>600</strong></td><td><span class="jp red">ろっぴゃく</span><span class="rom">roppyaku</span></td></tr>
+    <tr><td><strong>700</strong></td><td><span class="jp grn">ななひゃく</span><span class="rom">nanahyaku</span></td></tr>
+    <tr><td><strong>800</strong></td><td><span class="jp red">はっぴゃく</span><span class="rom">happyaku</span></td></tr>
+    <tr><td><strong>900</strong></td><td><span class="jp grn">きゅうひゃく</span><span class="rom">kyuuhyaku</span></td></tr>
+    <tr><td><strong>1,000</strong></td><td><span class="jp grn">せん</span><span class="rom">sen</span></td></tr>
+    <tr><td><strong>2,000</strong></td><td><span class="jp grn">にせん</span><span class="rom">nisen</span></td></tr>
+    <tr><td><strong>3,000</strong></td><td><span class="jp red">さんぜん</span><span class="rom">sanzen</span></td></tr>
+    <tr><td><strong>8,000</strong></td><td><span class="jp red">はっせん</span><span class="rom">hassen</span></td></tr>
+    <tr><td><strong>10,000</strong></td><td><span class="jp grn">いちまん</span><span class="rom">ichiman</span></td></tr>
+  </tbody>
+</table>
+<div class="ex-block">
+  <span class="ex-label">Example · hearing a price</span>
+  <div class="english">"It's 1,500 yen."</div>
+  <div class="jp-row">
+    <div class="tbox red-b"><span class="kana">せんごひゃくえん</span><span class="rom2">sen gohyaku en</span></div><div class="jp-token"><span class="kana">です。</span><span class="rom2">desu.</span></div>
+  </div>
+  <div class="stem-note">1,000 + 500 + 円</div>
+</div>
+<div class="ex-block">
+  <span class="ex-label">Example · full exchange</span>
+  <div class="english">"How much is that bag?" — "It's 3,000 yen."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">そのかばんは</span><span class="rom2">sono kaban wa</span></div><div class="tbox red-b"><span class="kana">いくらですか？</span><span class="rom2">ikura desu ka?</span></div><div class="jp-token"><span class="kana">→</span><span class="rom2">→</span></div><div class="tbox red-b"><span class="kana">さんぜんえんです。</span><span class="rom2">sanzen en desu.</span></div>
+  </div>
+  <div class="stem-note">Red numbers (さんぜん) are irregular</div>
+</div>
+
+<hr class="rule">
+
+<div class="sh"><h2>7 · Putting it together</h2><span class="pill pill-coral">Extra</span></div>
+<table>
+  <thead><tr><th>Situation</th><th>Japanese</th></tr></thead>
+  <tbody>
+    <tr><td class="en">Ask the price</td><td><span class="jp grn">すみません。この かばんは いくらですか？</span><span class="rom">sumimasen. kono kaban wa ikura desu ka?</span></td></tr>
+    <tr><td class="en">Ask if they have it</td><td><span class="jp grn">すみません。ちずは ありますか？</span><span class="rom">sumimasen. chizu wa arimasu ka?</span></td></tr>
+    <tr><td class="en">Order one</td><td><span class="jp grn">これを ひとつ ください。</span><span class="rom">kore o hitotsu kudasai.</span></td></tr>
+    <tr><td class="en">Order two</td><td><span class="jp grn">コーヒーを ふたつ ください。</span><span class="rom">koohii o futatsu kudasai.</span></td></tr>
+    <tr><td class="en">Ask for the check</td><td><span class="jp grn">おかいけいを おねがいします。</span><span class="rom">okaikei o onegaishimasu.</span></td></tr>
+    <tr><td class="en">Ask about paying</td><td><span class="jp grn">カードは つかえますか？</span><span class="rom">kaado wa tsukaemasu ka?</span></td></tr>
+  </tbody>
+</table>
+
+</body>
+</html>
