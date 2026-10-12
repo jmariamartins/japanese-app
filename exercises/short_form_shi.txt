@@ -1,0 +1,171 @@
+# TOPIC: Short Form + し — Giving Two (or More) Reasons (〜し〜し)
+# LEVEL: intermediate
+
+# ─────────────────────────────────────────
+# Structure:
+#   [reason 1 short form] し、[reason 2 short form] し、[situation]。
+#   = (situation), because X and Y (and more)
+# し replaces から when you give two or more reasons.
+# Short forms before し:
+#   い-adjective: おもしろい し (NO だ)
+#   な-adjective: 親切だ し    (だ appears)
+#   noun:         休みだ し    (だ appears)
+#   verb:         会った し / 会わない し
+# A single し clause implies "that's not the only reason" (for one thing…).
+# The し clauses can also come AFTER the situation:
+#   まりはいい先生です。教えるのが上手だし、親切だし。
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: I really like my Japanese class, because Japanese is interesting and our teacher is good.
+ROM: Nihongo wa omoshiroi shi, sensei wa ii shi, nihongo no jugyou ga daisuki desu.
+JP: 日本語はおもしろいし、先生はいいし、日本語の授業が大好きです。
+HINT: reason + し、reason + し、situation · おもしろい (omoshiroi) and いい (ii) are い-adjectives → short form, NO だ · だいすき (daisuki) = really like
+
+---
+DIR: EN>JP
+Q: Yesterday was a great day because I met my family and talked with my boyfriend on the phone.
+ROM: Kazoku ni atta shi, kareshi to denwa de hanashita shi, kinou wa subarashii hi deshita.
+JP: 家族に会ったし、彼氏と電話で話したし、昨日は素晴らしい日でした。
+HINT: verbs before し use the past short form: あう (au) → あった (atta), はなす (hanasu) → はなした (hanashita) · すばらしい (subarashii) = wonderful
+
+---
+DIR: EN>JP
+Q: Things are inexpensive, for one thing, and life in this city is easygoing.
+ROM: Bukka ga yasui shi, kono machi no seikatsu wa raku desu.
+JP: 物価が安いし、この町の生活は楽です。
+HINT: a single し clause implies it is not the only reason ("for one thing") · やすい (yasui) = cheap · ぶっか (bukka) = prices · らく (raku) = easygoing
+
+---
+DIR: EN>JP
+Q: Mari is a great teacher. She is good at teaching, and she is kind.
+ROM: Mari wa ii sensei desu. Oshieru no ga jouzu da shi, shinsetsu da shi.
+JP: まりはいい先生です。教えるのが上手だし、親切だし。
+HINT: し clauses can come AFTER the situation · じょうず (jouzu) and しんせつ (shinsetsu) are な-adjectives → だ + し (da shi) · おしえる (oshieru) = to teach
+
+---
+DIR: EN>JP
+Q: I don't want to wake up because it is cold and I am sleepy.
+ROM: Samui shi, nemutai shi, okitaku arimasen.
+JP: 寒いし、眠たいし、起きたくありません。
+HINT: さむい (samui) and ねむたい (nemutai) = い-adjectives, short form + し (no だ) · おきたくありません (okitaku arimasen) = don't want to wake up (stem + たくありません)
+
+---
+DIR: EN>JP
+Q: Tom is popular because he is smart and can play the guitar.
+ROM: Atama ga ii shi, gitaa ga hikeru shi, Tomu wa ninki desu.
+JP: 頭がいいし、ギターが弾けるし、トムは人気です。
+HINT: あたまがいい (atama ga ii) = smart (lit. head is good) · ひく (hiku) → ひける (hikeru) = can play (potential) · ギター (gitaa) = guitar · にんき (ninki) = popular
+
+---
+DIR: EN>JP
+Q: Today is busy because I have a test tomorrow and I have to meet Taka.
+ROM: Ashita tesuto ga aru shi, Taka ni awanakucha ikenai shi, kyou wa isogashii desu.
+JP: 明日テストがあるし、たかに会わなくちゃいけないし、今日は忙しいです。
+HINT: ある (aru) = short form of あります · あわなくちゃいけない (awanakucha ikenai) = have to meet (short form of ～なければいけません) · いそがしい (isogashii) = busy
+
+---
+DIR: EN>JP
+Q: I like this restaurant because the food is delicious and the staff are kind.
+ROM: Kono mise no gohan wa oishii shi, ten'in-san wa shinsetsu da shi, kono mise ga suki desu.
+JP: この店のご飯はおいしいし、店員さんは親切だし、この店が好きです。
+HINT: おいしい (oishii) = い-adjective, no だ · しんせつ (shinsetsu) = な-adjective, so だし (da shi) · てんいん (ten'in) = shop staff
+
+---
+DIR: EN>JP
+Q: I want to stay home because it is raining and tomorrow is a holiday.
+ROM: Ame ga futte iru shi, ashita wa yasumi da shi, uchi ni itai desu.
+JP: 雨が降っているし、明日は休みだし、うちにいたいです。
+HINT: ふっている (futte iru) = is raining, short form + し · やすみ (yasumi) = holiday is a noun → だし (da shi) · いたい (itai) = want to be (stem + たい)
+
+---
+DIR: EN>JP
+Q: Yesterday was fun because the weather was nice and I met a friend.
+ROM: Tenki ga yokatta shi, tomodachi ni atta shi, kinou wa tanoshikatta desu.
+JP: 天気がよかったし、友達に会ったし、昨日は楽しかったです。
+HINT: past short forms before し: いい (ii) → よかった (yokatta, irregular), あう → あった (atta) · たのしい (tanoshii) → たのしかったです (tanoshikatta desu) · てんき (tenki) = weather
+
+---
+DIR: EN>JP
+Q: I won't go because I'm busy and I don't have any money.
+ROM: Isogashii shi, okane ga nai shi, ikimasen.
+JP: 忙しいし、お金がないし、行きません。
+HINT: negative short form before し: ない (nai) · いそがしい (isogashii) = busy · おかね (okane) = money · いきません (ikimasen) = won't go
+
+---
+DIR: EN>JP
+Q: I like this town. It's quiet, for one thing.
+ROM: Kono machi ga suki desu. Shizuka da shi.
+JP: この町が好きです。静かだし。
+HINT: single し after the situation = "for one thing" · しずか (shizuka) is a な-adjective → だし (da shi) · まち (machi) = town
+
+---
+DIR: EN>JP
+Q: I want to buy this bag because it is cheap and it is a present for my mother.
+ROM: Yasui shi, haha no purezento da shi, kono kaban o kaitai desu.
+JP: 安いし、母のプレゼントだし、このかばんを買いたいです。
+HINT: プレゼント (purezento) is a noun → だし (da shi) · やすい (yasui) = い-adjective, no だ · かいたい (kaitai) = want to buy · はは (haha) = my mother
+
+---
+DIR: EN>JP
+Q: Ken is a nice person. He is funny and he is kind.
+ROM: Ken wa ii hito desu. Omoshiroi shi, shinsetsu da shi.
+JP: けんはいい人です。おもしろいし、親切だし。
+HINT: situation first, then the し clauses · おもしろい (omoshiroi) = い-adjective, no だ · しんせつ (shinsetsu) = な-adjective, だし (da shi)
+
+---
+DIR: EN>JP
+Q: I can't go to the party because I have a lot of homework and I have to work.
+ROM: Shukudai ga takusan aru shi, hatarakanakucha ikenai shi, paatii ni ikemasen.
+JP: 宿題がたくさんあるし、働かなくちゃいけないし、パーティーに行けません。
+HINT: ある (aru) and はたらかなくちゃいけない (hatarakanakucha ikenai) are short forms · いけません (ikemasen) = can't go (potential of いく) · たくさん (takusan) = a lot
+
+---
+DIR: JP>EN
+Q_ROM: Nihongo wa omoshiroi shi, sensei wa ii shi, nihongo no jugyou ga daisuki desu.
+Q_JP: 日本語はおもしろいし、先生はいいし、日本語の授業が大好きです。
+A: I really like my Japanese class, because Japanese is interesting and our teacher is good.
+HINT: reason + し、reason + し、situation · おもしろい (omoshiroi) and いい (ii) are い-adjectives → short form, NO だ · だいすき (daisuki) = really like
+
+---
+DIR: JP>EN
+Q_ROM: Kazoku ni atta shi, kareshi to denwa de hanashita shi, kinou wa subarashii hi deshita.
+Q_JP: 家族に会ったし、彼氏と電話で話したし、昨日は素晴らしい日でした。
+A: Yesterday was a great day because I met my family and talked with my boyfriend on the phone.
+HINT: verbs before し use the past short form: あう (au) → あった (atta), はなす (hanasu) → はなした (hanashita) · すばらしい (subarashii) = wonderful
+
+---
+DIR: JP>EN
+Q_ROM: Bukka ga yasui shi, kono machi no seikatsu wa raku desu.
+Q_JP: 物価が安いし、この町の生活は楽です。
+A: Things are inexpensive, for one thing, and life in this city is easygoing.
+HINT: a single し clause implies it is not the only reason ("for one thing") · やすい (yasui) = cheap · ぶっか (bukka) = prices · らく (raku) = easygoing
+
+---
+DIR: JP>EN
+Q_ROM: Atama ga ii shi, gitaa ga hikeru shi, Tomu wa ninki desu.
+Q_JP: 頭がいいし、ギターが弾けるし、トムは人気です。
+A: Tom is popular because he is smart and can play the guitar.
+HINT: あたまがいい (atama ga ii) = smart (lit. head is good) · ひく (hiku) → ひける (hikeru) = can play (potential) · ギター (gitaa) = guitar · にんき (ninki) = popular
+
+---
+DIR: JP>EN
+Q_ROM: Tenki ga yokatta shi, tomodachi ni atta shi, kinou wa tanoshikatta desu.
+Q_JP: 天気がよかったし、友達に会ったし、昨日は楽しかったです。
+A: Yesterday was fun because the weather was nice and I met a friend.
+HINT: past short forms before し: いい (ii) → よかった (yokatta, irregular), あう → あった (atta) · たのしい (tanoshii) → たのしかったです (tanoshikatta desu) · てんき (tenki) = weather
+
+---
+DIR: JP>EN
+Q_ROM: Ken wa ii hito desu. Omoshiroi shi, shinsetsu da shi.
+Q_JP: けんはいい人です。おもしろいし、親切だし。
+A: Ken is a nice person. He is funny and he is kind.
+HINT: situation first, then the し clauses · おもしろい (omoshiroi) = い-adjective, no だ · しんせつ (shinsetsu) = な-adjective, だし (da shi)
+
+---
+DIR: JP>EN
+Q_ROM: Mari wa ii sensei desu. Oshieru no ga jouzu da shi, shinsetsu da shi.
+Q_JP: まりはいい先生です。教えるのが上手だし、親切だし。
+A: Mari is a great teacher. She is good at teaching, and she is kind.
+HINT: し clauses can come AFTER the situation · じょうず (jouzu) and しんせつ (shinsetsu) are な-adjectives → だ + し (da shi) · おしえる (oshieru) = to teach
