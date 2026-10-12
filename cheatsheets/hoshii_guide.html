@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ほしい Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:   #f5f0e8;
+    --dark:    #2c1f12;
+    --gold:    #b8962e;
+    --gold-lt: #faf6e8;
+    --red:     #c0392b;
+    --green:   #1a7a4a;
+    --muted:   #6b5d4f;
+    --row-alt: #ede8db;
+    --border:  #d4c9b0;
+    --purple:  #6a4c93;
+    --teal:    #2a7f7f;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--dark);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 2.2rem 2rem 3.5rem;
+  }
+
+  .page-title {
+    text-align: center; margin-bottom: 2rem;
+    padding-bottom: 1rem; border-bottom: 2px solid var(--gold);
+  }
+  .page-title h1 { font-family: 'Noto Serif JP', serif; font-size: 2.3rem; font-weight: 700; }
+  .page-title .sub { font-family: 'DM Mono', monospace; font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem; }
+  .page-title .badge {
+    display: inline-block; margin-top: 0.5rem; padding: 0.18rem 0.8rem;
+    border-radius: 999px; font-family: 'DM Mono', monospace; font-size: 0.72rem;
+    background: var(--purple); color: #fff; letter-spacing: 0.06em; text-transform: uppercase;
+  }
+
+  .sh { display: flex; align-items: center; gap: 0.6rem; margin: 1.8rem 0 0.75rem; }
+  .sh h2 { font-size: 1.2rem; font-weight: 700; }
+  .pill {
+    display: inline-block; padding: 0.13rem 0.65rem; border-radius: 999px;
+    font-family: 'DM Mono', monospace; font-size: 0.68rem;
+    text-transform: uppercase; letter-spacing: 0.07em;
+  }
+  .pill-purple { background: var(--purple); color: #fff; }
+  .pill-teal   { background: var(--teal);   color: #fff; }
+  .pill-coral  { background: var(--red);    color: #fff; }
+  .pill-amber  { background: var(--gold);   color: #fff; }
+
+  .note-box {
+    border-left: 4px solid var(--gold); background: var(--gold-lt);
+    padding: 0.7rem 1rem; margin: 0.65rem 0; border-radius: 0 6px 6px 0; font-size: 0.97rem;
+  }
+  .note-box .nlabel {
+    font-family: 'DM Mono', monospace; font-size: 0.67rem; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--gold); margin-bottom: 0.2rem; display: block;
+  }
+
+  .formula {
+    border-left: 4px solid var(--gold); background: #f0ebe0;
+    padding: 0.6rem 1rem; margin: 0.4rem 0; border-radius: 0 6px 6px 0;
+    font-family: 'DM Mono', monospace; font-size: 0.88rem;
+    display: flex; align-items: center; gap: 0.45rem; flex-wrap: wrap;
+  }
+  .formula .jp  { font-family: 'Noto Serif JP', serif; }
+  .formula .arr { color: var(--gold); }
+  .formula .red { color: var(--red); }
+  .formula .grn { color: var(--green); }
+  .formula .en  { font-style: italic; color: var(--muted); font-size: 0.82rem; }
+
+  /* Conjugation table */
+  table { width: 100%; border-collapse: collapse; margin: 0.8rem 0; font-size: 0.95rem; }
+  thead tr { background: var(--dark); color: #f5f0e8; border-bottom: 3px solid var(--gold); }
+  thead th {
+    padding: 0.5rem 0.85rem; font-family: 'DM Mono', monospace; font-size: 0.72rem;
+    text-transform: uppercase; letter-spacing: 0.07em; text-align: left;
+  }
+  tbody tr:nth-child(even) { background: var(--row-alt); }
+  tbody tr:nth-child(odd)  { background: var(--paper); }
+  tbody td { padding: 0.52rem 0.85rem; border-bottom: 1px solid var(--border); vertical-align: middle; line-height: 1.45; }
+  .jp  { font-family: 'Noto Serif JP', serif; }
+  .rom { font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--muted); display: block; }
+  .en  { font-style: italic; color: var(--muted); font-size: 0.88rem; }
+  .red { color: var(--red); }
+  .grn { color: var(--green); }
+
+  /* Example blocks */
+  .ex-block {
+    background: #faf6ee; border: 1px solid var(--border); border-radius: 8px;
+    padding: 0.8rem 1.1rem; margin: 0.6rem 0;
+  }
+  .ex-block .ex-label {
+    font-family: 'DM Mono', monospace; font-size: 0.67rem; text-transform: uppercase;
+    letter-spacing: 0.11em; color: var(--gold); margin-bottom: 0.4rem; display: block;
+  }
+  .ex-block .english {
+    font-style: italic; font-size: 0.97rem; margin-bottom: 0.6rem;
+    padding-bottom: 0.4rem; border-bottom: 1px dashed var(--border);
+  }
+  .jp-row { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 0.35rem 0.65rem; margin-bottom: 0.35rem; }
+  .jp-token { display: flex; flex-direction: column; align-items: center; gap: 0.04rem; }
+  .jp-token .kana { font-family: 'Noto Serif JP', serif; font-size: 1.05rem; }
+  .jp-token .rom2 { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted); }
+  .tbox {
+    border-radius: 7px; padding: 0.22rem 0.6rem;
+    display: flex; flex-direction: column; align-items: center; gap: 0.04rem;
+  }
+  .tbox .kana { font-family: 'Noto Serif JP', serif; font-size: 1.05rem; }
+  .tbox .rom2 { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted); }
+  .red-b { border: 2.5px solid var(--red);   background: #fef5f4; }
+  .stem-note {
+    font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted);
+    margin-top: 0.15rem;
+  }
+  .stem-note .red { color: var(--red); }
+
+  hr.rule { border: none; border-top: 1px solid var(--border); margin: 1.8rem 0; }
+</style>
+</head>
+<body>
+<div class="page-title">
+  <h1>ほしい</h1>
+  <div class="sub">[object] が ほしいです &nbsp;·&nbsp; "I want (a thing)"</div>
+  <span class="badge">Grammar · Intermediate</span>
+</div>
+
+<div class="sh"><h2>Formation</h2><span class="pill pill-purple">Rules</span></div>
+
+<div class="note-box">
+  <span class="nlabel">Key Rule</span>
+  Use <strong>ほしい</strong> to say you want a <strong>thing</strong> (a noun). The wanted object usually takes <strong>が</strong>. To say you don't want something, use <strong>は</strong> or <strong>が</strong> with ほしくない.
+</div>
+
+<div class="formula">
+  <span class="jp red">Object</span><span class="arr">+</span><span class="jp">が</span><span class="arr">+</span><span class="jp grn">ほしいです。</span>
+  <span class="arr">→</span><span class="en">"I want [object]"</span>
+</div>
+<div class="formula">
+  <span class="jp red">Object</span><span class="arr">+</span><span class="jp">は / が</span><span class="arr">+</span><span class="jp red">ほしくないです。</span>
+  <span class="arr">→</span><span class="en">"I don't want [object]"</span>
+</div>
+
+<div class="note-box" style="border-color:var(--teal);background:#eef6f6;">
+  <span class="nlabel" style="color:var(--teal);">ほしい vs たい</span>
+  <strong>ほしい</strong> goes with a <strong>thing</strong> (車が ほしい = I want a car). <strong>たい</strong> goes on a <strong>verb stem</strong> (食べたい = I want to eat). See the たい guide.
+</div>
+
+<div class="sh"><h2>Conjugation <span style="font-family:'DM Mono',monospace;font-size:0.8rem;font-weight:400;color:var(--muted);">(like い-adjective)</span></h2><span class="pill pill-amber">Forms</span></div>
+
+<table>
+  <thead><tr><th></th><th>Affirmative</th><th>Negative</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Present</strong></td>
+      <td><span class="jp grn">ほしいです</span><span class="rom">hoshii desu</span><span class="en">want…</span></td>
+      <td><span class="jp red">ほしくありません</span><span class="rom">hoshiku arimasen</span><span class="en">don't want… (also ほしくないです)</span></td></tr>
+    <tr><td><strong>Past</strong></td>
+      <td><span class="jp grn">ほしかったです</span><span class="rom">hoshikatta desu</span><span class="en">wanted…</span></td>
+      <td><span class="jp red">ほしくありませんでした</span><span class="rom">hoshiku arimasen deshita</span><span class="en">didn't want…</span></td></tr>
+  </tbody>
+</table>
+
+<hr class="rule">
+
+<div class="sh"><h2>Examples</h2><span class="pill pill-coral">Examples</span></div>
+
+<div class="ex-block">
+  <span class="ex-label">Example 1 · present affirmative</span>
+  <div class="english">"I want a good kanji dictionary."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">いい漢字(かんじ)の辞書(じしょ)</span><span class="rom2">ii kanji no jisho</span></div>
+    <div class="jp-token"><span class="kana">が</span><span class="rom2">ga</span></div>
+    <div class="tbox red-b"><span class="kana">ほしいです。</span><span class="rom2">hoshii desu.</span></div>
+  </div>
+</div>
+
+<div class="ex-block">
+  <span class="ex-label">Example 2 · past affirmative</span>
+  <div class="english">"I wanted a toy Godzilla."</div>
+  <div class="jp-row">
+    <div class="tbox red-b"><span class="kana">ゴジラのおもちゃ</span><span class="rom2">Gojira no omocha</span></div>
+    <div class="jp-token"><span class="kana">が</span><span class="rom2">ga</span></div>
+    <div class="tbox red-b"><span class="kana">ほしかったです。</span><span class="rom2">hoshikatta desu.</span></div>
+  </div>
+  <div class="stem-note">Boxed: the object wanted · ほしかったです = past affirmative of ほしい</div>
+</div>
+
+<div class="ex-block">
+  <span class="ex-label">Example 3 · present negative</span>
+  <div class="english">"I don't have much desire for money."</div>
+  <div class="jp-row">
+    <div class="tbox red-b"><span class="kana">お金(かね)</span><span class="rom2">okane</span></div>
+    <div class="jp-token"><span class="kana">は</span><span class="rom2">wa</span></div>
+    <div class="jp-token"><span class="kana">あまり</span><span class="rom2">amari</span></div>
+    <div class="tbox red-b"><span class="kana">ほしくありません。</span><span class="rom2">hoshiku arimasen.</span></div>
+  </div>
+  <div class="stem-note">Boxed: the object not wanted · ほしくありません = present negative of ほしい</div>
+</div>
+
+
+<div class="sh"><h2>More examples</h2><span class="pill pill-teal">Practice</span></div>
+
+<table>
+  <thead><tr><th>English</th><th>Japanese</th></tr></thead>
+  <tbody>
+    <tr><td class="en">I want a stuffed animal.</td><td><span class="jp grn">ぬいぐるみがほしいです。</span><span class="rom">nuigurumi ga hoshii desu.</span></td></tr>
+    <tr><td class="en">I don't want eggs.</td><td><span class="jp grn">卵(たまご)はほしくありません。</span><span class="rom">tamago wa hoshiku arimasen.</span></td></tr>
+    <tr><td class="en">I wanted holidays.</td><td><span class="jp grn">休日(きゅうじつ)がほしかったです。</span><span class="rom">kyuujitsu ga hoshikatta desu.</span></td></tr>
+    <tr><td class="en">I did not want a large dog.</td><td><span class="jp grn">大(おお)きい犬(いぬ)はほしくありませんでした。</span><span class="rom">ookii inu wa hoshiku arimasen deshita.</span></td></tr>
+  </tbody>
+</table>
+
+<hr class="rule">
+
+<div class="sh"><h2>Important: ほしい is for YOUR wants only</h2><span class="pill pill-coral">Key Rule</span></div>
+
+<div class="note-box" style="border-color:var(--red);background:#fff5f5;">
+  <span class="nlabel" style="color:var(--red);">Private predicates</span>
+  Like たい, <strong>ほしい</strong> is primarily limited to the <strong>first person</strong>. These words are called <strong>"private predicates"</strong>: they refer to inner sensations known only to the person feeling them.<br><br>
+  For a second or third person, Japanese needs an extra device. Others' wants are reported by <strong>quotation</strong>, <strong>guess</strong> or <strong>observation</strong>.
+</div>
+
+<hr class="rule">
+
+<div class="sh"><h2>Quoting — と言っています</h2><span class="pill pill-teal">Quotation</span></div>
+
+<div class="note-box">
+  <span class="nlabel">Rule</span>
+  Quote the people who say they feel the sensation: short form <strong>ほしい</strong> + <strong>と言っています</strong> ("someone says…").
+</div>
+
+<div class="ex-block">
+  <span class="ex-label">Quotation Example</span>
+  <div class="english">"Robert says he wants a laptop."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">ロバートは</span><span class="rom2">Robaato wa</span></div>
+    <div class="jp-token"><span class="kana">パソコンが</span><span class="rom2">pasokon ga</span></div>
+    <div class="tbox red-b"><span class="kana">ほしい</span><span class="rom2">hoshii</span></div>
+    <div class="jp-token"><span class="kana">と言(い)っています。</span><span class="rom2">to itte imasu.</span></div>
+  </div>
+  <div class="stem-note"><span class="red">ほしい</span> = present affirmative short form · と言っています = "someone says…"</div>
+</div>
+
+
+<div class="sh"><h2>Guessing — でしょう</h2><span class="pill pill-purple">Guess</span></div>
+
+<div class="note-box">
+  <span class="nlabel">Rule</span>
+  Make it clear you are only guessing: short form + <strong>でしょう</strong> ("probably").
+</div>
+
+<div class="ex-block">
+  <span class="ex-label">Guess Example</span>
+  <div class="english">"Probably Kyoko does not want a donut."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">きょうこは</span><span class="rom2">Kyouko wa</span></div>
+    <div class="jp-token"><span class="kana">ドーナツが</span><span class="rom2">doonatsu ga</span></div>
+    <div class="tbox red-b"><span class="kana">ほしくない</span><span class="rom2">hoshikunai</span></div>
+    <div class="jp-token"><span class="kana">でしょう。</span><span class="rom2">deshou.</span></div>
+  </div>
+  <div class="stem-note"><span class="red">ほしくない</span> = present negative short form · でしょう = guess / prediction</div>
+</div>
+
+
+<div class="sh"><h2>Observing — ほしがる</h2><span class="pill pill-amber">Observation</span></div>
+
+<div class="note-box">
+  <span class="nlabel">Rule</span>
+  <strong>ほしがる</strong> is the special verb counterpart of ほしい (just as <strong>たがる</strong> replaces たい). It conjugates as a <strong>u-verb</strong> and is usually used as <strong>ほしがっている</strong> to describe an observation that you currently think holds true.
+</div>
+
+<div class="note-box" style="border-color:var(--teal);background:#eef6f6;">
+  <span class="nlabel" style="color:var(--teal);">Particle note</span>
+  Unlike ほしい, the object of desire takes <strong>を</strong> with ほしがっている.
+</div>
+
+<table>
+  <thead><tr><th></th><th>Affirmative</th><th>Negative</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Present</strong></td><td><span class="jp grn">ほしがっています</span><span class="rom">hoshigatte imasu</span></td><td><span class="jp red">ほしがっていません</span><span class="rom">hoshigatte imasen</span></td></tr>
+    <tr><td><strong>Past</strong></td><td><span class="jp grn">ほしがっていました</span><span class="rom">hoshigatte imashita</span></td><td><span class="jp red">ほしがっていませんでした</span><span class="rom">hoshigatte imasen deshita</span></td></tr>
+  </tbody>
+</table>
+
+<div class="ex-block">
+  <span class="ex-label">Observation Example 1</span>
+  <div class="english">"(I understand that) Tom wants a friend."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">トムは</span><span class="rom2">Tomu wa</span></div>
+    <div class="tbox red-b"><span class="kana">友達(ともだち)</span><span class="rom2">tomodachi</span></div>
+    <div class="jp-token"><span class="kana">を</span><span class="rom2">o</span></div>
+    <div class="jp-token"><span class="kana">ほしがっています。</span><span class="rom2">hoshigatte imasu.</span></div>
+  </div>
+  <div class="stem-note">Boxed: desired object · を (not が)</div>
+</div>
+
+<div class="ex-block">
+  <span class="ex-label">Observation Example 2</span>
+  <div class="english">"Mika wants ice cream."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">みかは</span><span class="rom2">Mika wa</span></div>
+    <div class="tbox red-b"><span class="kana">アイスクリーム</span><span class="rom2">aisukuriimu</span></div>
+    <div class="jp-token"><span class="kana">を</span><span class="rom2">o</span></div>
+    <div class="jp-token"><span class="kana">ほしがっています。</span><span class="rom2">hoshigatte imasu.</span></div>
+  </div>
+  <div class="stem-note">を retained</div>
+</div>
+
+
+</body>
+</html>
