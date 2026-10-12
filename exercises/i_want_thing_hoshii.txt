@@ -1,0 +1,232 @@
+# TOPIC: I Want (Thing) — ほしい / ほしがる
+# LEVEL: intermediate
+
+# ─────────────────────────────────────────
+# Structure:
+#   [object] が ほしいです           = I want [object]
+#   [object] は/が ほしくないです    = I don't want [object]
+#   ほしい conjugates like an い-adjective:
+#     ほしいです / ほしくありません / ほしかったです / ほしくありませんでした
+# ほしい is a "private predicate": normally first person only.
+# For other people:
+#   Quotation:   [person] は [object] が ほしい と言っています
+#   Guess:       [person] は [object] が ほしくない でしょう
+#   Observation: [person] は [object] を ほしがっています  (note を, not が)
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: I want a good kanji dictionary.
+ROM: Ii kanji no jisho ga hoshii desu.
+JP: いい 漢字の 辞書が ほしいです。
+HINT: [object] が ほしいです = I want [object] · ほしい (hoshii) = want (a thing) · じしょ (jisho) = dictionary · かんじ (kanji) = kanji
+
+---
+DIR: EN>JP
+Q: I wanted a toy Godzilla.
+ROM: Gojira no omocha ga hoshikatta desu.
+JP: ゴジラの おもちゃが ほしかったです。
+HINT: past affirmative: ほしかったです (hoshikatta desu) · おもちゃ (omocha) = toy · ゴジラ (Gojira) = Godzilla
+
+---
+DIR: EN>JP
+Q: I don't have much desire for money.
+ROM: Okane wa amari hoshiku arimasen.
+JP: お金は あまり ほしくありません。
+HINT: present negative: ほしくありません (hoshiku arimasen) · あまり (amari) + negative = not much · おかね (okane) = money · は (wa) marks the unwanted object
+
+---
+DIR: EN>JP
+Q: Robert says he wants a laptop.
+ROM: Robaato wa pasokon ga hoshii to itte imasu.
+JP: ロバートは パソコンが ほしいと 言っています。
+HINT: quote someone's own words: ほしい (hoshii) + と いっています (to itte imasu) = says that… · パソコン (pasokon) = computer / laptop
+
+---
+DIR: EN>JP
+Q: Probably Kyoko does not want a donut.
+ROM: Kyouko wa doonatsu ga hoshikunai deshou.
+JP: きょうこは ドーナツが ほしくないでしょう。
+HINT: guess: negative short form ほしくない (hoshikunai) + でしょう (deshou) = probably · ドーナツ (doonatsu) = donut
+
+---
+DIR: EN>JP
+Q: (I understand that) Tom wants a friend.
+ROM: Tomu wa tomodachi o hoshigatte imasu.
+JP: トムは 友達を ほしがっています。
+HINT: observation: ほしがる (hoshigaru, u-verb) → ほしがっています (hoshigatte imasu) · the object takes を (o), NOT が · ともだち (tomodachi) = friend
+
+---
+DIR: EN>JP
+Q: I want a stuffed animal.
+ROM: Nuigurumi ga hoshii desu.
+JP: ぬいぐるみが ほしいです。
+HINT: ぬいぐるみ (nuigurumi) = stuffed animal · が (ga) marks the wanted object · ほしいです (hoshii desu)
+
+---
+DIR: EN>JP
+Q: I don't want eggs.
+ROM: Tamago wa hoshiku arimasen.
+JP: 卵は ほしくありません。
+HINT: たまご (tamago) = egg · は (wa) marks the unwanted object · ほしくありません (hoshiku arimasen) = present negative
+
+---
+DIR: EN>JP
+Q: I wanted holidays.
+ROM: Kyuujitsu ga hoshikatta desu.
+JP: 休日が ほしかったです。
+HINT: きゅうじつ (kyuujitsu) = holiday / day off · ほしかったです (hoshikatta desu) = past affirmative
+
+---
+DIR: EN>JP
+Q: I did not want a large dog.
+ROM: Ookii inu wa hoshiku arimasen deshita.
+JP: 大きい 犬は ほしくありませんでした。
+HINT: past negative: ほしくありませんでした (hoshiku arimasen deshita) · おおきい (ookii) = big · いぬ (inu) = dog
+
+---
+DIR: EN>JP
+Q: Mika wants ice cream.
+ROM: Mika wa aisukuriimu o hoshigatte imasu.
+JP: みかは アイスクリームを ほしがっています。
+HINT: ほしがっています (hoshigatte imasu) = (it seems) wants · を (o) marks the object · アイスクリーム (aisukuriimu) = ice cream
+
+---
+DIR: EN>JP
+Q: I want a new smartphone.
+ROM: Atarashii sumaho ga hoshii desu.
+JP: 新しい スマホが ほしいです。
+HINT: あたらしい (atarashii) = new · スマホ (sumaho) = smartphone · が (ga) + ほしいです (hoshii desu)
+
+---
+DIR: EN>JP
+Q: I want a car.
+ROM: Kuruma ga hoshii desu.
+JP: 車が ほしいです。
+HINT: くるま (kuruma) = car · が (ga) marks the wanted thing · ほしい (hoshii) is an い-adjective
+
+---
+DIR: EN>JP
+Q: I don't want a cat.
+ROM: Neko wa hoshikunai desu.
+JP: 猫は ほしくないです。
+HINT: ほしくないです (hoshikunai desu) = polite negative, same meaning as ほしくありません (hoshiku arimasen) · ねこ (neko) = cat
+
+---
+DIR: EN>JP
+Q: I wanted a bicycle.
+ROM: Jitensha ga hoshikatta desu.
+JP: 自転車が ほしかったです。
+HINT: past: ほしい → ほしかった (hoshikatta) + です (desu) · じてんしゃ (jitensha) = bicycle
+
+---
+DIR: EN>JP
+Q: I did not want a present.
+ROM: Purezento wa hoshiku arimasen deshita.
+JP: プレゼントは ほしくありませんでした。
+HINT: past negative: ほしくありませんでした (hoshiku arimasen deshita) · プレゼント (purezento) = present
+
+---
+DIR: EN>JP
+Q: Ken says he wants a camera.
+ROM: Ken wa kamera ga hoshii to itte imasu.
+JP: けんは カメラが ほしいと 言っています。
+HINT: quotation: ほしい + と いっています (to itte imasu) · カメラ (kamera) = camera
+
+---
+DIR: EN>JP
+Q: Ken said he did not want a dog.
+ROM: Ken wa inu ga hoshikunai to itte imashita.
+JP: けんは 犬が ほしくないと 言っていました。
+HINT: negative short form ほしくない (hoshikunai) + と いっていました (to itte imashita) = said that he didn't want
+
+---
+DIR: EN>JP
+Q: Probably Lisa wants a bag.
+ROM: Risa wa kaban ga hoshii deshou.
+JP: りさは かばんが ほしいでしょう。
+HINT: guess: ほしい (hoshii) + でしょう (deshou) = probably wants · かばん (kaban) = bag
+
+---
+DIR: EN>JP
+Q: My little brother wants a game.
+ROM: Otouto wa geemu o hoshigatte imasu.
+JP: 弟は ゲームを ほしがっています。
+HINT: ほしがっています (hoshigatte imasu) · the object takes を (o) · おとうと (otouto) = my younger brother · ゲーム (geemu) = game
+
+---
+DIR: EN>JP
+Q: Tom wanted a dog.
+ROM: Tomu wa inu o hoshigatte imashita.
+JP: トムは 犬を ほしがっていました。
+HINT: past observation: ほしがっていました (hoshigatte imashita) · を (o) marks the dog
+
+---
+DIR: EN>JP
+Q: (It seems) Mika does not want a pet.
+ROM: Mika wa petto o hoshigatte imasen.
+JP: みかは ペットを ほしがっていません。
+HINT: negative observation: ほしがっていません (hoshigatte imasen) · ペット (petto) = pet · を (o) stays
+
+---
+DIR: EN>JP
+Q: I want to eat ice cream.
+ROM: Aisukuriimu ga tabetai desu.
+JP: アイスクリームが 食べたいです。
+HINT: to want to DO something use verb stem + たい: たべたい (tabetai) · to want a THING use ほしい (hoshii) · contrast with アイスクリームが ほしいです (aisukuriimu ga hoshii desu)
+
+---
+DIR: EN>JP
+Q: I want some time.
+ROM: Jikan ga hoshii desu.
+JP: 時間が ほしいです。
+HINT: じかん (jikan) = time · が (ga) + ほしいです (hoshii desu) · ほしい works with abstract things too
+
+---
+DIR: JP>EN
+Q_ROM: Ii kanji no jisho ga hoshii desu.
+Q_JP: いい 漢字の 辞書が ほしいです。
+A: I want a good kanji dictionary.
+HINT: [object] が ほしいです = I want [object] · ほしい (hoshii) = want (a thing) · じしょ (jisho) = dictionary · かんじ (kanji) = kanji
+
+---
+DIR: JP>EN
+Q_ROM: Okane wa amari hoshiku arimasen.
+Q_JP: お金は あまり ほしくありません。
+A: I don't have much desire for money.
+HINT: present negative: ほしくありません (hoshiku arimasen) · あまり (amari) + negative = not much · おかね (okane) = money · は (wa) marks the unwanted object
+
+---
+DIR: JP>EN
+Q_ROM: Robaato wa pasokon ga hoshii to itte imasu.
+Q_JP: ロバートは パソコンが ほしいと 言っています。
+A: Robert says he wants a laptop.
+HINT: quote someone's own words: ほしい (hoshii) + と いっています (to itte imasu) = says that… · パソコン (pasokon) = computer / laptop
+
+---
+DIR: JP>EN
+Q_ROM: Kyouko wa doonatsu ga hoshikunai deshou.
+Q_JP: きょうこは ドーナツが ほしくないでしょう。
+A: Probably Kyoko does not want a donut.
+HINT: guess: negative short form ほしくない (hoshikunai) + でしょう (deshou) = probably · ドーナツ (doonatsu) = donut
+
+---
+DIR: JP>EN
+Q_ROM: Tomu wa tomodachi o hoshigatte imasu.
+Q_JP: トムは 友達を ほしがっています。
+A: (I understand that) Tom wants a friend.
+HINT: observation: ほしがる (hoshigaru, u-verb) → ほしがっています (hoshigatte imasu) · the object takes を (o), NOT が · ともだち (tomodachi) = friend
+
+---
+DIR: JP>EN
+Q_ROM: Ookii inu wa hoshiku arimasen deshita.
+Q_JP: 大きい 犬は ほしくありませんでした。
+A: I did not want a large dog.
+HINT: past negative: ほしくありませんでした (hoshiku arimasen deshita) · おおきい (ookii) = big · いぬ (inu) = dog
+
+---
+DIR: JP>EN
+Q_ROM: Mika wa aisukuriimu o hoshigatte imasu.
+Q_JP: みかは アイスクリームを ほしがっています。
+A: Mika wants ice cream.
+HINT: ほしがっています (hoshigatte imasu) = (it seems) wants · を (o) marks the object · アイスクリーム (aisukuriimu) = ice cream
