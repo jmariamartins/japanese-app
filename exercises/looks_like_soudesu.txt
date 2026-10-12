@@ -1,0 +1,255 @@
+# TOPIC: It Looks Like… — 〜そうです (appearance)
+# LEVEL: intermediate
+
+# ─────────────────────────────────────────
+# Structure (adjective + そうです = "looks / seems"):
+#   い-adjective: drop い + そう      おいしい → おいしそう
+#   な-adjective: drop な + そう      元気な → 元気そう
+#   いい → よさそう (irregular)
+#   Negative: ない → なさ + そう      難しくない → 難しくなさそう
+#                                    上手じゃない → 上手じゃなさそう
+#                                    よくない → よくなさそう
+# そう then conjugates like a な-adjective:
+#   そうです / そうじゃないです / そうでした / そうじゃなかったです / そうで
+# Before a noun: そうな       暖かそうなセーター
+# Verb stem + そうです = about to happen (imminent)
+#   雨が降りそうです。 Negative: 降りそうもありません。
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: This apple looks delicious.
+ROM: Kono ringo wa oishisou desu.
+JP: このりんごはおいしそうです。
+HINT: い-adjective: おいしい (oishii) → drop い + そう = おいしそう (oishisou) + です (desu) · りんご (ringo) = apple
+
+---
+DIR: EN>JP
+Q: It looks like the weather will be fine tomorrow.
+ROM: Ashita wa tenki ga yosasou desu.
+JP: 明日は天気が良さそうです。
+HINT: いい (ii) is irregular → よさそう (yosasou) · てんき (tenki) = weather · が (ga) marks the weather
+
+---
+DIR: EN>JP
+Q: It looked like Mary was fine.
+ROM: Mearii wa genki sou deshita.
+JP: メアリーは元気そうでした。
+HINT: な-adjective: げんきな (genki na) → drop な + そう = げんきそう (genki sou) · past: そうでした (sou deshita) = looked like
+
+---
+DIR: EN>JP
+Q: This book does not look difficult.
+ROM: Kono hon wa muzukashiku nasasou desu.
+JP: この本は難しくなさそうです。
+HINT: negative: むずかしくない (muzukashikunai) → ない becomes なさ + そう = むずかしくなさそう (muzukashiku nasasou) · ほん (hon) = book
+
+---
+DIR: EN>JP
+Q: It does not look like Tomoko is good at tennis.
+ROM: Tomoko wa tenisu ga jouzu ja nasasou desu.
+JP: ともこはテニスが上手じゃなさそうです。
+HINT: negative な-adjective: じょうずじゃない (jouzu ja nai) → じょうずじゃなさそう (jouzu ja nasasou) · じょうず (jouzu) = good at
+
+---
+DIR: EN>JP
+Q: She is wearing a warm-looking sweater.
+ROM: Atatakasou na seetaa o kite imasu.
+JP: 暖かそうなセーターを着ています。
+HINT: before a noun そう becomes そうな (sou na) like a な-adjective · あたたかい (atatakai) → あたたかそう · きています (kite imasu) = is wearing · セーター (seetaa) = sweater
+
+---
+DIR: EN>JP
+Q: It looks like it will rain.
+ROM: Ame ga furisou desu.
+JP: 雨が降りそうです。
+HINT: verb stem + そうです = about to happen · ふる (furu) → stem ふり (furi) + そう (sou) · あめ (ame) = rain
+
+---
+DIR: EN>JP
+Q: It does not look like it will rain.
+ROM: Ame ga furisou mo arimasen.
+JP: 雨が降りそうもありません。
+HINT: negative of stem + そう is irregular: ふりそう (furisou) + もありません (mo arimasen) · NOT ふりそうじゃない
+
+---
+DIR: EN>JP
+Q: This cake looks sweet.
+ROM: Kono keeki wa amasou desu.
+JP: このケーキは甘そうです。
+HINT: あまい (amai) → drop い + そう = あまそう (amasou) · ケーキ (keeki) = cake
+
+---
+DIR: EN>JP
+Q: Takeshi looks energetic.
+ROM: Takeshi wa genki sou desu.
+JP: たけしは元気そうです。
+HINT: な-adjective げんき (genki) + そう (sou) · drop な from げんきな · present affirmative: そうです (sou desu)
+
+---
+DIR: EN>JP
+Q: This book does not look interesting.
+ROM: Kono hon wa omoshiroku nasasou desu.
+JP: この本は面白くなさそうです。
+HINT: おもしろい (omoshiroi) → negative おもしろくない (omoshirokunai) → おもしろくなさそう (omoshiroku nasasou) · ない → なさ + そう
+
+---
+DIR: EN>JP
+Q: My Spanish teacher does not look kind.
+ROM: Watashi no supeingo no sensei wa shinsetsu ja nasasou desu.
+JP: 私のスペイン語の先生は親切じゃなさそうです。
+HINT: しんせつ (shinsetsu) is a な-adjective → しんせつじゃない (shinsetsu ja nai) → しんせつじゃなさそう (shinsetsu ja nasasou) · スペインご (supeingo) = Spanish language
+
+---
+DIR: EN>JP
+Q: Miki looked sad.
+ROM: Miki wa kanashisou deshita.
+JP: みきは悲しそうでした。
+HINT: かなしい (kanashii) → かなしそう (kanashisou) · past: そうでした (sou deshita) = looked
+
+---
+DIR: EN>JP
+Q: This soup looks hot.
+ROM: Kono suupu wa atsusou desu.
+JP: このスープは熱そうです。
+HINT: あつい (atsui, hot to the touch/taste) → あつそう (atsusou) · スープ (suupu) = soup
+
+---
+DIR: EN>JP
+Q: The test looks easy.
+ROM: Tesuto wa kantan sou desu.
+JP: テストは簡単そうです。
+HINT: かんたんな (kantan na) is a な-adjective → drop な + そう = かんたんそう (kantan sou) · テスト (tesuto) = test
+
+---
+DIR: EN>JP
+Q: That bag does not look cheap.
+ROM: Ano kaban wa yasuku nasasou desu.
+JP: あのかばんは安くなさそうです。
+HINT: やすい (yasui) → やすくない (yasukunai) → やすくなさそう (yasuku nasasou) · かばん (kaban) = bag
+
+---
+DIR: EN>JP
+Q: It looked like Ken was busy.
+ROM: Ken wa isogashisou deshita.
+JP: けんは忙しそうでした。
+HINT: いそがしい (isogashii) → いそがしそう (isogashisou) · past: そうでした (sou deshita)
+
+---
+DIR: EN>JP
+Q: This room looks big.
+ROM: Kono heya wa ookisou desu.
+JP: この部屋は大きそうです。
+HINT: おおきい (ookii) → drop い + そう = おおきそう (ookisou) · へや (heya) = room
+
+---
+DIR: EN>JP
+Q: Lisa looks like she is having fun.
+ROM: Risa wa tanoshisou desu.
+JP: りさは楽しそうです。
+HINT: たのしい (tanoshii) → たのしそう (tanoshisou) · looks like she is enjoying herself
+
+---
+DIR: EN>JP
+Q: Mary did not look happy.
+ROM: Mearii wa ureshisou ja nakatta desu.
+JP: メアリーは嬉しそうじゃなかったです。
+HINT: past negative: そうじゃなかったです (sou ja nakatta desu) · うれしい (ureshii) → うれしそう (ureshisou) · そう conjugates like a な-adjective
+
+---
+DIR: EN>JP
+Q: Mari looks happy and energetic.
+ROM: Mari wa ureshisou de, genki sou desu.
+JP: まりは嬉しそうで、元気そうです。
+HINT: te-form of そう = そうで (sou de) joins two descriptions · うれしそうで (ureshisou de) + げんきそうです (genki sou desu)
+
+---
+DIR: EN>JP
+Q: I want to eat that delicious-looking cake.
+ROM: Ano oishisou na keeki ga tabetai desu.
+JP: あのおいしそうなケーキが食べたいです。
+HINT: そうな (sou na) qualifies the noun ケーキ (keeki) · おいしそうな (oishisou na) = delicious-looking · たべたい (tabetai) = want to eat
+
+---
+DIR: EN>JP
+Q: It looks like the baby is going to cry.
+ROM: Akachan ga nakisou desu.
+JP: 赤ちゃんが泣きそうです。
+HINT: verb stem + そうです = about to happen · なく (naku) → stem なき (naki) + そう (sou) · あかちゃん (akachan) = baby
+
+---
+DIR: EN>JP
+Q: It looks like the cup is going to fall.
+ROM: Koppu ga ochisou desu.
+JP: コップが落ちそうです。
+HINT: おちる (ochiru, ru-verb) → stem おち (ochi) + そう (sou) = about to fall · コップ (koppu) = cup
+
+---
+DIR: EN>JP
+Q: This restaurant looks good.
+ROM: Kono resutoran wa yosasou desu.
+JP: このレストランはよさそうです。
+HINT: いい (ii) → よさそう (yosasou) · irregular: NOT いいそう · レストラン (resutoran) = restaurant
+
+---
+DIR: EN>JP
+Q: This restaurant does not look good.
+ROM: Kono resutoran wa yoku nasasou desu.
+JP: このレストランはよくなさそうです。
+HINT: いい → よくない (yokunai) → よくなさそう (yoku nasasou) · negative: ない → なさ + そう
+
+---
+DIR: JP>EN
+Q_ROM: Kono ringo wa oishisou desu.
+Q_JP: このりんごはおいしそうです。
+A: This apple looks delicious.
+HINT: い-adjective: おいしい (oishii) → drop い + そう = おいしそう (oishisou) + です (desu) · りんご (ringo) = apple
+
+---
+DIR: JP>EN
+Q_ROM: Ashita wa tenki ga yosasou desu.
+Q_JP: 明日は天気が良さそうです。
+A: It looks like the weather will be fine tomorrow.
+HINT: いい (ii) is irregular → よさそう (yosasou) · てんき (tenki) = weather · が (ga) marks the weather
+
+---
+DIR: JP>EN
+Q_ROM: Mearii wa genki sou deshita.
+Q_JP: メアリーは元気そうでした。
+A: It looked like Mary was fine.
+HINT: な-adjective: げんきな (genki na) → drop な + そう = げんきそう (genki sou) · past: そうでした (sou deshita) = looked like
+
+---
+DIR: JP>EN
+Q_ROM: Tomoko wa tenisu ga jouzu ja nasasou desu.
+Q_JP: ともこはテニスが上手じゃなさそうです。
+A: It does not look like Tomoko is good at tennis.
+HINT: negative な-adjective: じょうずじゃない (jouzu ja nai) → じょうずじゃなさそう (jouzu ja nasasou) · じょうず (jouzu) = good at
+
+---
+DIR: JP>EN
+Q_ROM: Atatakasou na seetaa o kite imasu.
+Q_JP: 暖かそうなセーターを着ています。
+A: She is wearing a warm-looking sweater.
+HINT: before a noun そう becomes そうな (sou na) like a な-adjective · あたたかい (atatakai) → あたたかそう · きています (kite imasu) = is wearing · セーター (seetaa) = sweater
+
+---
+DIR: JP>EN
+Q_ROM: Ame ga furisou mo arimasen.
+Q_JP: 雨が降りそうもありません。
+A: It does not look like it will rain.
+HINT: negative of stem + そう is irregular: ふりそう (furisou) + もありません (mo arimasen) · NOT ふりそうじゃない
+
+---
+DIR: JP>EN
+Q_ROM: Kono resutoran wa yoku nasasou desu.
+Q_JP: このレストランはよくなさそうです。
+A: This restaurant does not look good.
+HINT: いい → よくない (yokunai) → よくなさそう (yoku nasasou) · negative: ない → なさ + そう
+
+---
+DIR: JP>EN
+Q_ROM: Akachan ga nakisou desu.
+Q_JP: 赤ちゃんが泣きそうです。
+A: It looks like the baby is going to cry.
+HINT: verb stem + そうです = about to happen · なく (naku) → stem なき (naki) + そう (sou) · あかちゃん (akachan) = baby
