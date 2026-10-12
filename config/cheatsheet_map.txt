@@ -35,6 +35,7 @@ i_want_to_do                    > i_want_to_guide
 special_predicate_tari          > special_predicate_guide
 guess_prediction                > guess_prediction_guide
 looks_like_soudesu              > soudesu_guide
+nara_contrast                   > nara_guide
 
 time_all_sections > time_guide
 
