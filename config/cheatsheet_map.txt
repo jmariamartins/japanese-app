@@ -20,12 +20,13 @@ te_form_current_states          	> te_form_guide
 te_form_permissions_sequences   	> te_form_guide
 te_form_connecting_clauses      	> te_form_guide
 verb_stem_ni_iku                	> te_form_guide
-te_form_sequential_actions.txt	> te_form_guide
+te_form_sequential_actions     	> te_form_guide
 
 short_form_quotation            	> short_form_guide
 short_form_casual               	> short_form_guide
 short_form_past_casual          	> short_form_guide
 short_form_negative_requests	> short_form_guide
+short_form_shi                  	> short_form_shi_guide
 
 present_perfect_mou_mada        > present_perfect_guide
 comparison                      > comparison_guide
@@ -52,3 +53,5 @@ miscellaneous_because               > misc_guide
 miscellaneous_invitation            > misc_guide
 miscellaneous_experience            > misc_guide
 miscellaneous_indefinite_words      > misc_guide
+miscellaneous_pronoun_no            > pronoun_no_guide
+miscellaneous_something_anything    > misc_guide
