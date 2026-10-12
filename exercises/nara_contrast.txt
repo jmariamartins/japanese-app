@@ -1,0 +1,195 @@
+# TOPIC: Limitation & Contrast — Noun + なら (A なら X, but B は Y)
+# LEVEL: intermediate
+
+# ─────────────────────────────────────────
+# Structure:
+#   [Noun A] なら [positive predicate X]が、[Noun B] は [negative predicate Y]。
+#   = X applies only to A, and is not more generally valid.
+# Main ideas: LIMITATION and CONTRAST.
+# なら introduces a positive statement about the item that is contrasted.
+# The contrasted item takes は and a negative statement.
+#   Q: 肉をよく食べますか？ → 魚なら食べますが、肉は食べません。
+# Each question below shows the question in (parentheses), then the answer.
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: (Have you ever been to Brazil?) I've been to Mexico, but I've never been to Brazil.
+ROM: Mekishiko nara itta koto ga arimasu ga, Burajiru wa itta koto ga arimasen.
+JP: メキシコなら 行ったことがありますが、ブラジルは 行ったことがありません。
+HINT: A なら (positive) が、B は (negative) · いったことが あります (itta koto ga arimasu) = have been · なら (nara) limits the statement to Mexico · は (wa) marks the contrasted item
+
+---
+DIR: EN>JP
+Q: (Do you understand Japanese?) If it is in hiragana, yes.
+ROM: Hiragana nara wakarimasu.
+JP: ひらがななら わかります。
+HINT: なら (nara) = "if it is X / as for X" · ひらがな (hiragana) + なら (nara) → I understand it only in hiragana · わかります (wakarimasu) = understand
+
+---
+DIR: EN>JP
+Q: (Are you free on Saturday?) I will be free on Sunday, but I am not free on Saturday.
+ROM: Nichiyoubi nara hima desu ga, doyoubi wa hima ja arimasen.
+JP: 日曜日なら ひまですが、土曜日は ひまじゃありません。
+HINT: にちようび (nichiyoubi) なら (nara) = positive · どようび (doyoubi) は (wa) = contrasted, negative · ひまじゃありません (hima ja arimasen) = not free
+
+---
+DIR: EN>JP
+Q: (Do you often eat meat?) I eat fish, but I don't eat meat.
+ROM: Sakana nara tabemasu ga, niku wa tabemasen.
+JP: 魚なら 食べますが、肉は 食べません。
+HINT: さかな (sakana) = fish · にく (niku) = meat · なら (nara) = positive item · は (wa) = contrasted item with the negative verb
+
+---
+DIR: EN>JP
+Q: (Do you want to buy a motorbike?) I'd like to buy a car, but I don't want to buy a motorbike.
+ROM: Kuruma nara kaitai desu ga, baiku wa kaitaku nai desu.
+JP: 車なら 買いたいですが、バイクは 買いたくないです。
+HINT: くるま (kuruma) = car · バイク (baiku) = motorbike · かいたい (kaitai) = want to buy · かいたくない (kaitaku nai) = don't want to buy
+
+---
+DIR: EN>JP
+Q: (Have you ever owned a cat?) I've owned a dog, but I've never owned a cat.
+ROM: Inu nara katta koto ga arimasu ga, neko wa katta koto ga arimasen.
+JP: 犬なら 飼ったことがありますが、猫は 飼ったことがありません。
+HINT: いぬ (inu) = dog · ねこ (neko) = cat · かう (kau, to keep a pet) → かった (katta) + ことが あります (koto ga arimasu) = have done
+
+---
+DIR: EN>JP
+Q: (Can you speak English?) I can speak Japanese, but I can't speak English.
+ROM: Nihongo nara hanasemasu ga, eigo wa hanasemasen.
+JP: 日本語なら 話せますが、英語は 話せません。
+HINT: はなす (hanasu) → はなせる (hanaseru, potential) → はなせます (hanasemasu) / はなせません (hanasemasen) · えいご (eigo) = English
+
+---
+DIR: EN>JP
+Q: (Do you like coffee?) I like tea, but I don't like coffee.
+ROM: Ocha nara suki desu ga, koohii wa suki ja arimasen.
+JP: お茶なら 好きですが、コーヒーは 好きじゃありません。
+HINT: おちゃ (ocha) = tea · すき (suki) = like (な-adjective) · すきじゃありません (suki ja arimasen) = don't like
+
+---
+DIR: EN>JP
+Q: (Are you free tomorrow?) If it's the afternoon, I'm free, but I'm busy in the morning.
+ROM: Gogo nara hima desu ga, gozen wa isogashii desu.
+JP: 午後なら ひまですが、午前は いそがしいです。
+HINT: ごご (gogo) = afternoon · ごぜん (gozen) = morning (a.m.) · いそがしい (isogashii) = busy · なら (nara) limits the free time to the afternoon
+
+---
+DIR: EN>JP
+Q: (Do you like sports?) I like tennis, but I don't like soccer.
+ROM: Tenisu nara suki desu ga, sakkaa wa suki ja arimasen.
+JP: テニスなら 好きですが、サッカーは 好きじゃありません。
+HINT: テニス (tenisu) = tennis · サッカー (sakkaa) = soccer · なら (nara) = positive item, は (wa) = contrasted negative item
+
+---
+DIR: EN>JP
+Q: (Have you ever been to China?) I've been to Korea, but I've never been to China.
+ROM: Kankoku nara itta koto ga arimasu ga, Chuugoku wa itta koto ga arimasen.
+JP: 韓国なら 行ったことがありますが、中国は 行ったことがありません。
+HINT: かんこく (Kankoku) = Korea · ちゅうごく (Chuugoku) = China · いく (iku) → いった (itta) + ことが あります (koto ga arimasu)
+
+---
+DIR: EN>JP
+Q: (Can you cook?) I can make curry, but I can't make sushi.
+ROM: Karee nara tsukuremasu ga, sushi wa tsukuremasen.
+JP: カレーなら 作れますが、すしは 作れません。
+HINT: つくる (tsukuru) → つくれる (tsukureru, potential) → つくれます (tsukuremasu) / つくれません (tsukuremasen) · カレー (karee) = curry
+
+---
+DIR: EN>JP
+Q: (Did you eat pizza yesterday?) I ate pasta, but I didn't eat pizza.
+ROM: Pasuta nara tabemashita ga, piza wa tabemasen deshita.
+JP: パスタなら 食べましたが、ピザは 食べませんでした。
+HINT: past tense: たべました (tabemashita) / たべませんでした (tabemasen deshita) · パスタ (pasuta) = pasta · ピザ (piza) = pizza
+
+---
+DIR: EN>JP
+Q: (Do you want to go to the party?) If it's a small party, I want to go, but I don't want to go to a big party.
+ROM: Chiisai paatii nara ikitai desu ga, ookii paatii wa ikitaku nai desu.
+JP: 小さいパーティーなら 行きたいですが、大きいパーティーは 行きたくないです。
+HINT: なら (nara) can follow a noun with a describing word · ちいさい (chiisai) = small · おおきい (ookii) = big · いきたい (ikitai) = want to go · いきたくない (ikitaku nai) = don't want to go
+
+---
+DIR: EN>JP
+Q: (Can you read kanji?) If it's this kanji, I can read it, but I can't read that kanji.
+ROM: Kono kanji nara yomemasu ga, ano kanji wa yomemasen.
+JP: この漢字なら 読めますが、あの漢字は 読めません。
+HINT: よむ (yomu) → よめる (yomeru, potential) → よめます (yomemasu) / よめません (yomemasen) · この (kono) = this, あの (ano) = that (over there)
+
+---
+DIR: EN>JP
+Q: (Do you drink alcohol?) I drink beer, but I don't drink wine.
+ROM: Biiru nara nomimasu ga, wain wa nomimasen.
+JP: ビールなら 飲みますが、ワインは 飲みません。
+HINT: ビール (biiru) = beer · ワイン (wain) = wine · のむ (nomu) → のみます (nomimasu) / のみません (nomimasen)
+
+---
+DIR: EN>JP
+Q: (Do you understand Japanese?) If it's easy Japanese, yes.
+ROM: Yasashii nihongo nara wakarimasu.
+JP: やさしい 日本語なら わかります。
+HINT: やさしい (yasashii) = easy · modifier + noun + なら (nara) · limits understanding to easy Japanese only
+
+---
+DIR: EN>JP
+Q: (Can you come tomorrow?) If it's Wednesday, I can come.
+ROM: Suiyoubi nara koraremasu.
+JP: 水曜日なら こられます。
+HINT: くる (kuru) → こられる (korareru, irregular potential) → こられます (koraremasu) · すいようび (suiyoubi) = Wednesday · なら (nara) limits the day
+
+---
+DIR: EN>JP
+Q: (Do you want to watch a movie?) If it's a comedy, I want to watch it.
+ROM: Komedii nara mitai desu.
+JP: コメディなら 観たいです。
+HINT: コメディ (komedii) = comedy · みる (miru) → みたい (mitai) = want to watch · なら (nara) = only for this kind of movie
+
+---
+DIR: JP>EN
+Q_ROM: Mekishiko nara itta koto ga arimasu ga, Burajiru wa itta koto ga arimasen.
+Q_JP: メキシコなら 行ったことがありますが、ブラジルは 行ったことがありません。
+A: I've been to Mexico, but I've never been to Brazil.
+HINT: A なら (positive) が、B は (negative) · いったことが あります (itta koto ga arimasu) = have been · なら (nara) limits the statement to Mexico · は (wa) marks the contrasted item
+
+---
+DIR: JP>EN
+Q_ROM: Hiragana nara wakarimasu.
+Q_JP: ひらがななら わかります。
+A: If it is in hiragana, yes.
+HINT: なら (nara) = "if it is X / as for X" · ひらがな (hiragana) + なら (nara) → I understand it only in hiragana · わかります (wakarimasu) = understand
+
+---
+DIR: JP>EN
+Q_ROM: Nichiyoubi nara hima desu ga, doyoubi wa hima ja arimasen.
+Q_JP: 日曜日なら ひまですが、土曜日は ひまじゃありません。
+A: I will be free on Sunday, but I am not free on Saturday.
+HINT: にちようび (nichiyoubi) なら (nara) = positive · どようび (doyoubi) は (wa) = contrasted, negative · ひまじゃありません (hima ja arimasen) = not free
+
+---
+DIR: JP>EN
+Q_ROM: Sakana nara tabemasu ga, niku wa tabemasen.
+Q_JP: 魚なら 食べますが、肉は 食べません。
+A: I eat fish, but I don't eat meat.
+HINT: さかな (sakana) = fish · にく (niku) = meat · なら (nara) = positive item · は (wa) = contrasted item with the negative verb
+
+---
+DIR: JP>EN
+Q_ROM: Inu nara katta koto ga arimasu ga, neko wa katta koto ga arimasen.
+Q_JP: 犬なら 飼ったことがありますが、猫は 飼ったことがありません。
+A: I've owned a dog, but I've never owned a cat.
+HINT: いぬ (inu) = dog · ねこ (neko) = cat · かう (kau, to keep a pet) → かった (katta) + ことが あります (koto ga arimasu) = have done
+
+---
+DIR: JP>EN
+Q_ROM: Nihongo nara hanasemasu ga, eigo wa hanasemasen.
+Q_JP: 日本語なら 話せますが、英語は 話せません。
+A: I can speak Japanese, but I can't speak English.
+HINT: はなす (hanasu) → はなせる (hanaseru, potential) → はなせます (hanasemasu) / はなせません (hanasemasen) · えいご (eigo) = English
+
+---
+DIR: JP>EN
+Q_ROM: Suiyoubi nara koraremasu.
+Q_JP: 水曜日なら こられます。
+A: If it's Wednesday, I can come.
+HINT: くる (kuru) → こられる (korareru, irregular potential) → こられます (koraremasu) · すいようび (suiyoubi) = Wednesday · なら (nara) limits the day
