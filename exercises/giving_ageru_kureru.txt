@@ -1,0 +1,226 @@
+# TOPIC: I Give… — あげる / くれる (Giving and Receiving Direction)
+# LEVEL: intermediate
+
+# ─────────────────────────────────────────
+# Structure:
+#   [Giver] は/が [Recipient] に [Object] を あげる / くれる
+#   Giver = subject (は or が) · Recipient = に
+# あげる = giving moves AWAY from the speaker:  I → you → others
+#          (I give to you / to others · You give to others · Others give to others)
+# くれる = giving moves TOWARD the speaker:     others → you → I
+#          (Others give to me / to you · You give to me)
+# くれる is also used when somebody very close to you (family, very good friend)
+# receives something, because you feel you benefited too.
+# Both are ru-verbs: あげます/あげました/あげません/あげませんでした
+#                    くれます/くれました/くれません/くれませんでした
+# ─────────────────────────────────────────
+
+---
+DIR: EN>JP
+Q: I will give Maki flowers.
+ROM: Watashi wa Maki ni hana o agemasu.
+JP: 私は まきに 花を あげます。
+HINT: giver 私 (watashi) は (wa) · recipient まき (Maki) に (ni) · object 花 (hana) を (o) · あげる (ageru) because giving moves away from me
+
+---
+DIR: EN>JP
+Q: Tomo gave Saki a watch.
+ROM: Tomo wa Saki ni tokei o agemashita.
+JP: ともは さきに 時計を あげました。
+HINT: others → others = あげる (ageru) · past: あげました (agemashita) · とけい (tokei) = watch/clock
+
+---
+DIR: EN>JP
+Q: My parents may give me a new car.
+ROM: Ryoushin wa watashi ni atarashii kuruma o kureru kamoshiremasen.
+JP: 両親は 私に 新しい 車を くれるかもしれません。
+HINT: others → me = くれる (kureru) · short form + かもしれません (kamoshiremasen) = may · りょうしん (ryoushin) = parents · くるま (kuruma) = car
+
+---
+DIR: EN>JP
+Q: The President gave my little sister a letter.
+ROM: Daitouryou ga imouto ni tegami o kuremashita.
+JP: 大統領が 妹に 手紙を くれました。
+HINT: くれる (kureru) is used because the recipient, my little sister, is close to me · だいとうりょう (daitouryou) = president · いもうと (imouto) = my younger sister · てがみ (tegami) = letter
+
+---
+DIR: EN>JP
+Q: I will give shoes to Kota.
+ROM: Watashi wa Kouta ni kutsu o agemasu.
+JP: 私は こうたに 靴を あげます。
+HINT: I → others = あげる (ageru) · くつ (kutsu) = shoes · に (ni) marks the recipient
+
+---
+DIR: EN>JP
+Q: What did you give to your mother?
+ROM: Okaasan ni nani o agemashita ka?
+JP: お母さんに 何を あげましたか？
+HINT: you → others = あげる (ageru) · おかあさん (okaasan) = (your) mother · なに (nani) = what · あげましたか (agemashita ka) = did you give?
+
+---
+DIR: EN>JP
+Q: My older sister gave me a book.
+ROM: Oneechan wa watashi ni hon o kuremashita.
+JP: お姉ちゃんは 私に 本を くれました。
+HINT: others → me = くれる (kureru) · past: くれました (kuremashita) · おねえちゃん (oneechan) = older sister · ほん (hon) = book
+
+---
+DIR: EN>JP
+Q: Did Takako give you anything?
+ROM: Takako wa anata ni nanika kuremashita ka?
+JP: たかこは あなたに 何か くれましたか？
+HINT: others → you = くれる (kureru) · なにか (nanika) = something / anything · くれましたか (kuremashita ka) = did (she) give?
+
+---
+DIR: EN>JP
+Q: Michiru did not give Takashi an invitation letter.
+ROM: Michiru wa Takashi ni shoutaijou o agemasen deshita.
+JP: みちるは たかしに 招待状を あげませんでした。
+HINT: others → others = あげる (ageru) · past negative: あげませんでした (agemasen deshita) · しょうたいじょう (shoutaijou) = invitation letter
+
+---
+DIR: EN>JP
+Q: I gave my friend a book.
+ROM: Watashi wa tomodachi ni hon o agemashita.
+JP: 私は 友達に 本を あげました。
+HINT: I → others = あげる (ageru) · ともだち (tomodachi) = friend · past: あげました (agemashita)
+
+---
+DIR: EN>JP
+Q: I will give my mother a present.
+ROM: Watashi wa haha ni purezento o agemasu.
+JP: 私は 母に プレゼントを あげます。
+HINT: I → others = あげる (ageru) · はは (haha) = my own mother (to others) · プレゼント (purezento) = present
+
+---
+DIR: EN>JP
+Q: Ken gave Mika a bag.
+ROM: Ken wa Mika ni kaban o agemashita.
+JP: けんは みかに かばんを あげました。
+HINT: others → others = あげる (ageru) · かばん (kaban) = bag
+
+---
+DIR: EN>JP
+Q: Did you give Ken a gift?
+ROM: Anata wa Ken ni purezento o agemashita ka?
+JP: あなたは けんに プレゼントを あげましたか？
+HINT: you → others = あげる (ageru) · あなた (anata) = you · あげましたか (agemashita ka)
+
+---
+DIR: EN>JP
+Q: I gave you a pen.
+ROM: Watashi wa anata ni pen o agemashita.
+JP: 私は あなたに ペンを あげました。
+HINT: I → you = あげる (ageru) · ペン (pen) = pen · giving moves away from me
+
+---
+DIR: EN>JP
+Q: My friend gave me a watch.
+ROM: Tomodachi wa watashi ni tokei o kuremashita.
+JP: 友達は 私に 時計を くれました。
+HINT: others → me = くれる (kureru) · ともだち (tomodachi) = friend · くれました (kuremashita) = past
+
+---
+DIR: EN>JP
+Q: Did Mr. Tanaka give you a book?
+ROM: Tanaka-san wa anata ni hon o kuremashita ka?
+JP: たなかさんは あなたに 本を くれましたか？
+HINT: others → you = くれる (kureru) · たなかさん (Tanaka-san) = Mr. Tanaka · くれましたか (kuremashita ka)
+
+---
+DIR: EN>JP
+Q: Ken gave my younger brother a game.
+ROM: Ken wa otouto ni geemu o kuremashita.
+JP: けんは 弟に ゲームを くれました。
+HINT: くれる (kureru) because the recipient (my younger brother) is close family · おとうと (otouto) = my younger brother · ゲーム (geemu) = game
+
+---
+DIR: EN>JP
+Q: My teacher gave me a dictionary.
+ROM: Sensei wa watashi ni jisho o kuremashita.
+JP: 先生は 私に 辞書を くれました。
+HINT: others → me = くれる (kureru) · せんせい (sensei) = teacher · じしょ (jisho) = dictionary
+
+---
+DIR: EN>JP
+Q: Will you give me a ticket?
+ROM: Anata wa watashi ni chiketto o kuremasu ka?
+JP: あなたは 私に チケットを くれますか？
+HINT: you → me = くれる (kureru) · チケット (chiketto) = ticket · くれますか (kuremasu ka) = will you give?
+
+---
+DIR: EN>JP
+Q: I will not give my older brother a game.
+ROM: Watashi wa ani ni geemu o agemasen.
+JP: 私は 兄に ゲームを あげません。
+HINT: I → others = あげる (ageru) · negative: あげません (agemasen) · あに (ani) = my older brother
+
+---
+DIR: EN>JP
+Q: Mari might give me flowers.
+ROM: Mari wa watashi ni hana o kureru kamoshiremasen.
+JP: まりは 私に 花を くれるかもしれません。
+HINT: others → me = くれる (kureru) · くれる + かもしれません (kamoshiremasen) = might give · はな (hana) = flowers
+
+---
+DIR: EN>JP
+Q: My mother gave my younger sister a watch.
+ROM: Haha wa imouto ni tokei o kuremashita.
+JP: 母は 妹に 時計を くれました。
+HINT: くれる (kureru): the recipient (my younger sister) is close to me, so I feel I benefited · はは (haha) = my mother · いもうと (imouto) = my younger sister
+
+---
+DIR: JP>EN
+Q_ROM: Watashi wa Maki ni hana o agemasu.
+Q_JP: 私は まきに 花を あげます。
+A: I will give Maki flowers.
+HINT: giver 私 (watashi) は (wa) · recipient まき (Maki) に (ni) · object 花 (hana) を (o) · あげる (ageru) because giving moves away from me
+
+---
+DIR: JP>EN
+Q_ROM: Tomo wa Saki ni tokei o agemashita.
+Q_JP: ともは さきに 時計を あげました。
+A: Tomo gave Saki a watch.
+HINT: others → others = あげる (ageru) · past: あげました (agemashita) · とけい (tokei) = watch/clock
+
+---
+DIR: JP>EN
+Q_ROM: Ryoushin wa watashi ni atarashii kuruma o kureru kamoshiremasen.
+Q_JP: 両親は 私に 新しい 車を くれるかもしれません。
+A: My parents may give me a new car.
+HINT: others → me = くれる (kureru) · short form + かもしれません (kamoshiremasen) = may · りょうしん (ryoushin) = parents · くるま (kuruma) = car
+
+---
+DIR: JP>EN
+Q_ROM: Daitouryou ga imouto ni tegami o kuremashita.
+Q_JP: 大統領が 妹に 手紙を くれました。
+A: The President gave my little sister a letter.
+HINT: くれる (kureru) is used because the recipient, my little sister, is close to me · だいとうりょう (daitouryou) = president · いもうと (imouto) = my younger sister · てがみ (tegami) = letter
+
+---
+DIR: JP>EN
+Q_ROM: Oneechan wa watashi ni hon o kuremashita.
+Q_JP: お姉ちゃんは 私に 本を くれました。
+A: My older sister gave me a book.
+HINT: others → me = くれる (kureru) · past: くれました (kuremashita) · おねえちゃん (oneechan) = older sister · ほん (hon) = book
+
+---
+DIR: JP>EN
+Q_ROM: Takako wa anata ni nanika kuremashita ka?
+Q_JP: たかこは あなたに 何か くれましたか？
+A: Did Takako give you anything?
+HINT: others → you = くれる (kureru) · なにか (nanika) = something / anything · くれましたか (kuremashita ka) = did (she) give?
+
+---
+DIR: JP>EN
+Q_ROM: Tomodachi wa watashi ni tokei o kuremashita.
+Q_JP: 友達は 私に 時計を くれました。
+A: My friend gave me a watch.
+HINT: others → me = くれる (kureru) · ともだち (tomodachi) = friend · くれました (kuremashita) = past
+
+---
+DIR: JP>EN
+Q_ROM: Ken wa otouto ni geemu o kuremashita.
+Q_JP: けんは 弟に ゲームを くれました。
+A: Ken gave my younger brother a game.
+HINT: くれる (kureru) because the recipient (my younger brother) is close family · おとうと (otouto) = my younger brother · ゲーム (geemu) = game
