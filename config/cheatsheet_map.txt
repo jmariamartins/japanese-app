@@ -58,3 +58,4 @@ miscellaneous_experience            > misc_guide
 miscellaneous_indefinite_words      > misc_guide
 miscellaneous_pronoun_no            > pronoun_no_guide
 miscellaneous_something_anything    > misc_guide
+giving_ageru_kureru              > ageru_kureru_guide
