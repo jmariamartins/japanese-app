@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>あげる / くれる Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:   #f5f0e8;
+    --dark:    #2c1f12;
+    --gold:    #b8962e;
+    --gold-lt: #faf6e8;
+    --red:     #c0392b;
+    --green:   #1a7a4a;
+    --muted:   #6b5d4f;
+    --row-alt: #ede8db;
+    --border:  #d4c9b0;
+    --purple:  #6a4c93;
+    --teal:    #2a7f7f;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--dark);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 2.2rem 2rem 3.5rem;
+  }
+
+  .page-title {
+    text-align: center; margin-bottom: 2rem;
+    padding-bottom: 1rem; border-bottom: 2px solid var(--gold);
+  }
+  .page-title h1 { font-family: 'Noto Serif JP', serif; font-size: 2.3rem; font-weight: 700; }
+  .page-title .sub { font-family: 'DM Mono', monospace; font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem; }
+  .page-title .badge {
+    display: inline-block; margin-top: 0.5rem; padding: 0.18rem 0.8rem;
+    border-radius: 999px; font-family: 'DM Mono', monospace; font-size: 0.72rem;
+    background: var(--purple); color: #fff; letter-spacing: 0.06em; text-transform: uppercase;
+  }
+
+  .sh { display: flex; align-items: center; gap: 0.6rem; margin: 1.8rem 0 0.75rem; }
+  .sh h2 { font-size: 1.2rem; font-weight: 700; }
+  .pill {
+    display: inline-block; padding: 0.13rem 0.65rem; border-radius: 999px;
+    font-family: 'DM Mono', monospace; font-size: 0.68rem;
+    text-transform: uppercase; letter-spacing: 0.07em;
+  }
+  .pill-purple { background: var(--purple); color: #fff; }
+  .pill-teal   { background: var(--teal);   color: #fff; }
+  .pill-coral  { background: var(--red);    color: #fff; }
+  .pill-amber  { background: var(--gold);   color: #fff; }
+
+  .note-box {
+    border-left: 4px solid var(--gold); background: var(--gold-lt);
+    padding: 0.7rem 1rem; margin: 0.65rem 0; border-radius: 0 6px 6px 0; font-size: 0.97rem;
+  }
+  .note-box .nlabel {
+    font-family: 'DM Mono', monospace; font-size: 0.67rem; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--gold); margin-bottom: 0.2rem; display: block;
+  }
+
+  .formula {
+    border-left: 4px solid var(--gold); background: #f0ebe0;
+    padding: 0.6rem 1rem; margin: 0.4rem 0; border-radius: 0 6px 6px 0;
+    font-family: 'DM Mono', monospace; font-size: 0.88rem;
+    display: flex; align-items: center; gap: 0.45rem; flex-wrap: wrap;
+  }
+  .formula .jp  { font-family: 'Noto Serif JP', serif; }
+  .formula .arr { color: var(--gold); }
+  .formula .red { color: var(--red); }
+  .formula .grn { color: var(--green); }
+  .formula .en  { font-style: italic; color: var(--muted); font-size: 0.82rem; }
+
+  /* Conjugation table */
+  table { width: 100%; border-collapse: collapse; margin: 0.8rem 0; font-size: 0.95rem; }
+  thead tr { background: var(--dark); color: #f5f0e8; border-bottom: 3px solid var(--gold); }
+  thead th {
+    padding: 0.5rem 0.85rem; font-family: 'DM Mono', monospace; font-size: 0.72rem;
+    text-transform: uppercase; letter-spacing: 0.07em; text-align: left;
+  }
+  tbody tr:nth-child(even) { background: var(--row-alt); }
+  tbody tr:nth-child(odd)  { background: var(--paper); }
+  tbody td { padding: 0.52rem 0.85rem; border-bottom: 1px solid var(--border); vertical-align: middle; line-height: 1.45; }
+  .jp  { font-family: 'Noto Serif JP', serif; }
+  .rom { font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--muted); display: block; }
+  .en  { font-style: italic; color: var(--muted); font-size: 0.88rem; }
+  .red { color: var(--red); }
+  .grn { color: var(--green); }
+
+  /* Example blocks */
+  .ex-block {
+    background: #faf6ee; border: 1px solid var(--border); border-radius: 8px;
+    padding: 0.8rem 1.1rem; margin: 0.6rem 0;
+  }
+  .ex-block .ex-label {
+    font-family: 'DM Mono', monospace; font-size: 0.67rem; text-transform: uppercase;
+    letter-spacing: 0.11em; color: var(--gold); margin-bottom: 0.4rem; display: block;
+  }
+  .ex-block .english {
+    font-style: italic; font-size: 0.97rem; margin-bottom: 0.6rem;
+    padding-bottom: 0.4rem; border-bottom: 1px dashed var(--border);
+  }
+  .jp-row { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 0.35rem 0.65rem; margin-bottom: 0.35rem; }
+  .jp-token { display: flex; flex-direction: column; align-items: center; gap: 0.04rem; }
+  .jp-token .kana { font-family: 'Noto Serif JP', serif; font-size: 1.05rem; }
+  .jp-token .rom2 { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted); }
+  .tbox {
+    border-radius: 7px; padding: 0.22rem 0.6rem;
+    display: flex; flex-direction: column; align-items: center; gap: 0.04rem;
+  }
+  .tbox .kana { font-family: 'Noto Serif JP', serif; font-size: 1.05rem; }
+  .tbox .rom2 { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted); }
+  .red-b { border: 2.5px solid var(--red);   background: #fef5f4; }
+  .stem-note {
+    font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted);
+    margin-top: 0.15rem;
+  }
+  .stem-note .red { color: var(--red); }
+
+  hr.rule { border: none; border-top: 1px solid var(--border); margin: 1.8rem 0; }
+</style>
+</head>
+<body>
+<div class="page-title">
+  <h1>あげる / くれる</h1>
+  <div class="sub">(Giver) が/は (Recipient) に (Object) を あげる / くれる &nbsp;·&nbsp; "I give…"</div>
+  <span class="badge">Grammar · Intermediate</span>
+</div>
+
+<div class="sh"><h2>Two verbs for "give"</h2><span class="pill pill-purple">Rules</span></div>
+
+<div class="note-box">
+  <span class="nlabel">Key Rule</span>
+  Japanese has two verbs for giving: <strong>あげる</strong> <span class="rom" style="display:inline;">(ageru)</span> and <strong>くれる</strong> <span class="rom" style="display:inline;">(kureru)</span>. Which one you use depends on the <strong>direction</strong> of the giving, not on who the people are.
+</div>
+
+<div class="formula">
+  <span class="jp red">Giver</span><span class="arr">+</span><span class="jp">が / は</span><span class="rom" style="display:inline;">(ga / wa)</span><span class="arr">+</span><span class="jp red">Recipient</span><span class="arr">+</span><span class="jp">に</span><span class="rom" style="display:inline;">(ni)</span><span class="arr">+</span><span class="jp">Object を</span><span class="rom" style="display:inline;">(o)</span><span class="arr">+</span><span class="jp grn">あげる / くれる</span>
+  <span class="arr">→</span><span class="en">"Giver gives Recipient (object)"</span>
+</div>
+
+<div class="note-box" style="border-color:var(--teal);background:#eef6f6;">
+  <span class="nlabel" style="color:var(--teal);">Particles</span>
+  With both verbs the <strong>giver is the subject</strong>, marked with <strong>は</strong> <span class="rom" style="display:inline;">(wa)</span> or <strong>が</strong> <span class="rom" style="display:inline;">(ga)</span>. The <strong>recipient</strong> is marked with <strong>に</strong> <span class="rom" style="display:inline;">(ni)</span>. The thing given takes <strong>を</strong> <span class="rom" style="display:inline;">(o)</span>.
+</div>
+
+<div class="sh"><h2>Direction</h2><span class="pill pill-amber">あげる vs くれる</span></div>
+
+<table>
+  <thead><tr><th>Verb</th><th>Who gives to whom</th><th>Direction</th></tr></thead>
+  <tbody>
+    <tr><td><span class="jp grn">あげる</span><span class="rom">ageru</span></td>
+      <td>I → you<br>I → others<br>You → others<br><strong>Others → others</strong></td>
+      <td><strong>Outward</strong>, away from me<br><span class="en">"I" → "You" → "Others"</span></td></tr>
+    <tr><td><span class="jp red">くれる</span><span class="rom">kureru</span></td>
+      <td>Others → me<br>Others → you<br><strong>You → me</strong></td>
+      <td><strong>Inward</strong>, toward me<br><span class="en">"Others" → "You" → "I"</span></td></tr>
+  </tbody>
+</table>
+
+<div class="note-box">
+  <span class="nlabel">Quick test</span>
+  Is the object travelling <strong>away from me</strong> (or between two other people)? → <strong>あげる</strong> <span class="rom" style="display:inline;">(ageru)</span>. Is it coming <strong>toward me</strong>? → <strong>くれる</strong> <span class="rom" style="display:inline;">(kureru)</span>.
+</div>
+
+<div class="sh"><h2>Conjugation <span style="font-family:'DM Mono',monospace;font-size:0.8rem;font-weight:400;color:var(--muted);">(both are ru-verbs)</span></h2><span class="pill pill-amber">Forms</span></div>
+
+<table>
+  <thead><tr><th></th><th>あげる</th><th>くれる</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Present +</strong></td><td><span class="jp grn">あげます</span><span class="rom">agemasu</span></td><td><span class="jp grn">くれます</span><span class="rom">kuremasu</span></td></tr>
+    <tr><td><strong>Present −</strong></td><td><span class="jp red">あげません</span><span class="rom">agemasen</span></td><td><span class="jp red">くれません</span><span class="rom">kuremasen</span></td></tr>
+    <tr><td><strong>Past +</strong></td><td><span class="jp grn">あげました</span><span class="rom">agemashita</span></td><td><span class="jp grn">くれました</span><span class="rom">kuremashita</span></td></tr>
+    <tr><td><strong>Past −</strong></td><td><span class="jp red">あげませんでした</span><span class="rom">agemasen deshita</span></td><td><span class="jp red">くれませんでした</span><span class="rom">kuremasen deshita</span></td></tr>
+    <tr><td><strong>Short form</strong></td><td><span class="jp">あげる</span><span class="rom">ageru</span></td><td><span class="jp">くれる</span><span class="rom">kureru</span></td></tr>
+  </tbody>
+</table>
+
+<hr class="rule">
+
+<div class="sh"><h2>Examples</h2><span class="pill pill-coral">Examples</span></div>
+
+<div class="ex-block">
+  <span class="ex-label">Example 1 · あげる, present</span>
+  <div class="english">"I will give Maki flowers."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">私(わたし)は</span><span class="rom2">watashi wa</span></div><div class="tbox red-b"><span class="kana">まき</span><span class="rom2">Maki</span></div><div class="jp-token"><span class="kana">に</span><span class="rom2">ni</span></div><div class="jp-token"><span class="kana">花(はな)を</span><span class="rom2">hana o</span></div><div class="tbox red-b"><span class="kana">あげます。</span><span class="rom2">agemasu.</span></div>
+  </div>
+  <div class="stem-note">Giver: 私 (I) · Recipient: まき (boxed) · あげます = present affirmative of あげる (outward)</div>
+</div>
+<div class="ex-block">
+  <span class="ex-label">Example 2 · あげる, past</span>
+  <div class="english">"Tomo gave Saki a watch."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">ともは</span><span class="rom2">Tomo wa</span></div><div class="tbox red-b"><span class="kana">さき</span><span class="rom2">Saki</span></div><div class="jp-token"><span class="kana">に</span><span class="rom2">ni</span></div><div class="jp-token"><span class="kana">時計(とけい)を</span><span class="rom2">tokei o</span></div><div class="tbox red-b"><span class="kana">あげました。</span><span class="rom2">agemashita.</span></div>
+  </div>
+  <div class="stem-note">Giver: とも · Recipient: さき · others give to others → あげる</div>
+</div>
+<div class="ex-block">
+  <span class="ex-label">Example 3 · くれる, short form + かもしれません</span>
+  <div class="english">"My parents may give me a new car."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">両親(りょうしん)は</span><span class="rom2">ryoushin wa</span></div><div class="tbox red-b"><span class="kana">私(わたし)</span><span class="rom2">watashi</span></div><div class="jp-token"><span class="kana">に</span><span class="rom2">ni</span></div><div class="jp-token"><span class="kana">車(くるま)を</span><span class="rom2">kuruma o</span></div><div class="tbox red-b"><span class="kana">くれる</span><span class="rom2">kureru</span></div><div class="jp-token"><span class="kana">かもしれません。</span><span class="rom2">kamoshiremasen.</span></div>
+  </div>
+  <div class="stem-note">Giver: 両親 · Recipient: 私 (me, boxed) · くれる = short form, because かもしれません follows a short form · coming toward me → くれる</div>
+</div>
+<div class="ex-block">
+  <span class="ex-label">Example 4 · くれる, close family member</span>
+  <div class="english">"The President gave my little sister a letter."</div>
+  <div class="jp-row">
+    <div class="jp-token"><span class="kana">大統領(だいとうりょう)が</span><span class="rom2">daitouryou ga</span></div><div class="tbox red-b"><span class="kana">妹(いもうと)</span><span class="rom2">imouto</span></div><div class="jp-token"><span class="kana">に</span><span class="rom2">ni</span></div><div class="jp-token"><span class="kana">手紙(てがみ)を</span><span class="rom2">tegami o</span></div><div class="tbox red-b"><span class="kana">くれました。</span><span class="rom2">kuremashita.</span></div>
+  </div>
+  <div class="stem-note">The recipient is not "me", but she is close family, so the speaker feels benefited → くれる</div>
+</div>
+
+<div class="sh"><h2>When can くれる be used for someone close?</h2><span class="pill pill-coral">Key Rule</span></div>
+
+<div class="note-box" style="border-color:var(--red);background:#fff5f5;">
+  <span class="nlabel" style="color:var(--red);">Benefit rule</span>
+  <strong>くれる</strong> <span class="rom" style="display:inline;">(kureru)</span> is possible only in limited contexts: when you feel <strong>you yourself benefited</strong> because <strong>somebody very close to you</strong> received something.<br><br>
+  It should be easy to identify yourself with a member of your <strong>immediate family</strong> or a <strong>very good friend</strong>. In Example 4, the little sister (妹 <span class="rom" style="display:inline;">(imouto)</span>) is family, so くれる is used.
+</div>
+
+<div class="sh"><h2>Practice answers</h2><span class="pill pill-teal">Practice</span></div>
+
+<table>
+  <thead><tr><th>English</th><th>Japanese</th></tr></thead>
+    <tr><td class="en">I will give shoes to Kota.</td><td><span class="jp grn">私(わたし)は こうたに 靴(くつ)を あげます。</span><span class="rom">watashi wa Kouta ni kutsu o agemasu.</span></td></tr>
+    <tr><td class="en">What did you give to your mother?</td><td><span class="jp grn">お母(かあ)さんに 何(なに)を あげましたか？</span><span class="rom">okaasan ni nani o agemashita ka?</span></td></tr>
+    <tr><td class="en">My older sister gave me a book.</td><td><span class="jp grn">お姉(ねえ)ちゃんは 私(わたし)に 本(ほん)を くれました。</span><span class="rom">oneechan wa watashi ni hon o kuremashita.</span></td></tr>
+    <tr><td class="en">Did Takako give you anything?</td><td><span class="jp grn">たかこは あなたに 何(なに)か くれましたか？</span><span class="rom">Takako wa anata ni nanika kuremashita ka?</span></td></tr>
+    <tr><td class="en">Michiru did not give Takashi an invitation letter.</td><td><span class="jp grn">みちるは たかしに 招待状(しょうたいじょう)を あげませんでした。</span><span class="rom">Michiru wa Takashi ni shoutaijou o agemasen deshita.</span></td></tr>
+</table>
+
+</body>
+</html>
