@@ -79,7 +79,7 @@ HINT: コーヒー (koohii) = coffee · nomu → nomemasen · contrast with た�
 ---
 DIR: EN>JP
 Q: Can you eat this?
-ROM: Kore wa taberaremasukaAA?
+ROM: Kore wa taberaremasu ka?
 JP: これは たべられますか？
 HINT: taberaremasuか = potential positive + question mark · これ (kore) = this · can you eat it?
 
@@ -117,3 +117,150 @@ Q_ROM: Arukooru wa nomemasen.
 Q_JP: アルコールは のめません。
 A: I can't drink alcohol.
 HINT: nomemasen = potential negative of nomu (u-verb) · む → め in potential form
+
+---
+DIR: EN>JP
+Q: I can speak Japanese.
+ROM: Nihongo ga hanasemasu.
+JP: にほんごが はなせます。
+HINT: hanasu (u-verb) → hanaseru (potential: す→せ) → hanasemasu (polite) · が (ga) marks what you can do · にほんご (nihongo) = Japanese language
+
+---
+DIR: EN>JP
+Q: I cannot swim.
+ROM: Watashi wa oyogemasen.
+JP: わたしは およげません。
+HINT: oyogu (u-verb) → oyogeru (potential: ぐ→げ) → oyogemasen (neg. polite) · およぐ (oyogu) = to swim
+
+---
+DIR: EN>JP
+Q: We could not go to the beach.
+ROM: Umi ni ikemasen deshita.
+JP: うみに いけませんでした。
+HINT: iku (u-verb) → ikeru (potential: く→け) · the potential verb is a ru-verb, so past negative = ikemasen deshita · に (ni) stays unchanged · うみ (umi) = sea/beach
+
+---
+DIR: EN>JP
+Q: I read kanji.
+ROM: Kanji o yomimasu.
+JP: かんじを よみます。
+HINT: plain (non-potential) verb: yomu → yomimasu · を (o) marks the object · contrast with the potential sentence below (kanji ga yomemasu)
+
+---
+DIR: EN>JP
+Q: I can read kanji.
+ROM: Kanji ga yomemasu.
+JP: かんじが よめます。
+HINT: yomu (u-verb) → yomeru (potential: む→め) → yomemasu · を (o) usually becomes が (ga) in the potential · かんじ (kanji) = kanji
+
+---
+DIR: EN>JP
+Q: I can read kanji. (use を instead of が)
+ROM: Kanji o yomemasu.
+JP: かんじを よめます。
+HINT: verbs that take を can keep either を (o) or が (ga) in the potential form · yomu → yomeru → yomemasu
+
+---
+DIR: EN>JP
+Q: I play baseball.
+ROM: Yakyuu o shimasu.
+JP: やきゅうを します。
+HINT: suru (irregular) → shimasu · を (o) marks the object · やきゅう (yakyuu) = baseball · contrast with potential できます (dekimasu) below
+
+---
+DIR: EN>JP
+Q: I can play baseball.
+ROM: Yakyuu ga dekimasu.
+JP: やきゅうが できます。
+HINT: suru → dekiru (irregular potential) → dekimasu · できる takes が (ga) almost all the time · やきゅうを できます (yakyuu o dekimasu) is considered substandard
+
+---
+DIR: EN>JP
+Q: I climb mountains.
+ROM: Yama ni noborimasu.
+JP: やまに のぼります。
+HINT: noboru (u-verb) → noborimasu · に (ni) marks what you climb · やま (yama) = mountain · contrast with potential noboremasu below
+
+---
+DIR: EN>JP
+Q: I can climb mountains.
+ROM: Yama ni noboremasu.
+JP: やまに のぼれます。
+HINT: noboru → noboreru (potential: る→れ) → noboremasu · only を changes to が · all other particles (here に, ni) stay the same
+
+---
+DIR: EN>JP
+Q: I can speak Chinese.
+ROM: Chuugokugo ga hanasemasu.
+JP: ちゅうごくごが はなせます。
+HINT: hanasu → hanaseru → hanasemasu · が (ga) marks the language you can speak · ちゅうごくご (chuugokugo) = Chinese language
+
+---
+DIR: EN>JP
+Q: Takeshi cannot swim.
+ROM: Takeshi wa oyogemasen.
+JP: たけしは およげません。
+HINT: oyogu → oyogeru → oyogemasen (neg. polite) · は (wa) marks the topic (Takeshi)
+
+---
+DIR: EN>JP
+Q: I could not go to school yesterday.
+ROM: Kinou gakkou ni ikemasen deshita.
+JP: きのう がっこうに いけませんでした。
+HINT: iku → ikeru → ikemasen deshita (past negative) · に (ni) stays unchanged · きのう (kinou) = yesterday · がっこう (gakkou) = school
+
+---
+DIR: EN>JP
+Q: I could eat breakfast.
+ROM: Asagohan o taberaremashita.
+JP: あさごはんを たべられました。
+HINT: taberu (ru-verb) → taberareru (drop る + られる) → taberaremashita (past polite) · を (o) can stay or change to が (ga) · あさごはん (asagohan) = breakfast
+
+---
+DIR: JP>EN
+Q_ROM: Nihongo ga hanasemasu.
+Q_JP: にほんごが はなせます。
+A: I can speak Japanese.
+HINT: hanasemasu = potential of hanasu (u-verb: す→せ) · が (ga) marks what you can do
+
+---
+DIR: JP>EN
+Q_ROM: Watashi wa oyogemasen.
+Q_JP: わたしは およげません。
+A: I cannot swim.
+HINT: oyogemasen = potential negative of oyogu (ぐ→げ) · およぐ (oyogu) = to swim
+
+---
+DIR: JP>EN
+Q_ROM: Umi ni ikemasen deshita.
+Q_JP: うみに いけませんでした。
+A: We could not go to the beach.
+HINT: ikemasen deshita = past negative of ikeru (potential of iku) · うみ (umi) = beach/sea
+
+---
+DIR: JP>EN
+Q_ROM: Kanji ga yomemasu.
+Q_JP: かんじが よめます。
+A: I can read kanji.
+HINT: yomemasu = potential of yomu (む→め) · が (ga) replaces を (o) · かんじ (kanji) = kanji
+
+---
+DIR: JP>EN
+Q_ROM: Yakyuu ga dekimasu.
+Q_JP: やきゅうが できます。
+A: I can play baseball.
+HINT: dekimasu = potential of suru (irregular) · できる takes が (ga) · やきゅう (yakyuu) = baseball
+
+---
+DIR: JP>EN
+Q_ROM: Yama ni noboremasu.
+Q_JP: やまに のぼれます。
+A: I can climb mountains.
+HINT: noboremasu = potential of noboru (る→れ) · に (ni) stays the same · やま (yama) = mountain
+
+---
+DIR: JP>EN
+Q_ROM: Asagohan o taberaremashita.
+Q_JP: あさごはんを たべられました。
+A: I could eat breakfast.
+HINT: taberaremashita = past polite potential of taberu (ru-verb: drop る + られる) · あさごはん (asagohan) = breakfast
