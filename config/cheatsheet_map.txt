@@ -32,6 +32,7 @@ present_perfect_mou_mada        > present_perfect_guide
 comparison                      > comparison_guide
 i_intend_to_do                  > i_intend_guide
 i_want_to_do                    > i_want_to_guide
+i_want_thing_hoshii             > hoshii_guide
 special_predicate_tari          > special_predicate_guide
 guess_prediction                > guess_prediction_guide
 looks_like_soudesu              > soudesu_guide
