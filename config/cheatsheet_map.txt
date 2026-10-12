@@ -40,7 +40,7 @@ nara_contrast                   > nara_guide
 
 time_all_sections > time_guide
 
-directions_doko   > directions_guide
+directions_doko   > location_guide
 shopping          > shopping_guide
 te_form_temiru                  > temiru_guide
 potential_form    > potential_guide
