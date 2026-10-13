@@ -114,3 +114,89 @@ Q_ROM: Kuukou made onegai shimasu.
 Q_JP: くうこうまでお願いします。
 A: To the airport, please.
 HINT: まで (made) = to/as far as · お願いします (onegai shimasu) = please · taxi destination pattern
+
+# ── Added from Duolingo (Section 2) ──
+
+---
+DIR: EN>JP
+Q: Where is the police station?
+ROM: Keisatsu wa doko desu ka?
+JP: けいさつはどこですか。
+HINT: けいさつ (keisatsu) = police · どこ (doko) = where · [place]は どこですか (wa doko desu ka)
+
+---
+DIR: JP>EN
+Q_ROM: Keisatsu wa doko desu ka?
+Q_JP: けいさつはどこですか。
+A: Where is the police station?
+HINT: けいさつ (keisatsu) = police · どこ (doko) = where · [place]は どこですか (wa doko desu ka)
+
+---
+DIR: EN>JP
+Q: Where is the transfer?
+ROM: Norikae wa doko desu ka?
+JP: のりかえはどこですか。
+HINT: のりかえ (norikae) = transfer (between trains) · どこですか (doko desu ka) = where is it?
+
+---
+DIR: JP>EN
+Q_ROM: Norikae wa doko desu ka?
+Q_JP: のりかえはどこですか。
+A: Where is the transfer?
+HINT: のりかえ (norikae) = transfer (between trains) · どこですか (doko desu ka) = where is it?
+
+---
+DIR: EN>JP
+Q: Where is the ATM?
+ROM: ATM wa doko desu ka?
+JP: ATMはどこですか。
+HINT: ATM (ee-tii-emu) = ATM · どこ (doko) = where
+
+---
+DIR: EN>JP
+Q: Where is the wheat flour?
+ROM: Komugiko wa doko desu ka?
+JP: こむぎこはどこですか。
+HINT: こむぎこ (komugiko) = wheat flour · どこ (doko) = where · useful inside a supermarket
+
+---
+DIR: JP>EN
+Q_ROM: Komugiko wa doko desu ka?
+Q_JP: こむぎこはどこですか。
+A: Where is the wheat flour?
+HINT: こむぎこ (komugiko) = wheat flour · どこ (doko) = where · useful inside a supermarket
+
+---
+DIR: EN>JP
+Q: Where is the new apartment?
+ROM: Atarashii apaato wa doko desu ka?
+JP: 新しいアパートはどこですか。
+HINT: 新しい (atarashii) = new · アパート (apaato) = apartment · どこですか (doko desu ka)
+
+---
+DIR: EN>JP
+Q: A taxi, please.
+ROM: Takushii o onegaishimasu.
+JP: タクシーをおねがいします。
+HINT: タクシー (takushii) = taxi · おねがいします (onegaishimasu) = please (request) · [item]を おねがいします (o onegaishimasu)
+
+---
+DIR: JP>EN
+Q_ROM: Takushii o onegaishimasu.
+Q_JP: タクシーをおねがいします。
+A: A taxi, please.
+HINT: タクシー (takushii) = taxi · おねがいします (onegaishimasu) = please (request) · [item]を おねがいします (o onegaishimasu)
+
+---
+DIR: EN>JP
+Q: The room key, please!
+ROM: Heya no kagi o onegaishimasu!
+JP: へやのかぎをおねがいします！
+HINT: へや (heya) = room · かぎ (kagi) = key · の (no) links room + key · おねがいします (onegaishimasu)
+
+---
+DIR: JP>EN
+Q_ROM: Heya no kagi o onegaishimasu!
+Q_JP: へやのかぎをおねがいします！
+A: The room key, please!
+HINT: へや (heya) = room · かぎ (kagi) = key · の (no) links room + key · おねがいします (onegaishimasu)

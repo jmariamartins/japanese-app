@@ -264,3 +264,19 @@ Q_ROM: Asagohan o taberaremashita.
 Q_JP: あさごはんを たべられました。
 A: I could eat breakfast.
 HINT: taberaremashita = past polite potential of taberu (ru-verb: drop る + られる) · あさごはん (asagohan) = breakfast
+
+# ── Added from Duolingo (Section 2) ──
+
+---
+DIR: EN>JP
+Q: Can you speak Tagalog?
+ROM: Tagarogugo ga dekimasu ka?
+JP: タガログごができますか。
+HINT: できます (dekimasu) = can do (potential of する) · タガログご (Tagarogugo) = Tagalog language · が (ga) marks the skill
+
+---
+DIR: JP>EN
+Q_ROM: Tagarogugo ga dekimasu ka?
+Q_JP: タガログごができますか。
+A: Can you speak Tagalog?
+HINT: できます (dekimasu) = can do (potential of する) · タガログご (Tagarogugo) = Tagalog language · が (ga) marks the skill

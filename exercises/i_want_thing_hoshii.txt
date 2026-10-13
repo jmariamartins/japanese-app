@@ -230,3 +230,33 @@ Q_ROM: Mika wa aisukuriimu o hoshigatte imasu.
 Q_JP: みかは アイスクリームを ほしがっています。
 A: Mika wants ice cream.
 HINT: ほしがっています (hoshigatte imasu) = (it seems) wants · を (o) marks the object · アイスクリーム (aisukuriimu) = ice cream
+
+# ── Added from Duolingo (Section 2) ──
+
+---
+DIR: EN>JP
+Q: I want butter.
+ROM: Bataa ga hoshii desu.
+JP: バターがほしいです。
+HINT: ほしい (hoshii) = want (a thing) · バター (bataa) = butter · が (ga) marks the wanted thing
+
+---
+DIR: JP>EN
+Q_ROM: Bataa ga hoshii desu.
+Q_JP: バターがほしいです。
+A: I want butter.
+HINT: ほしい (hoshii) = want (a thing) · バター (bataa) = butter · が (ga) marks the wanted thing
+
+---
+DIR: EN>JP
+Q: I want a point card!
+ROM: Pointo kaado ga hoshii desu!
+JP: ポイントカードがほしいです！
+HINT: ポイントカード (pointo kaado) = loyalty / point card · が (ga) marks the wanted thing · ほしいです (hoshii desu)
+
+---
+DIR: JP>EN
+Q_ROM: Pointo kaado ga hoshii desu!
+Q_JP: ポイントカードがほしいです！
+A: I want a point card!
+HINT: ポイントカード (pointo kaado) = loyalty / point card · が (ga) marks the wanted thing · ほしいです (hoshii desu)

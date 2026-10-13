@@ -252,3 +252,243 @@ Q_ROM: Ashita yotei ga arimasu ka?
 Q_JP: あした よていが ありますか？
 A: Do you have any plans tomorrow?
 HINT: よてい (yotei) = plans · あります (arimasu) for abstract things like plans/events
+
+# ── Added from Duolingo (Section 2) ──
+
+---
+DIR: EN>JP
+Q: The basket is next to the entrance.
+ROM: Kago wa iriguchi no tonari desu.
+JP: かごはいりぐちのとなりです。
+HINT: かご (kago) = basket · いりぐち (iriguchi) = entrance · となり (tonari) = next to · [thing]は [place]の [position]です (wa ... no ... desu)
+
+---
+DIR: JP>EN
+Q_ROM: Kago wa iriguchi no tonari desu.
+Q_JP: かごはいりぐちのとなりです。
+A: The basket is next to the entrance.
+HINT: かご (kago) = basket · いりぐち (iriguchi) = entrance · となり (tonari) = next to · [thing]は [place]の [position]です (wa ... no ... desu)
+
+---
+DIR: EN>JP
+Q: The milk is at the back of the shelf.
+ROM: Gyuunyuu wa tana no oku desu.
+JP: ぎゅうにゅうはたなのおくです。
+HINT: ぎゅうにゅう (gyuunyuu) = milk · たな (tana) = shelf · おく (oku) = back / inner part
+
+---
+DIR: EN>JP
+Q: The salt is on top of the shelf.
+ROM: Shio wa tana no ue desu.
+JP: しおはたなの上です。
+HINT: しお (shio) = salt · 上 (ue) = on top · たな (tana) = shelf
+
+---
+DIR: JP>EN
+Q_ROM: Shio wa tana no ue desu.
+Q_JP: しおはたなの上です。
+A: The salt is on top of the shelf.
+HINT: しお (shio) = salt · 上 (ue) = on top · たな (tana) = shelf
+
+---
+DIR: EN>JP
+Q: The carrot is under the onion.
+ROM: Ninjin wa tamanegi no shita desu.
+JP: にんじんはたまねぎの下です。
+HINT: にんじん (ninjin) = carrot · たまねぎ (tamanegi) = onion · 下 (shita) = under
+
+---
+DIR: EN>JP
+Q: There are no carrots.
+ROM: Ninjin wa arimasen.
+JP: にんじんはありません。
+HINT: ありません (arimasen) = there isn't / we don't have · にんじん (ninjin) = carrot · negative of あります (arimasu)
+
+---
+DIR: JP>EN
+Q_ROM: Ninjin wa arimasen.
+Q_JP: にんじんはありません。
+A: There are no carrots.
+HINT: ありません (arimasen) = there isn't / we don't have · にんじん (ninjin) = carrot · negative of あります (arimasu)
+
+---
+DIR: EN>JP
+Q: The butter is inside the fridge.
+ROM: Bataa wa reizouko no naka desu.
+JP: バターはれいぞうこの中です。
+HINT: れいぞうこ (reizouko) = fridge · 中 (naka) = inside · バター (bataa) = butter
+
+---
+DIR: JP>EN
+Q_ROM: Bataa wa reizouko no naka desu.
+Q_JP: バターはれいぞうこの中です。
+A: The butter is inside the fridge.
+HINT: れいぞうこ (reizouko) = fridge · 中 (naka) = inside · バター (bataa) = butter
+
+---
+DIR: EN>JP
+Q: The vegetable section is near the entrance.
+ROM: Yasai no koonaa wa iriguchi no chikaku desu.
+JP: やさいのコーナーはいりぐちのちかくです。
+HINT: やさい (yasai) = vegetables · コーナー (koonaa) = section · ちかく (chikaku) = near
+
+---
+DIR: EN>JP
+Q: The meat is right above the fish.
+ROM: Niku wa sakana no sugu ue desu.
+JP: 肉は魚のすぐ上です。
+HINT: 肉 (niku) = meat · 魚 (sakana) = fish · すぐ (sugu) = right / immediately · 上 (ue) = above
+
+---
+DIR: EN>JP
+Q: The vegetables are above the fruit.
+ROM: Yasai wa kudamono no ue desu.
+JP: やさいはくだものの上です。
+HINT: やさい (yasai) = vegetables · くだもの (kudamono) = fruit · 上 (ue) = above
+
+---
+DIR: JP>EN
+Q_ROM: Yasai wa kudamono no ue desu.
+Q_JP: やさいはくだものの上です。
+A: The vegetables are above the fruit.
+HINT: やさい (yasai) = vegetables · くだもの (kudamono) = fruit · 上 (ue) = above
+
+---
+DIR: EN>JP
+Q: Is the cash register on the second floor?
+ROM: Reji wa nikai desu ka?
+JP: レジは二階ですか。
+HINT: レジ (reji) = cash register · 二階 (nikai) = second floor · 〜階 (kai) = floor number
+
+---
+DIR: EN>JP
+Q: The meeting is on the second floor.
+ROM: Miitingu wa nikai desu.
+JP: ミーティングは二階です。
+HINT: ミーティング (miitingu) = meeting · 二階 (nikai) = second floor
+
+---
+DIR: JP>EN
+Q_ROM: Miitingu wa nikai desu.
+Q_JP: ミーティングは二階です。
+A: The meeting is on the second floor.
+HINT: ミーティング (miitingu) = meeting · 二階 (nikai) = second floor
+
+---
+DIR: EN>JP
+Q: What floor is this?
+ROM: Koko wa nankai desu ka?
+JP: ここは何階ですか。
+HINT: 何階 (nankai) = what floor · ここ (koko) = here
+
+---
+DIR: EN>JP
+Q: What floor is the next meeting on?
+ROM: Tsugi no miitingu wa nankai desu ka?
+JP: つぎのミーティングは何階ですか。
+HINT: つぎ (tsugi) = next · 何階 (nankai) = which floor
+
+---
+DIR: EN>JP
+Q: Excuse me, what floor is the restroom on?
+ROM: Sumimasen, otearai wa nankai desu ka?
+JP: すみません、おてあらいは何階ですか。
+HINT: おてあらい (otearai) = restroom · 何階 (nankai) = which floor
+
+---
+DIR: JP>EN
+Q_ROM: Sumimasen, otearai wa nankai desu ka?
+Q_JP: すみません、おてあらいは何階ですか。
+A: Excuse me, what floor is the restroom on?
+HINT: おてあらい (otearai) = restroom · 何階 (nankai) = which floor
+
+---
+DIR: EN>JP
+Q: Excuse me, the trash can is on the first floor!
+ROM: Sumimasen, gomibako wa ikkai desu!
+JP: すみません、ゴミばこは一階です！
+HINT: ゴミばこ (gomibako) = trash can · 一階 (ikkai) = first floor (sound change: いっかい)
+
+---
+DIR: EN>JP
+Q: Excuse me, there is no ATM.
+ROM: Sumimasen, ATM wa arimasen.
+JP: すみません、ATMはありません。
+HINT: ATM (ee-tii-emu) = ATM · ありません (arimasen) = there isn't
+
+---
+DIR: JP>EN
+Q_ROM: Sumimasen, ATM wa arimasen.
+Q_JP: すみません、ATMはありません。
+A: Excuse me, there is no ATM.
+HINT: ATM (ee-tii-emu) = ATM · ありません (arimasen) = there isn't
+
+---
+DIR: EN>JP
+Q: Is there a restroom?
+ROM: Otearai wa arimasu ka?
+JP: おてあらいはありますか。
+HINT: おてあらい (otearai) = restroom · ありますか (arimasu ka) = is there...?
+
+---
+DIR: EN>JP
+Q: No, there isn't a chair yet.
+ROM: Iie, mada isu wa arimasen.
+JP: いいえ、まだいすはありません。
+HINT: まだ (mada) = not yet · いす (isu) = chair · ありません (arimasen) = there isn't
+
+---
+DIR: EN>JP
+Q: Yes, there is a table.
+ROM: Hai, teeburu ga arimasu.
+JP: はい、テーブルがあります。
+HINT: テーブル (teeburu) = table · が (ga) marks what exists · あります (arimasu) = there is
+
+---
+DIR: JP>EN
+Q_ROM: Hai, teeburu ga arimasu.
+Q_JP: はい、テーブルがあります。
+A: Yes, there is a table.
+HINT: テーブル (teeburu) = table · が (ga) marks what exists · あります (arimasu) = there is
+
+---
+DIR: EN>JP
+Q: I have two questions!
+ROM: Shitsumon ga futatsu arimasu!
+JP: しつもんが二つあります！
+HINT: しつもん (shitsumon) = question · 二つ (futatsu) = two · あります (arimasu) is used for non-living / abstract things
+
+---
+DIR: EN>JP
+Q: Professor Tanaka, I have a question.
+ROM: Tanaka-sensei, shitsumon ga arimasu.
+JP: 田中せんせい、しつもんがあります。
+HINT: せんせい (sensei) = teacher / professor · しつもん (shitsumon) = question · あります (arimasu) = have
+
+---
+DIR: EN>JP
+Q: This week there is a math test.
+ROM: Konshuu wa suugaku no tesuto ga arimasu.
+JP: こんしゅうはすうがくのテストがあります。
+HINT: こんしゅう (konshuu) = this week · すうがく (suugaku) = mathematics · テスト (tesuto) = test · events use あります (arimasu)
+
+---
+DIR: JP>EN
+Q_ROM: Konshuu wa suugaku no tesuto ga arimasu.
+Q_JP: こんしゅうはすうがくのテストがあります。
+A: This week there is a math test.
+HINT: こんしゅう (konshuu) = this week · すうがく (suugaku) = mathematics · テスト (tesuto) = test · events use あります (arimasu)
+
+---
+DIR: EN>JP
+Q: I have a cool younger brother.
+ROM: Kakkoii otouto ga imasu.
+JP: かっこいいおとうとがいます。
+HINT: かっこいい (kakkoii) = cool / stylish · おとうと (otouto) = younger brother · います (imasu) = for people
+
+---
+DIR: JP>EN
+Q_ROM: Kakkoii otouto ga imasu.
+Q_JP: かっこいいおとうとがいます。
+A: I have a cool younger brother.
+HINT: かっこいい (kakkoii) = cool / stylish · おとうと (otouto) = younger brother · います (imasu) = for people

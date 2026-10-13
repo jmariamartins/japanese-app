@@ -372,3 +372,166 @@ Q: It was not a Japanese movie.
 ROM: Nihon no eiga ja nakatta desu.
 JP: にほん の えいが じゃなかったです。
 HINT: past negative casual: じゃなかったです (ja nakatta desu) · えいが (eiga) = movie
+
+# ── Added from Duolingo (Section 2) ──
+
+---
+DIR: EN>JP
+Q: Nice to meet you, I'm Ken.
+ROM: Hajimemashite, Ken desu.
+JP: はじめまして、けんです。
+HINT: はじめまして (hajimemashite) = nice to meet you · [name]です (desu) = I'm [name]
+
+---
+DIR: JP>EN
+Q_ROM: Hajimemashite, Ken desu.
+Q_JP: はじめまして、けんです。
+A: Nice to meet you, I'm Ken.
+HINT: はじめまして (hajimemashite) = nice to meet you · [name]です (desu) = I'm [name]
+
+---
+DIR: EN>JP
+Q: Hello, I'm Sam.
+ROM: Konnichiwa, Samu desu.
+JP: こんにちは、サムです。
+HINT: こんにちは (konnichiwa) = hello · サム (Samu) = Sam · です (desu)
+
+---
+DIR: EN>JP
+Q: I'm also a first-year student.
+ROM: Watashi mo ichinensei desu.
+JP: 私も一年生です。
+HINT: 私 (watashi) = I · も (mo) = also · 一年生 (ichinensei) = first-year student
+
+---
+DIR: JP>EN
+Q_ROM: Watashi mo ichinensei desu.
+Q_JP: 私も一年生です。
+A: I'm also a first-year student.
+HINT: 私 (watashi) = I · も (mo) = also · 一年生 (ichinensei) = first-year student
+
+---
+DIR: EN>JP
+Q: What year is Daniel in now?
+ROM: Danieru-san wa ima nannensei desu ka?
+JP: ダニエルさんはいま何年生ですか。
+HINT: 何年生 (nannensei) = which-year student · いま (ima) = now · さん (san) = Mr./Ms.
+
+---
+DIR: EN>JP
+Q: Is Andrew also a third-year student?
+ROM: Andoryuu-san mo sannensei desu ka?
+JP: アンドリューさんも三年生ですか。
+HINT: 三年生 (sannensei) = third-year student · も (mo) = also · ですか (desu ka)
+
+---
+DIR: EN>JP
+Q: Excuse me, what is your name?
+ROM: Sumimasen, onamae wa?
+JP: すみません、おなまえは？
+HINT: おなまえ (onamae) = (your) name · は？ (wa?) = short polite question
+
+---
+DIR: JP>EN
+Q_ROM: Sumimasen, onamae wa?
+Q_JP: すみません、おなまえは？
+A: Excuse me, what is your name?
+HINT: おなまえ (onamae) = (your) name · は？ (wa?) = short polite question
+
+---
+DIR: EN>JP
+Q: Nice to meet you, I'm called Naomi.
+ROM: Hajimemashite, Naomi to iimasu.
+JP: はじめまして、なおみと言います。
+HINT: と言います (to iimasu) = I'm called · 言う (iu) = say
+
+---
+DIR: EN>JP
+Q: Hello, I'm called Daniel.
+ROM: Konnichiwa, Danieru to iimasu.
+JP: こんにちは、ダニエルと言います。
+HINT: と言います (to iimasu) = I'm called · ダニエル (Danieru) = Daniel
+
+---
+DIR: EN>JP
+Q: She is my girlfriend.
+ROM: Watashi no kanojo desu.
+JP: 私のかのじょです。
+HINT: かのじょ (kanojo) = girlfriend / she · 私の (watashi no) = my · です (desu)
+
+---
+DIR: EN>JP
+Q: Is your younger brother a student?
+ROM: Otouto-san wa gakusei desu ka?
+JP: おとうとさんはがくせいですか。
+HINT: おとうとさん (otoutosan) = (your) younger brother · がくせい (gakusei) = student
+
+---
+DIR: JP>EN
+Q_ROM: Otouto-san wa gakusei desu ka?
+Q_JP: おとうとさんはがくせいですか。
+A: Is your younger brother a student?
+HINT: おとうとさん (otoutosan) = (your) younger brother · がくせい (gakusei) = student
+
+---
+DIR: EN>JP
+Q: Is your older brother an English teacher?
+ROM: Oniisan wa eigo no sensei desu ka?
+JP: おにいさんはえいごのせんせいですか。
+HINT: おにいさん (oniisan) = (your) older brother · えいご (eigo) = English · せんせい (sensei) = teacher
+
+---
+DIR: EN>JP
+Q: What is this flower?
+ROM: Kono hana wa nan desu ka?
+JP: このはなは何ですか。
+HINT: はな (hana) = flower · 何 (nan) = what · この (kono) = this
+
+---
+DIR: JP>EN
+Q_ROM: Kono hana wa nan desu ka?
+Q_JP: このはなは何ですか。
+A: What is this flower?
+HINT: はな (hana) = flower · 何 (nan) = what · この (kono) = this
+
+---
+DIR: EN>JP
+Q: What is the wifi password?
+ROM: Wifi no pasuwaado wa nan desu ka?
+JP: wifiのパスワードは何ですか。
+HINT: パスワード (pasuwaado) = password · 何 (nan) = what · の (no) links wifi + password
+
+---
+DIR: EN>JP
+Q: The room number is 301.
+ROM: Heya no bangou wa sanmaruichi desu.
+JP: へやのばんごうは三〇一です。
+HINT: へや (heya) = room · ばんごう (bangou) = number · 〇 is read まる (maru) in room numbers (also ぜろ / れい) · 三〇一 (sanmaruichi) = 301
+
+---
+DIR: EN>JP
+Q: My phone number is 08-356.
+ROM: Watashi no denwa bangou wa zero hachi no san go roku desu.
+JP: 私のでんわばんごうは〇八の三五六です。
+HINT: でんわばんごう (denwa bangou) = phone number · の (no) between the digits = the hyphen · 〇八 (zero hachi) · 三五六 (san go roku)
+
+---
+DIR: JP>EN
+Q_ROM: Watashi no denwa bangou wa zero hachi no san go roku desu.
+Q_JP: 私のでんわばんごうは〇八の三五六です。
+A: My phone number is 08-356.
+HINT: でんわばんごう (denwa bangou) = phone number · の (no) between the digits = the hyphen · 〇八 (zero hachi) · 三五六 (san go roku)
+
+---
+DIR: EN>JP
+Q: What kind of blog is it?
+ROM: Donna burogu desu ka?
+JP: どんなブログですか。
+HINT: どんな (donna) = what kind of · ブログ (burogu) = blog · ですか (desu ka)
+
+---
+DIR: JP>EN
+Q_ROM: Donna burogu desu ka?
+Q_JP: どんなブログですか。
+A: What kind of blog is it?
+HINT: どんな (donna) = what kind of · ブログ (burogu) = blog · ですか (desu ka)

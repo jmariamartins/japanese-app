@@ -115,3 +115,194 @@ Q_ROM: Sumimasen, arimasen.
 Q_JP: すみません、ありません。
 A: I'm sorry, we don't have it.
 HINT: ありません = negative of あります (arimasu)
+
+# ── Added from Duolingo (Section 2) ──
+
+---
+DIR: EN>JP
+Q: Excuse me, ramen please.
+ROM: Sumimasen, raamen o kudasai.
+JP: すみません、ラーメンをください。
+HINT: ください (kudasai) = please give me · [item]を ください = how to order · ラーメン (raamen) = ramen · すみません (sumimasen) to get attention
+
+---
+DIR: JP>EN
+Q_ROM: Sumimasen, raamen o kudasai.
+Q_JP: すみません、ラーメンをください。
+A: Excuse me, ramen please.
+HINT: ください (kudasai) = please give me · [item]を ください = how to order · ラーメン (raamen) = ramen · すみません (sumimasen) to get attention
+
+---
+DIR: EN>JP
+Q: How much is the udon?
+ROM: Udon wa ikura desu ka?
+JP: うどんはいくらですか。
+HINT: いくら (ikura) = how much · うどん (udon) = udon noodles · [item]は いくらですか (wa ikura desu ka) = price question
+
+---
+DIR: JP>EN
+Q_ROM: Udon wa ikura desu ka?
+Q_JP: うどんはいくらですか。
+A: How much is the udon?
+HINT: いくら (ikura) = how much · うどん (udon) = udon noodles · [item]は いくらですか (wa ikura desu ka) = price question
+
+---
+DIR: EN>JP
+Q: Then, two waters, please.
+ROM: Jaa, mizu o futatsu kudasai.
+JP: じゃあ、水を二つください。
+HINT: じゃあ (jaa) = well then · 水 (mizu) = water · 二つ (futatsu) = two (items) · quantity goes after を (o), before ください (kudasai)
+
+---
+DIR: JP>EN
+Q_ROM: Jaa, mizu o futatsu kudasai.
+Q_JP: じゃあ、水を二つください。
+A: Then, two waters, please.
+HINT: じゃあ (jaa) = well then · 水 (mizu) = water · 二つ (futatsu) = two (items) · quantity goes after を (o), before ください (kudasai)
+
+---
+DIR: EN>JP
+Q: Two donuts, please!
+ROM: Doonatsu o futatsu kudasai!
+JP: ドーナツを二つください！
+HINT: ドーナツ (doonatsu) = donut · 二つ (futatsu) = two · no particle after the number
+
+---
+DIR: EN>JP
+Q: Is that cake shop expensive?
+ROM: Ano keekiya wa takai desu ka?
+JP: あのケーキやはたかいですか。
+HINT: ケーキや (keekiya) = cake shop · たかい (takai) = expensive · あの (ano) = that over there
+
+---
+DIR: EN>JP
+Q: This cheesecake is a little expensive, isn't it?
+ROM: Kono chiizukeeki wa sukoshi takai desu ne.
+JP: このチーズケーキはすこしたかいですね。
+HINT: すこし (sukoshi) = a little · ね (ne) = isn't it? (asking for agreement) · たかい (takai) = expensive
+
+---
+DIR: JP>EN
+Q_ROM: Kono chiizukeeki wa sukoshi takai desu ne.
+Q_JP: このチーズケーキはすこしたかいですね。
+A: This cheesecake is a little expensive, isn't it?
+HINT: すこし (sukoshi) = a little · ね (ne) = isn't it? (asking for agreement) · たかい (takai) = expensive
+
+---
+DIR: EN>JP
+Q: Which cake will you buy?
+ROM: Dono keeki o kaimasu ka?
+JP: どのケーキを買いますか。
+HINT: どの (dono) = which [noun] · 買います (kaimasu) = buy · この/その/あの/どの (kono/sono/ano/dono) + noun
+
+---
+DIR: EN>JP
+Q: This hoodie is a little expensive, isn't it?
+ROM: Kono paakaa wa sukoshi takai desu ne.
+JP: このパーカーはすこし高いですね。
+HINT: パーカー (paakaa) = hoodie · 高い (takai) = expensive (also "tall") · すこし (sukoshi) = a little
+
+---
+DIR: EN>JP
+Q: This hat is very fluffy.
+ROM: Kono boushi wa totemo fuwafuwa desu.
+JP: このぼうしはとてもふわふわです。
+HINT: ぼうし (boushi) = hat · ふわふわ (fuwafuwa) = fluffy / soft · とても (totemo) = very · translation filled in by me (cut off in your screenshot)
+
+---
+DIR: EN>JP
+Q: Let's buy a new skirt next time.
+ROM: Kondo atarashii sukaato o kaimashou.
+JP: こんど新しいスカートを買いましょう。
+HINT: こんど (kondo) = next time · 新しい (atarashii) = new · スカート (sukaato) = skirt · ましょう (mashou) = let's
+
+---
+DIR: JP>EN
+Q_ROM: Kondo atarashii sukaato o kaimashou.
+Q_JP: こんど新しいスカートを買いましょう。
+A: Let's buy a new skirt next time.
+HINT: こんど (kondo) = next time · 新しい (atarashii) = new · スカート (sukaato) = skirt · ましょう (mashou) = let's
+
+---
+DIR: EN>JP
+Q: Let's buy a new umbrella.
+ROM: Atarashii kasa o kaimashou.
+JP: 新しいかさを買いましょう。
+HINT: かさ (kasa) = umbrella · 買いましょう (kaimashou) = let's buy
+
+---
+DIR: EN>JP
+Q: Let's buy nine eggs.
+ROM: Tamago o kokonotsu kaimashou.
+JP: 卵を九つ買いましょう。
+HINT: 卵 (tamago) = egg · 九つ (kokonotsu) = nine (items) · quantity goes right after the object
+
+---
+DIR: JP>EN
+Q_ROM: Tamago o kokonotsu kaimashou.
+Q_JP: 卵を九つ買いましょう。
+A: Let's buy nine eggs.
+HINT: 卵 (tamago) = egg · 九つ (kokonotsu) = nine (items) · quantity goes right after the object
+
+---
+DIR: EN>JP
+Q: Shall we buy black pepper too?
+ROM: Kuro koshou mo kaimashou ka?
+JP: くろこしょうも買いましょうか。
+HINT: くろこしょう (kuro koshou) = black pepper · も (mo) = also · ましょうか (mashou ka) = shall we...?
+
+---
+DIR: EN>JP
+Q: Let's look for cheap butter.
+ROM: Yasui bataa o sagashimashou.
+JP: やすいバターをさがしましょう。
+HINT: やすい (yasui) = cheap · バター (bataa) = butter · さがす (sagasu) = look for → さがしましょう (sagashimashou)
+
+---
+DIR: EN>JP
+Q: Do you have a big rice bowl?
+ROM: Ookii chawan wa arimasu ka?
+JP: 大きいちゃわんはありますか。
+HINT: 大きい (ookii) = big · ちゃわん (chawan) = rice bowl · ありますか (arimasu ka) = do you have...?
+
+---
+DIR: JP>EN
+Q_ROM: Ookii chawan wa arimasu ka?
+Q_JP: 大きいちゃわんはありますか。
+A: Do you have a big rice bowl?
+HINT: 大きい (ookii) = big · ちゃわん (chawan) = rice bowl · ありますか (arimasu ka) = do you have...?
+
+---
+DIR: EN>JP
+Q: Excuse me, do you have water?
+ROM: Sumimasen, mizu wa arimasu ka?
+JP: すみません、水はありますか。
+HINT: 水 (mizu) = water · [item]は ありますか (wa arimasu ka) = do you have...?
+
+---
+DIR: JP>EN
+Q_ROM: Sumimasen, mizu wa arimasu ka?
+Q_JP: すみません、水はありますか。
+A: Excuse me, do you have water?
+HINT: 水 (mizu) = water · [item]は ありますか (wa arimasu ka) = do you have...?
+
+---
+DIR: EN>JP
+Q: This beef is cheap, isn't it?
+ROM: Kono gyuuniku wa yasui desu ne.
+JP: このぎゅう肉はやすいですね。
+HINT: ぎゅう肉 (gyuuniku) = beef · やすい (yasui) = cheap · ね (ne) = isn't it?
+
+---
+DIR: EN>JP
+Q: On the way, I'll buy wine.
+ROM: Tochuu de wain o kaimasu.
+JP: とちゅうでワインを買います。
+HINT: とちゅう (tochuu) = on the way · で (de) = at / during · ワイン (wain) = wine
+
+---
+DIR: EN>JP
+Q: Where will you buy souvenirs?
+ROM: Doko de omiyage o kaimasu ka?
+JP: どこでおみやげを買いますか。
+HINT: どこで (doko de) = where (place of action) · おみやげ (omiyage) = souvenir · で (de) marks where the buying happens

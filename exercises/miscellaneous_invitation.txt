@@ -35,3 +35,180 @@ Q: Let's play football tomorrow.
 ROM: Ashita sakka- wo shimashou.
 JP: あした サッカーを しましょう。
 HINT: ましょう (mashou) = let's · を (wo) marks the sport · contrast: ませんか = "shall we?" / ましょう = "let's!"
+
+# ── Added from Duolingo (Section 2) ──
+
+---
+DIR: EN>JP
+Q: Let's make beef stew!
+ROM: Biifu shichuu o tsukurimashou!
+JP: ビーフシチューを作りましょう！
+HINT: ビーフシチュー (biifu shichuu) = beef stew · 作る (tsukuru) = make → 作りましょう (tsukurimashou) = let's make
+
+---
+DIR: JP>EN
+Q_ROM: Biifu shichuu o tsukurimashou!
+Q_JP: ビーフシチューを作りましょう！
+A: Let's make beef stew!
+HINT: ビーフシチュー (biifu shichuu) = beef stew · 作る (tsukuru) = make → 作りましょう (tsukurimashou) = let's make
+
+---
+DIR: EN>JP
+Q: Let's make cookies too.
+ROM: Kukkii mo tsukurimashou.
+JP: クッキーも作りましょう。
+HINT: クッキー (kukkii) = cookies · も (mo) = also · 作りましょう (tsukurimashou) = let's make
+
+---
+DIR: EN>JP
+Q: Let's make a video together!
+ROM: Issho ni douga o tsukurimashou!
+JP: いっしょにどうがを作りましょう！
+HINT: いっしょに (issho ni) = together · どうが (douga) = video · 作りましょう (tsukurimashou)
+
+---
+DIR: JP>EN
+Q_ROM: Issho ni douga o tsukurimashou!
+Q_JP: いっしょにどうがを作りましょう！
+A: Let's make a video together!
+HINT: いっしょに (issho ni) = together · どうが (douga) = video · 作りましょう (tsukurimashou)
+
+---
+DIR: EN>JP
+Q: Let's make tonkatsu tonight!
+ROM: Konban tonkatsu o tsukurimashou!
+JP: こんばんとんかつを作りましょう。
+HINT: こんばん (konban) = tonight · とんかつ (tonkatsu) = pork cutlet · ましょう (mashou) = let's
+
+---
+DIR: EN>JP
+Q: Shall we make gyudon?
+ROM: Gyuudon o tsukurimashou ka?
+JP: ぎゅうどんを作りましょうか。
+HINT: ぎゅうどん (gyuudon) = beef bowl · ましょうか (mashou ka) = shall we...? (offer / suggestion)
+
+---
+DIR: JP>EN
+Q_ROM: Gyuudon o tsukurimashou ka?
+Q_JP: ぎゅうどんを作りましょうか。
+A: Shall we make gyudon?
+HINT: ぎゅうどん (gyuudon) = beef bowl · ましょうか (mashou ka) = shall we...? (offer / suggestion)
+
+---
+DIR: EN>JP
+Q: Let's meet in front of the vending machine.
+ROM: Jihanki no mae de machimashou.
+JP: じはんきのまえでまちましょう。
+HINT: じはんき (jihanki) = vending machine · まえ (mae) = in front · まつ (matsu) = wait → まちましょう (machimashou) = let's wait / meet up
+
+---
+DIR: EN>JP
+Q: Shall we take a photo in front of the pool?
+ROM: Puuru no mae de shashin o torimasen ka?
+JP: プールのまえでしゃしんをとりませんか。
+HINT: プール (puuru) = pool · しゃしん (shashin) = photo · とる (toru) = take → とりません (torimasen) · ませんか (masen ka) = won't you...? · translation filled in by me (cut off in your screenshot)
+
+---
+DIR: EN>JP
+Q: Shall we go to a food event?
+ROM: Tabemono no ibento ni ikimasen ka?
+JP: 食べ物のイベントに行きませんか。
+HINT: 食べ物 (tabemono) = food · イベント (ibento) = event · に (ni) = destination · 行きませんか (ikimasen ka) = shall we go?
+
+---
+DIR: JP>EN
+Q_ROM: Tabemono no ibento ni ikimasen ka?
+Q_JP: 食べ物のイベントに行きませんか。
+A: Shall we go to a food event?
+HINT: 食べ物 (tabemono) = food · イベント (ibento) = event · に (ni) = destination · 行きませんか (ikimasen ka) = shall we go?
+
+---
+DIR: EN>JP
+Q: Shall we go to a bar together after this?
+ROM: Kono ato issho ni baa ni ikimashou ka?
+JP: このあといっしょにバーに行きましょうか。
+HINT: このあと (kono ato) = after this · バー (baa) = bar · いっしょに (issho ni) = together
+
+---
+DIR: JP>EN
+Q_ROM: Kono ato issho ni baa ni ikimashou ka?
+Q_JP: このあといっしょにバーに行きましょうか。
+A: Shall we go to a bar together after this?
+HINT: このあと (kono ato) = after this · バー (baa) = bar · いっしょに (issho ni) = together
+
+---
+DIR: EN>JP
+Q: Where shall we wait for the taxi?
+ROM: Doko de takushii o machimashou ka?
+JP: どこでタクシーをまちましょうか。
+HINT: どこで (doko de) = where (place of action) · まちましょうか (machimashou ka) = shall we wait?
+
+---
+DIR: EN>JP
+Q: Which plate shall we use?
+ROM: Dono osara o tsukaimashou ka?
+JP: どのおさらをつかいましょうか。
+HINT: どの (dono) = which · おさら (osara) = plate · つかう (tsukau) = use → つかいましょう (tsukaimashou)
+
+---
+DIR: EN>JP
+Q: Let's use the chopsticks inside this drawer.
+ROM: Kono hikidashi no naka no hashi o tsukaimashou.
+JP: このひきだしの中のはしをつかいましょう。
+HINT: ひきだし (hikidashi) = drawer · 中 (naka) = inside · はし (hashi) = chopsticks · の (no) links the nouns
+
+---
+DIR: JP>EN
+Q_ROM: Kono hikidashi no naka no hashi o tsukaimashou.
+Q_JP: このひきだしの中のはしをつかいましょう。
+A: Let's use the chopsticks inside this drawer.
+HINT: ひきだし (hikidashi) = drawer · 中 (naka) = inside · はし (hashi) = chopsticks · の (no) links the nouns
+
+---
+DIR: EN>JP
+Q: Where shall we go next month?
+ROM: Raigetsu doko ni ikimashou ka?
+JP: 来月どこに行きましょうか。
+HINT: 来月 (raigetsu) = next month · どこに (doko ni) = to where · 行きましょうか (ikimashou ka)
+
+---
+DIR: EN>JP
+Q: Let's go to France!
+ROM: Furansu ni ikimashou!
+JP: フランスに行きましょう！
+HINT: フランス (Furansu) = France · に (ni) = destination · 行きましょう (ikimashou) = let's go
+
+---
+DIR: EN>JP
+Q: What shall we do next month?
+ROM: Raigetsu nani o shimashou ka?
+JP: 来月何をしましょうか。
+HINT: 何 (nani) = what · します (shimasu) → しましょうか (shimashou ka) = shall we do?
+
+---
+DIR: JP>EN
+Q_ROM: Raigetsu nani o shimashou ka?
+Q_JP: 来月何をしましょうか。
+A: What shall we do next month?
+HINT: 何 (nani) = what · します (shimasu) → しましょうか (shimashou ka) = shall we do?
+
+---
+DIR: EN>JP
+Q: What kind of article shall we write?
+ROM: Donna kiji o kakimashou ka?
+JP: どんなきじをかきましょうか。
+HINT: どんな (donna) = what kind of · きじ (kiji) = article · かく (kaku) = write → かきましょうか (kakimashou ka)
+
+---
+DIR: EN>JP
+Q: What kind of fruit shall we eat?
+ROM: Donna kudamono o tabemashou ka?
+JP: どんなくだものを食べましょうか。
+HINT: どんな (donna) = what kind of · くだもの (kudamono) = fruit · 食べましょうか (tabemashou ka)
+
+---
+DIR: JP>EN
+Q_ROM: Donna kudamono o tabemashou ka?
+Q_JP: どんなくだものを食べましょうか。
+A: What kind of fruit shall we eat?
+HINT: どんな (donna) = what kind of · くだもの (kudamono) = fruit · 食べましょうか (tabemashou ka)

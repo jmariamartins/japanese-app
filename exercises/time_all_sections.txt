@@ -538,3 +538,117 @@ Q_ROM: Mearii wa Takeshi wo ichijikan gurai machimashita.
 Q_JP: めありーは たけしを いちじかんぐらい まちました。
 A: Mary waited for Takeshi for about an hour.
 HINT: ぐらい (gurai) = approximately · を (wo) marks the person waited for · いちじかん (ichijikan) = one hour
+
+# ── Added from Duolingo (Section 2) ──
+
+---
+DIR: EN>JP
+Q: It takes twenty minutes from here to the department store.
+ROM: Koko kara depaato made nijuppun kakarimasu.
+JP: ここからデパートまで二十分かかります。
+HINT: から (kara) = from · まで (made) = to · 二十分 (nijuppun) = 20 minutes · かかります (kakarimasu) = it takes (time)
+
+---
+DIR: JP>EN
+Q_ROM: Koko kara depaato made nijuppun kakarimasu.
+Q_JP: ここからデパートまで二十分かかります。
+A: It takes twenty minutes from here to the department store.
+HINT: から (kara) = from · まで (made) = to · 二十分 (nijuppun) = 20 minutes · かかります (kakarimasu) = it takes (time)
+
+---
+DIR: EN>JP
+Q: How long does it take?
+ROM: Dono gurai kakarimasu ka?
+JP: どのぐらいかかりますか。
+HINT: どのぐらい (dono gurai) = about how long · かかります (kakarimasu) = it takes
+
+---
+DIR: JP>EN
+Q_ROM: Dono gurai kakarimasu ka?
+Q_JP: どのぐらいかかりますか。
+A: How long does it take?
+HINT: どのぐらい (dono gurai) = about how long · かかります (kakarimasu) = it takes
+
+---
+DIR: EN>JP
+Q: Do you drink coffee at five o'clock?
+ROM: Goji ni koohii o nomimasu ka?
+JP: 五時にコーヒーをのみますか。
+HINT: 五時 (goji) = 5 o'clock · に (ni) = specific time · のみます (nomimasu) = drink
+
+---
+DIR: EN>JP
+Q: I eat salad at eight o'clock.
+ROM: Hachiji ni sarada o tabemasu.
+JP: 八時にサラダをたべます。
+HINT: 八時 (hachiji) = 8 o'clock · に (ni) = specific time · サラダ (sarada) = salad
+
+---
+DIR: EN>JP
+Q: Yes, I often eat curry!
+ROM: Hai, yoku karee o tabemasu!
+JP: はい、よくカレーをたべます！
+HINT: よく (yoku) = often · カレー (karee) = curry · たべます (tabemasu) = eat
+
+---
+DIR: EN>JP
+Q: Do you often eat fish?
+ROM: Sakana wa yoku tabemasu ka?
+JP: 魚はよく食べますか。
+HINT: 魚 (sakana) = fish · は (wa) = topic · よく (yoku) = often
+
+---
+DIR: JP>EN
+Q_ROM: Sakana wa yoku tabemasu ka?
+Q_JP: 魚はよく食べますか。
+A: Do you often eat fish?
+HINT: 魚 (sakana) = fish · は (wa) = topic · よく (yoku) = often
+
+---
+DIR: EN>JP
+Q: I eat one orange every day.
+ROM: Mainichi orenji o hitotsu tabemasu.
+JP: まいにちオレンジを一つ食べます。
+HINT: まいにち (mainichi) = every day (no に) · 一つ (hitotsu) = one · オレンジ (orenji) = orange
+
+---
+DIR: JP>EN
+Q_ROM: Mainichi orenji o hitotsu tabemasu.
+Q_JP: まいにちオレンジを一つ食べます。
+A: I eat one orange every day.
+HINT: まいにち (mainichi) = every day (no に) · 一つ (hitotsu) = one · オレンジ (orenji) = orange
+
+---
+DIR: EN>JP
+Q: Next week I'll wake up early.
+ROM: Raishuu wa hayaku okimasu.
+JP: らいしゅうははやくおきます。
+HINT: らいしゅう (raishuu) = next week (no に) · はやく (hayaku) = early · おきます (okimasu) = wake up
+
+---
+DIR: JP>EN
+Q_ROM: Raishuu wa hayaku okimasu.
+Q_JP: らいしゅうははやくおきます。
+A: Next week I'll wake up early.
+HINT: らいしゅう (raishuu) = next week (no に) · はやく (hayaku) = early · おきます (okimasu) = wake up
+
+---
+DIR: EN>JP
+Q: When is the test?
+ROM: Tesuto wa itsu desu ka?
+JP: テストはいつですか。
+HINT: テスト (tesuto) = test · いつ (itsu) = when
+
+---
+DIR: EN>JP
+Q: When is the trip?
+ROM: Ryokou wa itsu desu ka?
+JP: りょこうはいつですか。
+HINT: りょこう (ryokou) = trip · いつ (itsu) = when
+
+---
+DIR: EN>JP
+Q: Do you write an article every day?
+ROM: Mainichi kiji o kakimasu ka?
+JP: まいにちきじをかきますか。
+HINT: まいにち (mainichi) = every day · きじ (kiji) = article · かきます (kakimasu) = write

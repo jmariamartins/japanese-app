@@ -78,3 +78,33 @@ Q_ROM: Masami wa ginkou ni tsutomete imasu.
 Q_JP: まさみ は ぎんこう に つとめています。
 A: Masami works at a bank.
 HINT: つとめています (tsutomete imasu) = is employed at · に (ni) = place of employment
+
+# ── Added from Duolingo (Section 2) ──
+
+---
+DIR: EN>JP
+Q: Do you live in Japan?
+ROM: Nihon ni sunde imasu ka?
+JP: 日本にすんでいますか。
+HINT: すんでいます (sunde imasu) = live (current state) · に (ni) = where you live
+
+---
+DIR: JP>EN
+Q_ROM: Nihon ni sunde imasu ka?
+Q_JP: 日本にすんでいますか。
+A: Do you live in Japan?
+HINT: すんでいます (sunde imasu) = live (current state) · に (ni) = where you live
+
+---
+DIR: EN>JP
+Q: Where does your older sister live?
+ROM: Oneesan wa doko ni sunde imasu ka?
+JP: おねえさんはどこにすんでいますか。
+HINT: おねえさん (oneesan) = (your) older sister · どこに (doko ni) = where · すんでいますか (sunde imasu ka)
+
+---
+DIR: JP>EN
+Q_ROM: Oneesan wa doko ni sunde imasu ka?
+Q_JP: おねえさんはどこにすんでいますか。
+A: Where does your older sister live?
+HINT: おねえさん (oneesan) = (your) older sister · どこに (doko ni) = where · すんでいますか (sunde imasu ka)

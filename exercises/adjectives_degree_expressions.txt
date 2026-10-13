@@ -335,3 +335,236 @@ Q_ROM: Kono hon wa omoshiroku nakatta desu.
 Q_JP: このほんは おもしろくなかったです。
 A: This book was not interesting.
 HINT: おもしろくなかった (omoshiroku nakatta) = past negative of おもしろい · く form before なかった
+
+# ── Added from Duolingo (Section 2) ──
+
+---
+DIR: EN>JP
+Q: The meat in this sandwich is delicious.
+ROM: Kono sandoitchi no niku wa oishii desu.
+JP: このサンドイッチの肉はおいしいです。
+HINT: サンドイッチ (sandoitchi) = sandwich · 肉 (niku) = meat · おいしい (oishii) = delicious
+
+---
+DIR: EN>JP
+Q: This restaurant is quiet, isn't it?
+ROM: Kono resutoran wa shizuka desu ne.
+JP: このレストランはしずかですね。
+HINT: しずか (shizuka) = quiet (na-adjective, no な before です) · ね (ne) = isn't it?
+
+---
+DIR: JP>EN
+Q_ROM: Kono resutoran wa shizuka desu ne.
+Q_JP: このレストランはしずかですね。
+A: This restaurant is quiet, isn't it?
+HINT: しずか (shizuka) = quiet (na-adjective, no な before です) · ね (ne) = isn't it?
+
+---
+DIR: EN>JP
+Q: That soba is very delicious.
+ROM: Sono soba wa totemo oishii desu.
+JP: そのそばはとてもおいしいです。
+HINT: そば (soba) = soba noodles · とても (totemo) = very · おいしい (oishii)
+
+---
+DIR: JP>EN
+Q_ROM: Sono soba wa totemo oishii desu.
+Q_JP: そのそばはとてもおいしいです。
+A: That soba is very delicious.
+HINT: そば (soba) = soba noodles · とても (totemo) = very · おいしい (oishii)
+
+---
+DIR: EN>JP
+Q: The curry is delicious.
+ROM: Karee wa oishii desu.
+JP: カレーはおいしいです。
+HINT: カレー (karee) = curry · おいしい (oishii) = delicious
+
+---
+DIR: EN>JP
+Q: Mt. Fuji is tall, isn't it?
+ROM: Fujisan wa takai desu ne.
+JP: ふじさんは高いですね。
+HINT: ふじさん (Fujisan) = Mt. Fuji · 高い (takai) = tall / high · ね (ne) = isn't it?
+
+---
+DIR: JP>EN
+Q_ROM: Fujisan wa takai desu ne.
+Q_JP: ふじさんは高いですね。
+A: Mt. Fuji is tall, isn't it?
+HINT: ふじさん (Fujisan) = Mt. Fuji · 高い (takai) = tall / high · ね (ne) = isn't it?
+
+---
+DIR: EN>JP
+Q: This mountain is really tall!
+ROM: Kono yama wa hontou ni takai desu!
+JP: この山はほんとうに高いです！
+HINT: 山 (yama) = mountain · ほんとうに (hontou ni) = really · 高い (takai) = tall
+
+---
+DIR: EN>JP
+Q: This is a quiet place, isn't it?
+ROM: Koko wa shizuka na tokoro desu ne.
+JP: ここはしずかなところですね。
+HINT: しずかな (shizuka na) = quiet (na-adjective + な before a noun) · ところ (tokoro) = place
+
+---
+DIR: JP>EN
+Q_ROM: Koko wa shizuka na tokoro desu ne.
+Q_JP: ここはしずかなところですね。
+A: This is a quiet place, isn't it?
+HINT: しずかな (shizuka na) = quiet (na-adjective + な before a noun) · ところ (tokoro) = place
+
+---
+DIR: EN>JP
+Q: That house is spacious, isn't it?
+ROM: Sono ie wa hiroi desu ne.
+JP: そのいえはひろいですね。
+HINT: いえ (ie) = house · ひろい (hiroi) = spacious · ね (ne)
+
+---
+DIR: EN>JP
+Q: The new apartment is spacious.
+ROM: Atarashii apaato wa hiroi desu.
+JP: 新しいアパートはひろいです。
+HINT: 新しい (atarashii) = new · アパート (apaato) = apartment · ひろい (hiroi) = spacious
+
+---
+DIR: EN>JP
+Q: This pork is very delicious, isn't it?
+ROM: Kono butaniku wa totemo oishii desu ne.
+JP: このぶたにくはとてもおいしいですね。
+HINT: ぶたにく (butaniku) = pork · とても (totemo) = very · おいしい (oishii)
+
+---
+DIR: EN>JP
+Q: Are the summer holidays long?
+ROM: Natsu yasumi wa nagai desu ka?
+JP: なつ休みはながいですか。
+HINT: なつ休み (natsu yasumi) = summer vacation · ながい (nagai) = long
+
+---
+DIR: JP>EN
+Q_ROM: Natsu yasumi wa nagai desu ka?
+Q_JP: なつ休みはながいですか。
+A: Are the summer holidays long?
+HINT: なつ休み (natsu yasumi) = summer vacation · ながい (nagai) = long
+
+---
+DIR: EN>JP
+Q: I don't read horror manga very much.
+ROM: Horaa manga wa amari yomimasen.
+JP: ホラーまんがはあまり読みません。
+HINT: ホラー (horaa) = horror · まんが (manga) = manga · あまり (amari) = not very (always with a negative) · 読みません (yomimasen)
+
+---
+DIR: JP>EN
+Q_ROM: Horaa manga wa amari yomimasen.
+Q_JP: ホラーまんがはあまり読みません。
+A: I don't read horror manga very much.
+HINT: ホラー (horaa) = horror · まんが (manga) = manga · あまり (amari) = not very (always with a negative) · 読みません (yomimasen)
+
+---
+DIR: EN>JP
+Q: Badminton is fun too!
+ROM: Badominton mo tanoshii desu!
+JP: バドミントンもたのしいです！
+HINT: バドミントン (badominton) = badminton · も (mo) = also · たのしい (tanoshii) = fun
+
+---
+DIR: EN>JP
+Q: That is a very beautiful temple.
+ROM: Are wa totemo kirei na otera desu.
+JP: あれはとてもきれいなおてらです。
+HINT: あれ (are) = that (over there) · きれいな (kirei na) = pretty (na-adjective) · おてら (otera) = temple
+
+---
+DIR: JP>EN
+Q_ROM: Are wa totemo kirei na otera desu.
+Q_JP: あれはとてもきれいなおてらです。
+A: That is a very beautiful temple.
+HINT: あれ (are) = that (over there) · きれいな (kirei na) = pretty (na-adjective) · おてら (otera) = temple
+
+---
+DIR: EN>JP
+Q: My boyfriend is a very energetic person.
+ROM: Kareshi wa totemo genki na hito desu.
+JP: かれしはとてもげんきな人です。
+HINT: かれし (kareshi) = boyfriend · げんきな (genki na) = energetic · 人 (hito) = person
+
+---
+DIR: EN>JP
+Q: Tokyo is a big city.
+ROM: Toukyou wa ookii toshi desu.
+JP: 東京はおおきいとしです。
+HINT: おおきい (ookii) = big · とし (toshi) = city · i-adjective goes directly before the noun
+
+---
+DIR: JP>EN
+Q_ROM: Toukyou wa ookii toshi desu.
+Q_JP: 東京はおおきいとしです。
+A: Tokyo is a big city.
+HINT: おおきい (ookii) = big · とし (toshi) = city · i-adjective goes directly before the noun
+
+---
+DIR: EN>JP
+Q: I don't eat sweet fruit.
+ROM: Amai kudamono wa tabemasen.
+JP: あまいくだものは食べません。
+HINT: あまい (amai) = sweet · くだもの (kudamono) = fruit · 食べません (tabemasen) = don't eat
+
+---
+DIR: EN>JP
+Q: I like spring.
+ROM: Haru ga suki desu.
+JP: はるがすきです。
+HINT: はる (haru) = spring · すき (suki) = like (na-adjective) · が (ga) marks what is liked
+
+---
+DIR: JP>EN
+Q_ROM: Haru ga suki desu.
+Q_JP: はるがすきです。
+A: I like spring.
+HINT: はる (haru) = spring · すき (suki) = like (na-adjective) · が (ga) marks what is liked
+
+---
+DIR: EN>JP
+Q: What kind of game do you like?
+ROM: Donna geemu ga suki desu ka?
+JP: どんなゲームがすきですか。
+HINT: どんな (donna) = what kind of · ゲーム (geemu) = game · すき (suki) = like
+
+---
+DIR: EN>JP
+Q: I like Japanese tea.
+ROM: Nihon no ocha ga suki desu.
+JP: 日本のおちゃがすきです。
+HINT: 日本 (Nihon) = Japan · の (no) links the nouns · おちゃ (ocha) = tea · すき (suki)
+
+---
+DIR: EN>JP
+Q: But I like pasta!
+ROM: Demo, pasuta ga suki desu!
+JP: でも、パスタがすきです！
+HINT: でも (demo) = but · パスタ (pasuta) = pasta · すき (suki) = like
+
+---
+DIR: EN>JP
+Q: Yes, I like donuts too.
+ROM: Hai, doonatsu mo suki desu.
+JP: はい、ドーナツもすきです。
+HINT: ドーナツ (doonatsu) = donut · も (mo) = also (replaces が) · すき (suki)
+
+---
+DIR: JP>EN
+Q_ROM: Hai, doonatsu mo suki desu.
+Q_JP: はい、ドーナツもすきです。
+A: Yes, I like donuts too.
+HINT: ドーナツ (doonatsu) = donut · も (mo) = also (replaces が) · すき (suki)
+
+---
+DIR: EN>JP
+Q: Yes, it is quiet.
+ROM: Hai, shizuka desu.
+JP: はい、しずかです。
+HINT: しずか (shizuka) = quiet · です (desu) · short answer to "is it quiet?"

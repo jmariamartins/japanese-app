@@ -261,6 +261,7 @@ HINT: あなたは？(Anata wa?) = how about you? / what about you? · は (wa) 
 DIR: EN>JP
 Q: Which class is interesting? Japanese class is interesting.
 ROM: Dono kurasu ga omoshiroidesuka? Nihongo no kurasu ga omoshiroidesu.
+JP: どの クラスが おもしろいですか？ にほんごの クラスが おもしろいです。
 HINT: interesting (omoshiroi); class (kurasu)
 
 ---
@@ -269,3 +270,173 @@ Q: Misa and I will go to France and Spain.
 ROM: Watashi to Misa wa Furansu to Supein ni ikimasu.
 JP: わたしと みさは フランスと スペインに いきます。
 HINT: と (to) = and (exhaustive list, people + places) · に/へ (ni/e) = destination · compare with past: いきました (ikimashita)
+
+# ── Added from Duolingo (Section 2) ──
+
+---
+DIR: EN>JP
+Q: Does this bus go to Kyoto?
+ROM: Kono basu wa Kyouto ni ikimasu ka?
+JP: このバスは京都に行きますか。
+HINT: に (ni) = destination · 京都 (Kyouto) = Kyoto · バス (basu) = bus
+
+---
+DIR: JP>EN
+Q_ROM: Kono basu wa Kyouto ni ikimasu ka?
+Q_JP: このバスは京都に行きますか。
+A: Does this bus go to Kyoto?
+HINT: に (ni) = destination · 京都 (Kyouto) = Kyoto · バス (basu) = bus
+
+---
+DIR: EN>JP
+Q: Excuse me, does this bus go to the university?
+ROM: Sumimasen, kono basu wa daigaku ni ikimasu ka?
+JP: すみません、このバスはだいがくに行きますか。
+HINT: だいがく (daigaku) = university · に (ni) = destination · 行きます (ikimasu) = go
+
+---
+DIR: EN>JP
+Q: Where does this bus go?
+ROM: Kono basu wa doko ni ikimasu ka?
+JP: このバスはどこに行きますか。
+HINT: どこに (doko ni) = to where · に (ni) marks the destination
+
+---
+DIR: EN>JP
+Q: The next bus will come soon.
+ROM: Tsugi no basu wa mou sugu kimasu.
+JP: つぎのバスはもうすぐ来ます。
+HINT: つぎの (tsugi no) = next · もうすぐ (mou sugu) = very soon · 来ます (kimasu) = come
+
+---
+DIR: JP>EN
+Q_ROM: Tsugi no basu wa mou sugu kimasu.
+Q_JP: つぎのバスはもうすぐ来ます。
+A: The next bus will come soon.
+HINT: つぎの (tsugi no) = next · もうすぐ (mou sugu) = very soon · 来ます (kimasu) = come
+
+---
+DIR: EN>JP
+Q: I'm going out with my girlfriend on Sunday.
+ROM: Nichiyoubi ni kanojo to dekakemasu.
+JP: 日曜日にかのじょとでかけます。
+HINT: に (ni) = day · と (to) = together with · かのじょ (kanojo) = girlfriend · でかける (dekakeru) = go out
+
+---
+DIR: JP>EN
+Q_ROM: Nichiyoubi ni kanojo to dekakemasu.
+Q_JP: 日曜日にかのじょとでかけます。
+A: I'm going out with my girlfriend on Sunday.
+HINT: に (ni) = day · と (to) = together with · かのじょ (kanojo) = girlfriend · でかける (dekakeru) = go out
+
+---
+DIR: EN>JP
+Q: On Saturday I'm going to a restaurant with my boyfriend.
+ROM: Doyoubi ni kareshi to resutoran ni ikimasu.
+JP: 土曜日にかれしとレストランに行きます。
+HINT: かれし (kareshi) = boyfriend · と (to) = with · に (ni) twice: day, then destination
+
+---
+DIR: EN>JP
+Q: Where are you going on Saturday?
+ROM: Doyoubi ni doko ni ikimasu ka?
+JP: 土曜日にどこに行きますか。
+HINT: に (ni) after the day · どこに (doko ni) = to where
+
+---
+DIR: EN>JP
+Q: I'm going on a date tomorrow!
+ROM: Ashita deeto ni ikimasu!
+JP: あしたデートに行きます！
+HINT: デート (deeto) = date · に (ni) = purpose / destination · あした (ashita) takes no に
+
+---
+DIR: EN>JP
+Q: I also use chopsticks and a spoon.
+ROM: Hashi to supuun mo tsukaimasu.
+JP: はしとスプーンもつかいます。
+HINT: はし (hashi) = chopsticks · と (to) = and · も (mo) = also · スプーン (supuun) = spoon
+
+---
+DIR: EN>JP
+Q: I use a fork and a spoon.
+ROM: Fooku to supuun o tsukaimasu.
+JP: フォークとスプーンをつかいます。
+HINT: フォーク (fooku) = fork · と (to) = and (complete list) · を (o) marks the object
+
+---
+DIR: JP>EN
+Q_ROM: Fooku to supuun o tsukaimasu.
+Q_JP: フォークとスプーンをつかいます。
+A: I use a fork and a spoon.
+HINT: フォーク (fooku) = fork · と (to) = and (complete list) · を (o) marks the object
+
+---
+DIR: EN>JP
+Q: I often go out with my older brother.
+ROM: Yoku ani to dekakemasu.
+JP: よくあにとでかけます。
+HINT: よく (yoku) = often · あに (ani) = my older brother · と (to) = with
+
+---
+DIR: EN>JP
+Q: On weekends I do judo with friends.
+ROM: Shuumatsu wa tomodachi to juudou o shimasu.
+JP: しゅうまつはともだちとじゅうどうをします。
+HINT: しゅうまつ (shuumatsu) = weekend · と (to) = with · じゅうどう (juudou) = judo · をします (o shimasu) = do
+
+---
+DIR: JP>EN
+Q_ROM: Shuumatsu wa tomodachi to juudou o shimasu.
+Q_JP: しゅうまつはともだちとじゅうどうをします。
+A: On weekends I do judo with friends.
+HINT: しゅうまつ (shuumatsu) = weekend · と (to) = with · じゅうどう (juudou) = judo · をします (o shimasu) = do
+
+---
+DIR: EN>JP
+Q: On Saturday I play games alone.
+ROM: Doyoubi wa hitori de geemu o shimasu.
+JP: 土曜日はひとりでゲームをします。
+HINT: ひとりで (hitori de) = alone · で (de) = by oneself · ゲーム (geemu) = game · translation filled in by me (cut off in your screenshot)
+
+---
+DIR: EN>JP
+Q: I'm going to the festival on Saturday.
+ROM: Doyoubi ni omatsuri ni ikimasu.
+JP: 土曜日におまつりに行きます。
+HINT: おまつり (omatsuri) = festival · に (ni) = day · に (ni) = destination
+
+---
+DIR: JP>EN
+Q_ROM: Doyoubi ni omatsuri ni ikimasu.
+Q_JP: 土曜日におまつりに行きます。
+A: I'm going to the festival on Saturday.
+HINT: おまつり (omatsuri) = festival · に (ni) = day · に (ni) = destination
+
+---
+DIR: EN>JP
+Q: I'm going to a big festival in August.
+ROM: Hachigatsu ni ookii omatsuri ni ikimasu.
+JP: 八月に大きいおまつりに行きます。
+HINT: 八月 (hachigatsu) = August · 大きい (ookii) = big · に (ni) = month, then destination
+
+---
+DIR: EN>JP
+Q: On weekends I do karate.
+ROM: Shuumatsu wa karate o shimasu.
+JP: しゅうまつはからてをします。
+HINT: からて (karate) = karate · を (o) · します (shimasu) = do
+
+---
+DIR: JP>EN
+Q_ROM: Shuumatsu wa karate o shimasu.
+Q_JP: しゅうまつはからてをします。
+A: On weekends I do karate.
+HINT: からて (karate) = karate · を (o) · します (shimasu) = do
+
+---
+DIR: EN>JP
+Q: On Saturday I play soccer.
+ROM: Doyoubi wa sakkaa o shimasu.
+JP: 土曜日はサッカーをします。
+HINT: サッカー (sakkaa) = soccer · を (o) marks the sport · します (shimasu) = do / play
